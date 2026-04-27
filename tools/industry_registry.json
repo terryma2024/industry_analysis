@@ -1,0 +1,12 @@
+[
+  {"name": "机器人（具身智能）", "slug": "robotics-embodied-ai"},
+  {"name": "生物医药", "slug": "biopharma"},
+  {"name": "AI相关", "slug": "ai"},
+  {"name": "集成电路", "slug": "integrated-circuits"},
+  {"name": "航空航天", "slug": "aerospace"},
+  {"name": "低空经济", "slug": "low-altitude-economy"},
+  {"name": "未来能源", "slug": "future-energy"},
+  {"name": "量子科技", "slug": "quantum-technology"},
+  {"name": "脑机接口", "slug": "brain-computer-interface"},
+  {"name": "6G", "slug": "6g"}
+]

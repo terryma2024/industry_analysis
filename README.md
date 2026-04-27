@@ -1,1 +1,60 @@
 # industry_analysis
+
+这是一个面向学习、投资研究和职业选择的行业分析知识库，重点分析中国的重点产业，尤其关注这些产业在中国“十五五”国家规划周期中的政策定位、产业机会和个人发展机会。
+
+## 目录约定
+
+- `raw/`: 原始资料和原始数据。按行业分目录，每个行业下固定为 `documents/` 和 `data/`。
+- `knowledge/`: 由原始资料沉淀出来的结构化知识、行业地图、公司/岗位/投资分析。
+- `tools/`: 研究过程中沉淀的脚本、模板和小工具。
+- `.agents/skills/industry-analysis/`: 项目内 Codex skill，指导 Codex 按本项目规范做行业研究。
+- `docs/`: 项目设计、方法论和长期说明文档。
+
+## 初始行业
+
+| 行业 | slug |
+| --- | --- |
+| 机器人（具身智能） | `robotics-embodied-ai` |
+| 生物医药 | `biopharma` |
+| AI相关 | `ai` |
+| 集成电路 | `integrated-circuits` |
+| 航空航天 | `aerospace` |
+| 低空经济 | `low-altitude-economy` |
+| 未来能源 | `future-energy` |
+| 量子科技 | `quantum-technology` |
+| 脑机接口 | `brain-computer-interface` |
+| 6G | `6g` |
+
+## 工作流
+
+1. 优先收集中国语境下的原始材料：国家和地方政策、十五五相关文件、部委/协会资料、上市公司公告、招股书、财报、招聘 JD、产业数据和论文。
+2. 把原始文档、研报、政策、论文、招股书、财报、招聘 JD、数据集放入 `raw/<industry>/`。
+3. 在 `knowledge/<industry>/` 中沉淀结构化分析，优先使用 `tools/templates/industry-analysis-template.md`。
+4. 每次分析保留来源索引，避免“印象流”结论；来源记录模板见 `tools/templates/source-log.csv`。
+5. 可以让 Codex 使用 `$industry-analysis` skill 来新增行业、整理资料、生成行业知识、做投资/学习/求职视角分析。
+
+## Python 环境
+
+本项目的 Python 脚本统一由 `uv` 管理，不直接使用系统 Python。
+
+常用命令：
+
+```bash
+uv run python tools/new_industry_workspace.py <slug> <行业名称>
+uv run python .agents/skills/industry-analysis/scripts/check_workspace.py
+```
+
+当前项目固定使用 `.python-version` 中声明的 Python `3.13`，依赖声明在 `pyproject.toml`。
+
+## 建议产物
+
+每个行业最终至少形成这些文件：
+
+- `00-index.md`: 行业入口与当前结论摘要。
+- `01-industry-map.md`: 产业链、关键环节、价值流和竞争格局。
+- `02-technology-and-products.md`: 技术路线、产品形态、成熟度、瓶颈。
+- `03-market-and-policy.md`: 市场规模、增速、政策和监管。
+- `04-companies.md`: 代表公司、商业模式、财务或融资状态。
+- `05-investment-view.md`: 投资逻辑、风险、估值锚、观察指标。
+- `06-career-view.md`: 岗位地图、能力要求、学习路径。
+- `sources.csv`: 已使用来源索引。

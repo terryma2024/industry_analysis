@@ -1,0 +1,10 @@
+[project]
+name = "industry-analysis"
+version = "0.1.0"
+description = "Industry research workspace tools and templates."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.uv]
+package = false
