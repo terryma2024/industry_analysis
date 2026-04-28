@@ -8,6 +8,7 @@
 - `knowledge/`: 由原始资料沉淀出来的结构化知识、行业地图、公司/岗位/投资分析。
 - `tools/`: 研究过程中沉淀的脚本、模板和小工具。
 - `.agents/skills/industry-analysis/`: 项目内 Codex skill，指导 Codex 按本项目规范做行业研究。
+- `.agents/skills/video-summarizer/`: 项目内 Codex skill，用 `uv` 从视频链接提取字幕/转录并生成结构化笔记。
 - `docs/`: 项目设计、方法论和长期说明文档。
 
 ## 初始行业
@@ -32,6 +33,7 @@
 3. 在 `knowledge/<industry>/` 中沉淀结构化分析，优先使用 `tools/templates/industry-analysis-template.md`。
 4. 每次分析保留来源索引，避免“印象流”结论；来源记录模板见 `tools/templates/source-log.csv`。
 5. 可以让 Codex 使用 `$industry-analysis` skill 来新增行业、整理资料、生成行业知识、做投资/学习/求职视角分析。
+6. 遇到 B站、YouTube、抖音、小红书、TikTok 等视频资料时，可以使用 `$video-summarizer` skill 先提取字幕和视频笔记，再沉淀进 `knowledge/`。
 
 ## Python 环境
 
@@ -45,6 +47,8 @@ uv run python .agents/skills/industry-analysis/scripts/check_workspace.py
 ```
 
 当前项目固定使用 `.python-version` 中声明的 Python `3.13`，依赖声明在 `pyproject.toml`。
+
+视频总结能力的换环境初始化步骤见 `docs/video_summarizer_setup.md`。
 
 ## 建议产物
 

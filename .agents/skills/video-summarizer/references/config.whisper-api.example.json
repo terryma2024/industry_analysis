@@ -1,0 +1,10 @@
+{
+  "_comment": "Copy this file to ../config.json for OpenAI Whisper API fallback. Prefer OPENAI_API_KEY in the environment instead of writing a key here.",
+  "whisper_mode": "api",
+  "openai_api_key": "",
+  "whisper_model": "base",
+  "language": "zh",
+  "extract_frames": false,
+  "frames_per_video": 6,
+  "cache_ttl_days": 7
+}

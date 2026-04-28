@@ -10,6 +10,10 @@ When working on industry research, source organization, knowledge synthesis, inv
 
 `/.agents/skills/industry-analysis/SKILL.md`
 
+When the user provides a video/audio URL or asks for video notes, use:
+
+`/.agents/skills/video-summarizer/SKILL.md`
+
 ## Repository Conventions
 
 - Store source documents and raw datasets under `raw/<industry>/documents/` and `raw/<industry>/data/`.

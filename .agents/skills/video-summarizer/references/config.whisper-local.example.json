@@ -1,0 +1,10 @@
+{
+  "_comment": "Copy this file to ../config.json for local faster-whisper fallback. First run may download a model.",
+  "whisper_mode": "local",
+  "openai_api_key": "",
+  "whisper_model": "base",
+  "language": "zh",
+  "extract_frames": false,
+  "frames_per_video": 6,
+  "cache_ttl_days": 7
+}

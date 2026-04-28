@@ -1,0 +1,6 @@
+interface:
+  display_name: "Video Summarizer"
+  short_description: "Summarize video URLs from subtitles or transcripts"
+  default_prompt: "Use $video-summarizer to extract a transcript from a video URL and turn it into structured notes."
+policy:
+  allow_implicit_invocation: true

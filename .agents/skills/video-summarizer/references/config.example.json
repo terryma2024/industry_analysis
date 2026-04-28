@@ -1,0 +1,10 @@
+{
+  "_comment": "Copy this file to ../config.json for local settings. Do not commit config.json.",
+  "whisper_mode": "disabled",
+  "openai_api_key": "",
+  "whisper_model": "base",
+  "language": "zh",
+  "extract_frames": false,
+  "frames_per_video": 6,
+  "cache_ttl_days": 7
+}
