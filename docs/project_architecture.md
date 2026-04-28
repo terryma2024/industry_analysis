@@ -5,7 +5,7 @@
 本项目面向中国“十五五”国家规划周期中的重点产业，把行业研究拆成四层资产：
 
 1. 原始资料：未经改写的文档、数据、网页摘录、论文、政策、财报、招聘信息。
-2. 结构化知识：中国语境下的产业链、技术路线、市场格局、政策、公司、岗位、投资逻辑。
+2. 结构化知识：中国语境下的产业链、技术路线、市场格局、政策、公司、岗位、投资逻辑，并以 Obsidian vault 方式维护。
 3. 可复用工具：模板、数据清洗脚本、来源检查脚本、行业目录初始化脚本。
 4. Codex skill：让后续分析都遵守同一套目录、证据和输出规范。
 
@@ -25,6 +25,12 @@ knowledge/<industry>/
   05-investment-view.md
   06-career-view.md
   sources.csv
+
+knowledge/.obsidian/
+  app.json
+  appearance.json
+  core-plugins.json
+  workspace.json
 
 tools/
   templates/
@@ -63,6 +69,19 @@ Python 版本由 `.python-version` 固定，依赖由 `pyproject.toml` 声明。
 - 中国在全球产业链中的位置、短板和机会是什么？
 - 中央政策与地方政策分别如何影响产业落地？
 - 哪些公司、岗位和投资机会最直接受益？
+
+## Obsidian 知识库准则
+
+`knowledge/` 是本项目的 Obsidian vault。所有知识库创建、管理和维护都默认使用 Obsidian 及 Obsidian 兼容 Markdown：
+
+- 用 `00-index.md` 作为每个行业的入口笔记。
+- 用 `[[wikilinks]]` 连接行业、公司、技术路线、政策、岗位和关键概念。
+- 对跨行业主题使用 MOC note，例如“十五五未来产业”“国产替代”“AI+制造”。
+- 对产业链、技术路线和公司关系，优先使用 Obsidian Canvas、Mermaid 或 Excalidraw。
+- 事实来源保留在 `sources.csv` 或来源笔记中，结论笔记通过链接回溯证据。
+- 修改知识库时，优先使用本地已安装的 Obsidian skills：`obsidian-markdown`、`obsidian-cli`、`obsidian-bases`、`obsidian-canvas-creator`、`mermaid-visualizer`、`excalidraw-diagram`。
+
+更详细规范见 `docs/obsidian_knowledge_base_guidelines.md`。
 
 ## 证据分级
 

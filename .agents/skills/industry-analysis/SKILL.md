@@ -26,6 +26,7 @@ Build durable research assets, not one-off chat summaries. Preserve source trace
 6. For each industry, explain its China policy position: why it matters to national strategy, which 15th Five-Year Plan themes it connects to, and where China has strengths, bottlenecks, or supply-chain dependencies.
 7. For investment analysis, always include China-specific thesis, policy catalyst, risk, what would change the thesis, and monitoring indicators.
 8. For career analysis, always include China role families, skill requirements, learning path, portfolio ideas, and hiring signals.
+9. Treat `knowledge/` as an Obsidian vault. Use Obsidian-compatible Markdown, wikilinks, index/MOC notes, and source backlinks when creating or maintaining knowledge artifacts.
 
 ## Source Quality
 

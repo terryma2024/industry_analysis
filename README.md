@@ -5,7 +5,7 @@
 ## 目录约定
 
 - `raw/`: 原始资料和原始数据。按行业分目录，每个行业下固定为 `documents/` 和 `data/`。
-- `knowledge/`: 由原始资料沉淀出来的结构化知识、行业地图、公司/岗位/投资分析。
+- `knowledge/`: Obsidian vault，由原始资料沉淀出来的结构化知识、行业地图、公司/岗位/投资分析。
 - `tools/`: 研究过程中沉淀的脚本、模板和小工具。
 - `.agents/skills/industry-analysis/`: 项目内 Codex skill，指导 Codex 按本项目规范做行业研究。
 - `.agents/skills/video-summarizer/`: 项目内 Codex skill，用 `uv` 从视频链接提取字幕/转录并生成结构化笔记。
@@ -30,10 +30,22 @@
 
 1. 优先收集中国语境下的原始材料：国家和地方政策、十五五相关文件、部委/协会资料、上市公司公告、招股书、财报、招聘 JD、产业数据和论文。
 2. 把原始文档、研报、政策、论文、招股书、财报、招聘 JD、数据集放入 `raw/<industry>/`。
-3. 在 `knowledge/<industry>/` 中沉淀结构化分析，优先使用 `tools/templates/industry-analysis-template.md`。
+3. 在 `knowledge/<industry>/` 中沉淀结构化分析；`knowledge/` 按 Obsidian vault 维护，优先使用 Obsidian Markdown、wikilinks、MOC/index note 和可回溯来源。
 4. 每次分析保留来源索引，避免“印象流”结论；来源记录模板见 `tools/templates/source-log.csv`。
 5. 可以让 Codex 使用 `$industry-analysis` skill 来新增行业、整理资料、生成行业知识、做投资/学习/求职视角分析。
 6. 遇到 B站、YouTube、抖音、小红书、TikTok 等视频资料时，可以使用 `$video-summarizer` skill 先提取字幕和视频笔记，再沉淀进 `knowledge/`。
+
+## Obsidian 执行准则
+
+知识库的创建、管理和维护统一使用 Obsidian。`knowledge/` 是本项目的 Obsidian vault 根目录，所有行业知识文件都应保持 Obsidian 兼容：
+
+- 使用 Obsidian Flavored Markdown。
+- 用 `[[wikilinks]]` 连接概念、公司、产业链环节、政策和来源笔记。
+- 为行业入口、主题地图和专题研究维护 index/MOC notes。
+- 需要可视化时优先使用 Obsidian Canvas、Mermaid 或 Excalidraw。
+- 重要结论仍需在 `sources.csv` 或来源笔记中保留证据链。
+
+详细准则见 `docs/obsidian_knowledge_base_guidelines.md`。
 
 ## Python 环境
 
