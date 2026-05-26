@@ -47,6 +47,22 @@ aliases:
 | 柯力传感 | 六维力/力矩/触觉传感器 | 传感器销售+产业投资 | 人形、协作、工业机器人客户 | 力传感是灵巧操作核心 | 早期产品收入小，送样到量产不确定 | `SRC-robotics-038` `SRC-robotics-039` |
 | 东华测试 | 六维力传感器/测试测量 | 传感器和测试系统 | 工业、人形、航空航天等 | 小批量试制，潜在高壁垒 | 商业化早期 | 需进一步公告验证 |
 
+## 训练数据生产与处理公司
+
+更完整的专题表见 [[07-training-data]] 和 [training_data_companies.csv](../../raw/robotics-embodied-ai/data/training_data_companies.csv)。
+
+| 公司/平台 | 环节 | 代表方案 | 主要价值 | 证据 |
+|---|---|---|---|---|
+| 智元机器人 AGIBOT | 整机厂/数据平台 | AgiBot World / AGIBOT WORLD 2026 / AIDEA 线索 | 百万级真机轨迹、数据清洗验证、层级标注、开放数据集和模型 | `SRC-robotics-044` `SRC-robotics-058` |
+| 宇树科技 Unitree | 整机厂/数采训练平台 | G1-D End-to-End Platform | 从采集、标注、审核、存储、导出到训练、仿真和部署的端到端平台 | `SRC-robotics-014` |
+| 艾欧智能 IO-AI | 数据基础设施 | TeleXperience / SenseXperience / EmbodiFlow | 遥操作、人体数据采集、标注、可视化、质检和后处理 | `SRC-robotics-046` |
+| 感进机器人 Robotin | 数据服务/全栈方案 | 具身智能数据平台 | 真实家庭/杂乱场景视觉数据和专业级物理操作采集 | `SRC-robotics-047` |
+| 第一推力 FirstMove | 无本体数据引擎 | Egocentric Data Engine for Robotics | 通过第一视角真实物理交互补足机器人训练语料 | `SRC-robotics-048` |
+| 智源/ModelScope | 开源平台 | 智源具身一站式平台 | 数据集聚合、统一标准化格式处理、模型开发验证 | `SRC-robotics-049` `SRC-robotics-063` |
+| 星海图 Galaxea | 整机+基础模型+数据采集 | R1 系列/客户数据采集服务 | 面向算法开发、场景落地和数据采集的客户服务 | `SRC-robotics-050` |
+| NVIDIA | 海外平台 | Isaac / GR00T / Cosmos / GR00T-Dreams | 仿真、合成轨迹、基础模型训练和云到机器人部署 | `SRC-robotics-051` `SRC-robotics-062` |
+| Hugging Face LeRobot | 开源工具链 | LeRobotDataset / LeRobot Hub | 开源数据格式、采集、训练、可视化、合并和部署工具 | `SRC-robotics-052` `SRC-robotics-053` |
+
 ## 竞争格局
 
 - 集中度：整机端仍高度分散，路线未收敛；工业机器人/协作机器人/AMR 已有较成熟头部企业；上游核心零部件在谐波减速器、无框电机、空心杯电机、六维力传感器等环节更容易形成供应链卡位。
