@@ -32,3 +32,5 @@
 - `05-investment-view.md`: 投资逻辑和风险。
 - `05a-portfolio-draft-2026-04-28.md`: 100 万 RMB 股票组合草案。
 - `06-career-view.md`: 岗位地图和学习路径。
+- `07-training-data.md`: 训练数据生产、处理、公司、解决方案和论文数据集。
+- `08-umi-gripper-research-and-business-plan.md`: UMI Gripper 技术研究、学习计划和国内数据采集业务落地计划。
