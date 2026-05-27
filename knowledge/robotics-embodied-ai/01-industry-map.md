@@ -25,12 +25,12 @@ aliases:
 
 | 环节 | 核心价值 | 代表公司/机构 | 关键壁垒 | 证据 |
 |---|---|---|---|---|
-| 上游机械与执行 | 决定成本、寿命、精度和负载能力 | 绿的谐波、双环传动、中大力德、步科股份、鸣志电器、秦川机床、贝斯特、五洲新春 | 精密加工、良率、批量一致性、客户验证周期 | `SRC-robotics-034` `SRC-robotics-036` |
-| 上游感知与传感 | 让机器人获得空间、力觉、触觉和环境信息 | 奥比中光、柯力传感、东华测试、汉威科技、速腾聚创、禾赛科技、舜宇光学 | 传感精度、稳定性、算法融合、成本下降 | `SRC-robotics-037` `SRC-robotics-038` `SRC-robotics-039` |
-| 上游控制与算力 | 运动控制、伺服驱动、边缘计算和开发平台 | 汇川技术、固高科技、NVIDIA、华为昇腾、地平线、黑芝麻智能 | 实时控制、可靠性、生态工具链、软硬协同 | `SRC-robotics-017` `SRC-robotics-018` `SRC-robotics-040` `SRC-robotics-041` |
-| 中游整机 | 将软硬件集成为可交付机器人 | 优必选、宇树、智元、逐际、星动、银河、自变量、魔法原子、越疆、节卡、新松、埃斯顿、埃夫特 | 系统工程、供应链、成本、数据闭环、场景交付 | `SRC-robotics-009` `SRC-robotics-012` `SRC-robotics-015` `SRC-robotics-020` |
-| 中游软件与数据 | 训练、仿真、调度、运维、远程遥操作、任务编排 | NVIDIA Isaac/GR00T、智元、宇树 G1-D、优艾智合、极智嘉、快仓 | 数据获取、仿真到现实、评测体系、云边协同 | `SRC-robotics-014` `SRC-robotics-017` `SRC-robotics-018` `SRC-robotics-031` |
-| 下游应用 | 为机器人付费并提供真实数据 | 汽车、3C、新能源、半导体、仓储物流、能源巡检、医疗养老、商业服务 | ROI、可靠性、安全责任、集成成本、售后体系 | `SRC-robotics-003` `SRC-robotics-029` `SRC-robotics-030` |
+| 上游机械与执行 | 决定成本、寿命、精度和负载能力 | 绿的谐波、双环传动、中大力德、步科股份、鸣志电器、秦川机床、贝斯特、五洲新春 | 精密加工、良率、批量一致性、客户验证周期 | [`SRC-robotics-034`](../../raw/robotics-embodied-ai/documents/SRC-robotics-034-2025-121-42.md) [`SRC-robotics-036`](../../raw/robotics-embodied-ai/documents/SRC-robotics-036-2025.md) |
+| 上游感知与传感 | 让机器人获得空间、力觉、触觉和环境信息 | 奥比中光、柯力传感、东华测试、汉威科技、速腾聚创、禾赛科技、舜宇光学 | 传感精度、稳定性、算法融合、成本下降 | [`SRC-robotics-037`](../../raw/robotics-embodied-ai/documents/SRC-robotics-037-2026.md) [`SRC-robotics-038`](../../raw/robotics-embodied-ai/documents/SRC-robotics-038-2025-6-85-1-73.md) [`SRC-robotics-039`](../../raw/robotics-embodied-ai/documents/SRC-robotics-039-source.md) |
+| 上游控制与算力 | 运动控制、伺服驱动、边缘计算和开发平台 | 汇川技术、固高科技、NVIDIA、华为昇腾、地平线、黑芝麻智能 | 实时控制、可靠性、生态工具链、软硬协同 | [[00-source-capture-index|SRC-robotics-017]] [`SRC-robotics-018`](../../raw/robotics-embodied-ai/documents/SRC-robotics-018-nvidia-isaac-gr00t-developer-page.md) [`SRC-robotics-040`](../../raw/robotics-embodied-ai/documents/SRC-robotics-040-2026-12-98-23-39.md) [`SRC-robotics-041`](../../raw/robotics-embodied-ai/documents/SRC-robotics-041-2025.md) |
+| 中游整机 | 将软硬件集成为可交付机器人 | 优必选、宇树、智元、逐际、星动、银河、自变量、魔法原子、越疆、节卡、新松、埃斯顿、埃夫特 | 系统工程、供应链、成本、数据闭环、场景交付 | [`SRC-robotics-009`](../../raw/robotics-embodied-ai/documents/SRC-robotics-009-ubtech-robotics-hkex-issuer-announcements-page.md) [`SRC-robotics-012`](../../raw/robotics-embodied-ai/documents/SRC-robotics-012-unitree-g1-humanoid-robot-product-page.md) [`SRC-robotics-015`](../../raw/robotics-embodied-ai/documents/SRC-robotics-015-agibot-a2-product-page.md) [`SRC-robotics-020`](../../raw/robotics-embodied-ai/documents/SRC-robotics-020-limx-dynamics-official-website.md) |
+| 中游软件与数据 | 训练、仿真、调度、运维、远程遥操作、任务编排 | NVIDIA Isaac/GR00T、智元、宇树 G1-D、优艾智合、极智嘉、快仓 | 数据获取、仿真到现实、评测体系、云边协同 | [`SRC-robotics-014`](../../raw/robotics-embodied-ai/documents/SRC-robotics-014-unitree-g1-d-end-to-end-platform-for-humanoid-robot.md) [[00-source-capture-index|SRC-robotics-017]] [`SRC-robotics-018`](../../raw/robotics-embodied-ai/documents/SRC-robotics-018-nvidia-isaac-gr00t-developer-page.md) [`SRC-robotics-031`](../../raw/robotics-embodied-ai/documents/SRC-robotics-031-youibot-official-website.md) |
+| 下游应用 | 为机器人付费并提供真实数据 | 汽车、3C、新能源、半导体、仓储物流、能源巡检、医疗养老、商业服务 | ROI、可靠性、安全责任、集成成本、售后体系 | [`SRC-robotics-003`](../../raw/robotics-embodied-ai/documents/SRC-robotics-003-source.md) [`SRC-robotics-029`](../../raw/robotics-embodied-ai/documents/SRC-robotics-029-geek-company-page.md) [`SRC-robotics-030`](../../raw/robotics-embodied-ai/documents/SRC-robotics-030-quicktron-official-website.md) |
 
 ## 价值流
 

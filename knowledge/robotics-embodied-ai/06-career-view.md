@@ -27,9 +27,9 @@ aliases:
 
 | 岗位族群 | 典型职位 | 核心能力 | 代表公司 | 证据 |
 |---|---|---|---|---|
-| 机器人软件平台 | RobotOS、任务调度、云端运维、Fleet Management、仿真平台 | 分布式系统、实时数据、边缘设备、可靠性、权限和监控 | 极智嘉、快仓、优艾智合、宇树、智元、NVIDIA | `SRC-robotics-014` `SRC-robotics-017` `SRC-robotics-031` |
-| 数据闭环/训练平台 | 遥操作数据、合成数据、评测系统、模型训练平台 | 数据工程、MLOps、模型评测、仿真、标注和质量控制 | 智元、宇树 G1-D、自变量、NVIDIA Isaac | `SRC-robotics-014` `SRC-robotics-018` `SRC-robotics-022` |
-| 场景解决方案 | 工业制造、仓储物流、巡检、商业服务方案 | B2B 产品、行业流程、交付管理、ROI 建模 | 新松、埃斯顿、埃夫特、极智嘉、快仓、优艾智合 | `SRC-robotics-027` `SRC-robotics-028` `SRC-robotics-029` |
+| 机器人软件平台 | RobotOS、任务调度、云端运维、Fleet Management、仿真平台 | 分布式系统、实时数据、边缘设备、可靠性、权限和监控 | 极智嘉、快仓、优艾智合、宇树、智元、NVIDIA | [`SRC-robotics-014`](../../raw/robotics-embodied-ai/documents/SRC-robotics-014-unitree-g1-d-end-to-end-platform-for-humanoid-robot.md) [[00-source-capture-index|SRC-robotics-017]] [`SRC-robotics-031`](../../raw/robotics-embodied-ai/documents/SRC-robotics-031-youibot-official-website.md) |
+| 数据闭环/训练平台 | 遥操作数据、合成数据、评测系统、模型训练平台 | 数据工程、MLOps、模型评测、仿真、标注和质量控制 | 智元、宇树 G1-D、自变量、NVIDIA Isaac | [`SRC-robotics-014`](../../raw/robotics-embodied-ai/documents/SRC-robotics-014-unitree-g1-d-end-to-end-platform-for-humanoid-robot.md) [`SRC-robotics-018`](../../raw/robotics-embodied-ai/documents/SRC-robotics-018-nvidia-isaac-gr00t-developer-page.md) [`SRC-robotics-022`](../../raw/robotics-embodied-ai/documents/SRC-robotics-022-x2robot-official-website.md) |
+| 场景解决方案 | 工业制造、仓储物流、巡检、商业服务方案 | B2B 产品、行业流程、交付管理、ROI 建模 | 新松、埃斯顿、埃夫特、极智嘉、快仓、优艾智合 | [`SRC-robotics-027`](../../raw/robotics-embodied-ai/documents/SRC-robotics-027-siasun-official-website.md) [`SRC-robotics-028`](../../raw/robotics-embodied-ai/documents/SRC-robotics-028-efort-official-website.md) [`SRC-robotics-029`](../../raw/robotics-embodied-ai/documents/SRC-robotics-029-geek-company-page.md) |
 | 工程管理 | 机器人软硬件团队管理、跨学科项目交付 | 组织设计、里程碑管理、供应链协同、质量体系 | 人形整机和工业机器人公司 | 公司池见 [[04-companies]] |
 | 产品/战略 | 产品路线、场景选择、商业模式、生态合作 | 市场洞察、客户访谈、竞品分析、财务敏感度 | 上市公司、创业公司、投资机构 | [[05-investment-view]] |
 | 投资研究 | 行业研究、公司建模、产业链跟踪 | 财报阅读、政策理解、技术判断、估值和风险控制 | 券商、基金、产业资本、个人投资 | [[05a-portfolio-draft-2026-04-28]] |

@@ -18,11 +18,11 @@ aliases:
 
 | 维度 | 当前判断 | 证据 |
 |---|---|---|
-| 工业机器人底盘 | 中国是全球最大工业机器人市场，2024 年工业机器人安装量约 29.5 万台，占全球部署 54%。 | `SRC-robotics-008` |
-| 国产替代 | IFR 披露 2024 年中国本土厂商在国内市场份额达到 57%，首次超过外资。 | `SRC-robotics-008` |
-| 产量增长 | 2025 年中国工业机器人产量 77.3 万套，同比增长 28.0%；服务机器人 1858.1 万套，同比增长 16.1%。 | `SRC-robotics-006` `SRC-robotics-007` |
-| 人形机器人商业化 | 优必选 2025 年全尺寸具身智能人形机器人收入明显增长，说明整机商业化已有财务样本，但亏损和订单质量仍需验证。 | `SRC-robotics-009` `SRC-robotics-033` `SRC-robotics-043` |
-| 上游零部件 | 绿的谐波、步科股份、奥比中光等公司披露或被报道机器人相关业务增长，说明供应链正在从概念进入收入验证。 | `SRC-robotics-034` `SRC-robotics-036` `SRC-robotics-037` |
+| 工业机器人底盘 | 中国是全球最大工业机器人市场，2024 年工业机器人安装量约 29.5 万台，占全球部署 54%。 | [`SRC-robotics-008`](../../raw/robotics-embodied-ai/documents/SRC-robotics-008-world-robotics-2025-report-industrial-robots.md) |
+| 国产替代 | IFR 披露 2024 年中国本土厂商在国内市场份额达到 57%，首次超过外资。 | [`SRC-robotics-008`](../../raw/robotics-embodied-ai/documents/SRC-robotics-008-world-robotics-2025-report-industrial-robots.md) |
+| 产量增长 | 2025 年中国工业机器人产量 77.3 万套，同比增长 28.0%；服务机器人 1858.1 万套，同比增长 16.1%。 | [`SRC-robotics-006`](../../raw/robotics-embodied-ai/documents/SRC-robotics-006-2025.md) [`SRC-robotics-007`](../../raw/robotics-embodied-ai/documents/SRC-robotics-007-2025-12-5-2.md) |
+| 人形机器人商业化 | 优必选 2025 年全尺寸具身智能人形机器人收入明显增长，说明整机商业化已有财务样本，但亏损和订单质量仍需验证。 | [`SRC-robotics-009`](../../raw/robotics-embodied-ai/documents/SRC-robotics-009-ubtech-robotics-hkex-issuer-announcements-page.md) [`SRC-robotics-033`](../../raw/robotics-embodied-ai/documents/SRC-robotics-033-2025-20-01.md) [`SRC-robotics-043`](../../raw/robotics-embodied-ai/documents/SRC-robotics-043-2025-22.md) |
+| 上游零部件 | 绿的谐波、步科股份、奥比中光等公司披露或被报道机器人相关业务增长，说明供应链正在从概念进入收入验证。 | [`SRC-robotics-034`](../../raw/robotics-embodied-ai/documents/SRC-robotics-034-2025-121-42.md) [`SRC-robotics-036`](../../raw/robotics-embodied-ai/documents/SRC-robotics-036-2025.md) [`SRC-robotics-037`](../../raw/robotics-embodied-ai/documents/SRC-robotics-037-2026.md) |
 
 ## 客户结构
 
@@ -58,12 +58,12 @@ aliases:
 
 | 指标 | 数值 | 口径 | 时间 | 来源 |
 |---|---:|---|---|---|
-| 中国工业机器人产量 | 77.3 万套 | 全国规模以上工业统计 | 2025 | `SRC-robotics-006` |
-| 中国服务机器人产量 | 1858.1 万套 | 全国规模以上工业统计 | 2025 | `SRC-robotics-006` |
-| 中国工业机器人安装量 | 约 29.5 万台 | IFR 工业机器人安装量 | 2024 | `SRC-robotics-008` |
-| 中国占全球工业机器人部署比例 | 54% | IFR World Robotics 2025 | 2024 | `SRC-robotics-008` |
-| 中国本土厂商国内份额 | 57% | IFR World Robotics 2025 | 2024 | `SRC-robotics-008` |
-| 制造业机器人密度政策目标 | 较 2020 年翻番 | “机器人+”应用行动 | 到 2025 | `SRC-robotics-003` |
+| 中国工业机器人产量 | 77.3 万套 | 全国规模以上工业统计 | 2025 | [`SRC-robotics-006`](../../raw/robotics-embodied-ai/documents/SRC-robotics-006-2025.md) |
+| 中国服务机器人产量 | 1858.1 万套 | 全国规模以上工业统计 | 2025 | [`SRC-robotics-006`](../../raw/robotics-embodied-ai/documents/SRC-robotics-006-2025.md) |
+| 中国工业机器人安装量 | 约 29.5 万台 | IFR 工业机器人安装量 | 2024 | [`SRC-robotics-008`](../../raw/robotics-embodied-ai/documents/SRC-robotics-008-world-robotics-2025-report-industrial-robots.md) |
+| 中国占全球工业机器人部署比例 | 54% | IFR World Robotics 2025 | 2024 | [`SRC-robotics-008`](../../raw/robotics-embodied-ai/documents/SRC-robotics-008-world-robotics-2025-report-industrial-robots.md) |
+| 中国本土厂商国内份额 | 57% | IFR World Robotics 2025 | 2024 | [`SRC-robotics-008`](../../raw/robotics-embodied-ai/documents/SRC-robotics-008-world-robotics-2025-report-industrial-robots.md) |
+| 制造业机器人密度政策目标 | 较 2020 年翻番 | “机器人+”应用行动 | 到 2025 | [`SRC-robotics-003`](../../raw/robotics-embodied-ai/documents/SRC-robotics-003-source.md) |
 
 ## 市场判断
 

@@ -29,16 +29,16 @@ aliases:
   - 1-3 年：工业制造、仓储物流、巡检、特种作业先进入商业化验证期。
   - 3-5 年：若成本下降、数据闭环和安全标准成熟，通用人形机器人可能进入更大规模放量。
 - 中国政策催化：
-  - 工信部《人形机器人创新发展指导意见》设定 2025/2027 阶段目标，明确“大脑、小脑、肢体”、核心部组件、专用操作系统、典型场景和标准体系。证据：`SRC-robotics-001` `SRC-robotics-002`
-  - “机器人+”应用行动把制造、农业、物流、医疗、养老、应急等纳入应用推广。证据：`SRC-robotics-003`
-  - 十五五未来产业叙事已把具身智能放入未来产业方向。证据：`SRC-robotics-004`
-  - 人形机器人与具身智能标准化技术委员会成立，说明行业将进入标准、测试、安全、接口规范阶段。证据：`SRC-robotics-005`
+  - 工信部《人形机器人创新发展指导意见》设定 2025/2027 阶段目标，明确“大脑、小脑、肢体”、核心部组件、专用操作系统、典型场景和标准体系。证据：[`SRC-robotics-001`](../../raw/robotics-embodied-ai/documents/SRC-robotics-001-source.md) [`SRC-robotics-002`](../../raw/robotics-embodied-ai/documents/SRC-robotics-002-source.md)
+  - “机器人+”应用行动把制造、农业、物流、医疗、养老、应急等纳入应用推广。证据：[`SRC-robotics-003`](../../raw/robotics-embodied-ai/documents/SRC-robotics-003-source.md)
+  - 十五五未来产业叙事已把具身智能放入未来产业方向。证据：[`SRC-robotics-004`](../../raw/robotics-embodied-ai/documents/SRC-robotics-004-source.md)
+  - 人形机器人与具身智能标准化技术委员会成立，说明行业将进入标准、测试、安全、接口规范阶段。证据：[`SRC-robotics-005`](../../raw/robotics-embodied-ai/documents/SRC-robotics-005-source.md)
 - 关键催化剂：
   - 头部整机厂从小批量示范进入持续交付。
   - 上游核心零部件企业出现机器人相关收入占比提升，而不是只停留在送样。
   - 工业/仓储/巡检客户披露采购、复购或产线部署。
   - 标准体系明确接口、安全、测试、分级评价。
-  - NVIDIA Isaac/GR00T、国内具身模型和仿真/数据平台推动开发门槛下降。证据：`SRC-robotics-017` `SRC-robotics-018`
+  - NVIDIA Isaac/GR00T、国内具身模型和仿真/数据平台推动开发门槛下降。证据：[[00-source-capture-index|SRC-robotics-017]] [`SRC-robotics-018`](../../raw/robotics-embodied-ai/documents/SRC-robotics-018-nvidia-isaac-gr00t-developer-page.md)
 - 估值锚：
   - 整机公司：收入增长、毛利率、订单质量、现金消耗、客户集中度。
   - 零部件公司：机器人业务收入占比、客户数量、单机价值量、毛利率、产能利用率。
@@ -49,11 +49,11 @@ aliases:
 
 | 类型 | 内容 | 证据/状态 |
 |---|---|---|
-| 事实 | 中国工业机器人产量和服务机器人产量继续增长，2025 年统计公报披露工业机器人 77.3 万套、同比 28.0%，服务机器人 1858.1 万套、同比 16.1%。 | `SRC-robotics-006` `SRC-robotics-007` |
-| 事实 | IFR World Robotics 2025 显示中国仍是全球最大工业机器人市场，2024 年安装量约占全球 54%，国产厂商国内份额首次超过外资。 | `SRC-robotics-008` |
-| 事实 | 优必选 2025 年全尺寸具身智能人形机器人收入和销量出现明显增长，收入成为其第一大业务，但公司仍亏损。 | `SRC-robotics-009` `SRC-robotics-033` |
-| 事实 | 绿的谐波 2025 年收入和利润高增长，并披露工业机器人份额提升、具身智能机器人业务规模增长是原因之一。 | `SRC-robotics-034` |
-| 事实 | 新松机器人 2025 年收入约 41.22 亿元，各类机器人销量同比增长约 65%，同时布局具身智能研究院。 | `SRC-robotics-035` |
+| 事实 | 中国工业机器人产量和服务机器人产量继续增长，2025 年统计公报披露工业机器人 77.3 万套、同比 28.0%，服务机器人 1858.1 万套、同比 16.1%。 | [`SRC-robotics-006`](../../raw/robotics-embodied-ai/documents/SRC-robotics-006-2025.md) [`SRC-robotics-007`](../../raw/robotics-embodied-ai/documents/SRC-robotics-007-2025-12-5-2.md) |
+| 事实 | IFR World Robotics 2025 显示中国仍是全球最大工业机器人市场，2024 年安装量约占全球 54%，国产厂商国内份额首次超过外资。 | [`SRC-robotics-008`](../../raw/robotics-embodied-ai/documents/SRC-robotics-008-world-robotics-2025-report-industrial-robots.md) |
+| 事实 | 优必选 2025 年全尺寸具身智能人形机器人收入和销量出现明显增长，收入成为其第一大业务，但公司仍亏损。 | [`SRC-robotics-009`](../../raw/robotics-embodied-ai/documents/SRC-robotics-009-ubtech-robotics-hkex-issuer-announcements-page.md) [`SRC-robotics-033`](../../raw/robotics-embodied-ai/documents/SRC-robotics-033-2025-20-01.md) |
+| 事实 | 绿的谐波 2025 年收入和利润高增长，并披露工业机器人份额提升、具身智能机器人业务规模增长是原因之一。 | [`SRC-robotics-034`](../../raw/robotics-embodied-ai/documents/SRC-robotics-034-2025-121-42.md) |
+| 事实 | 新松机器人 2025 年收入约 41.22 亿元，各类机器人销量同比增长约 65%，同时布局具身智能研究院。 | [`SRC-robotics-035`](../../raw/robotics-embodied-ai/documents/SRC-robotics-035-2025-41.md) |
 | 估计 | 人形机器人单机零部件价值量中，执行器、减速器、电机、丝杠、传感器、视觉系统可能是主要成本和利润池。 | 待用年报、拆机、供应链资料继续验证 |
 | 判断 | 中国最先商业化的场景大概率不是家庭陪伴，而是工业制造、仓储物流、巡检、特种作业和数据采集。 | 政策场景、公司产品、现有机器人商业化路径交叉支持 |
 | 判断 | 零部件和工业场景公司短期确定性高于纯人形整机；纯整机弹性高但淘汰率也高。 | 行业早期规律 + 当前财务可验证性 |

@@ -19,22 +19,22 @@ aliases:
 
 ## 研究结论
 
-- **事实**：具身模型需要的不只是视频，还要同步的状态、动作、力/触觉、任务语义、失败与恢复过程。智元 AGIBOT WORLD 2026 披露其数据包含 RGB(D)、触觉、LiDAR、IMU、全身关节状态，并经过清洗验证和层级标注；宇树 G1-D 已把采集、标注、审核、存储、导出、训练、仿真测试和部署打包成端到端平台。证据：`SRC-robotics-044` `SRC-robotics-014`
-- **事实**：开源研究正在形成三类基线：Open X-Embodiment/DROID/RoboMIND/AgiBot World 代表真实机器人轨迹，MimicGen/RoboTwin/GR00T-Dreams 代表数据合成与扩增，LeRobot 代表数据格式和训练工具链。证据：`SRC-robotics-054` `SRC-robotics-055` `SRC-robotics-057` `SRC-robotics-058` `SRC-robotics-060` `SRC-robotics-059` `SRC-robotics-051` `SRC-robotics-052`
+- **事实**：具身模型需要的不只是视频，还要同步的状态、动作、力/触觉、任务语义、失败与恢复过程。智元 AGIBOT WORLD 2026 披露其数据包含 RGB(D)、触觉、LiDAR、IMU、全身关节状态，并经过清洗验证和层级标注；宇树 G1-D 已把采集、标注、审核、存储、导出、训练、仿真测试和部署打包成端到端平台。证据：[`SRC-robotics-044`](../../raw/robotics-embodied-ai/documents/SRC-robotics-044-agibot-open-agibot-world-2026.md) [`SRC-robotics-014`](../../raw/robotics-embodied-ai/documents/SRC-robotics-014-unitree-g1-d-end-to-end-platform-for-humanoid-robot.md)
+- **事实**：开源研究正在形成三类基线：Open X-Embodiment/DROID/RoboMIND/AgiBot World 代表真实机器人轨迹，MimicGen/RoboTwin/GR00T-Dreams 代表数据合成与扩增，LeRobot 代表数据格式和训练工具链。证据：[`SRC-robotics-054`](../../raw/robotics-embodied-ai/documents/SRC-robotics-054-open-x-embodiment-robotic-learning-datasets-and-rt-x-models.md) [`SRC-robotics-055`](../../raw/robotics-embodied-ai/documents/SRC-robotics-055-droid-a-large-scale-in-the-wild-robot-manipulation-dataset.md) [`SRC-robotics-057`](../../raw/robotics-embodied-ai/documents/SRC-robotics-057-robomind-benchmark-on-multi-embodiment-intelligence-normative-data-for-robot-man.md) [`SRC-robotics-058`](../../raw/robotics-embodied-ai/documents/SRC-robotics-058-agibot-world-colosseo-a-large-scale-manipulation-platform-for-scalable-and-intel.md) [`SRC-robotics-060`](../../raw/robotics-embodied-ai/documents/SRC-robotics-060-mimicgen-a-data-generation-system-for-scalable-robot-learning-using-human-demons.md) [`SRC-robotics-059`](../../raw/robotics-embodied-ai/documents/SRC-robotics-059-robotwin-dual-arm-robot-benchmark-with-generative-digital-twins.md) [`SRC-robotics-051`](../../raw/robotics-embodied-ai/documents/SRC-robotics-051-enhance-robot-learning-with-synthetic-trajectory-data-generated-by-world-foundat.md) [`SRC-robotics-052`](../../raw/robotics-embodied-ai/documents/SRC-robotics-052-lerobot-github-repository.md)
 - **判断**：未来 2-3 年内，数据资产的壁垒不在“采了多少小时视频”，而在任务覆盖、动作质量、失败/恢复轨迹、多本体可迁移性、数据标准化、质量控制、训练可复现和真实场景评测。
 - **判断**：中国的优势是机器人本体制造、工程师密度、场景试点和潜在低成本采集；短板是高质量开放数据、统一评测、触觉/力觉数据、跨本体标准和数据合规。
 - **假设**：如果具身模型出现可持续 scaling law，数据生产/处理会从整机厂内部能力外溢为独立供应链，类似自动驾驶早期的数据采集、标注、仿真和闭环平台。
 
 ## 数据生产路线
 
-| 路线 | 数据来源 | 适用任务 | 优点 | 主要风险 | 代表公司/论文 |
-|---|---|---|---|---|---|
-| 同构真机遥操作 | 人控制目标机器人完成任务 | 精准操作、工业/仓储/服务任务 | 动作空间一致，最接近训练目标 | 成本高、速度慢、操作员培训难、长尾覆盖不足 | 智元、宇树 G1-D、IO-AI TeleXperience、DROID、RoboMIND |
-| 异构/跨本体数据 | 多种机械臂、人形、移动操作平台 | 通用策略预训练、跨机器人迁移 | 数据规模更大，利于泛化 | 形态、动作空间、传感器差异大 | Open X-Embodiment、Octo、AgiBot World、LeRobot |
-| 无本体/人类数据 | 第一视角视频、数据手套、动捕、穿戴设备 | 灵巧手、家务、复杂人机交互 | 可低成本覆盖真实世界长尾 | 从人到机器人的动作重定向难 | FirstMove、Robotin、IO-AI SenseXperience、pi0 |
-| 仿真/数字孪生 | Isaac/Omniverse、Unity、MuJoCo、生成式 3D 场景 | 数据扩增、评测、安全边界 | 成本低、可控、可生成失败/边界样本 | sim-to-real 差距，物理真实性不足 | NVIDIA Isaac、RoboTwin、MimicGen |
-| 世界模型合成 | 真实示教 + 视频/世界模型生成未来轨迹 | 新任务、新环境、稀有场景 | 用少量真实数据扩展大量轨迹 | 合成动作可能不可执行，需严格验证 | NVIDIA GR00T-Dreams、Cosmos、Unitree UnifoLM-WMA-0 |
-| 线上部署闭环 | 已交付机器人运行日志、失败回放、人工接管 | 商业场景持续优化 | 真实 ROI 场景，数据价值最高 | 安全、隐私、客户授权和责任边界 | AMR/工业移动操作/服务机器人公司，待验证 |
+| 路线       | 数据来源                                   | 适用任务            | 优点                | 主要风险                   | 代表公司/论文                                          |
+| -------- | -------------------------------------- | --------------- | ----------------- | ---------------------- | ------------------------------------------------ |
+| 同构真机遥操作  | 人控制目标机器人完成任务                           | 精准操作、工业/仓储/服务任务 | 动作空间一致，最接近训练目标    | 成本高、速度慢、操作员培训难、长尾覆盖不足  | 智元、宇树 G1-D、IO-AI TeleXperience、DROID、RoboMIND    |
+| 异构/跨本体数据 | 多种机械臂、人形、移动操作平台                        | 通用策略预训练、跨机器人迁移  | 数据规模更大，利于泛化       | 形态、动作空间、传感器差异大         | Open X-Embodiment、Octo、AgiBot World、LeRobot      |
+| 无本体/人类数据 | 第一视角视频、数据手套、动捕、穿戴设备                    | 灵巧手、家务、复杂人机交互   | 可低成本覆盖真实世界长尾      | 从人到机器人的动作重定向难          | FirstMove、Robotin、IO-AI SenseXperience、pi0       |
+| 仿真/数字孪生  | Isaac/Omniverse、Unity、MuJoCo、生成式 3D 场景 | 数据扩增、评测、安全边界    | 成本低、可控、可生成失败/边界样本 | sim-to-real 差距，物理真实性不足 | NVIDIA Isaac、RoboTwin、MimicGen                   |
+| 世界模型合成   | 真实示教 + 视频/世界模型生成未来轨迹                   | 新任务、新环境、稀有场景    | 用少量真实数据扩展大量轨迹     | 合成动作可能不可执行，需严格验证       | NVIDIA GR00T-Dreams、Cosmos、Unitree UnifoLM-WMA-0 |
+| 线上部署闭环   | 已交付机器人运行日志、失败回放、人工接管                   | 商业场景持续优化        | 真实 ROI 场景，数据价值最高  | 安全、隐私、客户授权和责任边界        | AMR/工业移动操作/服务机器人公司，待验证                           |
 
 ## 数据处理流水线
 
@@ -56,7 +56,7 @@ flowchart LR
 - 多模态同步：视频、深度、力/触觉、关节状态、末端执行器、语音/语言任务、环境元数据必须时间对齐。
 - 数据清洗：剔除传感器漂移、动作中断、标定错误、低质量视角；但不应简单删除失败轨迹，失败原因和恢复过程是训练鲁棒性的关键数据。
 - 层级标注：任务级 instruction、步骤级 action、原子技能、对象属性、接触状态、失败原因、人工接管点。
-- 格式标准化：LeRobotDataset 使用视觉 MP4/images、状态/动作 Parquet 和元数据；它的价值在于降低不同实验室和不同本体之间的数据摩擦。证据：`SRC-robotics-052` `SRC-robotics-053`
+- 格式标准化：LeRobotDataset 使用视觉 MP4/images、状态/动作 Parquet 和元数据；它的价值在于降低不同实验室和不同本体之间的数据摩擦。证据：[`SRC-robotics-052`](../../raw/robotics-embodied-ai/documents/SRC-robotics-052-lerobot-github-repository.md) [`SRC-robotics-053`](../../raw/robotics-embodied-ai/documents/SRC-robotics-053-lerobotdataset-v3-0-documentation.md)
 - 数据版本管理：同一任务要记录机器人本体、传感器配置、标定版本、控制频率、动作空间、采集日期、操作者、场景和许可。
 - 训练可复现：优质数据平台应提供训练脚本、benchmark、模型 checkpoint、失败样例和 ablation，而不只是下载链接。
 
@@ -108,9 +108,12 @@ flowchart LR
 
 ## 下一步调研清单
 
-- 深入 UMI Gripper 路线的硬件、数据格式、训练管线和 ToB 落地，见 [[08-umi-gripper-research-and-business-plan]]。
-- 建立 `training_data_companies.csv` 的二级字段：融资、客户、数据样例、可用格式、是否支持 LeRobot/OXE、是否有真实案例视频。
-- 对智元、宇树、IO-AI、Robotin、FirstMove、星海图做一轮工商/融资/招聘交叉验证。
-- 继续补充中国政策与地方平台：北京、上海、深圳、杭州是否有具身智能数据工厂、公共训练场、测评中心。
-- 把 Open X-Embodiment、DROID、RoboMIND、AgiBot World、LeRobot 的数据 schema 做横向表，识别事实标准。
-- 跟踪“失败轨迹”和“人工接管数据”是否成为下一阶段具身模型训练的稀缺资产。
+本清单已推进一轮并行深度调研，汇总页见 [[09-training-data-deep-dive]]，中间材料见 [[research-notes/README|研究中间笔记]]。
+
+- 已推进：深入 UMI Gripper 路线的硬件、数据格式、训练管线和 ToB 落地，见 [[08-umi-gripper-research-and-business-plan]] 与 [[research-notes/umi-hardware-localization-2026-05-27]]。
+- 已推进：建立 `training_data_companies.csv` 的二级字段草案，见 [training_data_company_verification_deep_dive.csv](../../raw/robotics-embodied-ai/data/training_data_company_verification_deep_dive.csv)。
+- 已推进：对智元、宇树、IO-AI、Robotin、FirstMove、星海图做公司/融资/客户/格式交叉验证，见 [[research-notes/training-data-company-verification-2026-05-27]]。
+- 已推进：补充中国政策与地方平台，北京、上海、深圳/广东、杭州/浙江、安徽/合肥已形成训练场/公共平台对照表，见 [[research-notes/local-policy-data-platforms-2026-05-27]]。
+- 已推进：完成 Open X-Embodiment、DROID、RoboMIND、AgiBot World、LeRobot 的 schema 横向表，见 [robotics_dataset_schema_comparison.csv](../../raw/robotics-embodied-ai/data/robotics_dataset_schema_comparison.csv)。
+- 已推进：完成“失败轨迹”和“人工接管数据”稀缺资产调研，见 [[research-notes/failure-intervention-data-2026-05-27]]。
+- 待继续：下载最小样例数据核验字段和 license；合并升级 `training_data_companies.csv`；补充 Robotin/FirstMove/GenRobot/灵初等工商、招聘和客户交付证据；按 [[00-source-capture-index]] SOP 抽取本轮新增来源 raw artifact。

@@ -24,6 +24,13 @@ video-whisper-local = [
 video-frames = [
     "pillow",
 ]
+pdf-docling = [
+    "docling",
+]
+pdf-pymupdf = [
+    "pymupdf>=1.27.2.3",
+    "pymupdf4llm>=1.27.2.3",
+]
 
 [tool.uv]
 package = false

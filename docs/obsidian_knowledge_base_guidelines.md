@@ -42,6 +42,7 @@
 
 1. 先把原始资料放入 `raw/<industry>/documents/` 或 `raw/<industry>/data/`。
 2. 在 `knowledge/<industry>/sources.csv` 记录来源。
+3. 对网页来源运行 `uv run python tools/extract_sources_with_defuddle.py --industry <slug>`，并在 `knowledge/<industry>/` 维护来源抽取 MOC；详见 `docs/source_capture_sop.md`。
 3. 在 `knowledge/<industry>/00-index.md` 更新研究入口和当前判断。
 4. 按主题更新产业链、技术、市场政策、公司、投资、职业文件。
 5. 新增重要概念时，补充 wikilinks，并在必要时新增 MOC note。

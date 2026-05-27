@@ -32,6 +32,7 @@
 2. 把原始文档、研报、政策、论文、招股书、财报、招聘 JD、数据集放入 `raw/<industry>/`。
 3. 在 `knowledge/<industry>/` 中沉淀结构化分析；`knowledge/` 按 Obsidian vault 维护，优先使用 Obsidian Markdown、wikilinks、MOC/index note 和可回溯来源。
 4. 每次分析保留来源索引，避免“印象流”结论；来源记录模板见 `tools/templates/source-log.csv`。
+5. 对 `sources.csv` 中的重要网页来源，运行 `uv run python tools/extract_sources_with_defuddle.py --industry <slug>`，把清洗后的 Markdown、原始 PDF 或 fallback HTML 落到 `raw/<industry>/documents/`。流程见 `docs/source_capture_sop.md`，并在 `knowledge/<industry>/` 维护 Obsidian-friendly 的来源抽取 MOC。
 5. 可以让 Codex 使用 `$industry-analysis` skill 来新增行业、整理资料、生成行业知识、做投资/学习/求职视角分析。
 6. 遇到 B站、YouTube、抖音、小红书、TikTok 等视频资料时，可以使用 `$video-summarizer` skill 先提取字幕和视频笔记，再沉淀进 `knowledge/`。
 

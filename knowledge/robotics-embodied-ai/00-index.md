@@ -17,7 +17,7 @@
 
 - 国家重视原因：具身智能连接 AI、先进制造、智能装备、人口老龄化和生产效率提升，是未来产业和新质生产力的重要载体。
 - 对应战略方向：未来产业、智能制造、国产替代、工业自动化、服务机器人、特种机器人、安全生产和养老服务。
-- 中国产业链位置：中国拥有全球最大工业机器人市场、完整制造供应链和快速迭代能力，2024 年工业机器人安装量约占全球 54%。证据：`SRC-robotics-008`
+- 中国产业链位置：中国拥有全球最大工业机器人市场、完整制造供应链和快速迭代能力，2024 年工业机器人安装量约占全球 54%。证据：[`SRC-robotics-008`](../../raw/robotics-embodied-ai/documents/SRC-robotics-008-world-robotics-2025-report-industrial-robots.md)
 - 关键短板：高端核心零部件、灵巧操作、具身数据、机器人基础模型、可靠性、安全标准和高端生态工具链。
 - 政策受益环节：核心部组件、整机系统、机器人操作系统、标准测试、工业/仓储/医疗/养老/应急场景。
 - 地方落地线索：北京、上海、深圳、浙江、安徽等地正在围绕机器人和具身智能建设产业集群，需继续建立地方政策表。
@@ -25,6 +25,7 @@
 ## 文件导航
 
 - `00-source-acquisition-plan.md`: 信息获取路线、来源等级和已验证站点。
+- `00-source-capture-index.md`: 来源抽取 MOC、raw artifacts、manifest 和补采状态。
 - `01-industry-map.md`: 产业链和价值流。
 - `02-technology-and-products.md`: 技术路线和产品形态。
 - `03-market-and-policy.md`: 中国市场规模、十五五政策和监管。
@@ -34,3 +35,4 @@
 - `06-career-view.md`: 岗位地图和学习路径。
 - `07-training-data.md`: 训练数据生产、处理、公司、解决方案和论文数据集。
 - `08-umi-gripper-research-and-business-plan.md`: UMI Gripper 技术研究、学习计划和国内数据采集业务落地计划。
+- `09-training-data-deep-dive.md`: 训练数据深度调研汇总页和并行研究入口。

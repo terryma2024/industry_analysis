@@ -19,9 +19,9 @@ aliases:
 
 | 公司 | 环节 | 商业模式 | 客户 | 优势 | 风险 | 证据 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 优必选 UBTECH | 人形整机/解决方案 | 整机+行业解决方案+教育/消费硬件 | 工业制造、物流、教育、商业服务 | 港股上市，有年报和收入结构可验证 | 亏损、订单质量、工业场景效率仍需验证 | `SRC-robotics-009` `SRC-robotics-010` |
-| 宇树科技 Unitree | 人形/四足整机、开发平台 | 标准化硬件销售+开发平台 | 科研、教育、开发者、工业/商业探索 | 产品价格透明，G1/H1/G1-D 可验证 | 人形商业收入和客户结构待验证 | `SRC-robotics-012` `SRC-robotics-013` `SRC-robotics-014` |
-| 智元机器人 AGIBOT | 人形/通用机器人、数据平台 | 整机+平台+数据服务 | 工业、服务、开发者 | 产品矩阵完整，强调数据平台 | 未上市，财务和客户需交叉验证 | `SRC-robotics-015` `SRC-robotics-016` |
+| 优必选 UBTECH | 人形整机/解决方案 | 整机+行业解决方案+教育/消费硬件 | 工业制造、物流、教育、商业服务 | 港股上市，有年报和收入结构可验证 | 亏损、订单质量、工业场景效率仍需验证 | [`SRC-robotics-009`](../../raw/robotics-embodied-ai/documents/SRC-robotics-009-ubtech-robotics-hkex-issuer-announcements-page.md) [`SRC-robotics-010`](../../raw/robotics-embodied-ai/documents/SRC-robotics-010-ubtech-latest-announcements-and-circulars.md) |
+| 宇树科技 Unitree | 人形/四足整机、开发平台 | 标准化硬件销售+开发平台 | 科研、教育、开发者、工业/商业探索 | 产品价格透明，G1/H1/G1-D 可验证 | 人形商业收入和客户结构待验证 | [`SRC-robotics-012`](../../raw/robotics-embodied-ai/documents/SRC-robotics-012-unitree-g1-humanoid-robot-product-page.md) [`SRC-robotics-013`](../../raw/robotics-embodied-ai/documents/SRC-robotics-013-unitree-h1-humanoid-robot-product-page.md) [`SRC-robotics-014`](../../raw/robotics-embodied-ai/documents/SRC-robotics-014-unitree-g1-d-end-to-end-platform-for-humanoid-robot.md) |
+| 智元机器人 AGIBOT | 人形/通用机器人、数据平台 | 整机+平台+数据服务 | 工业、服务、开发者 | 产品矩阵完整，强调数据平台 | 未上市，财务和客户需交叉验证 | [`SRC-robotics-015`](../../raw/robotics-embodied-ai/documents/SRC-robotics-015-agibot-a2-product-page.md) [`SRC-robotics-016`](../../raw/robotics-embodied-ai/documents/SRC-robotics-016-agibot-products-page.md) |
 | 逐际动力 LimX Dynamics | 人形/多形态双足/具身 OS | 整机+操作系统+开发工具 | 科研、制造、商业、家庭探索 | 运动控制和具身 OS 定位清晰 | 商业化规模待验证 | 官方网站 |
 | 星动纪元 RobotEra | 人形整机、灵巧手、机器人模型 | 整机+灵巧手+场景解决方案 | 工业制造、服务、海外市场 | 清华背景，产品线覆盖 L7/Q5/XHAND1 | 融资和订单需官方/客户验证 | 官方网站 |
 | 银河通用 Galbot | 轮式双臂通用机器人/具身模型 | 整机+场景运营+模型能力 | 零售、工业、医疗 | 聚焦轮式双臂，抓取和零售场景更接近落地 | 官网可达性需持续验证，财务不透明 | 需进一步验证官方资料 |
@@ -36,15 +36,15 @@ aliases:
 | 极智嘉 Geek+ | AMR/仓储机器人/通用仓储机器人 | AMR+仓储系统+软件 | 电商、零售、3PL、制造、汽车 | 场景数据丰富，向仓储具身操作延伸 | 人形 Gino 1 商业化需验证 | 官方网站 |
 | 快仓 Quicktron | AMR/仓储物流机器人 | AMR+软件系统+物流方案 | 零售、电商、汽车、制造、医药 | AMR 部署规模和客户基础 | 与人形具身智能关联间接 | 官方网站 |
 | 优艾智合 YOUIBOT | 工业移动操作/巡检机器人 | 移动操作机器人+软件系统 | 半导体、能源化工、新能源、3C | “移动+操作”贴近具身落地，工业客户明确 | 人形业务仍需验证 | 官方网站 |
-| 绿的谐波 | 谐波减速器/执行器 | 核心零部件销售 | 工业机器人、人形机器人客户 | 国产谐波减速器龙头，弹性高 | 客户集中、价格下降、扩产周期 | `SRC-robotics-034` |
-| 双环传动/环动科技 | RV/谐波减速器 | 核心零部件销售 | 工业机器人、自动化客户 | 汽车齿轮基础+机器人减速器子公司 | 人形业务收入占比待拆 | `SRC-robotics-042` |
+| 绿的谐波 | 谐波减速器/执行器 | 核心零部件销售 | 工业机器人、人形机器人客户 | 国产谐波减速器龙头，弹性高 | 客户集中、价格下降、扩产周期 | [`SRC-robotics-034`](../../raw/robotics-embodied-ai/documents/SRC-robotics-034-2025-121-42.md) |
+| 双环传动/环动科技 | RV/谐波减速器 | 核心零部件销售 | 工业机器人、自动化客户 | 汽车齿轮基础+机器人减速器子公司 | 人形业务收入占比待拆 | [`SRC-robotics-042`](../../raw/robotics-embodied-ai/documents/SRC-robotics-042-2025q2.md) |
 | 中大力德 | 减速器、电机、智能执行单元 | 传动/驱动零部件 | 工业机器人、智能物流、自动化设备 | 电机+减速器+执行单元组合 | 技术壁垒和高端客户验证不足 | 官方网站 |
-| 步科股份 | 无框力矩电机/伺服/控制 | 电机和自动化部件 | 协作机器人、人形机器人、工业自动化 | 无框力矩电机国产供应商 | 订单持续性和毛利率待跟踪 | `SRC-robotics-036` |
+| 步科股份 | 无框力矩电机/伺服/控制 | 电机和自动化部件 | 协作机器人、人形机器人、工业自动化 | 无框力矩电机国产供应商 | 订单持续性和毛利率待跟踪 | [`SRC-robotics-036`](../../raw/robotics-embodied-ai/documents/SRC-robotics-036-2025.md) |
 | 鸣志电器 | 空心杯电机/控制电机 | 微特电机和驱动系统 | 灵巧手、医疗、工业自动化 | 空心杯电机对灵巧手重要 | 机器人收入占比和客户验证需跟踪 | 需进一步年报验证 |
 | 禾川科技 | 伺服、PLC、执行器/人形整机探索 | 工控部件+机器人零部件/整机 | 工业自动化、人形机器人生态 | 伺服和控制基础，可向执行器扩展 | 整机投入可能拖累盈利 | 需进一步公告验证 |
-| 汇川技术 | 伺服、控制器、工业自动化 | 工控平台+机器人核心部件 | 制造业客户、机器人供应链 | 工控龙头，运动控制能力强 | 人形机器人收入短期可能很小 | `SRC-robotics-040` `SRC-robotics-041` |
-| 奥比中光 | 3D视觉/空间感知 | 视觉传感器+解决方案 | 服务机器人、人形/具身机器人 | 机器人“眼睛”，量产基础较好 | 价格竞争和客户保密导致验证难 | `SRC-robotics-037` |
-| 柯力传感 | 六维力/力矩/触觉传感器 | 传感器销售+产业投资 | 人形、协作、工业机器人客户 | 力传感是灵巧操作核心 | 早期产品收入小，送样到量产不确定 | `SRC-robotics-038` `SRC-robotics-039` |
+| 汇川技术 | 伺服、控制器、工业自动化 | 工控平台+机器人核心部件 | 制造业客户、机器人供应链 | 工控龙头，运动控制能力强 | 人形机器人收入短期可能很小 | [`SRC-robotics-040`](../../raw/robotics-embodied-ai/documents/SRC-robotics-040-2026-12-98-23-39.md) [`SRC-robotics-041`](../../raw/robotics-embodied-ai/documents/SRC-robotics-041-2025.md) |
+| 奥比中光 | 3D视觉/空间感知 | 视觉传感器+解决方案 | 服务机器人、人形/具身机器人 | 机器人“眼睛”，量产基础较好 | 价格竞争和客户保密导致验证难 | [`SRC-robotics-037`](../../raw/robotics-embodied-ai/documents/SRC-robotics-037-2026.md) |
+| 柯力传感 | 六维力/力矩/触觉传感器 | 传感器销售+产业投资 | 人形、协作、工业机器人客户 | 力传感是灵巧操作核心 | 早期产品收入小，送样到量产不确定 | [`SRC-robotics-038`](../../raw/robotics-embodied-ai/documents/SRC-robotics-038-2025-6-85-1-73.md) [`SRC-robotics-039`](../../raw/robotics-embodied-ai/documents/SRC-robotics-039-source.md) |
 | 东华测试 | 六维力传感器/测试测量 | 传感器和测试系统 | 工业、人形、航空航天等 | 小批量试制，潜在高壁垒 | 商业化早期 | 需进一步公告验证 |
 
 ## 训练数据生产与处理公司
@@ -53,15 +53,15 @@ aliases:
 
 | 公司/平台 | 环节 | 代表方案 | 主要价值 | 证据 |
 |---|---|---|---|---|
-| 智元机器人 AGIBOT | 整机厂/数据平台 | AgiBot World / AGIBOT WORLD 2026 / AIDEA 线索 | 百万级真机轨迹、数据清洗验证、层级标注、开放数据集和模型 | `SRC-robotics-044` `SRC-robotics-058` |
-| 宇树科技 Unitree | 整机厂/数采训练平台 | G1-D End-to-End Platform | 从采集、标注、审核、存储、导出到训练、仿真和部署的端到端平台 | `SRC-robotics-014` |
-| 艾欧智能 IO-AI | 数据基础设施 | TeleXperience / SenseXperience / EmbodiFlow | 遥操作、人体数据采集、标注、可视化、质检和后处理 | `SRC-robotics-046` |
-| 感进机器人 Robotin | 数据服务/全栈方案 | 具身智能数据平台 | 真实家庭/杂乱场景视觉数据和专业级物理操作采集 | `SRC-robotics-047` |
-| 第一推力 FirstMove | 无本体数据引擎 | Egocentric Data Engine for Robotics | 通过第一视角真实物理交互补足机器人训练语料 | `SRC-robotics-048` |
-| 智源/ModelScope | 开源平台 | 智源具身一站式平台 | 数据集聚合、统一标准化格式处理、模型开发验证 | `SRC-robotics-049` `SRC-robotics-063` |
-| 星海图 Galaxea | 整机+基础模型+数据采集 | R1 系列/客户数据采集服务 | 面向算法开发、场景落地和数据采集的客户服务 | `SRC-robotics-050` |
-| NVIDIA | 海外平台 | Isaac / GR00T / Cosmos / GR00T-Dreams | 仿真、合成轨迹、基础模型训练和云到机器人部署 | `SRC-robotics-051` `SRC-robotics-062` |
-| Hugging Face LeRobot | 开源工具链 | LeRobotDataset / LeRobot Hub | 开源数据格式、采集、训练、可视化、合并和部署工具 | `SRC-robotics-052` `SRC-robotics-053` |
+| 智元机器人 AGIBOT | 整机厂/数据平台 | AgiBot World / AGIBOT WORLD 2026 / AIDEA 线索 | 百万级真机轨迹、数据清洗验证、层级标注、开放数据集和模型 | [`SRC-robotics-044`](../../raw/robotics-embodied-ai/documents/SRC-robotics-044-agibot-open-agibot-world-2026.md) [`SRC-robotics-058`](../../raw/robotics-embodied-ai/documents/SRC-robotics-058-agibot-world-colosseo-a-large-scale-manipulation-platform-for-scalable-and-intel.md) |
+| 宇树科技 Unitree | 整机厂/数采训练平台 | G1-D End-to-End Platform | 从采集、标注、审核、存储、导出到训练、仿真和部署的端到端平台 | [`SRC-robotics-014`](../../raw/robotics-embodied-ai/documents/SRC-robotics-014-unitree-g1-d-end-to-end-platform-for-humanoid-robot.md) |
+| 艾欧智能 IO-AI | 数据基础设施 | TeleXperience / SenseXperience / EmbodiFlow | 遥操作、人体数据采集、标注、可视化、质检和后处理 | [`SRC-robotics-046`](../../raw/robotics-embodied-ai/documents/SRC-robotics-046-io-ai-tech-robotics-and-embodied-ai-data-infrastructure.md) |
+| 感进机器人 Robotin | 数据服务/全栈方案 | 具身智能数据平台 | 真实家庭/杂乱场景视觉数据和专业级物理操作采集 | [`SRC-robotics-047`](../../raw/robotics-embodied-ai/documents/SRC-robotics-047-robotin.md) |
+| 第一推力 FirstMove | 无本体数据引擎 | Egocentric Data Engine for Robotics | 通过第一视角真实物理交互补足机器人训练语料 | [`SRC-robotics-048`](../../raw/robotics-embodied-ai/documents/SRC-robotics-048-firstmove-egocentric-data-engine-for-robotics.md) |
+| 智源/ModelScope | 开源平台 | 智源具身一站式平台 | 数据集聚合、统一标准化格式处理、模型开发验证 | [`SRC-robotics-049`](../../raw/robotics-embodied-ai/documents/SRC-robotics-049-source.md) [`SRC-robotics-063`](../../raw/robotics-embodied-ai/documents/SRC-robotics-063-robobrain-2-0-technical-report.md) |
+| 星海图 Galaxea | 整机+基础模型+数据采集 | R1 系列/客户数据采集服务 | 面向算法开发、场景落地和数据采集的客户服务 | [`SRC-robotics-050`](../../raw/robotics-embodied-ai/documents/SRC-robotics-050-galaxea-company-about.md) |
+| NVIDIA | 海外平台 | Isaac / GR00T / Cosmos / GR00T-Dreams | 仿真、合成轨迹、基础模型训练和云到机器人部署 | [`SRC-robotics-051`](../../raw/robotics-embodied-ai/documents/SRC-robotics-051-enhance-robot-learning-with-synthetic-trajectory-data-generated-by-world-foundat.md) [`SRC-robotics-062`](../../raw/robotics-embodied-ai/documents/SRC-robotics-062-nvidia-isaac-gr00t-n1-an-open-foundation-model-for-humanoid-robots.md) |
+| Hugging Face LeRobot | 开源工具链 | LeRobotDataset / LeRobot Hub | 开源数据格式、采集、训练、可视化、合并和部署工具 | [`SRC-robotics-052`](../../raw/robotics-embodied-ai/documents/SRC-robotics-052-lerobot-github-repository.md) [`SRC-robotics-053`](../../raw/robotics-embodied-ai/documents/SRC-robotics-053-lerobotdataset-v3-0-documentation.md) |
 
 ## 竞争格局
 

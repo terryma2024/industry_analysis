@@ -20,8 +20,8 @@ aliases:
 
 ## 一句话理解
 
-- **UMI 试图解决的问题**：机器人遥操作数据质量高但贵、慢、依赖真实机器人；纯人类视频便宜但缺动作和机器人可执行性。UMI 站在中间：让人拿着“机器人化的手持夹爪”做任务，尽量同时保留人类示教的自然性和机器人动作空间的可迁移性。证据：`SRC-robotics-066`
-- **核心设计**：手持 3D 打印平行夹爪 + GoPro 鱼眼相机 + 侧镜 + GoPro IMU + marker 夹爪宽度追踪 + 视觉惯性 SLAM + 相对末端轨迹动作表示 + 推理时延迟匹配 + Diffusion Policy。证据：`SRC-robotics-065` `SRC-robotics-066`
+- **UMI 试图解决的问题**：机器人遥操作数据质量高但贵、慢、依赖真实机器人；纯人类视频便宜但缺动作和机器人可执行性。UMI 站在中间：让人拿着“机器人化的手持夹爪”做任务，尽量同时保留人类示教的自然性和机器人动作空间的可迁移性。证据：[`SRC-robotics-066`](../../raw/robotics-embodied-ai/documents/SRC-robotics-066-universal-manipulation-interface-in-the-wild-robot-teaching-without-in-the-wild.md)
+- **核心设计**：手持 3D 打印平行夹爪 + GoPro 鱼眼相机 + 侧镜 + GoPro IMU + marker 夹爪宽度追踪 + 视觉惯性 SLAM + 相对末端轨迹动作表示 + 推理时延迟匹配 + Diffusion Policy。证据：[`SRC-robotics-065`](../../raw/robotics-embodied-ai/documents/SRC-robotics-065-universal-manipulation-interface-project-page.md) [`SRC-robotics-066`](../../raw/robotics-embodied-ai/documents/SRC-robotics-066-universal-manipulation-interface-in-the-wild-robot-teaching-without-in-the-wild.md)
 - **商业化直觉**：卖“夹爪套件”只是入口；真正 ToB 价值是帮助客户稳定获得可训练、可复现、可评估、能导出到 UMI/Zarr/LeRobot/ACT/DP 的数据包。
 
 ## UMI 技术拆解
@@ -56,11 +56,11 @@ flowchart LR
 
 | 设计 | 解释 | 业务含义 |
 |---|---|---|
-| 视觉惯性 SLAM | UMI 用 ORB-SLAM3 分支从 GoPro 视频和 IMU 恢复带尺度的 6DoF 轨迹。官方 README 也提醒 SLAM 是较脆弱环节。证据：`SRC-robotics-067` | 国内产品要把“SLAM 成功率、失败原因、轨迹质量报告”做成核心卖点。 |
-| 相对末端轨迹 | 动作用一段相对当前 EE pose 的 SE(3) 轨迹表示，避免依赖全局坐标系。证据：`SRC-robotics-066` | 数据跨机器人可迁移的关键。客户如果只要某一台机器人，GELLO/ALOHA 式直接遥操作可能更简单。 |
-| 推理时延迟匹配 | UMI 在推理时对相机、机器人、夹爪的 observation/action latency 做对齐和提前发指令。证据：`SRC-robotics-066` | 服务交付必须包含延迟测量，不然动态任务会出现抖动、错位和失败。 |
-| Zarr 数据格式 | UMI 社区把 GoPro、SLAM 输出和 Zarr 作为数据层级；Zarr 里包含 camera RGB、demo start/end pose、eef pos/rot、gripper width 和 episode_ends。证据：`SRC-robotics-068` | 商业数据包应支持 Zarr 和 LeRobot 双导出，附 schema、版本、采样率、压缩方式和质检报告。 |
-| 模仿学习算法 | UMI 原文主要使用 Diffusion Policy，同时指出 ACT 可作为替代。证据：`SRC-robotics-066` | 服务不应绑定单一算法，应交付 baseline training recipe 和可复现配置。 |
+| 视觉惯性 SLAM | UMI 用 ORB-SLAM3 分支从 GoPro 视频和 IMU 恢复带尺度的 6DoF 轨迹。官方 README 也提醒 SLAM 是较脆弱环节。证据：[`SRC-robotics-067`](../../raw/robotics-embodied-ai/documents/SRC-robotics-067-universal-manipulation-interface-github-repository.md) | 国内产品要把“SLAM 成功率、失败原因、轨迹质量报告”做成核心卖点。 |
+| 相对末端轨迹 | 动作用一段相对当前 EE pose 的 SE(3) 轨迹表示，避免依赖全局坐标系。证据：[`SRC-robotics-066`](../../raw/robotics-embodied-ai/documents/SRC-robotics-066-universal-manipulation-interface-in-the-wild-robot-teaching-without-in-the-wild.md) | 数据跨机器人可迁移的关键。客户如果只要某一台机器人，GELLO/ALOHA 式直接遥操作可能更简单。 |
+| 推理时延迟匹配 | UMI 在推理时对相机、机器人、夹爪的 observation/action latency 做对齐和提前发指令。证据：[`SRC-robotics-066`](../../raw/robotics-embodied-ai/documents/SRC-robotics-066-universal-manipulation-interface-in-the-wild-robot-teaching-without-in-the-wild.md) | 服务交付必须包含延迟测量，不然动态任务会出现抖动、错位和失败。 |
+| Zarr 数据格式 | UMI 社区把 GoPro、SLAM 输出和 Zarr 作为数据层级；Zarr 里包含 camera RGB、demo start/end pose、eef pos/rot、gripper width 和 episode_ends。证据：[`SRC-robotics-068`](../../raw/robotics-embodied-ai/documents/SRC-robotics-068-umi-robot-dataset-community.md) | 商业数据包应支持 Zarr 和 LeRobot 双导出，附 schema、版本、采样率、压缩方式和质检报告。 |
+| 模仿学习算法 | UMI 原文主要使用 Diffusion Policy，同时指出 ACT 可作为替代。证据：[`SRC-robotics-066`](../../raw/robotics-embodied-ai/documents/SRC-robotics-066-universal-manipulation-interface-in-the-wild-robot-teaching-without-in-the-wild.md) | 服务不应绑定单一算法，应交付 baseline training recipe 和可复现配置。 |
 
 ## 相关实现路线对比
 

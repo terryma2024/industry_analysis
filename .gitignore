@@ -155,3 +155,7 @@ __pycache__/
 .agents/skills/video-summarizer/cache/
 .agents/skills/video-summarizer/screenshots/
 .agents/skills/video-summarizer/*cookies*.txt
+
+# Obsidian local UI state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
