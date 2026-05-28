@@ -116,4 +116,6 @@ flowchart LR
 - 已推进：补充中国政策与地方平台，北京、上海、深圳/广东、杭州/浙江、安徽/合肥已形成训练场/公共平台对照表，见 [[research-notes/local-policy-data-platforms-2026-05-27]]。
 - 已推进：完成 Open X-Embodiment、DROID、RoboMIND、AgiBot World、LeRobot 的 schema 横向表，见 [robotics_dataset_schema_comparison.csv](../../raw/robotics-embodied-ai/data/robotics_dataset_schema_comparison.csv)。
 - 已推进：完成“失败轨迹”和“人工接管数据”稀缺资产调研，见 [[research-notes/failure-intervention-data-2026-05-27]]。
+- 已推进：补齐 UMI-like v0 采集 SOP/QC、UMI/Zarr 与 LeRobot schema 对照和客户数据包模板，见 [[research-notes/umi-v0-sop-schema-data-package-2026-05-28]]。
+- 已推进：补充 LeRobot 初学者教学，解释 LeRobotDataset、目录结构、UMI/Zarr 转换和 ToB 数据服务意义，见 [[research-notes/lerobot-beginner-guide-2026-05-28]]。
 - 待继续：下载最小样例数据核验字段和 license；合并升级 `training_data_companies.csv`；补充 Robotin/FirstMove/GenRobot/灵初等工商、招聘和客户交付证据；按 [[00-source-capture-index]] SOP 抽取本轮新增来源 raw artifact。

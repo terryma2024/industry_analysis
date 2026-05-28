@@ -25,6 +25,8 @@ aliases:
 | 数据 schema 横向 | [robotics_dataset_schema_comparison.csv](../../raw/robotics-embodied-ai/data/robotics_dataset_schema_comparison.csv) / [[research-notes/dataset-schema-comparison-2026-05-27]] | 已完成 |
 | 失败轨迹/人工接管 | [failure_intervention_data_sources.csv](../../raw/robotics-embodied-ai/data/failure_intervention_data_sources.csv) / [[research-notes/failure-intervention-data-2026-05-27]] | 已完成 |
 | UMI 硬件国产化 | [umi_hardware_bom_and_localization.csv](../../raw/robotics-embodied-ai/data/umi_hardware_bom_and_localization.csv) / [[research-notes/umi-hardware-localization-2026-05-27]] | 已完成 |
+| UMI v0 SOP/schema/客户数据包模板 | [umi_v0_cup_transfer_sop_qc_template.csv](../../raw/robotics-embodied-ai/data/umi_v0_cup_transfer_sop_qc_template.csv)、[umi_zarr_lerobot_schema_crosswalk.csv](../../raw/robotics-embodied-ai/data/umi_zarr_lerobot_schema_crosswalk.csv) / [[research-notes/umi-v0-sop-schema-data-package-2026-05-28]] | 模板已完成，实采待验证 |
+| LeRobot 初学者教学 | [[research-notes/lerobot-beginner-guide-2026-05-28]] | 已完成 |
 
 ## 结论摘要
 
@@ -72,6 +74,8 @@ aliases:
 | 生产级元数据 | robot_id、calibration、control mode、license、privacy、QC report | 把数据可追溯性作为交付物，而不是内部日志 |
 
 AgiBot World 的 `instruction_segments`、`key_frame`、`take_over`、`h5_path`、`camera_parameters` 等扩展字段更接近生产数据工厂 schema；DROID 则说明固定硬件套件、采集员、场景、语言标签、raw+training-ready 双发布，对规模化很重要。
+
+初学者先读 [[research-notes/lerobot-beginner-guide-2026-05-28]]，再读 [[research-notes/dataset-schema-comparison-2026-05-27]] 和 [[research-notes/umi-v0-sop-schema-data-package-2026-05-28#UMI/Zarr 与 LeRobot Schema 对照]]。
 
 ### 失败轨迹与人工接管
 
@@ -130,5 +134,5 @@ flowchart TD
 - 对 Robotin、FirstMove、GenRobot、灵初、禹纲做工商、融资、招聘 JD 和客户案例补证。
 - 把 `training_data_companies.csv` 合并升级为二级字段版本：融资、客户、数据样例、格式、LeRobot/OXE、案例视频、验证等级。
 - 做一个 `failure_intervention_schema_comparison.csv`，对比 Oopsie、LeRobot HIL、RoboMIND、DROID、UMI、RLDS、Zarr。
-- 把 UMI-like v0 数据包目录、采集 SOP、QC 指标和报价模板沉淀为可复用 ToB 交付模板。
+- 已补：UMI-like v0 数据包目录、采集 SOP、QC 指标已沉淀为 [[research-notes/umi-v0-sop-schema-data-package-2026-05-28]]、[umi_v0_cup_transfer_sop_qc_template.csv](../../raw/robotics-embodied-ai/data/umi_v0_cup_transfer_sop_qc_template.csv) 和 [umi_zarr_lerobot_schema_crosswalk.csv](../../raw/robotics-embodied-ai/data/umi_zarr_lerobot_schema_crosswalk.csv)；报价模板仍待真实交付成本后补。
 - 按 [[00-source-capture-index]] 的 SOP 持续抽取本轮新增 `SRC-*` raw 证据，并用 `tools/link_source_refs.py` 刷新链接。

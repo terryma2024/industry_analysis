@@ -21,3 +21,8 @@ aliases:
 - [[dataset-schema-comparison-2026-05-27]]: OXE、DROID、RoboMIND、AgiBot World、LeRobot schema 横向。
 - [[failure-intervention-data-2026-05-27]]: 失败轨迹和人工接管数据。
 - [[umi-hardware-localization-2026-05-27]]: UMI 硬件 BOM、许可证、可采购性和国产替代。
+
+## 2026-05-28 UMI v0 模板补全
+
+- [[umi-v0-sop-schema-data-package-2026-05-28]]: UMI-like v0 采集 SOP、UMI/Zarr 与 LeRobot schema 对照、客户数据包样例目录。
+- [[lerobot-beginner-guide-2026-05-28]]: LeRobot 初学者教学，解释 LeRobotDataset、数据目录、UMI/Zarr 转换和 ToB 数据服务意义。
