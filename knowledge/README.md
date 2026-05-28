@@ -13,3 +13,7 @@
 - 每个行业保留 `00-index.md` 作为入口笔记。
 - 复杂主题可以增加 MOC note、Canvas、Mermaid 或 Excalidraw 图。
 - 不把原始大文件塞进知识笔记；原始材料仍放在 `raw/`，知识笔记只保留摘要、判断和来源引用。
+
+## 工作流 SOP
+
+- [Obsidian Knowledge Production SOP](../docs/obsidian_knowledge_sop.md): 本仓库知识生产、链接、来源追踪、任务复核和 Obsidian 友好写作的统一 SOP。
