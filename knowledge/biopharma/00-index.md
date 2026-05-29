@@ -1,3 +1,15 @@
+---
+title: 生物医药 - 研究入口
+type: industry
+date_created: 2026-05-29
+last_updated: 2026-05-29
+status: draft
+tags:
+  - industry/biopharma
+sources:
+  - biopharma/sources.csv
+---
+
 # 生物医药 - 研究入口
 
 ## 当前摘要
@@ -30,3 +42,8 @@
 - `04-companies.md`: 公司和竞争格局。
 - `05-investment-view.md`: 投资逻辑和风险。
 - `06-career-view.md`: 岗位地图和学习路径。
+
+## 关联连接
+
+- [[index|Knowledge Index]]
+- [[README|Knowledge README]]
