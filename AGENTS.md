@@ -27,6 +27,7 @@ When the user provides a video/audio URL or asks for video notes, use:
 - Preserve source traceability. Important claims should point back to filenames, URLs, page numbers, tables, or dataset names whenever available.
 - For web sources recorded in `knowledge/<industry>/sources.csv`, extract durable Markdown/raw artifacts into `raw/<industry>/documents/` using `tools/extract_sources_with_defuddle.py` and keep `source_capture_manifest.csv` updated. Follow `docs/source_capture_sop.md`, and maintain Obsidian-friendly source-capture MOC notes under `knowledge/<industry>/`.
 - Follow `docs/obsidian_knowledge_sop.md` for the user's preferred knowledge-production style: durable research assets over chat-only answers, no fabricated data, source-traceable claims, Obsidian-first wikilinks/MOCs/callouts/backlinks, readable link text, explicit task status, and table-safe wikilink aliases using escaped pipes (`\|`).
+- For ad hoc news, article, video, or audio summary requests, write the durable output under `knowledge/news/`: create one Markdown file per summary using `YYYY-MM-DD-english-slug.md`, include source URL, platform/publisher, date, extraction method or limitation, key facts, judgments, follow-up questions, and relevant industry wikilinks, and add an index row in `knowledge/news/00-index.md`. Keep `knowledge/README.md` linked to the News category.
 - Prefer durable Markdown/CSV artifacts over transient chat summaries.
 - Use stable English slugs for directories and Chinese names in headings and tables.
 
