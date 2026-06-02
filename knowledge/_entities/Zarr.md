@@ -1,37 +1,34 @@
 ---
-title: Hugging Face LeRobot
+title: Zarr 数组存储格式
 type: entity
 date_created: 2026-06-02
 last_updated: 2026-06-02
 aliases:
-  - LeRobot
-  - Hugging Face LeRobot
+  - Zarr
 sources:
-  - raw/robotics-embodied-ai/documents/SRC-robotics-052-lerobot-github-repository.md
-  - raw/robotics-embodied-ai/documents/SRC-robotics-053-lerobotdataset-v3-0-documentation.md
   - knowledge/robotics-embodied-ai/08-umi-gripper-research-and-business-plan.md
 tags:
-  - entity/tool
+  - entity/data-format
   - industry/robotics-embodied-ai
   - umi
 status: active
 ---
 
-# Hugging Face LeRobot
+# Zarr 数组存储格式
 
 ## 初学者解释
 
-LeRobot 是 Hugging Face 推出的机器人学习工具链，包含数据格式、数据集、训练、评测和部署相关工具。
+Zarr 是一种保存大型多维数组的数据格式。
 
-它的重要性在于降低机器人数据和模型训练的工程门槛。
+机器人数据里常有大量图像、状态、动作、时间戳，Zarr 可以把它们分块、压缩、按需读取。
 
-UMI 报告建议支持 LeRobot，是因为客户可能希望直接用开源工具加载和训练数据。
+UMI 社区使用 Zarr 保存 replay buffer。
 
-入门教学见 [[robotics-embodied-ai/research-notes/lerobot-beginner-guide-2026-05-28]]。
+业务意义：商业数据包最好同时支持 Zarr 和更通用的 LeRobot/HDF5 等格式，降低客户使用门槛。
 
 ## 补充说明
 
-补充：LeRobot 的价值是把机器人数据从“私有脚本可读”推向“社区工具可加载、可训练、可复现”。数据服务商若支持 LeRobot，可以降低客户验收和二次训练成本。
+补充：在 UMI-like 数据采集业务中，这个术语既要按技术定义理解，也要按“是否影响可训练数据交付、质检和客户复现”来理解。初学者应优先掌握它和 observation、action、episode、schema、quality control 之间的关系。
 
 ## 在 UMI 数据闭环中的位置
 
@@ -47,8 +44,8 @@ UMI 报告建议支持 LeRobot，是因为客户可能希望直接用开源工�
 
 ## 关联连接
 
+- [[ReplayBuffer]]
 - [[DatasetSchema]]
-- [[Zarr]]
-- [[DataPackage]]
+- [[HDF5]]
 - [[robotics-embodied-ai/08-umi-gripper-research-and-business-plan|UMI Gripper 研究与业务计划]]
 - [[_entities/README|UMI 技术术语实体索引]]

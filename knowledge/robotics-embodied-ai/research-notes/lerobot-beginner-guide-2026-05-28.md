@@ -92,7 +92,7 @@ UMI 原始社区资料把数据分成 GoPro MP4、SLAM 输出和 Zarr replay buf
 
 ### 第 0 步：只看概念
 
-- 读 [[10-umi-technical-terms-for-beginners#LeRobot]]、[[10-umi-technical-terms-for-beginners#Episode]]、[[10-umi-technical-terms-for-beginners#Dataset Schema 数据集结构]]、[[10-umi-technical-terms-for-beginners#Observation 观测]]、[[10-umi-technical-terms-for-beginners#Action 动作]]。
+- 读 [[_entities/HuggingFaceLeRobot|LeRobot]]、[[_entities/Episode|Episode]]、[[_entities/DatasetSchema|Dataset Schema 数据集结构]]、[[_entities/Observation|Observation 观测]]、[[_entities/Action|Action 动作]]。
 - 目标：能解释“LeRobot 不是一个机器人，而是机器人数据和训练工具链”。
 
 ### 第 1 步：看一个数据目录
@@ -176,7 +176,7 @@ LeRobot 让数据服务从“给客户一堆视频和 CSV”升级为“给客�
 - [[07-training-data|训练数据生产与处理]]
 - [[09-training-data-deep-dive|训练数据深度调研]]
 - [[08-umi-gripper-research-and-business-plan|UMI Gripper 技术研究、学习计划与数据采集业务落地]]
-- [[10-umi-technical-terms-for-beginners|UMI Gripper 初学者技术术语教学]]
+- [[_entities/README|UMI Gripper 初学者技术术语教学]]
 - [[dataset-schema-comparison-2026-05-27]]
 - [[umi-v0-sop-schema-data-package-2026-05-28]]
 - [[failure-intervention-data-2026-05-27]]

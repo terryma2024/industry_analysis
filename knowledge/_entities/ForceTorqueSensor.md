@@ -1,37 +1,34 @@
 ---
-title: Hugging Face LeRobot
+title: Force/Torque Sensor 力/力矩传感器
 type: entity
 date_created: 2026-06-02
 last_updated: 2026-06-02
 aliases:
-  - LeRobot
-  - Hugging Face LeRobot
+  - Force/Torque Sensor
+  - F/T Sensor
+  - 力/力矩传感器
 sources:
-  - raw/robotics-embodied-ai/documents/SRC-robotics-052-lerobot-github-repository.md
-  - raw/robotics-embodied-ai/documents/SRC-robotics-053-lerobotdataset-v3-0-documentation.md
   - knowledge/robotics-embodied-ai/08-umi-gripper-research-and-business-plan.md
 tags:
-  - entity/tool
+  - entity/sensor
   - industry/robotics-embodied-ai
   - umi
 status: active
 ---
 
-# Hugging Face LeRobot
+# Force/Torque Sensor 力/力矩传感器
 
 ## 初学者解释
 
-LeRobot 是 Hugging Face 推出的机器人学习工具链，包含数据格式、数据集、训练、评测和部署相关工具。
+力/力矩传感器可以测量力和扭矩。
 
-它的重要性在于降低机器人数据和模型训练的工程门槛。
+在机器人操作中，它用于感知接触，例如插入、擦拭、压紧、拧动。
 
-UMI 报告建议支持 LeRobot，是因为客户可能希望直接用开源工具加载和训练数据。
-
-入门教学见 [[robotics-embodied-ai/research-notes/lerobot-beginner-guide-2026-05-28]]。
+UMI-FT 和 TacUMI 强调力/触觉，是因为很多接触丰富任务只靠视觉不够。
 
 ## 补充说明
 
-补充：LeRobot 的价值是把机器人数据从“私有脚本可读”推向“社区工具可加载、可训练、可复现”。数据服务商若支持 LeRobot，可以降低客户验收和二次训练成本。
+补充：力/力矩传感器比纯视觉更接近“接触是否正确”的真值，可用于构建 VLTA/VTLA 数据，但会提高硬件成本和系统集成难度。
 
 ## 在 UMI 数据闭环中的位置
 
@@ -47,8 +44,8 @@ UMI 报告建议支持 LeRobot，是因为客户可能希望直接用开源工�
 
 ## 关联连接
 
-- [[DatasetSchema]]
-- [[Zarr]]
-- [[DataPackage]]
+- [[TactileSensor]]
+- [[Action]]
+- [[QualityControl]]
 - [[robotics-embodied-ai/08-umi-gripper-research-and-business-plan|UMI Gripper 研究与业务计划]]
 - [[_entities/README|UMI 技术术语实体索引]]

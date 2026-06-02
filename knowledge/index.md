@@ -23,7 +23,14 @@ tags:
 
 - [[_entities/AndrejKarpathy|Andrej Karpathy]] — LLM Wiki 理念提出者，强调把知识管理从 RAG 转向持续编译。
 - [[_entities/ScaleAI|Scale AI]] — 美国 AI 数据基础设施公司，从自动驾驶标注扩展到大模型后训练、评测和政府 AI，并于 2025 年获得 Meta 战略投资。
-- [[_entities/HuggingFaceLeRobot|Hugging Face LeRobot]] — 机器人学习数据、加载、训练与评测工具链。
+- [[_entities/HuggingFaceLeRobot|Hugging Face LeRobot]] — 机器人学习数据、加载、训练与评测工具链，也是 UMI 数据包可复现交付的重要格式入口。
+- [[_entities/README|Entities Layer]] — 人物、公司、工具、产品和 UMI 技术术语实体索引。
+- [[_entities/UniversalManipulationInterface|Universal Manipulation Interface]] — 低成本手持夹爪示教路线，把人类操作转成机器人可训练轨迹数据。
+- [[_entities/SLAM|SLAM]] — UMI-like 数据采集中的位姿恢复与轨迹质量核心模块。
+- [[_entities/DiffusionPolicy|Diffusion Policy]] — UMI 常用的机器人模仿学习策略模型基线。
+- [[_entities/ActionChunkingTransformer|ACT]] — 用 Transformer 一次预测动作 chunk 的模仿学习基线。
+- [[_entities/DataPackage|Data Package]] — ToB 机器人数据服务的交付资产包概念。
+- [[_entities/QualityControl|Quality Control]] — 机器人训练数据从原始采集走向可训练交付的质检流程。
 - [[_entities/UnitreeRobotics|Unitree Robotics]] — 中国具身智能/机器人公司，现有研究中用于跟踪整机与数据平台线索。
 - [[_entities/Agibot|Agibot]] — 中国具身智能公司，现有研究中用于跟踪开放数据集和整机生态。
 - [[_entities/IOAI|IO-AI]] — 中国具身数据基础设施公司，现有研究中用于跟踪遥操作、数据标注管理与格式导出。
@@ -35,6 +42,7 @@ tags:
 - [[_concepts/source-traceability|Source Traceability]] — 本仓库的核心质量约束：重要判断必须能回到原始来源。
 - [[_concepts/embodied-ai|Embodied AI]] — AI 进入物理世界的机器人产业化方向。
 - [[_concepts/robot-training-data|Robot Training Data]] — 具身智能训练数据、episode、schema、质检与交付体系。
+- [[_concepts/vision-language-tactile-action|Vision-Language-Tactile-Action]] — 视觉、语言、触觉/力觉和动作轨迹融合的具身模型/数据范式。
 - [[_concepts/universal-manipulation-interface|Universal Manipulation Interface]] — UMI-like 采集设备和机器人示教数据包路线。
 - [[_concepts/lerobot-dataset-schema|LeRobot Dataset Schema]] — LeRobot v3 及相关机器人数据格式概念。
 
@@ -49,7 +57,7 @@ tags:
 - [[ai/research-notes/scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]] — Scale AI 从人力任务 API 到 Meta 战略投资的路径，以及中国 AI 数据基础设施公司对标。
 - [[robotics-embodied-ai/09-training-data-deep-dive|机器人训练数据深度调研]] — 具身智能训练数据、地方政策、schema、失败轨迹和 UMI-like 业务路线综合。
 - [[robotics-embodied-ai/08-umi-gripper-research-and-business-plan|UMI Gripper 研究与业务计划]] — UMI-like 数据采集硬件、学习路径与 ToB 落地方案。
-- [[robotics-embodied-ai/10-umi-technical-terms-for-beginners|UMI 初学者技术术语教学]] — 面向初学者解释 IMU、6DoF、SLAM、Zarr、LeRobot、Diffusion Policy 等概念。
+- [[robotics-embodied-ai/11-embodied-ai-data-service-companies-2026-06-02|具身智能数据采集和服务公司对比]] — 对智元、补天石、它石、简智、Maxinsights、自变量、帕西尼的数据采集/服务路线、岗位和优劣势做横向分析。
 
 ## Industries
 
