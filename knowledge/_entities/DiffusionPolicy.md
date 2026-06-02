@@ -1,37 +1,33 @@
 ---
-title: Hugging Face LeRobot
+title: Diffusion Policy
 type: entity
 date_created: 2026-06-02
 last_updated: 2026-06-02
 aliases:
-  - LeRobot
-  - Hugging Face LeRobot
+  - Diffusion Policy
+  - 扩散策略
 sources:
-  - raw/robotics-embodied-ai/documents/SRC-robotics-052-lerobot-github-repository.md
-  - raw/robotics-embodied-ai/documents/SRC-robotics-053-lerobotdataset-v3-0-documentation.md
   - knowledge/robotics-embodied-ai/08-umi-gripper-research-and-business-plan.md
 tags:
-  - entity/tool
+  - entity/model
   - industry/robotics-embodied-ai
   - umi
 status: active
 ---
 
-# Hugging Face LeRobot
+# Diffusion Policy
 
 ## 初学者解释
 
-LeRobot 是 Hugging Face 推出的机器人学习工具链，包含数据格式、数据集、训练、评测和部署相关工具。
+Diffusion Policy 是一种机器人模仿学习方法，使用扩散模型生成一段连续动作。
 
-它的重要性在于降低机器人数据和模型训练的工程门槛。
+初学可以把它理解成：模型不是只预测下一步，而是预测接下来一小段平滑动作。
 
-UMI 报告建议支持 LeRobot，是因为客户可能希望直接用开源工具加载和训练数据。
-
-入门教学见 [[robotics-embodied-ai/research-notes/lerobot-beginner-guide-2026-05-28]]。
+UMI 原文主要使用 Diffusion Policy 做训练。
 
 ## 补充说明
 
-补充：LeRobot 的价值是把机器人数据从“私有脚本可读”推向“社区工具可加载、可训练、可复现”。数据服务商若支持 LeRobot，可以降低客户验收和二次训练成本。
+补充：Diffusion Policy 更适合把连续、平滑、多峰的操作动作建模成一段 action trajectory，但训练质量高度依赖 episode 切分、动作频率、图像质量和 rollout 评测。
 
 ## 在 UMI 数据闭环中的位置
 
@@ -47,8 +43,8 @@ UMI 报告建议支持 LeRobot，是因为客户可能希望直接用开源工�
 
 ## 关联连接
 
-- [[DatasetSchema]]
-- [[Zarr]]
-- [[DataPackage]]
+- [[ImitationLearning]]
+- [[PolicyModel]]
+- [[Rollout]]
 - [[robotics-embodied-ai/08-umi-gripper-research-and-business-plan|UMI Gripper 研究与业务计划]]
 - [[_entities/README|UMI 技术术语实体索引]]

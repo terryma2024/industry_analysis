@@ -50,7 +50,7 @@ sources:
 - `07-training-data.md`: 训练数据生产、处理、公司、解决方案和论文数据集。
 - `08-umi-gripper-research-and-business-plan.md`: UMI Gripper 技术研究、学习计划、国内数据采集业务落地计划，以及 2026-05-28 下一步任务复核。
 - `09-training-data-deep-dive.md`: 训练数据深度调研汇总页和并行研究入口，含 UMI v0 SOP/schema/客户数据包模板与 LeRobot 初学者教学入口。
-- `10-umi-technical-terms-for-beginners.md`: UMI Gripper 初学者技术术语教学，解释 IMU、6DoF、SLAM、Zarr、LeRobot、Diffusion Policy 等概念。
+- [[_entities/README|UMI 技术术语实体索引]]: UMI Gripper 初学者术语已拆分为实体页，覆盖 IMU、6DoF、SLAM、Zarr、LeRobot、Diffusion Policy 等概念。
 
 ## 关联连接
 
