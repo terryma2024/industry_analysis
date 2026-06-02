@@ -1,0 +1,25 @@
+source_id,title,url,method,status,raw_path,captured_at,error
+SRC-ai-001,Scale YC company post,https://www.ycombinator.com/blog/scale/,defuddle,fallback_html,raw/ai/documents/SRC-ai-001-scale-yc-company-post.md,2026-06-02T01:03:06+00:00,Error: fetch failed
+SRC-ai-002,Scale announces Series B funding,https://www.globenewswire.com/news-release/2018/08/07/1548173/0/en/scale-announces-18-million-in-series-b-funding-led-by-index-ventures-with-accel-and-yc-joining-the-round.html,defuddle,ok,raw/ai/documents/SRC-ai-002-scale-announces-series-b-funding.md,2026-06-02T01:03:06+00:00,
+SRC-ai-003,Scale AI Series C,https://scale.com/blog/series-c,defuddle,fallback_html,raw/ai/documents/SRC-ai-003-scale-ai-series-c.md,2026-06-02T01:03:06+00:00,Error: Timed out fetching page after 10s
+SRC-ai-004,Scale AI breaking even after it scaled back hiring,https://www.cnbc.com/2020/12/01/scale-ai-breaking-even-after-it-scaled-back-hiring.html,defuddle,ok,raw/ai/documents/SRC-ai-004-scale-ai-breaking-even-after-it-scaled-back-hiring.md,2026-06-02T01:03:06+00:00,
+SRC-ai-005,Scale AI scores 325 million to grow AI solution,https://www.futuriom.com/articles/news/scale-ai-scores-325-million-to-grow-ai-solution/2021/04,defuddle,ok,raw/ai/documents/SRC-ai-005-scale-ai-scores-325-million-to-grow-ai-solution.md,2026-06-02T01:03:06+00:00,
+SRC-ai-006,Scale AI awarded 250M AI contract by Department of Defense,https://fedscoop.com/scale-ai-awarded-250m-ai-contract-by-department-of-defense/,defuddle,ok,raw/ai/documents/SRC-ai-006-scale-ai-awarded-250m-ai-contract-by-department-of-defense.md,2026-06-02T01:03:06+00:00,
+SRC-ai-007,Scale AI Series F,https://scale.com/blog/scale-ai-series-f,defuddle,ok,raw/ai/documents/SRC-ai-007-scale-ai-series-f.md,2026-06-02T01:03:06+00:00,
+SRC-ai-008,Scale AI announces next phase of company evolution,https://scale.com/blog/scale-ai-announces-next-phase-of-company-evolution,defuddle,ok,raw/ai/documents/SRC-ai-008-scale-ai-announces-next-phase-of-company-evolution.md,2026-06-02T01:03:06+00:00,
+SRC-ai-009,Customer trust and Scale Meta deal,https://scale.com/blog/customer-trust-scale-meta-deal,defuddle,ok,raw/ai/documents/SRC-ai-009-customer-trust-and-scale-meta-deal.md,2026-06-02T01:03:06+00:00,
+SRC-ai-010,Scale AI not winding down following Meta deal interim CEO says,https://www.cnbc.com/2025/06/18/scale-ai-not-winding-down-following-meta-deal-interim-ceo-says.html,defuddle,fallback_html,raw/ai/documents/SRC-ai-010-scale-ai-not-winding-down-following-meta-deal-interim-ceo-says.md,2026-06-02T01:03:06+00:00,Error: fetch failed
+SRC-ai-011,Meta restructures its AI unit under Superintelligence Labs,https://techcrunch.com/2025/06/30/meta-restructures-its-ai-unit-under-superintelligence-labs/,defuddle,ok,raw/ai/documents/SRC-ai-011-meta-restructures-its-ai-unit-under-superintelligence-labs.md,2026-06-02T01:03:06+00:00,
+SRC-ai-012,Meta Scale AI deal analysis,https://www.axios.com/2025/06/13/meta-scale-ai-deal,defuddle,failed,raw/ai/documents/SRC-ai-012-meta-scale-ai-deal-analysis.md,2026-06-02T01:03:06+00:00,Error: Failed to fetch: 403; fallback HTML download failed: HTTP Error 403: Forbidden
+SRC-ai-013,海天瑞声官网,https://www.haitianruisheng.com/,defuddle,ok,raw/ai/documents/SRC-ai-013-source.md,2026-06-02T01:03:06+00:00,
+SRC-ai-014,数据堂官网,https://www.datatang.com/,defuddle,ok,raw/ai/documents/SRC-ai-014-source.md,2026-06-02T01:03:06+00:00,
+SRC-ai-015,数据堂关于我们,https://www.datatang.com/about-us,defuddle,ok,raw/ai/documents/SRC-ai-015-source.md,2026-06-02T01:03:06+00:00,
+SRC-ai-016,Testin 云测官网,https://www.testin.cn/static/testin.html,defuddle,fallback_html,raw/ai/documents/SRC-ai-016-testin.md,2026-06-02T01:03:06+00:00,Error: Timed out fetching page after 10s
+SRC-ai-017,标贝科技数据服务,https://www.data-baker.com/data-overview.html,defuddle,ok,raw/ai/documents/SRC-ai-017-source.md,2026-06-02T01:03:06+00:00,
+SRC-ai-018,曼孚科技官网,https://www.mindflow.com.cn/,defuddle,ok,raw/ai/documents/SRC-ai-018-source.md,2026-06-02T01:03:06+00:00,
+SRC-ai-019,龙猫数据关于我们,https://new.longmaosoft.com/about,defuddle,ok,raw/ai/documents/SRC-ai-019-source.md,2026-06-02T01:03:06+00:00,
+SRC-ai-020,龙猫数据 AutopilotGPT,https://www.longmaosoft.com/media/detail/63,defuddle,ok,raw/ai/documents/SRC-ai-020-autopilotgpt.md,2026-06-02T01:03:06+00:00,
+SRC-ai-021,GOMAX LAB 官网,https://www.gomaxai.cn/,defuddle,fallback_html,raw/ai/documents/SRC-ai-021-gomax-lab.md,2026-06-02T01:03:06+00:00,Error: No content could be extracted from https://www.gomaxai.cn/
+SRC-ai-022,Xpert Studio 官网,https://xpertiise.com/,defuddle,fallback_html,raw/ai/documents/SRC-ai-022-xpert-studio.md,2026-06-02T01:03:06+00:00,Error: No content could be extracted from https://xpertiise.com/
+SRC-ai-023,Stardust AI smart education scenario,https://stardust.ai/en-US/scenario/smarteducation/,defuddle,ok,raw/ai/documents/SRC-ai-023-stardust-ai-smart-education-scenario.md,2026-06-02T01:03:06+00:00,
+SRC-ai-024,天衍奇点官网,https://infersingularity.com/,defuddle,fallback_html,raw/ai/documents/SRC-ai-024-source.md,2026-06-02T01:03:06+00:00,Error: Timed out fetching page after 10s

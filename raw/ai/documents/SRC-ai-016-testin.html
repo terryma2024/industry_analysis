@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testin云测</title>
+    <meta name="description"
+          content="云测创立于2011年，是一家以人工智能技术驱动的企业服务平台，为全球超过百万的企业及开发者提供云测试服务、AI数据标注服务、安全服务。云测的使命是助力产业智能化，即在全球产业化升级浪潮中，云测通过工具、技术、人才、服务四位一体的共享，加速企业智能化、数字化、科技化的进程，为企业在各行业中的智能化升级与商业化落地保驾护航，释放创新力量，赋能企业改变世界。"/>
+    <meta name="Keywords"
+          content="云测,云测试,APP测试,自动化测试,兼容测试,软件测试,测试用例,Bug探索,性能测试,手游测试,应用测试,android测试,iOS自动化测试,适配测试,手机APP测试,Android自动化测试,iOS测试,AB测试"/>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="/skin_v4/lib/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/4.0/less/common.min.css?v=20190408">
+    <link rel="shortcut icon" href="/static/4.0/images/favicon.png"/>
+    <!--[if lt IE 9]>
+    <script src="/static/4.0/js/html5shiv.min.js"></script>
+    <script src="/static/4.0/js/respond.1.4.2.min.js"></script>
+    <![endif]-->
+
+
+    <link rel="stylesheet" href="/static/4.0/less/css/about.min.css?v=20190221">
+    <style>
+        header .h-bottom .h-b-list li {
+            padding-top: 16px;
+        }
+
+        /*main {*/
+        /*    padding-top: 0;*/
+        /*}*/
+
+        .part ul li {
+            margin-left: 20px;
+            list-style: disc;
+        }
+
+        .part h5 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .part img {
+            margin-bottom: 10px;
+        }
+
+        .about .about-nav .box-fluid ul {
+            margin-bottom: 60px;
+        }
+
+        .about .about-nav .box-fluid ul li {
+            font-family: 'PingFangSC-Semibold,PingFang SC';
+            width: 190px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 16px;
+            cursor: default;
+        }
+
+        .about .about-nav .box-fluid ul li.active {
+            background-color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            color: #006edb;
+        }
+
+        .links {
+            height: 27px;
+            margin-top: 6px;
+            margin-bottom: 7px;
+            display: flex;
+        }
+
+        .links li {
+            width: 26px;
+            height: 27px;
+            float: right;
+            margin-right: 10px;
+        }
+
+        .links li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        footer {
+            background-color: #191E35;
+        }
+
+        .f-more li {
+            margin-right: 0 !important;
+        }
+
+        .jrecinfo {
+            width: 500px;
+            float: right;
+            text-align: right;
+        }
+
+        .jrecinfo-link {
+            display: inline-block;
+            text-decoration: none;
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .jrecinfo-text {
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            margin: 0px 0px 0px 5px;
+            color: #939393;
+        }
+
+        .brandinfo {
+            width: 500px;
+            float: left;
+            text-align: left;
+            font-size: 12px;
+            color: #FFFFFF;
+            opacity: 0.4;
+        }
+
+        .sperate:before {
+            position: absolute;
+            right: 0;
+            top: 0;
+            left: 0;
+            height: 1px;
+            content: '';
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+            background-color: #939393;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .jrecinfo {
+                float: unset;
+                margin: 0 auto;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- header -->
+<header class="head-without-bg">
+    <div class="h-top">
+        <div class="box-fluid">
+            <a href="/index.htm"><img src="/static/logo/1.0/logo.png?v=20190221" class="h-logo"/></a>
+
+            <!-- PC -->
+            <ul class="h-t-list visible-pc">
+                <li>
+                    <a>简体中文-Chinese <i class="iconfont icon-icon_xiala"></i></a>
+                    <div class="dropdown">
+                        <p><a href="https://www.testin.cn/">简体中文-Chinese</a></p>
+                        <p><a href="http://www.testin.net/">英文-English</a></p>
+                    </div>
+                </li>
+                <li><a href="/business/welfare.htm" target="_blank">福利</a></li>
+                <li><a href="/business/about.htm" target="_blank">关于我们</a></li>
+                <li><a href="/business/case_entry.htm" target="_blank">案例</a></li>
+                <li><a href="https://support.testin.cn/portal/kb" target="_blank">帮助</a></li>
+                <li><a href="/realmachine/index.htm">控制台</a></li>
+            </ul>
+            <!-- // PC -->
+
+            <!-- mobile -->
+            <ul class="h-t-list visible-mobile">
+
+                <li><a class="btn btn-blue btn-small" href="/account/register.htm">免费注册</a></li>
+
+
+                <li id="mobile_nav_toggle"><i class="iconfont icon-hanbaodaohang"></i></li>
+            </ul>
+            <!-- // mobile -->
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</header>
+<!-- // header -->
+<!-- mainbox -->
+<main class="">
+    <section class="part-block" style="line-height: 26px;">
+        <div class="box-fluid">
+            <h3 style="text-align: center">Testin云测</h3><br>
+            <h5 style="text-align: center">（人工智能技术驱动的企业服务平台）</h5><br>
+            <p>Testin云测创立于2011年，是一家以人工智能技术驱动的企业服务平台。Testin云测为全球超过百万的企业及开发者提供云测试服务、AI数据标注服务、安全服务。</p>
+            <br><p>中文名：Testin云测</p>
+            <p>外文名：Testin</p>
+            <p>定位：以人工智能为驱动的企业服务平台</p>
+            <p>使命：助力产业智能化</p>
+            <p>总部地址：北京市朝阳区酒仙桥东方科技园3号楼4层</p>
+            <p>所属公司：北京云测信息技术有限公司</p>
+            <p>创立时间：2011年6月</p>
+            <p>主营业务：云测试服务、AI数据标注服务、安全服务</p>
+            <p>董事长：蒋晓海</p>
+            <p>CEO：徐琨</p>
+            <p>分支机构：上海、广州、深圳、南京、西安、武汉、杭州、成都、厦门</p>
+            <br><h4>文化理念</h4><br>
+            <p>使命：助力产业智能化</p>
+            <p>价值观：以客户为中心、正直、责任心，管理者要求具备大局观</p>
+            <p>通用力：团队合作、追求卓越、目标导向</p>
+            <br><h4>发展历程</h4><br>
+            <p>2023年</p>
+            <p>2月加入工信安全中心首批“人工智能安全可信护航计划”单位</p>
+            <p>8月发布智能驾驶AI数据解决方案2.0</p>
+            <p>2022年</p>
+            <p>1月，入选信通院AI工程化推进委员会首批副理事长单位</p>
+            <p>4月，参与编写AI模型开发管理标准——《人工智能研发运营一体化(Model/MLOps)能力成熟度模型：开发管理》正式发布</p>
+            <p>9月，发布面向AI工程化的新一代数据解决方案</p>
+            <p>12月，入选信通院“云上软件工程社区汽车云工作组”首批企业成员单位</p>
+            <p>2021年</p>
+            <p>5月，发布云测数据标注平台</p>
+            <p>9月，发布鸿蒙系统云测试平台</p>
+            <p>9月，发布证券行业测试管理数字化平台</p>
+            <p>9月，发布AI数据集管理系统</p>
+            <p>2020年</p>
+            <p>9月，云测数据成为数据准确度达到99.99%的AI数据服务商</p>
+            <p>9月，与华为联合发起HMS出海生态联盟</p>
+            <br><h4>服务大全</h4><br>
+            <p style="text-align: center;">软件测试</p>
+            <table class="table-bordered" style="width: 100%;text-align: center;line-height: 30px;">
+                <tr>
+                    <td>标准兼容测试</td>
+                    <td>深度兼容测试</td>
+                    <td>深度兼容测试Pro</td>
+                    <td>Web/PC兼容测试</td>
+                </tr>
+                <tr>
+                    <td>硬件连通性测试</td>
+                    <td>云真机测试</td>
+                    <td>多机联动</td>
+                    <td>云监控</td>
+                </tr>
+                <tr>
+                    <td>App UI自动化</td>
+                    <td>Web UI自动化</td>
+                    <td>接口自动化</td>
+                    <td>专家用例测试</td>
+                </tr>
+                <tr>
+                    <td>探索性测试</td>
+                    <td>用户体验测试</td>
+                    <td>验收测试</td>
+                    <td>专家驻场</td>
+                </tr>
+                <tr>
+                    <td>性能测试</td>
+                    <td>渗透测试</td>
+                    <td>安全扫描</td>
+                    <td>安全加固</td>
+                </tr>
+                <tr>
+                    <td>等保咨询</td>
+                    <td>个人信息合规测评</td>
+<!--                    <td>软件出海测试</td>-->
+                    <td></td>
+                </tr>
+            </table><br>
+            <p style="text-align: center;">AI数据服务</p>
+            <table class="table-bordered" style="width: 100%;text-align: center;line-height: 30px;">
+                <tr>
+                    <td>图像标注</td>
+                    <td>点云标注</td>
+                    <td>语音标注</td>
+                    <td>文本标注</td>
+                </tr>
+                <tr>
+                    <td>语义分割标注</td>
+                    <td>2D&3D融合标注</td>
+                    <td>全局切割标注</td>
+                    <td>实体识别标注</td>
+                </tr>
+                <tr>
+                    <td>实例分割标注</td>
+                    <td>点云追踪标注</td>
+                    <td>区域切割标注</td>
+                    <td>意图标注</td>
+                </tr>
+                <tr>
+                    <td>全景分割标注</td>
+                    <td>2D&3D融合追踪标注</td>
+                    <td>语音识别标签标注</td>
+                    <td>领域意图槽位标注</td>
+                </tr>
+                <tr>
+                    <td>贝塞尔曲线标注</td>
+                    <td>点云动静态分离标注</td>
+                    <td>语音转写标注</td>
+                    <td>三元组标注</td>
+                </tr>
+                <tr>
+                    <td>数据标注平台</td>
+                    <td>AI数据集管理</td>
+                    <td>行业数据集</td>
+                    <td>私有化部署</td>
+                </tr>
+            </table>
+            <br><h4>客户评价</h4><br>
+            <p>小方APP用实践证明，基于云测AI技术的UI自动化，相比传统手工执行更加简单快速可靠，捕捉人工容易忽视的缺陷。（小方APP）</p>
+            <br><h4>主营业务</h4><br>
+            <p>通过云测测试多年测试项目积累，将专业的测试经验，结合大量测试资源，帮助客户解决测试能力和资源问题。</p>
+            <br><h4>Testin云测试——测试业务品牌</h4><br>
+            <p>Testin云测试是云测试模式的实践者。Testin云测试通过资源的汇聚和技术的创新，为企业软件应用生命周期提供全方位测试服务，以测试体系规划做为基础，服务涵盖DevOps体系咨询、功能测试、性能测试、兼容测试、安全测试、自动化测试、自动化监控、远程真机等多项服务，Testin云测试将人工智能技术引入到整个测试过程中，打造了专家+工具+服务的一体化测试服务。</p>
+            <p>市面上80%的App都是通过Testin云测试来进行测试的。测试支持的范畴也从智能手机、智能平板扩展延伸至App、Web、PC、IOT、车机、系统等等，Testin云测已经持续服务超过100万企业和开发者，为300多万款应用进行了超过3亿次的测试。</p>
+            <br><h4>自动化测试</h4><br>
+            <p>Testin云测的自动化工具，基于机器识别技术，通过融合自然语言能力，具有完善的一体化自动化测试能力，支持Web、App、PC、接口等测试场景，大幅降低了测试脚本开发维护的成本，提高了自动化场景覆盖率，在银行、证券等行业自动化测试覆盖率可以达到60-70%，提升了应用自动化测试的投入产出比。同时，Testin云测通过对企业业务场景的深刻理解，给出了基于超强AI的行业解决方案，可以帮助企业构建自动化能力，减轻企业在测试方面的投入，实现整体降本增效的目标。</p>
+            <br><h4>远程真机测试</h4><br>
+            <p>远程真机立志于为企业提供云端设备调试、自动化测试解决方案，降低企业采购设备成本，解决企业设备型号不足、资产管理困难等问题。远程真机支持Android和iOS设备，客户可以进行手工测试、代码调试、自动化脚本录制及执行等功能。</p>
+            <br><h4>标准兼容测试</h4><br>
+            <p>通过智能遍历和Monkey测试，实现对App的基础兼容性测试，帮助客户发现兼容性问题。</p>
+            <br><h4>深度兼容测试</h4><br>
+            <p>将APP中的场景脚本化，并在手机上自动执行。从安装、启动、运行、功能、UI等多维度，发现并定位APP兼容性问题。帮助企业解决由于兼容性问题而引起的客户投诉、客户流失、客户推广成本浪费等问题。</p>
+            <br><h4>遍历兼容测试</h4><br>
+            <p>基于云端设备和专家团队，针对移动端软件和PC端软件在多场景、多设备、多维度下，发现软件的兼容性问题。帮助企业解决应用软件兼容适配、回归验证流程等问题。</p>
+            <br><h4>硬件连通性测试</h4><br>
+            <p>智能硬件设备通过蓝牙、NFC、WiFi、OTG、音频接口等连接方式与手机终端连接，旨在通过兼容性、功能性、连接稳定性、数据同步性测试场景，验证软件控制端与智能硬件交互性的综合测试服务。</p>
+            <br><h4>iTestin自动化录制工具</h4><br>
+            <p>一步降低自动化录制门槛，达到书写“点击设置”即自动化脚本能力,通过OCR及图像识别能力，实现相同流程下，一套自动化脚本可以在多平台上执行的能力，降低脚本编写及后期维护成本。</p>
+            <br><h4>TestinPro</h4><br>
+            <p>将测试平台搭建到企业内部，帮助企业构建自动化测试体系。集自动化测试能力和测试管理于一体。同时支持App和Web端的双重测试，支持功能、兼容、安全等多种测试类型，帮企业实现7X24不间断的测试，节约测试成本，提高应用的可靠性。</p>
+            <br><h4>专有云产品</h4><br>
+            <p>为客户提供独享测试设备，独享设备可用于监控拨测、自动化脚本录制、自动化测试执行。帮企业实现7X24的测试，节约测试成本，提高应用的质量。</p>
+            <br><h4>拨测监控</h4><br>
+            <p>依托Testin云测手机真机云平台，基于Testin云测的自动化技术，从最终客户视角实现客户业务感知和业务持续可用性监测，帮助企业及时发现和定位问题、控制运营风险。</p>
+            <br><h4>Bug探索</h4><br>
+            <p>测试专家依据需求组建云端测试团队，进行多人次、多维度的探索性功能测试，覆盖真实用户场景、发现隐蔽缺陷。帮助企业从多维度进行自由性功能探索，为企业应用上线提供质量保证。</p>
+            <br><h4>专家用例测试</h4><br>
+            <p>资深测试专家设计并执行用例，全程透明管理，企业可随时跟踪测试进度，评价测试结果。</p>
+            <br><h4>应用安全扫描</h4><br>
+            <p>从应用的代码、配置、组件、数据、加密、通信等多维度进行深层次检测，检测应用潜在风险隐患；系统自动化生成检测报告，通过展示应用安全评分、风险类别，高中低危漏洞等级占比情况，应用安全状态可视化；提供详细的漏洞日志信息并可在代码层面上定位漏洞，依据应用安全现状，生成修复方案。</p>
+            <br><h4>深度安全渗透测试</h4><br>
+            <p>模拟黑客常用的漏洞发现技术和攻击手段，深度挖掘安全隐患，提供形式涵盖漏洞风险说明、测试过程详情以及修复方案等信息的专业报告，并协助漏洞整改，从而帮助客户直观的理解并解决系统面临的安全风险，提高被测对象的安全性。</p>
+            <br><h4>商用密码应用安全性评估以及等保咨询服务</h4><br>
+            <p>针对信息系统商用密码应用设计方案及已建成的信息系统,依据（GM/T0054-2018)《信息系统密码基本要求》及《商用密码应用安全性评估测评过程指南(试行)》等标准规范,从总体要求、密码功能要求、密码技术应用要求(包括:物理和环境安全、网络和通信安全、设备和计算安全、应用和数据安全)密钥管理以及安全管理五个方面进行商用密码应用安全性评估,并出具测评报告。</p>
+            <br><h4>移动应用云加固服务</h4><br>
+            <p>基于云测安全核心加密技术对代码、资源文件、配置文件等进行加固。帮助企业提升应用安全系数，防止应用在分发后，遭受反编译、调试、盗版、二次打包等威胁，保障应用安全。</p>
+            <br><h4>云测数据——人工智能数据服务品牌</h4><br>
+            <p>云测数据以高质量、场景化的AI训练数据服务为基础，持续为智能驾驶、智慧城市、智能家居、智慧金融等领域提供通用数据集、数据标注平台&数据管理工具、数据采集/数据标注等服务，支持文本、语音、图像、视频等各类型数据的处理。深度合作伙伴包含众多世界500强企业、高校科研机构、政府机构，头部AI企业和大型互联网企业，涵盖了计算机视觉、语音识别、自然语言处理、知识图谱等AI主流技术领域。</p>
+            <br><h4>数据标注</h4><br>
+            <p>支持计算机视觉、语音工程、自然语言处理，多类型数据标注，多重审核。</p>
+            <br><h4>数据采集</h4><br>
+            <p>支持文本、图片、音视频全类型数据定制采集，真实场景。</p>
+            <br><h4>私有化部署</h4><br>
+            <p>自研标注系统，扩展性高。</p>
+            <br><h4>标注驻场</h4><br>
+            <p>标注人员驻客户职场，保证数据安全，提升标注效率和质量。</p>
+            <br><h4>云测数据标注平台</h4><br>
+            <p>云测数据标注平台，新一代人工智能数据处理的工程化工具，入选“北京市人工智能行业赋能典型案例(2023)”、“2022可信AI案例-人工智能平台应用标杆案例”。云测数据标注平台将数据采集、处理、标注、训练、模型输出进行持续迭代集成，支持图像、点云、视频、文本、语音等数据类型的加工处理，可解决AI场景落地多样性、丰富性的数据需求，帮助企业获得高质量训练数据。产出着高质量、场景化的AI数据，促使人工智能产业加速发展，提升了Al应用的规模化落地效果。</p>
+            <br><h4>面向垂直行业大模型AI数据解决方案</h4><br>
+            <p>为行业客户深度定制数据采集方案，助力获取高价值数据，在面对微调任务会根据大模型落地场景特点，提供包含QA-instruct、prompt等文本类任务项目和多模态大模型的相关能力支持。在完成微调后，云测数据通过垂直领域的人员和专家积累+评测体系和服务，帮助企业对各个垂直应用落地领域进行评估。并通过以集成数据底座为核心的数据标注平台，将难例数据回流完成清洗标注，为更有效率的模型调优做准备。</p>
+            <br><h4>智能驾驶解决方案</h4><br>
+            <p>智能驾驶行业多应用于自动驾驶、自主泊车、智能驾舱等场景，云测数据依托于项目经验与行业理解，为智能驾驶企业提供全类型的数据标注与定制化数据采集，如全景语义分割、3D点云标注，驾驶员行为信息、道路车辆图像采集等，支持工具私有化部署与标注人员驻场服务，助力企业智能化转型。</p>
+            <br><h4>智能家居解决方案</h4><br>
+            <p>智能家居行业多应用于智能家电、智能音箱、智能扫地机器人等场景，云测数据依托于项目经验与行业理解，为智能家居企业提供全类型的数据标注与定制化数据采集，如语义分割、ASR语音转写，唤醒词/控制词、方言语料采集等，支持工具私有化部署与标注人员驻场服务。</p>
+            <br><h4>智能安防解决方案</h4><br>
+            <p>智能安防行业多应用于平安城市、人流监测、车辆识别等场景，云测数据依托于项目经验与行业理解，为智能安防企业提供全类型的数据标注与定制化数据采集，如人脸打点、人体拉框、目标跟踪、语义分割标注，道路采集、车辆采集等，支持工具私有化部署与标注人员驻场服务。</p>
+            <br><h4>智能金融解决方案</h4><br>
+            <p>智能金融行业多应用于身份认证、智慧柜台、客服机器人、风控反欺诈等场景，云测数据依托于项目经验与行业理解，为智能金融企业提供全类型的数据标注与定制化数据采集，如OCR单据转写、文本信息抽取标注，票据信息、人物对话采集等，支持工具私有化部署与标注人员驻场服务。</p>
+            <br><h4>新零售解决方案</h4><br>
+            <p>新零售行业多应用于智慧门店、无人货柜、虚拟购物等场景，云测数据依托于项目经验与行业理解，为新零售企业提供全类型的数据标注与定制化数据采集，如商品分类识别、OCR票据转写，商品货架、门店门脸采集等，支持工具私有化部署与标注人员驻场服务。</p>
+            <br><h4>公司管理</h4><br>
+            <p style="text-align: center"><b>公司管理层</b></p>
+            <table class="table-bordered" style="width: 100%;text-align: center;line-height: 30px;">
+                <tr><th style="text-align: center;">职务</th><th style="text-align: center;">姓名</th></tr>
+                <tr><td>董事长</td><td>蒋晓海</td></tr>
+                <tr><td>CEO</td><td>徐琨</td></tr>
+                <tr><td>COO</td><td>谭晨宇</td></tr>
+                <tr><td>CMO</td><td>张鹏飞</td></tr>
+                <tr><td>CTO</td><td>陈冠诚</td></tr>
+            </table>
+            <br><h4>分支机构</h4><br>
+            <table class="table-bordered" style="width: 100%;text-align: center;line-height: 30px;">
+                <tr><th style="text-align: center;">城市</th><th style="text-align: center;">地址</th></tr>
+                <tr><td>北京</td><td>北京市朝阳区朝来科技园36号院3号楼3层</td></tr>
+                <tr><td>上海</td><td>上海市普陀区金沙江路1759号圣诺亚大厦A座711室</td></tr>
+                <tr><td>深圳</td><td>深圳市南山区桃园路1号西海明珠大厦F座2110</td></tr>
+                <tr><td>成都</td><td>成都市武侯区天府四街银泰城阿里巴巴西部基地2栋15楼</td></tr>
+                <tr><td>广州</td><td>广州市天河区林和中路188号恒源大厦副楼2层A009单元</td></tr>
+                <tr><td>厦门</td><td>福建省厦门市集美区软件园三期 B10 栋 902-1</td></tr>
+                <tr><td>杭州</td><td>杭州市滨江区浦沿贝因美大厦3号楼707室</td></tr>
+            </table>
+        </div><br>
+    </section>
+
+</main>
+<!-- // mainbox -->
+
+<footer>
+    <div style="position: relative;" class="box-fluid visible-pc">
+        <div class="f-right">
+
+            <ul class="f-more">
+                <li class="title">资质&奖项</li>
+                <li>
+                    <p><a href="/business/about.htm#div_honour" target="_blank">企业荣誉</a></p>
+                    <p><a href="/business/about.htm#div_qua" target="_blank">企业资质</a></p>
+                </li>
+            </ul>
+            <ul class="f-more">
+                <li class="title">合作伙伴</li>
+                <li>
+                    <p><a href="/business/about.htm#div_partner" target="_blank">开发者生态</a></p>
+                    <p><a href="/business/about.htm#div_partner" target="_blank">合作伙伴情况</a></p>
+                    <p><a href="/business/about.htm" target="_blank">加入我们</a></p>
+                    <p><a href="/business/contact_us.htm" target="_blank">合作推广</a></p>
+                </li>
+            </ul>
+            <ul class="f-more">
+                <li class="title">行业案例</li>
+                <li>
+                    <p><a href="/business/test_digital.htm" target="_blank">通用行业方案</a></p>
+                    <p><a href="/business/security_industry.htm" target="_blank">证劵行业</a></p>
+                    <p><a href="https://ai.testin.cn/index.htm" target="_blank">人工智能行业</a></p>
+                </li>
+            </ul>
+<!--            <ul class="f-more" style="margin-right: 25px">-->
+<!--                <li class="title">云测RPA</li>-->
+<!--                <li style="width: 120px">-->
+<!--                    <p><a href="https://rpa.testin.cn/" target="_blank">RPA机器人控制器</a></p>-->
+<!--                    <p><a href="https://rpa.testin.cn/" target="_blank">RPA机器人设计器</a></p>-->
+<!--                    <p><a href="https://rpa.testin.cn/" target="_blank">RPA机器人</a></p>-->
+<!--                    <p><a href="https://rpa.testin.cn/" target="_blank">AI机器人</a></p>-->
+<!--                </li>-->
+<!--            </ul>-->
+            <ul class="f-more">
+                <li class="title">云测数据</li>
+                <li>
+                    <p><a href="https://ai.testin.cn/services_cj.htm" target="_blank">数据采集</a></p>
+                    <p><a href="https://ai.testin.cn/services_bz.htm" target="_blank">数据标注</a></p>
+                    <p><a href="https://ai.testin.cn/label.htm" target="_blank">数据处理平台</a></p>
+                </li>
+            </ul>
+            <ul class="f-more">
+                <li class="title">Testin云测试</li>
+                <li>
+                    <p><a href="/business/landing/test_compatible.htm" target="_blank">兼容测试</a></p>
+                    <p><a href="/business/landing/test_machine.htm" target="_blank">远程真机</a></p>
+                    <p><a href="/business/landing/test_autorec.htm" target="_blank">自动化测试</a></p>
+                    <p><a href="/business/landing/link_stationing.htm" target="_blank">云众包</a></p>
+                    <p><a href="/business/landing/test_infiltration.htm" target="_blank">安全测试</a></p>
+<!--                    <p><a href="https://gn.testin.cn/" target="_blank">海外测试</a></p>-->
+                    <p><a href="https://docs.testin.cn/" target="_blank">帮助文档</a></p>
+                </li>
+            </ul>
+            <ul class="f-more">
+                <li class="title">关于云测</li>
+                <li>
+                    <p><a href="/business/about.htm" target="_blank">品牌简介</a></p>
+                    <p><a href="/business/about.htm#div_history" target="_blank">发展历程</a></p>
+                    <p><a href="/news.htm" target="_blank">新闻报道</a></p>
+                    <p><a href="/business/contact_us.htm" target="_blank">全国网点</a></p>
+                    <p><a href="https://www.zhipin.com/gongsi/ceb246cf881c752f33d939g~.html" target="_blank">人员招聘</a>
+                    </p>
+                    <p>
+                        <a href="https://help-video-oss.oss-cn-hangzhou.aliyuncs.com/Saas%E4%B8%BB%E7%AB%99/Testin%E4%BA%91%E6%B5%8Blogo.rar"
+                           target="_blank">品牌素材</a></p>
+                </li>
+            </ul>
+            <ul class="f-more">
+                <li class="title"></li>
+            </ul>
+
+        </div>
+
+        <div style="float: none;" class="info_bottom f-left">
+            <img style="width: 164px;height: 45px;"
+                 src="/static/logo/1.0/slogan_w.png?v=<fmt:message key='static_file_version'/>" class="f-logo"/>
+            <div class="qr-code">
+                <div class="code-img"></div>
+            </div>
+            <ul class="links">
+                <!--                <li><a style="background-image: url(/static/4.0/images/link_ly_grey.png);" title="领英" target="_blank"-->
+                <!--                       href="https://www.linkedin.com/company/testin"></a></li>-->
+                <li><a style="background-image: url(/static/4.0/images/link_wb_grey.png);" title="微博" target="_blank"
+                       href="https://weibo.com/testincn"></a></li>
+                <li><a class="footer_weixin_icon" style="background-image: url(/static/4.0/images/link_wx_grey.png);"
+                       title="微信"
+                       href="javascript:;"></a>
+                </li>
+            </ul>
+            <ul class="f-info">
+                <li>服务热线</li>
+                <li>400-990-5577</li>
+                <!--                <li>违法和不良信息举报邮箱：<a href="mailto:jubao@testin.cn">jubao@testin.cn</a></li>-->
+                <!--                <li>北京云测信息技术有限公司 &#169; 2011-2025 <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备11040545号</a></li>-->
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+        <div style="position:relative;height: 30px;margin-top: 50px">
+            <div class="sperate"></div>
+        </div>
+
+        <div class="brandinfo">
+            <span>Testin云测旗下品牌:</span>&nbsp;&nbsp;
+            <a href="https://www.testin.cn/" target="_blank" style="color: #FFFFFF">Testin云测试</a>&nbsp;&nbsp;
+            <a href="https://ai.testin.cn/index.htm" target="_blank" style="color: #FFFFFF">云测数据</a>&nbsp;&nbsp;
+<!--            <a href="https://rpa.testin.cn/" target="_blank" style="color: #FFFFFF">云测RPA</a>-->
+        </div>
+        <div class="jrecinfo">
+            <div>北京云测信息技术有限公司 &#169; 2011-2025 <a href="https://beian.miit.gov.cn/" target="_blank"
+                                                  style="color: #a8acb9;">京ICP备11040545号</a>
+            </div>
+            <a class="jrecinfo-link" target="_blank"
+               href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502043607">
+                <img src="/static/4.0/images/recicon.png"/>
+                <p class="jrecinfo-text">京公网安备 11010502043607号</p>
+            </a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <!-- mobile -->
+    <div class="box-fluid visible-mobile">
+        <ul>
+            <li><i class="iconfont icon-icon-test1"></i>
+                <p>全方位购买咨询</p></li>
+            <li><i class="iconfont icon-icon-test"></i>
+                <p>灵活的价格方案</p></li>
+            <li><i class="iconfont icon-icon-test2"></i>
+                <p>精准的配置推荐</p></li>
+        </ul>
+        <h5>服务热线</h5>
+        <h4>400-990-5577</h4>
+        <!--        <h6>违法和不良信息举报邮箱：jubao@testin.cn</h6>-->
+        <h6>北京云测信息技术有限公司 &#169; 2011-2025 <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #a8acb9;">京ICP备11040545号</a>
+        </h6>
+        <div class="jrecinfo">
+            <a class="jrecinfo-link" target="_blank"
+               href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502043607"><img
+                    src="/static/4.0/images/recicon.png" style="float:left;"/>
+                <p class="jrecinfo-text">京公网安备 11010502043607号
+                </p>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- 通用JS -->
+<script src="/static/4.0/js/jquery-1.12.4.min.js"></script>
+<script src="/static/4.0/js/jquery.cookie.js"></script>
+<script src="/static/4.0/js/sweetalert.min.js?v=20190221"></script>
+<script src="/static/4.0/js/base.js?v=20190221"></script>
+<script src="/static/4.0/js/function.js?v=20190221"></script>
+<!-- // 通用JS -->
+
+<!-- 注册来源 -->
+<script type="application/javascript">
+    $(function () {
+        var source = document.location.href;
+        var setCookie = function (source) {
+            var channel = "";
+            var utm = "";
+            if (source.indexOf("channel") != -1 && source.indexOf("utm_") != -1) {
+                channel = source.substring(source.indexOf("channel"));
+                $.cookie("spread_source_utm_cookie", channel, {path: "/", domain: 'testin.cn', expires: 10});
+            } else if (source.indexOf("channel") != -1) {
+                channel = source.substring(source.indexOf("channel"));
+                if (channel.indexOf("&") != -1) {
+                    channel = channel.substring(0, channel.indexOf("&"));
+                }
+                $.cookie("spread_source_channel_cookie", channel, {path: "/", domain: 'testin.cn', expires: 10});
+            } else if (source.indexOf("utm_") != -1) {
+                utm = source.substring(source.indexOf("utm_"));
+                if (utm.indexOf(channel) != -1) {
+                    utm = utm.replace(channel, "");
+                }
+                $.cookie("spread_source_utm_cookie", utm, {path: "/", domain: 'testin.cn', expires: 10});
+            }
+        };
+
+        try {
+            source = decodeURI(source, "utf-8");
+            setCookie(source);
+        } catch (e) {
+            source = urldecode(source, "gbk", function (source) {
+                source = source;
+                setCookie(source);
+            });
+
+            function urldecode(str, charset, callback) {
+                var script = document.createElement('script');
+                script.id = '_urlDecodeFn_';
+                window._urlDecodeFn_ = callback;
+                if (document.all) {
+                    if (navigator.userAgent.indexOf('MSIE 8') > -1) {
+                        //对于ie8做特别hack
+                        var link = document.createElement('link');
+                        link.rel = 'stylesheet';
+                        link.type = 'text/css';
+                        link.charset = charset;
+                        link.href = 'data:text/plain;charset=' + charset + ',%23_decode_hidden_el_for_test_%7Bbackground-image%3Aurl(' + str + ')%7D';
+                        //alert(link.href);
+                        document.body.appendChild(link);
+                        //然后创建一个隐藏的div，应用这个样式
+                        var div = document.createElement('div');
+                        div.id = '_decode_hidden_el_for_test_';
+                        div.style.display = 'none';
+                        document.body.appendChild(div);
+                        setTimeout(function () {
+                            callback(document.getElementById('_decode_hidden_el_for_test_').currentStyle['backgroundImage'].match(/\("data\:text\/(.+)"\)/)[1]);
+                            link.parentNode.removeChild(link);
+                            div.parentNode.removeChild(div);
+                        }, 300)
+                    } else {
+                        //隐藏iframe截获提交的字符串
+                        if (!window['_urlDecode_iframe_']) {
+                            var iframe;
+                            if (document.all) {
+                                try {
+                                    iframe = document.createElement('<iframe name="_urlDecode_iframe_"></iframe>');
+                                } catch (e) {
+                                    iframe = document.createElement('iframe');
+                                    //iframe.name = '_urlDecode_iframe_';
+                                    iframe.setAttribute('name', '_urlDecode_iframe_');
+                                }
+                            } else {
+                                iframe = document.createElement('iframe');
+                                //iframe.name = '_urlDecode_iframe_';
+                                iframe.setAttribute('name', '_urlDecode_iframe_');
+                            }
+                            //iframe.name = '_urlDecode_iframe_';
+                            iframe.setAttribute('name', '_urlDecode_iframe_');
+                            iframe.style.display = 'none';
+                            iframe.width = "0";
+                            iframe.height = "0";
+                            iframe.scrolling = "no";
+                            iframe.allowtransparency = "true";
+                            iframe.frameborder = "0";
+                            iframe.src = 'about:blank';
+                            document.body.appendChild(iframe);
+                        }
+                        //ie下需要指明charset，然后src=datauri才可以
+                        iframe.contentWindow.document.write('<html><scrip' + 't charset="gbk" src="data:text/javascript;charset=gbk,parent._decodeStr_=\'' + str + '\'"></s' + 'cript></html>');
+                        setTimeout(function () {
+                            callback(_decodeStr_);
+                            iframe.parentNode.removeChild(iframe);
+                        }, 300)
+                    }
+                } else {
+                    var src = 'data:text/javascript;charset=' + charset + ',_urlDecodeFn_("' + str + '");';
+                    src += 'document.getElementById("_urlDecodeFn_").parentNode.removeChild(document.getElementById("_urlDecodeFn_"));';
+                    script.src = src;
+                    document.body.appendChild(script);
+                }
+            }
+        }
+    });
+</script>
+<!-- // 注册来源 -->
+
+<!-- 百度统计 -->
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?1b8c1194303ef64e02f003f0cb8a1906";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<!-- // 百度统计 -->
+
+
+<!-- 联系我们 -->
+
+<ul class="contact-testin">
+    <!-- pc -->
+
+
+    <!--    <li class="visible-pc" onclick="_MEIQIA('showPanel')">-->
+    <li class="visible-pc" id="udeskPanel">
+        <i class="iconfont icon-kefu"></i>
+        <div class="contact-info">
+            <p class="c-1">在线咨询</p>
+        </div>
+    </li>
+    <!--    <li class="visible-pc" id="qidian">-->
+    <!--        <i class="iconfont icon-QQQQQQQ"></i>-->
+    <!--        <div class="contact-info">-->
+    <!--            <p class="c-1">QQ</p>-->
+    <!--            <p class="c-2">800074282</p>-->
+    <!--        </div>-->
+    <!--    </li>-->
+    <li class="visible-pc">
+        <i class="iconfont icon-rexiandianhua"></i>
+        <div class="contact-info">
+            <p class="c-1">热线电话</p>
+            <p class="c-2">400-990-5577</p>
+        </div>
+    </li>
+    <li class="back2top visible-pc" data-back2top="back2top">
+        <i class="iconfont icon-stick_icon"></i>
+    </li>
+
+    <!-- mobile -->
+    <!--    <li class="visible-mobile" onclick="_MEIQIA('showPanel')">-->
+    <li class="visible-mobile udeskPanel">
+        <i class="iconfont icon-xinxi"></i>
+    </li>
+</ul>
+
+<script type="text/javascript" src="/lib/sha1.js"></script>
+<script>
+    function randomString(len) {
+        len = len || 32;
+        var $chars = 'abcdefhijkmnprstwxyz2345678';
+        /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+        var maxPos = $chars.length;
+        var str = '';
+        for (i = 0; i < len; i++) {
+            str += $chars.charAt(Math.floor(Math.random() * maxPos));
+        }
+        return str;
+    }
+
+    var timestamp = new Date().getTime();
+    var nonce = randomString(16);
+    var sign_str = "v_nonce=" + nonce + "&v_timestamp=" + timestamp + "&344b085f7dc4d8e29c4368f3b6a3f2dc";
+    // console.log(sign_str);
+    sign_str = sha1(sign_str);
+    sign_str = sign_str.toUpperCase();
+    // console.log(sign_str);
+    var cus_sign_str = "nonce=" + nonce + "&timestamp=" + timestamp + "&web_token=${sessionScope.session_enterpriseInfo.fullName}&344b085f7dc4d8e29c4368f3b6a3f2dc";
+    cus_sign_str = sha1(cus_sign_str);
+    cus_sign_str = cus_sign_str.toUpperCase();
+    (function (a, h, c, b, f, g) {
+        a["UdeskApiObject"] = f;
+        a[f] = a[f] || function () {
+            (a[f].d = a[f].d || []).push(arguments)
+        };
+        g = h.createElement(c);
+        g.async = 1;
+        g.charset = "utf-8";
+        g.src = b;
+        c = h.getElementsByTagName(c)[0];
+        c.parentNode.insertBefore(g, c)
+    })(window, document, "script", "https://assets-cli.s2.udesk.cn/im_client/js/udeskApi.js", "ud");
+    ud({
+        "code": "eh5hgk7",
+        "link": "https://1357720.s2.udesk.cn/im_client/?web_plugin_id=13939",
+        "im_client_valid": {
+            "v_nonce": nonce,
+            "v_timestamp": timestamp,
+            "v_signature": sign_str
+        },
+        "targetSelector": "#udeskPanel",
+        "selector": ".udeskPanel",
+        "noBubble": true,
+        "customer": {
+            "nonce": nonce,
+            "signature": cus_sign_str,
+            "timestamp": timestamp,
+            "web_token": "${sessionScope.session_enterpriseInfo.fullName}",
+            "c_name": "${sessionScope.session_userOnline.name}",//客户姓名
+            "c_email": "${sessionScope.session_userOnline.email}",//客户邮箱
+            "c_phone": "${sessionScope.session_userOnline.mobile}",//客户电话
+            "c_org": "${sessionScope.session_enterpriseInfo.fullName}",//企业名称
+            "c_cf_认证状态": "${sessionScope.session_enterpriseInfo.eStatusStr}",
+            "c_cf_注册时间": "${sessionScope.session_enterpriseInfo.createTimeStr2}",
+            "c_cf_认证时间": "${sessionScope.session_view_enterprise_info.enterpriseExpand.updateTimeStr2}",
+            "c_cf_来源渠道": "${sessionScope.session_enterpriseInfo.channel}"
+        }
+    });
+    $('.footer_weixin_icon').mouseenter(function () {
+        $('.info_bottom .code-img').css('display', 'inline-block');
+    }).mouseout(function () {
+        $('.info_bottom .code-img').css('display', 'none');
+    });
+</script>
+<!-- // 联系我们 -->
+</body>
+</html>

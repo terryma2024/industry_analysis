@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-05-29
+last_updated: 2026-06-02
 tags:
   - wiki
   - index
@@ -16,11 +16,13 @@ tags:
 ## Sources
 
 - [[_sources/karpathy-llm-wiki-pattern|Karpathy LLM Wiki Pattern]] — LLM Wiki 的原始理念和 Jason 文章中的实践化解读。
+- [[ai/00-source-capture-index|AI Source Capture Index]] — AI 行业来源抽取状态，包含 Scale AI 与中国 AI 数据基础设施对标调研的 raw artifact 入口。
 - [[news/2026-05-29-us-productivity-miracle|美国正在爆发一场生产力奇迹]] — 关于美国生产率加速、AI 时滞、能源优势和经济灵活性的新闻摘要。
 
 ## Entities
 
 - [[_entities/AndrejKarpathy|Andrej Karpathy]] — LLM Wiki 理念提出者，强调把知识管理从 RAG 转向持续编译。
+- [[_entities/ScaleAI|Scale AI]] — 美国 AI 数据基础设施公司，从自动驾驶标注扩展到大模型后训练、评测和政府 AI，并于 2025 年获得 Meta 战略投资。
 - [[_entities/HuggingFaceLeRobot|Hugging Face LeRobot]] — 机器人学习数据、加载、训练与评测工具链。
 - [[_entities/UnitreeRobotics|Unitree Robotics]] — 中国具身智能/机器人公司，现有研究中用于跟踪整机与数据平台线索。
 - [[_entities/Agibot|Agibot]] — 中国具身智能公司，现有研究中用于跟踪开放数据集和整机生态。
@@ -43,6 +45,8 @@ tags:
 ## Syntheses
 
 - [[_syntheses/karpathy-wiki-migration-plan|Karpathy Wiki Migration Plan]] — 本仓库从行业分析工作区升级为 LLM Wiki 的迁移设计。
+- [[ai/research-notes/scale-ai-company-history-2026-06-02|Scale AI 公司发展史]] — Scale AI 从 2016 年人力任务 API、自动驾驶数据标注、大模型后训练到 2025 年 Meta 战略投资的完整复盘。
+- [[ai/research-notes/scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]] — Scale AI 从人力任务 API 到 Meta 战略投资的路径，以及中国 AI 数据基础设施公司对标。
 - [[robotics-embodied-ai/09-training-data-deep-dive|机器人训练数据深度调研]] — 具身智能训练数据、地方政策、schema、失败轨迹和 UMI-like 业务路线综合。
 - [[robotics-embodied-ai/08-umi-gripper-research-and-business-plan|UMI Gripper 研究与业务计划]] — UMI-like 数据采集硬件、学习路径与 ToB 落地方案。
 - [[robotics-embodied-ai/10-umi-technical-terms-for-beginners|UMI 初学者技术术语教学]] — 面向初学者解释 IMU、6DoF、SLAM、Zarr、LeRobot、Diffusion Policy 等概念。
