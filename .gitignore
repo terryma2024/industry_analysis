@@ -159,3 +159,6 @@ __pycache__/
 
 # Obsidian local vault state
 .obsidian/
+
+# Claudian local state
+.claudian/
