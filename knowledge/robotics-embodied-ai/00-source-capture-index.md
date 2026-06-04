@@ -20,9 +20,9 @@ aliases:
 
 | 状态 | 数量 | 含义 |
 |---|---:|---|
-| `exists` | 76 | 既有 Markdown/PDF raw artifact；其中 5 条是 fallback HTML sidecar。 |
-| `ok` | 20 | 本轮新增并成功抽取的 raw artifact。 |
-| `fallback_html` | 1 | 本轮新增但正文抽取失败，已保存 HTML sidecar。 |
+| `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
+| `ok` | 8 | 本轮新增并成功抽取的 raw artifact。 |
+| `fallback_html` | 3 | 本轮新增但正文抽取失败，已保存 HTML sidecar。 |
 | `failed` | 4 | defuddle 与 HTML fallback 都失败，需要浏览器、官方 PDF 或手工补采。 |
 
 ## 快速定位
@@ -40,8 +40,8 @@ aliases:
 |---|---|---|---|
 | `SRC-robotics-017` | `failed` | NVIDIA investor 页面 403，HTML fallback 也被拒。 | 寻找 NVIDIA 官方新闻镜像、开发者页或 PDF。 |
 | `SRC-robotics-019` | `failed` | Tesla 页面 403，HTML fallback 也被拒。 | 用浏览器登录/手工保存，或改用 Tesla 官方可访问页面。 |
-| `SRC-robotics-021` | `failed` | RobotEra 页面 defuddle 无正文，HTML fallback SSL 失败。 | 用浏览器手工保存官网关键页面或寻找官方新闻稿。 |
 | `SRC-robotics-085` | `failed` | 深圳科创局页面 defuddle fetch failed，HTML fallback SSL BAD_ECPOINT。 | 用浏览器手工保存原文，或寻找深圳市政府/政策 PDF 镜像。 |
+| `SRC-robotics-105` | `failed` | TRON 1 用户手册 PDF 官网证书过期，自动下载失败。 | 用浏览器手工保存 PDF，或寻找新版下载地址。 |
 
 ## 已保存 fallback HTML 的来源
 
@@ -53,6 +53,9 @@ aliases:
 | [`SRC-robotics-048`](../../raw/robotics-embodied-ai/documents/SRC-robotics-048-firstmove-egocentric-data-engine-for-robotics.md) | [FirstMove](../../raw/robotics-embodied-ai/documents/SRC-robotics-048-firstmove-egocentric-data-engine-for-robotics.md) | JS 页面无正文，但已保存 HTML。 |
 | [`SRC-robotics-049`](../../raw/robotics-embodied-ai/documents/SRC-robotics-049-source.md) | [ModelScope/BAAI](../../raw/robotics-embodied-ai/documents/SRC-robotics-049-source.md) | defuddle URL 解析失败，但已保存 HTML。 |
 | [`SRC-robotics-087`](../../raw/robotics-embodied-ai/documents/SRC-robotics-087-source.md) | [杭州强链补链政策解读](../../raw/robotics-embodied-ai/documents/SRC-robotics-087-source.md) | defuddle 无正文，但已保存 HTML。 |
+| [`SRC-robotics-120`](../../raw/robotics-embodied-ai/documents/SRC-robotics-120-maniskill-official-website.md) | [ManiSkill](../../raw/robotics-embodied-ai/documents/SRC-robotics-120-maniskill-official-website.md) | defuddle 无正文，但已保存 HTML。 |
+| [`SRC-robotics-122`](../../raw/robotics-embodied-ai/documents/SRC-robotics-122-moveit-2-documentation.md) | [MoveIt 2](../../raw/robotics-embodied-ai/documents/SRC-robotics-122-moveit-2-documentation.md) | defuddle 无正文，但已保存 HTML。 |
+| [`SRC-robotics-123`](../../raw/robotics-embodied-ai/documents/SRC-robotics-123-agibot-genie-studio.md) | [Agibot Genie Studio](../../raw/robotics-embodied-ai/documents/SRC-robotics-123-agibot-genie-studio.md) | defuddle 无正文，但已保存 HTML。 |
 
 ## 后续流程
 

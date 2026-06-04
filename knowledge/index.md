@@ -32,6 +32,7 @@ tags:
 - [[_entities/DataPackage|Data Package]] — ToB 机器人数据服务的交付资产包概念。
 - [[_entities/QualityControl|Quality Control]] — 机器人训练数据从原始采集走向可训练交付的质检流程。
 - [[_entities/UnitreeRobotics|Unitree Robotics]] — 中国具身智能/机器人公司，现有研究中用于跟踪整机与数据平台线索。
+- [[_entities/LimXDynamics|LimX Dynamics]] — 逐际动力，中国人形机器人与具身智能公司，当前研究重点是“机器人本体 + 运动控制小脑 + 具身大脑/工具链”的开发者平台路线。
 - [[_entities/Agibot|Agibot]] — 中国具身智能公司，现有研究中用于跟踪开放数据集和整机生态。
 - [[_entities/IOAI|IO-AI]] — 中国具身数据基础设施公司，现有研究中用于跟踪遥操作、数据标注管理与格式导出。
 
@@ -58,6 +59,7 @@ tags:
 - [[robotics-embodied-ai/09-training-data-deep-dive|机器人训练数据深度调研]] — 具身智能训练数据、地方政策、schema、失败轨迹和 UMI-like 业务路线综合。
 - [[robotics-embodied-ai/08-umi-gripper-research-and-business-plan|UMI Gripper 研究与业务计划]] — UMI-like 数据采集硬件、学习路径与 ToB 落地方案。
 - [[robotics-embodied-ai/11-embodied-ai-data-service-companies-2026-06-02|具身智能数据采集和服务公司对比]] — 对智元、补天石、它石、简智、Maxinsights、自变量、帕西尼的数据采集/服务路线、岗位和优劣势做横向分析。
+- [[robotics-embodied-ai/12-robotics-engineering-platforms-2026-06-04|机器人工程平台综合调研]] — 对机器人数据、训练、评测、部署、真机推理平台做分层拆解，并比较 LeRobot、FluxVLA、Isaac、OpenPI、Unitree G1-D、EmbodiFlow 等选项。
 
 ## Industries
 

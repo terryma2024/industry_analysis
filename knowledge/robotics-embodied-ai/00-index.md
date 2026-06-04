@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-05-29
+last_updated: 2026-06-04
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -43,13 +43,14 @@ sources:
 - `01-industry-map.md`: 产业链和价值流。
 - `02-technology-and-products.md`: 技术路线和产品形态。
 - `03-market-and-policy.md`: 中国市场规模、十五五政策和监管。
-- `04-companies.md`: 公司和竞争格局。
+- `04-companies.md`: 公司和竞争格局，含 [[_entities/LimXDynamics|逐际动力 LimX Dynamics]] 等重点整机/平台公司入口。
 - `05-investment-view.md`: 投资逻辑和风险。
 - `05a-portfolio-draft-2026-04-28.md`: 100 万 RMB 股票组合草案。
 - `06-career-view.md`: 岗位地图和学习路径。
 - `07-training-data.md`: 训练数据生产、处理、公司、解决方案和论文数据集。
 - `08-umi-gripper-research-and-business-plan.md`: UMI Gripper 技术研究、学习计划、国内数据采集业务落地计划，以及 2026-05-28 下一步任务复核。
 - `09-training-data-deep-dive.md`: 训练数据深度调研汇总页和并行研究入口，含 UMI v0 SOP/schema/客户数据包模板与 LeRobot 初学者教学入口。
+- `12-robotics-engineering-platforms-2026-06-04.md`: 机器人工程平台综合调研，覆盖数据、训练、评测、部署、真机推理和选型框架。
 - [[_entities/README|UMI 技术术语实体索引]]: UMI Gripper 初学者术语已拆分为实体页，覆盖 IMU、6DoF、SLAM、Zarr、LeRobot、Diffusion Policy 等概念。
 
 ## 关联连接
