@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-06-04
+last_updated: 2026-06-08
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -51,6 +51,7 @@ sources:
 - `08-umi-gripper-research-and-business-plan.md`: UMI Gripper 技术研究、学习计划、国内数据采集业务落地计划，以及 2026-05-28 下一步任务复核。
 - `09-training-data-deep-dive.md`: 训练数据深度调研汇总页和并行研究入口，含 UMI v0 SOP/schema/客户数据包模板与 LeRobot 初学者教学入口。
 - `12-robotics-engineering-platforms-2026-06-04.md`: 机器人工程平台综合调研，覆盖数据、训练、评测、部署、真机推理和选型框架。
+- [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]]: LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备的购买状态、价格线索和采购问询清单。
 - [[_entities/README|UMI 技术术语实体索引]]: UMI Gripper 初学者术语已拆分为实体页，覆盖 IMU、6DoF、SLAM、Zarr、LeRobot、Diffusion Policy 等概念。
 
 ## 关联连接

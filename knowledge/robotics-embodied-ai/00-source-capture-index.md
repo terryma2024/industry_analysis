@@ -1,6 +1,6 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
-date: 2026-05-27
+date: 2026-06-08
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -21,8 +21,9 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 8 | 本轮新增并成功抽取的 raw artifact。 |
+| `ok` | 17 | 本轮新增并成功抽取的 raw artifact。 |
 | `fallback_html` | 3 | 本轮新增但正文抽取失败，已保存 HTML sidecar。 |
+| `manual_parse` | 1 | 本轮因 defuddle 失败，从网页内嵌结构化数据生成 Markdown。 |
 | `failed` | 4 | defuddle 与 HTML fallback 都失败，需要浏览器、官方 PDF 或手工补采。 |
 
 ## 快速定位
@@ -56,6 +57,26 @@ aliases:
 | [`SRC-robotics-120`](../../raw/robotics-embodied-ai/documents/SRC-robotics-120-maniskill-official-website.md) | [ManiSkill](../../raw/robotics-embodied-ai/documents/SRC-robotics-120-maniskill-official-website.md) | defuddle 无正文，但已保存 HTML。 |
 | [`SRC-robotics-122`](../../raw/robotics-embodied-ai/documents/SRC-robotics-122-moveit-2-documentation.md) | [MoveIt 2](../../raw/robotics-embodied-ai/documents/SRC-robotics-122-moveit-2-documentation.md) | defuddle 无正文，但已保存 HTML。 |
 | [`SRC-robotics-123`](../../raw/robotics-embodied-ai/documents/SRC-robotics-123-agibot-genie-studio.md) | [Agibot Genie Studio](../../raw/robotics-embodied-ai/documents/SRC-robotics-123-agibot-genie-studio.md) | defuddle 无正文，但已保存 HTML。 |
+
+## 手工/论文来源捕获
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-125`](../../raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821.pdf) | [RoboAlign-R1 PDF](../../raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821.pdf) | arXiv PDF 已保存；摘要页 sidecar 为 [HTML](../../raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821-arxiv.html)。 |
+| [`SRC-robotics-126`](../../raw/robotics-embodied-ai/documents/modelscope-roboalign-r1-434219.md) | [ModelScope RoboAlign-R1 Markdown](../../raw/robotics-embodied-ai/documents/modelscope-roboalign-r1-434219.md) | defuddle 因 ModelScope `og:url` protocol-relative metadata 失败；已从 `window.__detail_data__` 生成 Markdown，并保存 [HTML](../../raw/robotics-embodied-ai/documents/modelscope-roboalign-r1-434219.html)。 |
+
+## UMI 设备购买线索来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-127`](../../raw/robotics-embodied-ai/documents/SRC-robotics-127-aifitlab-umi-gripper-collection.md) | [AIFITLAB UMI Gripper collection](../../raw/robotics-embodied-ai/documents/SRC-robotics-127-aifitlab-umi-gripper-collection.md) | LUMOS FastUMI Pro/Ego/Go 商品聚合页。 |
+| [`SRC-robotics-128`](../../raw/robotics-embodied-ai/documents/SRC-robotics-128-aifitlab-lumos-fastumi-pro-product-page.md) | [LUMOS FastUMI Pro](../../raw/robotics-embodied-ai/documents/SRC-robotics-128-aifitlab-lumos-fastumi-pro-product-page.md) | FastUMI Pro 公开价格、配置、backorder 和技术参数。 |
+| [`SRC-robotics-129`](../../raw/robotics-embodied-ai/documents/SRC-robotics-129-aifitlab-lumos-fastumi-go-product-page.md) | [LUMOS FastUMI Go](../../raw/robotics-embodied-ai/documents/SRC-robotics-129-aifitlab-lumos-fastumi-go-product-page.md) | 背包式双手 UMI 数采设备公开价格与配置。 |
+| [`SRC-robotics-130`](../../raw/robotics-embodied-ai/documents/SRC-robotics-130-aifitlab-lumos-fastumi-ego-product-page.md) | [LUMOS FastUMI Ego](../../raw/robotics-embodied-ai/documents/SRC-robotics-130-aifitlab-lumos-fastumi-ego-product-page.md) | 第一人称无本体采集设备公开价格与传感器参数。 |
+| [`SRC-robotics-131`](../../raw/robotics-embodied-ai/documents/SRC-robotics-131-mego.md) | [觅蜂 MEgo 量产发货](../../raw/robotics-embodied-ai/documents/SRC-robotics-131-mego.md) | MEgo Gripper 量产发货、480g 和 1 mm 轨迹重建线索。 |
+| [`SRC-robotics-132`](../../raw/robotics-embodied-ai/documents/SRC-robotics-132-awe2026-fastumi.md) | [鹿明 AWE2026 FastUMI 发布](../../raw/robotics-embodied-ai/documents/SRC-robotics-132-awe2026-fastumi.md) | FastUMI 全家桶发布与陆续上线京东线索。 |
+| [`SRC-robotics-133`](../../raw/robotics-embodied-ai/documents/SRC-robotics-133-beingbeyond-launches-u1-realdexumi.md) | [BeingBeyond U1 RealDexUMI](../../raw/robotics-embodied-ai/documents/SRC-robotics-133-beingbeyond-launches-u1-realdexumi.md) | U1 / RealDexUMI 官方发布。 |
+| [`SRC-robotics-134`](../../raw/robotics-embodied-ai/documents/SRC-robotics-134-realdexumi-wearable-universal-manipulation-interface-paper.md) | [RealDexUMI arXiv](../../raw/robotics-embodied-ai/documents/SRC-robotics-134-realdexumi-wearable-universal-manipulation-interface-paper.md) | RealDexUMI 论文摘要页。 |
 
 ## 后续流程
 

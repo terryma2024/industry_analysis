@@ -2,7 +2,7 @@
 title: Sources Layer
 type: index
 date_created: 2026-05-29
-last_updated: 2026-05-29
+last_updated: 2026-06-08
 tags:
   - wiki
   - sources
@@ -15,3 +15,4 @@ tags:
 ## 当前来源摘要
 
 - [[karpathy-llm-wiki-pattern|Karpathy LLM Wiki Pattern]]
+- [[roboalign-r1-reward-aligned-robot-video-world-models|RoboAlign-R1 - Reward-Aligned Robot Video World Models]]

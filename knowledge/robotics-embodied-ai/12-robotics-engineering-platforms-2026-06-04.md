@@ -2,7 +2,7 @@
 title: 机器人工程平台综合调研
 type: synthesis
 date_created: 2026-06-04
-last_updated: 2026-06-04
+last_updated: 2026-06-08
 sources:
   - raw/robotics-embodied-ai/documents/SRC-robotics-014-unitree-g1-d-end-to-end-platform-for-humanoid-robot.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-052-lerobot-github-repository.md
@@ -19,12 +19,14 @@ sources:
   - raw/robotics-embodied-ai/documents/SRC-robotics-122-moveit-2-documentation.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-123-agibot-genie-studio.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-124-embodiflow-platform-guides.md
+  - raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821.pdf
 tags:
   - industry/robotics-embodied-ai
   - robotics-platform
   - robot-learning
   - data-platform
   - vla
+  - robot-world-model
 status: active
 aliases:
   - 机器人工程平台
@@ -56,6 +58,12 @@ aliases:
 | 评测层 | 如何知道模型真的更好 | 离线验证、仿真 benchmark、LIBERO/MetaWorld、真机 rollout、失败/接管统计、任务成功率和安全指标 | [`SRC-robotics-119`](../../raw/robotics-embodied-ai/documents/SRC-robotics-119-libero-documentation.md) [`SRC-robotics-108`](../../raw/robotics-embodied-ai/documents/SRC-robotics-108-fluxvla-engine-documentation.md) |
 | 推理部署层 | 如何让模型稳定控制真机 | policy server、边缘/远程推理、动作 chunk、延迟预算、安全边界、接管、回滚、日志回放 | [`SRC-robotics-116`](../../raw/robotics-embodied-ai/documents/SRC-robotics-116-openpi-github-repository.md) [`SRC-robotics-107`](../../raw/robotics-embodied-ai/documents/SRC-robotics-107-limx-tron-2-product-page.md) |
 | 企业工程层 | 如何产品化和交付 | 多项目/多租户、权限、审计、私有化部署、算力配额、任务队列、报表、客户数据主权 | [`SRC-robotics-124`](../../raw/robotics-embodied-ai/documents/SRC-robotics-124-embodiflow-platform-guides.md) |
+
+## 世界模型与奖励对齐补充
+
+[[_sources/roboalign-r1-reward-aligned-robot-video-world-models|RoboAlign-R1]] 提醒机器人工程平台不要把“世界模型”窄化为视频生成组件。若世界模型要进入规划或控制链路，平台必须在评测层显式处理任务成功、动作结果一致性、接触真实性和物理合理性，而不是只看 MSE、SSIM、LPIPS 或 demo 视频观感。
+
+对平台设计的直接含义是：数据闭环应能承载细粒度任务/物理评分，训练闭环应能接入可蒸馏的 multimodal judge/reward model，推理闭环应记录长时序漂移、接触失真和动作失败。RobotWorldBench、RoboAlign-Judge 和 SWR 可以作为评估这类能力的参考样板。
 
 ## 主流平台和组件图谱
 

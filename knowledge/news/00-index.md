@@ -2,7 +2,7 @@
 title: 新闻速记
 type: moc
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-06-05
 tags:
   - news
   - moc
@@ -16,7 +16,8 @@ tags:
 
 | 日期 | 标题 | 来源 | 主题 |
 | --- | --- | --- | --- |
-| 2026-05-29 | [[2026-05-29-us-productivity-miracle|美国正在爆发一场生产力奇迹]] | Bilibili / The Economist | #productivity #us-economy #ai #energy |
+| 2026-06-05 | [[2026-06-05-nvidia-cosmos-3-getting-started-plan\|NVIDIA Cosmos 3 上手调研与计划]] | NVIDIA Newsroom / Developer Blog / GitHub / Hugging Face / arXiv | #ai #robotics #embodied-ai #world-model |
+| 2026-05-29 | [[2026-05-29-us-productivity-miracle\|美国正在爆发一场生产力奇迹]] | Bilibili / The Economist | #productivity #us-economy #ai #energy |
 
 ## 使用规则
 

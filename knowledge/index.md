@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-06-02
+last_updated: 2026-06-08
 tags:
   - wiki
   - index
@@ -18,6 +18,7 @@ tags:
 - [[_sources/karpathy-llm-wiki-pattern|Karpathy LLM Wiki Pattern]] — LLM Wiki 的原始理念和 Jason 文章中的实践化解读。
 - [[ai/00-source-capture-index|AI Source Capture Index]] — AI 行业来源抽取状态，包含 Scale AI 与中国 AI 数据基础设施对标调研的 raw artifact 入口。
 - [[news/2026-05-29-us-productivity-miracle|美国正在爆发一场生产力奇迹]] — 关于美国生产率加速、AI 时滞、能源优势和经济灵活性的新闻摘要。
+- [[_sources/roboalign-r1-reward-aligned-robot-video-world-models|RoboAlign-R1 - Reward-Aligned Robot Video World Models]] — arXiv `2605.03821` 论文卡片，聚焦机器人视频世界模型的多模态奖励对齐、RobotWorldBench、RoboAlign-Judge 和 SWR。
 
 ## Entities
 
@@ -60,6 +61,7 @@ tags:
 - [[robotics-embodied-ai/08-umi-gripper-research-and-business-plan|UMI Gripper 研究与业务计划]] — UMI-like 数据采集硬件、学习路径与 ToB 落地方案。
 - [[robotics-embodied-ai/11-embodied-ai-data-service-companies-2026-06-02|具身智能数据采集和服务公司对比]] — 对智元、补天石、它石、简智、Maxinsights、自变量、帕西尼的数据采集/服务路线、岗位和优劣势做横向分析。
 - [[robotics-embodied-ai/12-robotics-engineering-platforms-2026-06-04|机器人工程平台综合调研]] — 对机器人数据、训练、评测、部署、真机推理平台做分层拆解，并比较 LeRobot、FluxVLA、Isaac、OpenPI、Unitree G1-D、EmbodiFlow 等选项。
+- [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 
 ## Industries
 
@@ -77,6 +79,7 @@ tags:
 ## News
 
 - [[news/00-index|新闻速记]] — ad hoc 新闻/文章/视频摘要入口；每条摘要独立成文。
+- [[news/2026-06-05-nvidia-cosmos-3-getting-started-plan|NVIDIA Cosmos 3 上手调研与计划]] — NVIDIA 2026 年发布的 Cosmos 3 omnimodal world model 调研、关键事实与两周上手计划。
 
 ## Operations
 

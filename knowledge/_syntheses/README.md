@@ -2,7 +2,7 @@
 title: Syntheses Layer
 type: index
 date_created: 2026-05-29
-last_updated: 2026-05-29
+last_updated: 2026-06-08
 tags:
   - wiki
   - syntheses
@@ -15,3 +15,4 @@ tags:
 ## 当前综合
 
 - [[karpathy-wiki-migration-plan|Karpathy Wiki Migration Plan]]
+- [[china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]]
