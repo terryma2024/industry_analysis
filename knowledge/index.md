@@ -61,6 +61,7 @@ tags:
 - [[robotics-embodied-ai/08-umi-gripper-research-and-business-plan|UMI Gripper 研究与业务计划]] — UMI-like 数据采集硬件、学习路径与 ToB 落地方案。
 - [[robotics-embodied-ai/11-embodied-ai-data-service-companies-2026-06-02|具身智能数据采集和服务公司对比]] — 对智元、补天石、它石、简智、Maxinsights、自变量、帕西尼的数据采集/服务路线、岗位和优劣势做横向分析。
 - [[robotics-embodied-ai/12-robotics-engineering-platforms-2026-06-04|机器人工程平台综合调研]] — 对机器人数据、训练、评测、部署、真机推理平台做分层拆解，并比较 LeRobot、FluxVLA、Isaac、OpenPI、Unitree G1-D、EmbodiFlow 等选项。
+- [[robotics-embodied-ai/13-robot-company-product-comparison-2026-06-08|机器人公司产品型号全景对比]] — 汇总 `04-companies` 主表机器人公司的产品型号、参数、技术路线、优缺点和待验证事项。
 - [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] — 基于 Thinking Partner 对话沉淀的职业方向锚点，聚焦用具身智能业务落地 know-how 解决企业成本、收入或风险痛点。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 

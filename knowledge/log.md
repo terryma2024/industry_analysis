@@ -90,6 +90,12 @@ tags:
 - **来源**: 在 `knowledge/robotics-embodied-ai/sources.csv` 登记 `SRC-robotics-127` 至 `SRC-robotics-134`，覆盖 AIFITLAB 的 LUMOS FastUMI Pro/Ego/Go 商品页、鹿明 AWE2026 发布、觅蜂 MEgo 量产发货、BeingBeyond U1/RealDexUMI 官方与论文来源；已抽取 8 个 raw Markdown artifact 并更新 source_capture_manifest。
 - **待继续**: 京东正式商品链接、AIFITLAB 中国大陆发票/售后、MEgo Gripper 是否单独出售和各设备 SDK/data license 仍需商务确认。
 
+## [2026-06-08] synthesis | 机器人公司产品型号全景对比
+
+- **变更**: 新增 [[robotics-embodied-ai/13-robot-company-product-comparison-2026-06-08|机器人公司产品型号全景对比]]；更新 [[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/04-companies|机器人公司与竞争]] 和 [[index|Knowledge Index]]。
+- **范围**: 覆盖 `04-companies` 主表中的机器人整机、协作机器人、工业机器人、AMR/移动操作公司，按通用具身/人形、协作臂/工业机器人、AMR/仓储移动操作三类比较型号、参数、技术路线、优缺点和待验证项；新增 `raw/robotics-embodied-ai/data/robot_company_product_models_2026-06-08.csv` 作为可筛选数据表初版。
+- **待继续**: `SRC-robotics-135` 至 `SRC-robotics-155` 为本轮 web 核验新增来源线索，需后续执行正式 raw capture 并补齐 `source_capture_manifest.csv`；协作臂/工业机器人/AMR 的每个 SKU 还需从产品手册拆成 CSV。
+
 ## [2026-06-09] synthesis | 具身智能业务落地 know-how 职业方向思考
 
 - **变更**: 新增 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，将 Thinking Partner 对话沉淀为 Obsidian research note；更新 [[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
