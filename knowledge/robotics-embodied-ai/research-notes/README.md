@@ -26,3 +26,7 @@ aliases:
 
 - [[umi-v0-sop-schema-data-package-2026-05-28]]: UMI-like v0 采集 SOP、UMI/Zarr 与 LeRobot schema 对照、客户数据包样例目录。
 - [[lerobot-beginner-guide-2026-05-28]]: LeRobot 初学者教学，解释 LeRobotDataset、数据目录、UMI/Zarr 转换和 ToB 数据服务意义。
+
+## 2026-06-09 职业方向与业务落地入口
+
+- [[career-direction-business-landing-knowhow-2026-06-09]]: 基于 Thinking Partner 对话沉淀的职业方向锚点，聚焦通过具身智能业务落地 know-how 解决企业决策者的成本、收入或风险痛点。
