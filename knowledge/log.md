@@ -89,3 +89,15 @@ tags:
 - **变更**: 新增 [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]]；更新 [[_syntheses/README|Syntheses Layer]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/00-source-capture-index|机器人来源抽取索引]]、[[index|Knowledge Index]]。
 - **来源**: 在 `knowledge/robotics-embodied-ai/sources.csv` 登记 `SRC-robotics-127` 至 `SRC-robotics-134`，覆盖 AIFITLAB 的 LUMOS FastUMI Pro/Ego/Go 商品页、鹿明 AWE2026 发布、觅蜂 MEgo 量产发货、BeingBeyond U1/RealDexUMI 官方与论文来源；已抽取 8 个 raw Markdown artifact 并更新 source_capture_manifest。
 - **待继续**: 京东正式商品链接、AIFITLAB 中国大陆发票/售后、MEgo Gripper 是否单独出售和各设备 SDK/data license 仍需商务确认。
+
+## [2026-06-09] synthesis | 具身智能业务落地 know-how 职业方向思考
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，将 Thinking Partner 对话沉淀为 Obsidian research note；更新 [[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
+- **范围**: 记录职业方向锚点、成功标准、家庭/健康约束、行业结构假设、业务落地 know-how、企业决策者成本/收入/风险痛点、早期反馈标准和零售后场/餐饮后厨/酒店后台等待验证场景。
+- **待继续**: 本页主要基于对话综合，行业与场景判断需继续用客户访谈、招聘 JD、订单/复购证据和 raw source 入库验证。
+
+## [2026-06-09] synthesis | 零售后场职业切入点验证分支
+
+- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，新增“零售后场是否适合作为职业切入点”澄清分支和拓扑图节点。
+- **研究问题**: 中国市场中，按门店/仓库规模排名前 10 的大型零售/电商公司里，是否有超过一半已经启动机器人/具身智能项目，并进入真实门店或仓库运行。
+- **治理更新**: 将 Thinking Partner skill 复制到 `.agents/skills/thinking-partner/`，并新增“每完成一个澄清分支就更新 durable document”的文档化规则。
