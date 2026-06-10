@@ -130,3 +130,9 @@ tags:
 - **时间窗口**: 年龄、行业升温和进入者增多会让未来机会变少、竞争加大，因此需要优先选择能较快入场并快速积累经验的岗位路径。
 - **较快入场标准**: 优先选择把通用软件平台能力作为硬要求、把机器人领域知识作为可补齐能力的岗位；反向信号是把控制算法、运动规划、嵌入式实时系统、强化学习或大模型训练作为硬门槛。
 - **下一步**: 围绕“具身智能/机器人平台工程师”做岗位/JD/公司信号外部调研，优先验证岗位是否能复用平台工程、基础设施、工程效率、数据平台、运营平台、仿真/评测平台等既有经验。
+
+## [2026-06-10] research | 平台工程师 JD 快速入场扫描
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/platform-engineer-jd-entry-scan-2026-06-10|具身智能平台工程师 JD 快速入场扫描]] 和 `raw/robotics-embodied-ai/data/platform_engineer_jd_samples_2026-06-10.csv`；更新 [[robotics-embodied-ai/sources|机器人来源表]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/06-career-view|机器人求职与学习视角]] 和 [[index|Knowledge Index]]。
+- **初步结果**: 第一轮样本支持“通用软件平台能力是硬要求、机器人领域知识可补齐”的快速入场标准。优先岗位族群为后端 / 云端 / Fleet / RobotOps 平台、数据管线 / 数据闭环 / 评测平台、仿真平台和运营系统。
+- **限制**: 国内公开可抓取 JD 样本暂以宇树为主，智元等公司需下一轮通过飞书招聘页、猎聘、Boss 直聘或内推渠道补齐具体岗位文本；1X 样本仅作为海外岗位形态参照。
