@@ -233,3 +233,9 @@ tags:
 - **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] 和 [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]，记录下一层职业切入维度。
 - **澄清结果**: 在场景差异暂不明显的情况下，优先比较系统工程师、平台工程师、数据处理 / 数据闭环相关角色。
 - **下一步**: 澄清这三类角色中，用户最想优先验证哪一类，以便做岗位/JD/公司信号外部调研。
+
+## [2026-06-10] synthesis | 第一优先验证角色确认
+
+- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] 和 [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]，将平台工程师标记为第一优先验证角色。
+- **澄清结果**: 平台工程师是第一优先验证方向；系统工程师和数据处理 / 数据闭环相关角色作为相邻备选和对照样本。
+- **下一步**: 澄清“平台工程师”中最关键的吸引点，是平台软件能力迁移、接触真实项目反馈，还是逐步获得具身智能全局认知。
