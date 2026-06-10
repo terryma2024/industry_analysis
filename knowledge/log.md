@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-06-02
+last_updated: 2026-06-10
 tags:
   - wiki
   - log
@@ -108,134 +108,20 @@ tags:
 - **研究问题**: 中国市场中，按门店/仓库规模排名前 10 的大型零售/电商公司里，是否有超过一半已经启动机器人/具身智能项目，并进入真实门店或仓库运行。
 - **治理更新**: 将 Thinking Partner skill 复制到 `.agents/skills/thinking-partner/`，并新增“每完成一个澄清分支就更新 durable document”的文档化规则。
 
-## [2026-06-09] synthesis | 零售后场样本排名口径澄清
+## [2026-06-09] synthesis | 线下零售门店验证口径汇总
 
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] 的零售后场验证分支，补充样本排名口径。
-- **澄清结果**: 优先用公开行业排名；若门店/仓库规模排名不可得，则使用中国零售销售额前 10，避免使用 GMV/平台交易额或公司总营收作为首选口径。
-- **下一步**: 查找中国零售销售额前 10 的大型零售/电商公司名单，并验证其中是否超过一半已有机器人/具身智能项目进入真实门店或仓库运行。
+- **变更**: 合并记录 Thinking Partner 对话中关于零售后场 / 线下零售门店职业切入点的系列口径澄清，并更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]。
+- **澄清结果**: 样本优先用公开行业排名；若门店/仓库规模排名不可得，则用中国零售销售额前 10。项目范围从“零售后场”放宽为“线下零售门店前场/后场”，导购、巡店、清洁、安防、门店内自动化仓库计入；中央仓、区域仓、纯仓配体系不计入。必须有外部具身智能、机器人或通用服务机器人公司参与；公司公告或年报确认合作即可作为早期计入证据，媒体和供应商案例仅作线索。
+- **门槛**: 前 10 公司中有 5 家满足条件，即视为“超过一半”通过；该门槛同时用于判断是否值得继续调研，以及是否值得作为职业切入点投入 6 个月验证。
 
-## [2026-06-09] synthesis | 零售后场项目证据来源口径澄清
+## [2026-06-10] synthesis | 线下零售门店与跨场景短期落地调研
 
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] 的零售后场验证分支，补充项目落地证据来源口径。
-- **澄清结果**: 判断机器人/具身智能项目是否进入真实门店或仓库运行时，最低接受公司公告或年报；媒体报道、案例文章、展会材料、供应商宣传和采访仅作为线索。
-- **下一步**: 查找中国零售销售额前 10 企业的公司公告/年报，验证是否存在机器人/具身智能项目进入真实门店或仓库运行。
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/retail-store-robotics-entry-scan-2026-06-10|线下零售门店机器人合作验证初扫]] 和 [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]；更新 [[robotics-embodied-ai/sources|机器人来源表]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
+- **零售初扫**: 暂定样本中未找到公司公告/年报级线下门店机器人合作证据，按当前严格口径为 0/10，未达到 5/10 门槛；由于 CCFA 或同等公开排名与逐家公司公告/年报全文尚未补齐，该结果只作为第一轮未通过，不能最终否定。
+- **跨场景候选池**: 场景选择标准从“生活近/场景亲近感”修正为“1 年内真实订单或试点转生产”。全部具身智能/机器人应用场景纳入；客户案例和媒体报道可作为入池最低证据，硬来源用于后续加权。初步入池场景包括汽车制造/工业制造人形机器人、仓储物流/履约中心机器人、酒店/咖啡/商业服务人形机器人、电力设施/数据中心/国企采购型场景、医疗手术机器人。
 
-## [2026-06-09] synthesis | 零售后场项目范围口径澄清
+## [2026-06-10] synthesis | 候选池反馈与平台工程师角色收敛
 
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] 的零售后场验证分支，补充项目范围计入口径。
-- **澄清结果**: “自动化仓库”计入机器人/具身智能相关落地项目；“智能物流”等其它泛化说法不计入，除非明确包含机器人/具身智能系统或自动化仓库。
-- **下一步**: 在公告/年报检索时区分自动化仓库、机器人/具身智能项目和其它泛化数字化/智能物流表述。
-
-## [2026-06-09] synthesis | 零售后场场景边界澄清
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] 的零售后场验证分支，明确门店后场与仓配体系边界。
-- **澄清结果**: 中央仓、区域仓和纯仓配体系不计入“零售后场实践机会”；机器人/具身智能项目或自动化仓库必须发生在线下零售门店后场。
-- **下一步**: 调研时优先查找商超、生鲜、便利店、仓储会员店等线下门店后场的项目证据。
-
-## [2026-06-09] synthesis | 零售后场合作范围口径澄清
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] 的零售后场验证分支，明确外部合作要求。
-- **澄清结果**: 必须有外部具身智能/机器人公司参与；大型零售公司内部自研或内部试验不计入“实践机会”证据。
-- **下一步**: 调研时同时识别零售公司、外部具身智能/机器人公司、项目发生位置和公告/年报证据。
-
-## [2026-06-09] synthesis | 零售后场最低项目证据放宽
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] 的零售后场验证分支，放宽最低项目证据标准。
-- **澄清结果**: 公司公告或年报确认大型零售公司与外部具身智能/机器人公司合作即可计入；不要求公告或年报明确写明项目已经进入真实门店后场运行。
-- **下一步**: 调研时将“合作存在”作为早期计入标准，将“进入真实门店后场运行、复购、扩店、ROI”作为更强证据单独标注。
-
-## [2026-06-09] synthesis | 线下零售门店场景范围放宽
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，将职业切入点验证范围从“零售后场”放宽为“线下零售门店场景”。
-- **澄清结果**: 门店前场的导购、巡店、清洁、安防等机器人项目也计入；中央仓、区域仓和纯仓配体系仍不计入。
-- **下一步**: 调研中国零售销售额前 10 大型零售公司时，同时检索门店前场和门店后场的外部具身智能/机器人合作项目。
-
-## [2026-06-09] synthesis | 通用服务机器人合作对象计入口径澄清
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，放宽外部合作对象范围。
-- **澄清结果**: 清洁机器人、安防巡检机器人等通用服务机器人公司计入；不要求合作对象必须明确自称具身智能公司。
-- **下一步**: 调研时将外部合作对象分为具身智能公司、机器人公司、通用服务机器人公司三类标注。
-
-## [2026-06-09] synthesis | 线下零售门店继续调研门槛澄清
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，明确“超过一半前 10 公司有合作”的门槛用途。
-- **澄清结果**: 该门槛只用于判断线下零售门店场景是否值得继续调研，不是判断是否值得作为职业切入点投入 6 个月验证的最终门槛。
-- **下一步**: 继续澄清 6 个月职业验证所需的更强证据或成功标准。
-
-## [2026-06-10] synthesis | 线下零售门店 6 个月验证门槛确认
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，确认“超过一半前 10 公司有合作”的门槛用途。
-- **澄清结果**: 该门槛同时用于判断线下零售门店场景是否值得继续调研，以及是否值得作为职业切入点投入 6 个月验证。
-- **下一步**: 进入外部调研：查找中国零售销售额前 10 大型零售公司名单，并验证是否超过一半有公告/年报确认的外部机器人/具身智能/通用服务机器人合作。
-
-## [2026-06-10] synthesis | 线下零售门店验证通过阈值确认
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] 的验证阈值。
-- **澄清结果**: 前 10 公司中有 5 家满足条件，即视为“超过一半”门槛通过。
-- **下一步**: 开始外部调研验证该门槛。
-
-## [2026-06-10] synthesis | 线下零售门店机器人合作外部调研初扫
-
-- **变更**: 新增 [[robotics-embodied-ai/research-notes/retail-store-robotics-entry-scan-2026-06-10|线下零售门店机器人合作验证初扫]]，并更新 [[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
-- **初步结果**: 暂定样本中未找到公司公告/年报级线下门店机器人合作证据，按当前严格口径为 0/10，未达到 5/10 通过门槛。
-- **限制**: 尚未稳定获取 CCFA 或同等公开来源的最新中国零售销售额前 10 榜单，也未完成逐家公司公告/年报全文检索，因此该结果只能作为第一轮未通过，不能作为最终否定。
-
-## [2026-06-10] synthesis | 场景选择标准修正为短期落地机会
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，记录线下零售门店初扫后的目标修正。
-- **澄清结果**: 场景差异本身不是当前职业决策的关键；短期应用前景更重要，因为真实落地才能形成 feedback loop。当前优先证据是“真实订单”或“试点转生产”。
-- **下一步**: 继续澄清“短期”的时间范围，再启动跨场景调研，比较哪些具身智能/机器人应用场景更可能出现真实订单或试点转生产。
-
-## [2026-06-10] synthesis | 短期落地时间窗确认
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，明确短期落地机会的时间窗。
-- **澄清结果**: “短期”定义为 1 年内；跨场景调研应比较 1 年内更可能出现真实订单或试点转生产的具身智能/机器人应用场景。
-- **下一步**: 澄清调研时优先比较的候选场景范围。
-
-## [2026-06-10] synthesis | 跨场景调研范围确认
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，明确 1 年内短期落地机会的候选场景范围。
-- **澄清结果**: 全部具身智能/机器人应用场景都纳入比较，不只看零售、餐饮、酒店等生活近场景；工业、仓储、巡检、能源、制造等场景也纳入。
-- **下一步**: 澄清跨场景调研的最小通过门槛，即什么样的订单/试点转生产证据足以把某个场景列为优先切入点。
-
-## [2026-06-10] synthesis | 短期落地候选门槛确认
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，明确跨场景调研的最小进入候选门槛。
-- **澄清结果**: 某个场景只要出现真实订单或试点转生产证据，即可进入“优先切入点”候选；不要求一开始就看到多家公司、多客户、复购或扩容。
-- **下一步**: 澄清证据来源口径：公开公司公告/年报/招股书为强证据，客户案例和媒体报道是否可作为进入候选的最低证据。
-
-## [2026-06-10] synthesis | 短期落地证据来源口径确认
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，明确跨场景调研的最低证据来源。
-- **澄清结果**: 客户案例和媒体报道可以作为“进入候选”的最低证据，但内容必须指向真实订单或试点转生产；公司公告、年报、招股书、政府/客户采购公告等更硬来源作为更强证据用于排序和加权。
-- **下一步**: 澄清调研输出形式：先做场景候选池，还是直接给出优先级排序。
-
-## [2026-06-10] synthesis | 跨场景调研输出形式确认
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，明确跨场景短期落地调研先输出候选池。
-- **澄清结果**: 先做跨场景候选池，不直接给出优先级排序；候选池记录进入候选的证据、证据来源强弱、是否指向 1 年内真实订单或试点转生产。
-- **下一步**: 启动外部调研，建立具身智能/机器人短期落地候选场景池。
-
-## [2026-06-10] synthesis | 具身智能短期落地跨场景候选池 v0.1
-
-- **变更**: 新增 [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]；更新 [[robotics-embodied-ai/sources|机器人来源表]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
-- **初步候选**: 汽车制造/工业制造人形机器人、仓储物流/履约中心机器人、酒店/咖啡/商业服务人形机器人、电力设施/数据中心/国企采购型场景、医疗手术机器人。
-- **限制**: 本轮是候选池而非排序；部分证据来自媒体或聚合报道，需下一轮补齐具体客户、订单、试点转生产、任务指标和平台化软件位置。
-
-## [2026-06-10] synthesis | 候选场景第一轮反馈
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]，记录候选池第一轮判断。
-- **澄清结果**: 医疗手术机器人因过于硬核，从职业切入候选中降级为“排除 / 仅作行业观察”；其他候选场景当前都可以，暂时没有明显区别。
-- **下一步**: 决策变量应从“场景差异”转向“角色类型、公司类型、岗位要求、能否发挥软件经验、能否接触真实项目反馈”。
-
-## [2026-06-10] synthesis | 优先角色类型确认
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] 和 [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]，记录下一层职业切入维度。
-- **澄清结果**: 在场景差异暂不明显的情况下，优先比较系统工程师、平台工程师、数据处理 / 数据闭环相关角色。
-- **下一步**: 澄清这三类角色中，用户最想优先验证哪一类，以便做岗位/JD/公司信号外部调研。
-
-## [2026-06-10] synthesis | 第一优先验证角色确认
-
-- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] 和 [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]，将平台工程师标记为第一优先验证角色。
-- **澄清结果**: 平台工程师是第一优先验证方向；系统工程师和数据处理 / 数据闭环相关角色作为相邻备选和对照样本。
-- **下一步**: 澄清“平台工程师”中最关键的吸引点，是平台软件能力迁移、接触真实项目反馈，还是逐步获得具身智能全局认知。
+- **变更**: 更新 [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]] 和 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，将决策变量从场景差异转向角色类型。
+- **澄清结果**: 医疗手术机器人因过于硬核，从职业切入候选中降级为“排除 / 仅作行业观察”；其他候选场景当前没有明显区别。下一层优先比较系统工程师、平台工程师、数据处理 / 数据闭环相关角色，其中平台工程师是第一优先验证方向，系统工程师和数据处理 / 数据闭环角色作为相邻备选。
+- **下一步**: 围绕“具身智能/机器人平台工程师”做岗位/JD/公司信号外部调研，验证平台工程师是否能迁移既有软件平台经验、接触真实项目反馈，并逐步获得具身智能全局认知。
