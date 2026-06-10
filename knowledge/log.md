@@ -185,3 +185,9 @@ tags:
 - **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，记录线下零售门店初扫后的目标修正。
 - **澄清结果**: 场景差异本身不是当前职业决策的关键；短期应用前景更重要，因为真实落地才能形成 feedback loop。当前优先证据是“真实订单”或“试点转生产”。
 - **下一步**: 继续澄清“短期”的时间范围，再启动跨场景调研，比较哪些具身智能/机器人应用场景更可能出现真实订单或试点转生产。
+
+## [2026-06-10] synthesis | 短期落地时间窗确认
+
+- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，明确短期落地机会的时间窗。
+- **澄清结果**: “短期”定义为 1 年内；跨场景调研应比较 1 年内更可能出现真实订单或试点转生产的具身智能/机器人应用场景。
+- **下一步**: 澄清调研时优先比较的候选场景范围。
