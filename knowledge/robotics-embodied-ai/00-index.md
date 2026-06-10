@@ -54,6 +54,7 @@ sources:
 - `13-robot-company-product-comparison-2026-06-08.md`: 主表机器人公司的产品型号全景对比，覆盖人形/轮式双臂、协作臂/工业机器人、AMR/移动操作的参数、技术路线、优缺点和待验证项。
 - [[research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]: 基于 Thinking Partner 对话沉淀的职业方向锚点，聚焦企业决策者的成本、收入或风险痛点，以及零售后场/餐饮后厨/酒店后台等早期验证场景。
 - [[research-notes/retail-store-robotics-entry-scan-2026-06-10|线下零售门店机器人合作验证初扫]]: 验证中国大型零售公司是否已有足够多线下门店机器人/具身智能合作项目；第一轮结果为暂定样本 0/10，未通过 5/10 门槛但需继续补实公告/年报全文。
+- [[research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]: 按 1 年内真实订单或试点转生产证据，建立汽车制造、仓储物流、商业服务、电力/数据中心、医疗手术机器人等短期落地候选池。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]]: LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备的购买状态、价格线索和采购问询清单。
 - [[_entities/README|UMI 技术术语实体索引]]: UMI Gripper 初学者术语已拆分为实体页，覆盖 IMU、6DoF、SLAM、Zarr、LeRobot、Diffusion Policy 等概念。
 

@@ -64,6 +64,7 @@ tags:
 - [[robotics-embodied-ai/13-robot-company-product-comparison-2026-06-08|机器人公司产品型号全景对比]] — 汇总 `04-companies` 主表机器人公司的产品型号、参数、技术路线、优缺点和待验证事项。
 - [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]] — 基于 Thinking Partner 对话沉淀的职业方向锚点，聚焦用具身智能业务落地 know-how 解决企业成本、收入或风险痛点。
 - [[robotics-embodied-ai/research-notes/retail-store-robotics-entry-scan-2026-06-10|线下零售门店机器人合作验证初扫]] — 验证大型零售公司线下门店机器人合作是否超过 5/10；第一轮公开检索未通过，需继续补实权威排名与公告/年报全文。
+- [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]] — 按 1 年内真实订单或试点转生产证据，建立跨场景短期落地候选池，暂不排序。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 
 ## Industries

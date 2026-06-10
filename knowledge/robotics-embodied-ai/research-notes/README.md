@@ -34,3 +34,4 @@ aliases:
 ## 2026-06-10 线下零售门店场景验证
 
 - [[retail-store-robotics-entry-scan-2026-06-10]]: 对“中国零售销售额前 10 大型零售公司是否超过一半已有线下门店机器人合作”的第一轮外部调研初扫。
+- [[cross-scenario-near-term-landing-candidate-pool-2026-06-10]]: 跨全部具身智能/机器人应用场景，按 1 年内真实订单或试点转生产证据建立短期落地候选池。

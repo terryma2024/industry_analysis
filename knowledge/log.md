@@ -215,3 +215,9 @@ tags:
 - **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，明确跨场景短期落地调研先输出候选池。
 - **澄清结果**: 先做跨场景候选池，不直接给出优先级排序；候选池记录进入候选的证据、证据来源强弱、是否指向 1 年内真实订单或试点转生产。
 - **下一步**: 启动外部调研，建立具身智能/机器人短期落地候选场景池。
+
+## [2026-06-10] synthesis | 具身智能短期落地跨场景候选池 v0.1
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]；更新 [[robotics-embodied-ai/sources|机器人来源表]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
+- **初步候选**: 汽车制造/工业制造人形机器人、仓储物流/履约中心机器人、酒店/咖啡/商业服务人形机器人、电力设施/数据中心/国企采购型场景、医疗手术机器人。
+- **限制**: 本轮是候选池而非排序；部分证据来自媒体或聚合报道，需下一轮补齐具体客户、订单、试点转生产、任务指标和平台化软件位置。
