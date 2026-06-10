@@ -221,3 +221,9 @@ tags:
 - **变更**: 新增 [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]；更新 [[robotics-embodied-ai/sources|机器人来源表]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
 - **初步候选**: 汽车制造/工业制造人形机器人、仓储物流/履约中心机器人、酒店/咖啡/商业服务人形机器人、电力设施/数据中心/国企采购型场景、医疗手术机器人。
 - **限制**: 本轮是候选池而非排序；部分证据来自媒体或聚合报道，需下一轮补齐具体客户、订单、试点转生产、任务指标和平台化软件位置。
+
+## [2026-06-10] synthesis | 候选场景第一轮反馈
+
+- **变更**: 更新 [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]，记录候选池第一轮判断。
+- **澄清结果**: 医疗手术机器人因过于硬核，从职业切入候选中降级为“排除 / 仅作行业观察”；其他候选场景当前都可以，暂时没有明显区别。
+- **下一步**: 决策变量应从“场景差异”转向“角色类型、公司类型、岗位要求、能否发挥软件经验、能否接触真实项目反馈”。
