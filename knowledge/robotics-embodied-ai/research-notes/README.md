@@ -30,3 +30,7 @@ aliases:
 ## 2026-06-09 职业方向与业务落地入口
 
 - [[career-direction-business-landing-knowhow-2026-06-09]]: 基于 Thinking Partner 对话沉淀的职业方向锚点，聚焦通过具身智能业务落地 know-how 解决企业决策者的成本、收入或风险痛点。
+
+## 2026-06-10 线下零售门店场景验证
+
+- [[retail-store-robotics-entry-scan-2026-06-10]]: 对“中国零售销售额前 10 大型零售公司是否超过一半已有线下门店机器人合作”的第一轮外部调研初扫。
