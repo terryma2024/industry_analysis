@@ -179,3 +179,9 @@ tags:
 - **变更**: 新增 [[robotics-embodied-ai/research-notes/retail-store-robotics-entry-scan-2026-06-10|线下零售门店机器人合作验证初扫]]，并更新 [[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
 - **初步结果**: 暂定样本中未找到公司公告/年报级线下门店机器人合作证据，按当前严格口径为 0/10，未达到 5/10 通过门槛。
 - **限制**: 尚未稳定获取 CCFA 或同等公开来源的最新中国零售销售额前 10 榜单，也未完成逐家公司公告/年报全文检索，因此该结果只能作为第一轮未通过，不能作为最终否定。
+
+## [2026-06-10] synthesis | 场景选择标准修正为短期落地机会
+
+- **变更**: 更新 [[robotics-embodied-ai/research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]，记录线下零售门店初扫后的目标修正。
+- **澄清结果**: 场景差异本身不是当前职业决策的关键；短期应用前景更重要，因为真实落地才能形成 feedback loop。当前优先证据是“真实订单”或“试点转生产”。
+- **下一步**: 继续澄清“短期”的时间范围，再启动跨场景调研，比较哪些具身智能/机器人应用场景更可能出现真实订单或试点转生产。
