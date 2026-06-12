@@ -2,7 +2,7 @@
 title: AI相关 - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-06-02
+last_updated: 2026-06-11
 status: draft
 tags:
   - industry/ai
@@ -46,9 +46,11 @@ sources:
 - [[research-notes/README|research-notes/]]: 阶段性深度调研。
 - [[research-notes/scale-ai-company-history-2026-06-02|Scale AI 公司发展史]]: 从 2016 年人力任务 API 到 2025 年 Meta 战略投资的完整路径。
 - [[research-notes/scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]]: AI 数据基础设施与中国公司对标。
+- [[research-notes/jepa-core-principles-2026-06-11|JEPA 核心原理快速调研]]: 快速理解 Yann LeCun JEPA、I-JEPA、V-JEPA、V-JEPA 2 与世界模型/机器人规划的关系。
 
 ## 关联连接
 
 - [[index|Knowledge Index]]
 - [[README|Knowledge README]]
 - [[04-companies|AI 相关 - 公司与竞争]]
+- [[_concepts/joint-embedding-predictive-architecture|Joint-Embedding Predictive Architecture]]

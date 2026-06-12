@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-06-10
+last_updated: 2026-06-11
 tags:
   - wiki
   - log
@@ -136,3 +136,29 @@ tags:
 - **变更**: 新增 [[robotics-embodied-ai/research-notes/platform-engineer-jd-entry-scan-2026-06-10|具身智能平台工程师 JD 快速入场扫描]] 和 `raw/robotics-embodied-ai/data/platform_engineer_jd_samples_2026-06-10.csv`；更新 [[robotics-embodied-ai/sources|机器人来源表]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/06-career-view|机器人求职与学习视角]] 和 [[index|Knowledge Index]]。
 - **初步结果**: 第一轮样本支持“通用软件平台能力是硬要求、机器人领域知识可补齐”的快速入场标准。优先岗位族群为后端 / 云端 / Fleet / RobotOps 平台、数据管线 / 数据闭环 / 评测平台、仿真平台和运营系统。
 - **限制**: 国内公开可抓取 JD 样本暂以宇树为主，智元等公司需下一轮通过飞书招聘页、猎聘、Boss 直聘或内推渠道补齐具体岗位文本；1X 样本仅作为海外岗位形态参照。
+
+## [2026-06-11] research | LIBERO 终身学习仿真平台调研
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/libero-lifelong-robot-learning-platform-2026-06-11|LIBERO 终身学习仿真平台调研]]；更新 [[robotics-embodied-ai/sources|机器人来源表]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
+- **来源**: 复用 `SRC-robotics-119` LIBERO 官方文档；新增 `SRC-robotics-169` 至 `SRC-robotics-173`，覆盖 LIBERO 原论文、GitHub 仓库、LIBERO-PRO、LIBERO-Para 和 2026 年 manipulation benchmark 审计论文。
+- **初步结果**: LIBERO 适合作为 VLA/IL 和终身机器人学习的入门评测平台，可用于平台工程作品集中的 benchmark runner、evaluation service、model adapter 和 robustness harness；但固定 LIBERO 分数不能直接代表真实机器人泛化能力，应与扰动评测、多 benchmark 和真机 rollout 组合使用。
+
+## [2026-06-11] research | 开源具身智能训练与评估数据集横向调研
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/open-embodied-ai-datasets-comparison-2026-06-11|开源具身智能训练与评估数据集横向调研]] 和 `raw/robotics-embodied-ai/data/open_embodied_ai_datasets_comparison_2026-06-11.csv`；更新 [[robotics-embodied-ai/sources|机器人来源表]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
+- **来源**: 复用已有 OXE、DROID、RoboMIND、AgiBot、RoboTwin、MimicGen、ALOHA/Mobile ALOHA、LeRobot、LIBERO 来源；新增 `SRC-robotics-174` 至 `SRC-robotics-182`，覆盖 BridgeData V2、RH20T、CALVIN、RLBench、Meta-World、ManiSkill3、RoboCasa、RoboTwin 2.0 和 Galaxea Open-World Dataset。
+- **初步结果**: 数据集应按用途分层理解：预训练/跨本体混合、真实机器人微调/后训练、特定能力数据集、仿真与评估 benchmark。格式上研究生态仍偏 RLDS/OXE，工程互通正在向 LeRobot v3 收敛；真实部署能力不能只看 benchmark 分数，必须结合任务完整度、失败/接管标注、元数据和真机 rollout。
+
+## [2026-06-11] research | JEPA 核心原理快速调研
+
+- **变更**: 新增 [[_concepts/joint-embedding-predictive-architecture|Joint-Embedding Predictive Architecture]] 概念页和 [[ai/research-notes/jepa-core-principles-2026-06-11|JEPA 核心原理快速调研]]；更新 [[_concepts/README|Concepts Layer]]、[[ai/research-notes/README|AI Research Notes]]、[[ai/00-index|AI 相关 - 研究入口]] 和 [[index|Knowledge Index]]。
+- **来源**: 在 `knowledge/ai/sources.csv` 登记 `SRC-ai-025` 至 `SRC-ai-032`，覆盖 LeCun 2022 AMI 位置论文、Meta I-JEPA/V-JEPA/V-JEPA 2 官方说明、I-JEPA/V-JEPA/V-JEPA 2 原论文和 2026 年 LeWorldModel 后续研究。
+- **初步结果**: JEPA 应理解为“在 latent space 预测目标/未来表示”的非生成式自监督世界模型路线；其当前价值主要在高效表征学习、视频物理理解和短程机器人规划信号，长程分层规划和真实世界可靠性仍是未解决问题。
+
+## [2026-06-11] research | 集成电路 AI 芯片全球上市公司初筛
+
+- **变更**: 更新 [[integrated-circuits/00-index|集成电路研究入口]]、[[integrated-circuits/01-industry-map|产业链地图]]、[[integrated-circuits/02-technology-and-products|技术和产品]]、[[integrated-circuits/03-market-and-policy|市场与政策]]、[[integrated-circuits/04-companies|公司与竞争]]、[[integrated-circuits/05-investment-view|投资视角]]、[[integrated-circuits/06-career-view|求职与学习视角]]；新增 [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] 和 `raw/integrated-circuits/data/ai_chip_listed_company_universe_2026-06-11.csv`。
+- **范围**: 覆盖 AI GPU/ASIC、HBM、晶圆代工、设备、EDA/IP、先进封装测试、PCB/载板和中国国产替代链。供应链关系仅记录公开财报、公告或公开报道中明确出现的关系；未披露客户不做猜测。
+- **来源**: 在 `knowledge/integrated-circuits/sources.csv` 登记 `SRC-ic-001` 至 `SRC-ic-035`，包含 NVIDIA FY2026 财报、StockAnalysis/CompaniesMarketCap market-cap 页面、TSMC/ASML/AMD/Broadcom/SK hynix/Micron 公开报道和中国公司待补来源占位。
+- **待继续**: A/H/日韩台公司仍需补最新市值、估值、财务指标和年报原文；SIA/WSTS、TSMC transcript、ASML/TEL/Advantest、中国上市公司年报需要转为 raw artifact 并提高证据等级。
+- **2026-06-11 追加**: 在 `ai_chip_listed_company_universe_2026-06-11.csv` 中补充 `pe_ttm`、`forward_pe`、`pe_data_date`、`pe_source`、`pe_notes`。当前 38 家公司中 24 家有 TTM PE，19 家有 forward PE；A/H 股和部分台股公司仍需下一轮用本地行情源补齐。

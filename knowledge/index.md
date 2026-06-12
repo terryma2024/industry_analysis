@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-06-10
+last_updated: 2026-06-11
 tags:
   - wiki
   - index
@@ -47,6 +47,7 @@ tags:
 - [[_concepts/vision-language-tactile-action|Vision-Language-Tactile-Action]] — 视觉、语言、触觉/力觉和动作轨迹融合的具身模型/数据范式。
 - [[_concepts/universal-manipulation-interface|Universal Manipulation Interface]] — UMI-like 采集设备和机器人示教数据包路线。
 - [[_concepts/lerobot-dataset-schema|LeRobot Dataset Schema]] — LeRobot v3 及相关机器人数据格式概念。
+- [[_concepts/joint-embedding-predictive-architecture|Joint-Embedding Predictive Architecture]] — Yann LeCun 提出的非生成式自监督世界模型路线，在 latent space 预测目标表示而非重建像素/token。
 
 ## Claims
 
@@ -66,7 +67,11 @@ tags:
 - [[robotics-embodied-ai/research-notes/retail-store-robotics-entry-scan-2026-06-10|线下零售门店机器人合作验证初扫]] — 验证大型零售公司线下门店机器人合作是否超过 5/10；第一轮公开检索未通过，需继续补实权威排名与公告/年报全文。
 - [[robotics-embodied-ai/research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]] — 按 1 年内真实订单或试点转生产证据，建立跨场景短期落地候选池，暂不排序。
 - [[robotics-embodied-ai/research-notes/platform-engineer-jd-entry-scan-2026-06-10|具身智能平台工程师 JD 快速入场扫描]] — 用“通用软件平台能力是硬要求、机器人领域知识可补齐”作为第一筛选门槛，初扫平台工程、后端、数据管线、仿真平台和运营系统岗位。
+- [[robotics-embodied-ai/research-notes/libero-lifelong-robot-learning-platform-2026-06-11|LIBERO 终身学习仿真平台调研]] — 拆解 LIBERO 的 lifelong robot learning benchmark 定位、任务/数据/baseline、VLA/IL 评测价值、平台工程作品集方向和鲁棒性局限。
+- [[robotics-embodied-ai/research-notes/open-embodied-ai-datasets-comparison-2026-06-11|开源具身智能训练与评估数据集横向调研]] — 按预训练、真实机器人微调、特定能力和仿真 benchmark 横向比较开源具身数据集的格式、任务完整度、模型/算法适配和缺口。
+- [[ai/research-notes/jepa-core-principles-2026-06-11|JEPA 核心原理快速调研]] — 系统拆解 JEPA、I-JEPA、V-JEPA、V-JEPA 2 与世界模型/机器人规划的核心原理、差异和局限。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
+- [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] — 第一版全球 AI 芯片及上下游上市公司池，记录主营业务、公开供应链关系、近一年市值变化、筛选框架和待补证据。
 
 ## Industries
 

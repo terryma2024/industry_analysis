@@ -2,7 +2,7 @@
 title: Concepts Layer
 type: index
 date_created: 2026-05-29
-last_updated: 2026-05-29
+last_updated: 2026-06-11
 tags:
   - wiki
   - concepts
@@ -18,6 +18,7 @@ tags:
 - [[knowledge-compilation]]
 - [[source-traceability]]
 - [[embodied-ai]]
+- [[joint-embedding-predictive-architecture]]
 - [[robot-training-data]]
 - [[universal-manipulation-interface]]
 - [[lerobot-dataset-schema]]
