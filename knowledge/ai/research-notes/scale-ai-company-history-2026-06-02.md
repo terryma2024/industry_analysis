@@ -94,7 +94,7 @@ Scale AI 把“人工标注和数据整理”这种看起来低端、脏、重�
 
 ## 关联连接
 
-- [[../../_entities/ScaleAI|Scale AI]]
+- [[_entities/ScaleAI|Scale AI]]
 - [[../00-index|AI 相关 - 研究入口]]
 - [[../04-companies|AI 相关 - 公司与竞争]]
 - [[scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]]

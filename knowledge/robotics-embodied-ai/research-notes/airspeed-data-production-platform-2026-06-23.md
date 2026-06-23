@@ -162,11 +162,11 @@ AIRSPEED 的开源核心有几个值得复用的工程判断：
 
 ## 关联连接
 
-- [[../../_entities/AIRSPEED|AIRSPEED]]
+- [[_entities/AIRSPEED|AIRSPEED]]
 - [[../../_sources/airspeed-open-source-data-production-platform|AIRSPEED 来源组]]
 - [[../00-index|机器人（具身智能） - 研究入口]]
 - [[../09-training-data-deep-dive|机器人训练数据深度调研]]
 - [[../12-robotics-engineering-platforms-2026-06-04|机器人工程平台综合调研]]
 - [[../../_concepts/robot-training-data|Robot Training Data]]
 - [[../../_concepts/embodied-ai|Embodied AI]]
-- [[../../_entities/HuggingFaceLeRobot|Hugging Face LeRobot]]
+- [[_entities/HuggingFaceLeRobot|Hugging Face LeRobot]]
