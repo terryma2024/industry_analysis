@@ -72,6 +72,7 @@ tags:
 - [[robotics-embodied-ai/research-notes/libero-lifelong-robot-learning-platform-2026-06-11|LIBERO 终身学习仿真平台调研]] — 拆解 LIBERO 的 lifelong robot learning benchmark 定位、任务/数据/baseline、VLA/IL 评测价值、平台工程作品集方向和鲁棒性局限。
 - [[robotics-embodied-ai/research-notes/open-embodied-ai-datasets-comparison-2026-06-11|开源具身智能训练与评估数据集横向调研]] — 按预训练、真实机器人微调、特定能力和仿真 benchmark 横向比较开源具身数据集的格式、任务完整度、模型/算法适配和缺口。
 - [[robotics-embodied-ai/research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]] — 系统拆解 AIRSPEED 当前开源采集核心、论文三服务架构、技术转移叙事、性能 claim 和中国具身数据基础设施启发。
+- [[robotics-embodied-ai/research-notes/dora-1-vs-ros2-2026-06-23|dora 1.0 vs ROS 2 调研]] — 对比 dora 的 AI dataflow runtime 路线与 ROS 2 机器人生态底座，拆解版本状态、性能、QoS、桥接架构和职业学习路径。
 - [[ai/research-notes/jepa-core-principles-2026-06-11|JEPA 核心原理快速调研]] — 系统拆解 JEPA、I-JEPA、V-JEPA、V-JEPA 2 与世界模型/机器人规划的核心原理、差异和局限。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] — 第一版全球 AI 芯片及上下游上市公司池，记录主营业务、公开供应链关系、近一年市值变化、筛选框架和待补证据。

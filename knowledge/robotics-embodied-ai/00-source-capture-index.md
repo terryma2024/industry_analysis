@@ -22,11 +22,11 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 22 | 本轮新增并成功抽取的 raw artifact。 |
-| `fallback_html` | 3 | 本轮新增但正文抽取失败，已保存 HTML sidecar。 |
+| `ok` | 27 | 已成功抽取的 raw artifact。 |
+| `fallback_html` | 8 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 1 | 本轮因 defuddle 失败，从网页内嵌结构化数据生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
-| `failed` | 4 | defuddle 与 HTML fallback 都失败，需要浏览器、官方 PDF 或手工补采。 |
+| `failed` | 5 | defuddle 与 HTML fallback 都失败，需要浏览器、官方 PDF 或手工补采。 |
 
 ## 快速定位
 
@@ -45,6 +45,7 @@ aliases:
 | `SRC-robotics-019` | `failed` | Tesla 页面 403，HTML fallback 也被拒。 | 用浏览器登录/手工保存，或改用 Tesla 官方可访问页面。 |
 | `SRC-robotics-085` | `failed` | 深圳科创局页面 defuddle fetch failed，HTML fallback SSL BAD_ECPOINT。 | 用浏览器手工保存原文，或寻找深圳市政府/政策 PDF 镜像。 |
 | `SRC-robotics-105` | `failed` | TRON 1 用户手册 PDF 官网证书过期，自动下载失败。 | 用浏览器手工保存 PDF，或寻找新版下载地址。 |
+| `SRC-robotics-190` | `failed` | dora guides URL 自动抽取返回 404。 | 改用 GitHub raw docs、官网 `/book` 路径或浏览器手工保存后再核验。 |
 
 ## 已保存 fallback HTML 的来源
 
@@ -90,6 +91,22 @@ aliases:
 | [`SRC-robotics-132`](../../raw/robotics-embodied-ai/documents/SRC-robotics-132-awe2026-fastumi.md) | [鹿明 AWE2026 FastUMI 发布](../../raw/robotics-embodied-ai/documents/SRC-robotics-132-awe2026-fastumi.md) | FastUMI 全家桶发布与陆续上线京东线索。 |
 | [`SRC-robotics-133`](../../raw/robotics-embodied-ai/documents/SRC-robotics-133-beingbeyond-launches-u1-realdexumi.md) | [BeingBeyond U1 RealDexUMI](../../raw/robotics-embodied-ai/documents/SRC-robotics-133-beingbeyond-launches-u1-realdexumi.md) | U1 / RealDexUMI 官方发布。 |
 | [`SRC-robotics-134`](../../raw/robotics-embodied-ai/documents/SRC-robotics-134-realdexumi-wearable-universal-manipulation-interface-paper.md) | [RealDexUMI arXiv](../../raw/robotics-embodied-ai/documents/SRC-robotics-134-realdexumi-wearable-universal-manipulation-interface-paper.md) | RealDexUMI 论文摘要页。 |
+
+## dora / ROS 2 中间件专题来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-189`](../../raw/robotics-embodied-ai/documents/SRC-robotics-189-dora-1-0-official-website.md) | [Dora 1.0 official website](../../raw/robotics-embodied-ai/documents/SRC-robotics-189-dora-1-0-official-website.md) | defuddle 超时，已保存官网 HTML；用于核验 dora 1.0/RC 与性能主张。 |
+| `SRC-robotics-190` | 无 | dora guides URL 自动抽取失败，不作为关键结论依据。 |
+| [`SRC-robotics-191`](../../raw/robotics-embodied-ai/documents/SRC-robotics-191-dora-github-readme.md) | [Dora GitHub README](../../raw/robotics-embodied-ai/documents/SRC-robotics-191-dora-github-readme.md) | GitHub raw README，成功 direct-download。 |
+| [`SRC-robotics-192`](../../raw/robotics-embodied-ai/documents/SRC-robotics-192-dora-pypi-package-dora-rs.md) | [dora-rs PyPI](../../raw/robotics-embodied-ai/documents/SRC-robotics-192-dora-pypi-package-dora-rs.md) | PyPI 页面，记录 `0.5.0` 稳定版。 |
+| [`SRC-robotics-193`](../../raw/robotics-embodied-ai/documents/SRC-robotics-193-dora-github-release-v0-5-0.md) | [Dora GitHub release v0.5.0](../../raw/robotics-embodied-ai/documents/SRC-robotics-193-dora-github-release-v0-5-0.md) | GitHub release tag fallback HTML，记录 `v0.5.0` 为 Latest。 |
+| [`SRC-robotics-194`](../../raw/robotics-embodied-ai/documents/SRC-robotics-194-dora-dataflow-oriented-robotic-architecture-paper.md) | [DORA arXiv paper](../../raw/robotics-embodied-ai/documents/SRC-robotics-194-dora-dataflow-oriented-robotic-architecture-paper.md) | 论文摘要页，说明 DORA 的低延迟/低 CPU overhead 目标。 |
+| [`SRC-robotics-195`](../../raw/robotics-embodied-ai/documents/SRC-robotics-195-dora-robotic-dataflow-benchmark-repository.md) | [dora benchmark repository](../../raw/robotics-embodied-ai/documents/SRC-robotics-195-dora-robotic-dataflow-benchmark-repository.md) | benchmark README，包含 CPU bulk data 与 CUDA IPC 对比和 caveat。 |
+| [`SRC-robotics-196`](../../raw/robotics-embodied-ai/documents/SRC-robotics-196-ros-2-releases-official-documentation.md) | [ROS 2 releases docs](../../raw/robotics-embodied-ai/documents/SRC-robotics-196-ros-2-releases-official-documentation.md) | raw `.rst` 以 fallback sidecar 保存；记录 Lyrical Luth、Jazzy、Humble 等发行版。 |
+| [`SRC-robotics-197`](../../raw/robotics-embodied-ai/documents/SRC-robotics-197-ros-2-nodes-official-documentation.md) | [ROS 2 nodes docs](../../raw/robotics-embodied-ai/documents/SRC-robotics-197-ros-2-nodes-official-documentation.md) | raw `.rst` 以 fallback sidecar 保存；用于节点/话题/服务/动作概念。 |
+| [`SRC-robotics-198`](../../raw/robotics-embodied-ai/documents/SRC-robotics-198-ros-2-qos-official-documentation.md) | [ROS 2 QoS docs](../../raw/robotics-embodied-ai/documents/SRC-robotics-198-ros-2-qos-official-documentation.md) | raw `.rst` 以 fallback sidecar 保存；用于 DDS QoS 能力对比。 |
+| [`SRC-robotics-199`](../../raw/robotics-embodied-ai/documents/SRC-robotics-199-ros-2-design-architecture-and-uses-in-the-wild.md) | [ROS 2 overview paper](../../raw/robotics-embodied-ai/documents/SRC-robotics-199-ros-2-design-architecture-and-uses-in-the-wild.md) | ROS 2 架构和真实部署综述论文摘要页。 |
 
 ## 后续流程
 

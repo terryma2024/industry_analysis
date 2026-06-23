@@ -19,6 +19,9 @@ sources:
   - raw/robotics-embodied-ai/documents/SRC-robotics-122-moveit-2-documentation.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-123-agibot-genie-studio.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-124-embodiflow-platform-guides.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-189-dora-1-0-official-website.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-191-dora-github-readme.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-194-dora-dataflow-oriented-robotic-architecture-paper.md
   - raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821.pdf
   - raw/robotics-embodied-ai/documents/SRC-robotics-183-airspeed-project-page.html
   - raw/robotics-embodied-ai/documents/SRC-robotics-184-airspeed-technical-report.pdf
@@ -84,6 +87,7 @@ aliases:
 | robomimic | 模仿学习研究框架 | demonstration 数据和算法 | 离线模仿学习 baseline、复现实验 | 不是真机工程平台 |
 | LIBERO | 评测 benchmark | lifelong robot learning、任务/数据/算法/策略评测 | VLA/IL 模型评测、知识迁移研究 | 仿真 benchmark，不能替代真实客户场景 |
 | ManiSkill | 仿真和数据生成 benchmark | 机器人仿真、数据生成、泛化评测 | 规模化仿真任务、策略评测 | 当前 raw 为 fallback HTML；工业真机部署需其他栈 |
+| dora / dora-rs | AI/机器人 dataflow runtime | 数据流编排、共享内存、Arrow/Zenoh、record/replay、ROS 2 bridge | 高带宽 perception/VLA/inference pipeline、Python/Rust 混合数据流、平台工程实验 | 版本和生态仍早；不应替代 ROS 2 的驱动、控制、规划和硬件生态 |
 | ROS 2 + MoveIt 2 | 机器人软件中间件/执行栈 | 驱动、通信、规划、控制、感知、操作 | 真机控制、系统集成、传统机器人软件架构 | 不负责数据治理、VLA 训练和模型评测闭环 |
 
 ## 好平台的共同特点
@@ -122,6 +126,7 @@ OpenPI 和 OpenVLA 很重要，但它们更像模型工程包。完整平台需�
 |---|---|---|
 | 个人学习/职业转型 | LeRobot + ROS 2 + Isaac/Gazebo 基础 | 先跑通一个低成本机械臂的采集-训练-部署，再补仿真评测。 |
 | VLA 模型研究 | OpenPI / OpenVLA / FluxVLA | 用 LeRobot 或 RLDS 统一数据，LIBERO 做仿真评测，真机用 policy server 接 ROS/SDK。 |
+| 高带宽 AI 数据流 | dora + ROS 2 bridge | ROS 2 接硬件/控制，dora 承担 perception、VLA inference、record/replay 和 observability。 |
 | 仿真和强化学习 | Isaac Sim + Isaac Lab | 适合高保真仿真、合成数据、domain randomization、multi-GPU/multi-node 训练。 |
 | 国内本体快速验证 | Unitree G1-D / LimX TRON 2 / Agibot Genie Studio | 适合用供应商本体和工具链快速验证场景，但要警惕平台锁定。 |
 | 企业数据工厂 | EmbodiFlow + LeRobot/HDF5/MCAP exporter | 先把数据治理、质检、权限、导出和私有化做好，再接多种训练框架。 |
@@ -202,6 +207,7 @@ OpenPI 和 OpenVLA 很重要，但它们更像模型工程包。完整平台需�
 - [[06-career-view|机器人求职与学习视角]]
 - [[09-training-data-deep-dive|机器人训练数据深度调研]]
 - [[research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]]
+- [[research-notes/dora-1-vs-ros2-2026-06-23|dora 1.0 vs ROS 2 调研]]
 - [[_entities/HuggingFaceLeRobot|Hugging Face LeRobot]]
 - [[_entities/AIRSPEED|AIRSPEED]]
 - [[_entities/LimXDynamics|LimX Dynamics]]

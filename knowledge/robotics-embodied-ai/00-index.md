@@ -59,6 +59,7 @@ sources:
 - [[research-notes/platform-engineer-jd-entry-scan-2026-06-10|具身智能平台工程师 JD 快速入场扫描]]: 用“通用软件平台能力是硬要求、机器人领域知识可补齐”作为第一筛选门槛，初扫平台工程、后端、数据管线、仿真平台和运营系统岗位。
 - [[research-notes/libero-lifelong-robot-learning-platform-2026-06-11|LIBERO 终身学习仿真平台调研]]: 拆解 LIBERO 的 lifelong robot learning benchmark 定位、4 个 task suites、130 个任务、baseline、VLA/IL 评测价值，以及 2025-2026 年对固定 benchmark 泛化性的批评。
 - [[research-notes/open-embodied-ai-datasets-comparison-2026-06-11|开源具身智能训练与评估数据集横向调研]]: 按预训练/真实微调/特定能力/仿真 benchmark 对比 OXE、DROID、BridgeData、AgiBot、RoboMIND、ALOHA、UMI、LIBERO、ManiSkill、RoboCasa、RoboTwin 等数据集的格式、任务完整度和模型适配。
+- [[research-notes/dora-1-vs-ros2-2026-06-23|dora 1.0 vs ROS 2 调研]]: 对比 dora 的 AI dataflow runtime 路线与 ROS 2 机器人生态底座，给出版本状态、性能、桥接架构和学习/选型建议。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]]: LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备的购买状态、价格线索和采购问询清单。
 - [[_entities/README|UMI 技术术语实体索引]]: UMI Gripper 初学者术语已拆分为实体页，覆盖 IMU、6DoF、SLAM、Zarr、LeRobot、Diffusion Policy 等概念。
 

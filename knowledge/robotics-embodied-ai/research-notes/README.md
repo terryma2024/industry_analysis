@@ -49,3 +49,7 @@ last_updated: 2026-06-23
 ## 2026-06-23 数据生产平台
 
 - [[airspeed-data-production-platform-2026-06-23]]: AIRSPEED 具身智能数据生产平台调研，区分当前 GitHub v1.3 开源采集核心、论文/官网三服务架构和技术转移报告中的商业化叙事。
+
+## 2026-06-23 机器人中间件与 dataflow runtime
+
+- [[dora-1-vs-ros2-2026-06-23]]: 对比 dora 1.0 能力主张与 ROS 2 生态底座，重点拆解版本状态、性能、QoS、ROS 2 bridge、平台工程选型和职业学习路径。

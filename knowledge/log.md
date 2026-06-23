@@ -169,3 +169,10 @@ tags:
 - **来源**: 在 `knowledge/robotics-embodied-ai/sources.csv` 登记 `SRC-robotics-183` 至 `SRC-robotics-188`，覆盖 AIRSPEED 官网、技术报告、EAI 数据工程综述、英文/中文技术转移报告和 GitHub README；保存 HTML/PDF/README raw artifact，并为 PDF 生成 `pdftotext` sidecar，更新 `source_capture_manifest.csv`。
 - **初步结果**: AIRSPEED 应分版本理解：当前 GitHub v1.3 可复用能力偏 ROS2/YAML/HDF5/LeRobot 转换的数据采集核心；官网/论文/技术转移报告描述的完整平台覆盖数据采集、仿真生成和数据集构建。商业化报告中的客户、融资、标准参与等 claim 暂标记为待独立验证。
 - **待继续**: clone 仓库做代码级验证，核验 license、release、converter、ROS2 mock 采集、LeRobot v3 导出；独立验证技术转移报告中的客户、融资和标准化 claim。
+
+## [2026-06-23] research | dora 1.0 vs ROS 2 调研
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/dora-1-vs-ros2-2026-06-23|dora 1.0 vs ROS 2 调研]]；更新 [[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/12-robotics-engineering-platforms-2026-06-04|机器人工程平台综合调研]]、[[robotics-embodied-ai/00-source-capture-index|机器人来源抽取索引]] 和 [[index|Knowledge Index]]。
+- **来源**: 在 `knowledge/robotics-embodied-ai/sources.csv` 登记 `SRC-robotics-189` 至 `SRC-robotics-199`，覆盖 dora 官网、GitHub README、PyPI、GitHub v0.5.0 release、DORA 论文、dora benchmark、ROS 2 release/nodes/QoS 官方文档和 ROS 2 综述论文；已生成 raw artifacts 并更新 `raw/robotics-embodied-ai/documents/source_capture_manifest.csv`。
+- **初步结果**: dora 更适合作为高带宽 AI dataflow runtime，与 ROS 2 bridge 组合承担 perception/VLA/inference、record/replay 和 observability；ROS 2 仍更适合作为真实机器人硬件、驱动、控制、规划和生态底座。
+- **限制**: dora 官网称 `1.0.0-rc1`，但 PyPI/GitHub 稳定版本为 `0.5.0`，本文将“dora 1.0”按官网/RC 能力主张处理；`SRC-robotics-190` dora guides 自动抽取失败，需后续通过官网 `/book`、GitHub raw docs 或浏览器手工补采。
