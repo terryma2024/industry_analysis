@@ -162,3 +162,10 @@ tags:
 - **来源**: 在 `knowledge/integrated-circuits/sources.csv` 登记 `SRC-ic-001` 至 `SRC-ic-035`，包含 NVIDIA FY2026 财报、StockAnalysis/CompaniesMarketCap market-cap 页面、TSMC/ASML/AMD/Broadcom/SK hynix/Micron 公开报道和中国公司待补来源占位。
 - **待继续**: A/H/日韩台公司仍需补最新市值、估值、财务指标和年报原文；SIA/WSTS、TSMC transcript、ASML/TEL/Advantest、中国上市公司年报需要转为 raw artifact 并提高证据等级。
 - **2026-06-11 追加**: 在 `ai_chip_listed_company_universe_2026-06-11.csv` 中补充 `pe_ttm`、`forward_pe`、`pe_data_date`、`pe_source`、`pe_notes`。当前 38 家公司中 24 家有 TTM PE，19 家有 forward PE；A/H 股和部分台股公司仍需下一轮用本地行情源补齐。
+
+## [2026-06-23] research | AIRSPEED 具身智能数据生产平台调研
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]]、[[_sources/airspeed-open-source-data-production-platform|AIRSPEED 来源组]]、[[_entities/AIRSPEED|AIRSPEED]]；更新 [[robotics-embodied-ai/12-robotics-engineering-platforms-2026-06-04|机器人工程平台综合调研]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-source-capture-index|机器人来源抽取索引]]、[[_sources/README|Sources Layer]]、[[_entities/README|Entities Layer]] 和 [[index|Knowledge Index]]。
+- **来源**: 在 `knowledge/robotics-embodied-ai/sources.csv` 登记 `SRC-robotics-183` 至 `SRC-robotics-188`，覆盖 AIRSPEED 官网、技术报告、EAI 数据工程综述、英文/中文技术转移报告和 GitHub README；保存 HTML/PDF/README raw artifact，并为 PDF 生成 `pdftotext` sidecar，更新 `source_capture_manifest.csv`。
+- **初步结果**: AIRSPEED 应分版本理解：当前 GitHub v1.3 可复用能力偏 ROS2/YAML/HDF5/LeRobot 转换的数据采集核心；官网/论文/技术转移报告描述的完整平台覆盖数据采集、仿真生成和数据集构建。商业化报告中的客户、融资、标准参与等 claim 暂标记为待独立验证。
+- **待继续**: clone 仓库做代码级验证，核验 license、release、converter、ROS2 mock 采集、LeRobot v3 导出；独立验证技术转移报告中的客户、融资和标准化 claim。

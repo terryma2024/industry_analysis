@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-06-11
+last_updated: 2026-06-23
 tags:
   - wiki
   - index
@@ -19,6 +19,7 @@ tags:
 - [[ai/00-source-capture-index|AI Source Capture Index]] — AI 行业来源抽取状态，包含 Scale AI 与中国 AI 数据基础设施对标调研的 raw artifact 入口。
 - [[news/2026-05-29-us-productivity-miracle|美国正在爆发一场生产力奇迹]] — 关于美国生产率加速、AI 时滞、能源优势和经济灵活性的新闻摘要。
 - [[_sources/roboalign-r1-reward-aligned-robot-video-world-models|RoboAlign-R1 - Reward-Aligned Robot Video World Models]] — arXiv `2605.03821` 论文卡片，聚焦机器人视频世界模型的多模态奖励对齐、RobotWorldBench、RoboAlign-Judge 和 SWR。
+- [[_sources/airspeed-open-source-data-production-platform|AIRSPEED - Open-source Data Production Platform for Embodied AI]] — AIRSPEED 来源组，覆盖官网、技术报告、EAI 数据工程综述、技术转移报告和 GitHub README。
 
 ## Entities
 
@@ -36,6 +37,7 @@ tags:
 - [[_entities/LimXDynamics|LimX Dynamics]] — 逐际动力，中国人形机器人与具身智能公司，当前研究重点是“机器人本体 + 运动控制小脑 + 具身大脑/工具链”的开发者平台路线。
 - [[_entities/Agibot|Agibot]] — 中国具身智能公司，现有研究中用于跟踪开放数据集和整机生态。
 - [[_entities/IOAI|IO-AI]] — 中国具身数据基础设施公司，现有研究中用于跟踪遥操作、数据标注管理与格式导出。
+- [[_entities/AIRSPEED|AIRSPEED]] — AIRS/AIRSPEED 具身智能数据生产平台项目，当前开源核心偏 ROS2/YAML/HDF5 数据采集，论文/报告目标覆盖采集、仿真生成和数据集构建。
 
 ## Concepts
 
@@ -69,6 +71,7 @@ tags:
 - [[robotics-embodied-ai/research-notes/platform-engineer-jd-entry-scan-2026-06-10|具身智能平台工程师 JD 快速入场扫描]] — 用“通用软件平台能力是硬要求、机器人领域知识可补齐”作为第一筛选门槛，初扫平台工程、后端、数据管线、仿真平台和运营系统岗位。
 - [[robotics-embodied-ai/research-notes/libero-lifelong-robot-learning-platform-2026-06-11|LIBERO 终身学习仿真平台调研]] — 拆解 LIBERO 的 lifelong robot learning benchmark 定位、任务/数据/baseline、VLA/IL 评测价值、平台工程作品集方向和鲁棒性局限。
 - [[robotics-embodied-ai/research-notes/open-embodied-ai-datasets-comparison-2026-06-11|开源具身智能训练与评估数据集横向调研]] — 按预训练、真实机器人微调、特定能力和仿真 benchmark 横向比较开源具身数据集的格式、任务完整度、模型/算法适配和缺口。
+- [[robotics-embodied-ai/research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]] — 系统拆解 AIRSPEED 当前开源采集核心、论文三服务架构、技术转移叙事、性能 claim 和中国具身数据基础设施启发。
 - [[ai/research-notes/jepa-core-principles-2026-06-11|JEPA 核心原理快速调研]] — 系统拆解 JEPA、I-JEPA、V-JEPA、V-JEPA 2 与世界模型/机器人规划的核心原理、差异和局限。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] — 第一版全球 AI 芯片及上下游上市公司池，记录主营业务、公开供应链关系、近一年市值变化、筛选框架和待补证据。

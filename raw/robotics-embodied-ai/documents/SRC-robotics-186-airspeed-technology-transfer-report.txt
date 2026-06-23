@@ -1,0 +1,374 @@
+  Technology Transfer of Open-Source
+ Data Infrastructure for Embodied AI The
+             AIRSPEED Case
+                                   Tiantian Zhang, Shaoshan Liu
+
+               Shenzhen Institute of Artificial Intelligence and Robotics for Society
+
+
+
+Abstract
+Embodied AI depends on high-quality physical interaction data, yet such data remains expensive,
+fragmented, and difficult to reuse across robot platforms. This article presents AIRSPEED as a
+technology-transfer case study of how an open-source data production platform for embodied AI
+was developed within the Shenzhen Institute of Artificial Intelligence and Robotics for Society and
+advanced toward industrial deployment. AIRSPEED integrates teleoperation interfaces,
+heterogeneous robot adapters, simulation connectors, data collection, data generation, and dataset
+construction into a modular infrastructure for embodied AI data production. The case shows that
+technology transfer in emerging AI fields is not merely the transfer of intellectual property, but the
+coordinated transfer of architecture, engineering know-how, ecosystem relationships, customer
+validation, and commercialization logic. More broadly, the article argues that research institutions
+can improve deep-tech commercialization by starting from shared infrastructure bottlenecks,
+building reusable platform assets, using open source to accelerate adoption, and aligning early pilots
+with scalable business models.
+
+1. Introduction: Why Embodied AI Needs Data Infrastructure
+
+     Embodied AI changes the data problem in artificial intelligence. Text, images, and videos can
+be collected from the digital world at large scale, but robot interaction data must be produced
+through physical execution [1], [2]. A useful dataset may include camera streams, robot trajectories,
+force and tactile signals, teleoperation commands, task outcomes, and environmental context. These
+records are costly because they depend on hardware, operators, calibration, safety checks, and
+repeated trials. As a result, many embodied AI systems still rely on small demonstrations, isolated
+laboratory datasets, or task-specific data pipelines.
+
+      AIRSPEED was motivated by a recurring engineering problem in embodied AI data production
+[3], [4]. When a team changed from one robot arm to another, or from a mobile robot to a humanoid
+platform, much of the data pipeline had to be rebuilt. Sensor streams, control commands, coordinate
+frames, timestamps, task labels, and teleoperation records were often stored and processed
+differently. This made data collection slow, but the larger problem came after collection: teams still
+had to clean, align, label, convert, version, and inspect the data before it could be used for training
+                                                  1
+or evaluation. AIRSPEED was created to make this process repeatable across robot embodiments.
+
+     The project therefore focused on the layer between robot hardware and model training. Instead
+of building another robot or another task-specific dataset, AIRSPEED connects teleoperation
+devices, robot adapters, simulation tools, and dataset construction workflows. The goal is practical:
+once a team has collected real interaction data, the same platform should help turn it into training-
+ready datasets, expand it through controlled simulation, and reuse it across related tasks or robot
+platforms. This made AIRSPEED suitable for technology transfer because the value was not limited
+to one laboratory prototype; it lay in a workflow that other teams could adopt.
+
+      Open source played a specific role in this process. It allowed outside researchers and
+developers to inspect the interfaces, test the data format, and build adapters for their own devices or
+robots [5]. This matters in embodied AI because no single institution controls all robot embodiments,
+sensors, simulators, and teleoperation tools. A closed platform may work within one vendor’s
+system, but it is less likely to become a shared workflow. AIRSPEED’s open-source strategy was
+therefore not only a dissemination choice; it was a way to test whether a common data-production
+interface could attract users beyond the original development team.
+
+      This article examines AIRSPEED as a technology-transfer case. It asks how a research institute
+can move from a technical prototype to an industrially usable infrastructure project when the core
+asset is not a single algorithm, but a reusable engineering workflow [3], [4]. The following sections
+discuss the problem AIRSPEED addressed, the platform architecture, the role of AIRS in incubation,
+the transition from technical validation to venture formation, and the lessons that may apply to other
+deep-tech transfer projects.
+
+
+
+2. AIRS as an Incubation Platform for Technology Transfer
+
+      AIRSPEED began inside AIRS because the problem was still too early and too engineering-
+heavy to be solved as a conventional software startup. The team first had to understand how different
+robots, teleoperation devices, simulators, and data formats could be connected in one workflow.
+This required access to hardware, engineers, industrial partners, and testing scenarios. AIRS
+provided that environment before the project was ready to become a market-facing venture. This
+role is consistent with the broader view that universities and research institutes increasingly support
+a “third mission” beyond research and education: translating research outputs into economic and
+social impact through technology transfer and commercialization [7].
+
+     AIRS is one of Shenzhen’s major public research institutions, established to connect frontier
+research with industrial deployment in artificial intelligence and robotics. Affiliated with The
+Chinese University of Hong Kong, Shenzhen, AIRS operates as a new type of research institute that
+combines academic research, engineering development, industry collaboration, venture incubation,
+and technology transfer. This institutional model is particularly relevant for embodied AI, where
+successful commercialization depends not only on algorithms, but also on hardware access,
+engineering integration, industrial partners, pilot scenarios, and standardization pathways.
+                                                  2
+     Within this environment, AIRSPEED was developed as an open-source data production
+platform for embodied AI. Its technical objective is to reduce the cost and fragmentation of
+embodied AI data production through a modular architecture that connects teleoperation devices,
+heterogeneous robots, simulation environments, and dataset construction pipelines. Rather than
+building another vertically integrated robot system, AIRSPEED focuses on the missing horizontal
+layer: the data infrastructure that allows different robots, sensors, operators, and simulation tools to
+contribute to reusable embodied AI datasets.
+
+     AIRS helped AIRSPEED in three concrete ways. First, it gave the team an engineering
+environment in which data alignment, simulation interfaces, and robot integration could be tested
+before the platform had to satisfy paying customers. Second, it exposed the team to industrial users
+who cared less about the elegance of the software architecture and more about whether the system
+could reduce repeated integration work. Third, it helped the team translate the prototype into a
+commercialization plan: which parts should remain open source, which services could become
+enterprise offerings, and what kind of investors or partners would understand an infrastructure-style
+project.
+
+      AIRSPEED followed an internal incubation pathway. Under this model, the technical team
+develops the core technology within the institute, validates the system through engineering and pilot
+projects, and then establishes an independent company once the technology and market opportunity
+become sufficiently clear. This model reduces the early risk of commercialization: the project can
+rely on institutional resources during the uncertain prototype stage, while later gaining the autonomy
+needed for venture financing, customer delivery, and product scaling.
+
+      This incubation pathway is important because embodied AI infrastructure is difficult to
+commercialize through a simple licensing model. Much of the value lies in tacit engineering
+knowledge, interface adaptation, customer feedback, dataset workflows, and ecosystem trust.
+AIRSPEED’s transfer therefore required more than moving intellectual property from a laboratory
+to a company. It required moving a team, a technical architecture, partner relationships, and a market
+thesis together.
+
+      The AIRSPEED case suggests that infrastructure-oriented AI projects often need an
+institutional bridge before they can become companies. The early asset is rarely just source code. It
+also includes interface knowledge, hardware adaptation experience, user feedback, testing
+environments, and trust from partners. AIRSPEED’s transfer therefore involved moving a working
+engineering practice, not simply transferring a piece of intellectual property.
+
+3. The AIRSPEED Platform: Architecture for Scalable Data Production
+
+     AIRSPEED treats embodied AI data production as an engineering workflow rather than a one-
+time collection task [6]. A demonstration collected on one robot becomes more valuable if it can be
+synchronized, checked, converted, replayed, expanded in simulation, and reused in later training
+cycles. The platform was therefore designed around the steps that make data reusable: device
+                                                   3
+connection, robot adaptation, simulation linkage, data cleaning, dataset construction, and version
+control.
+
+
+
+
+                             Figure 1. AIRSPEED architecture design
+
+     As illustrated in Figure 1, the platform is organized around three interfaces and three services.
+The three interfaces connect AIRSPEED to the key sources of embodied AI data: teleoperation
+devices, robot embodiments, and simulation environments. The teleoperation interface supports
+devices such as VR headsets, motion-capture systems, grippers, and other control terminals. The
+robot interface allows heterogeneous platforms, including robotic arms, mobile robots, quadrupeds,
+and humanoids, to be integrated through adapters. The simulation interface connects the platform
+to environments such as NVIDIA Isaac Sim and MuJoCo, allowing real-world demonstrations to be
+expanded through synthetic variation and simulation-based data generation.
+
+     As illustrated in Figure 2, on top of these interfaces, AIRSPEED provides three core services:
+data collection, data generation, and dataset construction. The data collection service receives real-
+world interaction data and performs synchronization, timestamp alignment, and initial cleaning. The
+data generation service uses simulation and data-derivation methods to expand limited real-world
+demonstrations into more diverse samples. The dataset construction service converts raw
+multimodal signals into structured datasets through cleaning, annotation, format conversion, quality
+control, and version management.
+
+     The key architectural contribution of AIRSPEED is the integration of these components into a
+closed-loop data production process. Real-world demonstrations serve as high-value seed data.
+These data are standardized and converted into training-ready datasets. The datasets are then used
+for model training, simulation rollout, and further data generation. Newly generated data are merged
+with real-world data, creating larger and more diverse datasets for the next training cycle. This
+                                                  4
+mechanism forms a data flywheel in which each round improves dataset scale, diversity, and
+reusability while reducing the marginal cost of additional data production.
+
+
+
+
+                            Figure 2. Services provided by AIRSPEED
+
+
+
+4. AIRSPEED’s Incubation-Stage Development
+
+      During incubation, AIRSPEED’s main task was to turn a research idea into a repeatable
+engineering capability. The team did not begin with a finished product. It began with a practical
+problem: embodied AI data pipelines were repeatedly rebuilt whenever the robot, teleoperation
+device, simulator, or task changed. The incubation stage therefore focused on accumulating reusable
+technical assets rather than delivering one-off demonstrations. These assets included device
+interfaces, robot adapters, simulation connectors, data-alignment methods, dataset construction
+workflows, and early reference examples.
+
+     The first capability of AIRSPEED was hardware and device compatibility. AIRSPEED had to
+connect different sources of embodied AI data, including teleoperation devices, robot embodiments,
+and simulation environments. This required work that is often invisible in a research prototype:
+driver integration, control-signal conversion, timestamp alignment, coordinate-frame mapping,
+sensor synchronization, and interface testing. The value of this work was cumulative. Each new
+adapter made the next integration easier and helped turn scattered engineering fixes into a reusable
+compatibility layer.
+
+     The second capability was a modular data-production pipeline. AIRSPEED separated
+teleoperation interfaces, robot adapters, simulation connectors, data collection, data generation, and
+dataset construction into different parts of the platform. This separation mattered because customer
+scenarios rarely use the same hardware stack. A modular architecture allowed the team to change
+one part of the workflow without rebuilding the whole system.
+
+    The third capability was simulation-assisted data expansion. Real robot demonstrations
+remained the anchor, but they could be extended through simulation and data-derivation methods.
+                                                  5
+This was not intended to replace real data. Its purpose was to increase variation, test related scenarios,
+and reduce the marginal cost of producing additional training samples.
+
+    The fourth capability was dataset construction. AIRSPEED treated raw robot logs as unfinished
+material. Before such data can support model training, it must be cleaned, synchronized, labeled,
+formatted, checked, versioned, and made searchable. By building workflows around these steps,
+AIRSPEED moved beyond data capture and became a data-production platform.
+
+     The fifth capability was interface discipline. Because AIRSPEED was designed as an open-
+source platform, the team had to make interfaces understandable beyond the original developers.
+This required cleaner SDK boundaries, reference workflows, documentation, and dataset templates.
+In this sense, open source was not only a release strategy; it forced the project to make its
+engineering assumptions explicit.
+
+     By the end of incubation, AIRSPEED was no longer only a software prototype. The team had
+produced concrete components that could be used again: robot adapters, teleoperation interfaces,
+simulation connectors, timestamp-alignment tools, data-cleaning scripts, dataset templates, and
+reference workflows. This changed the nature of the project. Its value was no longer tied to one
+demonstration, one robot, or one dataset. It came from the fact that the same components could
+shorten the next integration cycle. The key output of incubation was therefore practical: AIRSPEED
+gave the team a way to connect a new device, collect interaction data, clean and synchronize the
+records, and convert them into a dataset without rebuilding the whole pipeline. Whether this
+repeatable workflow could support customers and commercialization is the question addressed in
+the next section.
+
+5. From Engineering Capability to Commercial Validation
+
+     The engineering work described in Section 4 did not automatically create a business case.
+AIRSPEED still had to show that these components solved problems customers faced repeatedly.
+The key question was not only whether the platform could connect robots, devices, simulators, and
+datasets, but whether it could reduce the time spent on repeated integration, data cleaning,
+synchronization, and format conversion. If a pilot project only produced a custom script, it remained
+a service project. If it produced a robot adapter, dataset template, deployment script, or quality-
+control workflow that could be reused in the next project, it strengthened the platform. In platform
+ecosystems, such reusable complements can increase the value of the core platform because external
+users and partners help extend its applicability across use cases [11].
+
+     The first question was whether the problem would appear again. AIRSPEED had to show that
+data production was not a one-time integration task. Each new robot, sensor setup, teleoperation
+device, simulator, or task could require new alignment, cleaning, conversion, and dataset-building
+work. This made the platform useful only if it could reduce the work needed for the next project,
+not just finish the current one.
+
+     The second question was what each pilot left behind. A pilot was valuable only when it
+                                                    6
+produced something that could be reused: a robot adapter, a teleoperation interface, a dataset
+template, a quality-checking script, or a deployment workflow. If the output was only a customer-
+specific script, the project moved AIRSPEED toward services. If the output became part of the
+common platform, the project made AIRSPEED stronger.
+
+      The third question was what should remain open and what customers would pay for. The open-
+source layer allowed users to inspect the code, test the interfaces, and decide whether AIRSPEED
+could fit their own robots and data workflows [9]. The commercial layer should focus on work that
+customers are less likely to handle alone: private deployment, integration with their own hardware,
+large-scale simulation runs, dataset management, technical support, and workflow customization
+[10].
+
+     The fourth question was what evidence could convince customers and partners. A vision for
+embodied AI data infrastructure was not enough. AIRSPEED needed working integrations, tested
+data workflows, pilot feedback, and examples showing that the same adapter, template, or cleaning
+process could be used again. These were stronger signals than a research demo because they showed
+that AIRSPEED could reduce repeated engineering work.
+
+     The core lesson is that a research prototype becomes commercially credible when it helps users
+avoid doing the same engineering work again and again. Section 4 showed what AIRSPEED built
+during incubation. This section explained why those components mattered outside the laboratory:
+they shortened repeated integration work, turned pilots into reusable modules, gave developers an
+open interface to test, and created service opportunities around deployment, data management, and
+technical support. At that point, AIRSPEED was no longer only a prototype. It became a practical
+workflow that other teams could use.
+
+
+
+6. Risk Mitigation: Keeping AIRSPEED Scalable and Defensible
+
+     AIRSPEED’s main risks come from execution. The project can fail not because the idea is
+wrong, but because it becomes too dependent on simulation, too customized for early customers, or
+too difficult for outside developers to adopt.
+
+     The first risk is over-reliance on simulation. AIRSPEED should treat real-world
+demonstrations as the calibration anchor and simulation as a controlled expansion tool. A
+simulation-generated dataset should be linked to real demonstrations, checked against real-robot
+execution when possible, and assigned a quality score before it is used for training. For high-
+precision manipulation, real data should remain the benchmark.
+
+     The second risk is becoming a customization service rather than a platform. Early customers
+will naturally ask for special adapters, special workflows, and special data formats. AIRSPEED
+should accept such work only when it strengthens the common platform. Each customer project
+should produce at least one reusable asset: a robot adapter, a device interface, a dataset template, a
+quality-control workflow, or a deployment script.
+                                                  7
+     The third risk is weak adoption. Open source can reduce this risk, but only if the platform is
+easy to inspect, test, and extend. AIRSPEED should therefore prioritize reference examples, clean
+SDK interfaces, documentation, and small reproducible workflows. Official standards may take
+time, so the practical objective is to let developers use AIRSPEED-compatible formats before
+formal standardization is complete.
+
+     The fourth risk is customer trust. Embodied AI data can include sensitive videos, task records,
+operator behavior, and proprietary robot information. AIRSPEED should therefore support private-
+cloud or on-premises deployment, role-based access control, audit logs, encrypted storage, and clear
+data-governance rules. The business model should not depend on taking ownership of customer data.
+
+      In short, AIRSPEED should keep real data as the source of truth, use simulation to scale
+carefully, use open source to spread interfaces, use standards to build legitimacy, and use paid pilots
+to test whether the platform solves repeatable customer problems.
+
+7. Summary: Success Factors and Forward Outlook
+
+     The AIRSPEED case shows that technology transfer in embodied AI is not simply a handoff
+from laboratory to company. The project had to show that the same data workflow could work across
+different robots, teleoperation devices, simulators, and task settings. AIRS played an important role
+by giving the team time to test adapters, debug data alignment, work with industrial users, and
+decide which parts of the system should be open source and which parts could support paid
+deployment.
+
+     The broader lesson is that deep-tech transfer should begin with a problem that users face more
+than once. AIRSPEED was valuable because teams repeatedly faced the same practical work:
+connecting new hardware, synchronizing sensor streams, converting control records, cleaning robot
+logs, and preparing datasets for training. Other technology-transfer projects can ask a similar
+question: does the research output help many users avoid rebuilding the same toolchain?
+
+     Looking forward, AIRSPEED’s challenge is to prove that it can support more projects without
+becoming a custom-service company [8]. This will depend on practical progress: adding more robot
+adapters, improving multimodal synchronization, making dataset construction easier to inspect,
+supporting private deployment, and turning repeated customer requests into standard software
+modules. If AIRSPEED can do this, its importance will go beyond one platform. It will offer a
+concrete example of how a research institute can turn open-source AI infrastructure into an industrial
+tool while keeping the system open enough for developers to adopt.
+
+References
+1. Fan, W. and Liu, S., 2025. Putting the smarts into robot bodies. Communications of the ACM,
+68(3), pp.6-8.
+2. Wu, S., Yu, B., Liu, S. and Zhu, Y., 2025. Autonomy 2.0: The quest for economies of scale.
+                                                  8
+Communications of the ACM, 68(4), pp.28-32.
+3. Xia, X., Tong, X., Yu, B., Jiao, J., Ding, X., He, X., Zhou, H., Tong, H., Lin, Y., Shen, T. and
+Ding, N., 2026. AIRSPEED: An Open-source Data Production Platform for Embodied Artificial
+Intelligence. ACM Transactions on Cyber-Physical Systems.
+4. Shenzhen Institute of Artificial Intelligence and Robotics for Society, “AIRSPEED: An open-
+source universal data production platform for embodied artificial intelligence.” Accessed: May 20,
+2026. [Online]. Available: https://airs.cuhk.edu.cn/en/airspeed
+5. S. Liu, “Establishing standards for embodied AI,” Communications of the ACM, Jul. 2024.
+Accessed: May 20, 2026. [Online]. Available: https://cacm.acm.org/blogcacm/establishing-
+standards-for-embodied-ai/
+6. S. Liu, “The value of data in embodied artificial intelligence,” Communications of the ACM,
+Apr. 16, 2024. Accessed: May 20, 2026. [Online]. Available: https://cacm.acm.org/blogcacm/the-
+value-of-data-in-embodied-artificial-intelligence/
+7. M. R. Huson, “Technology Transfer: The Rise of the Entrepreneurial University,” The School
+of Public Policy Publications, University of Calgary, 2024.
+8. S. A. Gbadegeshin et al., “Overcoming the Valley of Death: A New Model for High
+Technology Startups,” Sustainable Futures, vol. 4, 2022.
+9. M. J. Karels, “Commercializing Open Source Software,” ACM Queue, vol. 1, no. 5, 2003.
+10. T. Bailetti, “How Open Source Strengthens Business Models,” Technology Innovation
+Management Review, 2009.
+11. M. Ceccagnoli, C. Forman, P. Huang, and D. J. Wu, “Cocreation of Value in a Platform
+Ecosystem: The Case of Enterprise Software,” MIS Quarterly, vol. 36, no. 1, pp. 263–290, 2012.
+
+
+Biography
+
+Tiantian Zhang is currently a Senior Supervisor at the Embodied AI Center, Shenzhen Institute of
+Artificial Intelligence and Robotics. Her research has long focused on the practical integration of
+embodied AI algorithms with data engineering. She led the technology transfer of the AIRSPEED
+Embodied AI Data Production Platform and holds relevant patents in the fields of robotics and artificial
+intelligence.
+Dr. Shaoshan Liu is Director of Embodied AI at Shenzhen Institute of Artificial Intelligence and Robotics
+for Society. He is the founder of the IEEE Special Technical Community on Autonomous Driving
+Technologies, an IEEE Senior Member, an IEEE Distinguished Speaker, and an ACM Distinguished
+Speaker. Dr. Liu holds a M.S. in Biomedical Engineering, a Ph.D. in Computer Engineering from the
+University of California, Irvine and a Master of Public Administration (M.P.A.) from Harvard University.
+
+
+
+                                                   9
+

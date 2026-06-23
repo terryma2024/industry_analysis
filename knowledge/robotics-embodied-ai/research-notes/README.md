@@ -7,6 +7,7 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
+last_updated: 2026-06-23
 ---
 
 # 机器人（具身智能） - 研究中间笔记
@@ -44,3 +45,7 @@ aliases:
 
 - [[libero-lifelong-robot-learning-platform-2026-06-11]]: LIBERO 终身学习仿真/评测平台调研，拆解任务套件、数据、baseline、平台工程价值、局限和 2025-2026 年鲁棒性批评。
 - [[open-embodied-ai-datasets-comparison-2026-06-11]]: 开源具身智能训练与评估数据集横向调研，按预训练、真实微调、特定能力和仿真 benchmark 比较格式、任务完整度与模型适配。
+
+## 2026-06-23 数据生产平台
+
+- [[airspeed-data-production-platform-2026-06-23]]: AIRSPEED 具身智能数据生产平台调研，区分当前 GitHub v1.3 开源采集核心、论文/官网三服务架构和技术转移报告中的商业化叙事。

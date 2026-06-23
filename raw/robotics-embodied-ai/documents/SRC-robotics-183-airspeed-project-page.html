@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="AIRSPEED: An Open-source Universal Data Production Platform for Embodied Artificial Intelligence" />
+<meta name="keywords" content="AIRS, Artificial intelligence, AI, Robot, Robotics, Machine learning, Collective cooperation, Human-machine collaboration, Crowd intelligence, Computer vision, Cloud computing, Special robots, Intelligent robots, Surgical robots, Healthcare robotics, Micro-Nanorobotics, Nanorobot" />
+<link rel="canonical" href="http://airs.cuhk.edu.cn/en/airspeed" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/custom/cuhk_ui/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="http://airs.cuhk.edu.cn/en/airspeed" />
+<link rel="canonical" href="http://airs.cuhk.edu.cn/en/airspeed" />
+<link rel="shortlink" href="http://airs.cuhk.edu.cn/en/node/1227" />
+
+    <title>AIRSPEED | 深圳市人工智能与机器人研究院</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_M8MiLL1t6qIbXsP_u2Vf-MxX6HpMFtrsljEYomDrUf8.css?delta=0&amp;language=en&amp;theme=cuhk_ui&amp;include=eJyFkWFuwyAMhS-Ulabddh3LCe5wBzgDkyo9_VjWTpVGtj8G-3s8IT_MmRQ4nmlUSWbMeTcwivKC8S077vC3YERP0WKCfg_7tiBJyeShf_5P8NIWnJi8hUHs0qKOksARDi3mOSv0h7btN_yDvcKxxSY3qcCGaUJlgayLpxbeBIqDp-13F4pXV0OopYYh3X3r5n7ZqaNAnV0izwiFjU1lQv8wCIFieegxckCl7vxRKC11AirilSdzO7uxuPcv5VDY25_uZjwzXbJZ6y6ILfXfM1sSoDCQhTUzkyhPEjPP9LTCLpBlNCf2SqkGP9VlxU9LdPN9" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_cgYuq-j66E0ZUAPgy9H6zhLvlPHngUWx4Cnda0GF0jQ.css?delta=1&amp;language=en&amp;theme=cuhk_ui&amp;include=eJyFkWFuwyAMhS-Ulabddh3LCe5wBzgDkyo9_VjWTpVGtj8G-3s8IT_MmRQ4nmlUSWbMeTcwivKC8S077vC3YERP0WKCfg_7tiBJyeShf_5P8NIWnJi8hUHs0qKOksARDi3mOSv0h7btN_yDvcKxxSY3qcCGaUJlgayLpxbeBIqDp-13F4pXV0OopYYh3X3r5n7ZqaNAnV0izwiFjU1lQv8wCIFieegxckCl7vxRKC11AirilSdzO7uxuPcv5VDY25_uZjwzXbJZ6y6ILfXfM1sSoDCQhTUzkyhPEjPP9LTCLpBlNCf2SqkGP9VlxU9LdPN9" />
+<link rel="stylesheet" media="all" href="/themes/custom/dyniva_ui/css/ie.css?tewqia" />
+<link rel="stylesheet" media="all" href="/themes/custom/dyniva_ui/css/main.css?tewqia" />
+<link rel="stylesheet" media="all" href="/themes/custom/dyniva_ui/css/fonts.css?tewqia" />
+<link rel="stylesheet" media="all" href="/themes/custom/dyniva_ui/css/animate.css?tewqia" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_7n3MoDl7BXWjStZlUeFe1CmD7N336_Fi8rt4Sz6875U.css?delta=6&amp;language=en&amp;theme=cuhk_ui&amp;include=eJyFkWFuwyAMhS-Ulabddh3LCe5wBzgDkyo9_VjWTpVGtj8G-3s8IT_MmRQ4nmlUSWbMeTcwivKC8S077vC3YERP0WKCfg_7tiBJyeShf_5P8NIWnJi8hUHs0qKOksARDi3mOSv0h7btN_yDvcKxxSY3qcCGaUJlgayLpxbeBIqDp-13F4pXV0OopYYh3X3r5n7ZqaNAnV0izwiFjU1lQv8wCIFieegxckCl7vxRKC11AirilSdzO7uxuPcv5VDY25_uZjwzXbJZ6y6ILfXfM1sSoDCQhTUzkyhPEjPP9LTCLpBlNCf2SqkGP9VlxU9LdPN9" />
+<link rel="stylesheet" media="all" href="/themes/custom/cuhk_ui/css/icons.css?tewqia" />
+<link rel="stylesheet" media="all" href="/themes/custom/cuhk_ui/css/fonts.css?tewqia" />
+<link rel="stylesheet" media="all" href="/themes/custom/cuhk_ui/css/misc.css?tewqia" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_m5k6cK7qo2qMAE0PQ3bnojHuWLDWtu5bYFdAheg3Z9g.css?delta=10&amp;language=en&amp;theme=cuhk_ui&amp;include=eJyFkWFuwyAMhS-Ulabddh3LCe5wBzgDkyo9_VjWTpVGtj8G-3s8IT_MmRQ4nmlUSWbMeTcwivKC8S077vC3YERP0WKCfg_7tiBJyeShf_5P8NIWnJi8hUHs0qKOksARDi3mOSv0h7btN_yDvcKxxSY3qcCGaUJlgayLpxbeBIqDp-13F4pXV0OopYYh3X3r5n7ZqaNAnV0izwiFjU1lQv8wCIFieegxckCl7vxRKC11AirilSdzO7uxuPcv5VDY25_uZjwzXbJZ6y6ILfXfM1sSoDCQhTUzkyhPEjPP9LTCLpBlNCf2SqkGP9VlxU9LdPN9" />
+
+    <script src="/sites/default/files/js/js_JXFg9WMCUWwkyAOyGJGRO54iDN060sB8fYKZapT-E_c.js?scope=header&amp;delta=0&amp;language=en&amp;theme=cuhk_ui&amp;include=eJxdUUFywjAM_BAh9BE99FzuGcVWE4EjeSwZCK9vWgpROj7tzq6lXYEqWkd8wmBS2pPue6BYOxMeTrSLM9MFukptXylFh2OpGZIXiJhagbw36DdCyVGu7ChNFM5bHLE4YpqQq8NXmLMQmzoOmCYwdEyC-6x0R6_KRQYukvymX3T7ePfTMBI4jClRVvLf9HoUSUbZcYMcl5e3OabP8Dst1PG81vZEf6U94RJgWLZ9wh-7bu2hqsmkmJbzvMhHOy8XWjMiDeMq6AvwOhQ4jFKajemyFC4NVJOcYG4KZqCyy6B6lRI75FDmbO1_4uEPwoZsrRoYqVFYI4wIyyW7t0N3-AYz3-t2"></script>
+<script src="/sites/default/files/asset_injector/js/baidu_tongji-8cb9b8837c9b064af8d128e4a2d59d17.js?tewqia"></script>
+
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+      <meta name="renderer" content="webkit">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+  </head>
+  <body class="workspace-live page-node page-node-type-basic-page">
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="page" id="page">
+
+    
+  
+  
+  
+    
+              
+              
+        <div class="hero-slider">
+          
+  <div id="block-zhucaidanheader100" data-block-plugin-id="block_content:92d30ac1-4ad0-4ba5-a487-e2b0e9267b09" class="block">
+
+  
+    
+
+            <div class="entity-widget-menu_10_0 entity-widget-entity-type-block_content">
+
+<div class="header-10-0 header-3-1 header-wrapper sticky-header ">
+  <div class="sticky-wrapper clearfix position-relative flex flex-nowrap">
+    <div class="header-container py-20 flex-grow flex-shrink">
+      <div class="search-mobile-form inside-min hidden border-bottom">
+        <form action="/en/search">
+          <button type="submit" class="btn btn-base btn-radius f-r outside-min-l">
+            SEARCH
+          </button>
+          <div class="search-input overflow-hidden">
+            <input type="text" name="keywords" class="form-text form-element-full form-element-radius"
+                   placeholder="Input keywords"/>
+          </div>
+        </form>
+      </div>
+      <div class="hidden-md hidden-lg f-l outside-min-l menu-mobile-toggle">
+        <a href="javascript:void(0)"><i class="icon icon-plus"></i> </a>
+      </div>
+      <div class="hidden-md hidden-lg f-r outside-min-r search-mobile-toggle">
+        <a href="javascript:void(0)"> <i class="icon icon-search"></i> </a>
+      </div>
+      <div class="header-logo">
+        <a href="http://airs.cuhk.edu.cn/en">
+          <img src="/sites/default/files/styles/crop_freeform/public/2021-11/logo-airs--black%20%281%29.png?itok=Nmul0XVu" alt="">
+        </a>
+      </div>
+      <div class="second-menu hidden md|flex justify-end items-center">
+        
+  <div class="language-switcher-language-url block" id="block-languageswitcher" role="navigation" data-block-plugin-id="language_block:language_interface">
+
+  
+    
+
+            
+
+<div class="dropdown">        <i class="icon icon-earth"></i>
+        <a href="/" class="language-link zh-hans" hreflang="zh-hans" data-drupal-link-system-path="&lt;front&gt;">简体中文</a>
+        </div>
+      
+  </div>
+
+        <div class="search d_ib">
+          <a class="outside-min-lr uppercase" href="javascript:void(0);">
+            <i class="icon icon-search"></i>
+          </a>
+          <div class="search-form clearfix bg-lighter">
+            <i class="icon icon-close"></i>
+            <form action="/en/search" class="t-c">
+              <label>
+                <input type="text" name="keywords" class=" form-text form-element-radius" placeholder="Input keywords"/>
+                <button class="btn btn-base btn-radius" type="submit">SEARCH</button>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+            <ul class="menu menu-desktop w-full hidden md|display-block xl|text-right">
+                <li class="menu-item d_ib ">
+                    <a href="/en/about">About AIRS<i class="icon icon-down"></i></a>
+                              <div class="sub-menu-container">
+            <ul class="sub-menu t-c inside-tb">
+                            <li class="menu-item d_ib t-l ">
+                                  <a href="/en/about">
+                    About AIRS
+                  </a>
+                              </li>
+                            <li class="menu-item d_ib t-l ">
+                                  <a href="/en/contact">
+                    Contact Us
+                  </a>
+                              </li>
+                          </ul>
+          </div>
+                  </li>
+                <li class="menu-item d_ib ">
+                    <a href="/en/team">Team</a>
+                            </li>
+                <li class="menu-item d_ib ">
+                    <a href="/en/research">Research<i class="icon icon-down"></i></a>
+                              <div class="sub-menu-container">
+            <ul class="sub-menu t-c inside-tb">
+                            <li class="menu-item d_ib t-l ">
+                                  <a href="/en/research">
+                    Scientific Research
+                  </a>
+                              </li>
+                            <li class="menu-item d_ib t-l ">
+                                  <a href="/en/publications">
+                    Publications
+                  </a>
+                              </li>
+                          </ul>
+          </div>
+                  </li>
+                <li class="menu-item d_ib ">
+                    <a href="https://airs-academy.cuhk.edu.cn/">AIRS学院</a>
+                            </li>
+                <li class="menu-item d_ib ">
+                    <a href="/en/node/944">Industry and Partnerships<i class="icon icon-down"></i></a>
+                              <div class="sub-menu-container">
+            <ul class="sub-menu t-c inside-tb">
+                            <li class="menu-item d_ib t-l ">
+                                  <a href="/en/node/944">
+                    Partners
+                  </a>
+                              </li>
+                          </ul>
+          </div>
+                  </li>
+                <li class="menu-item d_ib ">
+                    <a href="/en/news">News &amp; Events<i class="icon icon-down"></i></a>
+                              <div class="sub-menu-container">
+            <ul class="sub-menu t-c inside-tb">
+                            <li class="menu-item d_ib t-l ">
+                                  <a href="/en/news">
+                    News
+                  </a>
+                              </li>
+                            <li class="menu-item d_ib t-l ">
+                                  <a href="/en/in-the-media">
+                    In the Media
+                  </a>
+                              </li>
+                            <li class="menu-item d_ib t-l ">
+                                  <a href="/en/events">
+                    Events
+                  </a>
+                              </li>
+                          </ul>
+          </div>
+                  </li>
+                <li class="menu-item d_ib ">
+                    <a href="https://airs.zhiye.com/">Join Us</a>
+                            </li>
+                <li class="menu-item d_ib ">
+                    <a href="/en/node/1226">灵巧手大赛</a>
+                            </li>
+              </ul>
+            <div class="menu-mobile hidden-lg hidden-md">
+                <ul class="menu t-c">
+                    <li class="menu-item ">
+                        <i class="icon icon-plus f-r"></i>
+                                    <a href="/en/about">About AIRS</a>
+                                    <div class="sub-menu-container menu-child">
+              <ul class="sub-menu">
+                                <li class="menu-item ">
+                                      <a href="/en/about">About AIRS</a>
+                                  </li>
+                                <li class="menu-item ">
+                                      <a href="/en/contact">Contact Us</a>
+                                  </li>
+                              </ul>
+            </div>
+                      </li>
+                    <li class="menu-item ">
+                                    <a href="/en/team">Team</a>
+                                  </li>
+                    <li class="menu-item ">
+                        <i class="icon icon-plus f-r"></i>
+                                    <a href="/en/research">Research</a>
+                                    <div class="sub-menu-container menu-child">
+              <ul class="sub-menu">
+                                <li class="menu-item ">
+                                      <a href="/en/research">Scientific Research</a>
+                                  </li>
+                                <li class="menu-item ">
+                                      <a href="/en/publications">Publications</a>
+                                  </li>
+                              </ul>
+            </div>
+                      </li>
+                    <li class="menu-item ">
+                                    <a href="https://airs-academy.cuhk.edu.cn/">AIRS学院</a>
+                                  </li>
+                    <li class="menu-item ">
+                        <i class="icon icon-plus f-r"></i>
+                                    <a href="/en/node/944">Industry and Partnerships</a>
+                                    <div class="sub-menu-container menu-child">
+              <ul class="sub-menu">
+                                <li class="menu-item ">
+                                      <a href="/en/node/944">Partners</a>
+                                  </li>
+                              </ul>
+            </div>
+                      </li>
+                    <li class="menu-item ">
+                        <i class="icon icon-plus f-r"></i>
+                                    <a href="/en/news">News &amp; Events</a>
+                                    <div class="sub-menu-container menu-child">
+              <ul class="sub-menu">
+                                <li class="menu-item ">
+                                      <a href="/en/news">News</a>
+                                  </li>
+                                <li class="menu-item ">
+                                      <a href="/en/in-the-media">In the Media</a>
+                                  </li>
+                                <li class="menu-item ">
+                                      <a href="/en/events">Events</a>
+                                  </li>
+                              </ul>
+            </div>
+                      </li>
+                    <li class="menu-item ">
+                                    <a href="https://airs.zhiye.com/">Join Us</a>
+                                  </li>
+                    <li class="menu-item ">
+                                    <a href="/en/node/1226">灵巧手大赛</a>
+                                  </li>
+                  </ul>
+                <div class="spacer-sm"></div>
+
+        <div class="back-to-home outside-min-b">
+          <a class="" href="">
+            <i class="icon icon-home"></i>           </a>
+        </div>
+
+        
+  <div class="language-switcher-language-url block" id="block-languageswitcher" role="navigation" data-block-plugin-id="language_block:language_interface">
+
+  
+    
+
+            
+
+<div class="dropdown">        <i class="icon icon-earth"></i>
+        <a href="/" class="language-link zh-hans" hreflang="zh-hans" data-drupal-link-system-path="&lt;front&gt;">简体中文</a>
+        </div>
+      
+  </div>
+
+        <div class="spacer-md"></div>
+      </div>
+    </div>
+
+    <div class="menu-desktop-all--open corsor-pointer hidden-xs hidden-sm">
+      <img src="/themes/custom/cuhk_ui/templates/ui/images/AIRS/header-10-0--menu-open.png" alt="">
+    </div>
+
+    <div class="menu-desktop-all hidden-xs hidden-sm">
+      <div class="menu-container flex items-start"
+        data-toggle="bgImage"
+        data-image-url="/sites/default/files/styles/crop_freeform/public/2021-11/header-10-0--0.png?itok=7shcLku3"
+      >
+        <div class="w-full flex flex-nowrap items-stretch">
+          <div class="flex flex-grow justify-between items-center px-30 py-20">
+            <div class="header-logo">
+              <a href="http://airs.cuhk.edu.cn/en">
+                <img src="/sites/default/files/styles/crop_freeform/public/2021-11/logo%E5%85%A8%E7%99%BD_0.png?itok=9pZ2l6rf" alt="">
+              </a>
+            </div>
+            <div class="second-menu flex items-center">
+              
+  <div class="language-switcher-language-url block" id="block-languageswitcher" role="navigation" data-block-plugin-id="language_block:language_interface">
+
+  
+    
+
+            
+
+<div class="dropdown">        <i class="icon icon-earth"></i>
+        <a href="/" class="language-link zh-hans" hreflang="zh-hans" data-drupal-link-system-path="&lt;front&gt;">简体中文</a>
+        </div>
+      
+  </div>
+
+              <div class="search d_ib">
+                <a class="outside-min-lr uppercase" href="javascript:void(0);">
+                  <i class="icon icon-search"></i>
+                </a>
+                <div class="search-form clearfix bg-lighter">
+                  <i class="icon icon-close"></i>
+                  <form action="/en/search" class="t-c">
+                    <label>
+                      <input type="text" name="keywords" class=" form-text form-element-radius" placeholder="Input keywords"/>
+                      <button class="btn btn-base btn-radius" type="submit">SEARCH</button>
+                    </label>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-desktop-all--close corsor-pointer">
+            <img src="/themes/custom/cuhk_ui/templates/ui/images/AIRS/header-10-0--menu-close.png" alt="">
+          </div>
+        </div>
+                <ul class="menu hidden-xs hidden-sm w-full flex flex-nowrap justify-center">
+                    <li class="menu-item px-30 ">
+                        <a class="h3" href="/en/about">About AIRS</a>
+                                    <div class="sub-menu-container mt-20">
+              <ul class="sub-menu inside-tb">
+                                <li class="menu-item py-10 ">
+                                      <a class="h4" href="/en/about">About AIRS</a>
+                                  </li>
+                                <li class="menu-item py-10 ">
+                                      <a class="h4" href="/en/contact">Contact Us</a>
+                                  </li>
+                              </ul>
+            </div>
+                      </li>
+                    <li class="menu-item px-30 ">
+                        <a class="h3" href="/en/team">Team</a>
+                                  </li>
+                    <li class="menu-item px-30 ">
+                        <a class="h3" href="/en/research">Research</a>
+                                    <div class="sub-menu-container mt-20">
+              <ul class="sub-menu inside-tb">
+                                <li class="menu-item py-10 ">
+                                      <a class="h4" href="/en/research">Scientific Research</a>
+                                  </li>
+                                <li class="menu-item py-10 ">
+                                      <a class="h4" href="/en/publications">Publications</a>
+                                  </li>
+                              </ul>
+            </div>
+                      </li>
+                    <li class="menu-item px-30 ">
+                        <a class="h3" href="https://airs-academy.cuhk.edu.cn/">AIRS学院</a>
+                                  </li>
+                    <li class="menu-item px-30 ">
+                        <a class="h3" href="/en/node/944">Industry and Partnerships</a>
+                                    <div class="sub-menu-container mt-20">
+              <ul class="sub-menu inside-tb">
+                                <li class="menu-item py-10 ">
+                                      <a class="h4" href="/en/node/944">Partners</a>
+                                  </li>
+                              </ul>
+            </div>
+                      </li>
+                    <li class="menu-item px-30 ">
+                        <a class="h3" href="/en/news">News &amp; Events</a>
+                                    <div class="sub-menu-container mt-20">
+              <ul class="sub-menu inside-tb">
+                                <li class="menu-item py-10 ">
+                                      <a class="h4" href="/en/news">News</a>
+                                  </li>
+                                <li class="menu-item py-10 ">
+                                      <a class="h4" href="/en/in-the-media">In the Media</a>
+                                  </li>
+                                <li class="menu-item py-10 ">
+                                      <a class="h4" href="/en/events">Events</a>
+                                  </li>
+                              </ul>
+            </div>
+                      </li>
+                    <li class="menu-item px-30 ">
+                        <a class="h3" href="https://airs.zhiye.com/">Join Us</a>
+                                  </li>
+                    <li class="menu-item px-30 ">
+                        <a class="h3" href="/en/node/1226">灵巧手大赛</a>
+                                  </li>
+                  </ul>
+              </div>
+    </div>
+  </div>
+</div>
+</div>
+      
+  </div>
+
+  
+  </div>
+    
+      <div id="main" class="main" role="main">
+
+    
+                      <div data-drupal-messages-fallback class="hidden"></div>
+
+  
+        
+        
+        
+                      
+  <div id="block-cuhk-ui-breadcrumbs" data-block-plugin-id="system_breadcrumb_block" class="block">
+
+  
+    
+
+              <nav role="navigation" aria-labelledby="system-breadcrumb" class="breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ul class="list list-none flex list-breadcrumb">
+                        <li class="mb-0">
+                
+                  <a href="/en">Home</a>
+                </li>
+                        <li class="space mb-0"><i class="icon icon-right"></i></li>
+          <li class="mb-0">
+                
+                  AIRSPEED
+                </li>
+          </ul>
+  </nav>
+
+      
+  </div>
+
+  
+        
+    
+                
+                
+                                <div class="" role="content" id="content">
+                
+<div id="block-cuhk-ui-content" data-block-plugin-id="system_main_block" class="block block-system">
+  
+    
+    	  		<article class="node node--type-basic_page node--view-mode-full clearfix">
+  
+    
+
+  <div>
+      <div class="header">
+    <div class="block-region-top">
+  <div class="views-element-container block" data-block-plugin-id="views_block:component_hero_3_2-block_1">
+
+  
+    
+
+            <div><div class="js-view-dom-id-b15e976f1be2273b354bc920c11258135da98762107990c239bd8ed4b41a3041">
+  
+  
+  
+
+  
+  
+  
+
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="hero-3-2">
+
+  <div class="hero-media">
+    <div class="media bg-center position-relative" data-toggle="bgImage" data-image-url="/sites/default/files/2025-01/%E9%A1%B6%E9%83%A8banner1920-360.png">
+    </div>
+  </div>
+  <div class="fill-full-width" data-150-top="background-color:rgba(0,0,0,0.2);" data-top-bottom="background-color:rgba(0,0,0,0);">
+    <div class="hero-body">
+      <div class="hero-title inner">
+        <h1>AIRSPEED</h1>
+      </div>
+    </div>
+  </div>
+
+</div></span></div>
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+      
+  </div>
+
+  <div data-block-plugin-id="block_content:3807f74d-f952-49f6-8dc1-963d554acd50" class="block">
+
+  
+    
+
+            <div class="entity-widget-basic_block entity-widget-entity-type-block_content"><div class="spacer-md">&nbsp; &nbsp;&nbsp;</div>
+</div>
+      
+  </div>
+</div>
+  </div>
+  <div class="content inner">
+    <div class="block-region-content">
+  <div data-block-plugin-id="entity_field:node:body" class="block">
+
+  
+    
+
+            
+            <div class="field field-body field-type-text-with-summary field-label-hidden field-item"><p class="text-align-center"><span style="font-size:20px;"><strong>AIRSPEED: An Open-source Universal Data Production Platform for Embodied Artificial Intelligence</strong></span></p><img src="/sites/default/files/inline-images/AIRSPEED_logo.png" data-entity-uuid="f3ba62c5-ca2e-4e3e-94b2-9510b8abd004" data-entity-type="file" alt width="340" height="340" loading="lazy" class="align-center"><p class="MsoNormal"><span lang="EN-US">Welcome to AIRSPEED Project page! AIRSPEED is an open-source universal data production platform for embodied artificial intelligence, including data collection, data generation, and dataset construction.</span></p><p class="MsoNormal"><span lang="EN-US"><strong>Source Code of AIRSPEED is available here:</strong> </span><a href="https://github.com/airs-cuhk/airspeed"><span lang="EN-US">https://github.com/airs-cuhk/airspeed</span></a></p><p class="MsoNormal" align="left"><span lang="EN-US"><strong>Our technical report is available here: </strong></span><a href="/sites/default/files/2025-10/AIRSPEED_arxiv.pdf">https://airs.cuhk.edu.cn/sites/default/files/2025-10/AIRSPEED_arxiv.pdf</a></p><p class="MsoNormal" align="left"><span lang="EN-US"><strong>Our survey of EAI data engineering is available here: </strong></span><a href="/sites/default/files/2025-06/Survey_Arxiv.pdf"><span lang="EN-US">https://airs.cuhk.edu.cn/sites/default/files/2025-06/Survey_Arxiv.pdf</span></a></p><p class="MsoNormal" align="left"><strong>Technology Transfer Report:</strong> <a href="/sites/default/files/2026-05/TechnologyTransferofOpen-SourceDataInfrastructureforEmbodiedAITheAIRSPEEDCase.pdf">https://airs.cuhk.edu.cn/sites/default/files/2026-05/TechnologyTransferofOpen-SourceDataInfrastructureforEmbodiedAITheAIRSPEEDCase.pdf</a></p><p class="MsoNormal" align="left"><strong>技术转移报告：</strong><a href="/sites/default/files/2026-05/TechnologyTransferofOpen-SourceDataInfrastructureforEmbodiedAITheAIRSPEEDCase-CN.pdf">https://airs.cuhk.edu.cn/sites/default/files/2026-05/TechnologyTransferofOpen-SourceDataInfrastructureforEmbodiedAITheAIRSPEEDCase-CN.pdf</a></p><div class="align-center">
+  
+  
+            <div class="field field-field-media-video-embed-field field-type-video-embed-field field-label-hidden field-item"><div class="video-embed-field-provider-panopto video-embed-field-responsive-video"><iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" src="//video.cuhk.edu.cn/Panopto/Pages/Embed.aspx?id=5edbb517-a15b-42d0-9595-b27c0033f7f9&amp;v=1&amp;autoplay=true"></iframe>
+</div>
+</div>
+      
+            <div class="field field-name field-type-string field-label-hidden field-item">Demo of AIRSPEED</div>
+      
+</div>
+<p>&nbsp;</p><ol><li><p class="text-align-justify"><span style="tab-stops:15.6pt;">Introduction</span></p></li></ol><p class="text-align-justify" style="text-indent:21em;">Data acquisition is widely recognized as one of the key focuses in the development of embodied intelligence today. A critical reason is that Scaling Laws are still considered effective in the field of embodied intelligence, which is reflected in data as the better the performance of the model, the higher the demand for training data. However, data acquisition encounters difficulties in practice, including</p><ul><li value="50"><p class="text-align-justify">The high cost of collecting a large amount of high-quality human demonstration and robot perception data is difficult to bear.</p></li><li value="50"><p class="text-align-justify">It is difficult to collect data under a rich variety of training scenarios, tasks, and robot model categories.</p></li><li value="50"><p class="text-align-justify">In the process of data collection, there are no corresponding standards or theories to guide whether the collected data has improved the quality of the dataset, whether it has increased the richness of the dataset, and by how much.<br>To address the above issues, we propose the open-source embodied intelligence data production platform AIRSPEED. AIRSPEED has the following features:</p></li><li value="50"><p class="text-align-justify">Hardware-software decoupling - Reduces software costs through an open-source platform, helping to collect high-quality data at a low cost.</p></li><li value="50"><p class="text-align-justify">Multiple devices supporting - Supports a variety of data acquisition technologies to ensure a rich variety of scenarios/tasks/models, helping to comprehensively obtain highly generalized data.</p></li><li value="50"><p class="text-align-justify">Multiple simulation platform docking - Assists in quickly producing a large amount of data with synthetic samples.</p></li><li value="50"><p class="text-align-justify">Dataset automatic construction - Provides a method for constructing embodied intelligence datasets and offers a qualitative assessment method for the performance potential of the dataset.</p></li></ul><ol start="2"><li><p class="text-align-justify"><span style="tab-stops:15.6pt;">Architecture</span></p></li></ol><p class="text-align-justify" style="text-indent:21em;">AIRSPEED consists of three major services: Data Collection Service, Data Generation Service, and Dataset Construction Service.</p><img src="/sites/default/files/inline-images/f1.png" data-entity-uuid="03910bd7-044e-45d6-9c14-dfcfa98f1329" data-entity-type="file" alt width="829" height="829" loading="lazy" class="align-center"><ul><li value="50"><p class="text-align-justify">Data Collection Service is used for collecting data from the real world. It supports various real-world data collection technologies and strives to achieve the best compromise between data latency, data transmission bandwidth, data quality, and computing resources.</p></li><li value="50"><p class="text-align-justify">Data Generation Service is used for generating data from simulation environments. It supports various simulation environment data generation technologies and can perform spatial, temporal, and unit alignment on the data.</p></li><li value="50"><p class="text-align-justify">Dataset Construction Service is used for automated dataset construction. It can categorize model data, task data, scene data, and execution data into a pyramid structure and provide a qualitative assessment of the dataset's performance potential.</p></li></ul><ol start="3"><li><p class="text-align-justify"><span style="tab-stops:15.6pt;">Support List</span></p></li></ol><p class="text-align-justify" style="text-indent:21em;">As shown in the figure, AIRSPEED supports the following data acquisition technologies, data generation technologies, and dataset type constructions:</p><img src="/sites/default/files/inline-images/f2.png" data-entity-uuid="03cf2353-17dc-486c-8daf-45bc8ae15954" data-entity-type="file" alt width="1398" height="650" loading="lazy" class="align-center"><p class="text-align-justify" style="text-indent:21em;">For more detailed content, please watch the open source release speech video at AIRS2024 conference.</p><div class="align-center">
+  
+  
+            <div class="field field-field-media-video-embed-field field-type-video-embed-field field-label-hidden field-item"><div class="video-embed-field-provider-panopto video-embed-field-responsive-video"><iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" src="//video.cuhk.edu.cn/Panopto/Pages/Embed.aspx?id=c4c7ef69-1b31-4529-9bd9-b25a00657492&amp;v=1&amp;autoplay=true"></iframe>
+</div>
+</div>
+      
+            <div class="field field-name field-type-string field-label-hidden field-item">AIRSPEED演讲</div>
+      
+</div>
+</div>
+      
+      
+  </div>
+
+  <div class="views-element-container block" data-block-plugin-id="views_block:front_content-block_article_document">
+
+  
+    
+
+            <div><div class="list-8-0 js-view-dom-id-e7dc4e46b38f6cfd33197a9988ab195b2143211c6cded0cec74dd3664f4b852e">
+  
+  
+  
+
+  
+  
+  
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+      
+  </div>
+
+  <div class="views-element-container block" data-block-plugin-id="views_block:front_content-block_article_images">
+
+  
+    
+
+            <div><div class="photo-wall-1-0 row js-view-dom-id-e488ad424c97961ad3b45e1e720aa26f9e5ac7732425a30928023c8e563132c9">
+  
+  
+  
+
+  
+  
+  
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+      
+  </div>
+
+  <div data-block-plugin-id="block_content:6ece70bb-aa64-4d0b-8b63-2673ef572521" class="block">
+
+  
+    
+
+            <div class="entity-widget-showcase_15_0 entity-widget-entity-type-block_content"><div class="spacer-md"></div><div class="showcase-15-0 ">
+  <div class="inner">
+          <div class="showcase-header">
+      <div class="title-1-0 t-c">
+        <h2>Contributors</h2>
+      </div>
+    </div>
+    <div class="spacer-md"></div>
+        <div class="showcase-body aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+      <div class="list-6-0">
+        <div class="list-body row">
+                                  <div class="list-item col-xs-12 col-sm-6 col-md-4">
+              <div class="list-content">
+                <div class="list-media">
+                  <div class="list-img" data-toggle="bgImage" data-image-url="/sites/default/files/styles/crop_freeform/public/2024-05/%E5%88%98%E5%B0%91%E5%B1%B1.jpg?itok=xZkXMpoc"></div>
+                </div>
+                <div class="list-text">
+                  <div class="list-title text-primary">
+                      Dr. Shaoshan Liu
+                  </div>
+                  <div class="list-des">
+                      Director of Embodied AI Center, AIRS
+                  </div>
+                  <div class="list-des">
+                      System Architecture Design and Roadmap</div>
+                </div>
+              </div>
+            </div>
+                        <div class="list-item col-xs-12 col-sm-6 col-md-4">
+              <div class="list-content">
+                <div class="list-media">
+                  <div class="list-img" data-toggle="bgImage" data-image-url="/sites/default/files/styles/crop_freeform/public/2025-01/xiaxuan.jpg?itok=3IERNhbj"></div>
+                </div>
+                <div class="list-text">
+                  <div class="list-title text-primary">
+                      Dr. Xuan Xia
+                  </div>
+                  <div class="list-des">
+                      Researcher at Embodied AI Center, AIRS
+                  </div>
+                  <div class="list-des">
+                      System Design and The Project Leader</div>
+                </div>
+              </div>
+            </div>
+                        <div class="list-item col-xs-12 col-sm-6 col-md-4">
+              <div class="list-content">
+                <div class="list-media">
+                  <div class="list-img" data-toggle="bgImage" data-image-url="/sites/default/files/styles/crop_freeform/public/2024-09/Dr.%20Bo%20Yu.jpg?itok=cZpOiS4j"></div>
+                </div>
+                <div class="list-text">
+                  <div class="list-title text-primary">
+                      Dr. Bo Yu
+                  </div>
+                  <div class="list-des">
+                      Researcher at Embodied AI Center, AIRS
+                  </div>
+                  <div class="list-des">
+                      System Design</div>
+                </div>
+              </div>
+            </div>
+                        <div class="list-item col-xs-12 col-sm-6 col-md-4">
+              <div class="list-content">
+                <div class="list-media">
+                  <div class="list-img" data-toggle="bgImage" data-image-url="/sites/default/files/styles/crop_freeform/public/2024-09/Haoran%20Tong.jpg?itok=VImaC48g"></div>
+                </div>
+                <div class="list-text">
+                  <div class="list-title text-primary">
+                      Haoran Tong
+                  </div>
+                  <div class="list-des">
+                      Engineer at Embodied AI Center, AIRS
+                  </div>
+                  <div class="list-des">
+                      EAI Data Generation</div>
+                </div>
+              </div>
+            </div>
+                        <div class="list-item col-xs-12 col-sm-6 col-md-4">
+              <div class="list-content">
+                <div class="list-media">
+                  <div class="list-img" data-toggle="bgImage" data-image-url="/sites/default/files/styles/crop_freeform/public/2024-09/Xing%20He.png?itok=bBeKO2NM"></div>
+                </div>
+                <div class="list-text">
+                  <div class="list-title text-primary">
+                      Xing He
+                  </div>
+                  <div class="list-des">
+                      Engineer at Embodied AI Center, AIRS
+                  </div>
+                  <div class="list-des">
+                      EAI Dataset Construction</div>
+                </div>
+              </div>
+            </div>
+                        <div class="list-item col-xs-12 col-sm-6 col-md-4">
+              <div class="list-content">
+                <div class="list-media">
+                  <div class="list-img" data-toggle="bgImage" data-image-url="/sites/default/files/styles/crop_freeform/public/2024-09/Tongyi%20Shen.png?itok=IauVmNDM"></div>
+                </div>
+                <div class="list-text">
+                  <div class="list-title text-primary">
+                      Tongyi Shen
+                  </div>
+                  <div class="list-des">
+                      Engineer at Embodied AI Center, AIRS
+                  </div>
+                  <div class="list-des">
+                      EAI Data Collection</div>
+                </div>
+              </div>
+            </div>
+                              </div>
+      </div>
+    </div>
+        <div class="spacer-sm"></div>
+    <div class="showcase-footer">
+        <div class="wgt-action-1-0 t-c">
+            <a class="underline-hover" title="" href="/en/taxonomy/term/197">
+              <i class="icon icon-arrow-right"></i>For more
+            </a>
+        </div>
+    </div>
+      </div>
+</div>
+<div class="spacer-md"></div></div>
+      
+  </div>
+</div>
+  </div>
+  <div class="footer">
+    <div class="block-region-bottom">
+  <div data-block-plugin-id="block_content:3807f74d-f952-49f6-8dc1-963d554acd50" class="block">
+
+  
+    
+
+            <div class="entity-widget-basic_block entity-widget-entity-type-block_content"><div class="spacer-md">&nbsp; &nbsp;&nbsp;</div>
+</div>
+      
+  </div>
+</div>
+  </div>
+
+  </div>
+</article>
+
+  	  </div>
+
+
+  
+        </div>
+                
+                
+        
+    
+  </div>
+  
+    
+    
+</div>
+
+
+
+      
+  <div id="block-yejiaozidifooter70" data-block-plugin-id="block_content:e192d567-3050-4ec9-80f4-60785387ad6a" class="block">
+
+  
+    
+
+            <div class="entity-widget-footer_7_0 entity-widget-entity-type-block_content"><div class="footer-7-0 py-30 md|pt-50 md|pb-100 bg-center bg-no-repeat bg-cover mode--dark"
+  data-toggle="bgImage"
+  data-image-url="/sites/default/files/styles/crop_freeform/public/2021-11/footer-7-0--1.png?itok=j-BZ_XC4"
+>
+  <div class="inner">
+    <div class="flex md|justify-between flex-wrap lg|flex-nowrap -mb-20">
+      <div class="md|mr-30 lg|mr-60 mb-20 lg|w-5/12">
+        <div class="footer-logo">
+          <img src="/sites/default/files/styles/crop_freeform/public/2021-11/footer_logo_0.png?itok=_UuAZy0p" alt="">
+        </div>
+        <div class="footer-qrcode mt-20">
+          <span class="mb-10 text-18 font-bold">Follow Us</span>
+          <ul class="list-none mt-10 flex md|flex-nowrap -mx-10">
+                        <li class="qrcode-item relative mb-0 px-10">
+                              <i class="icon corsor-pointer p-10 rounded-full border-1 border-solid icon-wechat-fill">
+                <span class="hidden">&nbsp;</span>
+              </i>
+                                          <div class="qrcode-image p-10 bg-white shadow-md rounded-5">
+                <img class="max-w-none" src="/sites/default/files/styles/crop_freeform/public/2021-12/wechat.jpg?itok=ervGNdYz" alt="">
+              </div>
+                          </li>
+                        <li class="qrcode-item relative mb-0 px-10">
+                              <a href="https://space.bilibili.com/602058860" target="_blank">
+                <i class="icon corsor-pointer p-10 rounded-full border-1 border-solid icon-bilibili">
+                  <span class="hidden">&nbsp;</span>
+                </i>
+              </a>
+                                        </li>
+                        <li class="qrcode-item relative mb-0 px-10">
+                              <a href="https://www.linkedin.com/company/szairs" target="_blank">
+                <i class="icon corsor-pointer p-10 rounded-full border-1 border-solid icon-linkedin">
+                  <span class="hidden">&nbsp;</span>
+                </i>
+              </a>
+                                        </li>
+                      </ul>
+        </div>
+      </div>
+      <div class="footer-links mb-20 lg|w-7/12">
+        <ul class="list-none flex md|justify-between md|flex-nowrap -mx-15">
+                    <li class="mb-20 md|mb-0 px-15 lg|px-30 w-6/12 md|w-auto md|flex-1">
+            <span class="text-18 mb-20 pb-15">Contact Us</span>
+            <ul class="list-none">
+                            <li class="mb-10">
+                                <p>ADD:14F, Tower G2, Xinghe World, Rd Yabao, Longgang District, Shenzhen, Guangdong, China</p>
+                              </li>
+                            <li class="mb-10">
+                                <p>TEL :+86(0)755-23518114</p>
+                              </li>
+                          </ul>
+          </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="footer-6-0"><div class="footer-content">Copyright © Shenzhen Institute of Artificial Intelligence and Robotics for Society&nbsp;<a href="http://www.miitbeian.gov.cn/">粤ICP备14099122-1号</a>&nbsp; <a href="https://bszs.conac.cn/sitename?method=show&amp;id=3A819D0DFA35B30BE06310291AAC16ED" target="_blank"><img src="/sites/default/files/inline-images/blue_0.png" data-entity-uuid="953aebdc-9362-4c4d-aa7d-56b6ff70f5af" data-entity-type="file" width="2.88%" height="2.88%" loading="lazy"></a></div></div></div>
+      
+  </div>
+
+  
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"en\/","currentPath":"node\/1227","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"multiselect":{"widths":250},"password_encrypt":{"passkey":"9a1063f49f7d9e67"},"cuhk_content_statistics":{"url":"\/en\/counter\/node\/1227"},"themepath":"themes\/custom\/cuhk_ui","ajax":[],"user":{"uid":0,"permissionsHash":"0fecf117cd0eb2227a33933675227887e6cb9b1d3f9b1c9b94f21bc1959e7616"}}</script>
+<script src="/sites/default/files/js/js_yBUNhU0IpP0cqG_wXplI0tTPY_c5kTrL_CFPSZ8UY-E.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=cuhk_ui&amp;include=eJxdUUFywjAM_BAh9BE99FzuGcVWE4EjeSwZCK9vWgpROj7tzq6lXYEqWkd8wmBS2pPue6BYOxMeTrSLM9MFukptXylFh2OpGZIXiJhagbw36DdCyVGu7ChNFM5bHLE4YpqQq8NXmLMQmzoOmCYwdEyC-6x0R6_KRQYukvymX3T7ePfTMBI4jClRVvLf9HoUSUbZcYMcl5e3OabP8Dst1PG81vZEf6U94RJgWLZ9wh-7bu2hqsmkmJbzvMhHOy8XWjMiDeMq6AvwOhQ4jFKajemyFC4NVJOcYG4KZqCyy6B6lRI75FDmbO1_4uEPwoZsrRoYqVFYI4wIyyW7t0N3-AYz3-t2"></script>
+<script src="/themes/custom/cuhk_ui/fonts/cuhk_ui.js?tewqia"></script>
+<script src="/sites/default/files/js/js_hl0ejoyZBZ9uLU2fY-F9S2iNyDsmtadUVXffVLSfaZQ.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=cuhk_ui&amp;include=eJxdUUFywjAM_BAh9BE99FzuGcVWE4EjeSwZCK9vWgpROj7tzq6lXYEqWkd8wmBS2pPue6BYOxMeTrSLM9MFukptXylFh2OpGZIXiJhagbw36DdCyVGu7ChNFM5bHLE4YpqQq8NXmLMQmzoOmCYwdEyC-6x0R6_KRQYukvymX3T7ePfTMBI4jClRVvLf9HoUSUbZcYMcl5e3OabP8Dst1PG81vZEf6U94RJgWLZ9wh-7bu2hqsmkmJbzvMhHOy8XWjMiDeMq6AvwOhQ4jFKajemyFC4NVJOcYG4KZqCyy6B6lRI75FDmbO1_4uEPwoZsrRoYqVFYI4wIyyW7t0N3-AYz3-t2"></script>
+
+  </body>
+</html>
+
+<!-- Generate by boost at 2026-06-23 11:48:53 (Asia/Shanghai) -->

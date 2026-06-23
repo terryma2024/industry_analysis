@@ -2,7 +2,7 @@
 title: Entities Layer
 type: index
 date_created: 2026-05-29
-last_updated: 2026-06-02
+last_updated: 2026-06-23
 tags:
   - wiki
   - entities
@@ -20,6 +20,7 @@ tags:
 - [[UnitreeRobotics]]
 - [[Agibot]]
 - [[IOAI]]
+- [[AIRSPEED]]
 
 ## UMI 技术术语实体
 
@@ -168,6 +169,7 @@ tags:
 
 ### tool
 
+- [[AIRSPEED]]
 - [[HuggingFaceLeRobot|Hugging Face LeRobot]]
 - [[ORBSLAM3|ORB-SLAM3]]
 

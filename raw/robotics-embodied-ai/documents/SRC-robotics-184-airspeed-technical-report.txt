@@ -1,0 +1,635 @@
+AIRSPEED: An Open-source Universal Data Production Platform
+            for Embodied Artificial Intelligence
+       Xuan Xia*1 , Bo Yu*1 , Xianqiao Tong2 , Jialin Jiao3 , Xinmin Ding4 , Xing He1 , Haoran Tong1 , Yufei Lin1 , Tongyi Shen1 ,
+                                                      Ning Ding1 , Shaoshan Liu†1
+     1 Shenzhen Institute of Artificial Intelligence and Robotics for Society, 2 Airasprak.ai, 3 Roblox Corporation, 4 Dora-rs.ai
+
+
+ABSTRACT
+Embodied artificial intelligence development hinges on effective
+data acquisition, yet it faces challenges such as high costs, limited
+training scenarios, and a lack of standards for dataset. To overcome
+these, we introduce AIRSPEED, an open-source platform for em-
+bodied artificial intelligence data production. AIRSPEED features
+hardware-software decoupling to reduce costs, supports multiple
+devices for diverse data collection, interfaces with various sim-
+ulation platforms for synthetic data generation, and automates
+dataset construction. It comprises three services: data collection
+for real-world data, data generation for synthetic data, and dataset
+construction for organizing data pyramid structures. AIRSPEED
+aims to enhance data production efficiency and quality, thereby
+improving embodied artificial intelligence model performance. Our
+experiment confirmed the effectiveness of AIRSPEED in improving
+data production efficiency. All software are open-sourced and can
+be found on this website: https URL.
+
+KEYWORDS
+Embodied Artificial Intelligence, Robotics, Data collection, Dataset
+
+
+1    INTRODUCTION
+                                                                                                Figure 1: AIRSPEED architecture.
+The Autonomy Economy represents a transformative phase in our
+society, driven by the integration of autonomous machines such
+as autonomous vehicles, delivery robots, drones, and more into
+the provision of goods and services. Central to this revolution is                  To address these EAI data production bottleneck, we propose
+Embodied Artificial Intelligence (EAI), the intelligence backbone                AIRSPEED, an open-source universal data production platform
+enabling these diverse autonomous systems [1]. EAI involves inte-                for EAI. Fig. 1 provides a system overview of AIRSPEED archi-
+grating artificial intelligence into physical entities, such as robots,          tecture. AIRSPEED has embedded three services: data collection
+enabling them to perceive, learn from, and interact dynamically                  service, data generation service, and dataset construction service.
+with their surroundings [2, 3].                                                  AIRSPEED collects various types of real-world data through its data
+   Existing research indicates that the development of EAI still con-            collection service on one hand, and on the other hand, it gathers
+forms to the scaling laws in the field of artificial intelligence [4].           synthetic data from multiple simulation environments through its
+This means that more high-quality data can produce higher perfor-                data generation service. The dataset construction service can auto-
+mance EAI models. However, there are still many difficulties in the              matically build a pyramid-structured EAI dataset, and its format
+large-scale collection and generation of EAI data. From a purely                 is compatible with the conversion to other dataset formats. AIR-
+software perspective, on the one hand, data collection software                  SPEED can coordinate the collection and generation of various EAI
+for different robots requires specialized customization, making it               data and is highly compatible with different types of robots, data
+difficult to unify data collection standards. On the other hand, differ-         collection methods, and robotic simulation platforms, providing
+ent robots and algorithms are compatible with various simulation                 flexible training data for various embodied intelligence technologies.
+platforms, making the integration and utilization of simulation data             Overall, AIRSPEED has brought three contributions as follows:
+challenging. In addition, the current dataset construction method                    • Universal data production platform: AIRSPEED utilizes
+relies heavily on manual operations, which seriously reduces the                       a unified robot interface and simulation interface to con-
+production efficiency of data. These difficulties pose barriers to                     nect with various data collection hardware and simulation
+efficient data production.                                                             platforms, achieving decoupling of hardware and software,
+                                                                                       thereby reducing the development costs on the software side
+∗ indicates equal contribution to the paper. † indicates corresponding author.         for data producers.
+, ,                                                                               X. Xia, B. Yu, X. Tong, J. Jiao, X. Ding, X. He, H. Tong, Y. Lin, N. Ding, S. Liu
+
+
+      • Support multiple EAI data collection and generation                     of the operator’s movements, such as motion capture sys-
+        methods: AIRSPEED supports data collection based on tele-               tem [10], virtual reality-based teleoperation system [11] and
+        operation and demonstration, as well as data generation                 other forms of integration [12].
+        based on data synthesis and virtual teleoperation, offering           • Isomorphic teleoperation. Isomorphic teleoperation refers
+        the most comprehensive support for current technologies.                to a control method where the teleoperator or the control
+      • Automated dataset construction: AIRSPEED supports the                   system is designed to have a one-to-one correspondence, or
+        automated construction of pyramid-level datasets according              isomorphism, between the master (operator’s) device and
+        to user configurations, which can meet the customized needs             the slave (robotic) device, such as ALOHA [13] and Mobile
+        for various model training requirements.                                ALOHA [14]. This means that the kinematic structure of the
+                                                                                master device mirrors that of the slave device, allowing for a
+                                                                                more intuitive and direct control of the robot’s movements.
+2     SURVEY OF EAI DATA PRODUCTION
+As shown in Fig. 2, the production of EAI data comes from two                Demonstration refers to a pedagogical approach where a human
+sources: data collection form the real world and data generation          operator executes a task or a sequence of tasks, which are then
+from the simulation environment. Each of these sources has given          meticulously recorded to instruct a robot in performing analogous
+rise to a variety of technical solutions. Different technical solutions   tasks [15]. This method is integral to robot learning from demon-
+correspond to different data production methods, hence many schol-        stration (LfD), a subfield of robotics that focuses on algorithms
+ars have conducted related research. Another key aspect of EAI data       enabling robots to acquire behaviors by observing examples pro-
+production is dataset construction, which directly determines the         vided by a teacher. Demonstration approach can be divided into
+purpose of data usage. As a data production platform, AIRSPEED            three categories:
+can support data collection, data generation, dataset construction,           • Drag teaching. Drag teaching refers to a method where an
+and cover most technical branches. In this section, we conduct a                operator physically manipulates the robot’s joints or end-
+comprehensive survey of data production to summarize the current                effector to desired positions, which are then recorded and
+related work.                                                                   stored as a sequence of movements that the robot can later
+                                                                                reproduce [16]. This technique is particularly useful for pro-
+                                                                                gramming robots in a more intuitive and interactive manner,
+2.1     EAI Data Collection
+                                                                                especially for tasks that require precise positioning or com-
+EAI data collection has two methods: Teleoperation approach and                 plex motions.
+demonstration approach.                                                       • Wearable demonstration. Unlike wearable teleoperation,
+   Teleoperation, also known as telerobotics, refers to the remote              wearable demonstration refers to the process where hu-
+control of robots or mechanical systems by human operators from                 mans perform tasks directly through wearable devices, and
+a distance [5]. The term "tele-" implies long-distance operation,               the data recorded by these devices can be used directly for
+allowing an operator to manipulate a robot’s actions from a remote              robotic learning without the conversion from human move-
+location. Teleoperation approach can be specifically divided into               ments to robot movements. For example, using a wearable
+four categories:                                                                claw for data collection as UMI [17].
+      • Wearable teleoperation. Wearable teleoperation refers to a            • Human video learning. Human video learning refers to
+        type of technology that allows human operators to remotely              the process where robots learn from videos of humans per-
+        control robots through the use of wearable equipment. These             forming various tasks, such as GRH [18], MimicPlay [19]
+        devices capture the movements and gestures of the operator              and GR-2 [20]. This method leverages the wealth of human
+        and translate them into control signals for the robot. The              demonstration data available in video formats, which can be
+        wearable equipment can include gloves [6], suits [7], or ex-            more cost-effective and easier to collect than expert demon-
+        oskeletons [8] that are equipped with sensors to track the              strations with real robots.
+        operator’s movements or provide haptic feedback.                     Facing a variety of data collection methods, many scholars at-
+      • Visual-based teleoperation. Visual-based teleoperation            tempt to develop universal collection techniques. For instance,
+        refers to the process where an operator’s movements are cap-      GELLO [21] aims to lower the barrier to collecting large and high-
+        tured using visual sensing technology, such as cameras [6]        quality human demonstration data by proposing a general frame-
+        [9], and these movements are then translated into control         work for building low-cost and intuitive teleoperation systems for
+        commands to maneuver a robot. This method allows for the          robotic manipulation. PATO [22] automates part of the demonstra-
+        intuitive control of robotic systems by directly mapping hu-      tion collection process using a learned assistive policy, enabling a
+        man actions to robotic movements, which is suitable for cost      single operator to control multiple robots in parallel for scalable
+        saving and low precision requirements.                            robotic data collection. However, these technologies still only cover
+      • Optical-inertial teleoperation. Optical-inertial teleopera-       some collection methods and have limited universality. Recently,
+        tion is a sophisticated method that combines the use of opti-     DART [23] has provided a more convenient way for data collec-
+        cal motion capture systems with inertial measurement units        tion, which is a teleoperation platform designed for crowdsourcing
+        (IMUs) to control a robot remotely. This approach leverages       that reimagines robotic data collection by leveraging cloud based
+        the strengths of both wearable and visual-based technologies      simulation and augmented reality (AR). DART can perform various
+        to achieve more accurate, reliable, and continuous tracking       types of teleoperation for data collection on a unified platform,
+AIRSPEED: An Open-source Universal Data Production Platform for Embodied Artificial Intelligence                                                           , ,
+
+
+
+
+                                Figure 2: Production methods of EAI data and AIRSPEED’s support for them.
+
+
+indicating that the universality of the data collection platform has                    demonstrations, which can generate a large amount of synthetic
+gradually gained attention from scholars.                                               data from a small amount of real-world data. VitRob Pipeline [30]
+                                                                                        proposed a seamless teleoperation pipeline for advanced virtual
+2.2     EAI Data Generation                                                             reality, which can generate robot data for crop harvesting through
+                                                                                        virtual teleoperation. However, their designs consider more the
+EAI data generation utilizes virtual simulation environments to
+                                                                                        convenience of model training rather than the universality of large-
+create a wide range of scenarios and conditions that a robot may
+                                                                                        scale data generation.
+encounter. It provides a controlled, safe, and cost-effective way to
+generate the extensive data needed for training and testing robotic
+systems. EAI data generation has three methods:                                         2.3        EAI Dataset Construction
+                                                                                        The construction of EAI datasets can be divided into two categories
+      • Data simulation. Data simulation refers to data generated                       based on their purpose: for training and for benchmarking. The
+        based on various simulation platforms, such as PyBullet [24],                   former is mostly composed of real-world data, while the latter
+        Isaac Sim [25], MuJoCo [26], etc. Data simulation only uses                     is largely built on simulation platforms, thus for the latter, data
+        manually created digital assets for simulation tasks, which                     generation and dataset construction can be considered as a single
+        often creates a gap between them and the real world.                            entity.
+      • Data synthesis. Data synthesis refers to the process of im-
+        porting control model or real-world data into simulation                              • Dataset construction for training. Typical datasets in this
+        platforms and then generating synthetic data through re-                                category include Open X-Embodiment [31] and ARIO [32].
+        lated algorithms. For example, the ACT algorithm can ma-                                Open X-Embodiment is a collaboration of 21 institutions col-
+        nipulate robots in a simulated environment to generate more                             lected an embodied dataset from 22 different robots, show-
+        synthetic data through a trained control model [13], while                              casing 527 skills and 160,266 tasks. ARIO (All Robots In
+        ACDC converts objects and scenes in RGB images into digital                             One) is a dataset that comprising approximately 3 million
+        cousins and further generates synthetic data [27].                                      episodes collected from 258 series and 321,064 tasks. The
+      • Virtual teleoperation. Virtual teleoperation refers to the                              construction of these datasets relies on experts, is costly and
+        generation of robot data by sending remote control com-                                 time-consuming, and lacks a unified dataset standard.
+        mands to the simulation platform via external devices such                            • Dataset construction for benchmarking. Typical datasets
+        as keyboard, remote control handle, and motion capture                                  in this category include Habitat3.0 [33], EmbodiedCity [34],
+        device [10]. Through communication interfaces, the vast ma-                             MetaUrban [35], and GRUtopia [36]. Since this paper focuses
+        jority of simulation platforms or algorithms support virtual                            more on the collection of real data, this type of dataset con-
+        teleoperation.                                                                          struction is not the focus of this paper.
+
+  Under these three methods, many scholars and companies have                           3     AIRSPEED SYSTEM DESIGN
+proposed corresponding data generation frameworks. For example,
+BestMan [28], based on PyBullet, has developed A modular mobile                         The design of AIRSPEED is aimed at satisfying three purposes:
+manipulator platform for EAI with unified simulation-hardware                                 • Efficient large-scale real-world data collection. EAI sys-
+APIs for simulation data generation. Mimicgen [29] proposed A                                   tems are typically equipped with a diverse array of sensors,
+data generation system for scalable robot learning using human                                  such as cameras and LiDARs, which generate vast amounts
+, ,                                                                              X. Xia, B. Yu, X. Tong, J. Jiao, X. Ding, X. He, H. Tong, Y. Lin, N. Ding, S. Liu
+
+
+                                                                         data collection must address four critical factors: data latency, data
+                                                                         transmission bandwidth, data quality, and computing resources.
+                                                                            Data latency can cause time alignment errors between different
+                                                                         modalities of data, thereby affecting data availability. Data transmis-
+                                                                         sion bandwidth including network bandwidth and the local storage
+                                                                         buffer capacity. Insufficient data transmission bandwidth can ex-
+                                                                         acerbate latency issues and even lead to data collection failures.
+                                                                         Data quality refers to the degree of lossless data, and data collection
+                                                                         services should strive to ensure the lossless nature of data as much
+                                                                         as possible. Data latency, data transmission bandwidth, and data
+                                                                         quality all need to achieve a compromise under limited computing
+                                                                         resources.
+                                                                            The lower half of Fig. 3 illustrates the potential data traffic size
+                                                                         from various data sources, ranging from 800B/s (if we collect motion
+                                                                         data only) to 246MB/s depending on the type and number of sensors.
+                                                                         When collecting data from multiple robots in parallel, EAI data
+                                                                         influx can easily greatly exceeds the available data transmission
+                                                                         bandwidth, resulting in data collection failures if not managed
+                                                                         properly.
+                                                                            Therefore, the data collection service have one overarching de-
+                                                                         sign goal: balancing the above four factors in large-scale data col-
+                                                                         lection. As shown in Fig. 3, we designed a highly compatible ro-
+         Figure 3: Data collection service of AIRSPEED                   bot interface and a dynamic data collection mechanism by a data
+                                                                         collection node, bandwidth adaptor, keyframe selector, and data
+                                                                         compressor within the data collection service to achieve the optimal
+        of data – ranging from tens to hundreds of megabytes per         point while facing these trade-offs.
+        second. To ensure data integrity, low latency and high band-        Robot Interface. The Robot Interface is designed for widespread
+        width in data transmission are crucial for AIRSPEED to min-      compatibility with various robots’ data transmission interfaces,
+        imize the time spent collecting massive data.                    receiving data returned by the robot based on the data collection
+      • Convenient data circulation in simulation environ-               method. Users can determine the reception method of the data by
+        ments. The gap between simulation data and real-world            writing configuration files, including which data to receive, the
+        data poses a significant challenge in the advancement of em-     format of the data, the data frame rate, units, etc. Users only need
+        bodied intelligence. AIRSPEED is designed to offer flexible      to write configuration files to quickly receive robot data without
+        simulation environment configurations, triggering mecha-         programming.
+        nisms, and data alignment, all aimed at minimizing this gap         Data Collection Node. Data collection node is a communication
+        as much as possible.                                             node designed based on a robot operating system such as ROS2 [37]
+      • Automated construction of a pyramidal structure dataset.         and DORA [38]. It’s design goal is to collect as complete raw data as
+        In the field of embodied intelligence, different technological   possible and perform data classification based on the data sampling
+        approaches imply varying data collection needs. AIRSPEED         rate. The data collection node will classify data into LSR (Low
+        is capable of automatically constructing datasets in a pyra-     Sampling Rate) data (0.01-10Hz), MSR (Medium Sampling Rate) data
+        mid structure to accommodate various data formats and            (10-100Hz), and HSR (High Sampling Rate) data (100+Hz) according
+        facilitate their interconversion.                                to the original frequency of the data, for subsequent data processing
+                                                                         strategies.
+    To this end, AIRSPEED has embedded three services: data collec-         Data of different frequencies has varying demands on the perfor-
+tion service, data generation service, and dataset construction ser-     mance required for data transmission [39]. Low frequency implies
+vice, providing full-process customization for data collection, data     that the data is not sensitive to transmission latency, allowing algo-
+generation, and dataset construction. As shown in Fig. 2, through        rithms to allocate more computing resources to compress the data
+these three services, AIRSPEED is capable of being compatible with       while ensuring data quality, in order to save transmission band-
+the majority of data collection and generation methods, making           width. High frequency indicates that data is sensitive to transmis-
+it convenient for users to employ as a universal data production         sion latency, requiring algorithms to ensure sufficient performance
+platform.                                                                resources for high-speed data transmission. Medium frequency falls
+                                                                         between the two, with most visual data typically in this range. Al-
+3.1     Data Collection Service                                          gorithms need to adjust resources for keyframe selection and data
+The design of AIRSPEED’s data collection service takes into ac-          compression according to changes in data transmission bandwidth,
+count both compatibility and performance. First, the data collection     to balance the contradiction between data latency and data quality.
+service needs to be capable of being compatible with as many data           Bandwidth Adapter. The task of the bandwidth adapter is to
+sources, data modalities, and data formats as possible. Secondly, EAI    continuously monitor the current data transmission bandwidth and
+AIRSPEED: An Open-source Universal Data Production Platform for Embodied Artificial Intelligence                                                          , ,
+
+
+dynamically adjust the strategies of the keyframe selector and data
+compressor to achieve the optimal data collection quality under
+current conditions.
+    The bandwidth adapter categorizes the usage of data transmis-
+sion bandwidth into three classes: low data traffic, medium data
+traffic, and high data traffic. Low data traffic implies a high band-
+width surplus, where the keyframe selector and Data Compressor
+can reduce the consumption of performance resources or even re-
+main idle, thereby reducing power consumption. High data traffic
+implies a low bandwidth surplus, requiring the keyframe selector
+and Data Compressor to prioritize obtaining performance resources                                  Figure 4: Data generation service of AIRSPEED.
+to ensure the successful transmission of data. Medium data traffic
+is the most ideal state, which means that the keyframe selector and
+Data Compressor can maintain a low power state and have the
+potential to respond to changes in data traffic.                                        3.2        Data Generation Service
+    Keyframe Selector. The task of the keyframe selector is to                          The EAI data generation service in AIRSPEED serves two needs:
+select keyframes from the data according to the learning objectives                     facilitating convenient data transmission between real-world and
+and to remove redundant data frames in proportion. The deletion                         simulation environment, and efficient data alignment between real-
+of redundant data frames will inevitably lead to a decrease in data                     world data and synthetic data. As shown in Fig. 4, the former is
+quality and an increase in time alignment errors, so its removal                        implemented by the data generation node and the simulation inter-
+ratio needs to be controlled according to the Bandwidth Adapter.                        face, and the latter is realized by the data aligner.
+    The detection of keyframes is the core algorithm for constructing                      Data Generation Node. The data generation Node has three
+a keyframe selector. In scenarios where visual sensory data accounts                    functions: receiving real-world data from the data collection service,
+for more than 99.9% of all data, the detection of keyframes is essen-                   sending real-world data or virtual teleoperation data to the simula-
+tially equivalent to keyframe detection of visual data [40]. Keyframe                   tion interface, and receiving synthetic data generated by simulation
+detection algorithms can be categorized into three types: heuristics-                   platforms. Similar to the data collection node in the data collection
+based methods, probabilistic-based methods, and learning-based                          service, it is also a communication node designed based on ROS2
+methods [40]. Regardless of the method used, the premise is to                          or DORA. The data generation node supports communication with
+ensure the quality of visual information to the greatest extent, as                     various simulation platforms, such as PyBullet [24], Isaac Sim [25],
+demonstrated in [41] and [42]. AIRSPEED keyframe selector is de-                        MuJoCo [26], etc..
+signed to be extensible so as to integrate various key frame selection                     Simulation Interface. Receiving synthetic data output from
+algorithms, allowing users to select the most suitable algorithms.                      simulation platforms is a relatively simple task; however, integrat-
+To ensure data quality, keyframe selection rate can be as low as                        ing different types of real-world data and virtual teleoperation data
+2% to still achieve similar training performance, a 50x reduction of                    into different simulation platforms is a cumbersome engineering
+data throughput.                                                                        challenge. To address this, we have developed a universal simula-
+    Data Compressor. The task of the data compressor is to com-                         tion interface within the data generation service to simplify the
+press data according to the data transmission bandwidth. Data                           data integration process as much as possible. Similar to the robot
+compression may be lossless or lossy, and lossy compression will                        interface, the simulation interface is designed for widespread com-
+inevitably lead to a decrease in data quality, so its compression                       patibility with simulation platforms’ data transmission interfaces.
+strategy needs to be controlled according to the bandwidth adapter.                     Users can determine the reception method of the data by writing
+    The data compressor supports a variety of compression meth-                         configuration files.
+ods. Taking images as an example, it supports lossless compression                         Data Aligner. The alignment between real-world collected data
+methods such as JPEG-LS, PNG, and WebP, and lossy compression                           and simulated data of robots is a critical aspect of EAI data produc-
+methods including JPEG, JPEG-2000, and WebP. Some image com-                            tion. It involves several key components that ensure the data from
+pression methods use GPU based improvements to achieve better                           both sources can be effectively integrated and utilized for training.
+real-time performance [43]. We have achieved up to 50x compres-                         There is a data aligner integrated in the data generation service of
+sion ratio and compression throughput of 296 MB/s. Similar to the                       AIRSPEED. It is responsible for temporal alignment, spatial align-
+keyframe selection, AIRSPEED data compressor is designed to be                          ment, and unification of physical units.
+extensible so that the users can select the most suitable algorithm                        Temporal and spatial alignment ensures that data from differ-
+for data compression.                                                                   ent sources are synchronized in time and space. This is crucial for
+    In our design, after going through the whole data collection                        tasks that require precise coordination between sensory inputs and
+service, we managed to filter down data influx by up to 30x, thus                       robotic actions. For instance, when training a robot to navigate an
+successfully achieving real-time EAI data collection under different                    environment, the visual input from cameras must be accurately
+real-world conditions.                                                                  aligned with the robot’s movements and the corresponding times-
+                                                                                        tamps [44]. And the frame rate of the simulated data may not match
+                                                                                        the frame rate of the real sensor, so corresponding alignment algo-
+                                                                                        rithms are needed for calibration.
+, ,                                                                                  X. Xia, B. Yu, X. Tong, J. Jiao, X. Ding, X. He, H. Tong, Y. Lin, N. Ding, S. Liu
+
+
+                                                                                Executions data refers to the data generated by the robot dur-
+                                                                            ing the execution of tasks, such as the robot’s motion data (posi-
+                                                                            tion, velocity, force, deflection angle, etc.), various sensor data, and
+                                                                            decision-making process data.
+                                                                                AIRSPEED defaults to dividing data into the four levels men-
+                                                                            tioned above, yet users can still customize the category levels as
+                                                                            they wish.
+                                                                                Data Structurer. The data structurer is used to organize the
+                                                                            collected data according to the hierarchical structure of the pyramid;
+                                                                            its structuring rules are not set in stone and are determined by user
+                                                                            configuration. For example, users can design the models data as the
+                                                                            top level based on different robot models, use scenes data as the
+                                                                            second level based on different scenarios, tasks data as the third
+                                                                            level based on different tasks, and executions data as the fourth level
+                                                                            based on different execution instances. Alternatively, scenes data
+                                                                            can be used as the top level based on different scenarios, models data
+                                                                            as the second level, tasks data as the third level based on different
+                                                                            tasks, and executions data as the fourth level based on different
+                                                                            execution instances.
+                                                                                AIRSPEED defaults to building the pyramid structure dataset in
+      Figure 5: Dataset construction service of AIRSPEED.                   the order of Models-Tasks-Scenes-Executions. Users can alter the
+                                                                            pyramid structure by writing configuration files and can define the
+                                                                            more detailed structure of each level with precision. This provides
+                                                                            a flexible way for users to build custom datasets.
+
+   The unification of physical units refers to the process of ensuring      3.4     Design Advantages
+that all measurements, regardless of their source, are expressed in         Compared to other existing data production platforms, software,
+consistent units of time, distance, force, and other physical quanti-       and devices, AIRSPEED has the following advantages:
+ties. This standardization is essential for accurate data comparison              • Hardware-software decoupling. AIRSPEED is a universal
+and integration, allowing for a direct and meaningful correlation                   pure software platform whose data collection capabilities are
+between real-world observations and their simulated counterparts.                   independent of the teleoperation devices and robot models
+                                                                                    used in the data collection system. Users only need to write
+3.3     Dataset Construction Service                                                configuration files to use it, reducing the development and
+                                                                                    usage costs of the software part in the data collection system.
+The dataset construction service is used to structure collected and
+                                                                                  • Fully automated process. The data collection, data gener-
+generated data according to user-defined rules to automatically
+                                                                                    ation, and dataset construction processes in AIRSPEED are
+build a pyramid-structured dataset. To this end, we have designed
+                                                                                    all automated and can be carried out in parallel. This not
+a dataset construction node and a data structurer.
+                                                                                    only eliminates the manpower and time consumed in data
+   Dataset Construction Node. The dataset construction node
+                                                                                    transfer and data organization but also makes full use of idle
+is not only a communication node but also responsible for cate-
+                                                                                    computing resources, improving resource utilization.
+gorizing data into different levels based on functionality: models
+data, scenes data, tasks data, and executions data. This data cat-
+                                                                            4     EXPERIMENTS
+egorization is to facilitate the formation of a pyramid-structured
+dataset.                                                                    AIRSPEED’s universality is based on three key advantages: the
+   Models data refers to data related to the robot’s entity (in the         universality of the platform backbone, support for a variety of data
+real world or in simulation environments), such as robot model              production methods, and superior performance. This section will
+data, sensor model data, and simulation environment hardware and            provide a detailed experiments to these three aspects.
+software model data.
+   Scenes data refers to data related to the internal and external          4.1     Universality of Platform Backbone
+parameter configurations of the robot, such as sensor calibration           To realize the system architecture of AIRSPEED, a platform back-
+data, classification data of the scenes where the robot is located          bone is required to connect different components together and to
+(indoor/outdoor, grassland/sand, day/night, etc.), and map data of          host various services. Two robot operating systems, DORA [38]
+the scenes where the robot is situated.                                     and ROS2 [37], became backbone candidates for AIRSPEED due
+   Tasks data refers to data related to the tasks executed by the           to their high performance and popularity among various robotics
+robot, such as the instruction data received by the robot, the initial      workloads.
+state of the robot, the type of skills used by the robot, and descriptive      DORA is designed to support dataflow computing, which stream-
+data of the objects being operated on.                                      lines data in a dataflow fashion. Particularly, services in DORA are
+AIRSPEED: An Open-source Universal Data Production Platform for Embodied Artificial Intelligence                                                        , ,
+
+
+
+
+Figure 6: Platform backbone performance comparison be-
+tween DORA and ROS2 of transmission latency
+
+
+modeled as directed graphs, where data flows through streams and
+is processed by nodes, often resembling a sequence of connected
+nodes referred to as pipelines [45]. This architecture allows for
+efficient data processing and flexibility in application design.
+                                                                                        Figure 7: AIRSPEED’s software architecture for teleoperation
+   Conversely, ROS2 provides a robust framework for robot soft-
+                                                                                        data production built on ROS2
+ware development, emphasizing modularity and reusability. It sup-
+ports a wide range of hardware interfaces and boasts an extensive
+ecosystem of tools and libraries. However, it may not offer the same                    system, offering users flexible deployment options. The adapter is
+level of low-latency dataflow optimization as DORA.                                     also a ROS2 node, used for sending control commands to robots and
+   To compare the performance of DORA and ROS2, we conducted                            simulation commands to the simulation platform; it is not part of
+an experiment measuring the latencies of transmitting packets                           AIRSPEED. However, in our open-source code, we provide a demo
+across a wide range of sizes (from 8B to 750MB), emulating various                      example to facilitate extensive teleoperation device adaptation by
+forms of robotic data. The results of this experiment are summarized                    the open-source community.
+in Fig. 6. The X-axis shows different packet sizes, whereas Y-axis                         The following will illustrate, through three typical data produc-
+shows transmission latency in nanoseconds and is presented in log                       tion experiments, how AIRSPEED supports different data produc-
+scale. For packets less than 50KB, ROS2 and DORA have similar                           tion methods and improves data production efficiency.
+performance, but for packets larger than 500KB, DORA significantly                         Data production for isomorphic teleoperation system. Tak-
+outperforms ROS2. One particularly interesting case is 5 MB packet,                     ing ALOHA [14] as an example, Fig. 8 shows the AIRSPEED’s data
+which is commonly used for sending image data and most popular                          production process for isomorphic teleoperation. First, AIRSPEED
+among robotic workloads, the latencies on ROS2 are consistently                         receives real-world data from the master-slave arms and constructs
+around 100 times larger than the latencies on DORA, and we have                         the corresponding EAI dataset, which users can use to train an
+repeated our experiments 10 times to verify the results.                                imitation learning model. Then, users can drive the virtual robotic
+   AIRSPEED supports users in setting up DORA or ROS2 as the                            arm’s movements in the simulation environment using the existing
+platform backbone. For simplicity, AIRSPEED defaults to using                           imitation learning model, generating synthetic data and sending it
+ROS2 as the platform backbone.                                                          to AIRSPEED. Finally, AIRSPEED merges the synthetic data into the
+                                                                                        EAI dataset, allowing users to train a new version of the imitation
+4.2     Data production experiments                                                     learning model with the updated integrated dataset. This process
+As shown in Fig. 2, AIRSPEED supports a variety of data production                      can be continuously repeated, creating a data flywheel for imitation
+methods. For each method, AIRSPEED has developed corresponding                          learning.
+robot and simulation interfaces, and users only need to perform                            To test the capability of AIRSPEED in accelerating data produc-
+simple configurations to utilize them.                                                  tion, we conducted comparison experiments of the efficiency of
+   Among these methods, teleoperation is the most widely applied                        using AIRSPEED in data production of isomorphic teleoperation
+technology and also the most complex in terms of data production                        system. As shown in Table 1, there are a total of four stages in
+system design. Fig. ?? illustrates the AIRSPEED software architec-                      this data production process: data collection, dataset construction
+ture for teleoperation data production built on ROS2. It includes                       (real-world data), data generation, and dataset construction (syn-
+three types of modules: ROS2 node, hardware device, and software                        thetic data). The experimental setup is as follows: The collection
+service. From the diagram, it can be seen that the robot interface,                     process follows the official "cube transfer" procedure of ACT [13].
+simulation interface, data collection service, and data generation                      The collected data includes joint and gripper motion data from four
+service are all ROS2 communication nodes, which means they can                          robotic arms, RGB-D data from three cameras, with a data through-
+be deployed on different computing devices. Moreover, the dataset                       put of approximately 185MB/s. The data collection service, data
+construction service supports both local and cloud deployment,                          generation service, and dataset construction service were deployed
+indicating that AIRSPEED can be a distributed data production                           on three separate computers, interconnected by a 1000M Ethernet.
+, ,                                                                                  X. Xia, B. Yu, X. Tong, J. Jiao, X. Ding, X. He, H. Tong, Y. Lin, N. Ding, S. Liu
+
+
+       Table 1: Comparison of the efficiency of using AIRSPEED in data production of isomorphic teleoperation system
+
+                                    Data Collection   Dataset Construction   Data Generation       Dataset Construction
+                                                                                                                                      Total
+                                     (50 Samples)      (Real-world Data)      (50 Samples)           (Synthetic Data)
+               Human Operation
+                                                              926s                 187s                       28s                 1243s+1141s
+               Time Consumption          1243s
+                  AIRSPEED
+                                                               26s                 156s                        8s                 1243s+190s
+               Time Consumption
+                   Effective
+                                           -                  35.62                 1.2                        3.5                     6.01
+               Acceleration Ratio
+
+
+
+
+Figure 8: AIRSPEED’s data production process for isomorphic
+teleoperation system (taking ALOHA as an example)
+
+                                                                             Figure 9: AIRSPEED’s data collection process for optical-
+During the experiment, we recorded the average time consumed                 inertial teleoperation system
+by three human operators in these four stages and calculated the
+effective acceleration ratio based on the use of AIRSPEED.
+   The results indicate that AIRSPEED significantly reduced the                 We conducted comparison experiments on the efficiency of using
+time consumption in the dataset construction and data generation             AIRSPEED in data collection for an optical-inertial teleoperation
+stages. For instance, in the real-world dataset construction stage,          system. The collected data included joint and gripper motion data
+because AIRSPEED had already begun synchronizing the construc-               from one robotic arm and RGB-D data from one camera, with a data
+tion of the dataset during the data collection stage, it could complete      throughput of approximately 62MB/s. The rest of the experimental
+the dataset construction in an average of 26 seconds after the com-          setup remained unchanged. As shown in Table 2, AIRSPEED sig-
+pletion of data collection. In contrast, manually constructing and           nificantly improved the efficiency of data production, achieving an
+transferring the dataset took an average of 926 seconds. Compara-            effective acceleration ratio of up to 23.5 in the dataset construction
+tively, AIRSPEED achieved an effective acceleration ratio of up to           phase.
+35.62 in the real-world dataset construction stage, and an overall              Data generation for virtual teleoperation system. As shown
+effective acceleration ratio of up to 6.01. The use of AIRSPEED sig-         in Fig. 10, users can employ the simulation interface within the data
+nificantly improved the efficiency of data production in isomorphic          generation service to convert the operator’s teleoperation data into
+teleoperation systems.                                                       simulation commands for the robotic arm. Consequently, the robotic
+   Data collection for optical-inertial teleoperation system.                arm can perform corresponding task motions within simulation
+As shown in Fig. 9, we have set up a teleoperation system for a              environments such as Isaac Sim. During the teleoperation process,
+robotic arm based on the Noitom optical-inertial motion capture              operators can obtain visual feedback through the visualization
+system and the Elephant myCobot pro 630 robotic arm. We have                 interface of the simulation platform and adjust their actions in a
+written a converter that transforms the teleoperation data from              timely manner to control the robotic arm to successfully execute
+the operator (i.e., the 59 tracking points generated by the motion           tasks. The various synthetic data generated by the robotic arm
+capture system) into control commands for the robotic arm. The               during the execution process will be returned to AIRSPEED’s data
+robotic arm executes corresponding task motions based on these               generation service and organized into a dataset by the dataset
+commands (such as picking up an apple, opening a drawer, etc.).              construction service.
+During the teleoperation process, the operator can obtain visual                Similarly, we conducted comparison experiments on the effi-
+feedback from the status of the robotic arm and adjust their actions         ciency of using AIRSPEED in the data generation process for a
+in time to control the robotic arm to successfully complete the tasks.       virtual teleoperation system. The data throughput and experimen-
+Various data generated by the robotic arm during the execution               tal setup remained unchanged. As shown in Table 2, AIRSPEED
+process will be collected by AIRSPEED’s data collection service and          achieved an effective acceleration ratio of up to 7.67 in the dataset
+organized into a dataset by the dataset construction service.                construction phase.
+AIRSPEED: An Open-source Universal Data Production Platform for Embodied Artificial Intelligence                                                                         , ,
+
+
+Table 2: Comparison of the efficiency of using AIRSPEED in data collection for optical-inertial teleoperation system and data
+generation process for virtual teleoperation system
+
+                                                        Data Collection Process for                      Data Generation Process for
+                                                   Optical-inertial Teleoperation System                Virtual Teleoperation System
+                                                  Data Collection Dataset Construction             Data Generation Dataset Construction
+                                                   (20 Samples)        (Real-world Data)            (20 Samples)        (Synthetic Data)
+                         Human Operation
+                                                                               517s                                               23s
+                         Time Consumption               657s                                            721s
+                            AIRSPEED
+                                                                                22s                                                3s
+                         Time Consumption
+                             Effective
+                                                          -                     23.5                      -                       7.67
+                         Acceleration Ratio
+
+
+                                                                                                   Table 3: Performance indicators of AIRSPEED
+
+                                                                                                                   Keyframe Selection Rate                    Up to 2%
+                                                                                                                      Compression Rate                        Up to 2%
+                                                                                            Data Collection
+                                                                                                                Compression Throughput (MB/s)             At least 296MB/s
+                                                                                                                     End-to-End Latency                    Minimum 3ms
+                                                                                          Data Generation          Data Alignment Latency                 Maximum 30ms
+
+
+
+                                                                                        5     CONCLUSION
+                                                                                        In this paper, we propose a universal data production open-source
+                                                                                        platform called AIRSPEED. AIRSPEED can help collect high-quality
+                                                                                        data at a low cost through hardware-software decoupling, quickly
+                                                                                        generate a large amount of data by widely docking with simula-
+                                                                                        tion platforms, comprehensively obtain highly generalized data
+                                                                                        by widely supporting data collection devices, and provides an au-
+                                                                                        tomatic construction method for EAI datasets. Our experiments
+Figure 10: AIRSPEED’s data generation process for virtual                               demonstrate the effectiveness of AIRSPEED in improving data gen-
+teleoperation system                                                                    eration efficiency and its outstanding compatibility advantages
+                                                                                        compared to other existing platforms, devices, and software. EAI
+                                                                                        is a rapidly developing field, and the questions of what data EAI
+                                                                                        model training requires, how to collect data, and how much data
+4.3     Data production performance                                                     is needed are still subjects that require exploration. We believe
+                                                                                        that AIRSPEED not only provides a data production platform to
+The data production performance of AIRSPEED is divided into two
+                                                                                        improve data production efficiency but also can help scholars more
+parts: the first part includes metrics related to the quality of data
+                                                                                        quickly explore the answers to these questions. In future work, we
+production, such as compression ratio and transmission latency;
+                                                                                        will further enhance the efficiency of AIRSPEED in data collection
+the second part consists of technical compatibility metrics.
+                                                                                        and generation and support more collection devices and simulation
+   Table 3 lists the metrics related to the quality of data production.
+                                                                                        platforms.
+For data collection, the Keyframe Selection Rate and Compression
+Rate can both reach up to 2%, the Compression Throughput can
+                                                                                        6     ACKNOWLEDGMENTS
+achieve at least 296MB/s, and the End-to-End Latency is as low as
+3ms. For Data Generation, the Data Alignment Latency does not                           This research was funded by Shenzhen Science and Technology Pro-
+exceed a maximum of 30ms.                                                               gram grant (KJZD20240903103259016), Guangdong Basic and Ap-
+   Table 4 demonstrates the compatibility advantages of AIRSPEED                        plied Basic Research Foundation (2024A1515012026, 2021A1515110700),
+compared to other existing data collection and production plat-                         and Longang District Shenzhen’s “Ten Action Plan” for Supporting
+forms, devices, or software. They include PATO [22], BestMan [28],                      Innovation Projects (LGKCSDPT 2024002, 2024003).
+Mimicgen [29], VitRob [30], EmbodiedCity [34], MetaUrban [35],
+Habitat 3.0 [33], GRUtopia [36], Robo-GS [46], and ORCA [47].                           REFERENCES
+                                                                                         [1] Shaoshan Liu. Shaping the outlook for the autonomy economy. Communications
+It can be observed that AIRSPEED has the most comprehensive                                  of the ACM, 67(6):10–12, 2024.
+compatibility in supporting various data collection and produc-                          [2] Rodney A Brooks. Intelligence without representation. Artificial intelligence,
+tion technologies, dataset construction, and open-source support.                            47(1-3):139–159, 1991.
+                                                                                         [3] Rolf Pfeifer and Christian Scheier. Understanding intelligence. MIT press, 2001.
+This showcases the advantage of AIRSPEED as a universal data                             [4] Fanqi Lin, Yingdong Hu, Pingyue Sheng, Chuan Wen, Jiacheng You, and Yang
+production platform.                                                                         Gao. Data scaling laws in imitation learning for robotic manipulation. arXiv
+, ,                                                                                                   X. Xia, B. Yu, X. Tong, J. Jiao, X. Ding, X. He, H. Tong, Y. Lin, N. Ding, S. Liu
+
+
+                                                    Table 4: Data production performance of AIRSPEED
+
+                                                            Data Collection                   Data Generation
+                                                                                                                            Dataset             Open
+                                Method                                                      Data        Virtual
+                                                 Teleoperation       Demonstration                                        Construction         Source
+                                                                                          synthesis teleoperation
+                                PATO                    !                   %                !            !                      %               !
+                               BestMan                  %                   %                !            %                      %               !
+                              Mimicgen                  %                   %                %            !                      %               !
+                                VitRob                  !                   %                %            !                      %               %
+                             EmbodiedCity               %                   %                !            !                      !               !
+                              MetaUrban                 %                   %                !            !                      !               !
+                              Habitat 3.0               %                   %                !            !                      !               !
+                              GRUtopia                  %                   %                !            !                      !               !
+                               Robo-GS                  %                   %                !            %                      %               !
+                                ORCA                    !                   %                !            !                      %               %
+                              AIRSPEED                  !                   !                !            !                      !               !
+
+
+     preprint arXiv:2410.18647, 2024.                                                        [20] Chi-Lam Cheang, Guangzeng Chen, Ya Jing, Tao Kong, Hang Li, Yifeng Li, Yuxiao
+ [5] Chenguang Yang, Jing Luo, and Ning Wang. Human-in-the-loop Learning and                      Liu, Hongtao Wu, Jiafeng Xu, Yichu Yang, et al. Gr-2: A generative video-
+     Control for Robot Teleoperation. Elsevier, 2023.                                             language-action model with web-scale knowledge for robot manipulation. arXiv
+ [6] Chen Wang, Haochen Shi, Weizhuo Wang, Ruohan Zhang, Li Fei-Fei, and C Karen                  preprint arXiv:2410.06158, 2024.
+     Liu. Dexcap: Scalable and portable mocap data collection system for dexterous           [21] Philipp Wu, Yide Shentu, Zhongke Yi, Xingyu Lin, and Pieter Abbeel. Gello: A
+     manipulation. arXiv preprint arXiv:2403.07788, 2024.                                         general, low-cost, and intuitive teleoperation framework for robot manipulators.
+ [7] Simone Fani, Simone Ciotti, Manuel G Catalano, Giorgio Grioli, Alessandro                    arXiv preprint arXiv:2309.13037, 2023.
+     Tognetti, Gaetano Valenza, Arash Ajoudani, and Matteo Bianchi. Simplifying              [22] Shivin Dass, Karl Pertsch, Hejia Zhang, Youngwoon Lee, Joseph J Lim, and
+     telerobotics: Wearability and teleimpedance improves human-robot interactions                Stefanos Nikolaidis. Pato: Policy assisted teleoperation for scalable robot data
+     in teleoperation. IEEE Robotics & Automation Magazine, 25(1):77–88, 2018.                    collection. arXiv preprint arXiv:2212.04708, 2022.
+ [8] Bin Fang, Fuchun Sun, Huaping Liu, Chunfang Liu, Di Guo, Bin Fang, Fuchun               [23] Younghyo Park, Jagdeep Singh Bhatia, Lars Ankile, and Pulkit Agrawal. Dex-
+     Sun, Huaping Liu, Chunfang Liu, and Di Guo. Learning from wearable-based                     hub and dart: Towards internet scale robot data collection. arXiv preprint
+     teleoperation demonstration. Wearable Technology for Robotic Manipulation and                arXiv:2411.02214, 2024.
+     Learning, pages 127–144, 2020.                                                          [24] Jacopo Panerati, Hehui Zheng, SiQi Zhou, James Xu, Amanda Prorok, and An-
+ [9] Ankur Handa, Karl Van Wyk, Wei Yang, Jacky Liang, Yu-Wei Chao, Qian Wan,                     gela P Schoellig. Learning to fly—a gym environment with pybullet physics for
+     Stan Birchfield, Nathan Ratliff, and Dieter Fox. Dexpilot: Vision-based teleopera-           reinforcement learning of multi-agent quadcopter control. In 2021 IEEE/RSJ In-
+     tion of dexterous robotic hand-arm system. In 2020 IEEE International Conference             ternational Conference on Intelligent Robots and Systems (IROS), pages 7512–7519.
+     on Robotics and Automation (ICRA), pages 9164–9170. IEEE, 2020.                              IEEE, 2021.
+[10] Wu Zhen and Lian Luan. Physical world to virtual reality–motion capture                 [25] Viktor Makoviychuk, Lukasz Wawrzyniak, Yunrong Guo, Michelle Lu, Kier Storey,
+     technology in dance creation. In Journal of Physics: Conference Series, volume               Miles Macklin, David Hoeller, Nikita Rudin, Arthur Allshire, Ankur Handa, et al.
+     1828, page 012097. IOP Publishing, 2021.                                                     Isaac gym: High performance gpu-based physics simulation for robot learning.
+[11] Ke Wan, Chengxi Li, Fo-Sing Lo, and Pai Zheng. A virtual reality-based immer-                arXiv preprint arXiv:2108.10470, 2021.
+     sive teleoperation system for remote human-robot collaborative manufacturing.           [26] Emanuel Todorov, Tom Erez, and Yuval Tassa. Mujoco: A physics engine for
+     Manufacturing Letters, 41:43–50, 2024.                                                       model-based control. In 2012 IEEE/RSJ international conference on intelligent
+[12] Shuang Li, Jiaxi Jiang, Philipp Ruppel, Hongzhuo Liang, Xiaojian Ma, Norman                  robots and systems, pages 5026–5033. IEEE, 2012.
+     Hendrich, Fuchun Sun, and Jianwei Zhang. A mobile robot hand-arm teleoper-              [27] Tianyuan Dai, Josiah Wong, Yunfan Jiang, Chen Wang, Cem Gokmen, Ruohan
+     ation system by vision and imu. In 2020 IEEE/RSJ International Conference on                 Zhang, Jiajun Wu, and Li Fei-Fei. Acdc: Automated creation of digital cousins
+     Intelligent Robots and Systems (IROS), pages 10900–10906. IEEE, 2020.                        for robust policy learning. arXiv e-prints, pages arXiv–2410, 2024.
+[13] Jorge Aldaco, Travis Armstrong, Robert Baruch, Jeff Bingham, Sanky Chan, Ken-           [28] Kui Yang, Nieqing Cao, Yan Ding, and Chao Chen. Bestman: A modular mobile
+     neth Draper, Debidatta Dwibedi, Chelsea Finn, Pete Florence, Spencer Goodrich,               manipulator platform for embodied ai with unified simulation-hardware apis.
+     et al. Aloha 2: An enhanced low-cost hardware for bimanual teleoperation. arXiv              arXiv preprint arXiv:2410.13407, 2024.
+     preprint arXiv:2405.02292, 2024.                                                        [29] Ajay Mandlekar, Soroush Nasiriany, Bowen Wen, Iretiayo Akinola, Yashraj
+[14] Zipeng Fu, Tony Z Zhao, and Chelsea Finn. Mobile aloha: Learning bimanual                    Narang, Linxi Fan, Yuke Zhu, and Dieter Fox. Mimicgen: A data generation
+     mobile manipulation with low-cost whole-body teleoperation. arXiv preprint                   system for scalable robot learning using human demonstrations. arXiv preprint
+     arXiv:2401.02117, 2024.                                                                      arXiv:2310.17596, 2023.
+[15] Brenna D Argall, Sonia Chernova, Manuela Veloso, and Brett Browning. A                  [30] Mahmoud Abdulsalam and Nabil Aouf. Vitrob pipeline: A seamless teleopera-
+     survey of robot learning from demonstration. Robotics and autonomous systems,                tion pipeline for advanced virtual reality-robot interface applied for precision
+     57(5):469–483, 2009.                                                                         agriculture. In 2023 IEEE International Conference on Robotics and Biomimetics
+[16] Shoulu Gong, Wenbo Li, Jiahao Wu, Bohan Feng, Zhiran Yi, Xinyu Guo, Wenming                  (ROBIO), pages 1–6. IEEE, 2023.
+     Zhang, and Lei Shao. A soft collaborative robot for contact-based intuitive human       [31] Abby O’Neill, Abdul Rehman, Abhiram Maddukuri, Abhishek Gupta, Abhishek
+     drag teaching. Advanced Science, page 2308835, 2024.                                         Padalkar, Abraham Lee, Acorn Pooley, Agrim Gupta, Ajay Mandlekar, Ajinkya
+[17] Cheng Chi, Zhenjia Xu, Chuer Pan, Eric Cousineau, Benjamin Burchfiel, Siyuan                 Jain, et al. Open x-embodiment: Robotic learning datasets and rt-x models: Open
+     Feng, Russ Tedrake, and Shuran Song. Universal manipulation interface: In-the-               x-embodiment collaboration 0. In 2024 IEEE International Conference on Robotics
+     wild robot teaching without in-the-wild robots. arXiv preprint arXiv:2402.10329,             and Automation (ICRA), pages 6892–6903. IEEE, 2024.
+     2024.                                                                                   [32] Zhiqiang Wang, Hao Zheng, Yunshuang Nie, Wenjun Xu, Qingwei Wang, Hua
+[18] Moo Jin Kim, Jiajun Wu, and Chelsea Finn. Giving robots a hand: Learning                     Ye, Zhe Li, Kaidong Zhang, Xuewen Cheng, Wanxi Dong, et al. All robots in
+     generalizable manipulation with eye-in-hand human video demonstrations. arXiv                one: A new standard and unified dataset for versatile, general-purpose embodied
+     preprint arXiv:2307.05959, 2023.                                                             agents. arXiv preprint arXiv:2408.10899, 2024.
+[19] Chen Wang, Linxi Fan, Jiankai Sun, Ruohan Zhang, Li Fei-Fei, Danfei Xu, Yuke            [33] Xavier Puig, Eric Undersander, Andrew Szot, Mikael Dallaire Cote, Tsung-Yen
+     Zhu, and Anima Anandkumar. Mimicplay: Long-horizon imitation learning by                     Yang, Ruslan Partsey, Ruta Desai, Alexander William Clegg, Michal Hlavac,
+     watching human play. arXiv preprint arXiv:2302.12422, 2023.                                  So Yeon Min, et al. Habitat 3.0: A co-habitat for humans, avatars and robots.
+                                                                                                  arXiv preprint arXiv:2310.13724, 2023.
+AIRSPEED: An Open-source Universal Data Production Platform for Embodied Artificial Intelligence                                                                            , ,
+
+
+[34] Chen Gao, Baining Zhao, Weichen Zhang, Jinzhu Mao, Jun Zhang, Zhiheng               [41] A Anbarasa Pandian and S Maheswari. A keyframe selection for summarization
+     Zheng, Fanhang Man, Jianjie Fang, Zile Zhou, Jinqiang Cui, et al. Embodiedcity:          of informative activities using clustering in surveillance videos. Multimedia Tools
+     A benchmark platform for embodied agent in real-world city environment. arXiv            and Applications, 83(3):7021–7034, 2024.
+     preprint arXiv:2410.09604, 2024.                                                    [42] Jianfan Chen, Qingquan Li, Wei Zhang, Bing Wang, and Dejin Zhang. A
+[35] Wayne Wu, Honglin He, Jack He, Yiran Wang, Chenda Duan, Zhizheng Liu,                    degradation-robust keyframe selection method based on image quality eval-
+     Quanyi Li, and Bolei Zhou. Metaurban: An embodied ai simulation platform for             uation for visual localization. IEEE Internet of Things Journal, 2024.
+     urban micromobility. arXiv preprint arXiv:2407.08725, 2024.                         [43] Oren Rippel and Lubomir Bourdev. Real-time adaptive image compression. In
+[36] Hanqing Wang, Jiahe Chen, Wensi Huang, Qingwei Ben, Tai Wang, Boyu Mi,                   International Conference on Machine Learning, pages 2922–2930. PMLR, 2017.
+     Tao Huang, Siheng Zhao, Yilun Chen, Sizhe Yang, et al. Grutopia: Dream general      [44] Katie Kang, Suneel Belkhale, Gregory Kahn, Pieter Abbeel, and Sergey Levine.
+     robots in a city at scale. arXiv preprint arXiv:2407.10943, 2024.                        Generalization through simulation: Integrating simulated and real data into deep
+[37] Steven Macenski, Tully Foote, Brian Gerkey, Chris Lalancette, and William                reinforcement learning for vision-based autonomous flight. In 2019 international
+     Woodall. Robot operating system 2: Design, architecture, and uses in the wild.           conference on robotics and automation (ICRA), pages 6008–6014. IEEE, 2019.
+     Science robotics, 7(66):eabm6074, 2022.                                             [45] Shaoshan Liu, Yuhao Zhu, Bo Yu, Jean-Luc Gaudiot, and Guang R Gao. Dataflow
+[38] Dora: Dataflow-oriented robotic application. https://dora-rs.ai/. Accessed: 2024-        accelerator architecture for autonomous machine computing. arXiv preprint
+     06-06.                                                                                   arXiv:2109.07047, 2021.
+[39] Rishabh Anand. Signals and systems. KHANNA PUBLISHING HOUSE, 2011.                  [46] Haozhe Lou, Yurong Liu, Yike Pan, Yiran Geng, Jianteng Chen, Wenlong Ma,
+[40] Nigel Joseph Bandeira Dias, Gustavo Teodoro Laureano, and Ronaldo Martins                Chenglong Li, Lin Wang, Hengzhen Feng, Lu Shi, et al. Robo-gs: A physics
+     Da Costa. Keyframe selection for visual localization and mapping tasks: A                consistent spatial-temporal model for robotic arm with hybrid representation.
+     systematic literature review. Robotics, 12(3):88, 2023.                                  arXiv preprint arXiv:2408.14873, 2024.
+                                                                                         [47] Orcaengine. http://www.orca3d.cn/. Accessed: 2024.
+

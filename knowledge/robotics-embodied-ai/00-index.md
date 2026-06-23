@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-06-11
+last_updated: 2026-06-23
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -52,6 +52,7 @@ sources:
 - `09-training-data-deep-dive.md`: 训练数据深度调研汇总页和并行研究入口，含 UMI v0 SOP/schema/客户数据包模板与 LeRobot 初学者教学入口。
 - `12-robotics-engineering-platforms-2026-06-04.md`: 机器人工程平台综合调研，覆盖数据、训练、评测、部署、真机推理和选型框架。
 - `13-robot-company-product-comparison-2026-06-08.md`: 主表机器人公司的产品型号全景对比，覆盖人形/轮式双臂、协作臂/工业机器人、AMR/移动操作的参数、技术路线、优缺点和待验证项。
+- [[research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]]: 系统拆解 AIRSPEED 的开源采集核心、论文三服务架构、技术转移叙事、性能 claim、版本边界和对中国具身数据基础设施的启发。
 - [[research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]: 基于 Thinking Partner 对话沉淀的职业方向锚点，聚焦企业决策者的成本、收入或风险痛点，以及零售后场/餐饮后厨/酒店后台等早期验证场景。
 - [[research-notes/retail-store-robotics-entry-scan-2026-06-10|线下零售门店机器人合作验证初扫]]: 验证中国大型零售公司是否已有足够多线下门店机器人/具身智能合作项目；第一轮结果为暂定样本 0/10，未通过 5/10 门槛但需继续补实公告/年报全文。
 - [[research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]: 按 1 年内真实订单或试点转生产证据，建立汽车制造、仓储物流、商业服务、电力/数据中心、医疗手术机器人等短期落地候选池。
@@ -68,3 +69,4 @@ sources:
 - [[_concepts/embodied-ai|Embodied AI]]
 - [[_concepts/robot-training-data|Robot Training Data]]
 - [[_concepts/universal-manipulation-interface|Universal Manipulation Interface]]
+- [[_entities/AIRSPEED|AIRSPEED]]

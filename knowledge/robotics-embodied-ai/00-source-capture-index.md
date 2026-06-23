@@ -1,6 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
+last_updated: 2026-06-23
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -21,9 +22,10 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 17 | 本轮新增并成功抽取的 raw artifact。 |
+| `ok` | 22 | 本轮新增并成功抽取的 raw artifact。 |
 | `fallback_html` | 3 | 本轮新增但正文抽取失败，已保存 HTML sidecar。 |
 | `manual_parse` | 1 | 本轮因 defuddle 失败，从网页内嵌结构化数据生成 Markdown。 |
+| `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
 | `failed` | 4 | defuddle 与 HTML fallback 都失败，需要浏览器、官方 PDF 或手工补采。 |
 
 ## 快速定位
@@ -64,6 +66,17 @@ aliases:
 |---|---|---|
 | [`SRC-robotics-125`](../../raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821.pdf) | [RoboAlign-R1 PDF](../../raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821.pdf) | arXiv PDF 已保存；摘要页 sidecar 为 [HTML](../../raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821-arxiv.html)。 |
 | [`SRC-robotics-126`](../../raw/robotics-embodied-ai/documents/modelscope-roboalign-r1-434219.md) | [ModelScope RoboAlign-R1 Markdown](../../raw/robotics-embodied-ai/documents/modelscope-roboalign-r1-434219.md) | defuddle 因 ModelScope `og:url` protocol-relative metadata 失败；已从 `window.__detail_data__` 生成 Markdown，并保存 [HTML](../../raw/robotics-embodied-ai/documents/modelscope-roboalign-r1-434219.html)。 |
+
+## AIRSPEED 数据生产平台来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-183`](../../raw/robotics-embodied-ai/documents/SRC-robotics-183-airspeed-project-page.html) | [AIRSPEED project page HTML](../../raw/robotics-embodied-ai/documents/SRC-robotics-183-airspeed-project-page.html) | 官网页面；web extraction 不稳定，改用 curl 保存 HTML。 |
+| [`SRC-robotics-184`](../../raw/robotics-embodied-ai/documents/SRC-robotics-184-airspeed-technical-report.pdf) | [AIRSPEED technical report PDF](../../raw/robotics-embodied-ai/documents/SRC-robotics-184-airspeed-technical-report.pdf) / [TXT](../../raw/robotics-embodied-ai/documents/SRC-robotics-184-airspeed-technical-report.txt) | 技术报告，已用 `pdftotext -layout` 生成文本 sidecar。 |
+| [`SRC-robotics-185`](../../raw/robotics-embodied-ai/documents/SRC-robotics-185-eai-data-engineering-survey.pdf) | [EAI data engineering survey PDF](../../raw/robotics-embodied-ai/documents/SRC-robotics-185-eai-data-engineering-survey.pdf) / [TXT](../../raw/robotics-embodied-ai/documents/SRC-robotics-185-eai-data-engineering-survey.txt) | EAI 数据工程综述，已生成文本 sidecar。 |
+| [`SRC-robotics-186`](../../raw/robotics-embodied-ai/documents/SRC-robotics-186-airspeed-technology-transfer-report.pdf) | [Technology transfer report PDF](../../raw/robotics-embodied-ai/documents/SRC-robotics-186-airspeed-technology-transfer-report.pdf) / [TXT](../../raw/robotics-embodied-ai/documents/SRC-robotics-186-airspeed-technology-transfer-report.txt) | 英文技术转移报告，商业化 claim 需独立验证。 |
+| [`SRC-robotics-187`](../../raw/robotics-embodied-ai/documents/SRC-robotics-187-airspeed-technology-transfer-report-cn.pdf) | [中文技术转移报告 PDF](../../raw/robotics-embodied-ai/documents/SRC-robotics-187-airspeed-technology-transfer-report-cn.pdf) / [TXT](../../raw/robotics-embodied-ai/documents/SRC-robotics-187-airspeed-technology-transfer-report-cn.txt) | 中文技术转移报告，包含客户、融资、标准参与等待验证 claim。 |
+| [`SRC-robotics-188`](../../raw/robotics-embodied-ai/documents/SRC-robotics-188-airspeed-github-readme.md) | [AIRSPEED GitHub README](../../raw/robotics-embodied-ai/documents/SRC-robotics-188-airspeed-github-readme.md) | 当前 v1.3 开源能力边界，用于校正官网/论文完整架构表述。 |
 
 ## UMI 设备购买线索来源
 

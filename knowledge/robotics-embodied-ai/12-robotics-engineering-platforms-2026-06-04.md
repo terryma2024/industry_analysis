@@ -2,7 +2,7 @@
 title: 机器人工程平台综合调研
 type: synthesis
 date_created: 2026-06-04
-last_updated: 2026-06-08
+last_updated: 2026-06-23
 sources:
   - raw/robotics-embodied-ai/documents/SRC-robotics-014-unitree-g1-d-end-to-end-platform-for-humanoid-robot.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-052-lerobot-github-repository.md
@@ -20,6 +20,9 @@ sources:
   - raw/robotics-embodied-ai/documents/SRC-robotics-123-agibot-genie-studio.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-124-embodiflow-platform-guides.md
   - raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821.pdf
+  - raw/robotics-embodied-ai/documents/SRC-robotics-183-airspeed-project-page.html
+  - raw/robotics-embodied-ai/documents/SRC-robotics-184-airspeed-technical-report.pdf
+  - raw/robotics-embodied-ai/documents/SRC-robotics-188-airspeed-github-readme.md
 tags:
   - industry/robotics-embodied-ai
   - robotics-platform
@@ -37,7 +40,7 @@ aliases:
 # 机器人工程平台综合调研
 
 > [!summary]
-> 机器人工程平台不是单个训练框架，也不是 ROS、仿真器或数据标注系统的任意一种。真正有选型价值的平台，要把 **数据采集/治理、训练、评测、部署、真机推理、回流迭代** 连成闭环。当前生态还没有一个“全能标准平台”，更现实的做法是按目标组合：`LeRobot/FluxVLA/OpenPI` 做学习与模型工程，`Isaac Sim/Lab` 做仿真与强化学习，`ROS/MoveIt` 接真机控制，`EmbodiFlow/Unitree G1-D/Genie Studio` 提供国内企业级数据与硬件绑定工作流。
+> 机器人工程平台不是单个训练框架，也不是 ROS、仿真器或数据标注系统的任意一种。真正有选型价值的平台，要把 **数据采集/治理、训练、评测、部署、真机推理、回流迭代** 连成闭环。当前生态还没有一个“全能标准平台”，更现实的做法是按目标组合：`LeRobot/FluxVLA/OpenPI` 做学习与模型工程，`Isaac Sim/Lab` 做仿真与强化学习，`ROS/MoveIt` 接真机控制，`EmbodiFlow/AIRSPEED/Unitree G1-D/Genie Studio` 提供国内数据生产、企业化和硬件绑定工作流。
 
 ## 一句话判断
 
@@ -77,6 +80,7 @@ aliases:
 | Unitree G1-D | 硬件绑定端到端平台 | 数据采集、标注、训练、仿真评测、模型部署、G1-D 本体 | 快速跑通宇树本体上的完整链路，适合科研/开发者/场景验证 | 本体和供应商锁定较强，跨品牌复用能力待验证 |
 | Agibot Genie Studio | 国内整机厂一站式开发平台 | 数据采集、数据集、训练微调、仿真评测、模型构建部署 | 智元生态内开发和合作伙伴交付 | 自动抽取为 fallback HTML；需后续手工验证细节 |
 | IO-AI EmbodiFlow | 企业数据闭环平台 | 数据采集、标注、QC、导出、训练/推理管理、权限和私有化 | 做机器人数据工厂、客户项目交付、LeRobot/HDF5/MCAP 导出 | 更偏数据平台，不是最强模型/仿真底座 |
+| AIRSPEED | 开源具身数据生产平台 | 当前 GitHub v1.3 开源接口和 Data Collection Service；论文/官网定义覆盖数据采集、仿真生成、数据集构建 | 做 ROS2/YAML/HDF5/LeRobot 转换的开源采集核心，研究中国具身数据基础设施技术转移样本 | 当前开源能力与论文/报告完整三服务架构存在版本差异；商业化 claim 需独立验证 |
 | robomimic | 模仿学习研究框架 | demonstration 数据和算法 | 离线模仿学习 baseline、复现实验 | 不是真机工程平台 |
 | LIBERO | 评测 benchmark | lifelong robot learning、任务/数据/算法/策略评测 | VLA/IL 模型评测、知识迁移研究 | 仿真 benchmark，不能替代真实客户场景 |
 | ManiSkill | 仿真和数据生成 benchmark | 机器人仿真、数据生成、泛化评测 | 规模化仿真任务、策略评测 | 当前 raw 为 fallback HTML；工业真机部署需其他栈 |
@@ -189,6 +193,7 @@ OpenPI 和 OpenVLA 很重要，但它们更像模型工程包。完整平台需�
 - 国内厂商平台的外部客户采用、真实出货、复购和跨本体迁移能力尚缺少公开硬证据。
 - LeRobot、FluxVLA、OpenPI、OpenVLA 都在快速迭代，具体支持的模型、格式和 API 需要按版本持续复核。
 - 真机推理的安全、合规、接管和客户现场数据授权，是当前公开文档覆盖不足但商业化很关键的部分。
+- AIRSPEED 需要代码级验证：当前 GitHub v1.3 与官网/技术报告/技术转移报告的完整三服务架构不完全等价；应核验 license、release、converter、ROS2 mock 采集和 LeRobot v3 导出。
 
 ## 关联连接
 
@@ -196,7 +201,9 @@ OpenPI 和 OpenVLA 很重要，但它们更像模型工程包。完整平台需�
 - [[02-technology-and-products|机器人技术与产品]]
 - [[06-career-view|机器人求职与学习视角]]
 - [[09-training-data-deep-dive|机器人训练数据深度调研]]
+- [[research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]]
 - [[_entities/HuggingFaceLeRobot|Hugging Face LeRobot]]
+- [[_entities/AIRSPEED|AIRSPEED]]
 - [[_entities/LimXDynamics|LimX Dynamics]]
 - [[_concepts/robot-training-data|Robot Training Data]]
 - [[_concepts/vision-language-tactile-action|Vision-Language-Tactile-Action]]
