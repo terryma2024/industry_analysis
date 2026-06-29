@@ -40,24 +40,24 @@ status: draft
 
 | 公司 | 已识别产品型号/系列 | 形态 | 技术路线 | 主要场景 | 证据 |
 |---|---|---|---|---|---|
-| 优必选 UBTECH | Walker S2、Walker S1、Walker S、Walker C、Walker X、Walker、Cruzr S2、熊猫机器人、教育机器人/UGOT/uKit 等 | 双足人形、商服轮式、教育硬件 | 全栈人形硬件、ROSA、U-SLAM/3D 语义导航、工业场景多机协同；S2 强调自主换电 | 汽车/3C/物流、商服、教育、家庭服务探索 | `SRC-robotics-009`、`SRC-robotics-010`、`SRC-robotics-135`-`SRC-robotics-139` |
-| 宇树 Unitree | G1、G1 EDU、G1-D Standard/Flagship、H1、H1-2 | 小型/全尺寸人形、轮式双臂数据平台 | 标准化本体、低价硬件、PMSM 关节、LiDAR+深度相机、端到端数据/训练平台、UnifoLM-WMA | 科研、开发者、教育、工业/服务探索 | `SRC-robotics-012`、`SRC-robotics-013`、`SRC-robotics-014` |
-| 智元 AGIBOT | A2、A2-W、A2-Max、G1、X1、X2、C5、Genie Studio、AgiBot World | 双足/轮式通用机器人、平台 | 整机 + 具身大模型/原子技能 + 数据采集/训练/部署平台 | 工业柔性制造、服务、科研、数据集 | `SRC-robotics-015`、`SRC-robotics-016`、`SRC-robotics-044`、`SRC-robotics-123`、`SRC-robotics-140` |
-| 逐际动力 LimX | Oli、TRON 1、TRON 2、FluxVLA | 全尺寸人形、多形态双足/轮腿平台 | 强运动控制、模块化脚端、Python/SDK/URDF/Sim2Real、VLA 数据-训练-推理工具链 | 科研开发、教育展示、巡检、工业操作探索 | `SRC-robotics-104`、`SRC-robotics-106`、`SRC-robotics-107`、`SRC-robotics-108` |
-| 星动纪元 RobotEra | L7、Q5、M7、XHAND 1、XHAND 1 Lite、ERA-42 | 双足人形、灵巧手、VLA | 全栈人形 + 灵巧手 + VLA 模型；L7 主打 55 DoF/171 cm/双臂 20 kg | 物流分拣、制造、接待、商场导购、教育/医疗导诊 | `SRC-robotics-021`、`SRC-robotics-141`、`SRC-robotics-142` |
-| 银河通用 Galbot | Galbot G1 | 轮式升降双臂通用机器人 | 轮式底盘 + 升降/折叠机构 + 长臂操作 + 多模态/具身大脑 | 零售、商业服务、仓储/货架操作 | `SRC-robotics-143` |
-| 星海图 Galaxea | R1 Pro、R1、R1 Lite、A1、G1 夹爪/开发文档 | 轮式双臂科研/数采平台 | 双臂 + 躯干升降 + 三舵轮底盘 + 多相机/LiDAR + Jetson Orin | 科研、数据采集、场景部署 | `SRC-robotics-050`、`SRC-robotics-092`、`SRC-robotics-144` |
-| 自变量 X2Robot | Quantum 2 / 量子 2、WALL-A 操作大模型 | 轮式仿人形机器人 + 模型 | 端到端操作大模型，百亿级参数，软硬件联合设计 | 工业操作、家庭/商业服务探索 | `SRC-robotics-022` |
-| 魔法原子 MagicLab | MagicBot 系列、四足/人形产品线（型号待细化） | 人形、四足 | 具身智能 + 场景订单，强调表演/大健康/商业场景 | 工业、商业、大健康、展示 | `SRC-robotics-023` |
-| 越疆 DOBOT | Atom、RoboPilot、X-Trainer、Hexplorer、Rover X1、CR 30H、CRA/CRAF/CRA-IP68、CR20A、Nova 2/5、MG400、M1 Pro、Magician E6/Magician | 人形、遥操作/数采、六足/四足、协作臂、SCARA/桌面机器人 | 协作臂制造 know-how 上探具身；CR/CRA 系列工业协作，Atom/Rover/X-Trainer 扩展具身形态 | 工业、商业、科研教育、家庭探索 | `SRC-robotics-024`、`SRC-robotics-145`、`SRC-robotics-146` |
-| 节卡 JAKA | EI Robot、Kargo、K1、Lumi、S3 移动作业机器人、EVO 平台、Zu3/5/7/12/18/20/30、Pro5/12/16、S5/S12、AL/A/Mini、Lens/力控组件 | 具身作业平台、协作臂、移动操作 | 协作臂 + 视觉/力控 + 移动作业，强调从点位编程到作业泛化 | 工业制造、3C、新能源、物流、科研教育 | `SRC-robotics-025`、`SRC-robotics-147`、`SRC-robotics-148` |
-| 遨博 AUBO | i3/i5/i10/i16/i20、iS/iH/C 等系列（手册待补） | 协作机器人 | 开放架构协作臂，3-20 kg 负载覆盖，部分系列高性能/高防护 | 3C、汽车、医疗、物流、教育 | `SRC-robotics-026`、`SRC-robotics-149` |
-| 新松 SIASUN | SA/SCARA、SR 工业机器人、B/D/FP/P-T/G 系列移动机器人、重载/复合/输送 AMR | 工业机器人、AMR、复合机器人 | 传统工业机器人 + 移动机器人 + IMRS 2.0 调度平台 | 汽车、新能源、半导体、物流、光伏 | `SRC-robotics-027`、`SRC-robotics-150`、`SRC-robotics-151` |
-| 埃斯顿 ESTUN | ER 系列、iER 大负载、SCARA、UNO/协作探索 | 工业机器人 | 国产工业机器人本体 + 伺服/控制基础，3-1200 kg 负载覆盖 | 光伏、锂电、汽车、电子、重载搬运 | `SRC-robotics-155` |
-| 埃夫特 EFORT | ER8/10/12/15/20/25/35/50/70/150/210、ARC 系列、SCARA | 工业机器人 | 六轴工业机器人、弧焊/中小负载/中大负载和 SCARA 系列 | 汽车、3C、光伏、锂电、金属加工 | `SRC-robotics-028`、`SRC-robotics-154` |
-| 极智嘉 Geek+ | P 系列货到人、RoboShuttle/C200 系列、PopPick、拣选/分拣/搬运 AMR | 仓储 AMR、箱到人、货到人 | AMR + 仓储软件 + 多机器人调度，重在履约效率和存储密度 | 电商、零售、3PL、制造、汽车 | `SRC-robotics-029`、`SRC-robotics-152` |
-| 快仓 Quicktron | M-100、C-Series、Bin-to-Person 等产品线 | 仓储 AMR、料箱机器人 | AMR + 仓储系统，面向电商/零售/制造物流 | 电商、零售、汽车、医药、制造 | `SRC-robotics-030`、`SRC-robotics-153` |
-| 优艾智合 YOUIBOT | P200、巡检/复合移动机器人、半导体/能源/新能源解决方案 | 工业移动机器人、移动操作/巡检 | AMR + 机械臂/传感 + 工业软件系统 | 半导体、能源化工、新能源、3C | `SRC-robotics-031` |
+| 优必选 UBTECH | Walker S2、Walker S1、Walker S、Walker C、Walker X、Walker、Cruzr S2、熊猫机器人、教育机器人/UGOT/uKit 等 | 双足人形、商服轮式、教育硬件 | 全栈人形硬件、ROSA、U-SLAM/3D 语义导航、工业场景多机协同；S2 强调自主换电 | 汽车/3C/物流、商服、教育、家庭服务探索 | [`SRC-robotics-009`](../../raw/robotics-embodied-ai/documents/SRC-robotics-009-ubtech-robotics-hkex-issuer-announcements-page.md)、[`SRC-robotics-010`](../../raw/robotics-embodied-ai/documents/SRC-robotics-010-ubtech-latest-announcements-and-circulars.md)、[[00-source-capture-index|SRC-robotics-135]]-[[00-source-capture-index|SRC-robotics-139]] |
+| 宇树 Unitree | G1、G1 EDU、G1-D Standard/Flagship、H1、H1-2 | 小型/全尺寸人形、轮式双臂数据平台 | 标准化本体、低价硬件、PMSM 关节、LiDAR+深度相机、端到端数据/训练平台、UnifoLM-WMA | 科研、开发者、教育、工业/服务探索 | [`SRC-robotics-012`](../../raw/robotics-embodied-ai/documents/SRC-robotics-012-unitree-g1-humanoid-robot-product-page.md)、[`SRC-robotics-013`](../../raw/robotics-embodied-ai/documents/SRC-robotics-013-unitree-h1-humanoid-robot-product-page.md)、[`SRC-robotics-014`](../../raw/robotics-embodied-ai/documents/SRC-robotics-014-unitree-g1-d-end-to-end-platform-for-humanoid-robot.md) |
+| 智元 AGIBOT | A2、A2-W、A2-Max、G1、X1、X2、C5、Genie Studio、AgiBot World | 双足/轮式通用机器人、平台 | 整机 + 具身大模型/原子技能 + 数据采集/训练/部署平台 | 工业柔性制造、服务、科研、数据集 | [`SRC-robotics-015`](../../raw/robotics-embodied-ai/documents/SRC-robotics-015-agibot-a2-product-page.md)、[`SRC-robotics-016`](../../raw/robotics-embodied-ai/documents/SRC-robotics-016-agibot-products-page.md)、[`SRC-robotics-044`](../../raw/robotics-embodied-ai/documents/SRC-robotics-044-agibot-open-agibot-world-2026.md)、[`SRC-robotics-123`](../../raw/robotics-embodied-ai/documents/SRC-robotics-123-agibot-genie-studio.md)、[[00-source-capture-index|SRC-robotics-140]] |
+| 逐际动力 LimX | Oli、TRON 1、TRON 2、FluxVLA | 全尺寸人形、多形态双足/轮腿平台 | 强运动控制、模块化脚端、Python/SDK/URDF/Sim2Real、VLA 数据-训练-推理工具链 | 科研开发、教育展示、巡检、工业操作探索 | [`SRC-robotics-104`](../../raw/robotics-embodied-ai/documents/SRC-robotics-104-limx-tron-1-product-page.md)、[`SRC-robotics-106`](../../raw/robotics-embodied-ai/documents/SRC-robotics-106-limx-oli-product-page.md)、[`SRC-robotics-107`](../../raw/robotics-embodied-ai/documents/SRC-robotics-107-limx-tron-2-product-page.md)、[`SRC-robotics-108`](../../raw/robotics-embodied-ai/documents/SRC-robotics-108-fluxvla-engine-documentation.md) |
+| 星动纪元 RobotEra | L7、Q5、M7、XHAND 1、XHAND 1 Lite、ERA-42 | 双足人形、灵巧手、VLA | 全栈人形 + 灵巧手 + VLA 模型；L7 主打 55 DoF/171 cm/双臂 20 kg | 物流分拣、制造、接待、商场导购、教育/医疗导诊 | [`SRC-robotics-021`](../../raw/robotics-embodied-ai/documents/SRC-robotics-021-robotera-official-website.md)、[[00-source-capture-index|SRC-robotics-141]]、[[00-source-capture-index|SRC-robotics-142]] |
+| 银河通用 Galbot | Galbot G1 | 轮式升降双臂通用机器人 | 轮式底盘 + 升降/折叠机构 + 长臂操作 + 多模态/具身大脑 | 零售、商业服务、仓储/货架操作 | [[00-source-capture-index|SRC-robotics-143]] |
+| 星海图 Galaxea | R1 Pro、R1、R1 Lite、A1、G1 夹爪/开发文档 | 轮式双臂科研/数采平台 | 双臂 + 躯干升降 + 三舵轮底盘 + 多相机/LiDAR + Jetson Orin | 科研、数据采集、场景部署 | [`SRC-robotics-050`](../../raw/robotics-embodied-ai/documents/SRC-robotics-050-galaxea-company-about.md)、[`SRC-robotics-092`](../../raw/robotics-embodied-ai/documents/SRC-robotics-092-galaxea-open-world-dataset.md)、[[00-source-capture-index|SRC-robotics-144]] |
+| 自变量 X2Robot | Quantum 2 / 量子 2、WALL-A 操作大模型 | 轮式仿人形机器人 + 模型 | 端到端操作大模型，百亿级参数，软硬件联合设计 | 工业操作、家庭/商业服务探索 | [`SRC-robotics-022`](../../raw/robotics-embodied-ai/documents/SRC-robotics-022-x2robot-official-website.md) |
+| 魔法原子 MagicLab | MagicBot 系列、四足/人形产品线（型号待细化） | 人形、四足 | 具身智能 + 场景订单，强调表演/大健康/商业场景 | 工业、商业、大健康、展示 | [`SRC-robotics-023`](../../raw/robotics-embodied-ai/documents/SRC-robotics-023-magiclab-official-website.md) |
+| 越疆 DOBOT | Atom、RoboPilot、X-Trainer、Hexplorer、Rover X1、CR 30H、CRA/CRAF/CRA-IP68、CR20A、Nova 2/5、MG400、M1 Pro、Magician E6/Magician | 人形、遥操作/数采、六足/四足、协作臂、SCARA/桌面机器人 | 协作臂制造 know-how 上探具身；CR/CRA 系列工业协作，Atom/Rover/X-Trainer 扩展具身形态 | 工业、商业、科研教育、家庭探索 | [`SRC-robotics-024`](../../raw/robotics-embodied-ai/documents/SRC-robotics-024-dobot-official-website.md)、[[00-source-capture-index|SRC-robotics-145]]、[[00-source-capture-index|SRC-robotics-146]] |
+| 节卡 JAKA | EI Robot、Kargo、K1、Lumi、S3 移动作业机器人、EVO 平台、Zu3/5/7/12/18/20/30、Pro5/12/16、S5/S12、AL/A/Mini、Lens/力控组件 | 具身作业平台、协作臂、移动操作 | 协作臂 + 视觉/力控 + 移动作业，强调从点位编程到作业泛化 | 工业制造、3C、新能源、物流、科研教育 | [`SRC-robotics-025`](../../raw/robotics-embodied-ai/documents/SRC-robotics-025-jaka-official-website.md)、[[00-source-capture-index|SRC-robotics-147]]、[[00-source-capture-index|SRC-robotics-148]] |
+| 遨博 AUBO | i3/i5/i10/i16/i20、iS/iH/C 等系列（手册待补） | 协作机器人 | 开放架构协作臂，3-20 kg 负载覆盖，部分系列高性能/高防护 | 3C、汽车、医疗、物流、教育 | [`SRC-robotics-026`](../../raw/robotics-embodied-ai/documents/SRC-robotics-026-aubo-robotics-official-website.md)、[[00-source-capture-index|SRC-robotics-149]] |
+| 新松 SIASUN | SA/SCARA、SR 工业机器人、B/D/FP/P-T/G 系列移动机器人、重载/复合/输送 AMR | 工业机器人、AMR、复合机器人 | 传统工业机器人 + 移动机器人 + IMRS 2.0 调度平台 | 汽车、新能源、半导体、物流、光伏 | [`SRC-robotics-027`](../../raw/robotics-embodied-ai/documents/SRC-robotics-027-siasun-official-website.md)、[[00-source-capture-index|SRC-robotics-150]]、[[00-source-capture-index|SRC-robotics-151]] |
+| 埃斯顿 ESTUN | ER 系列、iER 大负载、SCARA、UNO/协作探索 | 工业机器人 | 国产工业机器人本体 + 伺服/控制基础，3-1200 kg 负载覆盖 | 光伏、锂电、汽车、电子、重载搬运 | [[00-source-capture-index|SRC-robotics-155]] |
+| 埃夫特 EFORT | ER8/10/12/15/20/25/35/50/70/150/210、ARC 系列、SCARA | 工业机器人 | 六轴工业机器人、弧焊/中小负载/中大负载和 SCARA 系列 | 汽车、3C、光伏、锂电、金属加工 | [`SRC-robotics-028`](../../raw/robotics-embodied-ai/documents/SRC-robotics-028-efort-official-website.md)、[[00-source-capture-index|SRC-robotics-154]] |
+| 极智嘉 Geek+ | P 系列货到人、RoboShuttle/C200 系列、PopPick、拣选/分拣/搬运 AMR | 仓储 AMR、箱到人、货到人 | AMR + 仓储软件 + 多机器人调度，重在履约效率和存储密度 | 电商、零售、3PL、制造、汽车 | [`SRC-robotics-029`](../../raw/robotics-embodied-ai/documents/SRC-robotics-029-geek-company-page.md)、[[00-source-capture-index|SRC-robotics-152]] |
+| 快仓 Quicktron | M-100、C-Series、Bin-to-Person 等产品线 | 仓储 AMR、料箱机器人 | AMR + 仓储系统，面向电商/零售/制造物流 | 电商、零售、汽车、医药、制造 | [`SRC-robotics-030`](../../raw/robotics-embodied-ai/documents/SRC-robotics-030-quicktron-official-website.md)、[[00-source-capture-index|SRC-robotics-153]] |
+| 优艾智合 YOUIBOT | P200、巡检/复合移动机器人、半导体/能源/新能源解决方案 | 工业移动机器人、移动操作/巡检 | AMR + 机械臂/传感 + 工业软件系统 | 半导体、能源化工、新能源、3C | [`SRC-robotics-031`](../../raw/robotics-embodied-ai/documents/SRC-robotics-031-youibot-official-website.md) |
 
 ## 通用具身/人形与轮式双臂型号
 
@@ -141,7 +141,7 @@ status: draft
 
 ## 待补任务
 
-- 为 `SRC-robotics-135` 至 `SRC-robotics-155` 执行正式 raw capture，更新 `source_capture_manifest.csv`。
+- 为 [[00-source-capture-index|SRC-robotics-135]] 至 [[00-source-capture-index|SRC-robotics-155]] 执行正式 raw capture，更新 `source_capture_manifest.csv`。
 - 从产品手册补齐：JAKA Zu/Pro/S/A/Mini 全型号参数，DOBOT CR/CRA/Nova/Atom/Rover/X-Trainer，AUBO i/iS/C 系列，Quicktron/YOUIBOT 型号参数。
 - 为优必选、宇树、智元、逐际、星动、Galbot/Galaxea 各建或更新 entity 页，沉淀“产品矩阵 + 技术路线 + 商业化证据 + 待验证问题”。
 - 继续维护 [robot_company_product_models_2026-06-08.csv](../../raw/robotics-embodied-ai/data/robot_company_product_models_2026-06-08.csv)，把后续手册抽取出的精确 SKU 参数补进去。

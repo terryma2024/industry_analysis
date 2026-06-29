@@ -27,7 +27,7 @@ Scale AI 把“人工标注和数据整理”这种看起来低端、脏、重�
 
 ## 关键纠偏
 
-- **不是完整收购。** 2025 年 Meta 交易更准确地说是“战略投资 + 创始人加入 Meta + 少数股权”，而不是 Meta 买下整个 Scale AI。Scale 官方强调公司仍独立运营，且客户数据不与 Meta 共享。证据见 `SRC-ai-008`、`SRC-ai-009`、`SRC-ai-010`。
+- **不是完整收购。** 2025 年 Meta 交易更准确地说是“战略投资 + 创始人加入 Meta + 少数股权”，而不是 Meta 买下整个 Scale AI。Scale 官方强调公司仍独立运营，且客户数据不与 Meta 共享。证据见 [`SRC-ai-008`](../../../raw/ai/documents/SRC-ai-008-scale-ai-announces-next-phase-of-company-evolution.md)、[`SRC-ai-009`](../../../raw/ai/documents/SRC-ai-009-customer-trust-and-scale-meta-deal.md)、[`SRC-ai-010`](../../../raw/ai/documents/SRC-ai-010-scale-ai-not-winding-down-following-meta-deal-interim-ceo-says.md)。
 - **Scale AI 的核心不是低价标注。** 它真正的战略价值在于任务拆解、质量控制、数据工作流、客户集成、专家网络和模型评测能力。
 - **Scale AI 的赛道一直在迁移。** 从通用人力任务，到自动驾驶数据，再到大模型后训练和评测；每一轮 AI 周期，它都把“数据瓶颈”重新定义了一次。
 
@@ -35,16 +35,16 @@ Scale AI 把“人工标注和数据整理”这种看起来低端、脏、重�
 
 | 阶段 | 时间 | 关键事件 | 战略意义 | 证据 |
 |---|---:|---|---|---|
-| 起点：人力任务 API | 2016 | Alexandr Wang 与 Lucy Guo 参加 Y Combinator，早期思路是通过 API 调用人工任务。 | 先把人工劳动产品化、API 化，而不是一开始做模型。 | `SRC-ai-001` |
-| 找到杀手场景 | 2016-2018 | 自动驾驶公司需要大规模图像、视频、3D 点云标注，Scale 从通用任务转向训练数据平台。 | 自动驾驶给了 Scale 第一个高频、高预算、高复杂度客户场景。 | `SRC-ai-001`, `SRC-ai-002` |
-| 训练数据平台成型 | 2018 | Series B 融资 1800 万美元，公开叙事转向 human intelligence + machine learning 的训练数据服务。 | 从众包任务工具升级为 AI 数据基础设施供应商。 | `SRC-ai-002` |
-| 独角兽化 | 2019 | Series C 融资 1 亿美元，估值超过 10 亿美元。 | 把“AI 的瓶颈是高质量标注数据”讲成可融资的基础设施故事。 | `SRC-ai-003` |
-| 商业扩张 | 2020-2021 | 2020 年 Series D 后估值约 35 亿美元；2021 年 Series E 后估值约 73 亿美元。 | 自动驾驶、视觉 AI 和企业数据服务继续放大，Scale 进入高估值 AI 基础设施公司序列。 | `SRC-ai-004`, `SRC-ai-005` |
-| 政府/国防线 | 2022 | 获美国国防部近 2.5 亿美元 BPA 合同，服务 AI 测试、评估、图像分析、自治系统、NLP 等方向。 | 从商业 AI 数据公司扩展为美国政府 AI 基础设施供应商。 | `SRC-ai-006` |
-| 生成式 AI 红利 | 2022-2024 | 大模型爆发后，Scale 将服务重心扩展到 SFT、RLHF、DPO、红队、模型评测和专家数据。 | “标注”升级为“后训练数据工程”和“模型可靠性基础设施”。 | `SRC-ai-007` |
-| Series F | 2024 | 融资 10 亿美元，估值约 138 亿美元；投资方包括 Amazon、Meta、Intel、AMD、Qualcomm 等。 | Scale 成为多个 AI 大厂都想绑定的数据供应链节点。 | `SRC-ai-007` |
-| Meta 战略投资 | 2025 | Meta 投资约 143 亿美元，获得约 49% 少数股权；Alexandr Wang 加入 Meta。 | Meta 获得数据基础设施经验和关键人才；Scale 获得更高战略估值，但中立性受到考验。 | `SRC-ai-008`, `SRC-ai-009`, `SRC-ai-010`, `SRC-ai-011` |
-| 后交易阶段 | 2025-2026 | Scale 强调仍独立运营、客户数据隔离，并继续推进企业、政府、评测和数据业务。 | 交易后的核心问题变成：Scale 能否继续被 Meta 竞争对手信任。 | `SRC-ai-009`, `SRC-ai-011`, `SRC-ai-012` |
+| 起点：人力任务 API | 2016 | Alexandr Wang 与 Lucy Guo 参加 Y Combinator，早期思路是通过 API 调用人工任务。 | 先把人工劳动产品化、API 化，而不是一开始做模型。 | [`SRC-ai-001`](../../../raw/ai/documents/SRC-ai-001-scale-yc-company-post.md) |
+| 找到杀手场景 | 2016-2018 | 自动驾驶公司需要大规模图像、视频、3D 点云标注，Scale 从通用任务转向训练数据平台。 | 自动驾驶给了 Scale 第一个高频、高预算、高复杂度客户场景。 | [`SRC-ai-001`](../../../raw/ai/documents/SRC-ai-001-scale-yc-company-post.md), [`SRC-ai-002`](../../../raw/ai/documents/SRC-ai-002-scale-announces-series-b-funding.md) |
+| 训练数据平台成型 | 2018 | Series B 融资 1800 万美元，公开叙事转向 human intelligence + machine learning 的训练数据服务。 | 从众包任务工具升级为 AI 数据基础设施供应商。 | [`SRC-ai-002`](../../../raw/ai/documents/SRC-ai-002-scale-announces-series-b-funding.md) |
+| 独角兽化 | 2019 | Series C 融资 1 亿美元，估值超过 10 亿美元。 | 把“AI 的瓶颈是高质量标注数据”讲成可融资的基础设施故事。 | [`SRC-ai-003`](../../../raw/ai/documents/SRC-ai-003-scale-ai-series-c.md) |
+| 商业扩张 | 2020-2021 | 2020 年 Series D 后估值约 35 亿美元；2021 年 Series E 后估值约 73 亿美元。 | 自动驾驶、视觉 AI 和企业数据服务继续放大，Scale 进入高估值 AI 基础设施公司序列。 | [`SRC-ai-004`](../../../raw/ai/documents/SRC-ai-004-scale-ai-breaking-even-after-it-scaled-back-hiring.md), [`SRC-ai-005`](../../../raw/ai/documents/SRC-ai-005-scale-ai-scores-325-million-to-grow-ai-solution.md) |
+| 政府/国防线 | 2022 | 获美国国防部近 2.5 亿美元 BPA 合同，服务 AI 测试、评估、图像分析、自治系统、NLP 等方向。 | 从商业 AI 数据公司扩展为美国政府 AI 基础设施供应商。 | [`SRC-ai-006`](../../../raw/ai/documents/SRC-ai-006-scale-ai-awarded-250m-ai-contract-by-department-of-defense.md) |
+| 生成式 AI 红利 | 2022-2024 | 大模型爆发后，Scale 将服务重心扩展到 SFT、RLHF、DPO、红队、模型评测和专家数据。 | “标注”升级为“后训练数据工程”和“模型可靠性基础设施”。 | [`SRC-ai-007`](../../../raw/ai/documents/SRC-ai-007-scale-ai-series-f.md) |
+| Series F | 2024 | 融资 10 亿美元，估值约 138 亿美元；投资方包括 Amazon、Meta、Intel、AMD、Qualcomm 等。 | Scale 成为多个 AI 大厂都想绑定的数据供应链节点。 | [`SRC-ai-007`](../../../raw/ai/documents/SRC-ai-007-scale-ai-series-f.md) |
+| Meta 战略投资 | 2025 | Meta 投资约 143 亿美元，获得约 49% 少数股权；Alexandr Wang 加入 Meta。 | Meta 获得数据基础设施经验和关键人才；Scale 获得更高战略估值，但中立性受到考验。 | [`SRC-ai-008`](../../../raw/ai/documents/SRC-ai-008-scale-ai-announces-next-phase-of-company-evolution.md), [`SRC-ai-009`](../../../raw/ai/documents/SRC-ai-009-customer-trust-and-scale-meta-deal.md), [`SRC-ai-010`](../../../raw/ai/documents/SRC-ai-010-scale-ai-not-winding-down-following-meta-deal-interim-ceo-says.md), [`SRC-ai-011`](../../../raw/ai/documents/SRC-ai-011-meta-restructures-its-ai-unit-under-superintelligence-labs.md) |
+| 后交易阶段 | 2025-2026 | Scale 强调仍独立运营、客户数据隔离，并继续推进企业、政府、评测和数据业务。 | 交易后的核心问题变成：Scale 能否继续被 Meta 竞争对手信任。 | [`SRC-ai-009`](../../../raw/ai/documents/SRC-ai-009-customer-trust-and-scale-meta-deal.md), [`SRC-ai-011`](../../../raw/ai/documents/SRC-ai-011-meta-restructures-its-ai-unit-under-superintelligence-labs.md), [[00-source-capture-index|SRC-ai-012]] |
 
 ## 商业模式演进
 
@@ -103,4 +103,4 @@ Scale AI 把“人工标注和数据整理”这种看起来低端、脏、重�
 
 ## 来源
 
-来源索引见 [[../sources.csv|AI sources.csv]]，离线抓取状态见 [[../00-source-capture-index|AI Source Capture Index]]。本笔记主要使用 `SRC-ai-001` 至 `SRC-ai-012`。其中 `SRC-ai-012` 抓取失败，`SRC-ai-001`、`SRC-ai-003`、`SRC-ai-010` 为 fallback HTML，正式投资 memo 前需要继续核验。
+来源索引见 [[../sources.csv|AI sources.csv]]，离线抓取状态见 [[../00-source-capture-index|AI Source Capture Index]]。本笔记主要使用 [`SRC-ai-001`](../../../raw/ai/documents/SRC-ai-001-scale-yc-company-post.md) 至 [[00-source-capture-index|SRC-ai-012]]。其中 [[00-source-capture-index|SRC-ai-012]] 抓取失败，[`SRC-ai-001`](../../../raw/ai/documents/SRC-ai-001-scale-yc-company-post.md)、[`SRC-ai-003`](../../../raw/ai/documents/SRC-ai-003-scale-ai-series-c.md)、[`SRC-ai-010`](../../../raw/ai/documents/SRC-ai-010-scale-ai-not-winding-down-following-meta-deal-interim-ceo-says.md) 为 fallback HTML，正式投资 memo 前需要继续核验。

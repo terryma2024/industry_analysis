@@ -23,7 +23,7 @@ aliases:
 
 ## 结论
 
-- **不能简单说 Scale AI 被 Meta 收购。** 更准确的表述是：Meta 在 2025 年向 Scale AI 投入约 143 亿美元，取得约 49% 少数股权；Scale 官方称公司仍独立运营，同时创始人 Alexandr Wang 加入 Meta 负责 AI 相关工作。证据见 `SRC-ai-008`、`SRC-ai-009`、`SRC-ai-010`。
+- **不能简单说 Scale AI 被 Meta 收购。** 更准确的表述是：Meta 在 2025 年向 Scale AI 投入约 143 亿美元，取得约 49% 少数股权；Scale 官方称公司仍独立运营，同时创始人 Alexandr Wang 加入 Meta 负责 AI 相关工作。证据见 [`SRC-ai-008`](../../../raw/ai/documents/SRC-ai-008-scale-ai-announces-next-phase-of-company-evolution.md)、[`SRC-ai-009`](../../../raw/ai/documents/SRC-ai-009-customer-trust-and-scale-meta-deal.md)、[`SRC-ai-010`](../../../raw/ai/documents/SRC-ai-010-scale-ai-not-winding-down-following-meta-deal-interim-ceo-says.md)。
 - **Scale AI 的真正产品是高质量数据生产体系。** 早期卖自动驾驶图像、视频、点云标注，后期卖大模型 SFT、RLHF、DPO、红队、评测、专家数据和政府/企业 AI 数据工程。
 - **中国对标公司不能只看“数据标注公司”。** 更合适的分类是：传统训练数据供应商、自动驾驶数据平台、大模型后训练/专家数据公司、模型评测和企业 AI 交付商。
 - **中国目前缺少一个同时具备全球大模型客户、政府订单、中立第三方地位、自动驾驶数据闭环和大模型后训练平台的综合型公司。** 但多个公司合起来已经覆盖 Scale AI 的主要业务版图。
@@ -32,16 +32,16 @@ aliases:
 
 | 阶段 | 时间 | 关键事件 | 战略含义 | 证据 |
 |---|---:|---|---|---|
-| 0 到 1：人力任务 API | 2016 | Alexandr Wang 与 Lucy Guo 参加 Y Combinator，早期定位是通过 API 调用人工任务。 | 把人工劳动 API 化，而不是一开始就做模型。 | `SRC-ai-001` |
-| 杀手场景：自动驾驶 | 2016-2018 | 自动驾驶公司需要大量图像、视频、3D 点云标注，Scale 转向训练数据平台。 | 抓住第一轮 AI 工业化中“数据标注是瓶颈”的需求。 | `SRC-ai-001`, `SRC-ai-002` |
-| Series B | 2018 | 融资 1800 万美元，强调 human intelligence + machine learning 的训练数据服务。 | 从众包任务平台升级为 AI 数据基础设施。 | `SRC-ai-002` |
-| 独角兽 | 2019 | Series C 融资 1 亿美元，估值超 10 亿美元。 | 将“AI 的关键瓶颈是标注数据”讲成资本市场可理解的基础设施故事。 | `SRC-ai-003` |
-| 自动驾驶与传统 AI 扩张 | 2020-2021 | 2020 年 Series D 后估值约 35 亿美元；2021 年 Series E 后估值约 73 亿美元。 | 在自动驾驶、视觉、企业 AI 数据服务中扩大交付能力。 | `SRC-ai-004`, `SRC-ai-005` |
-| 政府/国防线 | 2022 | 获美国国防部近 2.5 亿美元 BPA 合同。 | 从商业数据服务商扩展为政府 AI 基础设施供应商。 | `SRC-ai-006` |
-| 大模型红利 | 2022-2024 | 生成式 AI 爆发后，Scale 转向 SFT、RLHF、DPO、红队和模型评测等后训练数据服务。 | “标注”升级为“人类反馈、专家数据、模型可靠性评测”。 | `SRC-ai-007` |
-| Series F | 2024 | 融资 10 亿美元，估值约 138 亿美元，投资方包括 Amazon、Meta、Intel、AMD、Qualcomm 等。 | 被视为 AI 数据供应链中的中立基础设施。 | `SRC-ai-007` |
-| Meta 战略投资 | 2025 | Meta 向 Scale 投资约 143 亿美元，取得约 49% 少数股权；Alexandr Wang 加入 Meta。 | Meta 获得数据能力、组织经验和关键人才，但 Scale 官方称仍独立运营。 | `SRC-ai-008`, `SRC-ai-009`, `SRC-ai-010` |
-| 后交易阶段 | 2025-2026 | Scale 强调客户数据隔离与独立运营，并继续推进企业、政府、评测与数据业务。 | 最大风险变成“中立性是否被大模型客户信任”。 | `SRC-ai-009`, `SRC-ai-011`, `SRC-ai-012` |
+| 0 到 1：人力任务 API | 2016 | Alexandr Wang 与 Lucy Guo 参加 Y Combinator，早期定位是通过 API 调用人工任务。 | 把人工劳动 API 化，而不是一开始就做模型。 | [`SRC-ai-001`](../../../raw/ai/documents/SRC-ai-001-scale-yc-company-post.md) |
+| 杀手场景：自动驾驶 | 2016-2018 | 自动驾驶公司需要大量图像、视频、3D 点云标注，Scale 转向训练数据平台。 | 抓住第一轮 AI 工业化中“数据标注是瓶颈”的需求。 | [`SRC-ai-001`](../../../raw/ai/documents/SRC-ai-001-scale-yc-company-post.md), [`SRC-ai-002`](../../../raw/ai/documents/SRC-ai-002-scale-announces-series-b-funding.md) |
+| Series B | 2018 | 融资 1800 万美元，强调 human intelligence + machine learning 的训练数据服务。 | 从众包任务平台升级为 AI 数据基础设施。 | [`SRC-ai-002`](../../../raw/ai/documents/SRC-ai-002-scale-announces-series-b-funding.md) |
+| 独角兽 | 2019 | Series C 融资 1 亿美元，估值超 10 亿美元。 | 将“AI 的关键瓶颈是标注数据”讲成资本市场可理解的基础设施故事。 | [`SRC-ai-003`](../../../raw/ai/documents/SRC-ai-003-scale-ai-series-c.md) |
+| 自动驾驶与传统 AI 扩张 | 2020-2021 | 2020 年 Series D 后估值约 35 亿美元；2021 年 Series E 后估值约 73 亿美元。 | 在自动驾驶、视觉、企业 AI 数据服务中扩大交付能力。 | [`SRC-ai-004`](../../../raw/ai/documents/SRC-ai-004-scale-ai-breaking-even-after-it-scaled-back-hiring.md), [`SRC-ai-005`](../../../raw/ai/documents/SRC-ai-005-scale-ai-scores-325-million-to-grow-ai-solution.md) |
+| 政府/国防线 | 2022 | 获美国国防部近 2.5 亿美元 BPA 合同。 | 从商业数据服务商扩展为政府 AI 基础设施供应商。 | [`SRC-ai-006`](../../../raw/ai/documents/SRC-ai-006-scale-ai-awarded-250m-ai-contract-by-department-of-defense.md) |
+| 大模型红利 | 2022-2024 | 生成式 AI 爆发后，Scale 转向 SFT、RLHF、DPO、红队和模型评测等后训练数据服务。 | “标注”升级为“人类反馈、专家数据、模型可靠性评测”。 | [`SRC-ai-007`](../../../raw/ai/documents/SRC-ai-007-scale-ai-series-f.md) |
+| Series F | 2024 | 融资 10 亿美元，估值约 138 亿美元，投资方包括 Amazon、Meta、Intel、AMD、Qualcomm 等。 | 被视为 AI 数据供应链中的中立基础设施。 | [`SRC-ai-007`](../../../raw/ai/documents/SRC-ai-007-scale-ai-series-f.md) |
+| Meta 战略投资 | 2025 | Meta 向 Scale 投资约 143 亿美元，取得约 49% 少数股权；Alexandr Wang 加入 Meta。 | Meta 获得数据能力、组织经验和关键人才，但 Scale 官方称仍独立运营。 | [`SRC-ai-008`](../../../raw/ai/documents/SRC-ai-008-scale-ai-announces-next-phase-of-company-evolution.md), [`SRC-ai-009`](../../../raw/ai/documents/SRC-ai-009-customer-trust-and-scale-meta-deal.md), [`SRC-ai-010`](../../../raw/ai/documents/SRC-ai-010-scale-ai-not-winding-down-following-meta-deal-interim-ceo-says.md) |
+| 后交易阶段 | 2025-2026 | Scale 强调客户数据隔离与独立运营，并继续推进企业、政府、评测与数据业务。 | 最大风险变成“中立性是否被大模型客户信任”。 | [`SRC-ai-009`](../../../raw/ai/documents/SRC-ai-009-customer-trust-and-scale-meta-deal.md), [`SRC-ai-011`](../../../raw/ai/documents/SRC-ai-011-meta-restructures-its-ai-unit-under-superintelligence-labs.md), [[00-source-capture-index|SRC-ai-012]] |
 
 ## Scale AI 的能力拆解
 
@@ -57,16 +57,16 @@ aliases:
 
 | 公司 | 更像 Scale 的哪一面 | 当前判断 | 主要证据 |
 |---|---|---|---|
-| 海天瑞声 | AI 训练数据、大模型后训练、评测 | 最适合作为公开市场中的 Scale AI 对标样本。官网已覆盖语音、图像、自然语言、多模态，以及 SFT、RLHF、DPO、评测等大模型数据服务。 | `SRC-ai-013` |
-| 数据堂 | 数据资产、数据采集/标注、行业数据集 | 更像长期积累训练数据集和交付能力的数据供应商，覆盖大模型、智能驾驶、医疗等场景。 | `SRC-ai-014`, `SRC-ai-015` |
-| Testin 云测 / 云测数据 | AI 数据平台、标注工具、测试与企业服务 | 从应用测试扩展到 AI 训练数据与大模型微调，多模态标注和测试能力使其更偏“数据 + 测试平台”。 | `SRC-ai-016` |
-| 标贝科技 / DataBaker | 语音数据、多模态采集标注、大模型数据 | 语音数据和语音交互能力更强，是“语音数据能力突出的 Scale 子集”。 | `SRC-ai-017` |
-| 曼孚科技 MindFlow | 自动驾驶/CV 数据标注平台 | 对标 Scale 早期自动驾驶数据标注路线，强调自动驾驶数据标注、人机融合和平台化。 | `SRC-ai-018` |
-| 龙猫数据 | 自动驾驶、CV、语音、NLU 数据标注 | 偏智能驾驶和通用标注服务，公开信息提到自动驾驶自动标注能力。 | `SRC-ai-019`, `SRC-ai-020` |
-| GOMAX LAB / 骨码智元 | 大模型专家数据、训练/对齐/评测 | 更贴近 Scale 后期的专家数据和大模型评测路线，值得继续跟踪。 | `SRC-ai-021` |
-| Xpert Studio | Agent/复杂任务专家数据 | 覆盖 CoT、Tool/Browser/Computer Use、RLVR 等复杂任务标注，方向很新，但商业规模待验证。 | `SRC-ai-022` |
-| 星尘数据 Stardust AI | SFT/RLHF 数据标注、语料定制 | 公开材料显示覆盖 SFT 数据集、RLHF、语料和模型训练服务，仍需验证客户和交付规模。 | `SRC-ai-023` |
-| 天衍奇点 | 大模型数据工程、标注服务 | 新公司，定位很贴近大模型时代数据工程，但公开验证材料较少。 | `SRC-ai-024` |
+| 海天瑞声 | AI 训练数据、大模型后训练、评测 | 最适合作为公开市场中的 Scale AI 对标样本。官网已覆盖语音、图像、自然语言、多模态，以及 SFT、RLHF、DPO、评测等大模型数据服务。 | [`SRC-ai-013`](../../../raw/ai/documents/SRC-ai-013-source.md) |
+| 数据堂 | 数据资产、数据采集/标注、行业数据集 | 更像长期积累训练数据集和交付能力的数据供应商，覆盖大模型、智能驾驶、医疗等场景。 | [`SRC-ai-014`](../../../raw/ai/documents/SRC-ai-014-source.md), [`SRC-ai-015`](../../../raw/ai/documents/SRC-ai-015-source.md) |
+| Testin 云测 / 云测数据 | AI 数据平台、标注工具、测试与企业服务 | 从应用测试扩展到 AI 训练数据与大模型微调，多模态标注和测试能力使其更偏“数据 + 测试平台”。 | [`SRC-ai-016`](../../../raw/ai/documents/SRC-ai-016-testin.md) |
+| 标贝科技 / DataBaker | 语音数据、多模态采集标注、大模型数据 | 语音数据和语音交互能力更强，是“语音数据能力突出的 Scale 子集”。 | [`SRC-ai-017`](../../../raw/ai/documents/SRC-ai-017-source.md) |
+| 曼孚科技 MindFlow | 自动驾驶/CV 数据标注平台 | 对标 Scale 早期自动驾驶数据标注路线，强调自动驾驶数据标注、人机融合和平台化。 | [`SRC-ai-018`](../../../raw/ai/documents/SRC-ai-018-source.md) |
+| 龙猫数据 | 自动驾驶、CV、语音、NLU 数据标注 | 偏智能驾驶和通用标注服务，公开信息提到自动驾驶自动标注能力。 | [`SRC-ai-019`](../../../raw/ai/documents/SRC-ai-019-source.md), [`SRC-ai-020`](../../../raw/ai/documents/SRC-ai-020-autopilotgpt.md) |
+| GOMAX LAB / 骨码智元 | 大模型专家数据、训练/对齐/评测 | 更贴近 Scale 后期的专家数据和大模型评测路线，值得继续跟踪。 | [`SRC-ai-021`](../../../raw/ai/documents/SRC-ai-021-gomax-lab.md) |
+| Xpert Studio | Agent/复杂任务专家数据 | 覆盖 CoT、Tool/Browser/Computer Use、RLVR 等复杂任务标注，方向很新，但商业规模待验证。 | [`SRC-ai-022`](../../../raw/ai/documents/SRC-ai-022-xpert-studio.md) |
+| 星尘数据 Stardust AI | SFT/RLHF 数据标注、语料定制 | 公开材料显示覆盖 SFT 数据集、RLHF、语料和模型训练服务，仍需验证客户和交付规模。 | [`SRC-ai-023`](../../../raw/ai/documents/SRC-ai-023-stardust-ai-smart-education-scenario.md) |
+| 天衍奇点 | 大模型数据工程、标注服务 | 新公司，定位很贴近大模型时代数据工程，但公开验证材料较少。 | [`SRC-ai-024`](../../../raw/ai/documents/SRC-ai-024-source.md) |
 
 ## 对标判断
 
@@ -109,4 +109,4 @@ aliases:
 
 ## 来源
 
-来源索引见 [[../sources.csv|AI sources.csv]]，离线抓取状态见 [[../00-source-capture-index|AI Source Capture Index]]。本笔记当前以公开网页来源、`raw/ai/documents/` 抽取结果和前序调研整理为基础；其中 `SRC-ai-012` 抓取失败，`SRC-ai-001`、`SRC-ai-003`、`SRC-ai-010`、`SRC-ai-016`、`SRC-ai-021`、`SRC-ai-022`、`SRC-ai-024` 为 fallback HTML，需要正式投资 memo 前继续核验。
+来源索引见 [[../sources.csv|AI sources.csv]]，离线抓取状态见 [[../00-source-capture-index|AI Source Capture Index]]。本笔记当前以公开网页来源、`raw/ai/documents/` 抽取结果和前序调研整理为基础；其中 [[00-source-capture-index|SRC-ai-012]] 抓取失败，[`SRC-ai-001`](../../../raw/ai/documents/SRC-ai-001-scale-yc-company-post.md)、[`SRC-ai-003`](../../../raw/ai/documents/SRC-ai-003-scale-ai-series-c.md)、[`SRC-ai-010`](../../../raw/ai/documents/SRC-ai-010-scale-ai-not-winding-down-following-meta-deal-interim-ceo-says.md)、[`SRC-ai-016`](../../../raw/ai/documents/SRC-ai-016-testin.md)、[`SRC-ai-021`](../../../raw/ai/documents/SRC-ai-021-gomax-lab.md)、[`SRC-ai-022`](../../../raw/ai/documents/SRC-ai-022-xpert-studio.md)、[`SRC-ai-024`](../../../raw/ai/documents/SRC-ai-024-source.md) 为 fallback HTML，需要正式投资 memo 前继续核验。

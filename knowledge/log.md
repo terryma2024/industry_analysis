@@ -177,8 +177,28 @@ tags:
 - **初步结果**: dora 更适合作为高带宽 AI dataflow runtime，与 ROS 2 bridge 组合承担 perception/VLA/inference、record/replay 和 observability；ROS 2 仍更适合作为真实机器人硬件、驱动、控制、规划和生态底座。
 - **限制**: dora 官网称 `1.0.0-rc1`，但 PyPI/GitHub 稳定版本为 `0.5.0`，本文将“dora 1.0”按官网/RC 能力主张处理；`SRC-robotics-190` dora guides 自动抽取失败，需后续通过官网 `/book`、GitHub raw docs 或浏览器手工补采。
 
+## [2026-06-29] research | LiDAR 世界模型训练论文与方案调研
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/lidar-world-model-training-2026-06-29|激光雷达数据融合进入世界模型训练论文与方案调研]]；更新 [[_entities/LiDAR|LiDAR 激光雷达]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
+- **来源**: 在 `knowledge/robotics-embodied-ai/sources.csv` 登记 `SRC-robotics-200` 至 `SRC-robotics-217`，覆盖 Sense, Imagine, Act、MUVO、Copilot4D、OccWorld、LidarDM、OccSora、BEVWorld、Drive-OccWorld、DFIT-OccWorld、OccLLaMA、AD-L-JEPA、RoboOccWorld、LiSTAR、LiDAR navigation DreamerV3、AD-LiST-JEPA、HERMES++、GEM 和 UniDriveDreamer；已生成 raw artifacts 并更新 `raw/robotics-embodied-ai/documents/source_capture_manifest.csv`。
+- **初步结果**: LiDAR 融入 world model 训练的主流方案分为 LiDAR-native generative model、BEV/occupancy world model、camera-LiDAR unified latent、JEPA latent predictive model 和移动机器人 Dreamer 类导航模型；若目标是规划安全，BEV/occupancy 路线优先；若目标是数据合成，LiDAR-native 路线优先。
+- **限制**: 本轮主要抓取 arXiv 摘要页作为 raw artifact，尚未下载 PDF 或做代码级复现；`SRC-robotics-210` 为 HTML fallback。下一轮应为重点论文建立 `knowledge/_sources/` source card，并补 PDF/key-info 级证据。
+
 ## [2026-06-29] ingest | 七个行业初步调研补齐
 
 - **变更**: 补齐 [[6g/00-index|6G]]、[[aerospace/00-index|航空航天]]、[[biopharma/00-index|生物医药]]、[[brain-computer-interface/00-index|脑机接口]]、[[future-energy/00-index|未来能源]]、[[low-altitude-economy/00-index|低空经济]]、[[quantum-technology/00-index|量子科技]] 的标准初调页、sources.csv、source capture index 和 raw source notes。
 - **来源**: 以 `十四五规划纲要`、`2024年政府工作报告`、`未来产业实施意见` 为共同政策底座，并为 6G、航空航天、生物医药、脑机接口、未来能源、低空经济、量子科技分别登记行业专属来源。
 - **限制**: 本轮 raw artifact 多为 analyst source note，适合做初步 traceability；高价值政策、PDF、年报和标准仍需后续运行完整网页/PDF 抽取并拆成 source card / claim。
+
+## [2026-06-29] ingest | AI 总行业分析重做
+
+- **变更**: 重写 [[ai/00-index|AI 研究入口]]、[[ai/01-industry-map|产业链地图]]、[[ai/02-technology-and-products|技术与产品]]、[[ai/03-market-and-policy|市场与政策]]、[[ai/04-companies|公司与竞争]]、[[ai/05-investment-view|投资视角]]、[[ai/06-career-view|求职与学习视角]]；更新 [[ai/00-source-capture-index|AI Source Capture Index]] 和 [[ai/research-notes/README|AI Research Notes]]。
+- **来源**: 追加 `SRC-ai-033` 至 `SRC-ai-046`，覆盖十四五规划、新一代人工智能发展规划、2024 年政府工作报告、生成式人工智能服务管理暂行办法、未来产业实施意见、DeepSeek、Qwen、文心一言、Kimi、智谱、腾讯混元、华为昇腾、寒武纪和 ModelScope。
+- **初步结果**: AI 行业不再只按 Scale AI / 数据基础设施理解，而改为“算力与基础设施 - 基础模型 - 数据与评测 - 应用/Agent - 安全合规”的总产业链框架；投资与职业页分别强调国产算力、AI 平台、应用 ROI、数据评测和安全合规。
+- **限制**: 本轮新增来源为 analyst source note，模型备案清单、公司财报、API 收入、国产算力订单、企业续费率和地方 AI 政策仍需下一轮补硬证据。
+
+## [2026-06-29] research | 具身智能训练数据价值评估框架
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/robot-training-data-value-evaluation-2026-06-29|具身智能训练数据价值评估框架]]；更新 [[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
+- **来源**: 复用 LeRobot、DROID、RoboMIND、AgiBot World、Data Scaling Laws、失败/接管数据、AIRSPEED 与 EAI data engineering survey 等已有来源；并以 2026-06-29 在线核验的 arXiv/官方页面作为当前性补充。
+- **初步结果**: 数据价值不应按小时数或 episode 数单独估算，而应按 `Expected Capability Lift x Reuse Multiplier x Trust Multiplier / Fully Loaded Cost and Risk` 判断；采集前做任务缺口和数据组合打分，采集中做同步/标定/分布/QC stop-loss，采后用 holdout rollout 或 ablation 验证边际提升。

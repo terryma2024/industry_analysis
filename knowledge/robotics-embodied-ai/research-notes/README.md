@@ -7,7 +7,7 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-06-23
+last_updated: 2026-06-29
 ---
 
 # 机器人（具身智能） - 研究中间笔记
@@ -53,3 +53,11 @@ last_updated: 2026-06-23
 ## 2026-06-23 机器人中间件与 dataflow runtime
 
 - [[dora-1-vs-ros2-2026-06-23]]: 对比 dora 1.0 能力主张与 ROS 2 生态底座，重点拆解版本状态、性能、QoS、ROS 2 bridge、平台工程选型和职业学习路径。
+
+## 2026-06-29 LiDAR 世界模型训练
+
+- [[lidar-world-model-training-2026-06-29]]: 调研激光雷达数据如何通过点云/range/ray token、BEV/occupancy、camera-LiDAR unified latent 和 JEPA 进入世界模型训练，并给出自动驾驶、传感器仿真、多模态生成和移动机器人导航的工程方案。
+
+## 2026-06-29 训练数据价值评估
+
+- [[robot-training-data-value-evaluation-2026-06-29]]: 面向采集前立项、采集中质检和采后验证的具身智能训练数据价值评估框架，核心是边际能力提升、复用性、可信度与全成本风险比。

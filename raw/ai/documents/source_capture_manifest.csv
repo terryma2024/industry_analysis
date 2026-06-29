@@ -23,3 +23,17 @@ SRC-ai-021,GOMAX LAB 官网,https://www.gomaxai.cn/,defuddle,fallback_html,raw/a
 SRC-ai-022,Xpert Studio 官网,https://xpertiise.com/,defuddle,fallback_html,raw/ai/documents/SRC-ai-022-xpert-studio.md,2026-06-02T01:03:06+00:00,Error: No content could be extracted from https://xpertiise.com/
 SRC-ai-023,Stardust AI smart education scenario,https://stardust.ai/en-US/scenario/smarteducation/,defuddle,ok,raw/ai/documents/SRC-ai-023-stardust-ai-smart-education-scenario.md,2026-06-02T01:03:06+00:00,
 SRC-ai-024,天衍奇点官网,https://infersingularity.com/,defuddle,fallback_html,raw/ai/documents/SRC-ai-024-source.md,2026-06-02T01:03:06+00:00,Error: Timed out fetching page after 10s
+SRC-ai-033,中华人民共和国国民经济和社会发展第十四个五年规划和2035年远景目标纲要,https://www.gov.cn/xinwen/2021-03/13/content_5592681.htm,analyst-source-note,ok,raw/ai/documents/SRC-ai-033-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-034,国务院关于印发新一代人工智能发展规划的通知,https://www.gov.cn/zhengce/content/2017-07/20/content_5211996.htm,analyst-source-note,ok,raw/ai/documents/SRC-ai-034-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-035,2024年政府工作报告,https://www.gov.cn/yaowen/liebiao/202403/content_6939153.htm,analyst-source-note,ok,raw/ai/documents/SRC-ai-035-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-036,生成式人工智能服务管理暂行办法,https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm,analyst-source-note,ok,raw/ai/documents/SRC-ai-036-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-037,工业和信息化部等七部门关于推动未来产业创新发展的实施意见,https://www.gov.cn/zhengce/zhengceku/202401/content_6929021.htm,analyst-source-note,ok,raw/ai/documents/SRC-ai-037-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-038,DeepSeek 官网,https://www.deepseek.com/,analyst-source-note,ok,raw/ai/documents/SRC-ai-038-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-039,Qwen 官方文档站,https://qwenlm.github.io/,analyst-source-note,ok,raw/ai/documents/SRC-ai-039-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-040,百度文心一言官网,https://yiyan.baidu.com/,analyst-source-note,ok,raw/ai/documents/SRC-ai-040-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-041,Kimi 官网,https://kimi.moonshot.cn/,analyst-source-note,ok,raw/ai/documents/SRC-ai-041-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-042,智谱 AI 官网,https://www.zhipuai.cn/,analyst-source-note,ok,raw/ai/documents/SRC-ai-042-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-043,腾讯混元产品页,https://cloud.tencent.com/product/hunyuan,analyst-source-note,ok,raw/ai/documents/SRC-ai-043-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-044,华为昇腾官网,https://www.hiascend.com/,analyst-source-note,ok,raw/ai/documents/SRC-ai-044-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-045,寒武纪官网,https://www.cambricon.com/,analyst-source-note,ok,raw/ai/documents/SRC-ai-045-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-046,ModelScope 魔搭社区,https://www.modelscope.cn/,analyst-source-note,ok,raw/ai/documents/SRC-ai-046-source.md,2026-06-29T06:18:11+00:00,

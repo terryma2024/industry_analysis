@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-06-23
+last_updated: 2026-06-29
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -53,12 +53,14 @@ sources:
 - `12-robotics-engineering-platforms-2026-06-04.md`: 机器人工程平台综合调研，覆盖数据、训练、评测、部署、真机推理和选型框架。
 - `13-robot-company-product-comparison-2026-06-08.md`: 主表机器人公司的产品型号全景对比，覆盖人形/轮式双臂、协作臂/工业机器人、AMR/移动操作的参数、技术路线、优缺点和待验证项。
 - [[research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]]: 系统拆解 AIRSPEED 的开源采集核心、论文三服务架构、技术转移叙事、性能 claim、版本边界和对中国具身数据基础设施的启发。
+- [[research-notes/lidar-world-model-training-2026-06-29|激光雷达数据融合进入世界模型训练论文与方案调研]]: 横向梳理 LiDAR 原生生成、BEV/occupancy、多模态 camera-LiDAR latent、JEPA 和移动机器人导航 world model 论文，并给出工程落地方案。
 - [[research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]: 基于 Thinking Partner 对话沉淀的职业方向锚点，聚焦企业决策者的成本、收入或风险痛点，以及零售后场/餐饮后厨/酒店后台等早期验证场景。
 - [[research-notes/retail-store-robotics-entry-scan-2026-06-10|线下零售门店机器人合作验证初扫]]: 验证中国大型零售公司是否已有足够多线下门店机器人/具身智能合作项目；第一轮结果为暂定样本 0/10，未通过 5/10 门槛但需继续补实公告/年报全文。
 - [[research-notes/cross-scenario-near-term-landing-candidate-pool-2026-06-10|具身智能短期落地跨场景候选池]]: 按 1 年内真实订单或试点转生产证据，建立汽车制造、仓储物流、商业服务、电力/数据中心、医疗手术机器人等短期落地候选池。
 - [[research-notes/platform-engineer-jd-entry-scan-2026-06-10|具身智能平台工程师 JD 快速入场扫描]]: 用“通用软件平台能力是硬要求、机器人领域知识可补齐”作为第一筛选门槛，初扫平台工程、后端、数据管线、仿真平台和运营系统岗位。
 - [[research-notes/libero-lifelong-robot-learning-platform-2026-06-11|LIBERO 终身学习仿真平台调研]]: 拆解 LIBERO 的 lifelong robot learning benchmark 定位、4 个 task suites、130 个任务、baseline、VLA/IL 评测价值，以及 2025-2026 年对固定 benchmark 泛化性的批评。
 - [[research-notes/open-embodied-ai-datasets-comparison-2026-06-11|开源具身智能训练与评估数据集横向调研]]: 按预训练/真实微调/特定能力/仿真 benchmark 对比 OXE、DROID、BridgeData、AgiBot、RoboMIND、ALOHA、UMI、LIBERO、ManiSkill、RoboCasa、RoboTwin 等数据集的格式、任务完整度和模型适配。
+- [[research-notes/robot-training-data-value-evaluation-2026-06-29|具身智能训练数据价值评估框架]]: 把数据价值拆成边际能力提升、复用性、可信度和全成本风险比，给出采集前打分、采集中实时质检和采后 rollout 验证方法。
 - [[research-notes/dora-1-vs-ros2-2026-06-23|dora 1.0 vs ROS 2 调研]]: 对比 dora 的 AI dataflow runtime 路线与 ROS 2 机器人生态底座，给出版本状态、性能、桥接架构和学习/选型建议。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]]: LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备的购买状态、价格线索和采购问询清单。
 - [[_entities/README|UMI 技术术语实体索引]]: UMI Gripper 初学者术语已拆分为实体页，覆盖 IMU、6DoF、SLAM、Zarr、LeRobot、Diffusion Policy 等概念。

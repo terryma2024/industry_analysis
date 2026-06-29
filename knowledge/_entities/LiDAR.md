@@ -2,12 +2,13 @@
 title: LiDAR 激光雷达
 type: entity
 date_created: 2026-06-02
-last_updated: 2026-06-02
+last_updated: 2026-06-29
 aliases:
   - LiDAR
   - 激光雷达
 sources:
   - knowledge/robotics-embodied-ai/08-umi-gripper-research-and-business-plan.md
+  - knowledge/robotics-embodied-ai/research-notes/lidar-world-model-training-2026-06-29.md
 tags:
   - entity/sensor
   - industry/robotics-embodied-ai
@@ -35,6 +36,12 @@ UMI-3D 使用低成本 LiDAR，是为了应对白墙、弱纹理、遮挡和动�
 - **处理侧：** 判断它是否影响轨迹恢复、字段设计、数据格式、episode 切分和质量等级。
 - **训练/部署侧：** 判断它是否影响 policy 输入输出、机器人可执行性、rollout 成功率和跨本体迁移。
 
+## 在世界模型训练中的位置
+
+LiDAR 进入世界模型训练通常有四种方式：作为原始点云/range image/ray token 进入传感器级生成模型；转成 BEV、3D/4D occupancy 或 voxel flow 作为空间状态；和相机/视频 latent 做跨模态对齐；或作为 JEPA 等 latent predictive model 的自监督预训练输入。
+
+详见 [[robotics-embodied-ai/research-notes/lidar-world-model-training-2026-06-29|激光雷达数据融合进入世界模型训练论文与方案调研]]。
+
 ## 易错边界
 
 - 不要只按字面翻译理解；在机器人数据里，它通常和坐标系、时间轴、动作表示、数据 schema 共同起作用。
@@ -46,5 +53,6 @@ UMI-3D 使用低成本 LiDAR，是为了应对白墙、弱纹理、遮挡和动�
 - [[ThreeDSLAM]]
 - [[SLAM]]
 - [[Calibration]]
+- [[robotics-embodied-ai/research-notes/lidar-world-model-training-2026-06-29|激光雷达数据融合进入世界模型训练论文与方案调研]]
 - [[robotics-embodied-ai/08-umi-gripper-research-and-business-plan|UMI Gripper 研究与业务计划]]
 - [[_entities/README|UMI 技术术语实体索引]]

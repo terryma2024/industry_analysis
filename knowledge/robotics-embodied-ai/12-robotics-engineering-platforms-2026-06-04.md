@@ -194,7 +194,7 @@ OpenPI 和 OpenVLA 很重要，但它们更像模型工程包。完整平台需�
 
 ## 待验证
 
-- `SRC-robotics-120` ManiSkill、`SRC-robotics-122` MoveIt 2、`SRC-robotics-123` Agibot Genie Studio 本轮为 fallback HTML，正式竞品分析前应手工补采页面文本或官方 PDF。
+- [`SRC-robotics-120`](../../raw/robotics-embodied-ai/documents/SRC-robotics-120-maniskill-official-website.md) ManiSkill、[`SRC-robotics-122`](../../raw/robotics-embodied-ai/documents/SRC-robotics-122-moveit-2-documentation.md) MoveIt 2、[`SRC-robotics-123`](../../raw/robotics-embodied-ai/documents/SRC-robotics-123-agibot-genie-studio.md) Agibot Genie Studio 本轮为 fallback HTML，正式竞品分析前应手工补采页面文本或官方 PDF。
 - 国内厂商平台的外部客户采用、真实出货、复购和跨本体迁移能力尚缺少公开硬证据。
 - LeRobot、FluxVLA、OpenPI、OpenVLA 都在快速迭代，具体支持的模型、格式和 API 需要按版本持续复核。
 - 真机推理的安全、合规、接管和客户现场数据授权，是当前公开文档覆盖不足但商业化很关键的部分。

@@ -58,7 +58,7 @@ def main() -> int:
     notes_dir = ROOT / "knowledge" / args.industry
     raw_paths = load_raw_paths(args.industry)
     changed = []
-    for note_path in sorted(notes_dir.glob("*.md")):
+    for note_path in sorted(notes_dir.rglob("*.md")):
         if note_path.name == "00-source-capture-index.md":
             continue
         if link_note(note_path, raw_paths):

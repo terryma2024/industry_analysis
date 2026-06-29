@@ -2,7 +2,7 @@
 title: AI Research Notes
 type: index
 date_created: 2026-06-02
-last_updated: 2026-06-11
+last_updated: 2026-06-29
 status: active
 tags:
   - industry/ai
@@ -14,6 +14,8 @@ tags:
 本目录保存 AI 行业的阶段性深度调研、公司对标、来源交叉验证和待继续问题。
 
 ## Notes
+
+- AI 总行业页 2026-06-29 重做：详见 [[../00-index|AI 相关 - 研究入口]]、[[../01-industry-map|产业链地图]]、[[../04-companies|公司与竞争]]。
 
 - [[scale-ai-company-history-2026-06-02|Scale AI 公司发展史]]
 - [[scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]]

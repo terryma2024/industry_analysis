@@ -2,7 +2,7 @@
 title: AI Source Capture Index
 type: index
 date_created: 2026-06-02
-last_updated: 2026-06-02
+last_updated: 2026-06-29
 status: active
 tags:
   - industry/ai
@@ -15,7 +15,7 @@ sources:
 # AI Source Capture Index
 
 > [!summary]
-> 本页登记 `knowledge/ai/sources.csv` 中网页来源的离线抓取状态。2026-06-02 已运行 `tools/extract_sources_with_defuddle.py --industry ai --timeout 60`：16 条 `ok`，7 条 `fallback_html`，1 条 `failed`。
+> 本页登记 `knowledge/ai/sources.csv` 中网页来源的离线抓取状态。2026-06-02 已运行 `tools/extract_sources_with_defuddle.py --industry ai --timeout 60`：16 条 `ok`，7 条 `fallback_html`，1 条 `failed`。2026-06-29 追加 AI 总行业 analyst source notes（SRC-ai-033 至 SRC-ai-046），用于重做行业总览页。
 
 ## 状态说明
 
@@ -51,6 +51,20 @@ sources:
 | SRC-ai-022 | Xpert Studio 官网 | fallback_html | [raw](../../raw/ai/documents/SRC-ai-022-xpert-studio.md) | defuddle 未抽到内容，必要时手工核验。 |
 | SRC-ai-023 | Stardust AI smart education scenario | ok | [raw](../../raw/ai/documents/SRC-ai-023-stardust-ai-smart-education-scenario.md) | 无。 |
 | SRC-ai-024 | 天衍奇点官网 | fallback_html | [raw](../../raw/ai/documents/SRC-ai-024-source.md) | 页面超时，必要时浏览器捕获。 |
+| SRC-ai-033 | 中华人民共和国国民经济和社会发展第十四个五年规划和2035年远景目标纲要 | ok | [raw](../../raw/ai/documents/SRC-ai-033-source.md) | analyst source note，正式引用前可回到国务院页面核对原文。 |
+| SRC-ai-034 | 国务院关于印发新一代人工智能发展规划的通知 | ok | [raw](../../raw/ai/documents/SRC-ai-034-source.md) | analyst source note，正式引用前可回到国务院页面核对原文。 |
+| SRC-ai-035 | 2024年政府工作报告 | ok | [raw](../../raw/ai/documents/SRC-ai-035-source.md) | analyst source note，正式引用前可回到国务院页面核对原文。 |
+| SRC-ai-036 | 生成式人工智能服务管理暂行办法 | ok | [raw](../../raw/ai/documents/SRC-ai-036-source.md) | analyst source note，正式引用前可回到国务院页面核对原文。 |
+| SRC-ai-037 | 工业和信息化部等七部门关于推动未来产业创新发展的实施意见 | ok | [raw](../../raw/ai/documents/SRC-ai-037-source.md) | analyst source note，正式引用前可回到国务院页面核对原文。 |
+| SRC-ai-038 | DeepSeek 官网 | ok | [raw](../../raw/ai/documents/SRC-ai-038-source.md) | analyst source note，跟踪模型、API 和开源版本时需增量更新。 |
+| SRC-ai-039 | Qwen 官方文档站 | ok | [raw](../../raw/ai/documents/SRC-ai-039-source.md) | analyst source note，跟踪模型、API 和开源版本时需增量更新。 |
+| SRC-ai-040 | 百度文心一言官网 | ok | [raw](../../raw/ai/documents/SRC-ai-040-source.md) | analyst source note，跟踪产品和企业服务时需增量更新。 |
+| SRC-ai-041 | Kimi 官网 | ok | [raw](../../raw/ai/documents/SRC-ai-041-source.md) | analyst source note，跟踪产品和企业服务时需增量更新。 |
+| SRC-ai-042 | 智谱 AI 官网 | ok | [raw](../../raw/ai/documents/SRC-ai-042-source.md) | analyst source note，跟踪模型、API 和企业服务时需增量更新。 |
+| SRC-ai-043 | 腾讯混元产品页 | ok | [raw](../../raw/ai/documents/SRC-ai-043-source.md) | analyst source note，跟踪云 API 和生态应用时需增量更新。 |
+| SRC-ai-044 | 华为昇腾官网 | ok | [raw](../../raw/ai/documents/SRC-ai-044-source.md) | analyst source note，跟踪国产算力生态时需增量更新。 |
+| SRC-ai-045 | 寒武纪官网 | ok | [raw](../../raw/ai/documents/SRC-ai-045-source.md) | analyst source note，正式投资判断需叠加财报与公告。 |
+| SRC-ai-046 | ModelScope 魔搭社区 | ok | [raw](../../raw/ai/documents/SRC-ai-046-source.md) | analyst source note，跟踪开源模型和开发者生态时需增量更新。 |
 
 ## 关联连接
 
