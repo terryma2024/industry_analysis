@@ -1,1 +1,6 @@
 id,title,source_type,publisher,date,url_or_path,evidence_grade,notes
+SRC-6g-001,中华人民共和国国民经济和社会发展第十四个五年规划和2035年远景目标纲要,policy,新华社/中国政府网,2021-03-13,https://www.gov.cn/xinwen/2021-03/13/content_5592681.htm,S,作为国家中长期规划底座，明确科技自立自强、战略性新兴产业和未来产业培育方向。; 本仓库把该来源用于判断行业是否属于国家战略、安全、自主可控或新质生产力相关方向。
+SRC-6g-002,工业和信息化部等七部门关于推动未来产业创新发展的实施意见,policy,工业和信息化部等七部门/中国政府网,2024-01-29,https://www.gov.cn/zhengce/zhengceku/202401/content_6929021.htm,S,实施意见提出围绕未来制造、未来信息、未来材料、未来能源、未来空间、未来健康等方向培育未来产业。; 文件提出到2025年和2027年的阶段性目标，可作为七个空白行业初调的共同政策底座。
+SRC-6g-003,Recommendation ITU-R M.2160: IMT-2030 Framework,standard,ITU,2023-11,https://www.itu.int/rec/R-REC-M.2160-0-202311-I/en,S,ITU-R M.2160 是 IMT-2030/6G 愿景、能力和使用场景的全球框架来源。; 该来源用于约束 6G 技术页中的通感、AI、泛在连接等路线表述。
+SRC-6g-004,3GPP Release 20 page,standard_roadmap,3GPP,2026,https://www.3gpp.org/specifications-technologies/releases/release-20,S,3GPP release 页面是后续跟踪 5G-Advanced 到 6G 标准节奏的官方入口。; 本轮只把它作为标准化时间线入口，具体 Release 21/6G freeze 需后续补 3GPP meeting decision 原文。
+SRC-6g-005,IMT-2030(6G)推进组官网,industry_org,IMT-2030(6G)推进组,2026,https://www.imt2030.org.cn/,A,IMT-2030(6G) 推进组是中国 6G 技术、试验和白皮书线索入口。; 后续应从该站逐份抽取白皮书，而不是只引用首页。

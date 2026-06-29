@@ -1,1 +1,6 @@
 id,title,source_type,publisher,date,url_or_path,evidence_grade,notes
+SRC-quantum-001,中华人民共和国国民经济和社会发展第十四个五年规划和2035年远景目标纲要,policy,新华社/中国政府网,2021-03-13,https://www.gov.cn/xinwen/2021-03/13/content_5592681.htm,S,作为国家中长期规划底座，明确科技自立自强、战略性新兴产业和未来产业培育方向。; 本仓库把该来源用于判断行业是否属于国家战略、安全、自主可控或新质生产力相关方向。
+SRC-quantum-002,工业和信息化部等七部门关于推动未来产业创新发展的实施意见,policy,工业和信息化部等七部门/中国政府网,2024-01-29,https://www.gov.cn/zhengce/zhengceku/202401/content_6929021.htm,S,实施意见提出围绕未来制造、未来信息、未来材料、未来能源、未来空间、未来健康等方向培育未来产业。; 文件提出到2025年和2027年的阶段性目标，可作为七个空白行业初调的共同政策底座。
+SRC-quantum-003,央视网：什么是量子科技？都有哪些应用？一文了解,official_media,央视网,2025-09-21,https://news.cctv.com/2025/09/21/ARTIsDIZPQJx7agYgKGXRf93250921.shtml,B,央视网科普梳理量子计算、量子通信和量子精密测量应用。; 该来源只用于初学者边界，不作为投资或技术性能的硬证据。
+SRC-quantum-004,国盾量子官网,company_website,科大国盾量子技术股份有限公司,2026,https://www.quantum-info.com/,A,国盾量子是中国量子通信产业链代表公司。; 后续应补上交所年报和公告，而不是只看官网。
+SRC-quantum-005,本源量子官网,company_website,本源量子,2026,https://originqc.com.cn/,A,本源量子是中国量子计算整机、量子云和软件栈代表性公司之一。; 官网适合做产品入口，性能和商业化仍需论文、客户和财务证据。

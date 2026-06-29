@@ -1,1 +1,6 @@
 id,title,source_type,publisher,date,url_or_path,evidence_grade,notes
+SRC-lae-001,2024年政府工作报告,policy,国务院/中国政府网,2024-03-12,https://www.gov.cn/yaowen/liebiao/202403/content_6939153.htm,S,政府工作报告把智能网联新能源汽车、新兴氢能、新材料、创新药、生物制造、商业航天、低空经济等列入新增长引擎相关表述。; 该来源适合做十五五前夜的政策连续性参照，但具体行业目标仍需补十五五专项规划原文。
+SRC-lae-002,工业和信息化部等七部门关于推动未来产业创新发展的实施意见,policy,工业和信息化部等七部门/中国政府网,2024-01-29,https://www.gov.cn/zhengce/zhengceku/202401/content_6929021.htm,S,实施意见提出围绕未来制造、未来信息、未来材料、未来能源、未来空间、未来健康等方向培育未来产业。; 文件提出到2025年和2027年的阶段性目标，可作为七个空白行业初调的共同政策底座。
+SRC-lae-003,首次写入政府工作报告——“低空经济”加速起飞,policy_media,中国政府网,2024-04-02,https://www.gov.cn/yaowen/liebiao/202404/content_6943071.htm,A,中国政府网文章解释低空经济首次写入政府工作报告，并提到通用航空装备创新应用实施方案。; 文中提到到2030年推动低空经济形成万亿级市场规模的政策目标，后续需回到方案原文核验。
+SRC-lae-004,国家发展改革委低空经济发展司,official_portal,国家发展改革委,2026,https://www.ndrc.gov.cn/fzggw/jgsj/dks/,S,国家发展改革委已设低空经济发展司，负责低空经济战略、中长期规划和重大问题协调。; 这是低空经济从地方试点走向国家统筹的重要治理信号。
+SRC-lae-005,亿航智能 EH216-S 产品页,company_product,EHang,2026,https://ehang.com/ehang216s/,A,EH216-S 是中国 eVTOL/无人驾驶载人航空器商业化的代表性产品线。; 公司产品页适合跟踪产品定位，但适航证和运营资质仍需 CAAC 原文。

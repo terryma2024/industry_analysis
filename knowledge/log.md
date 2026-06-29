@@ -176,3 +176,9 @@ tags:
 - **来源**: 在 `knowledge/robotics-embodied-ai/sources.csv` 登记 `SRC-robotics-189` 至 `SRC-robotics-199`，覆盖 dora 官网、GitHub README、PyPI、GitHub v0.5.0 release、DORA 论文、dora benchmark、ROS 2 release/nodes/QoS 官方文档和 ROS 2 综述论文；已生成 raw artifacts 并更新 `raw/robotics-embodied-ai/documents/source_capture_manifest.csv`。
 - **初步结果**: dora 更适合作为高带宽 AI dataflow runtime，与 ROS 2 bridge 组合承担 perception/VLA/inference、record/replay 和 observability；ROS 2 仍更适合作为真实机器人硬件、驱动、控制、规划和生态底座。
 - **限制**: dora 官网称 `1.0.0-rc1`，但 PyPI/GitHub 稳定版本为 `0.5.0`，本文将“dora 1.0”按官网/RC 能力主张处理；`SRC-robotics-190` dora guides 自动抽取失败，需后续通过官网 `/book`、GitHub raw docs 或浏览器手工补采。
+
+## [2026-06-29] ingest | 七个行业初步调研补齐
+
+- **变更**: 补齐 [[6g/00-index|6G]]、[[aerospace/00-index|航空航天]]、[[biopharma/00-index|生物医药]]、[[brain-computer-interface/00-index|脑机接口]]、[[future-energy/00-index|未来能源]]、[[low-altitude-economy/00-index|低空经济]]、[[quantum-technology/00-index|量子科技]] 的标准初调页、sources.csv、source capture index 和 raw source notes。
+- **来源**: 以 `十四五规划纲要`、`2024年政府工作报告`、`未来产业实施意见` 为共同政策底座，并为 6G、航空航天、生物医药、脑机接口、未来能源、低空经济、量子科技分别登记行业专属来源。
+- **限制**: 本轮 raw artifact 多为 analyst source note，适合做初步 traceability；高价值政策、PDF、年报和标准仍需后续运行完整网页/PDF 抽取并拆成 source card / claim。

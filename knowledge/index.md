@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-06-23
+last_updated: 2026-06-29
 tags:
   - wiki
   - index
@@ -79,15 +79,15 @@ tags:
 
 ## Industries
 
-- [[6g/00-index|6G]] — 6G 行业研究入口。
-- [[aerospace/00-index|航空航天]] — 航空航天行业研究入口。
+- [[6g/00-index|6G]] — 6G 初步调研入口，覆盖 IMT-2030、通感一体、空天地一体和运营商/设备商链条。
+- [[aerospace/00-index|航空航天]] — 航空航天初步调研入口，覆盖商业航天、卫星互联网、发射与空间基础设施。
 - [[ai/00-index|AI]] — AI 相关行业研究入口。
-- [[biopharma/00-index|生物医药]] — 生物医药行业研究入口。
-- [[brain-computer-interface/00-index|脑机接口]] — 脑机接口行业研究入口。
-- [[future-energy/00-index|未来能源]] — 未来能源行业研究入口。
+- [[biopharma/00-index|生物医药]] — 生物医药初步调研入口，覆盖创新药、生物经济、CXO/CDMO 和未来健康。
+- [[brain-computer-interface/00-index|脑机接口]] — 脑机接口初步调研入口，覆盖非侵入/侵入式 BCI、医疗康复和神经信号解码。
+- [[future-energy/00-index|未来能源]] — 未来能源初步调研入口，覆盖新型能源体系、储能、氢能、智能电网和聚变期权。
 - [[integrated-circuits/00-index|集成电路]] — 集成电路行业研究入口。
-- [[low-altitude-economy/00-index|低空经济]] — 低空经济行业研究入口。
-- [[quantum-technology/00-index|量子科技]] — 量子科技行业研究入口。
+- [[low-altitude-economy/00-index|低空经济]] — 低空经济初步调研入口，覆盖无人机、eVTOL、低空基础设施和监管平台。
+- [[quantum-technology/00-index|量子科技]] — 量子科技初步调研入口，覆盖量子计算、量子通信和量子精密测量。
 - [[robotics-embodied-ai/00-index|机器人与具身智能]] — 机器人与具身智能行业研究入口。
 
 ## News
