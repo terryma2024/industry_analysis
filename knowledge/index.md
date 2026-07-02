@@ -21,6 +21,9 @@ tags:
 - [[_sources/bilibili-bv1ywtg6te1k-genie-sim-3-0-vla|GENIE SIM 3.0 VLA 闭环仿真试用]] — Bilibili source packet on real-video-to-Isaac-Sim asset generation limits; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
 - [[_sources/bilibili-bv19pt36resn-leworldmodel-github-4k-star-jepa-1gb|LeWorldModel / JEPA 世界动作模型讲解]] — Bilibili source packet for latent world-model learning and robot control education; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
 - [[_sources/bilibili-bv1ck7n66epd-forceband|ForceBand 力数据采集]] — Bilibili source packet on sEMG/IMU-assisted force labels for robot demonstrations; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
+- [[_sources/bilibili-bv1optq6senp-bilibili-video|家庭人形机器人进入家庭访谈]] — Bilibili source packet on consumer humanoid PMF, home safety, small-form-factor design, and rapid demand testing; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
+- [[_sources/bilibili-bv1wctu6nef2-genie-sim-3-0-vla|GENIE SIM 3.0 VLA 闭环仿真上篇]] — Bilibili source packet on closed-loop VLA simulation, ROSbag recording, interface tracing, and LLM scene generation failure modes; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
+- [[_sources/bilibili-bv1cl7p6veh9-b-vla-vla-rt-1-openvla-unipi|VLA 入门教程 source packet]] — Bilibili source packet framing VLA as vision/language-to-action, with simulation, real data, evaluation, and deployment learning path; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
 
 - [[_sources/karpathy-llm-wiki-pattern|Karpathy LLM Wiki Pattern]] — LLM Wiki 的原始理念和 Jason 文章中的实践化解读。
 - [[ai/00-source-capture-index|AI Source Capture Index]] — AI 行业来源抽取状态，包含 Scale AI 与中国 AI 数据基础设施对标调研的 raw artifact 入口。
@@ -87,7 +90,7 @@ tags:
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] — 第一版全球 AI 芯片及上下游上市公司池，记录主营业务、公开供应链关系、近一年市值变化、筛选框架和待补证据。
 - [[_syntheses/matlab-simulink-agentic-ai-tools-bilibili-2026-07-02|MATLAB/Simulink Agentic AI 工具链视频调研]] — 基于 Bilibili 视频和 MathWorks 官方 GitHub 项目，分析工程软件 Agent 化的工具层、技能层和反馈闭环。
-- [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]] — 从每日收藏夹成功转录的视频中抽取 VLA、世界模型、机器人数据基建、仿真资产、ForceBand、ROS2/LiDAR 和 TensorRT 的 B 级研究线索。
+- [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]] — 从每日收藏夹成功转录的视频中抽取 VLA、世界模型、机器人数据基建、仿真资产、家庭机器人 PMF、ForceBand、ROS2/LiDAR 和 TensorRT 的 B 级研究线索。
 
 ## Industries
 

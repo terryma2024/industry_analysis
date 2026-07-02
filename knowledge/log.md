@@ -220,3 +220,10 @@ tags:
 - **变更**: 新增 [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]]；更新 [[index|Knowledge Index]]、[[robotics-embodied-ai/sources|机器人来源表]] 和 [[ai/sources|AI 来源表]]。
 - **来源**: 使用每日 Bilibili 自动化中断前成功落盘的 source cards 与 raw transcripts，覆盖 ZR-0/VLA、VLA 数据基建、GENIE SIM、TensorRT、ROS2/LiDAR、LeWorldModel、机械臂安全和 ForceBand。
 - **限制**: Bilibili 视频仅作为 B 级线索；`BV1ogTT6PE2s` transcript 无有效正文，不纳入观点抽取；ZR-0、ForceBand、GENIE SIM 和安全规范相关 claim 需要一级来源验证。
+
+## [2026-07-02] automation | Bilibili AI/具身智能每日增量重跑
+
+- **变更**: 更新 [[_syntheses/bilibili-ai-daily-run-2026-07-02|Bilibili AI Daily Run 2026-07-02]]、[[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]]、[[index|Knowledge Index]] 和 [[robotics-embodied-ai/sources|机器人来源表]]；新增 3 个 Bilibili source cards 与 raw transcripts。
+- **来源**: 新增 `BV1oPTq6SENP` 家庭人形机器人访谈、`BV1wCTu6nEF2` GENIE SIM 3.0 闭环仿真上篇、`BV1cL7p6VEH9` VLA 入门教程；均为 B 级视频线索，需一级来源交叉验证。
+- **失败**: 选中的 `BV1bGxEz7EWa`、`BV1UR7H6dEy5`、`BV1v17Y6aE2L`、`BV161jy6MEwt` 无可用平台字幕；`BV1UR7H6dEy5` 外部 Volcengine ASR 在 300 秒超时，最终用禁用 ASR 的重跑记录为失败。
+- **限制**: 本轮第一批默认 ASR 超时路径需人工中断；脚本当前未捕获 `subprocess.TimeoutExpired`，后续可修复为 per-video failed result，避免整批退出。
