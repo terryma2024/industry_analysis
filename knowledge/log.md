@@ -202,3 +202,21 @@ tags:
 - **变更**: 新增 [[robotics-embodied-ai/research-notes/robot-training-data-value-evaluation-2026-06-29|具身智能训练数据价值评估框架]]；更新 [[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
 - **来源**: 复用 LeRobot、DROID、RoboMIND、AgiBot World、Data Scaling Laws、失败/接管数据、AIRSPEED 与 EAI data engineering survey 等已有来源；并以 2026-06-29 在线核验的 arXiv/官方页面作为当前性补充。
 - **初步结果**: 数据价值不应按小时数或 episode 数单独估算，而应按 `Expected Capability Lift x Reuse Multiplier x Trust Multiplier / Fully Loaded Cost and Risk` 判断；采集前做任务缺口和数据组合打分，采集中做同步/标定/分布/QC stop-loss，采后用 holdout rollout 或 ablation 验证边际提升。
+
+## [2026-07-02] ingest | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-02|Bilibili AI Daily Run 2026-07-02]]；处理 1 个 Bilibili 视频 source packet。
+- **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+- **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+## [2026-07-02] synthesis | MATLAB/Simulink Agentic AI 工具链视频调研
+
+- **变更**: 新增 [[_syntheses/matlab-simulink-agentic-ai-tools-bilibili-2026-07-02|MATLAB/Simulink Agentic AI 工具链视频调研]]；更新 [[index|Knowledge Index]]。
+- **来源**: 复用 [[_sources/bilibili-bv1bbtv6ueaf-5-skill-codex-matlab|Bilibili source card]] 与 raw transcript，并核验 MathWorks 官方 `matlab` GitHub 组织、`matlab-mcp-server`、`matlab-agentic-toolkit`、`simulink-agentic-toolkit`、`agent-skills-playground`。
+- **初步结果**: 工程软件 Agent 化需要 MCP/API 工具层、领域 skills 和仿真/测试反馈闭环；MATLAB/Simulink 是较早成体系的样板，后续应扫描国产工业软件的 agent-ready 能力。
+
+## [2026-07-02] synthesis | Bilibili 具身智能与 AI 工具链线索
+
+- **变更**: 新增 [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]]；更新 [[index|Knowledge Index]]、[[robotics-embodied-ai/sources|机器人来源表]] 和 [[ai/sources|AI 来源表]]。
+- **来源**: 使用每日 Bilibili 自动化中断前成功落盘的 source cards 与 raw transcripts，覆盖 ZR-0/VLA、VLA 数据基建、GENIE SIM、TensorRT、ROS2/LiDAR、LeWorldModel、机械臂安全和 ForceBand。
+- **限制**: Bilibili 视频仅作为 B 级线索；`BV1ogTT6PE2s` transcript 无有效正文，不纳入观点抽取；ZR-0、ForceBand、GENIE SIM 和安全规范相关 claim 需要一级来源验证。

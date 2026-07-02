@@ -366,34 +366,7 @@ def extract_bilibili(url):
                 resp.get("data", {}).get("subtitle", {}).get("subtitles", [])
             )
 
-    # Method 3: page HTML scraping
-    if not subtitle_urls:
-        log("Trying page HTML scraping...")
-        try:
-            html = http_get(f"https://www.bilibili.com/video/{bvid}/", headers=BILI_HEADERS)
-            for match in re.findall(r'"subtitle_url"\s*:\s*"(//[^"]+)"', html):
-                sub_url = "https:" + match
-                if not any(u["url"] == sub_url for u in subtitle_urls):
-                    subtitle_urls.append({"url": sub_url, "lang": "zh-CN", "lang_doc": "中文（自动生成）"})
-            for block in re.findall(r'"subtitles"\s*:\s*\[(\{.*?\})\]', html, re.DOTALL):
-                try:
-                    for sub in json.loads(f"[{block}]"):
-                        sub_url = sub.get("subtitle_url", "")
-                        if sub_url:
-                            if sub_url.startswith("//"):
-                                sub_url = "https:" + sub_url
-                            if not any(u["url"] == sub_url for u in subtitle_urls):
-                                subtitle_urls.append({
-                                    "url": sub_url,
-                                    "lang": sub.get("lan", "unknown"),
-                                    "lang_doc": sub.get("lan_doc", "unknown"),
-                                })
-                except json.JSONDecodeError:
-                    pass
-        except Exception as e:
-            log(f"Page scraping failed: {e}", "WARN")
-
-    # Method 4: multi-page video
+    # Method 3: multi-page video
     if not subtitle_urls:
         pages = video.get("pages", [])
         if len(pages) > 1:
@@ -418,7 +391,7 @@ def extract_bilibili(url):
         if text:
             return _make_result(info, "bilibili", url, text, "subtitle")
 
-    # Method 5: B站 AI conclusion API
+    # Method 4: B站 AI conclusion API
     if aid and cid and mid:
         log("Trying B站 AI conclusion API...")
         params = {"aid": aid, "cid": cid, "up_mid": mid}

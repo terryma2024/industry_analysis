@@ -1,0 +1,43 @@
+{
+  "captured_at": "2026-07-02T08:46:08.551769+00:00",
+  "platform": "bilibili",
+  "video": {
+    "title": "安了这5个skill，让Codex自动控制matlab",
+    "url": "https://www.bilibili.com/video/BV1BBTv6UEaf",
+    "bvid": "BV1BBTv6UEaf",
+    "aid": "116843897428032",
+    "video_id": "",
+    "author": "极简AI丨",
+    "published_at": "2026-07-01",
+    "favorited_at": "",
+    "description": "",
+    "tags": [],
+    "category": "",
+    "raw": {
+      "title": "安了这5个skill，让Codex自动控制matlab",
+      "url": "https://www.bilibili.com/video/BV1BBTv6UEaf",
+      "bvid": "BV1BBTv6UEaf",
+      "aid": 116843897428032,
+      "owner": {
+        "mid": 327901654,
+        "name": "极简AI丨",
+        "face": "https://i1.hdslb.com/bfs/face/37f6bed40edd1421efa39491d5fc88188ddd384c.jpg"
+      },
+      "description": "",
+      "category": "",
+      "pubdate": 1782896472,
+      "tags": []
+    }
+  },
+  "target_industries": [
+    "ai"
+  ],
+  "relevance": {
+    "score": 2,
+    "matched_terms": [
+      "codex"
+    ]
+  },
+  "extraction_method": "volcengine-external-command:volc.bigasr.auc",
+  "transcript_text": "工程软件正在从人点鼠标变成 AI 直接执行，从数据分析、算法开发到建模、仿真和自动调参，过去需要反复切换软件完成的流程，现在 Codex 正在一步步串起来。今天我把 GitHub 上五个比较有代表性的 MATLAB 和 Simulink MPC PO 项目，一次讲清楚。想让 AI 自动写代码、搭模型、跑仿真、调参数和排查故障的。可以先收藏。第一个，MATLAB MCP Server，目前大约1100个 star 它是 MathWorks 官方提供的底层连接器，相当于在 CodeX 和 MATLAB 之间搭了一座桥。接入以后， CodeX 可以识别软件版本和已安装的工具箱、执行命令、运行脚本、读取结果、检查报错，还能运行单元测试。以前 AI 写完代码要复制到 MATLAB 运行，报错后再切回来修改。现在 Codex 可以自己执行，读取错误，修改代码，再重新运行。连接软件只是第一步，第二个项目已经开始直接搭建仿真模型。第二个 Simulink Authentic Tokit，目前大约720个 star，它可以直接操作 Simulink。 添加或删除模块、修改参数、连接信号线、创建子系统并运行模型检查和仿真测试。比如让它从空白工程搭建直流电机 PID 控制模型。第一次仿真发现超调过大，它还能分析曲线，重新整定参数，再跑一次仿真进行对比。第三个，MATLAB Agentic Toolkit，目前大约690个 star。 如果说 MCP Server 负责连接软件，这个 Ticket 更像一套专业工作流说明书。它会指导 Codex 正确调用工具箱、编写脚本、运行测试、检查代码和生成报告。减少函数乱用、参数写错和无效步骤。第四个， Agent Skills Playground，目前大约135个 star 这是 MathWorks 用于实验和展示 Agent Skill 的项目。包含系统工程、嵌入式 AI 和交互式科学计算案例。其中最适合录屏的是洛伦兹吸引子三维仿真，调整西格玛、 rho 和贝塔后。三维轨迹会实时变化，视觉效果非常明显。第五个， Simulink Skills 目前大约110个 star 它主要面向高级调试和性能分析。模型为什么编译慢？哪个模块最耗时？哪里出现代数环？求解器为什么异常？都可以让 CodeX 继续定位。它还能逐时间步检查模块，设置断点。监控信号并给出优化建议。所以，Simulink Genetic Toolkit 更偏自动建模和运行，Simulink Design Optimization 更偏深度调试和性能优化。这5个项目分别覆盖 MATLAB 代码执行、 Simulink 自动建模、工程工作流。可视化案例和高级仿真诊断。它们释放出的信号很明显，AI 已经不只是生成一段代码，而是在真正参与模型搭建、仿真运行、结果分析和参数迭代。感谢大家看到这里，喜欢这类 AI 工具分享，可以给主播点个关注。还想看哪些传统软件的 Skills 或者 MCP 也可以在评论区留言，我们下期见！"
+}
