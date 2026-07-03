@@ -113,6 +113,13 @@ status: active
 
 ## 关联连接
 
+- [[_syntheses/bilibili-physisforcing-world-simulator-deep-dive-2026-07-03|PhysisForcing 物理一致世界模拟器视频深度调研]]
+- [[_syntheses/bilibili-esp-claw-embedded-ai-deep-dive-2026-07-03|ESP-Claw 自然语言驱动嵌入式开发视频深度调研]]
+- [[_sources/bilibili-bv12ptq6qecg-physisforcing|PhysisForcing Bilibili source card]]
+- [[_sources/bilibili-bv1pcja6bei4-bilibili-video|ESP Cloud Bilibili source card]]
+- [[_syntheses/bilibili-ai-daily-run-2026-07-03|Bilibili AI Daily Run 2026-07-03]]
+- [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]]
+- [[_syntheses/matlab-simulink-agentic-ai-tools-bilibili-2026-07-02|MATLAB/Simulink Agentic AI 工具链视频调研]]
 - [[ai/00-index|AI]]
 - [[robotics-embodied-ai/00-index|机器人与具身智能]]
 - [[_concepts/embodied-ai|Embodied AI]]

@@ -75,6 +75,12 @@ status: active
 - For durable value, update relevant pages under `knowledge/ai/`, `knowledge/robotics-embodied-ai/`, `knowledge/_entities/`, `knowledge/_concepts/`, `knowledge/_claims/`, or `knowledge/_syntheses/`.
 - Cross-check important company, policy, market-size, and product claims against primary sources before promoting them into industry pages.
 
+## Codex Synthesis
+
+- Durable synthesis written to [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
+- Per-selected-video deep dives currently written to [[_syntheses/bilibili-physisforcing-world-simulator-deep-dive-2026-07-03|PhysisForcing 物理一致世界模拟器视频深度调研]] and [[_syntheses/bilibili-esp-claw-embedded-ai-deep-dive-2026-07-03|ESP-Claw 自然语言驱动嵌入式开发视频深度调研]].
+- Main leads: PhysisForcing as a B-grade lead for physical-consistency world models, and ESP-Claw as a B-grade lead for LLM-mediated embedded/IoT development.
+
 ## Related Links
 
 - [[ai/00-index|AI]]

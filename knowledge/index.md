@@ -102,7 +102,10 @@ tags:
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] — 第一版全球 AI 芯片及上下游上市公司池，记录主营业务、公开供应链关系、近一年市值变化、筛选框架和待补证据。
 - [[_syntheses/matlab-simulink-agentic-ai-tools-bilibili-2026-07-02|MATLAB/Simulink Agentic AI 工具链视频调研]] — 基于 Bilibili 视频和 MathWorks 官方 GitHub 项目，分析工程软件 Agent 化的工具层、技能层和反馈闭环。
-- [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]] — 从每日收藏夹成功转录的视频中抽取 VLA、世界模型、机器人数据基建、仿真资产、ForceBand、ROS2/LiDAR 和 TensorRT 的 B 级研究线索。
+- [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]] — 从每日收藏夹成功转录的视频中抽取 VLA、世界模型、机器人数据基建、仿真资产、家庭机器人 PMF、ForceBand、ROS2/LiDAR 和 TensorRT 的 B 级研究线索。
+- [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]] — 从每日收藏夹成功转录视频中抽取 PhysisForcing 物理一致世界模型和 ESP Cloud 自然语言驱动嵌入式开发的 B 级线索。
+- [[_syntheses/bilibili-physisforcing-world-simulator-deep-dive-2026-07-03|PhysisForcing 物理一致世界模拟器视频深度调研]] — 对 `BV12pTq6qECg` 做单视频深研，并用 arXiv `2606.28128` 校验物理一致视频/机器人世界模型 claim。
+- [[_syntheses/bilibili-esp-claw-embedded-ai-deep-dive-2026-07-03|ESP-Claw 自然语言驱动嵌入式开发视频深度调研]] — 对 `BV1PCjA6bEi4` 做单视频深研，并用乐鑫 ESP-Claw 官网、文档和 GitHub 校验项目形态。
 
 ## Industries
 

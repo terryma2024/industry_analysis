@@ -239,3 +239,9 @@ tags:
 - **变更**: 新增 [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]]；更新 [[index|Knowledge Index]] 中 7 个 Bilibili source packet 的 synthesis 指向。
 - **来源**: 只使用 2026-07-03 每日自动化中 `status=processed` 的 7 个 source cards 与 raw transcripts，覆盖 PhysisForcing、家用人形机器人产品定义、GENIE SIM 3.0 上篇、VLA 入门、SLAM/ROS、数值优化和 ESP Cloud/ESP32。
 - **限制**: `BV1bGxEz7EWa` 为 failed，不纳入综合；PhysisForcing 指标、GENIE SIM 能力、ESP Cloud 项目边界、家用机器人关节参数和市场判断均需一级来源验证。
+
+## [2026-07-03] synthesis | Bilibili 单视频深度调研产物修正
+
+- **变更**: 新增 [[_syntheses/bilibili-physisforcing-world-simulator-deep-dive-2026-07-03|PhysisForcing 物理一致世界模拟器视频深度调研]] 和 [[_syntheses/bilibili-esp-claw-embedded-ai-deep-dive-2026-07-03|ESP-Claw 自然语言驱动嵌入式开发视频深度调研]]；更新 [[_syntheses/bilibili-ai-daily-run-2026-07-03|Bilibili AI Daily Run 2026-07-03]]、[[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]]、[[index|Knowledge Index]]、[[ai/sources|AI 来源表]] 和 [[robotics-embodied-ai/sources|机器人来源表]]。
+- **来源**: 用 arXiv `2606.28128` 校验 PhysisForcing 视频 claim；用乐鑫 ESP-Claw 官网、文档、GitHub、ESP32-S3 与 ESP-IDF 官方资料校验 `BV1PCjA6bEi4` 中的 ESP Cloud/Club 线索，并统一项目名为 ESP-Claw。
+- **规范修正**: 每日 Bilibili 自动化未来应以“每个 selected + processed 视频一篇独立深研页”为主要产物，横向综述只作为导航/交叉线索，不替代单视频深研。

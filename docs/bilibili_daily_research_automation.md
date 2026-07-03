@@ -189,7 +189,18 @@ The automation should first run:
 uv run python tools/bilibili_ai_daily_research.py --limit 20 --json
 ```
 
-Then Codex should read the generated run report and new source cards, and update durable wiki pages only for videos that were actually processed.
+Then Codex should read the generated run report, source cards, and raw transcript JSON files.
+
+For every video that is both selected by model judgment and `status=processed`, Codex should create or update one standalone deep-research synthesis page under `knowledge/_syntheses/`. The per-video deep-research page is the primary durable output. It should cover the whole selected video, including:
+
+- source metadata and transcript path;
+- full-video thesis, not just isolated clips;
+- facts, estimates, judgments, and hypotheses separated clearly;
+- primary-source verification for important claims when available;
+- industry implications, investment/career angles when relevant, risks, and monitoring indicators;
+- follow-up verification tasks and Obsidian wikilinks.
+
+Cross-video daily overview pages are optional navigation/synthesis artifacts. They must not replace the per-selected-video deep-research pages. Videos that are `failed`, `skipped_duplicate`, or not selected should not receive fabricated deep-research pages; record them as retry or follow-up items instead.
 
 ## Git Commit And Push
 
