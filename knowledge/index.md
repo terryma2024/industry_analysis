@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-02
+last_updated: 2026-07-03
 tags:
   - wiki
   - index
@@ -15,6 +15,8 @@ tags:
 
 ## Sources
 
+- [[_sources/bilibili-bv1pcja6bei4-bilibili-video|还写什么单片机代码啊？直接微信聊天就行！]] — Bilibili source packet on ESP Cloud / ESP32 natural-language-to-Lua embedded development; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
+- [[_sources/bilibili-bv12ptq6qecg-physisforcing|机械臂一碰就穿模？北大英伟达 PhysisForcing 纠正视频生成物理盲区]] — Bilibili source packet on PhysisForcing physical consistency for robotic video/world models; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
 - [[_sources/bilibili-bv1bbtv6ueaf-5-skill-codex-matlab|安了这5个skill，让Codex自动控制matlab]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; synthesized in [[_syntheses/matlab-simulink-agentic-ai-tools-bilibili-2026-07-02|MATLAB/Simulink Agentic AI 工具链视频调研]].
 - [[_sources/bilibili-bv1ortv62e2j-26-vla-zr-0|智谱入局具身智能，26亿参数VLA模型ZR-0]] — Bilibili source packet for a ZR-0/VLA cross-embodiment transfer explainer; summarized as B-grade leads in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
 - [[_sources/bilibili-bv1zftq6pea3-vla|VLA&世界模型数据基建]] — Bilibili source packet describing an observation/action/language/QC-to-episode data pipeline; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
@@ -91,6 +93,7 @@ tags:
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] — 第一版全球 AI 芯片及上下游上市公司池，记录主营业务、公开供应链关系、近一年市值变化、筛选框架和待补证据。
 - [[_syntheses/matlab-simulink-agentic-ai-tools-bilibili-2026-07-02|MATLAB/Simulink Agentic AI 工具链视频调研]] — 基于 Bilibili 视频和 MathWorks 官方 GitHub 项目，分析工程软件 Agent 化的工具层、技能层和反馈闭环。
 - [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]] — 从每日收藏夹成功转录的视频中抽取 VLA、世界模型、机器人数据基建、仿真资产、家庭机器人 PMF、ForceBand、ROS2/LiDAR 和 TensorRT 的 B 级研究线索。
+- [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]] — 从每日收藏夹成功转录视频中抽取 PhysisForcing 物理一致世界模型和 ESP Cloud 自然语言驱动嵌入式开发的 B 级线索。
 
 ## Industries
 

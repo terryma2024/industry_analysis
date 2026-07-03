@@ -227,3 +227,15 @@ tags:
 - **来源**: 新增 `BV1oPTq6SENP` 家庭人形机器人访谈、`BV1wCTu6nEF2` GENIE SIM 3.0 闭环仿真上篇、`BV1cL7p6VEH9` VLA 入门教程；均为 B 级视频线索，需一级来源交叉验证。
 - **失败**: 选中的 `BV1bGxEz7EWa`、`BV1UR7H6dEy5`、`BV1v17Y6aE2L`、`BV161jy6MEwt` 无可用平台字幕；`BV1UR7H6dEy5` 外部 Volcengine ASR 在 300 秒超时，最终用禁用 ASR 的重跑记录为失败。
 - **限制**: 本轮第一批默认 ASR 超时路径需人工中断；脚本当前未捕获 `subprocess.TimeoutExpired`，后续可修复为 per-video failed result，避免整批退出。
+
+## [2026-07-03] ingest | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-03|Bilibili AI Daily Run 2026-07-03]]；处理 2 个 Bilibili 视频 source packet。
+- **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+- **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+## [2026-07-03] synthesis | Bilibili AI 与具身智能线索
+
+- **变更**: 新增 [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]]；更新 [[index|Knowledge Index]] 和 [[robotics-embodied-ai/sources|机器人来源表]]。
+- **来源**: 使用今日自动化 `status=processed` 的 `BV12pTq6qECg` PhysisForcing 物理一致视频生成线索与 `BV1PCjA6bEi4` ESP Cloud / ESP32 自然语言驱动嵌入式开发线索。
+- **限制**: 两条均为 B 级视频线索；PhysisForcing 指标、项目开源状态、ESP Cloud 官方名称/支持芯片/安全模型均需一级来源验证后再进入行业主页面。

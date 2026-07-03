@@ -284,14 +284,21 @@ def load_dotenv(paths: tuple[Path, ...] = DOTENV_PATHS) -> None:
 
 
 def run_command(args: list[str], cwd: Path = REPO_ROOT, timeout: int = 180) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(
-        args,
-        cwd=str(cwd),
-        text=True,
-        capture_output=True,
-        timeout=timeout,
-        check=False,
-    )
+    try:
+        return subprocess.run(
+            args,
+            cwd=str(cwd),
+            text=True,
+            capture_output=True,
+            timeout=timeout,
+            check=False,
+        )
+    except subprocess.TimeoutExpired as exc:
+        stdout = exc.stdout if isinstance(exc.stdout, str) else (exc.stdout or b"").decode("utf-8", errors="ignore")
+        stderr = exc.stderr if isinstance(exc.stderr, str) else (exc.stderr or b"").decode("utf-8", errors="ignore")
+        message = f"command timed out after {timeout} seconds"
+        stderr = f"{stderr.rstrip()}\n{message}".strip() if stderr else message
+        return subprocess.CompletedProcess(args=args, returncode=124, stdout=stdout, stderr=stderr)
 
 
 def extract_items(payload: Any) -> list[dict[str, Any]]:
