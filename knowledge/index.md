@@ -15,17 +15,26 @@ tags:
 
 ## Sources
 
-- [[_sources/bilibili-bv1pcja6bei4-bilibili-video|还写什么单片机代码啊？直接微信聊天就行！]] — Bilibili source packet on ESP Cloud / ESP32 natural-language-to-Lua embedded development; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
-- [[_sources/bilibili-bv12ptq6qecg-physisforcing|机械臂一碰就穿模？北大英伟达 PhysisForcing 纠正视频生成物理盲区]] — Bilibili source packet on PhysisForcing physical consistency for robotic video/world models; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
+- [[_sources/bilibili-bv1pcja6bei4-bilibili-video|还写什么单片机代码啊？直接微信聊天就行！]] — Bilibili source packet on ESP Cloud / ESP32 natural-language scripting; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
+
+- [[_sources/bilibili-bv1v17y6ae2l-science-robotics|浙大高飞发起 | 登顶《Science Robotics》封面背后的数学问题！]] — Bilibili source packet on numerical optimization as robotics career skill; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
+
+- [[_sources/bilibili-bv1ur7h6dey5-2026-slam-ai-slam-ai|【2026最新机器人视觉SLAM】保姆级全套课程！AI大佬带你十节课从零到一快速掌握SLAM理论直接速通具身智能机器人必备入门知识点！AI/机器人/具身智能]] — Bilibili source packet on SLAM/ROS/传感器融合基础栈; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
+
+- [[_sources/bilibili-bv1cl7p6veh9-b-vla-vla-rt-1-openvla-unipi|绝对是B站最好的具身智能VLA入门教程，对新手超级友好！仿真、隐式端到端VLA、RT-1、OpenVLA、UniPi—机械臂、具身智能机器人]] — Bilibili source packet on VLA model/data/evaluation/deployment basics; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
+
+- [[_sources/bilibili-bv1wctu6nef2-genie-sim-3-0-vla|深度探索-基于智元GENIE SIM 3.0的VLA闭环仿真（上）]] — Bilibili source packet on GENIE SIM 3.0 VLA closed-loop simulation; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
+
+- [[_sources/bilibili-bv1optq6senp-bilibili-video|人形机器人究竟怎么进家庭？这是我听过最好的答案]] — Bilibili source packet on home humanoid robot product definition; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
+
+- [[_sources/bilibili-bv12ptq6qecg-physisforcing|机械臂一碰就穿模？北大英伟达 PhysisForcing 纠正视频生成物理盲区]] — Bilibili source packet on PhysisForcing / physical-consistency video world models; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
+
 - [[_sources/bilibili-bv1bbtv6ueaf-5-skill-codex-matlab|安了这5个skill，让Codex自动控制matlab]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; synthesized in [[_syntheses/matlab-simulink-agentic-ai-tools-bilibili-2026-07-02|MATLAB/Simulink Agentic AI 工具链视频调研]].
 - [[_sources/bilibili-bv1ortv62e2j-26-vla-zr-0|智谱入局具身智能，26亿参数VLA模型ZR-0]] — Bilibili source packet for a ZR-0/VLA cross-embodiment transfer explainer; summarized as B-grade leads in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
 - [[_sources/bilibili-bv1zftq6pea3-vla|VLA&世界模型数据基建]] — Bilibili source packet describing an observation/action/language/QC-to-episode data pipeline; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
 - [[_sources/bilibili-bv1ywtg6te1k-genie-sim-3-0-vla|GENIE SIM 3.0 VLA 闭环仿真试用]] — Bilibili source packet on real-video-to-Isaac-Sim asset generation limits; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
 - [[_sources/bilibili-bv19pt36resn-leworldmodel-github-4k-star-jepa-1gb|LeWorldModel / JEPA 世界动作模型讲解]] — Bilibili source packet for latent world-model learning and robot control education; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
 - [[_sources/bilibili-bv1ck7n66epd-forceband|ForceBand 力数据采集]] — Bilibili source packet on sEMG/IMU-assisted force labels for robot demonstrations; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
-- [[_sources/bilibili-bv1optq6senp-bilibili-video|家庭人形机器人进入家庭访谈]] — Bilibili source packet on consumer humanoid PMF, home safety, small-form-factor design, and rapid demand testing; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
-- [[_sources/bilibili-bv1wctu6nef2-genie-sim-3-0-vla|GENIE SIM 3.0 VLA 闭环仿真上篇]] — Bilibili source packet on closed-loop VLA simulation, ROSbag recording, interface tracing, and LLM scene generation failure modes; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
-- [[_sources/bilibili-bv1cl7p6veh9-b-vla-vla-rt-1-openvla-unipi|VLA 入门教程 source packet]] — Bilibili source packet framing VLA as vision/language-to-action, with simulation, real data, evaluation, and deployment learning path; summarized in [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]].
 
 - [[_sources/karpathy-llm-wiki-pattern|Karpathy LLM Wiki Pattern]] — LLM Wiki 的原始理念和 Jason 文章中的实践化解读。
 - [[ai/00-source-capture-index|AI Source Capture Index]] — AI 行业来源抽取状态，包含 Scale AI 与中国 AI 数据基础设施对标调研的 raw artifact 入口。
@@ -70,6 +79,7 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]] — 从每日收藏夹成功转录的视频中抽取物理一致世界模型、家用机器人产品定义、VLA 工程闭环、GENIE SIM、SLAM/ROS、数值优化和 ESP32 AI 工具链线索。
 - [[_syntheses/karpathy-wiki-migration-plan|Karpathy Wiki Migration Plan]] — 本仓库从行业分析工作区升级为 LLM Wiki 的迁移设计。
 - [[ai/research-notes/scale-ai-company-history-2026-06-02|Scale AI 公司发展史]] — Scale AI 从 2016 年人力任务 API、自动驾驶数据标注、大模型后训练到 2025 年 Meta 战略投资的完整复盘。
 - [[ai/research-notes/scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]] — Scale AI 从人力任务 API 到 Meta 战略投资的路径，以及中国 AI 数据基础设施公司对标。
@@ -92,8 +102,7 @@ tags:
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] — 第一版全球 AI 芯片及上下游上市公司池，记录主营业务、公开供应链关系、近一年市值变化、筛选框架和待补证据。
 - [[_syntheses/matlab-simulink-agentic-ai-tools-bilibili-2026-07-02|MATLAB/Simulink Agentic AI 工具链视频调研]] — 基于 Bilibili 视频和 MathWorks 官方 GitHub 项目，分析工程软件 Agent 化的工具层、技能层和反馈闭环。
-- [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]] — 从每日收藏夹成功转录的视频中抽取 VLA、世界模型、机器人数据基建、仿真资产、家庭机器人 PMF、ForceBand、ROS2/LiDAR 和 TensorRT 的 B 级研究线索。
-- [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]] — 从每日收藏夹成功转录视频中抽取 PhysisForcing 物理一致世界模型和 ESP Cloud 自然语言驱动嵌入式开发的 B 级线索。
+- [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]] — 从每日收藏夹成功转录的视频中抽取 VLA、世界模型、机器人数据基建、仿真资产、ForceBand、ROS2/LiDAR 和 TensorRT 的 B 级研究线索。
 
 ## Industries
 

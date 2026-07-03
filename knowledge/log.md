@@ -230,12 +230,12 @@ tags:
 
 ## [2026-07-03] ingest | Bilibili AI/具身智能每日视频采集
 
-- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-03|Bilibili AI Daily Run 2026-07-03]]；处理 2 个 Bilibili 视频 source packet。
+- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-03|Bilibili AI Daily Run 2026-07-03]]；处理 7 个 Bilibili 视频 source packet。
 - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
 - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
 
 ## [2026-07-03] synthesis | Bilibili AI 与具身智能线索
 
-- **变更**: 新增 [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]]；更新 [[index|Knowledge Index]] 和 [[robotics-embodied-ai/sources|机器人来源表]]。
-- **来源**: 使用今日自动化 `status=processed` 的 `BV12pTq6qECg` PhysisForcing 物理一致视频生成线索与 `BV1PCjA6bEi4` ESP Cloud / ESP32 自然语言驱动嵌入式开发线索。
-- **限制**: 两条均为 B 级视频线索；PhysisForcing 指标、项目开源状态、ESP Cloud 官方名称/支持芯片/安全模型均需一级来源验证后再进入行业主页面。
+- **变更**: 新增 [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]]；更新 [[index|Knowledge Index]] 中 7 个 Bilibili source packet 的 synthesis 指向。
+- **来源**: 只使用 2026-07-03 每日自动化中 `status=processed` 的 7 个 source cards 与 raw transcripts，覆盖 PhysisForcing、家用人形机器人产品定义、GENIE SIM 3.0 上篇、VLA 入门、SLAM/ROS、数值优化和 ESP Cloud/ESP32。
+- **限制**: `BV1bGxEz7EWa` 为 failed，不纳入综合；PhysisForcing 指标、GENIE SIM 能力、ESP Cloud 项目边界、家用机器人关节参数和市场判断均需一级来源验证。
