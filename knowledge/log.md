@@ -245,3 +245,16 @@ tags:
 - **变更**: 新增 [[_syntheses/bilibili-physisforcing-world-simulator-deep-dive-2026-07-03|PhysisForcing 物理一致世界模拟器视频深度调研]] 和 [[_syntheses/bilibili-esp-claw-embedded-ai-deep-dive-2026-07-03|ESP-Claw 自然语言驱动嵌入式开发视频深度调研]]；更新 [[_syntheses/bilibili-ai-daily-run-2026-07-03|Bilibili AI Daily Run 2026-07-03]]、[[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]]、[[index|Knowledge Index]]、[[ai/sources|AI 来源表]] 和 [[robotics-embodied-ai/sources|机器人来源表]]。
 - **来源**: 用 arXiv `2606.28128` 校验 PhysisForcing 视频 claim；用乐鑫 ESP-Claw 官网、文档、GitHub、ESP32-S3 与 ESP-IDF 官方资料校验 `BV1PCjA6bEi4` 中的 ESP Cloud/Club 线索，并统一项目名为 ESP-Claw。
 - **规范修正**: 每日 Bilibili 自动化未来应以“每个 selected + processed 视频一篇独立深研页”为主要产物，横向综述只作为导航/交叉线索，不替代单视频深研。
+
+## [2026-07-04] ingest | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-04|Bilibili AI Daily Run 2026-07-04]]；处理 1 个 Bilibili 视频 source packet。
+- **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+- **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+## [2026-07-04] synthesis | Agent 时代 GUI 与 Headless 软件视频深研
+
+- **变更**: 新增 [[_syntheses/bilibili-agent-gui-headless-software-deep-dive-2026-07-04|Agent 时代 GUI 与 Headless 软件视频深度调研]]；更新 [[_sources/bilibili-bv1bktk69edd-agent-500-gui|Bilibili source card]] 和 [[index|Knowledge Index]]。
+- **来源**: 使用 `BV1bKTk69EDD` source card 与 raw transcript，并用 MCP、Claude Code overview、Claude Code skills、Vercel AI SDK 官方文档交叉验证 Agent-ready 软件接口、skills 和工具调用趋势。
+- **初步结果**: GUI 不应被简单否定；AI 应用的关键分层正在变成 human UI、agent interface 和 workflow assets。投资/职业判断应同时评估界面信任层、工具接口、上下文资产、权限审计和 skill/workflow 复用能力。
+- **限制**: 视频中关于飞书、Google Workspace、Supabase、MongoDB、瑞幸、KFC、微信等具体产品开放 CLI/MCP 的说法尚未逐项核验，暂作为访谈观点和后续验证任务。

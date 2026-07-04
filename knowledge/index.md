@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 tags:
   - wiki
   - index
@@ -14,6 +14,8 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/bilibili-bv1bktk69edd-agent-500-gui|【此话当真】Agent 元年第 500 天：什么在消失，什么在诞生，为什么我们不该再投资 GUI 思维的软件？]] — Bilibili source packet on Agent-era GUI/headless software, CLI/MCP/skills and agentic economy; synthesized in [[_syntheses/bilibili-agent-gui-headless-software-deep-dive-2026-07-04|Agent 时代 GUI 与 Headless 软件视频深度调研]].
 
 - [[_sources/bilibili-bv1pcja6bei4-bilibili-video|还写什么单片机代码啊？直接微信聊天就行！]] — Bilibili source packet on ESP Cloud / ESP32 natural-language scripting; summarized in [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]].
 
@@ -78,6 +80,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-agent-gui-headless-software-deep-dive-2026-07-04|Agent 时代 GUI 与 Headless 软件视频深度调研]] — 对 `BV1bKTk69EDD` 做单视频深研，并用 MCP、Claude Code skills 和 Vercel AI SDK 官方文档校验 Agent-ready 软件接口、skills 与 GUI/Headless 分层趋势。
 
 - [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]] — 从每日收藏夹成功转录的视频中抽取物理一致世界模型、家用机器人产品定义、VLA 工程闭环、GENIE SIM、SLAM/ROS、数值优化和 ESP32 AI 工具链线索。
 - [[_syntheses/karpathy-wiki-migration-plan|Karpathy Wiki Migration Plan]] — 本仓库从行业分析工作区升级为 LLM Wiki 的迁移设计。
