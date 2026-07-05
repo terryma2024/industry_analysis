@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-04
+last_updated: 2026-07-05
 tags:
   - wiki
   - index
@@ -14,6 +14,12 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/bilibili-bv1iftp62eav-2026-vla-rt-1-roboflamingo-mdt-rdt-lapa|【2026最新具身智能VLA入门教程】一口气讲透 RT-1、RoboFlamingo、MDT、RDT、LAPA 等核心算法]] — Bilibili VLA course source packet; synthesized in [[_syntheses/bilibili-vla-tutorial-deep-dive-2026-07-05|VLA 入门教程视频深度调研]].
+
+- [[_sources/bilibili-bv1y3t46neuf-ai-ai|到底什么是物理AI，与数字AI核心区别是时间尺度不一样]] — Bilibili source packet on Physical AI time-scale differences; synthesized in [[_syntheses/bilibili-physical-ai-time-scale-deep-dive-2026-07-05|Physical AI 时间尺度视频深度调研]].
+
+- [[_sources/bilibili-bv12xtm6segf-bilibili-video|机器触觉反馈，是不是就是一个伪命题？]] — Bilibili source packet on HapMorph wearable haptic feedback; synthesized in [[_syntheses/bilibili-hapmorph-haptic-feedback-deep-dive-2026-07-05|HapMorph 触觉反馈视频深度调研]].
 
 - [[_sources/bilibili-bv1bktk69edd-agent-500-gui|【此话当真】Agent 元年第 500 天：什么在消失，什么在诞生，为什么我们不该再投资 GUI 思维的软件？]] — Bilibili source packet on Agent-era GUI/headless software, CLI/MCP/skills and agentic economy; synthesized in [[_syntheses/bilibili-agent-gui-headless-software-deep-dive-2026-07-04|Agent 时代 GUI 与 Headless 软件视频深度调研]].
 
@@ -80,6 +86,10 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-hapmorph-haptic-feedback-deep-dive-2026-07-05|HapMorph 触觉反馈视频深度调研]] — 对 `BV12XTM6sEGF` 做单视频深研，并用 arXiv `2509.05433` 校验 21g、50-104mm、4.7N/mm 和 89.4% 等 HapMorph 触觉反馈指标。
+- [[_syntheses/bilibili-physical-ai-time-scale-deep-dive-2026-07-05|Physical AI 时间尺度视频深度调研]] — 对 `BV1y3T46NEUf` 做单视频深研，沉淀 Physical AI 与数字 AI 在实时性、视觉主模态和跨本体部署上的差异。
+- [[_syntheses/bilibili-vla-tutorial-deep-dive-2026-07-05|VLA 入门教程视频深度调研]] — 对 `BV1ifTp62EaV` 做单视频深研，梳理 VLA 模型、数据、仿真、评测和真机部署学习路线。
 
 - [[_syntheses/bilibili-agent-gui-headless-software-deep-dive-2026-07-04|Agent 时代 GUI 与 Headless 软件视频深度调研]] — 对 `BV1bKTk69EDD` 做单视频深研，并用 MCP、Claude Code skills 和 Vercel AI SDK 官方文档校验 Agent-ready 软件接口、skills 与 GUI/Headless 分层趋势。
 

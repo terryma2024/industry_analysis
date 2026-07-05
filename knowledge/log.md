@@ -258,3 +258,16 @@ tags:
 - **来源**: 使用 `BV1bKTk69EDD` source card 与 raw transcript，并用 MCP、Claude Code overview、Claude Code skills、Vercel AI SDK 官方文档交叉验证 Agent-ready 软件接口、skills 和工具调用趋势。
 - **初步结果**: GUI 不应被简单否定；AI 应用的关键分层正在变成 human UI、agent interface 和 workflow assets。投资/职业判断应同时评估界面信任层、工具接口、上下文资产、权限审计和 skill/workflow 复用能力。
 - **限制**: 视频中关于飞书、Google Workspace、Supabase、MongoDB、瑞幸、KFC、微信等具体产品开放 CLI/MCP 的说法尚未逐项核验，暂作为访谈观点和后续验证任务。
+
+## [2026-07-05] ingest | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-05|Bilibili AI Daily Run 2026-07-05]]；处理 3 个 Bilibili 视频 source packet。
+- **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+- **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+## [2026-07-05] synthesis | Bilibili 单视频深研三篇
+
+- **变更**: 新增 [[_syntheses/bilibili-hapmorph-haptic-feedback-deep-dive-2026-07-05|HapMorph 触觉反馈视频深度调研]]、[[_syntheses/bilibili-physical-ai-time-scale-deep-dive-2026-07-05|Physical AI 时间尺度视频深度调研]] 和 [[_syntheses/bilibili-vla-tutorial-deep-dive-2026-07-05|VLA 入门教程视频深度调研]]；更新 [[_syntheses/bilibili-ai-daily-run-2026-07-05|Bilibili AI Daily Run 2026-07-05]]、[[index|Knowledge Index]]、[[robotics-embodied-ai/sources|机器人来源表]] 和机器人来源抽取 manifest。
+- **来源**: 只综合本次自动化中 `status=processed` 的 `BV12XTM6sEGF`、`BV1y3T46NEUf`、`BV1ifTp62EaV`；用 arXiv `2509.05433` / `SRC-robotics-233` 校验 HapMorph 触觉反馈关键指标，并复用既有 VLA、数据集、评测和工程平台来源。
+- **初步结果**: 触觉反馈的关键问题是多属性反馈、人类可辨识与任务闭环价值；Physical AI 需要按多时间尺度系统理解；VLA 学习应从模型扩展到数据 schema、benchmark、真机部署和失败回流。
+- **限制**: Bilibili 仍为 B 级线索；GelSight、DIGIT 360、RT-1、RT-2、RoboFlamingo、MDT、RDT、LAPA 等模型/硬件名需要后续补独立 source card 后再推广为事实。
