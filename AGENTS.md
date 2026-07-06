@@ -23,6 +23,7 @@ When the user provides a video/audio URL or asks for video notes, use:
 - Store source documents and raw datasets under `raw/<industry>/documents/` and `raw/<industry>/data/`.
 - Use `raw/_inbox/articles/`, `raw/_inbox/papers/`, `raw/_inbox/transcripts/`, and `raw/_inbox/news/` for uncategorized sources before they are assigned to an industry or compiled into `knowledge/`.
 - Store synthesized knowledge under `knowledge/<industry>/`.
+- Store complete industry-specific research documents under `knowledge/<industry>/research-notes/`. Use `knowledge/_syntheses/` mainly for cross-industry synthesis, migration plans, or high-value outputs without a clear single-industry home.
 - Treat `knowledge/` as the Obsidian vault for this project. Create, manage, and maintain knowledge-base content in Obsidian-compatible Markdown.
 - When creating or editing knowledge notes, prefer Obsidian conventions: wikilinks, stable headings, note properties when useful, backlinks, tags, and index/MOC notes.
 - When Obsidian-specific syntax or vault operations matter, use the installed Obsidian skills such as `obsidian-markdown`, `obsidian-cli`, `obsidian-bases`, `obsidian-canvas-creator`, `mermaid-visualizer`, and `excalidraw-diagram`.

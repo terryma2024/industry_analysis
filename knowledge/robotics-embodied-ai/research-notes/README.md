@@ -65,3 +65,7 @@ last_updated: 2026-07-06
 ## 2026-07-06 家庭养老机器人
 
 - [[home-elderly-care-robots-2026-07-06]]: 家庭养老机器人公司与方案调研，按陪伴提醒、远程巡视、移动载物、康复护理和通用家务机器人分层，比较国内外代表公司、落地阶段和中国方案机会。
+
+## 2026-07-06 VLA 与世界模型数据基建
+
+- [[vla-world-model-data-infrastructure-platform-design-2026-07-06]]: 基于 `BV1ZFTq6pEA3` 的 15 阶段数据生产 SOP，设计 VLA&世界模型数据基建平台，覆盖 episode-first 架构、自动质检、多格式导出、dataset registry、baseline 评测和失败补采闭环。

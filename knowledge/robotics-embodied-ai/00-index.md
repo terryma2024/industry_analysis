@@ -53,6 +53,7 @@ sources:
 - `12-robotics-engineering-platforms-2026-06-04.md`: 机器人工程平台综合调研，覆盖数据、训练、评测、部署、真机推理和选型框架。
 - `13-robot-company-product-comparison-2026-06-08.md`: 主表机器人公司的产品型号全景对比，覆盖人形/轮式双臂、协作臂/工业机器人、AMR/移动操作的参数、技术路线、优缺点和待验证项。
 - [[research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]]: 系统拆解 AIRSPEED 的开源采集核心、论文三服务架构、技术转移叙事、性能 claim、版本边界和对中国具身数据基础设施的启发。
+- [[research-notes/vla-world-model-data-infrastructure-platform-design-2026-07-06|VLA&世界模型数据基建平台系统调研与设计]]: 基于 `BV1ZFTq6pEA3` 的 15 阶段数据生产 SOP，设计面向 VLA、模仿学习和世界模型的数据生产平台，覆盖采集接入、同步缓存、自动质检、episode builder、多格式导出和失败补采闭环。
 - [[research-notes/lidar-world-model-training-2026-06-29|激光雷达数据融合进入世界模型训练论文与方案调研]]: 横向梳理 LiDAR 原生生成、BEV/occupancy、多模态 camera-LiDAR latent、JEPA 和移动机器人导航 world model 论文，并给出工程落地方案。
 - [[research-notes/home-elderly-care-robots-2026-07-06|家庭养老机器人公司与方案调研]]: 按陪伴提醒、远程巡视、移动载物、康复护理和通用家务机器人五层路线，比较 ElliQ、Hyodol、Labrador、傅利叶、1X、Figure、Tesla、优必选等公司与中国落地方案。
 - [[research-notes/career-direction-business-landing-knowhow-2026-06-09|具身智能业务落地 know-how 职业方向思考]]: 基于 Thinking Partner 对话沉淀的职业方向锚点，聚焦企业决策者的成本、收入或风险痛点，以及零售后场/餐饮后厨/酒店后台等早期验证场景。

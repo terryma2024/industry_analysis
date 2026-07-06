@@ -292,3 +292,15 @@ tags:
 - **来源**: 运行 `uv run python tools/bilibili_ai_daily_research.py --limit 20 --json` 获取默认收藏夹最新 20 个候选。
 - **结果**: 20 个候选全部为 `skipped_duplicate`；`needs_model_review=0`、模型选中 0、`processed=0`、`failed=0`，因此未进入第二阶段、未新增 transcript、source card 或单视频深研页。
 - **限制**: 本轮没有新视频内容可综合；后续运行继续只处理 selected + processed 视频。
+
+## [2026-07-06] synthesis | VLA&世界模型数据基建平台系统设计
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/vla-world-model-data-infrastructure-platform-design-2026-07-06|VLA&世界模型数据基建平台系统调研与设计]]；更新 [[index|Knowledge Index]]。
+- **来源**: 以 [[_sources/bilibili-bv1zftq6pea3-vla|BV1ZFTq6pEA3 source card]] 和 `raw/_inbox/transcripts/2026-07-02-bilibili-bv1zftq6pea3-vla.json` 的 15 阶段 SOP 为主线，复用 [[robotics-embodied-ai/12-robotics-engineering-platforms-2026-06-04|机器人工程平台综合调研]]、[[robotics-embodied-ai/research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 调研]]、[[robotics-embodied-ai/research-notes/robot-training-data-value-evaluation-2026-06-29|训练数据价值评估框架]]、[[robotics-embodied-ai/research-notes/open-embodied-ai-datasets-comparison-2026-06-11|开源具身数据集对比]] 和 [[robotics-embodied-ai/research-notes/dora-1-vs-ros2-2026-06-23|dora vs ROS 2]]。
+- **初步结果**: 平台应定位为具身智能数据生产操作系统，核心对象是 episode 和数据飞轮；MVP 应优先做任务契约、采集接入、同步缓存、自动质检、episode builder、多格式导出、dataset registry、baseline 评测和失败补采闭环。
+- **限制**: Bilibili 视频仍为 B 级线索；具体性能、成本、QC 阈值、dora/AIRSPEED 复用程度和真实客户 ROI 需要用小规模实采和代码级复现继续验证。
+
+## [2026-07-06] governance | 行业完整调研文档存放规则修正
+
+- **变更**: 将 [[robotics-embodied-ai/research-notes/vla-world-model-data-infrastructure-platform-design-2026-07-06|VLA&世界模型数据基建平台系统调研与设计]] 放入机器人行业 `research-notes/`；更新 [[index|Knowledge Index]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]] 和 `AGENTS.md`。
+- **规则**: 后续完整行业调研文档应写入对应 `knowledge/<industry>/research-notes/`，而不是默认放入 `knowledge/_syntheses/`；`_syntheses/` 主要用于跨行业综合、迁移计划或无明确产业归属的高价值输出。
