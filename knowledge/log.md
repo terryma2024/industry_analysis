@@ -271,3 +271,10 @@ tags:
 - **来源**: 只综合本次自动化中 `status=processed` 的 `BV12XTM6sEGF`、`BV1y3T46NEUf`、`BV1ifTp62EaV`；用 arXiv `2509.05433` / `SRC-robotics-233` 校验 HapMorph 触觉反馈关键指标，并复用既有 VLA、数据集、评测和工程平台来源。
 - **初步结果**: 触觉反馈的关键问题是多属性反馈、人类可辨识与任务闭环价值；Physical AI 需要按多时间尺度系统理解；VLA 学习应从模型扩展到数据 schema、benchmark、真机部署和失败回流。
 - **限制**: Bilibili 仍为 B 级线索；GelSight、DIGIT 360、RT-1、RT-2、RoboFlamingo、MDT、RDT、LAPA 等模型/硬件名需要后续补独立 source card 后再推广为事实。
+
+## [2026-07-06] automation | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-06|Bilibili AI Daily Run 2026-07-06]]；更新 [[index|Knowledge Index]]。
+- **来源**: 运行 `uv run python tools/bilibili_ai_daily_research.py --limit 20 --json` 获取默认收藏夹最新 20 个候选。
+- **结果**: 20 个候选全部为 `skipped_duplicate`；`needs_model_review=0`、模型选中 0、`processed=0`、`failed=0`，因此未进入第二阶段、未新增 transcript、source card 或单视频深研页。
+- **限制**: 本轮没有新视频内容可综合；后续运行继续只处理 selected + processed 视频。

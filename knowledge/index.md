@@ -87,6 +87,7 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-07-06|Bilibili AI Daily Run 2026-07-06]] — 每日收藏夹候选池 20 个视频全部为重复，未进入模型复核、转录或单视频深研。
 - [[_syntheses/bilibili-hapmorph-haptic-feedback-deep-dive-2026-07-05|HapMorph 触觉反馈视频深度调研]] — 对 `BV12XTM6sEGF` 做单视频深研，并用 arXiv `2509.05433` 校验 21g、50-104mm、4.7N/mm 和 89.4% 等 HapMorph 触觉反馈指标。
 - [[_syntheses/bilibili-physical-ai-time-scale-deep-dive-2026-07-05|Physical AI 时间尺度视频深度调研]] — 对 `BV1y3T46NEUf` 做单视频深研，沉淀 Physical AI 与数字 AI 在实时性、视觉主模态和跨本体部署上的差异。
 - [[_syntheses/bilibili-vla-tutorial-deep-dive-2026-07-05|VLA 入门教程视频深度调研]] — 对 `BV1ifTp62EaV` 做单视频深研，梳理 VLA 模型、数据、仿真、评测和真机部署学习路线。
