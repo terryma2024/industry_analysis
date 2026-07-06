@@ -116,6 +116,7 @@ tags:
 - [[robotics-embodied-ai/research-notes/lidar-world-model-training-2026-06-29|激光雷达数据融合进入世界模型训练论文与方案调研]] — 梳理 LiDAR 原生生成、BEV/occupancy、多模态 camera-LiDAR latent、JEPA 和移动机器人导航 world model 路线，并给出工程方案。
 - [[robotics-embodied-ai/research-notes/home-elderly-care-robots-2026-07-06|家庭养老机器人公司与方案调研]] — 按陪伴提醒、远程巡视、移动载物、康复护理和通用家务机器人五层路线，比较国内外代表公司、商业化阶段、风险约束与中国落地方案。
 - [[eldercare/04-companies|中国养老行业头部公司与科技创新创业公司]] — 新建养老服务与银发科技行业公司扫描，分层梳理保险系医养社区、连锁养老运营、居家护理、智慧养老平台、社区空间科技和养老智能硬件玩家。
+- [[robotics-embodied-ai/research-notes/embodied-model-physical-understanding-evaluation-2026-07-03|具身智能大模型物理理解能力评估框架]] — 区分动作生成、语义泛化、动作条件预测和规划可用世界模型，提出反事实预测、minimal physical pairs、闭环 A/B 与多模态约束的评估方法。
 - [[ai/research-notes/jepa-core-principles-2026-06-11|JEPA 核心原理快速调研]] — 系统拆解 JEPA、I-JEPA、V-JEPA、V-JEPA 2 与世界模型/机器人规划的核心原理、差异和局限。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] — 第一版全球 AI 芯片及上下游上市公司池，记录主营业务、公开供应链关系、近一年市值变化、筛选框架和待补证据。

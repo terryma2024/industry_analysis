@@ -62,6 +62,10 @@ last_updated: 2026-07-06
 
 - [[robot-training-data-value-evaluation-2026-06-29]]: 面向采集前立项、采集中质检和采后验证的具身智能训练数据价值评估框架，核心是边际能力提升、复用性、可信度与全成本风险比。
 
+## 2026-07-03 世界模型与物理理解评估
+
+- [[embodied-model-physical-understanding-evaluation-2026-07-03]]: 区分具身大模型的动作生成、语义泛化、动作条件预测和规划可用世界模型，提出反事实预测、minimal physical pairs、forward/inverse dynamics、闭环 A/B 和多模态约束的评估框架。
+
 ## 2026-07-06 家庭养老机器人
 
 - [[home-elderly-care-robots-2026-07-06]]: 家庭养老机器人公司与方案调研，按陪伴提醒、远程巡视、移动载物、康复护理和通用家务机器人分层，比较国内外代表公司、落地阶段和中国方案机会。

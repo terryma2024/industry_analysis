@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-06-11
+last_updated: 2026-07-03
 tags:
   - wiki
   - log
@@ -220,6 +220,13 @@ tags:
 - **变更**: 新增 [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]]；更新 [[index|Knowledge Index]]、[[robotics-embodied-ai/sources|机器人来源表]] 和 [[ai/sources|AI 来源表]]。
 - **来源**: 使用每日 Bilibili 自动化中断前成功落盘的 source cards 与 raw transcripts，覆盖 ZR-0/VLA、VLA 数据基建、GENIE SIM、TensorRT、ROS2/LiDAR、LeWorldModel、机械臂安全和 ForceBand。
 - **限制**: Bilibili 视频仅作为 B 级线索；`BV1ogTT6PE2s` transcript 无有效正文，不纳入观点抽取；ZR-0、ForceBand、GENIE SIM 和安全规范相关 claim 需要一级来源验证。
+
+## [2026-07-03] research | 具身大模型物理理解评估框架
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/embodied-model-physical-understanding-evaluation-2026-07-03|具身智能大模型物理理解能力评估框架]]；更新 [[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[index|Knowledge Index]]。
+- **来源**: 复用 [[_sources/roboalign-r1-reward-aligned-robot-video-world-models|RoboAlign-R1]]、[[news/2026-06-05-nvidia-cosmos-3-getting-started-plan|NVIDIA Cosmos 3 上手调研]]、[[ai/research-notes/jepa-core-principles-2026-06-11|JEPA 核心原理快速调研]]；新增 `SRC-robotics-218` 至 `SRC-robotics-223`，覆盖 RT-2、OpenVLA、Meta V-JEPA 2、Gemini Robotics、EWMBench 和 World Action Models。
+- **初步结果**: 判断具身大模型是否理解物理规律，应从 `observation + instruction -> action` 的动作生成评估，升级为 `state + candidate action -> future state / outcome / risk` 的动作条件预测与闭环规划收益评估；核心方法包括反事实预测、minimal physical pairs、forward/inverse dynamics、policy-only vs world-model-assisted A/B 和多模态接触/空间约束。
+- **限制**: 本轮为 query-style 框架调研，新增外部来源已登记但尚未执行 raw artifact 抽取；若进入正式 benchmark 复现或公司尽调，应补采 PDF/HTML、建立 source card，并对 judge/reward model 做人评和真机交叉验证。
 
 ## [2026-07-02] automation | Bilibili AI/具身智能每日增量重跑
 
