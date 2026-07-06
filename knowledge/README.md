@@ -36,6 +36,7 @@
 - [[low-altitude-economy/00-index|低空经济]]
 - [[aerospace/00-index|航空航天]]
 - [[biopharma/00-index|生物医药]]
+- [[eldercare/00-index|养老服务与银发科技]]
 - [[quantum-technology/00-index|量子科技]]
 - [[6g/00-index|6G]]
 - [[brain-computer-interface/00-index|脑机接口]]

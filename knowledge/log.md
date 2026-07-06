@@ -272,6 +272,20 @@ tags:
 - **初步结果**: 触觉反馈的关键问题是多属性反馈、人类可辨识与任务闭环价值；Physical AI 需要按多时间尺度系统理解；VLA 学习应从模型扩展到数据 schema、benchmark、真机部署和失败回流。
 - **限制**: Bilibili 仍为 B 级线索；GelSight、DIGIT 360、RT-1、RT-2、RoboFlamingo、MDT、RDT、LAPA 等模型/硬件名需要后续补独立 source card 后再推广为事实。
 
+## [2026-07-06] research | 家庭养老机器人公司与方案调研
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/home-elderly-care-robots-2026-07-06|家庭养老机器人公司与方案调研]]；更新 [[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]] 和 [[index|Knowledge Index]]。
+- **来源**: 复用中国人口老龄化、`机器人+`、北京/上海医疗康养和家庭场景政策来源；在线核验 ElliQ、Hyodol、Joy for All、LOVOT、Labrador、傅利叶、1X、Figure 和 Tesla 官方页面，并用 arXiv `2410.12205`、`2302.12686` 补充老年人采用偏好研究。Weave Isaac 与优必选 UWorld U1 仅作为媒体线索列入待验证。
+- **初步结果**: 家庭养老机器人应分为陪伴提醒、远程巡视、移动载物、康复护理和通用家务五层；2026 年更可行的是“AI 照护终端 + 家属 App + IoT + 社区/护理服务”闭环，而不是直接售卖昂贵全能人形机器人。
+- **限制**: 本轮未系统抓取中国地方养老机器人招投标、真实家庭部署数量、价格带和留存数据；国内智能家居/IoT 厂商在养老闭环中的角色需下一轮补公司级来源。
+
+## [2026-07-06] research | 中国养老行业头部公司与科技创新创业公司
+
+- **变更**: 新建 `eldercare` 行业工作区；新增 [[eldercare/00-index|养老服务与银发科技研究入口]] 和 [[eldercare/04-companies|中国养老行业头部公司与科技创新创业公司]]；更新 [[index|Knowledge Index]]、[[README|Knowledge README]] 和 `tools/industry_registry.json`。
+- **来源**: 复用国家统计局 2025 年公报；核验泰康之家、椿萱茂、安康通、金牌护士、亲和源、万物云官网；补充 arXiv 中国社区养老科技研究和毫米波人体感知综述；复用前序家庭养老机器人调研。
+- **初步结果**: 养老行业头部应按保险系医养社区、连锁养老运营、居家/社区/机构服务、智慧养老平台、互联网护理和智能硬件分层看；科技创新的近期重点在长护险履约、上门护理、智慧养老指挥中心、无感监测、社区空间科技和康复/护理机器人。
+- **限制**: 太保家园、国寿嘉园、大家的家、梧桐人家、九如城、光大养老、福寿康、青松康护、小柏家护等头部候选仍需下一轮补官方项目、床位、城市、收入或招投标证据；本轮不做硬排名。
+
 ## [2026-07-06] automation | Bilibili AI/具身智能每日视频采集
 
 - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-06|Bilibili AI Daily Run 2026-07-06]]；更新 [[index|Knowledge Index]]。

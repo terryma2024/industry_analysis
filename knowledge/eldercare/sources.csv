@@ -1,0 +1,11 @@
+id,title,source_type,publisher,date,url_or_path,evidence_grade,notes
+SRC-eldercare-001,中华人民共和国2025年国民经济和社会发展统计公报,statistics,国家统计局,2026-02-28,raw/robotics-embodied-ai/documents/SRC-robotics-006-2025.md,S,复用既有 raw source；用于老龄人口、养老服务床位和养老机构基础数据
+SRC-eldercare-002,泰康之家官网,company_website,泰康之家,2026-07-06 accessed,https://www.taikangzhijia.com/,A,用于泰康之家在住居民、开业园区、布局城市、医养社区服务体系和支付+服务模式
+SRC-eldercare-003,椿萱茂官网,company_website,椿萱茂,2026-07-06 accessed,https://www.chunxuanmao.com/,A,用于远洋椿萱茂城市覆盖、股东/品牌定位和开源鸿蒙智慧养老护理院线索
+SRC-eldercare-004,安康通官网,company_website,安康通,2026-07-06 accessed,https://www.ankangtong.com/,A,用于智慧养老、居家/社区/机构养老、长护险、覆盖省市和服务人群数据
+SRC-eldercare-005,金牌护士官网,company_website,北京美鑫科技有限公司,2026-07-06 accessed,https://www.goldnurse.com/,A,用于互联网+护理、护士上门、居家康复、保险增值服务和家庭病房服务
+SRC-eldercare-006,亲和源官网,company_website,亲和源,2026-07-06 accessed,https://www.qinheyuan.com/,A,用于会员制养老社区、康复护理、智能化设施和项目连锁线索
+SRC-eldercare-007,万物云官网,company_website,万物云,2026-07-06 accessed,https://www.onewo.com/,A,用于社区空间服务、AIoT及BPaaS解决方案、空间科技与社区服务入口
+SRC-eldercare-008,Rethinking Technological Solutions for Community-Based Older Adult Care,paper,arXiv,2025-03-30,https://arxiv.org/abs/2503.23609,S,中国社区养老科技研究；强调技术应支持而非替代照护基础设施
+SRC-eldercare-009,A Survey of mmWave-based Human Sensing,paper,arXiv,2023-08-06,https://arxiv.org/abs/2308.03149,S,用于毫米波人体感知、无接触监测和隐私友好型居家养老硬件路线
+SRC-eldercare-010,家庭养老机器人公司与方案调研,synthesis,industry_analysis,2026-07-06,knowledge/robotics-embodied-ai/research-notes/home-elderly-care-robots-2026-07-06.md,A,复用家庭养老机器人与具身智能相关公司/方案

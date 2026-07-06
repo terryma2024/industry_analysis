@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-05
+last_updated: 2026-07-06
 tags:
   - wiki
   - index
@@ -113,6 +113,8 @@ tags:
 - [[robotics-embodied-ai/research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]] — 系统拆解 AIRSPEED 当前开源采集核心、论文三服务架构、技术转移叙事、性能 claim 和中国具身数据基础设施启发。
 - [[robotics-embodied-ai/research-notes/dora-1-vs-ros2-2026-06-23|dora 1.0 vs ROS 2 调研]] — 对比 dora 的 AI dataflow runtime 路线与 ROS 2 机器人生态底座，拆解版本状态、性能、QoS、桥接架构和职业学习路径。
 - [[robotics-embodied-ai/research-notes/lidar-world-model-training-2026-06-29|激光雷达数据融合进入世界模型训练论文与方案调研]] — 梳理 LiDAR 原生生成、BEV/occupancy、多模态 camera-LiDAR latent、JEPA 和移动机器人导航 world model 路线，并给出工程方案。
+- [[robotics-embodied-ai/research-notes/home-elderly-care-robots-2026-07-06|家庭养老机器人公司与方案调研]] — 按陪伴提醒、远程巡视、移动载物、康复护理和通用家务机器人五层路线，比较国内外代表公司、商业化阶段、风险约束与中国落地方案。
+- [[eldercare/04-companies|中国养老行业头部公司与科技创新创业公司]] — 新建养老服务与银发科技行业公司扫描，分层梳理保险系医养社区、连锁养老运营、居家护理、智慧养老平台、社区空间科技和养老智能硬件玩家。
 - [[ai/research-notes/jepa-core-principles-2026-06-11|JEPA 核心原理快速调研]] — 系统拆解 JEPA、I-JEPA、V-JEPA、V-JEPA 2 与世界模型/机器人规划的核心原理、差异和局限。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] — 第一版全球 AI 芯片及上下游上市公司池，记录主营业务、公开供应链关系、近一年市值变化、筛选框架和待补证据。
@@ -129,6 +131,7 @@ tags:
 - [[ai/00-index|AI]] — AI 总行业研究入口，覆盖算力、基础模型、数据/评测、应用/Agent、监管安全和职业/投资视角。
 - [[biopharma/00-index|生物医药]] — 生物医药初步调研入口，覆盖创新药、生物经济、CXO/CDMO 和未来健康。
 - [[brain-computer-interface/00-index|脑机接口]] — 脑机接口初步调研入口，覆盖非侵入/侵入式 BCI、医疗康复和神经信号解码。
+- [[eldercare/00-index|养老服务与银发科技]] — 养老服务、医养结合、长护险、智慧养老、居家护理、养老社区和银发科技行业研究入口。
 - [[future-energy/00-index|未来能源]] — 未来能源初步调研入口，覆盖新型能源体系、储能、氢能、智能电网和聚变期权。
 - [[integrated-circuits/00-index|集成电路]] — 集成电路行业研究入口。
 - [[low-altitude-economy/00-index|低空经济]] — 低空经济初步调研入口，覆盖无人机、eVTOL、低空基础设施和监管平台。
