@@ -1,0 +1,54 @@
+---
+title: "具身感知升级逻辑：双目抓物体，多目构建完整空间世界模型"
+type: source
+date_created: 2026-07-07
+last_updated: 2026-07-07
+source_urls:
+  - https://www.bilibili.com/video/BV1j9jd6aE7c
+evidence_grade: B
+sources:
+  - raw/_inbox/transcripts/2026-07-07-bilibili-bv1j9jd6ae7c-bilibili-video.json
+tags:
+  - bilibili
+  - video
+  - ai-research
+  - robotics
+  - embodied-ai
+status: draft
+---
+
+# 具身感知升级逻辑：双目抓物体，多目构建完整空间世界模型
+
+> [!summary]
+> Bilibili video source packet captured by the daily AI / embodied-intelligence pipeline. Synthesized in [[_syntheses/bilibili-multiview-embodied-perception-deep-dive-2026-07-07|多目具身感知视频深度调研]].
+
+## Source Metadata
+
+| Field | Value |
+|---|---|
+| Platform | Bilibili |
+| URL | https://www.bilibili.com/video/BV1j9jd6aE7c |
+| BV / video id | `BV1j9jd6aE7c` |
+| Author | 失控的PM |
+| Published | unknown |
+| Favorited | unknown |
+| Category | unknown |
+| Tags | unknown |
+| Extraction method | volcengine-external-command:volc.seedasr.auc |
+| Raw artifact | `raw/_inbox/transcripts/2026-07-07-bilibili-bv1j9jd6ae7c-bilibili-video.json` |
+
+## Transcript Excerpt
+
+双目的，就是让机器人学会怎么抓。四目的，就是让机器人学会怎么走。六目的，就是让机器人学会观察环境。整体的环境。啊，八目或者说更多的这个传感器啊，其实就是让机器人来理解这个世界。啊，学会去理解世界。哈喽，大家好，我是司马。今天来讲一下，Ego 从双目到多目，它本质上是在解决一个什么问题？啊。大家来看这张图。很多人第一次看到这个具身智能数据采集设备的时候，会有一个误区认为摄像头越来越多是为了让这个深度越来越准确。实际上不是啊，摄像头数量的增加呢，本质上是在不断扩大机器人对世界理解的范围。最早的时候是一个单 RGB 对吧？就是我们的这个手机 iPhone 12，或者是说我们的这个 GoPro。啊。那后面呢，我们有了这个双目，也就是跟人眼一样，左右这个相机成像。双目的作用呢，其实非常的简单，就是让机器人知道这个东西啊离我有多远。例如这个杯子离我有多远？门把手离这个夹爪有多远？这个插头离插座有多远？所以双目目的呢是深度距离和深度感知。英文叫做 depth perception。这也是为什么今天很多 VLA 的模型啊，包括机器人模仿学习。啊，大量的这个场景下呢，双目加 IMU 呢，就已经是可以工作了啊，这是用的量最大的。因为它最核心的问题其实是机器人如何完成一个动作啊，如何抓取，如何拿，如何放，如何操作。但当这个机器人在一个场景里面开始移动的时候啊，问题就变了。那机器人不仅要知道物体离我有多远，那还要知道我在哪里啊？我刚刚是从哪里来的呀？我接下来要往哪里去啊？于是呢，机器人呢就进入了第二个阶段，SLAM。SLAM 大家都很熟啊，也就是定位和这个建图。这个时候双目的已经开始不够用了。因为双目主要是看前方嘛，对吧？当机器人转头的时候呢，很多空间呢就丢失了。所以呢，行业开始要出现这种四目的方案。那再往后呢，就机器人会进入真实的场景啊，家庭、工厂、商场、仓库等这个真实的一个场景。那这个时候问题就出现了，机器人不仅要知道自己在哪里，还要知道周围发生了什么，周边有没有人。啊，我的后面有没有障碍物，这个整个环境会不会发生变化？于是呢，摄像头会继续增加，到了六目啊，甚至八目啊，甚至更多的这个 camera 的这个阶段。所以呢，如果要总结成一句话啊，ego 的摄像头越来越多呢，本质上不是为了看得更清楚，而是让机器人从看物体变成看整个空间啊，再变成理解整个世界。所以我们从这个表可以看出来，对吧？双目的核心就是看清距离，对吧？然后有这个核心目标是做 depth 四目呢是看清空间啊，做 slam 啊，也就是看清我的周围。那六目呢，就是看清环境，对吧？让我知道周围发生了什么啊，旁边有没有人，后面有没有障碍物，环境是不是啊，有没有变化。那后面呢就是要理解整个空间，理解整个世界。也就是说我们说的物理 AI 一个世界模型。那双目也好，四目也罢。那它们其实本质上是有一些差异的。大家把这一页呢，可以理解为机器人的能力感知的这种发展路线。比如这个双目，就像人的眼睛一样啊，放在前方就在前方看距离。是吧？它解决的就是怎么抓。啊，主要是用在这个 V O L A 的这个模型。比如说抓杯子啊、开门呐、按按钮啊、拿工具啊，那这些动作最关键的信息其实只有一个。那就是目标的这个距离啊。所以双目的最大的价值就是提供深度信息，这也是为什么今天有很多的机器人公司，无论是机械臂还是人形机器人啊，都会优选。这个双目的这个方案，因为它是成本和效果最好的一个平衡点。那再往右看呢，就是四目。那事情呢就开始发生了一个变化。那四目最重要的能量已经不是深度了。而是空间理解，或者说是这个定位和建图。机器人开始知道，哎，我在什么位置啊？我刚刚经过了哪里？环境的地图是什么样的？所所以呢？这个四目解决的是我在哪里。其实像 Meta 的 Project Orin 包括很多世界模型的这个采集设备呢，实际上就是这个思路。增加这个侧面的摄像头呢，不是说为了让深度更准。而是说让空间感知呢更加的一个稳定。再往后呢，就是这个六目啊，甚至更多的这个摄像头。那这个时候呢，机器人就开始真正的进入一个复杂的一个环境。啊，比如说什么家庭服务机器人啊，商业的服务机器人啊，自动驾驶啊，人形机器人呐。啊，机器人需要同时关注前面、侧面、后面，以以及周围的人，啊，周围的物体，整个环境的一个变化。所以六目或者说多目要解决的问题就是周围发生了什么。啊，当这个摄像头持...
+
+## Research Handoff
+
+- Extract facts, estimates, judgments, and hypotheses from the full transcript in `raw/_inbox/transcripts/2026-07-07-bilibili-bv1j9jd6ae7c-bilibili-video.json`.
+- Check whether this should update AI, robotics/embodied AI, integrated circuits, or another industry page.
+- Preserve source traceability using the Bilibili URL and BV / video id.
+- Do not treat this source as primary evidence for company financials, policy facts, or market size without cross-checking primary sources.
+
+## Related Links
+
+- [[robotics-embodied-ai/00-index|机器人与具身智能]]
+- [[ai/00-index|AI]]

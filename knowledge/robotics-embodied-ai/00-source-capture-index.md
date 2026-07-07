@@ -109,6 +109,16 @@ aliases:
 | [`SRC-robotics-198`](../../raw/robotics-embodied-ai/documents/SRC-robotics-198-ros-2-qos-official-documentation.md) | [ROS 2 QoS docs](../../raw/robotics-embodied-ai/documents/SRC-robotics-198-ros-2-qos-official-documentation.md) | raw `.rst` 以 fallback sidecar 保存；用于 DDS QoS 能力对比。 |
 | [`SRC-robotics-199`](../../raw/robotics-embodied-ai/documents/SRC-robotics-199-ros-2-design-architecture-and-uses-in-the-wild.md) | [ROS 2 overview paper](../../raw/robotics-embodied-ai/documents/SRC-robotics-199-ros-2-design-architecture-and-uses-in-the-wild.md) | ROS 2 架构和真实部署综述论文摘要页。 |
 
+## 2026-07-07 Bilibili 深研一级校验来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-238`](../../raw/robotics-embodied-ai/documents/SRC-robotics-238-nvidia-isaac-sim-4-5-documentation.md) | [NVIDIA Isaac Sim 4.5 documentation](../../raw/robotics-embodied-ai/documents/SRC-robotics-238-nvidia-isaac-sim-4-5-documentation.md) | 用于校验 Isaac Sim 的 GPU PhysX、多传感器 RTX 渲染、digital twin、Replicator、Isaac Lab 和 ROS/ROS2 bridge。 |
+| [`SRC-robotics-239`](../../raw/robotics-embodied-ai/documents/SRC-robotics-239-nvidia-isaac-sim-4-5-system-requirements.md) | [Isaac Sim 4.5 requirements](../../raw/robotics-embodied-ai/documents/SRC-robotics-239-nvidia-isaac-sim-4-5-system-requirements.md) | 用于校验视频提到的 Isaac Sim 硬件/系统门槛。 |
+| [`SRC-robotics-240`](../../raw/robotics-embodied-ai/documents/SRC-robotics-240-nvidia-isaac-lab-binary-installation-documentation.md) | [Isaac Lab binary installation](../../raw/robotics-embodied-ai/documents/SRC-robotics-240-nvidia-isaac-lab-binary-installation-documentation.md) | 用于校验 Isaac Lab clone、symlink、`isaaclab.sh` 和环境管理流程。 |
+| [`SRC-robotics-241`](../../raw/robotics-embodied-ai/documents/SRC-robotics-241-do-as-i-do-dexterous-manipulation-data-from-everyday-human-videos.md) | [Do as I Do arXiv HTML](../../raw/robotics-embodied-ai/documents/SRC-robotics-241-do-as-i-do-dexterous-manipulation-data-from-everyday-human-videos.md) | 用于校验 `BV1WfTk6EEZ8` 中 monocular RGB reconstruction、retargeting、71% success rate 和 video filtering playbook。 |
+| [`SRC-robotics-242`](../../raw/robotics-embodied-ai/documents/SRC-robotics-242-abot-m0-5-unified-mobility-and-manipulation-world-action-model.md) | [ABot-M0.5 arXiv HTML](../../raw/robotics-embodied-ai/documents/SRC-robotics-242-abot-m0-5-unified-mobility-and-manipulation-world-action-model.md) | 用于校验 `BV1F7Ts6WEYj` 中 intermediate latent actions、D-MoT、Dream Forcing 和 WAM limitations。 |
+
 ## 后续流程
 
 - 新增来源后先更新 [[sources.csv]]，再运行 `uv run python tools/extract_sources_with_defuddle.py --industry robotics-embodied-ai`。

@@ -37,3 +37,8 @@ SRC-ai-043,腾讯混元产品页,https://cloud.tencent.com/product/hunyuan,analy
 SRC-ai-044,华为昇腾官网,https://www.hiascend.com/,analyst-source-note,ok,raw/ai/documents/SRC-ai-044-source.md,2026-06-29T06:18:11+00:00,
 SRC-ai-045,寒武纪官网,https://www.cambricon.com/,analyst-source-note,ok,raw/ai/documents/SRC-ai-045-source.md,2026-06-29T06:18:11+00:00,
 SRC-ai-046,ModelScope 魔搭社区,https://www.modelscope.cn/,analyst-source-note,ok,raw/ai/documents/SRC-ai-046-source.md,2026-06-29T06:18:11+00:00,
+SRC-ai-053,NVIDIA Isaac Sim 4.5 documentation,https://docs.isaacsim.omniverse.nvidia.com/4.5.0/index.html,defuddle,ok,raw/ai/documents/SRC-ai-053-nvidia-isaac-sim-4-5-documentation.md,2026-07-07T01:22:36+00:00,
+SRC-ai-054,NVIDIA Isaac Sim 4.5 system requirements,https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/requirements.html,defuddle,ok,raw/ai/documents/SRC-ai-054-nvidia-isaac-sim-4-5-system-requirements.md,2026-07-07T01:22:36+00:00,
+SRC-ai-055,NVIDIA Isaac Lab binary installation documentation,https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/binaries_installation.html,defuddle,ok,raw/ai/documents/SRC-ai-055-nvidia-isaac-lab-binary-installation-documentation.md,2026-07-07T01:22:36+00:00,
+SRC-ai-056,Do as I Do Dexterous Manipulation Data from Everyday Human Videos,https://arxiv.org/html/2606.19333,defuddle,ok,raw/ai/documents/SRC-ai-056-do-as-i-do-dexterous-manipulation-data-from-everyday-human-videos.md,2026-07-07T01:22:36+00:00,
+SRC-ai-057,ABot-M0.5 Unified Mobility-and-Manipulation World Action Model,https://arxiv.org/html/2607.00678,defuddle,ok,raw/ai/documents/SRC-ai-057-abot-m0-5-unified-mobility-and-manipulation-world-action-model.md,2026-07-07T01:22:36+00:00,

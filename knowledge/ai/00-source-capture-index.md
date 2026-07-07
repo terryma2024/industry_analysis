@@ -65,6 +65,11 @@ sources:
 | SRC-ai-044 | 华为昇腾官网 | ok | [raw](../../raw/ai/documents/SRC-ai-044-source.md) | analyst source note，跟踪国产算力生态时需增量更新。 |
 | SRC-ai-045 | 寒武纪官网 | ok | [raw](../../raw/ai/documents/SRC-ai-045-source.md) | analyst source note，正式投资判断需叠加财报与公告。 |
 | SRC-ai-046 | ModelScope 魔搭社区 | ok | [raw](../../raw/ai/documents/SRC-ai-046-source.md) | analyst source note，跟踪开源模型和开发者生态时需增量更新。 |
+| SRC-ai-053 | NVIDIA Isaac Sim 4.5 documentation | ok | [raw](../../raw/ai/documents/SRC-ai-053-nvidia-isaac-sim-4-5-documentation.md) | 用于校验 Physical AI/Isaac Sim 视频中的仿真、数字孪生、多传感器和 ROS/ROS2 bridge 事实。 |
+| SRC-ai-054 | NVIDIA Isaac Sim 4.5 system requirements | ok | [raw](../../raw/ai/documents/SRC-ai-054-nvidia-isaac-sim-4-5-system-requirements.md) | 用于校验 Isaac Sim 4.5 的 OS、RAM、GPU 和 VRAM 要求。 |
+| SRC-ai-055 | NVIDIA Isaac Lab binary installation documentation | ok | [raw](../../raw/ai/documents/SRC-ai-055-nvidia-isaac-lab-binary-installation-documentation.md) | 用于校验 Isaac Lab 安装、symlink、`isaaclab.sh` 和 Python 环境约束。 |
+| SRC-ai-056 | Do as I Do Dexterous Manipulation Data from Everyday Human Videos | ok | [raw](../../raw/ai/documents/SRC-ai-056-do-as-i-do-dexterous-manipulation-data-from-everyday-human-videos.md) | 用于校验 Do As I Do 视频中的论文方法、retargeting success rate 和数据筛选结论。 |
+| SRC-ai-057 | ABot-M0.5 Unified Mobility-and-Manipulation World Action Model | ok | [raw](../../raw/ai/documents/SRC-ai-057-abot-m0-5-unified-mobility-and-manipulation-world-action-model.md) | 用于校验 ABot-M0.5 视频中的 WAM 架构、D-MoT、Dream Forcing 和限制。 |
 
 ## 关联连接
 

@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-06
+last_updated: 2026-07-07
 tags:
   - wiki
   - index
@@ -14,6 +14,16 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/bilibili-bv1f7ts6weyj-abot-m0-5|高德杀进具身智能！ABot-M0.5：一个模型同时搞定导航+操作，还能自己"做梦"训练？]] — Bilibili ABot-M0.5 source packet; synthesized in [[_syntheses/bilibili-abot-m05-world-action-model-deep-dive-2026-07-07|ABot-M0.5 世界动作模型视频深度调研]].
+
+- [[_sources/bilibili-bv1wftk6eez8-do-as-i-do|伯克利重磅Do As I Do！全网普通人视频，直接训练灵巧操作机器人]] — Bilibili Do As I Do source packet; synthesized in [[_syntheses/bilibili-do-as-i-do-dexterous-video-data-deep-dive-2026-07-07|Do As I Do 灵巧操作视频数据深度调研]].
+
+- [[_sources/bilibili-bv1j9jd6ae7c-bilibili-video|具身感知升级逻辑：双目抓物体，多目构建完整空间世界模型]] — Bilibili multiview embodied perception source packet; synthesized in [[_syntheses/bilibili-multiview-embodied-perception-deep-dive-2026-07-07|多目具身感知视频深度调研]].
+
+- [[_sources/bilibili-bv1g8kbbvezr-b-2025-isaac-sim-nvidia-isaac-sim|B站强推！2025公认最通俗易懂的【 Isaac Sim】教程，草履虫都能看懂！全套付费课程（附资料） NVIDIA_Isaac_Sim]] — Bilibili Isaac Sim tutorial source packet; synthesized in [[_syntheses/bilibili-isaac-sim-tutorial-deep-dive-2026-07-07|Isaac Sim 教程视频深度调研]].
+
+- [[_sources/bilibili-bv17etk6vetx-ai|【播客】物理AI：新一轮生产力革命序章（第七期）]] — Bilibili Physical AI investment/research source packet; synthesized in [[_syntheses/bilibili-physical-ai-productivity-revolution-deep-dive-2026-07-07|Physical AI 生产力革命播客视频深度调研]].
 
 - [[_sources/bilibili-bv1iftp62eav-2026-vla-rt-1-roboflamingo-mdt-rdt-lapa|【2026最新具身智能VLA入门教程】一口气讲透 RT-1、RoboFlamingo、MDT、RDT、LAPA 等核心算法]] — Bilibili VLA course source packet; synthesized in [[_syntheses/bilibili-vla-tutorial-deep-dive-2026-07-05|VLA 入门教程视频深度调研]].
 
@@ -87,6 +97,12 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-07-07|Bilibili AI Daily Run 2026-07-07]] — 每日收藏夹候选池 20 个，模型选中并成功处理 5 个 AI/具身智能相关视频。
+- [[_syntheses/bilibili-physical-ai-productivity-revolution-deep-dive-2026-07-07|Physical AI 生产力革命播客视频深度调研]] — 对 `BV17eTk6vETX` 做单视频深研，拆解 Physical AI 产业链、算力/仿真/数据/本体分层和投资风险。
+- [[_syntheses/bilibili-isaac-sim-tutorial-deep-dive-2026-07-07|Isaac Sim 教程视频深度调研]] — 对 `BV1G8kBBvEzR` 做单视频深研，用 NVIDIA Isaac Sim/Isaac Lab 官方文档校验仿真、ROS2、RL 和硬件门槛。
+- [[_syntheses/bilibili-multiview-embodied-perception-deep-dive-2026-07-07|多目具身感知视频深度调研]] — 对 `BV1j9jd6aE7c` 做单视频深研，形成双目/多目/多传感器数据采集选型框架。
+- [[_syntheses/bilibili-do-as-i-do-dexterous-video-data-deep-dive-2026-07-07|Do As I Do 灵巧操作视频数据深度调研]] — 对 `BV1WfTk6EEZ8` 做单视频深研，并用 arXiv `2606.19333` 校验视频到灵巧操作数据 pipeline。
+- [[_syntheses/bilibili-abot-m05-world-action-model-deep-dive-2026-07-07|ABot-M0.5 世界动作模型视频深度调研]] — 对 `BV1F7Ts6WEYj` 做单视频深研，并用 arXiv `2607.00678` 校验移动操作 WAM 的三层对齐框架。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-06|Bilibili AI Daily Run 2026-07-06]] — 每日收藏夹候选池 20 个视频全部为重复，未进入模型复核、转录或单视频深研。
 - [[robotics-embodied-ai/research-notes/vla-world-model-data-infrastructure-platform-design-2026-07-06|VLA&世界模型数据基建平台系统调研与设计]] — 基于 `BV1ZFTq6pEA3` 的 15 阶段数据生产 SOP，并对照 AIRSPEED、LeRobot、机器人平台和数据价值框架，设计具身智能数据生产平台。
 - [[_syntheses/bilibili-hapmorph-haptic-feedback-deep-dive-2026-07-05|HapMorph 触觉反馈视频深度调研]] — 对 `BV12XTM6sEGF` 做单视频深研，并用 arXiv `2509.05433` 校验 21g、50-104mm、4.7N/mm 和 89.4% 等 HapMorph 触觉反馈指标。

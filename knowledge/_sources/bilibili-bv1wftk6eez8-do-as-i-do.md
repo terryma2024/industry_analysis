@@ -1,0 +1,54 @@
+---
+title: "伯克利重磅Do As I Do！全网普通人视频，直接训练灵巧操作机器人"
+type: source
+date_created: 2026-07-07
+last_updated: 2026-07-07
+source_urls:
+  - https://www.bilibili.com/video/BV1WfTk6EEZ8
+evidence_grade: B
+sources:
+  - raw/_inbox/transcripts/2026-07-07-bilibili-bv1wftk6eez8-do-as-i-do.json
+tags:
+  - bilibili
+  - video
+  - ai-research
+  - robotics
+  - embodied-ai
+status: draft
+---
+
+# 伯克利重磅Do As I Do！全网普通人视频，直接训练灵巧操作机器人
+
+> [!summary]
+> Bilibili video source packet captured by the daily AI / embodied-intelligence pipeline. Synthesized in [[_syntheses/bilibili-do-as-i-do-dexterous-video-data-deep-dive-2026-07-07|Do As I Do 灵巧操作视频数据深度调研]].
+
+## Source Metadata
+
+| Field | Value |
+|---|---|
+| Platform | Bilibili |
+| URL | https://www.bilibili.com/video/BV1WfTk6EEZ8 |
+| BV / video id | `BV1WfTk6EEZ8` |
+| Author | 失控的PM |
+| Published | unknown |
+| Favorited | unknown |
+| Category | unknown |
+| Tags | unknown |
+| Extraction method | volcengine-external-command:volc.seedasr.auc |
+| Raw artifact | `raw/_inbox/transcripts/2026-07-07-bilibili-bv1wftk6eez8-do-as-i-do.json` |
+
+## Transcript Excerpt
+
+以前为什么看视频学不会呢？核心啊，就有两个非常重的硬伤。第一呢，是手和物体的交互啊，重建是非常的难。普通的单目 RGB 视频呢，是没有深度的，手抓杯子的时候呢，会被遮挡。你看你看不到我的大拇指，算法呢根本搞不清楚手指到底是扣在哪，用了多大的力。哈喽，大家好，我是司马。天天刷机器人视频啊，你会发现一个很残酷的现实啊。会跳舞会翻跟头的机器人呢一大堆，但真正能进厨房去洗碗的，能剥鸡蛋的，几乎是没有的。那为什么呢？因为灵巧操作，Dexterity Manipulation，它的数据呢太难了。摇操作呢又贵又慢，规模化呢基本上是不太可能。或者说是需要漫长的一个时间。最近伯克利的 Pact ABU 加这个即听即练的团队呢，在2026年的6月份呢，扔出了一篇重磅论文啊。 Do as I do 照我做的做。他们说啊，互联网上呢，几百万小时的日常人类视频，就是机器人免费的。武功秘籍。今天呢我就用这个白板，把这篇论文呢拆一下它的重点。以前为什么看视频学不会呢？核心啊，就有两个非常重的硬伤啊。第一呢是手和物体的交互啊，重建是非常的难。普通的单目 RGB 视频呢，是没有深度的，手抓杯子的时候呢，会被遮挡啊。你看你看不到我的大拇指。算法呢根本搞不清楚手指到底是扣在哪，用了多大的力。第二呢，就是人类和这个机器人的身体啊，是完全不一样的。手指的数量啊、关节啊、摩擦力啊、尺寸啊，都不太一样。你让机器人一比一的去超人类的这个关节角度，基本上就是一个灾难。要么呢就会把这个杯子给捏碎，要么呢就直接掉落在这个地上。这就是行业长期卡住的身体鸿沟。伯克利团队呢把这件事情呢拆成了两个阶段。啊，pipeline 非常的干净。那第一个阶段呢，就是重建，reconstruction。不管是第一人称的头显视频，还是在抖音上刷到的第三人称的视野外的视频。它都能同时重建人手的三维姿态。用这个哈尔模型，物体的三维状态加六自由度的位姿啊，用这个 SLAM 三 d 加引导扩散技术。哪怕是有遮挡，也能通过前后帧物理一致性把轨迹呢给它补全。最终输出的是带度量单位的四 d 手。物体的交互轨迹。第二个阶段就是重定向，retargeting。这里最聪明的地方就来了，它不是死磕复制人类的关节这个角度。而是盯住物体的最终运动。用 mujoco 物理仿真器做采样优化，类似这个 mppi 让机器人的手去复现物体该有的运动轨迹。为了对抗这个重建的噪声啊，他们还特意加了三个关键的一个技巧。 warmup steps 也就是预热步。第二个呢就是随机力干扰避免局部最优。第三个呢就是过度奖励啊，处理接受和脱落的这个阶段。这三个 trick 呀，把成功率从基线的25%直接拉到了71%。效果如何呢？在这个 DEXCB 还有 Foldy 等数据集上，重建质量大幅领先 SODA 在真实的机器人上，双臂加多手指上也也成功完成了搅拌啊、抓取等多种任务。更牛的是啊，他给行业呢，还丢了一份这个功效指南。fisic playbook，告诉大家用什么样的视频才是黄金数据啊，必须要有清晰的手和物体的交互。啊，任务的边界也非常明确，相机的运动呢也不要太剧烈，这直接帮创业团队和研究者呢省掉了大量的无效数据采集的一个成本。以前我们觉得机器人要变灵巧啊，就得花大价钱去采人工的这个数据集。这篇论文呢，可能会告诉我们一个新的真相。物理世界的互联网化呀，才是巨神智能真正的降维打击。全人类几十年累积的日常视频，只要算法足够聪明。就能变成机器人的海量训练数据。机器人行业正在从人工精耕细作的这个石器时代进入了一个海量视频自我进化的一个新纪元。最后呢，我也说一句现实的话。虽然这篇论文的技术路径呢，非常的有前景啊，也可能是未来的一个趋势。但现在当前啊，真正在工厂落地的时候呢，ego 第一人称加这个双目加这个外部相机的混合方案啊。依然是最低成本的一个选择。为什么呢？因为它几乎不影响工人的正常作业流程。工人呢还是像以前一样去干活。你只是说多带了几个相机。数据呢，就能源源不断地采集出来，而且成本呢也比较低。中国呢也有大量的工厂，而你一旦要部署真的假爪或者是灵巧手的机器人啊，反而会干扰现有的这个生产线。啊，会增加很多工程化和安全的问题。所以短期内呢，这类人加这个可穿戴的相机方案，性价比呢依然是非常的高，尤其是在中国啊，工厂那么多啊。然后给工人付多少钱一小时是吧，就完成了这个链路。...
+
+## Research Handoff
+
+- Extract facts, estimates, judgments, and hypotheses from the full transcript in `raw/_inbox/transcripts/2026-07-07-bilibili-bv1wftk6eez8-do-as-i-do.json`.
+- Check whether this should update AI, robotics/embodied AI, integrated circuits, or another industry page.
+- Preserve source traceability using the Bilibili URL and BV / video id.
+- Do not treat this source as primary evidence for company financials, policy facts, or market size without cross-checking primary sources.
+
+## Related Links
+
+- [[robotics-embodied-ai/00-index|机器人与具身智能]]
+- [[ai/00-index|AI]]

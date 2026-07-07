@@ -311,3 +311,16 @@ tags:
 
 - **变更**: 将 [[robotics-embodied-ai/research-notes/vla-world-model-data-infrastructure-platform-design-2026-07-06|VLA&世界模型数据基建平台系统调研与设计]] 放入机器人行业 `research-notes/`；更新 [[index|Knowledge Index]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]] 和 `AGENTS.md`。
 - **规则**: 后续完整行业调研文档应写入对应 `knowledge/<industry>/research-notes/`，而不是默认放入 `knowledge/_syntheses/`；`_syntheses/` 主要用于跨行业综合、迁移计划或无明确产业归属的高价值输出。
+
+## [2026-07-07] ingest | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-07|Bilibili AI Daily Run 2026-07-07]]；处理 5 个 Bilibili 视频 source packet。
+- **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+- **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+## [2026-07-07] synthesis | Bilibili 单视频深研五篇
+
+- **变更**: 新增 [[_syntheses/bilibili-physical-ai-productivity-revolution-deep-dive-2026-07-07|Physical AI 生产力革命播客视频深度调研]]、[[_syntheses/bilibili-isaac-sim-tutorial-deep-dive-2026-07-07|Isaac Sim 教程视频深度调研]]、[[_syntheses/bilibili-multiview-embodied-perception-deep-dive-2026-07-07|多目具身感知视频深度调研]]、[[_syntheses/bilibili-do-as-i-do-dexterous-video-data-deep-dive-2026-07-07|Do As I Do 灵巧操作视频数据深度调研]] 和 [[_syntheses/bilibili-abot-m05-world-action-model-deep-dive-2026-07-07|ABot-M0.5 世界动作模型视频深度调研]]；更新 [[_syntheses/bilibili-ai-daily-run-2026-07-07|Bilibili AI Daily Run 2026-07-07]]、[[index|Knowledge Index]]、AI/机器人 sources.csv、source cards 和 source capture manifest。
+- **来源**: 只综合本次自动化中 `status=processed` 的 `BV17eTk6vETX`、`BV1G8kBBvEzR`、`BV1j9jd6aE7c`、`BV1WfTk6EEZ8`、`BV1F7Ts6WEYj`；用 NVIDIA Isaac Sim/Isaac Lab 官方文档、arXiv `2606.19333` 和 arXiv `2607.00678` 交叉验证关键技术事实。
+- **初步结果**: Physical AI 需要按系统工程和产业链分层理解；Isaac Sim 的价值在多传感器仿真、ROS2、synthetic data 和 RL 工具链；多目感知选型应匹配任务和模型目标；Do As I Do 强调观察性视频到机器人轨迹需要严格筛选和重定向；ABot-M0.5 把移动操作 WAM 的瓶颈明确为时间粒度、动作空间和训练/推理条件三层错配。
+- **限制**: Bilibili 仍为 B 级线索；摩尔线程 Lambda 平台、高德/AMAP 后续产品化、ABot 代码开放状态、多目设备真实 BOM 和工厂采集 ROI 仍需一级来源或实测验证。
