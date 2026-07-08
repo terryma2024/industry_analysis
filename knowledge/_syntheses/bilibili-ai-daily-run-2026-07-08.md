@@ -18,11 +18,11 @@ status: active
 ## Run Summary
 
 - Candidate videos: 20
-- Selected for transcript extraction: 0
-- Duplicate skipped: 20
+- Selected for transcript extraction: 3
+- Duplicate skipped: 17
 - Needs model review: 0
-- Processed: 0
-- Failed: 0
+- Processed: 1
+- Failed: 2
 
 ## OpenCLI / Fetch Notes
 
@@ -32,6 +32,9 @@ status: active
 
 | Status | Title | Video ID | Score | Reason |
 |---|---|---:|---:|---|
+| selected | 成立两年半，估值200亿，千寻智能凭什么？ | `BV1mgja6CEbK` | 4 | model judged relevant to embodied AI company/data/model stack research |
+| selected | 博登智能：估值超10亿，AI卖铲人闷声发大财 | `BV1q3TE6AE4b` | 4 | model judged relevant to AI/embodied-intelligence infrastructure, but external ASR did not complete |
+| selected | 成立两年半，估值200亿，千寻智能凭什么？ | `BV1Z7jA6LE8s` | 4 | model judged relevant to embodied AI company/data/model stack research, but external ASR did not complete |
 | skipped_duplicate | 【播客】物理AI：新一轮生产力革命序章（第七期） | `BV17eTk6vETX` | 0 | video identifier already appears in raw/ or knowledge/ |
 | skipped_duplicate | B站强推！2025公认最通俗易懂的【 Isaac Sim】教程，草履虫都能看懂！全套付费课程（附资料） NVIDIA_Isaac_Sim | `BV1G8kBBvEzR` | 0 | video identifier already appears in raw/ or knowledge/ |
 | skipped_duplicate | 具身感知升级逻辑：双目抓物体，多目构建完整空间世界模型 | `BV1j9jd6aE7c` | 0 | video identifier already appears in raw/ or knowledge/ |
@@ -49,13 +52,18 @@ status: active
 | skipped_duplicate | 深度探索-基于智元GENIE SIM 3.0的VLA闭环仿真（上） | `BV1wCTu6nEF2` | 0 | video identifier already appears in raw/ or knowledge/ |
 | skipped_duplicate | 深度探索-基于智元GENIE SIM 3.0的VLA闭环仿真（下） | `BV1YwTg6TE1K` | 0 | video identifier already appears in raw/ or knowledge/ |
 | skipped_duplicate | 具身智能必备！TensorRT深度学习部署居然被计算机大佬用大白话讲明白了，比刷剧还爽！ | `BV1N8Kd6QEBE` | 0 | video identifier already appears in raw/ or knowledge/ |
-| skipped_duplicate | 【机器人ROS2】1小时跟着大佬搞懂激光雷达工具和相机使用进阶，菜鸟学完即学即用！雷达过滤器/点云数据/雷达融合/具身智能机器人 | `BV1LfTF6EEsG` | 0 | video identifier already appears in raw/ or knowledge/ |
-| skipped_duplicate | 世界模型入门：LeWorldModel算法讲解 -- github 4k star的JEPA框架世界动作模型，1GB显存可运行 | `BV19pT36rEsN` | 0 | video identifier already appears in raw/ or knowledge/ |
-| skipped_duplicate | 这条机械臂视频，是我今年见过最离谱的操作 | `BV18w7P6uEk1` | 0 | video identifier already appears in raw/ or knowledge/ |
 
 ## Processing Results
 
-- No videos processed.
+- `BV1mgja6CEbK` 成立两年半，估值200亿，千寻智能凭什么？: processed; transcript captured and source card written; raw=`raw/_inbox/transcripts/2026-07-08-bilibili-bv1mgja6cebk-200.json`; source=`knowledge/_sources/bilibili-bv1mgja6cebk-200.md`; synthesis=`knowledge/_syntheses/bilibili-qianxun-intelligence-deep-dive-2026-07-08.md`
+- `BV1q3TE6AE4b` 博登智能：估值超10亿，AI卖铲人闷声发大财: failed; subtitle extraction fell back to external ASR, but the ASR subprocess did not return within the manual wait window; no raw transcript or source card written.
+- `BV1Z7jA6LE8s` 成立两年半，估值200亿，千寻智能凭什么？: failed; subtitle extraction fell back to external ASR, but the ASR subprocess did not return within the manual wait window; no raw transcript or source card written.
+
+## Model Review Notes
+
+- The three `needs_model_review` candidates were all AI / embodied-intelligence relevant.
+- Only `BV1mgja6CEbK` had a usable transcript packet in this run. The two failed videos should be retried only after the external ASR command timeout/exit behavior is fixed.
+- The processed Bilibili source remains B-grade. Company valuation, revenue, customer, data-scale, Spirit VLA, policy and benchmark claims were not promoted as verified facts.
 
 ## Codex Research Handoff
 

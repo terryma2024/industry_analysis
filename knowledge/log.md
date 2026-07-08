@@ -331,3 +331,9 @@ tags:
 - **来源**: 运行 `uv run python tools/bilibili_ai_daily_research.py --limit 20 --json` 获取默认收藏夹最新 20 个候选。
 - **结果**: 20 个候选全部为 `skipped_duplicate`；`needs_model_review=0`、模型选中 0、`processed=0`、`failed=0`，因此未进入第二阶段、未新增 transcript、source card 或单视频深研页。
 - **限制**: 本轮没有新视频内容可综合；后续运行继续只处理 selected + processed 视频。
+
+## [2026-07-08] automation | Bilibili AI/具身智能每日视频采集补跑
+
+- **变更**: 更新 [[_syntheses/bilibili-ai-daily-run-2026-07-08|Bilibili AI Daily Run 2026-07-08]]，新增 [[_sources/bilibili-bv1mgja6cebk-200|千寻智能 Bilibili source card]] 和 [[_syntheses/bilibili-qianxun-intelligence-deep-dive-2026-07-08|千寻智能具身智能公司视频深度调研]]；补充 `knowledge/ai/sources.csv` 与 `knowledge/robotics-embodied-ai/sources.csv`。
+- **来源**: 第一阶段候选池 20 个，模型选中 `BV1mgja6CEbK`、`BV1q3TE6AE4b`、`BV1Z7jA6LE8s`；其中仅 `BV1mgja6CEbK` 生成 `raw/_inbox/transcripts/2026-07-08-bilibili-bv1mgja6cebk-200.json` 和 source card。
+- **限制**: `BV1q3TE6AE4b` 与 `BV1Z7jA6LE8s` 外部 ASR subprocess 长时间不返回，已中断，未写 source card 或单视频深研页；`BV1mgja6CEbK` 的公司估值、营收、客户、数据规模、Spirit VLA 和政策 claim 均为 B 级线索，需一级来源验证。

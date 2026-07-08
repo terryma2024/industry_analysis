@@ -15,6 +15,8 @@ tags:
 
 ## Sources
 
+- [[_sources/bilibili-bv1mgja6cebk-200|成立两年半，估值200亿，千寻智能凭什么？]] — Bilibili 千寻智能 source packet; synthesized in [[_syntheses/bilibili-qianxun-intelligence-deep-dive-2026-07-08|千寻智能具身智能公司视频深度调研]].
+
 - [[_sources/bilibili-bv1f7ts6weyj-abot-m0-5|高德杀进具身智能！ABot-M0.5：一个模型同时搞定导航+操作，还能自己"做梦"训练？]] — Bilibili ABot-M0.5 source packet; synthesized in [[_syntheses/bilibili-abot-m05-world-action-model-deep-dive-2026-07-07|ABot-M0.5 世界动作模型视频深度调研]].
 
 - [[_sources/bilibili-bv1wftk6eez8-do-as-i-do|伯克利重磅Do As I Do！全网普通人视频，直接训练灵巧操作机器人]] — Bilibili Do As I Do source packet; synthesized in [[_syntheses/bilibili-do-as-i-do-dexterous-video-data-deep-dive-2026-07-07|Do As I Do 灵巧操作视频数据深度调研]].
@@ -97,7 +99,8 @@ tags:
 
 ## Syntheses
 
-- [[_syntheses/bilibili-ai-daily-run-2026-07-08|Bilibili AI Daily Run 2026-07-08]] — 每日收藏夹候选池 20 个视频全部为重复，未进入模型复核、转录或单视频深研。
+- [[_syntheses/bilibili-ai-daily-run-2026-07-08|Bilibili AI Daily Run 2026-07-08]] — 每日收藏夹候选池 20 个，模型选中 3 个 AI/具身智能相关视频，1 个完成 source packet 和单视频深研，2 个外部 ASR 阻塞待处理。
+- [[_syntheses/bilibili-qianxun-intelligence-deep-dive-2026-07-08|千寻智能具身智能公司视频深度调研]] — 对 `BV1mgja6CEbK` 做单视频深研，将千寻智能相关估值、数据规模、Spirit VLA、工业客户和开源策略全部标为待一级来源验证。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-07|Bilibili AI Daily Run 2026-07-07]] — 每日收藏夹候选池 20 个，模型选中并成功处理 5 个 AI/具身智能相关视频。
 - [[_syntheses/bilibili-physical-ai-productivity-revolution-deep-dive-2026-07-07|Physical AI 生产力革命播客视频深度调研]] — 对 `BV17eTk6vETX` 做单视频深研，拆解 Physical AI 产业链、算力/仿真/数据/本体分层和投资风险。
 - [[_syntheses/bilibili-isaac-sim-tutorial-deep-dive-2026-07-07|Isaac Sim 教程视频深度调研]] — 对 `BV1G8kBBvEzR` 做单视频深研，用 NVIDIA Isaac Sim/Isaac Lab 官方文档校验仿真、ROS2、RL 和硬件门槛。
