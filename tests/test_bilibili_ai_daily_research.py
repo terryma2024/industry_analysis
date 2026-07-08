@@ -3,6 +3,7 @@ import os
 import time
 import tempfile
 import unittest
+from io import StringIO
 from pathlib import Path
 from unittest import mock
 
@@ -119,6 +120,27 @@ class BilibiliAiDailyResearchTests(unittest.TestCase):
 
         self.assertTrue(hits)
 
+    def test_duplicate_detection_ignores_failed_mentions_in_log(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            repo = Path(tmpdir)
+            (repo / "knowledge").mkdir()
+            (repo / "raw").mkdir()
+            (repo / "knowledge" / "log.md").write_text(
+                "- BV1retry12345 failed before transcript/source card; retry later.\n",
+                encoding="utf-8",
+            )
+            candidate = tool.VideoCandidate(
+                title="机器人失败重试视频",
+                url="https://www.bilibili.com/video/BV1retry12345",
+                bvid="BV1retry12345",
+            )
+
+            hits = tool.find_duplicate_hits(repo, candidate)
+            decision = tool.decide_candidate(repo, candidate, selected_ids={"BV1retry12345"})
+
+        self.assertEqual(hits, [])
+        self.assertEqual(decision.status, "selected")
+
     def test_load_candidates_from_nested_json(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             path = Path(tmpdir) / "candidates.json"
@@ -222,6 +244,60 @@ class BilibiliAiDailyResearchTests(unittest.TestCase):
         self.assertIn("## TOS Audio Check", text)
         self.assertIn("asr-audio/2026/07/08", text)
         self.assertIn("Objects found: 0", text)
+
+    def test_tos_audio_status_uses_tos_sdk_runner_for_list_check(self) -> None:
+        env = {
+            "TOS_ACCESS_KEY_ID": "ak",
+            "TOS_SECRET_ACCESS_KEY": "sk",
+        }
+        completed = tool.subprocess.CompletedProcess(
+            args=[],
+            returncode=0,
+            stdout=json.dumps(
+                {
+                    "count": 1,
+                    "objects": [{"key": "asr-audio/2026/07/08/a.m4a"}],
+                }
+            ),
+            stderr="",
+        )
+
+        with mock.patch.dict(os.environ, env, clear=True):
+            with mock.patch.object(tool, "run_command", return_value=completed) as run_command:
+                status = tool.check_tos_audio_status()
+
+        args = run_command.call_args.args[0]
+        self.assertEqual(args[:4], ["uv", "run", "--with", "tos"])
+        self.assertIn("--list-prefix", args)
+        self.assertEqual(status["count"], 1)
+        self.assertEqual(status["keys"], ["asr-audio/2026/07/08/a.m4a"])
+
+    def test_dry_run_json_has_empty_report_without_relative_path_error(self) -> None:
+        candidate = tool.VideoCandidate(
+            title="机器人视频",
+            url="https://www.bilibili.com/video/BV1dryrun",
+            bvid="BV1dryrun",
+        )
+        stdout = StringIO()
+
+        with mock.patch.object(tool, "fetch_bilibili_candidate", return_value=(candidate, "")):
+            with mock.patch.object(tool, "check_tos_audio_status", return_value={"enabled": False}):
+                with mock.patch("sys.stdout", stdout):
+                    exit_code = tool.main(
+                        [
+                            "--candidate-url",
+                            "https://www.bilibili.com/video/BV1dryrun",
+                            "--selected-video-ids",
+                            "BV1dryrun",
+                            "--dry-run",
+                            "--json",
+                        ]
+                    )
+
+        payload = json.loads(stdout.getvalue())
+        self.assertEqual(exit_code, 0)
+        self.assertEqual(payload["report"], "")
+        self.assertEqual(payload["decisions"][0]["status"], "selected")
 
 
 if __name__ == "__main__":

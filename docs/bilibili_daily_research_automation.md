@@ -155,7 +155,7 @@ The JSON payload includes `bucket`, `key`, and `url`. The ASR adapter still acce
 To inspect the current TOS audio directory used by the daily automation:
 
 ```bash
-uv run python tools/tos_upload.py --list-prefix asr-audio/YYYY/MM/DD --json
+uv run --with tos python tools/tos_upload.py --list-prefix asr-audio/YYYY/MM/DD --json
 ```
 
 `tools/bilibili_ai_daily_research.py` performs this check automatically when TOS credentials are present. The daily run report includes a `## TOS Audio Check` section with the checked prefix, object count, recent keys, or a clear error such as missing credentials or list failure. This is the first place to look when selected videos fail before transcript generation.

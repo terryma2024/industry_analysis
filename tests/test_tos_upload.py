@@ -2,6 +2,7 @@ import datetime as real_dt
 import json
 import os
 import unittest
+from types import SimpleNamespace
 from pathlib import Path
 from unittest import mock
 
@@ -117,6 +118,39 @@ class TosUploadTests(unittest.TestCase):
         payload = json.loads(printed.call_args.args[0])
         self.assertEqual(payload["count"], 1)
         self.assertEqual(payload["prefix"], "asr-audio/2026/07/08")
+
+    def test_main_list_prefix_uses_sdk_client_when_available(self) -> None:
+        env = {
+            "TOS_ACCESS_KEY_ID": "ak",
+            "TOS_SECRET_ACCESS_KEY": "sk",
+            "TOS_BUCKET": "industry-analysis",
+        }
+        client = mock.Mock()
+        client.list_objects_type2.return_value = SimpleNamespace(
+            contents=[
+                SimpleNamespace(
+                    key="asr-audio/2026/07/08/sdk.m4a",
+                    size=456,
+                    last_modified="2026-07-08T01:02:03Z",
+                )
+            ]
+        )
+
+        with mock.patch.dict(os.environ, env, clear=True):
+            with mock.patch.object(tos_upload, "sdk_client", return_value=client):
+                with mock.patch.object(tos_upload, "list_objects") as fallback_list:
+                    with mock.patch("builtins.print") as printed:
+                        code = tos_upload.main(["--list-prefix", "asr-audio/2026/07/08", "--json"])
+
+        self.assertEqual(code, 0)
+        fallback_list.assert_not_called()
+        client.list_objects_type2.assert_called_once_with(
+            bucket="industry-analysis",
+            prefix="asr-audio/2026/07/08",
+            max_keys=100,
+        )
+        payload = json.loads(printed.call_args.args[0])
+        self.assertEqual(payload["objects"][0]["key"], "asr-audio/2026/07/08/sdk.m4a")
 
 
 if __name__ == "__main__":

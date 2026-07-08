@@ -385,6 +385,23 @@ def sdk_presigned_get_url(client, bucket: str, key: str, expires: int) -> str:
     ).signed_url
 
 
+def sdk_list_objects(client, bucket: str, prefix: str, max_keys: int) -> list[dict[str, object]]:
+    output = client.list_objects_type2(bucket=bucket, prefix=prefix, max_keys=max_keys)
+    objects: list[dict[str, object]] = []
+    for item in getattr(output, "contents", []) or []:
+        last_modified = getattr(item, "last_modified", "") or ""
+        if hasattr(last_modified, "isoformat"):
+            last_modified = last_modified.isoformat()
+        objects.append(
+            {
+                "key": getattr(item, "key", "") or "",
+                "size": int(getattr(item, "size", 0) or 0),
+                "last_modified": str(last_modified),
+            }
+        )
+    return [item for item in objects if item["key"]]
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, help="local audio file")
@@ -410,20 +427,24 @@ def main(argv: list[str] | None = None) -> int:
     addressing_style = os.environ.get("TOS_ADDRESSING_STYLE", "virtual").strip() or "virtual"
     service = os.environ.get("TOS_SIGNING_SERVICE", "s3").strip() or "s3"
     security_token = env_first("TOS_SECURITY_TOKEN", "VOLCENGINE_SECURITY_TOKEN")
+    client = sdk_client(access_key, secret_key, endpoint, region, security_token)
 
     if args.list_prefix:
-        objects = list_objects(
-            args.list_prefix,
-            access_key,
-            secret_key,
-            bucket,
-            region,
-            service,
-            endpoint,
-            addressing_style,
-            args.list_max_keys,
-            security_token,
-        )
+        if client is not None:
+            objects = sdk_list_objects(client, bucket, args.list_prefix, args.list_max_keys)
+        else:
+            objects = list_objects(
+                args.list_prefix,
+                access_key,
+                secret_key,
+                bucket,
+                region,
+                service,
+                endpoint,
+                addressing_style,
+                args.list_max_keys,
+                security_token,
+            )
         payload = {"bucket": bucket, "prefix": args.list_prefix, "count": len(objects), "objects": objects}
         if args.json:
             print(json.dumps(payload, ensure_ascii=False))
@@ -441,7 +462,6 @@ def main(argv: list[str] | None = None) -> int:
     key = args.key or object_key(Path(filename), args.prefix)
     content_type = content_type_for(input_path, args.content_type)
 
-    client = sdk_client(access_key, secret_key, endpoint, region, security_token)
     if client is not None:
         sdk_upload_file(client, bucket, key, input_path, content_type)
     else:

@@ -348,3 +348,22 @@ tags:
 
 - **变更**: 更新 `docs/bilibili_daily_research_automation.md`，新增 `Failed Case Handling And Self-Repair` 规则，要求每日任务对 selected 视频的失败 case 自主定位失败边界、保留证据、bounded retry、能修则修并补测试，只有外部状态不可控时才作为人工 blocker 报告。
 - **约束**: 失败视频仍不得伪造 transcript、source card 或单视频深研页；只有 `status=processed` 才进入 durable synthesis。
+
+## [2026-07-08] ingest | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-08|Bilibili AI Daily Run 2026-07-08]]；处理 2 个 Bilibili 视频 source packet。
+- **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+- **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+## [2026-07-08] tooling | Bilibili 失败 case 补跑修复
+
+- **变更**: 修复 `tools/bilibili_ai_daily_research.py` 的 dry-run JSON report path 问题、失败日志误触发重复检测问题、TOS 列目录候选检查 runner；修复 `tools/tos_upload.py` 的 SDK list-prefix 路径；同步更新 `docs/bilibili_daily_research_automation.md` 的 TOS 检查命令。
+- **原因**: `BV1q3TE6AE4b` 与 `BV1Z7jA6LE8s` 初始重试被 `knowledge/log.md` 中的失败记录误判为 `skipped_duplicate`；TOS 前缀检查落到 S3-compatible fallback signer 时返回 `Unsupported Authorization Type`。
+- **验证**: 两个 BV 的 dry-run 均恢复为 `selected` 且 TOS 今日前缀检查返回 3 个对象、无错误；`uv run python -m unittest tests.test_volcengine_asr tests.test_bilibili_ai_daily_research tests.test_tos_upload` 通过 33 个测试。
+
+## [2026-07-08] synthesis | Bilibili 失败 case 单视频深研补齐
+
+- **变更**: 新增 [[_syntheses/bilibili-boden-intelligence-data-infrastructure-deep-dive-2026-07-08|博登智能 Physical AI 数据基建视频深度调研]] 和 [[_syntheses/bilibili-qianxun-intelligence-bv1z7-deep-dive-2026-07-08|千寻智能 BV1Z7jA6LE8s 视频深度调研]]；更新 [[_syntheses/bilibili-ai-daily-run-2026-07-08|Bilibili AI Daily Run 2026-07-08]]、[[index|Knowledge Index]]、AI/机器人 sources.csv。
+- **来源**: 只综合本次补跑中 `status=processed` 的 `BV1q3TE6AE4b` 和 `BV1Z7jA6LE8s`；复用 OpenVLA、Open X-Embodiment、NVIDIA GR00T N1 等一级技术来源验证“真实机器人数据 + VLA/动作模型”的行业逻辑。
+- **初步结果**: 博登智能视频提供“真实场景网络 + 数据引擎 + 验证体系”的具身数据基建线索；千寻智能 `BV1Z7jA6LE8s` 独立页补充融资、团队、墨子一硬件、Spirit VLA 和客户落地线索。
+- **限制**: 两条视频中的公司估值、融资、客户、营收、数据规模、机器人数量、模型指标和订单均未找到足够一级来源支撑，全部保留为 `待验证`。

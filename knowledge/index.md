@@ -15,6 +15,10 @@ tags:
 
 ## Sources
 
+- [[_sources/bilibili-bv1z7ja6le8s-200|成立两年半，估值200亿，千寻智能凭什么？]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
+- [[_sources/bilibili-bv1q3te6ae4b-10-ai|博登智能：估值超10亿，AI卖铲人闷声发大财]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
 - [[_sources/bilibili-bv1mgja6cebk-200|成立两年半，估值200亿，千寻智能凭什么？]] — Bilibili 千寻智能 source packet; synthesized in [[_syntheses/bilibili-qianxun-intelligence-deep-dive-2026-07-08|千寻智能具身智能公司视频深度调研]].
 
 - [[_sources/bilibili-bv1f7ts6weyj-abot-m0-5|高德杀进具身智能！ABot-M0.5：一个模型同时搞定导航+操作，还能自己"做梦"训练？]] — Bilibili ABot-M0.5 source packet; synthesized in [[_syntheses/bilibili-abot-m05-world-action-model-deep-dive-2026-07-07|ABot-M0.5 世界动作模型视频深度调研]].
@@ -99,8 +103,10 @@ tags:
 
 ## Syntheses
 
-- [[_syntheses/bilibili-ai-daily-run-2026-07-08|Bilibili AI Daily Run 2026-07-08]] — 每日收藏夹候选池 20 个，模型选中 3 个 AI/具身智能相关视频，1 个完成 source packet 和单视频深研，2 个外部 ASR 阻塞待处理。
+- [[_syntheses/bilibili-ai-daily-run-2026-07-08|Bilibili AI Daily Run 2026-07-08]] — 每日收藏夹补跑后 3 个模型选中 AI/具身智能相关视频均完成 source packet 和单视频深研；TOS 今日前缀检查恢复正常并确认 3 个音频对象。
 - [[_syntheses/bilibili-qianxun-intelligence-deep-dive-2026-07-08|千寻智能具身智能公司视频深度调研]] — 对 `BV1mgja6CEbK` 做单视频深研，将千寻智能相关估值、数据规模、Spirit VLA、工业客户和开源策略全部标为待一级来源验证。
+- [[_syntheses/bilibili-boden-intelligence-data-infrastructure-deep-dive-2026-07-08|博登智能 Physical AI 数据基建视频深度调研]] — 对 `BV1q3TE6AE4b` 做单视频深研，提取真实世界数据基建、训练基地、数据资产化和重资产风险线索，全部公司指标待一级来源验证。
+- [[_syntheses/bilibili-qianxun-intelligence-bv1z7-deep-dive-2026-07-08|千寻智能 BV1Z7jA6LE8s 视频深度调研]] — 对 `BV1Z7jA6LE8s` 做独立单视频深研，补充融资、创始团队、墨子一硬件、Spirit VLA 和客户落地待验证清单。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-07|Bilibili AI Daily Run 2026-07-07]] — 每日收藏夹候选池 20 个，模型选中并成功处理 5 个 AI/具身智能相关视频。
 - [[_syntheses/bilibili-physical-ai-productivity-revolution-deep-dive-2026-07-07|Physical AI 生产力革命播客视频深度调研]] — 对 `BV17eTk6vETX` 做单视频深研，拆解 Physical AI 产业链、算力/仿真/数据/本体分层和投资风险。
 - [[_syntheses/bilibili-isaac-sim-tutorial-deep-dive-2026-07-07|Isaac Sim 教程视频深度调研]] — 对 `BV1G8kBBvEzR` 做单视频深研，用 NVIDIA Isaac Sim/Isaac Lab 官方文档校验仿真、ROS2、RL 和硬件门槛。

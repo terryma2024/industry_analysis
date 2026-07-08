@@ -57,6 +57,10 @@ TEXT_SUFFIXES = {
     ".yaml",
     ".yml",
 }
+NON_DUPLICATE_EVIDENCE_PATTERNS = [
+    r"knowledge/_syntheses/bilibili-ai-daily-run-\d{4}-\d{2}-\d{2}\.md$",
+    r"knowledge/log\.md$",
+]
 
 HIGH_RELEVANCE_PATTERNS = [
     r"\bai\b",
@@ -608,6 +612,8 @@ def rg_search(repo_root: Path, identifiers: list[str]) -> list[str]:
                 "--fixed-strings",
                 "--glob",
                 "!knowledge/_syntheses/bilibili-ai-daily-run-*.md",
+                "--glob",
+                "!knowledge/log.md",
                 ident,
                 "raw",
                 "knowledge",
@@ -623,6 +629,10 @@ def rg_search(repo_root: Path, identifiers: list[str]) -> list[str]:
     return hits
 
 
+def is_non_duplicate_evidence_path(rel_path: str) -> bool:
+    return any(re.match(pattern, rel_path) for pattern in NON_DUPLICATE_EVIDENCE_PATTERNS)
+
+
 def fallback_search(repo_root: Path, identifiers: list[str]) -> list[str]:
     hits: list[str] = []
     for root in (repo_root / "raw", repo_root / "knowledge"):
@@ -635,7 +645,7 @@ def fallback_search(repo_root: Path, identifiers: list[str]) -> list[str]:
                 rel_path = path.relative_to(repo_root).as_posix()
             except ValueError:
                 rel_path = path.as_posix()
-            if re.match(r"knowledge/_syntheses/bilibili-ai-daily-run-\d{4}-\d{2}-\d{2}\.md$", rel_path):
+            if is_non_duplicate_evidence_path(rel_path):
                 continue
             try:
                 text = path.read_text(encoding="utf-8", errors="ignore")
@@ -844,7 +854,11 @@ def check_tos_audio_status() -> dict[str, Any]:
     status["enabled"] = True
     proc = run_command(
         [
-            sys.executable,
+            "uv",
+            "run",
+            "--with",
+            "tos",
+            "python",
             "tools/tos_upload.py",
             "--list-prefix",
             status["prefix"],
@@ -1257,7 +1271,7 @@ def main(argv: list[str] | None = None) -> int:
         for candidate in candidates
     ]
     results: list[ProcessResult] = []
-    report_path = Path("")
+    report_path: Path | None = None
 
     if not args.dry_run:
         results = process_selected(decisions, args)
