@@ -1,4 +1,5 @@
 import datetime as real_dt
+import json
 import os
 import unittest
 from pathlib import Path
@@ -80,6 +81,42 @@ class TosUploadTests(unittest.TestCase):
 
         self.assertTrue(key.startswith("asr-audio/"))
         self.assertTrue(key.endswith("-音频-sample.m4a"))
+
+    def test_parse_list_objects_xml_returns_key_metadata(self) -> None:
+        xml = """<?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Contents>
+            <Key>asr-audio/2026/07/08/010203-a.m4a</Key>
+            <LastModified>2026-07-08T01:02:03.000Z</LastModified>
+            <Size>123</Size>
+          </Contents>
+        </ListBucketResult>
+        """
+
+        objects = tos_upload.parse_list_objects_xml(xml)
+
+        self.assertEqual(objects[0]["key"], "asr-audio/2026/07/08/010203-a.m4a")
+        self.assertEqual(objects[0]["size"], 123)
+
+    def test_main_list_prefix_prints_json_without_input_file(self) -> None:
+        env = {
+            "TOS_ACCESS_KEY_ID": "ak",
+            "TOS_SECRET_ACCESS_KEY": "sk",
+            "TOS_BUCKET": "industry-analysis",
+        }
+        with mock.patch.dict(os.environ, env, clear=True):
+            with mock.patch.object(
+                tos_upload,
+                "list_objects",
+                return_value=[{"key": "asr-audio/2026/07/08/a.m4a", "size": 123, "last_modified": ""}],
+            ):
+                with mock.patch("builtins.print") as printed:
+                    code = tos_upload.main(["--list-prefix", "asr-audio/2026/07/08", "--json"])
+
+        self.assertEqual(code, 0)
+        payload = json.loads(printed.call_args.args[0])
+        self.assertEqual(payload["count"], 1)
+        self.assertEqual(payload["prefix"], "asr-audio/2026/07/08")
 
 
 if __name__ == "__main__":

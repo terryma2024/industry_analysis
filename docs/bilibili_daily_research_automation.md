@@ -42,7 +42,8 @@ uv run python tools/bilibili_ai_daily_research.py --limit 20 --selected-video-id
 8. If subtitles fail, calls `VOLCENGINE_ASR_COMMAND` when configured.
 9. Writes raw transcript JSON under `raw/_inbox/transcripts/`.
 10. Writes traceable source cards under `knowledge/_sources/`.
-11. Writes a daily run report under `knowledge/_syntheses/`.
+11. Checks the current TOS audio prefix when TOS credentials are configured and records the result in the daily run report.
+12. Writes a daily run report under `knowledge/_syntheses/`.
 
 The script prepares source packets. Codex still performs the higher-level industry synthesis after reading those packets.
 
@@ -98,6 +99,8 @@ VOLCENGINE_ASR_MODEL_FALLBACK=volc.bigasr.auc
 
 The pipeline tries `VOLCENGINE_ASR_MODEL_PRIMARY` first. If the external ASR command exits non-zero or returns an empty transcript, it retries with `VOLCENGINE_ASR_MODEL_FALLBACK`.
 
+The parent pipeline kills the whole external ASR process group when `--asr-timeout` is exceeded, so a stuck uploader or child process should now return a clear timeout failure instead of hanging the daily task indefinitely.
+
 ### Bilibili 412 And Audio Upload
 
 Bilibili page/subtitle scraping can return HTTP 412. The ASR adapter handles this by asking `yt-dlp` to download the audio locally with Bilibili headers and optional cookies:
@@ -115,9 +118,12 @@ Volcengine AUC downloads `audio.url` from Volcengine's servers. Bilibili signed 
 ```bash
 VOLCENGINE_AUDIO_UPLOAD_COMMAND='your-uploader --input {input} --filename {filename} --content-type {content_type}'
 VOLCENGINE_ASR_FORCE_UPLOAD=1
+VOLCENGINE_AUDIO_UPLOAD_RETRIES=3
 ```
 
 The upload command must print either a public HTTPS URL or JSON with one of `url`, `audio_url`, `public_url`, or `uri`. The public URL should remain valid until the ASR job finishes. This hook can point to TOS, S3, R2, MinIO, or any internal uploader; the daily pipeline does not need to know which storage provider is used.
+
+For TOS / Volcengine-hosted URLs, `tools/volcengine_asr.py` verifies the uploaded URL with a small ranged GET before submitting it to Volcengine ASR. If the upload command exits non-zero, prints no URL, or the uploaded URL is not reachable, the adapter retries up to `VOLCENGINE_AUDIO_UPLOAD_RETRIES` times and returns an explicit `audio upload failed after ... attempts` error to the daily report.
 
 For the current Volcengine TOS bucket `industry-analysis`, use the built-in uploader:
 
@@ -133,6 +139,26 @@ TOS_PRESIGN_EXPIRES=86400
 ```
 
 `tools/tos_upload.py` uses the Volcengine `tos` Python SDK when available, then prints a presigned `GET` URL. This means the bucket does not have to be public. If the SDK is unavailable, the script falls back to an S3-compatible signer.
+
+For structured upload metadata, the uploader also supports JSON output:
+
+```bash
+uv run --with tos python tools/tos_upload.py \
+  --input /path/to/audio.m4a \
+  --filename audio.m4a \
+  --content-type audio/mp4 \
+  --json
+```
+
+The JSON payload includes `bucket`, `key`, and `url`. The ASR adapter still accepts plain URL output, but JSON is preferred because it makes failed or missing TOS objects easier to diagnose.
+
+To inspect the current TOS audio directory used by the daily automation:
+
+```bash
+uv run python tools/tos_upload.py --list-prefix asr-audio/YYYY/MM/DD --json
+```
+
+`tools/bilibili_ai_daily_research.py` performs this check automatically when TOS credentials are present. The daily run report includes a `## TOS Audio Check` section with the checked prefix, object count, recent keys, or a clear error such as missing credentials or list failure. This is the first place to look when selected videos fail before transcript generation.
 
 Reference API documentation: https://www.volcengine.com/docs/6561/1354868?lang=zh
 

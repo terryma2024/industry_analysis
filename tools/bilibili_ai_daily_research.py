@@ -24,6 +24,7 @@ import hashlib
 import json
 import os
 import re
+import signal
 import shlex
 import shutil
 import subprocess
@@ -284,21 +285,32 @@ def load_dotenv(paths: tuple[Path, ...] = DOTENV_PATHS) -> None:
 
 
 def run_command(args: list[str], cwd: Path = REPO_ROOT, timeout: int = 180) -> subprocess.CompletedProcess[str]:
+    proc = subprocess.Popen(
+        args,
+        cwd=str(cwd),
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        start_new_session=True,
+    )
     try:
-        return subprocess.run(
-            args,
-            cwd=str(cwd),
-            text=True,
-            capture_output=True,
-            timeout=timeout,
-            check=False,
-        )
+        stdout, stderr = proc.communicate(timeout=timeout)
     except subprocess.TimeoutExpired as exc:
-        stdout = exc.stdout if isinstance(exc.stdout, str) else (exc.stdout or b"").decode("utf-8", errors="ignore")
-        stderr = exc.stderr if isinstance(exc.stderr, str) else (exc.stderr or b"").decode("utf-8", errors="ignore")
+        try:
+            os.killpg(proc.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        except OSError:
+            proc.kill()
+        try:
+            stdout, stderr = proc.communicate(timeout=5)
+        except subprocess.TimeoutExpired:
+            stdout = exc.stdout if isinstance(exc.stdout, str) else (exc.stdout or b"").decode("utf-8", errors="ignore")
+            stderr = exc.stderr if isinstance(exc.stderr, str) else (exc.stderr or b"").decode("utf-8", errors="ignore")
         message = f"command timed out after {timeout} seconds"
         stderr = f"{stderr.rstrip()}\n{message}".strip() if stderr else message
         return subprocess.CompletedProcess(args=args, returncode=124, stdout=stdout, stderr=stderr)
+    return subprocess.CompletedProcess(args=args, returncode=proc.returncode, stdout=stdout, stderr=stderr)
 
 
 def extract_items(payload: Any) -> list[dict[str, Any]]:
@@ -801,6 +813,66 @@ def run_external_asr(candidate: VideoCandidate, timeout: int) -> tuple[str, str,
     return "", "", "; ".join(failures) or "external ASR command failed for all configured models"
 
 
+def env_first(*names: str) -> str:
+    for name in names:
+        value = os.environ.get(name, "").strip()
+        if value:
+            return value
+    return ""
+
+
+def tos_today_prefix() -> str:
+    prefix = os.environ.get("TOS_UPLOAD_PREFIX", "asr-audio").strip("/") or "asr-audio"
+    dated = dt.datetime.now(dt.UTC).strftime("%Y/%m/%d")
+    return f"{prefix}/{dated}"
+
+
+def check_tos_audio_status() -> dict[str, Any]:
+    status: dict[str, Any] = {
+        "enabled": False,
+        "prefix": tos_today_prefix(),
+        "count": 0,
+        "keys": [],
+        "error": "",
+    }
+    access_key = env_first("TOS_ACCESS_KEY_ID", "VOLCENGINE_ACCESS_KEY_ID")
+    secret_key = env_first("TOS_SECRET_ACCESS_KEY", "VOLCENGINE_SECRET_ACCESS_KEY")
+    if not access_key or not secret_key:
+        status["error"] = "TOS credentials not configured; skipped today-prefix object check"
+        return status
+
+    status["enabled"] = True
+    proc = run_command(
+        [
+            sys.executable,
+            "tools/tos_upload.py",
+            "--list-prefix",
+            status["prefix"],
+            "--json",
+        ],
+        cwd=REPO_ROOT,
+        timeout=90,
+    )
+    if proc.returncode != 0:
+        status["error"] = proc.stderr.strip() or proc.stdout.strip() or "TOS list-prefix command failed"
+        return status
+    try:
+        payload = json.loads(proc.stdout)
+    except json.JSONDecodeError as exc:
+        status["error"] = f"TOS list-prefix returned non-JSON output: {exc}: {proc.stdout[:500]}"
+        return status
+    objects = payload.get("objects") if isinstance(payload, dict) else []
+    if not isinstance(objects, list):
+        objects = []
+    status["count"] = int(payload.get("count") or len(objects)) if isinstance(payload, dict) else len(objects)
+    status["keys"] = [
+        str(item.get("key"))
+        for item in objects
+        if isinstance(item, dict) and item.get("key")
+    ][:20]
+    return status
+
+
 def transcript_excerpt(text: str, max_chars: int = 1800) -> str:
     compact = re.sub(r"\s+", " ", text).strip()
     if len(compact) <= max_chars:
@@ -981,7 +1053,12 @@ def update_knowledge_index(results: list[ProcessResult]) -> None:
         append_once(KNOWLEDGE_INDEX, stem, line, "## Sources")
 
 
-def write_run_report(decisions: list[CandidateDecision], results: list[ProcessResult], opencli_errors: list[str]) -> Path:
+def write_run_report(
+    decisions: list[CandidateDecision],
+    results: list[ProcessResult],
+    opencli_errors: list[str],
+    tos_status: dict[str, Any] | None = None,
+) -> Path:
     date = today_str()
     path = SYNTHESIS_DIR / f"bilibili-ai-daily-run-{date}.md"
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -1010,6 +1087,18 @@ def write_run_report(decisions: list[CandidateDecision], results: list[ProcessRe
             f"- `{c.canonical_id()}` {c.title}: {result.status}; {result.reason}; "
             f"raw=`{result.raw_artifact or '-'}`; source=`{result.source_card or '-'}`"
         )
+    tos_status = tos_status or check_tos_audio_status()
+    tos_keys = tos_status.get("keys") or []
+    tos_lines = [
+        f"- Check enabled: {bool(tos_status.get('enabled'))}",
+        f"- Prefix: `{tos_status.get('prefix') or '-'}`",
+        f"- Objects found: {tos_status.get('count', 0)}",
+    ]
+    if tos_status.get("error"):
+        tos_lines.append(f"- Error: {tos_status.get('error')}")
+    if tos_keys:
+        tos_lines.append("- Recent keys:")
+        tos_lines.extend(f"  - `{key}`" for key in tos_keys[:20])
 
     report = f"""---
 title: Bilibili AI Daily Run {date}
@@ -1040,6 +1129,10 @@ status: active
 ## OpenCLI / Fetch Notes
 
 {chr(10).join(f'- {err}' for err in opencli_errors) if opencli_errors else '- No fetch errors recorded.'}
+
+## TOS Audio Check
+
+{chr(10).join(tos_lines)}
 
 ## Candidate Decisions
 
@@ -1170,8 +1263,11 @@ def main(argv: list[str] | None = None) -> int:
         results = process_selected(decisions, args)
         append_sources_csv(results)
         update_knowledge_index(results)
-        report_path = write_run_report(decisions, results, opencli_errors)
+        tos_status = check_tos_audio_status()
+        report_path = write_run_report(decisions, results, opencli_errors, tos_status=tos_status)
         append_log(report_path, results)
+    else:
+        tos_status = check_tos_audio_status()
 
     summary = {
         "candidates": len(candidates),
@@ -1201,6 +1297,7 @@ def main(argv: list[str] | None = None) -> int:
             for r in results
         ],
         "opencli_errors": opencli_errors,
+        "tos_audio_check": tos_status,
         "report": str(report_path.relative_to(REPO_ROOT)) if report_path else "",
     }
 

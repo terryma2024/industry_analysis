@@ -11,9 +11,11 @@ import argparse
 import datetime as dt
 import hashlib
 import hmac
+import json
 import mimetypes
 import os
 import sys
+import xml.etree.ElementTree as ET
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -130,16 +132,17 @@ def request_url(endpoint: str, bucket: str, key: str, addressing_style: str) -> 
     return f"{parsed.scheme}://{host}{path}", host, path
 
 
-def sign_put_headers(
+def sign_headers(
     method: str,
     path: str,
+    query: str,
     host: str,
     payload_hash: str,
-    content_type: str,
     access_key: str,
     secret_key: str,
     region: str,
     service: str,
+    content_type: str = "",
     security_token: str = "",
 ) -> dict[str, str]:
     now = dt.datetime.now(dt.UTC)
@@ -151,11 +154,13 @@ def sign_put_headers(
         "x-amz-content-sha256": payload_hash,
         "x-amz-date": amz_date,
     }
+    if not content_type:
+        headers.pop("content-type")
     if security_token:
         headers["x-amz-security-token"] = security_token
     signed_headers = ";".join(sorted(headers))
     canonical_headers = "".join(f"{key}:{headers[key]}\n" for key in sorted(headers))
-    canonical_request = "\n".join([method, path, "", canonical_headers, signed_headers, payload_hash])
+    canonical_request = "\n".join([method, path, query, canonical_headers, signed_headers, payload_hash])
     credential_scope = f"{datestamp}/{region}/{service}/aws4_request"
     string_to_sign = "\n".join(
         [
@@ -175,6 +180,33 @@ def sign_put_headers(
         f"SignedHeaders={signed_headers}, Signature={signature}"
     )
     return {key.title(): value for key, value in headers.items()}
+
+
+def sign_put_headers(
+    method: str,
+    path: str,
+    host: str,
+    payload_hash: str,
+    content_type: str,
+    access_key: str,
+    secret_key: str,
+    region: str,
+    service: str,
+    security_token: str = "",
+) -> dict[str, str]:
+    return sign_headers(
+        method,
+        path,
+        "",
+        host,
+        payload_hash,
+        access_key,
+        secret_key,
+        region,
+        service,
+        content_type,
+        security_token,
+    )
 
 
 def presigned_get_url(
@@ -263,6 +295,60 @@ def upload_file(
         raise SystemExit(f"TOS upload failed HTTP {exc.code}: {detail}") from exc
 
 
+def parse_list_objects_xml(text: str) -> list[dict[str, object]]:
+    root = ET.fromstring(text)
+    objects: list[dict[str, object]] = []
+    for contents in root.findall(".//{*}Contents"):
+        key = contents.findtext("{*}Key") or ""
+        size_text = contents.findtext("{*}Size") or "0"
+        last_modified = contents.findtext("{*}LastModified") or ""
+        if not key:
+            continue
+        try:
+            size = int(size_text)
+        except ValueError:
+            size = 0
+        objects.append({"key": key, "size": size, "last_modified": last_modified})
+    return objects
+
+
+def list_objects(
+    prefix: str,
+    access_key: str,
+    secret_key: str,
+    bucket: str,
+    region: str,
+    service: str,
+    endpoint: str,
+    addressing_style: str,
+    max_keys: int = 100,
+    security_token: str = "",
+) -> list[dict[str, object]]:
+    base_url, host, request_path = request_url(endpoint, bucket, "", addressing_style)
+    payload_hash = hashlib.sha256(b"").hexdigest()
+    query = canonical_query({"list-type": "2", "max-keys": str(max_keys), "prefix": prefix})
+    headers = sign_headers(
+        "GET",
+        request_path,
+        query,
+        host,
+        payload_hash,
+        access_key,
+        secret_key,
+        region,
+        service,
+        security_token=security_token,
+    )
+    request = urllib.request.Request(f"{base_url}?{query}", headers=headers, method="GET")
+    try:
+        with urllib.request.urlopen(request, timeout=60) as response:
+            body = response.read().decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise SystemExit(f"TOS list failed HTTP {exc.code}: {detail}") from exc
+    return parse_list_objects_xml(body)
+
+
 def sdk_client(access_key: str, secret_key: str, endpoint: str, region: str, security_token: str = ""):
     try:
         import tos
@@ -301,23 +387,22 @@ def sdk_presigned_get_url(client, bucket: str, key: str, expires: int) -> str:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", required=True, type=Path, help="local audio file")
+    parser.add_argument("--input", type=Path, help="local audio file")
     parser.add_argument("--filename", help="optional original filename from caller")
     parser.add_argument("--content-type", default="", help="MIME type override")
     parser.add_argument("--key", help="TOS object key; generated when omitted")
     parser.add_argument("--prefix", default=os.environ.get("TOS_UPLOAD_PREFIX", "asr-audio"))
     parser.add_argument("--expires", type=int, default=int(os.environ.get("TOS_PRESIGN_EXPIRES", "86400")))
     parser.add_argument("--public-url", action="store_true", help="print bucket-domain URL instead of a presigned URL")
+    parser.add_argument("--json", action="store_true", help="print structured JSON output")
+    parser.add_argument("--list-prefix", help="list objects under this TOS prefix instead of uploading")
+    parser.add_argument("--list-max-keys", type=int, default=100, help="maximum keys to return for --list-prefix")
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     load_dotenv()
     args = build_parser().parse_args(argv)
-    input_path = args.input.expanduser().resolve()
-    if not input_path.exists() or not input_path.is_file():
-        raise SystemExit(f"input file does not exist: {input_path}")
-
     access_key, secret_key, bucket = require_env()
     region = os.environ.get("TOS_REGION", DEFAULT_REGION).strip() or DEFAULT_REGION
     endpoint = os.environ.get("TOS_ENDPOINT", DEFAULT_ENDPOINT).strip() or DEFAULT_ENDPOINT
@@ -325,6 +410,33 @@ def main(argv: list[str] | None = None) -> int:
     addressing_style = os.environ.get("TOS_ADDRESSING_STYLE", "virtual").strip() or "virtual"
     service = os.environ.get("TOS_SIGNING_SERVICE", "s3").strip() or "s3"
     security_token = env_first("TOS_SECURITY_TOKEN", "VOLCENGINE_SECURITY_TOKEN")
+
+    if args.list_prefix:
+        objects = list_objects(
+            args.list_prefix,
+            access_key,
+            secret_key,
+            bucket,
+            region,
+            service,
+            endpoint,
+            addressing_style,
+            args.list_max_keys,
+            security_token,
+        )
+        payload = {"bucket": bucket, "prefix": args.list_prefix, "count": len(objects), "objects": objects}
+        if args.json:
+            print(json.dumps(payload, ensure_ascii=False))
+        else:
+            for item in objects:
+                print(item["key"])
+        return 0
+
+    if args.input is None:
+        raise SystemExit("--input is required unless --list-prefix is used")
+    input_path = args.input.expanduser().resolve()
+    if not input_path.exists() or not input_path.is_file():
+        raise SystemExit(f"input file does not exist: {input_path}")
     filename = args.filename or input_path.name
     key = args.key or object_key(Path(filename), args.prefix)
     content_type = content_type_for(input_path, args.content_type)
@@ -347,25 +459,27 @@ def main(argv: list[str] | None = None) -> int:
             security_token,
         )
     if args.public_url:
-        print(public_object_url(public_base_url, key))
+        url = public_object_url(public_base_url, key)
     else:
         if client is not None:
-            print(sdk_presigned_get_url(client, bucket, key, args.expires))
+            url = sdk_presigned_get_url(client, bucket, key, args.expires)
         else:
-            print(
-                presigned_get_url(
-                    endpoint,
-                    bucket,
-                    key,
-                    access_key,
-                    secret_key,
-                    region,
-                    service,
-                    args.expires,
-                    addressing_style,
-                    security_token,
-                )
+            url = presigned_get_url(
+                endpoint,
+                bucket,
+                key,
+                access_key,
+                secret_key,
+                region,
+                service,
+                args.expires,
+                addressing_style,
+                security_token,
             )
+    if args.json:
+        print(json.dumps({"bucket": bucket, "key": key, "url": url}, ensure_ascii=False))
+    else:
+        print(url)
     return 0
 
 

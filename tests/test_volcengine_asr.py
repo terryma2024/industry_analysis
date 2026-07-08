@@ -62,6 +62,62 @@ class VolcengineAsrTests(unittest.TestCase):
         self.assertIn(str(audio_path), calls[0])
         self.assertTrue(any(value.startswith("audio/") for value in calls[0]))
 
+    def test_upload_command_retries_and_reports_failed_attempts(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            audio_path = Path(tmpdir) / "clip.m4a"
+            audio_path.write_text("fake audio", encoding="utf-8")
+            calls = []
+
+            def fake_run(args, timeout=300):
+                calls.append(args)
+                return asr.subprocess.CompletedProcess(args, 1, "", "TOS upload failed HTTP 403: denied")
+
+            env = {
+                "VOLCENGINE_AUDIO_UPLOAD_COMMAND": "uploader --input {input}",
+                "VOLCENGINE_AUDIO_UPLOAD_RETRIES": "2",
+            }
+            with mock.patch.dict(os.environ, env, clear=True):
+                with mock.patch.object(asr, "run", side_effect=fake_run):
+                    with mock.patch.object(asr.time, "sleep"):
+                        with self.assertRaises(SystemExit) as caught:
+                            asr.upload_audio(audio_path)
+
+        self.assertEqual(len(calls), 2)
+        message = str(caught.exception)
+        self.assertIn("audio upload failed after 2 attempts", message)
+        self.assertIn("attempt 1", message)
+        self.assertIn("TOS upload failed HTTP 403", message)
+
+    def test_upload_command_retries_when_uploaded_url_is_not_reachable(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            audio_path = Path(tmpdir) / "clip.m4a"
+            audio_path.write_text("fake audio", encoding="utf-8")
+            verify_results = [False, True]
+
+            def fake_run(args, timeout=300):
+                return asr.subprocess.CompletedProcess(
+                    args,
+                    0,
+                    '{"url":"https://industry-analysis.tos-cn-beijing.volces.com/asr-audio/clip.m4a"}',
+                    "",
+                )
+
+            def fake_verify(url):
+                return verify_results.pop(0), "HTTP 404"
+
+            env = {
+                "VOLCENGINE_AUDIO_UPLOAD_COMMAND": "uploader --input {input}",
+                "VOLCENGINE_AUDIO_UPLOAD_RETRIES": "2",
+            }
+            with mock.patch.dict(os.environ, env, clear=True):
+                with mock.patch.object(asr, "run", side_effect=fake_run) as run:
+                    with mock.patch.object(asr, "verify_public_audio_url", side_effect=fake_verify):
+                        with mock.patch.object(asr.time, "sleep"):
+                            public_url = asr.upload_audio(audio_path)
+
+        self.assertEqual(public_url, "https://industry-analysis.tos-cn-beijing.volces.com/asr-audio/clip.m4a")
+        self.assertEqual(run.call_count, 2)
+
     def test_extract_url_from_upload_output_accepts_plain_text(self) -> None:
         public_url = asr.extract_url_from_upload_output("uploaded: https://cdn.example.com/a.wav\n")
 

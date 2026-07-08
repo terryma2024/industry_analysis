@@ -1,5 +1,6 @@
 import json
 import os
+import time
 import tempfile
 import unittest
 from pathlib import Path
@@ -172,6 +173,55 @@ class BilibiliAiDailyResearchTests(unittest.TestCase):
         self.assertEqual(method, "volcengine-external-command:volc.bigasr.auc")
         self.assertEqual(error, "")
         self.assertEqual(len(calls), 2)
+
+    def test_run_command_timeout_kills_child_process_group_quickly(self) -> None:
+        script = (
+            "import subprocess, sys, time; "
+            "subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(3)']); "
+            "time.sleep(3)"
+        )
+        start = time.monotonic()
+
+        proc = tool.run_command([tool.sys.executable, "-c", script], timeout=1)
+        elapsed = time.monotonic() - start
+
+        self.assertEqual(proc.returncode, 124)
+        self.assertLess(elapsed, 2.5)
+        self.assertIn("command timed out after 1 seconds", proc.stderr)
+
+    def test_tos_audio_status_is_included_in_run_report(self) -> None:
+        candidate = tool.VideoCandidate(
+            title="机器人视频",
+            url="https://www.bilibili.com/video/BV1toscheck",
+            bvid="BV1toscheck",
+        )
+        decisions = [
+            tool.CandidateDecision(
+                candidate=candidate,
+                status="needs_model_review",
+                reason="awaiting model relevance judgment",
+            )
+        ]
+        tos_status = {
+            "enabled": True,
+            "prefix": "asr-audio/2026/07/08",
+            "count": 0,
+            "keys": [],
+            "error": "",
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            old_dir = tool.SYNTHESIS_DIR
+            tool.SYNTHESIS_DIR = Path(tmpdir)
+            try:
+                report_path = tool.write_run_report(decisions, [], [], tos_status=tos_status)
+                text = report_path.read_text(encoding="utf-8")
+            finally:
+                tool.SYNTHESIS_DIR = old_dir
+
+        self.assertIn("## TOS Audio Check", text)
+        self.assertIn("asr-audio/2026/07/08", text)
+        self.assertIn("Objects found: 0", text)
 
 
 if __name__ == "__main__":

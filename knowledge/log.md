@@ -337,3 +337,9 @@ tags:
 - **变更**: 更新 [[_syntheses/bilibili-ai-daily-run-2026-07-08|Bilibili AI Daily Run 2026-07-08]]，新增 [[_sources/bilibili-bv1mgja6cebk-200|千寻智能 Bilibili source card]] 和 [[_syntheses/bilibili-qianxun-intelligence-deep-dive-2026-07-08|千寻智能具身智能公司视频深度调研]]；补充 `knowledge/ai/sources.csv` 与 `knowledge/robotics-embodied-ai/sources.csv`。
 - **来源**: 第一阶段候选池 20 个，模型选中 `BV1mgja6CEbK`、`BV1q3TE6AE4b`、`BV1Z7jA6LE8s`；其中仅 `BV1mgja6CEbK` 生成 `raw/_inbox/transcripts/2026-07-08-bilibili-bv1mgja6cebk-200.json` 和 source card。
 - **限制**: `BV1q3TE6AE4b` 与 `BV1Z7jA6LE8s` 外部 ASR subprocess 长时间不返回，已中断，未写 source card 或单视频深研页；`BV1mgja6CEbK` 的公司估值、营收、客户、数据规模、Spirit VLA 和政策 claim 均为 B 级线索，需一级来源验证。
+
+## [2026-07-08] tooling | Bilibili ASR/TOS 上传诊断优化
+
+- **变更**: 更新 `tools/bilibili_ai_daily_research.py`、`tools/volcengine_asr.py`、`tools/tos_upload.py` 和 `docs/bilibili_daily_research_automation.md`，为每日 Bilibili 自动化增加 TOS 今日目录检查、上传后 URL 可达性验证、上传失败重试和外部 ASR 进程组超时清理。
+- **原因**: 今日补跑中 `BV1q3TE6AE4b` 与 `BV1Z7jA6LE8s` 卡在 external ASR，人工检查 TOS 今日目录只有一个音频文件，说明失败视频可能未成功上传且主脚本缺少明确上传失败反馈。
+- **验证**: `uv run python -m unittest tests.test_volcengine_asr tests.test_bilibili_ai_daily_research tests.test_tos_upload` 通过。

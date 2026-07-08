@@ -318,6 +318,41 @@ def extract_url_from_upload_output(text: str) -> str:
     return ""
 
 
+def should_verify_upload_url(url: str) -> bool:
+    value = os.environ.get("VOLCENGINE_AUDIO_UPLOAD_VERIFY", "").strip().lower()
+    if value in {"1", "true", "yes", "on"}:
+        return True
+    if value in {"0", "false", "no", "off"}:
+        return False
+    lowered = url.lower()
+    return "tos-" in lowered or "volces.com" in lowered
+
+
+def verify_public_audio_url(url: str) -> tuple[bool, str]:
+    request = urllib.request.Request(url, headers={"Range": "bytes=0-0", "User-Agent": BILIBILI_UA})
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            response.read(1)
+            if response.status in (200, 206):
+                return True, ""
+            return False, f"unexpected HTTP status {response.status}"
+    except urllib.error.HTTPError as exc:
+        detail = exc.read(300).decode("utf-8", errors="replace")
+        return False, f"HTTP {exc.code}: {detail}"
+    except Exception as exc:
+        return False, f"{type(exc).__name__}: {exc}"
+
+
+def positive_int_env(name: str, default: int) -> int:
+    value = os.environ.get(name, "").strip()
+    if not value:
+        return default
+    try:
+        return max(1, int(value))
+    except ValueError:
+        return default
+
+
 def upload_audio(audio_path: Path) -> str:
     template = os.environ.get("VOLCENGINE_AUDIO_UPLOAD_COMMAND", "").strip()
     if not template:
@@ -334,14 +369,27 @@ def upload_audio(audio_path: Path) -> str:
     }
     args = shlex.split(template.format(**values))
     timeout = int(os.environ.get("VOLCENGINE_AUDIO_UPLOAD_TIMEOUT", "900"))
-    proc = run(args, timeout=timeout)
-    output = proc.stdout.strip() or proc.stderr.strip()
-    if proc.returncode != 0:
-        raise SystemExit(f"audio upload command failed: {output}")
-    public_url = extract_url_from_upload_output(output)
-    if not public_url:
-        raise SystemExit("audio upload command did not print a public http(s) URL")
-    return public_url
+    retries = positive_int_env("VOLCENGINE_AUDIO_UPLOAD_RETRIES", 3)
+    failures: list[str] = []
+    for attempt in range(1, retries + 1):
+        proc = run(args, timeout=timeout)
+        output = proc.stdout.strip() or proc.stderr.strip()
+        if proc.returncode != 0:
+            failures.append(f"attempt {attempt}: upload command exited {proc.returncode}: {output}")
+        else:
+            public_url = extract_url_from_upload_output(output)
+            if not public_url:
+                failures.append(f"attempt {attempt}: audio upload command did not print a public http(s) URL")
+            elif should_verify_upload_url(public_url):
+                ok, reason = verify_public_audio_url(public_url)
+                if ok:
+                    return public_url
+                failures.append(f"attempt {attempt}: uploaded audio URL is not reachable: {reason}")
+            else:
+                return public_url
+        if attempt < retries:
+            time.sleep(1.5 * attempt)
+    raise SystemExit(f"audio upload failed after {retries} attempts: " + "; ".join(failures))
 
 
 def prepare_audio_url(url: str) -> tuple[str, str]:
