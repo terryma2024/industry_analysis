@@ -228,6 +228,17 @@ For every video that is both selected by model judgment and `status=processed`, 
 
 Cross-video daily overview pages are optional navigation/synthesis artifacts. They must not replace the per-selected-video deep-research pages. Videos that are `failed`, `skipped_duplicate`, or not selected should not receive fabricated deep-research pages; record them as retry or follow-up items instead.
 
+## Failed Case Handling And Self-Repair
+
+For any `failed` selected video, the scheduled task should not stop at reporting the failure. Codex should autonomously investigate the root cause in the same run when feasible, then optimize the pipeline or configuration before finalizing:
+
+1. Identify the failing boundary: candidate fetch, duplicate detection, subtitle extraction, audio download, TOS upload, uploaded URL verification, Volcengine ASR submit/query, transcript parsing, source-card writing, or Git finalization.
+2. Preserve evidence in the daily run report: exact video id, failing command/stage, exit code or timeout, stderr/stdout excerpt, TOS prefix/object count when relevant, retry count, and whether any raw/source artifact was written.
+3. Retry transient failures with bounded attempts. Do not retry indefinitely, and do not create source cards or deep-research pages unless the video reaches `status=processed`.
+4. If the root cause is a pipeline bug, missing diagnostic, timeout problem, upload visibility problem, or recoverable script/config issue, fix the tooling in the same run, add or update tests, rerun the smallest relevant verification command, and include the fix in the same Git commit or a follow-up tooling commit.
+5. If the root cause requires external state that Codex cannot change, such as expired credentials, missing paid quota, broken upstream service, unavailable Bilibili media, or user-owned TOS permission changes, report the precise manual action required and leave the failed video as a retry item.
+6. Never fabricate transcript content, source metadata, publication dates, play counts, TOS object keys, or ASR output while investigating failures.
+
 ## Git Commit And Push
 
 After all capture, synthesis, index, log, and final run-report work is complete, the scheduled Codex task should commit and push the daily changes.

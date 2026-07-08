@@ -343,3 +343,8 @@ tags:
 - **变更**: 更新 `tools/bilibili_ai_daily_research.py`、`tools/volcengine_asr.py`、`tools/tos_upload.py` 和 `docs/bilibili_daily_research_automation.md`，为每日 Bilibili 自动化增加 TOS 今日目录检查、上传后 URL 可达性验证、上传失败重试和外部 ASR 进程组超时清理。
 - **原因**: 今日补跑中 `BV1q3TE6AE4b` 与 `BV1Z7jA6LE8s` 卡在 external ASR，人工检查 TOS 今日目录只有一个音频文件，说明失败视频可能未成功上传且主脚本缺少明确上传失败反馈。
 - **验证**: `uv run python -m unittest tests.test_volcengine_asr tests.test_bilibili_ai_daily_research tests.test_tos_upload` 通过。
+
+## [2026-07-08] governance | Bilibili 失败 case 自主排查规则
+
+- **变更**: 更新 `docs/bilibili_daily_research_automation.md`，新增 `Failed Case Handling And Self-Repair` 规则，要求每日任务对 selected 视频的失败 case 自主定位失败边界、保留证据、bounded retry、能修则修并补测试，只有外部状态不可控时才作为人工 blocker 报告。
+- **约束**: 失败视频仍不得伪造 transcript、source card 或单视频深研页；只有 `status=processed` 才进入 durable synthesis。
