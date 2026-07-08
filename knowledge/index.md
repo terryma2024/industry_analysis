@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-07
+last_updated: 2026-07-08
 tags:
   - wiki
   - index
@@ -97,6 +97,7 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-07-08|Bilibili AI Daily Run 2026-07-08]] — 每日收藏夹候选池 20 个视频全部为重复，未进入模型复核、转录或单视频深研。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-07|Bilibili AI Daily Run 2026-07-07]] — 每日收藏夹候选池 20 个，模型选中并成功处理 5 个 AI/具身智能相关视频。
 - [[_syntheses/bilibili-physical-ai-productivity-revolution-deep-dive-2026-07-07|Physical AI 生产力革命播客视频深度调研]] — 对 `BV17eTk6vETX` 做单视频深研，拆解 Physical AI 产业链、算力/仿真/数据/本体分层和投资风险。
 - [[_syntheses/bilibili-isaac-sim-tutorial-deep-dive-2026-07-07|Isaac Sim 教程视频深度调研]] — 对 `BV1G8kBBvEzR` 做单视频深研，用 NVIDIA Isaac Sim/Isaac Lab 官方文档校验仿真、ROS2、RL 和硬件门槛。

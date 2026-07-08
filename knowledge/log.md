@@ -324,3 +324,10 @@ tags:
 - **来源**: 只综合本次自动化中 `status=processed` 的 `BV17eTk6vETX`、`BV1G8kBBvEzR`、`BV1j9jd6aE7c`、`BV1WfTk6EEZ8`、`BV1F7Ts6WEYj`；用 NVIDIA Isaac Sim/Isaac Lab 官方文档、arXiv `2606.19333` 和 arXiv `2607.00678` 交叉验证关键技术事实。
 - **初步结果**: Physical AI 需要按系统工程和产业链分层理解；Isaac Sim 的价值在多传感器仿真、ROS2、synthetic data 和 RL 工具链；多目感知选型应匹配任务和模型目标；Do As I Do 强调观察性视频到机器人轨迹需要严格筛选和重定向；ABot-M0.5 把移动操作 WAM 的瓶颈明确为时间粒度、动作空间和训练/推理条件三层错配。
 - **限制**: Bilibili 仍为 B 级线索；摩尔线程 Lambda 平台、高德/AMAP 后续产品化、ABot 代码开放状态、多目设备真实 BOM 和工厂采集 ROI 仍需一级来源或实测验证。
+
+## [2026-07-08] automation | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-08|Bilibili AI Daily Run 2026-07-08]]；更新 [[index|Knowledge Index]]。
+- **来源**: 运行 `uv run python tools/bilibili_ai_daily_research.py --limit 20 --json` 获取默认收藏夹最新 20 个候选。
+- **结果**: 20 个候选全部为 `skipped_duplicate`；`needs_model_review=0`、模型选中 0、`processed=0`、`failed=0`，因此未进入第二阶段、未新增 transcript、source card 或单视频深研页。
+- **限制**: 本轮没有新视频内容可综合；后续运行继续只处理 selected + processed 视频。
