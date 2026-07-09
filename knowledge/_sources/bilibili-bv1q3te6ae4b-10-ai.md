@@ -13,13 +13,13 @@ tags:
   - video
   - ai-research
   - ai
-status: draft
+status: active
 ---
 
 # 博登智能：估值超10亿，AI卖铲人闷声发大财
 
 > [!summary]
-> Bilibili video source packet captured by the daily AI / embodied-intelligence pipeline. This page is a traceable source card, not yet a full industry synthesis.
+> Bilibili video source packet captured by the daily AI / embodied-intelligence pipeline. This page is a traceable source card; downstream syntheses include [[_syntheses/bilibili-boden-intelligence-data-infrastructure-deep-dive-2026-07-08|博登智能 Physical AI 数据基建视频深度调研]] and [[robotics-embodied-ai/research-notes/boden-intelligence-business-technology-overview-2026-07-08|博登智能商业逻辑、商业计划与技术方案综述]].
 
 ## Source Metadata
 
@@ -50,5 +50,6 @@ status: draft
 ## Related Links
 
 - [[_syntheses/bilibili-boden-intelligence-data-infrastructure-deep-dive-2026-07-08|博登智能 Physical AI 数据基建视频深度调研]]
+- [[robotics-embodied-ai/research-notes/boden-intelligence-business-technology-overview-2026-07-08|博登智能商业逻辑、商业计划与技术方案综述]]
 - [[ai/00-index|AI]]
 - [[robotics-embodied-ai/00-index|机器人与具身智能]]

@@ -368,6 +368,13 @@ tags:
 - **初步结果**: 博登智能视频提供“真实场景网络 + 数据引擎 + 验证体系”的具身数据基建线索；千寻智能 `BV1Z7jA6LE8s` 独立页补充融资、团队、墨子一硬件、Spirit VLA 和客户落地线索。
 - **限制**: 两条视频中的公司估值、融资、客户、营收、数据规模、机器人数量、模型指标和订单均未找到足够一级来源支撑，全部保留为 `待验证`。
 
+## [2026-07-08] synthesis | 博登智能商业与技术综述
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/boden-intelligence-business-technology-overview-2026-07-08|博登智能商业逻辑、商业计划与技术方案综述]]；更新 [[index|Knowledge Index]]、[[robotics-embodied-ai/00-index|机器人研究入口]] 和 [[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]。
+- **来源**: 基于 [[_syntheses/bilibili-boden-intelligence-data-infrastructure-deep-dive-2026-07-08|博登智能 Physical AI 数据基建视频深度调研]]、[[_sources/bilibili-bv1q3te6ae4b-10-ai|BV1q3TE6AE4b source card]] 和 `raw/_inbox/transcripts/2026-07-08-bilibili-bv1q3te6ae4b-10-ai.json`，并复用 [[robotics-embodied-ai/research-notes/vla-world-model-data-infrastructure-platform-design-2026-07-06|VLA&世界模型数据基建平台系统调研与设计]] 的 episode-first 数据平台框架。
+- **初步结果**: 将博登智能叙事整理为“自动化标注现金流 + 真实场景训练基地 + 跨本体数据采集 + 数据资产治理 + 现实验证闭环”的 Physical AI 数据工厂商业计划，并拆解 BASE、BreakRobot、Blink、BIBOT 四类产品角色。
+- **限制**: 本文仍不新增一级来源验证；公司主体、产品名、融资、客户、基地规模、产能、数据交易和订单 claim 均保持 `待验证`。
+
 ## [2026-07-09] automation | Bilibili AI/具身智能每日视频采集
 
 - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-09|Bilibili AI Daily Run 2026-07-09]]；更新 [[index|Knowledge Index]]。

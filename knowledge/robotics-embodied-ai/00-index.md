@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-07-06
+last_updated: 2026-07-08
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -54,6 +54,7 @@ sources:
 - `13-robot-company-product-comparison-2026-06-08.md`: 主表机器人公司的产品型号全景对比，覆盖人形/轮式双臂、协作臂/工业机器人、AMR/移动操作的参数、技术路线、优缺点和待验证项。
 - [[research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]]: 系统拆解 AIRSPEED 的开源采集核心、论文三服务架构、技术转移叙事、性能 claim、版本边界和对中国具身数据基础设施的启发。
 - [[research-notes/vla-world-model-data-infrastructure-platform-design-2026-07-06|VLA&世界模型数据基建平台系统调研与设计]]: 基于 `BV1ZFTq6pEA3` 的 15 阶段数据生产 SOP，设计面向 VLA、模仿学习和世界模型的数据生产平台，覆盖采集接入、同步缓存、自动质检、episode builder、多格式导出和失败补采闭环。
+- [[research-notes/boden-intelligence-business-technology-overview-2026-07-08|博登智能商业逻辑、商业计划与技术方案综述]]: 基于 `BV1q3TE6AE4b` 视频深研和 ASR 原文，整理 Physical AI 数据基建公司的商业逻辑、收入结构、客户分层、三层技术方案和待验证风险。
  - [[research-notes/lidar-world-model-training-2026-06-29|激光雷达数据融合进入世界模型训练论文与方案调研]]: 横向梳理 LiDAR 原生生成、BEV/occupancy、多模态 camera-LiDAR latent、JEPA 和移动机器人导航 world model 论文，并给出工程落地方案。
 - [[research-notes/home-elderly-care-robots-2026-07-06|家庭养老机器人公司与方案调研]]: 按陪伴提醒、远程巡视、移动载物、康复护理和通用家务机器人五层路线，比较 ElliQ、Hyodol、Labrador、傅利叶、1X、Figure、Tesla、优必选等公司与中国落地方案。
 - [[research-notes/embodied-model-physical-understanding-evaluation-2026-07-03|具身智能大模型物理理解能力评估框架]]: 区分动作生成、语义泛化、动作条件预测和规划可用世界模型，提出用反事实预测、minimal physical pairs、闭环 A/B 和多模态约束评估模型是否真正理解物理规律。

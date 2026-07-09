@@ -17,7 +17,7 @@ tags:
 
 - [[_sources/bilibili-bv1z7ja6le8s-200|成立两年半，估值200亿，千寻智能凭什么？]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
-- [[_sources/bilibili-bv1q3te6ae4b-10-ai|博登智能：估值超10亿，AI卖铲人闷声发大财]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+- [[_sources/bilibili-bv1q3te6ae4b-10-ai|博登智能：估值超10亿，AI卖铲人闷声发大财]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; synthesized in [[_syntheses/bilibili-boden-intelligence-data-infrastructure-deep-dive-2026-07-08|博登智能 Physical AI 数据基建视频深度调研]] and [[robotics-embodied-ai/research-notes/boden-intelligence-business-technology-overview-2026-07-08|博登智能商业逻辑、商业计划与技术方案综述]].
 
 - [[_sources/bilibili-bv1mgja6cebk-200|成立两年半，估值200亿，千寻智能凭什么？]] — Bilibili 千寻智能 source packet; synthesized in [[_syntheses/bilibili-qianxun-intelligence-deep-dive-2026-07-08|千寻智能具身智能公司视频深度调研]].
 
@@ -108,6 +108,7 @@ tags:
 - [[_syntheses/bilibili-ai-daily-run-2026-07-08|Bilibili AI Daily Run 2026-07-08]] — 每日收藏夹补跑后 3 个模型选中 AI/具身智能相关视频均完成 source packet 和单视频深研；TOS 今日前缀检查恢复正常并确认 3 个音频对象。
 - [[_syntheses/bilibili-qianxun-intelligence-deep-dive-2026-07-08|千寻智能具身智能公司视频深度调研]] — 对 `BV1mgja6CEbK` 做单视频深研，将千寻智能相关估值、数据规模、Spirit VLA、工业客户和开源策略全部标为待一级来源验证。
 - [[_syntheses/bilibili-boden-intelligence-data-infrastructure-deep-dive-2026-07-08|博登智能 Physical AI 数据基建视频深度调研]] — 对 `BV1q3TE6AE4b` 做单视频深研，提取真实世界数据基建、训练基地、数据资产化和重资产风险线索，全部公司指标待一级来源验证。
+- [[robotics-embodied-ai/research-notes/boden-intelligence-business-technology-overview-2026-07-08|博登智能商业逻辑、商业计划与技术方案综述]] — 基于博登智能视频深研和 ASR 原文，系统整理其 Physical AI 数据工厂叙事、收入结构、客户分层、三层技术方案与待验证风险。
 - [[_syntheses/bilibili-qianxun-intelligence-bv1z7-deep-dive-2026-07-08|千寻智能 BV1Z7jA6LE8s 视频深度调研]] — 对 `BV1Z7jA6LE8s` 做独立单视频深研，补充融资、创始团队、墨子一硬件、Spirit VLA 和客户落地待验证清单。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-07|Bilibili AI Daily Run 2026-07-07]] — 每日收藏夹候选池 20 个，模型选中并成功处理 5 个 AI/具身智能相关视频。
 - [[_syntheses/bilibili-physical-ai-productivity-revolution-deep-dive-2026-07-07|Physical AI 生产力革命播客视频深度调研]] — 对 `BV17eTk6vETX` 做单视频深研，拆解 Physical AI 产业链、算力/仿真/数据/本体分层和投资风险。

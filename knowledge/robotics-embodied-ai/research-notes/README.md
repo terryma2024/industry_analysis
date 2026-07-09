@@ -7,7 +7,7 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-07-06
+last_updated: 2026-07-08
 ---
 
 # 机器人（具身智能） - 研究中间笔记
@@ -73,3 +73,7 @@ last_updated: 2026-07-06
 ## 2026-07-06 VLA 与世界模型数据基建
 
 - [[vla-world-model-data-infrastructure-platform-design-2026-07-06]]: 基于 `BV1ZFTq6pEA3` 的 15 阶段数据生产 SOP，设计 VLA&世界模型数据基建平台，覆盖 episode-first 架构、自动质检、多格式导出、dataset registry、baseline 评测和失败补采闭环。
+
+## 2026-07-08 博登智能商业与技术综述
+
+- [[boden-intelligence-business-technology-overview-2026-07-08]]: 基于 `BV1q3TE6AE4b` 视频深研和 ASR 原文，整理博登智能作为 Physical AI 数据基建公司的商业逻辑、商业计划、产品收入结构、三层技术方案和一级来源待验证清单。
