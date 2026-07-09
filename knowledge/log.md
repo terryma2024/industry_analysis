@@ -367,3 +367,10 @@ tags:
 - **来源**: 只综合本次补跑中 `status=processed` 的 `BV1q3TE6AE4b` 和 `BV1Z7jA6LE8s`；复用 OpenVLA、Open X-Embodiment、NVIDIA GR00T N1 等一级技术来源验证“真实机器人数据 + VLA/动作模型”的行业逻辑。
 - **初步结果**: 博登智能视频提供“真实场景网络 + 数据引擎 + 验证体系”的具身数据基建线索；千寻智能 `BV1Z7jA6LE8s` 独立页补充融资、团队、墨子一硬件、Spirit VLA 和客户落地线索。
 - **限制**: 两条视频中的公司估值、融资、客户、营收、数据规模、机器人数量、模型指标和订单均未找到足够一级来源支撑，全部保留为 `待验证`。
+
+## [2026-07-09] automation | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-09|Bilibili AI Daily Run 2026-07-09]]；更新 [[index|Knowledge Index]]。
+- **来源**: 运行 `uv run python tools/bilibili_ai_daily_research.py --limit 20 --json` 获取默认收藏夹最新 20 个候选。
+- **结果**: 20 个候选全部为 `skipped_duplicate`；`needs_model_review=0`、模型选中 0、`processed=0`、`failed=0`，因此未进入第二阶段、未新增 transcript、source card 或单视频深研页。
+- **限制**: 本轮没有新视频内容可综合；后续运行继续只处理 selected + processed 视频。
