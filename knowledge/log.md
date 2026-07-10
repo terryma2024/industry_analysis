@@ -381,3 +381,10 @@ tags:
 - **来源**: 运行 `uv run python tools/bilibili_ai_daily_research.py --limit 20 --json` 获取默认收藏夹最新 20 个候选。
 - **结果**: 20 个候选全部为 `skipped_duplicate`；`needs_model_review=0`、模型选中 0、`processed=0`、`failed=0`，因此未进入第二阶段、未新增 transcript、source card 或单视频深研页。
 - **限制**: 本轮没有新视频内容可综合；后续运行继续只处理 selected + processed 视频。
+
+## [2026-07-10] automation | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-10|Bilibili AI Daily Run 2026-07-10]]；更新 [[index|Knowledge Index]]。
+- **来源**: 运行 `uv run python tools/bilibili_ai_daily_research.py --limit 20 --json` 获取默认收藏夹最新 20 个候选。
+- **结果**: 20 个候选全部为 `skipped_duplicate`；`needs_model_review=0`、模型选中 0、`processed=0`、`failed=0`，因此未进入第二阶段、未新增 transcript、source card 或单视频深研页。
+- **限制**: 本轮没有新视频内容可综合；后续运行继续只处理 selected + processed 视频。

@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-09
+last_updated: 2026-07-10
 tags:
   - wiki
   - index
@@ -102,6 +102,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-ai-daily-run-2026-07-10|Bilibili AI Daily Run 2026-07-10]] — 每日收藏夹候选池 20 个视频全部为重复，未进入模型复核、转录或单视频深研。
 
 - [[_syntheses/bilibili-ai-daily-run-2026-07-09|Bilibili AI Daily Run 2026-07-09]] — 每日收藏夹候选池 20 个视频全部为重复，未进入模型复核、转录或单视频深研。
 
