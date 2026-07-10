@@ -148,6 +148,8 @@ tags:
 - [[robotics-embodied-ai/research-notes/libero-lifelong-robot-learning-platform-2026-06-11|LIBERO 终身学习仿真平台调研]] — 拆解 LIBERO 的 lifelong robot learning benchmark 定位、任务/数据/baseline、VLA/IL 评测价值、平台工程作品集方向和鲁棒性局限。
 - [[robotics-embodied-ai/research-notes/open-embodied-ai-datasets-comparison-2026-06-11|开源具身智能训练与评估数据集横向调研]] — 按预训练、真实机器人微调、特定能力和仿真 benchmark 横向比较开源具身数据集的格式、任务完整度、模型/算法适配和缺口。
 - [[robotics-embodied-ai/research-notes/robot-training-data-value-evaluation-2026-06-29|具身智能训练数据价值评估框架]] — 面向数据采集立项、现场质检和采后验证，提出以边际能力提升、复用性、可信度和全成本风险比衡量机器人训练数据价值。
+- [[robotics-embodied-ai/research-notes/teleoperation-training-data-cost-and-share-2026-07-09|遥操训练数据每小时成本与训练数据占比快速调研]] — 按有效可训练小时估算遥操/示教数据成本，并区分机器人 action 数据和 VLA foundation model 总训练混合中的遥操占比。
+- [[robotics-embodied-ai/research-notes/embodied-ai-training-data-hour-requirements-2026-07-09|具身智能训练数据需求量与小时数分层估算]] — 按有效可训练小时估算从 demo、单任务泛化、客户场景产品化到跨任务 VLA/foundation model 的训练数据需求量。
 - [[robotics-embodied-ai/research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]] — 系统拆解 AIRSPEED 当前开源采集核心、论文三服务架构、技术转移叙事、性能 claim 和中国具身数据基础设施启发。
 - [[robotics-embodied-ai/research-notes/dora-1-vs-ros2-2026-06-23|dora 1.0 vs ROS 2 调研]] — 对比 dora 的 AI dataflow runtime 路线与 ROS 2 机器人生态底座，拆解版本状态、性能、QoS、桥接架构和职业学习路径。
 - [[robotics-embodied-ai/research-notes/lidar-world-model-training-2026-06-29|激光雷达数据融合进入世界模型训练论文与方案调研]] — 梳理 LiDAR 原生生成、BEV/occupancy、多模态 camera-LiDAR latent、JEPA 和移动机器人导航 world model 路线，并给出工程方案。

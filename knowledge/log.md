@@ -415,3 +415,34 @@ tags:
 - **变更**: 新增或更新 [[_syntheses/xiaohongshu-ai-daily-run-2026-07-10|Xiaohongshu AI Daily Run 2026-07-10]]；处理 2 个 Xiaohongshu note source packet。
 - **来源**: `raw/_inbox/articles/` 与 `knowledge/_sources/` 中的小红书笔记采集产物。
 - **限制**: 小红书默认是 C 级发现线索；脚本只完成候选筛选、去重和 source card 交接，关键事实仍需一级来源交叉验证。
+## [2026-07-09] synthesis | 遥操训练数据成本与占比调研
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/teleoperation-training-data-cost-and-share-2026-07-09|遥操训练数据每小时成本与训练数据占比快速调研]]；更新 [[index|Knowledge Index]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]] 和 `knowledge/robotics-embodied-ai/sources.csv`。
+- **来源**: 复用 DROID、RoboMIND、AgiBot World、Open X-Embodiment、pi0、Mobile ALOHA 等既有 raw source，并补充 Washington Post、The Verge、Business Insider、RoboTurk、COBALT 等公开资料。
+- **初步结果**: 成本应按“有效可训练小时”而非操作者工时核算；人类视频直接成本低，机器人原生遥操数据因占用设备、场地、工程和 QC，通常是人工单价的数倍到十几倍；在机器人 action 轨迹数据中遥操占比常为 `80-100%`，但在包含 VLM 预训练、视频、仿真和合成数据的 foundation model 总混合中占比低且未公开。
+- **限制**: 中国国内供应商报价、遥操员薪资和头部公司真实训练混合比例仍缺少一手证据，需后续用 JD、报价单和访谈补证。
+
+## [2026-07-09] synthesis | 具身智能训练数据小时数需求调研
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/embodied-ai-training-data-hour-requirements-2026-07-09|具身智能训练数据需求量与小时数分层估算]]；更新 [[index|Knowledge Index]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]] 和 `knowledge/robotics-embodied-ai/sources.csv`。
+- **来源**: 复用 DROID、Octo、AgiBot World、pi0、Data Scaling Laws 等既有来源，并补充 RT-1、LingBot-VLA 2.0、Green-VLA、HumanEgo、ACE-Ego-0 和 Business Insider 等公开资料。
+- **初步结果**: demo 级可从 `0.5-5h` 起步，单任务有限泛化通常 `5-50h`，客户场景产品化通常 `50-500h`，跨任务/跨本体策略模型进入 `500-5,000h+`，前沿 VLA/foundation model 已公开到 `10,000-60,000h+` 混合数据量级。
+- **限制**: 小时数必须区分有效可训练小时、robot action hours、人类视频小时和 raw footage；国内头部公司真实训练 mix、QC 通过率和有效小时仍需供应商报价、JD 和访谈补证。
+
+## [2026-07-09] update | 遥操成本笔记补充数据需求与运维长尾价值
+
+- **变更**: 将具身智能训练数据需求小时数分层估算合并进 [[robotics-embodied-ai/research-notes/teleoperation-training-data-cost-and-share-2026-07-09|遥操训练数据每小时成本与训练数据占比快速调研]]，并新增“运维场景采集 80% 长尾遥操数据”的市场价值测算；补充 `knowledge/robotics-embodied-ai/sources.csv`。
+- **来源**: 复用上一轮训练数据小时数来源，并补充 Business Insider / Instawork robotics training data 报道作为运维人员与现场数据网络线索。
+- **初步结果**: 若运维平台能在真实部署中捕获 `80%` 的异常、接管、失败恢复和现场扰动数据，试点阶段可能对应 `千万元级` 数据资产价值，万台级部署后可能形成 `亿元级` 年收入机会，十万台级且授权清晰时才有 `十亿元级` 数据飞轮想象空间。
+- **限制**: 该测算是替代采集成本和可收入化比例模型，不是已验证市场规模；前提是存在真实活跃部署、清晰数据授权和可量化的模型成功率/人工值守成本改善。
+
+## [2026-07-09] update | 1 亿小时具身基座模型数据 TAM 测算
+
+- **变更**: 在 [[robotics-embodied-ai/research-notes/teleoperation-training-data-cost-and-share-2026-07-09|遥操训练数据每小时成本与训练数据占比快速调研]] 中新增“1 亿小时 AGI 级具身基座模型数据 TAM”章节。
+- **初步结果**: 若 `1 亿小时` 主要是低成本视频，数据层 TAM 约 `50亿-200亿 RMB`；若按具身基座模型混合数据结构，数据资产 TAM 约 `205亿-925亿 RMB`、平台可收入 TAM 约 `20亿-278亿 RMB`；若 `1 亿小时` 本身就是长尾遥操/action 数据需求，数据资产 TAM 可到 `800亿-4,000亿 RMB`，平台可收入 TAM 约 `40亿-800亿 RMB`。
+- **限制**: 该测算完全依赖用户指定的 `1 亿小时` 假设和本文既有单位小时价值区间；不是已验证市场规模，需用真实机器人活跃部署量、接管分钟数、数据授权和模型收益补证。
+
+## [2026-07-09] update | TAM 测算逻辑说明补充
+
+- **变更**: 在 [[robotics-embodied-ai/research-notes/teleoperation-training-data-cost-and-share-2026-07-09|遥操训练数据每小时成本与训练数据占比快速调研]] 的 `1 亿小时 AGI 级具身基座模型数据 TAM` 章节开头补充“简化计算逻辑”。
+- **初步结果**: 将 TAM 测算压缩为四步：定总量、拆数据结构、给有效小时单价、乘可收入化比例；并用基准混合情景和 `80%` 运维长尾捕获情景各给一条公式。

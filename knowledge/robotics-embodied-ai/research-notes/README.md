@@ -7,7 +7,7 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-07-08
+last_updated: 2026-07-09
 ---
 
 # 机器人（具身智能） - 研究中间笔记
@@ -77,3 +77,8 @@ last_updated: 2026-07-08
 ## 2026-07-08 博登智能商业与技术综述
 
 - [[boden-intelligence-business-technology-overview-2026-07-08]]: 基于 `BV1q3TE6AE4b` 视频深研和 ASR 原文，整理博登智能作为 Physical AI 数据基建公司的商业逻辑、商业计划、产品收入结构、三层技术方案和一级来源待验证清单。
+
+## 2026-07-09 遥操数据成本与占比
+
+- [[teleoperation-training-data-cost-and-share-2026-07-09]]: 调研遥操/teleoperation 训练数据的有效小时成本和在训练数据中的占比，区分人类视频、UMI-like 示教、单臂机器人遥操、双臂/人形/灵巧手遥操和 VLA 训练混合口径。
+- [[embodied-ai-training-data-hour-requirements-2026-07-09]]: 调研具身智能训练数据需求量与有效小时数，按 demo、单任务泛化、客户场景产品化、跨任务策略模型和前沿 VLA/foundation model 分层估算。
