@@ -1,0 +1,57 @@
+{
+  "captured_at": "2026-07-10T03:06:09.641222+00:00",
+  "platform": "xiaohongshu",
+  "note": {
+    "title": "未来不必生成视频，但要可评估、记忆和行动",
+    "url": "https://www.xiaohongshu.com/user/profile/5b8a2ddca4dd5900017426b7/6a44a669000000001101bdc2?xsec_token=AB__jmkWGxuxgIm1si8cSnHfdspZNoxBJxMyfqF-gmGVI=&xsec_source=pc_collect",
+    "note_id": "6a44a669000000001101bdc2",
+    "author": "Xbotics 具身智能社区",
+    "published_at": "",
+    "favorited_at": "",
+    "description": "🧠世界模型专栏 Vol.7 | WAM 最近两周：未来不必生成视频，但必须可评估、可记忆、可行动 最近WAM风向变了：非得让机器人脑补4K未来视频？🤔 多摄像头看到的未来，三维空间能对上号吗？世界模型能不能像老教练，告诉机器人“这条轨迹是垃圾，别学”？📉 三篇——ImageWAM、PAIWorld、World Value Models——我刷完就一个信号：WAM不再是实验室的“未来视频生成器”，正变成机器人离不开的基础设施。🏗️ 它们补了三个短板： ImageWAM补效率：不用生成完整视频，只提取动作相关的world-action context，低成本服务控制，不给“渲染全世界”，只给“下一步决策上下文”。⚡ PAIWorld补空间：机器人在多视角、多相机、真实三维空间行动，世界模型缺三维一致性，推理就是空中楼阁。🌐 World Value Models补评估：不止预测和出动作，还要帮判断数据质量、任务进度、策略价值，这是数据飞轮的关键。📊 主线就一句：视频可不出，脑子不能没有。🧠 早期让机器人想象未来，现在更准确是：拥有能支撑决策的内部世界，形式不限——视频、图像上下文、三维latent、多视角表示或value function——最终都服务行动。🎯 对开发者，信号更直接： 第一，别光用视频质量评价WAM，要轻量、能接动作、跑得动控制频率。🏃 第二，多相机要认真处理几何，PAIWorld显式注入几何先验，别让模型盲猜。📐 第三，数据飞轮需要value model，作为筛选和改进工具，不只是控制器。🔄 第四，WAM最终更像基础设施，而非单一策略，可做生成、模拟、评估。未来强系统不问“policy成功率”，问“世界模型能否支撑持续迭代”。📈 #具身智能 #世界模型 #WAM #机器人学习 #科技前沿",
+    "tags": [
+      "具身智能",
+      "世界模型",
+      "WAM",
+      "机器人学习",
+      "科技前沿"
+    ],
+    "note_type": "",
+    "image_urls": [],
+    "video_url": "",
+    "raw": {
+      "rank": 1,
+      "author": "Xbotics 具身智能社区",
+      "id": "6a44a669000000001101bdc2",
+      "likes": "32",
+      "title": "未来不必生成视频，但要可评估、记忆和行动",
+      "type": "",
+      "url": "https://www.xiaohongshu.com/user/profile/5b8a2ddca4dd5900017426b7/6a44a669000000001101bdc2?xsec_token=AB__jmkWGxuxgIm1si8cSnHfdspZNoxBJxMyfqF-gmGVI=&xsec_source=pc_collect",
+      "note_detail": {
+        "title": "未来不必生成视频，但要可评估、记忆和行动",
+        "author": "Xbotics 具身智能社区",
+        "content": "🧠世界模型专栏 Vol.7 | WAM 最近两周：未来不必生成视频，但必须可评估、可记忆、可行动 最近WAM风向变了：非得让机器人脑补4K未来视频？🤔 多摄像头看到的未来，三维空间能对上号吗？世界模型能不能像老教练，告诉机器人“这条轨迹是垃圾，别学”？📉 三篇——ImageWAM、PAIWorld、World Value Models——我刷完就一个信号：WAM不再是实验室的“未来视频生成器”，正变成机器人离不开的基础设施。🏗️ 它们补了三个短板： ImageWAM补效率：不用生成完整视频，只提取动作相关的world-action context，低成本服务控制，不给“渲染全世界”，只给“下一步决策上下文”。⚡ PAIWorld补空间：机器人在多视角、多相机、真实三维空间行动，世界模型缺三维一致性，推理就是空中楼阁。🌐 World Value Models补评估：不止预测和出动作，还要帮判断数据质量、任务进度、策略价值，这是数据飞轮的关键。📊 主线就一句：视频可不出，脑子不能没有。🧠 早期让机器人想象未来，现在更准确是：拥有能支撑决策的内部世界，形式不限——视频、图像上下文、三维latent、多视角表示或value function——最终都服务行动。🎯 对开发者，信号更直接： 第一，别光用视频质量评价WAM，要轻量、能接动作、跑得动控制频率。🏃 第二，多相机要认真处理几何，PAIWorld显式注入几何先验，别让模型盲猜。📐 第三，数据飞轮需要value model，作为筛选和改进工具，不只是控制器。🔄 第四，WAM最终更像基础设施，而非单一策略，可做生成、模拟、评估。未来强系统不问“policy成功率”，问“世界模型能否支撑持续迭代”。📈 #具身智能 #世界模型 #WAM #机器人学习 #科技前沿",
+        "likes": "32",
+        "collects": "52",
+        "comments": "0",
+        "tags": "#具身智能, #世界模型, #WAM, #机器人学习, #科技前沿"
+      }
+    }
+  },
+  "target_industries": [
+    "robotics-embodied-ai",
+    "ai"
+  ],
+  "relevance": {
+    "score": 4,
+    "matched_terms": [
+      "具身",
+      "具身智能"
+    ]
+  },
+  "extraction_method": "base-note-text",
+  "content_text": "未来不必生成视频，但要可评估、记忆和行动\n\n🧠世界模型专栏 Vol.7 | WAM 最近两周：未来不必生成视频，但必须可评估、可记忆、可行动 最近WAM风向变了：非得让机器人脑补4K未来视频？🤔 多摄像头看到的未来，三维空间能对上号吗？世界模型能不能像老教练，告诉机器人“这条轨迹是垃圾，别学”？📉 三篇——ImageWAM、PAIWorld、World Value Models——我刷完就一个信号：WAM不再是实验室的“未来视频生成器”，正变成机器人离不开的基础设施。🏗️ 它们补了三个短板： ImageWAM补效率：不用生成完整视频，只提取动作相关的world-action context，低成本服务控制，不给“渲染全世界”，只给“下一步决策上下文”。⚡ PAIWorld补空间：机器人在多视角、多相机、真实三维空间行动，世界模型缺三维一致性，推理就是空中楼阁。🌐 World Value Models补评估：不止预测和出动作，还要帮判断数据质量、任务进度、策略价值，这是数据飞轮的关键。📊 主线就一句：视频可不出，脑子不能没有。🧠 早期让机器人想象未来，现在更准确是：拥有能支撑决策的内部世界，形式不限——视频、图像上下文、三维latent、多视角表示或value function——最终都服务行动。🎯 对开发者，信号更直接： 第一，别光用视频质量评价WAM，要轻量、能接动作、跑得动控制频率。🏃 第二，多相机要认真处理几何，PAIWorld显式注入几何先验，别让模型盲猜。📐 第三，数据飞轮需要value model，作为筛选和改进工具，不只是控制器。🔄 第四，WAM最终更像基础设施，而非单一策略，可做生成、模拟、评估。未来强系统不问“policy成功率”，问“世界模型能否支撑持续迭代”。📈 #具身智能 #世界模型 #WAM #机器人学习 #科技前沿\n\n#具身智能 #世界模型 #WAM #机器人学习 #科技前沿",
+  "image_ocr": [],
+  "video_transcript": null,
+  "media_errors": []
+}

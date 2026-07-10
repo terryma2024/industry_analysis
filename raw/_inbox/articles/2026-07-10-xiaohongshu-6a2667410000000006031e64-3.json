@@ -1,0 +1,56 @@
+{
+  "captured_at": "2026-07-10T03:06:17.411631+00:00",
+  "platform": "xiaohongshu",
+  "note": {
+    "title": "本周，最值得关注的3个基础设施资料项目",
+    "url": "https://www.xiaohongshu.com/user/profile/5b8a2ddca4dd5900017426b7/6a2667410000000006031e64?xsec_token=ABwVo2_q0BUfNFleGAaDifpeEWnOfTgb3-dzxAgQLXHmE=&xsec_source=pc_collect",
+    "note_id": "6a2667410000000006031e64",
+    "author": "Xbotics 具身智能社区",
+    "published_at": "",
+    "favorited_at": "",
+    "description": "如果只用一句话总结本周 GitHub 上的具身智能 Awesome Work，我会说：具身智能开始从“模型更大”转向“系统更完整”。 Awesome-Memory-for-Robotics 提醒我们，机器人不能一直失忆。 Awesome-VLA-Data-Collection-Synthesis-Curation 提醒我们，VLA 的核心资产是数据引擎。 Awesome-Learning-for-Manipulation 提醒我们，再漂亮的模型，最终都要回到操作任务里接受检验。 📌这三个项目不一定是 star 最高的，也不一定是传播最广的，但它们选题很准。它们抓住的不是表层热点，而是具身智能继续往前走必须补齐的几块拼图。 🔍如果你是研究者，可以把它们当作阅读入口。如果你是工程团队，可以把它们当作系统设计参考。如果你是在做具身智能内容，它们很适合作为后续选题池。 ⚙️下一阶段，VLA 和 WAM 当然还会继续发展。但真正能拉开差距的，可能不只是模型结构，而是谁能把记忆、数据、操作、仿真、评测和部署串成闭环。机器人要进入真实世界，靠的不是一个模型名字，而是一整套能持续学习、持续修正、持续稳定工作的系统。 #具身智能 #WAM #VLA #机器人",
+    "tags": [
+      "具身智能",
+      "WAM",
+      "VLA",
+      "机器人"
+    ],
+    "note_type": "",
+    "image_urls": [],
+    "video_url": "",
+    "raw": {
+      "rank": 2,
+      "author": "Xbotics 具身智能社区",
+      "id": "6a2667410000000006031e64",
+      "likes": "9",
+      "title": "本周，最值得关注的3个基础设施资料项目",
+      "type": "",
+      "url": "https://www.xiaohongshu.com/user/profile/5b8a2ddca4dd5900017426b7/6a2667410000000006031e64?xsec_token=ABwVo2_q0BUfNFleGAaDifpeEWnOfTgb3-dzxAgQLXHmE=&xsec_source=pc_collect",
+      "note_detail": {
+        "title": "本周，最值得关注的3个基础设施资料项目",
+        "author": "Xbotics 具身智能社区",
+        "content": "如果只用一句话总结本周 GitHub 上的具身智能 Awesome Work，我会说：具身智能开始从“模型更大”转向“系统更完整”。 Awesome-Memory-for-Robotics 提醒我们，机器人不能一直失忆。 Awesome-VLA-Data-Collection-Synthesis-Curation 提醒我们，VLA 的核心资产是数据引擎。 Awesome-Learning-for-Manipulation 提醒我们，再漂亮的模型，最终都要回到操作任务里接受检验。 📌这三个项目不一定是 star 最高的，也不一定是传播最广的，但它们选题很准。它们抓住的不是表层热点，而是具身智能继续往前走必须补齐的几块拼图。 🔍如果你是研究者，可以把它们当作阅读入口。如果你是工程团队，可以把它们当作系统设计参考。如果你是在做具身智能内容，它们很适合作为后续选题池。 ⚙️下一阶段，VLA 和 WAM 当然还会继续发展。但真正能拉开差距的，可能不只是模型结构，而是谁能把记忆、数据、操作、仿真、评测和部署串成闭环。机器人要进入真实世界，靠的不是一个模型名字，而是一整套能持续学习、持续修正、持续稳定工作的系统。 #具身智能 #WAM #VLA #机器人",
+        "likes": "9",
+        "collects": "15",
+        "comments": "0",
+        "tags": "#具身智能, #WAM, #VLA, #机器人"
+      }
+    }
+  },
+  "target_industries": [
+    "robotics-embodied-ai",
+    "ai"
+  ],
+  "relevance": {
+    "score": 4,
+    "matched_terms": [
+      "具身",
+      "具身智能"
+    ]
+  },
+  "extraction_method": "base-note-text",
+  "content_text": "本周，最值得关注的3个基础设施资料项目\n\n如果只用一句话总结本周 GitHub 上的具身智能 Awesome Work，我会说：具身智能开始从“模型更大”转向“系统更完整”。 Awesome-Memory-for-Robotics 提醒我们，机器人不能一直失忆。 Awesome-VLA-Data-Collection-Synthesis-Curation 提醒我们，VLA 的核心资产是数据引擎。 Awesome-Learning-for-Manipulation 提醒我们，再漂亮的模型，最终都要回到操作任务里接受检验。 📌这三个项目不一定是 star 最高的，也不一定是传播最广的，但它们选题很准。它们抓住的不是表层热点，而是具身智能继续往前走必须补齐的几块拼图。 🔍如果你是研究者，可以把它们当作阅读入口。如果你是工程团队，可以把它们当作系统设计参考。如果你是在做具身智能内容，它们很适合作为后续选题池。 ⚙️下一阶段，VLA 和 WAM 当然还会继续发展。但真正能拉开差距的，可能不只是模型结构，而是谁能把记忆、数据、操作、仿真、评测和部署串成闭环。机器人要进入真实世界，靠的不是一个模型名字，而是一整套能持续学习、持续修正、持续稳定工作的系统。 #具身智能 #WAM #VLA #机器人\n\n#具身智能 #WAM #VLA #机器人",
+  "image_ocr": [],
+  "video_transcript": null,
+  "media_errors": []
+}

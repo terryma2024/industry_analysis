@@ -15,6 +15,10 @@ tags:
 
 ## Sources
 
+- [[_sources/xiaohongshu-6a2667410000000006031e64-3|本周，最值得关注的3个基础设施资料项目]] — Xiaohongshu note source packet captured by the daily AI/embodied research pipeline; C-grade discovery evidence pending synthesis.
+
+- [[_sources/xiaohongshu-6a44a669000000001101bdc2-xiaohongshu-note|未来不必生成视频，但要可评估、记忆和行动]] — Xiaohongshu note source packet captured by the daily AI/embodied research pipeline; C-grade discovery evidence pending synthesis.
+
 - [[_sources/bilibili-bv1z7ja6le8s-200|成立两年半，估值200亿，千寻智能凭什么？]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
 - [[_sources/bilibili-bv1q3te6ae4b-10-ai|博登智能：估值超10亿，AI卖铲人闷声发大财]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; synthesized in [[_syntheses/bilibili-boden-intelligence-data-infrastructure-deep-dive-2026-07-08|博登智能 Physical AI 数据基建视频深度调研]] and [[robotics-embodied-ai/research-notes/boden-intelligence-business-technology-overview-2026-07-08|博登智能商业逻辑、商业计划与技术方案综述]].
@@ -103,6 +107,8 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/xiaohongshu-wam-robotics-infrastructure-deep-dive-2026-07-10|小红书 WAM 与具身智能基础设施线索深度调研]] — 基于两条小红书收藏、PAIWorld/WVM/WAM-TTT arXiv 和三个 GitHub Awesome 项目，判断具身智能竞争重心从单模型转向数据、记忆、评测和操作闭环基础设施。
+
 - [[_syntheses/bilibili-ai-daily-run-2026-07-10|Bilibili AI Daily Run 2026-07-10]] — 每日收藏夹候选池 20 个视频全部为重复，未进入模型复核、转录或单视频深研。
 
 - [[_syntheses/bilibili-ai-daily-run-2026-07-09|Bilibili AI Daily Run 2026-07-09]] — 每日收藏夹候选池 20 个视频全部为重复，未进入模型复核、转录或单视频深研。
@@ -178,5 +184,6 @@ tags:
 
 ## Operations
 
+- [Xiaohongshu AI Daily Research Automation](../docs/xiaohongshu_daily_research_automation.md) — 小红书 `AI/具身智能调研` 收藏夹采集流程，复用 Bilibili 每日研究的候选筛选、去重、图文 OCR、视频字幕/ASR、source packet、source card 和 Codex handoff 模式。
 - [[log|Wiki Log]] — append-only 操作日志，记录 ingest/query/lint/migration。
 - [[README|Knowledge README]] — 面向人类的 Obsidian vault 首页。

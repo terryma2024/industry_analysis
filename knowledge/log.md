@@ -388,3 +388,30 @@ tags:
 - **来源**: 运行 `uv run python tools/bilibili_ai_daily_research.py --limit 20 --json` 获取默认收藏夹最新 20 个候选。
 - **结果**: 20 个候选全部为 `skipped_duplicate`；`needs_model_review=0`、模型选中 0、`processed=0`、`failed=0`，因此未进入第二阶段、未新增 transcript、source card 或单视频深研页。
 - **限制**: 本轮没有新视频内容可综合；后续运行继续只处理 selected + processed 视频。
+
+## [2026-07-10] tooling | Xiaohongshu AI/具身智能收藏夹流程
+
+- **变更**: 新增 `tools/xiaohongshu_ai_daily_research.py`、`tests/test_xiaohongshu_ai_daily_research.py` 和 `docs/xiaohongshu_daily_research_automation.md`；更新 [[index|Knowledge Index]]。
+- **参照**: 复用 Bilibili 收藏夹自动化的两阶段流程：先抓候选并去重，Codex/模型筛选 `needs_model_review`，再对 selected 笔记写入 raw source packet、C 级 source card 和 daily run report。
+- **限制**: 小红书默认是 C 级发现线索；脚本依赖 OpenCLI/JSON 导出提供正文和媒体元数据，不伪造笔记正文、作者、日期、截图或互动数据。
+- **验证**: `uv run python -m unittest tests.test_xiaohongshu_ai_daily_research tests.test_bilibili_ai_daily_research` 通过 24 个测试。
+
+## [2026-07-10] tooling | Xiaohongshu 图片 OCR 与视频 ASR 适配
+
+- **变更**: 扩展 `tools/xiaohongshu_ai_daily_research.py`，selected 笔记现在会合并基础正文、图片 OCR/视觉命令输出和视频字幕/ASR 输出；更新 `docs/xiaohongshu_daily_research_automation.md` 与 [[index|Knowledge Index]]。
+- **配置**: 图片使用 `XIAOHONGSHU_IMAGE_OCR_COMMAND`；视频先走 `XIAOHONGSHU_VIDEO_SUBTITLE_COMMAND`，失败后走 `XIAOHONGSHU_ASR_COMMAND` 或复用 `VOLCENGINE_ASR_COMMAND`。
+- **限制**: 媒体提取失败不会伪造内容；若仍有正文或 OCR/ASR 任一文本，会写入 source packet 并记录 media errors；若完全无文本则失败，除非显式使用 `--allow-empty-content`。
+- **验证**: `uv run python -m unittest tests.test_xiaohongshu_ai_daily_research tests.test_bilibili_ai_daily_research` 通过 31 个测试。
+
+## [2026-07-10] synthesis | Xiaohongshu WAM 与具身智能基础设施线索
+
+- **变更**: 新增 [[_syntheses/xiaohongshu-wam-robotics-infrastructure-deep-dive-2026-07-10|小红书 WAM 与具身智能基础设施线索深度调研]]；刷新两条小红书 source packet 详情正文；更新 [[index|Knowledge Index]]。
+- **来源**: `6a44a669000000001101bdc2` 与 `6a2667410000000006031e64` 两条小红书收藏；交叉核验 PAIWorld、World Value Models、WAM-TTT arXiv 页面，以及三个 GitHub Awesome 项目元数据。
+- **结果**: 小红书流程可生成线索型深度调研；核心判断是具身智能竞争重心从“单个更大模型”转向记忆、数据引擎、世界模型评估、仿真/部署和操作任务验证的系统基础设施。
+- **限制**: 小红书仍为 C 级线索；`ImageWAM` 未找到足够一级来源，互动数据仅作弱信号。
+
+## [2026-07-10] ingest | Xiaohongshu AI/具身智能每日笔记采集
+
+- **变更**: 新增或更新 [[_syntheses/xiaohongshu-ai-daily-run-2026-07-10|Xiaohongshu AI Daily Run 2026-07-10]]；处理 2 个 Xiaohongshu note source packet。
+- **来源**: `raw/_inbox/articles/` 与 `knowledge/_sources/` 中的小红书笔记采集产物。
+- **限制**: 小红书默认是 C 级发现线索；脚本只完成候选筛选、去重和 source card 交接，关键事实仍需一级来源交叉验证。
