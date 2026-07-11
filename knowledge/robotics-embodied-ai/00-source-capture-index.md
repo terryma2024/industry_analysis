@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-07-05
+last_updated: 2026-07-11
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -68,6 +68,13 @@ aliases:
 | [`SRC-robotics-233`](../../raw/robotics-embodied-ai/documents/SRC-robotics-233-hapmorph-a-pneumatic-framework-for-multi-dimensional-haptic-property-rendering.md) | [HapMorph arXiv 摘要页](../../raw/robotics-embodied-ai/documents/SRC-robotics-233-hapmorph-a-pneumatic-framework-for-multi-dimensional-haptic-property-rendering.md) | 用于校验 `BV12XTM6sEGF` 触觉反馈视频中的 21g、50-104mm、4.7N/mm 和 89.4% 等关键指标。 |
 | [`SRC-robotics-125`](../../raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821.pdf) | [RoboAlign-R1 PDF](../../raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821.pdf) | arXiv PDF 已保存；摘要页 sidecar 为 [HTML](../../raw/robotics-embodied-ai/documents/roboalign-r1-2605.03821-arxiv.html)。 |
 | [`SRC-robotics-126`](../../raw/robotics-embodied-ai/documents/modelscope-roboalign-r1-434219.md) | [ModelScope RoboAlign-R1 Markdown](../../raw/robotics-embodied-ai/documents/modelscope-roboalign-r1-434219.md) | defuddle 因 ModelScope `og:url` protocol-relative metadata 失败；已从 `window.__detail_data__` 生成 Markdown，并保存 [HTML](../../raw/robotics-embodied-ai/documents/modelscope-roboalign-r1-434219.html)。 |
+
+## 2026-07-11 Bilibili 交叉验证来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-243`](../../raw/robotics-embodied-ai/documents/SRC-robotics-243-wall-b.md) | [自变量机器人官网](../../raw/robotics-embodied-ai/documents/SRC-robotics-243-wall-b.md) | 核验自变量公司身份、WALL-A/WALL-B、端到端方向和多地布局；不用于确认视频中的估值、营收或客户。 |
+| [`SRC-robotics-244`](../../raw/robotics-embodied-ai/documents/SRC-robotics-244-vision-pretraining-for-dense-spatial-perception.md) | [LingBot-Vision 论文](../../raw/robotics-embodied-ai/documents/SRC-robotics-244-vision-pretraining-for-dense-spatial-perception.md) | 核验 LingBot-Vision 与 LingBot-Depth 2.0 的稠密空间感知/深度补全定位；benchmark 数字仍为作者报告。 |
 
 ## AIRSPEED 数据生产平台来源
 

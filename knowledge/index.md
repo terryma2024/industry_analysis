@@ -15,6 +15,11 @@ tags:
 
 ## Sources
 
+- [[_sources/bilibili-bv1y6m767e9x-2026-mujoco-python-ai|MuJoCo 具身智能建模教程]] — Bilibili source packet; installation instructions require official-document verification.
+- [[_sources/bilibili-bv1ekmn6megs-ego|Ego 无机器人数据采集平台拆解]] — Bilibili source packet on synchronized sensor data for robot training.
+- [[_sources/bilibili-bv15pmb68eb5-lingbot-depth-2-0|LingBot-Depth 2.0：反光与透明物体深度补全]] — Bilibili source packet; synthesized with the primary LingBot-Vision paper.
+- [[_sources/bilibili-bv1utnj6ge75-200|自变量机器人：估值200亿，真智能还是真泡沫？]] — Bilibili source packet; company direction cross-checked against its official website.
+
 - [[_sources/xiaohongshu-6a2667410000000006031e64-3|本周，最值得关注的3个基础设施资料项目]] — Xiaohongshu note source packet captured by the daily AI/embodied research pipeline; C-grade discovery evidence pending synthesis.
 
 - [[_sources/xiaohongshu-6a44a669000000001101bdc2-xiaohongshu-note|未来不必生成视频，但要可评估、记忆和行动]] — Xiaohongshu note source packet captured by the daily AI/embodied research pipeline; C-grade discovery evidence pending synthesis.
@@ -106,6 +111,12 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-ai-daily-run-2026-07-11|Bilibili AI Daily Run 2026-07-11]] — 20 candidates: 15 duplicates; four model-selected and processed.
+- [[_syntheses/bilibili-variable-robotics-deep-dive-2026-07-11|自变量机器人视频深度调研]] — Official model direction separated from unverified finance and commercial claims.
+- [[_syntheses/bilibili-lingbot-depth-2-deep-dive-2026-07-11|LingBot-Depth 2.0 视频深度调研]] — Depth-completion signal with sensor-truth and safety boundaries.
+- [[_syntheses/bilibili-ego-data-capture-deep-dive-2026-07-11|Ego 无机器人数据采集平台视频深度调研]] — The value of timestamp, calibration and IMU alignment over video-only capture.
+- [[_syntheses/bilibili-mujoco-tutorial-deep-dive-2026-07-11|MuJoCo 教程视频深度调研]] — Simulation-learning path and installation-risk correction checklist.
 
 - [[_syntheses/xiaohongshu-wam-robotics-infrastructure-deep-dive-2026-07-10|小红书 WAM 与具身智能基础设施线索深度调研]] — 基于两条小红书收藏、PAIWorld/WVM/WAM-TTT arXiv 和三个 GitHub Awesome 项目，判断具身智能竞争重心从单模型转向数据、记忆、评测和操作闭环基础设施。
 

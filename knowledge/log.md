@@ -446,3 +446,15 @@ tags:
 
 - **变更**: 在 [[robotics-embodied-ai/research-notes/teleoperation-training-data-cost-and-share-2026-07-09|遥操训练数据每小时成本与训练数据占比快速调研]] 的 `1 亿小时 AGI 级具身基座模型数据 TAM` 章节开头补充“简化计算逻辑”。
 - **初步结果**: 将 TAM 测算压缩为四步：定总量、拆数据结构、给有效小时单价、乘可收入化比例；并用基准混合情景和 `80%` 运维长尾捕获情景各给一条公式。
+
+## [2026-07-11] ingest | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-11|Bilibili AI Daily Run 2026-07-11]]；处理 4 个 Bilibili 视频 source packet。
+- **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+- **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+## [2026-07-11] synthesis | Bilibili AI/具身智能四条单视频深研
+
+- **变更**: 新增 4 篇 Bilibili 单视频深研页；补充自变量官网和 LingBot-Vision 论文交叉验证。
+- **结论**: 具身赛道中，数据采集的同步/标定可复用性、空间感知的置信度管理、仿真教程的工程正确性，以及公司模型方向与商业化事实必须分开验收。
+- **限制**: Bilibili 均为 B 级线索；除上述两项一级来源外，视频中的融资、客户、性能和教程准确性仍需独立验证。

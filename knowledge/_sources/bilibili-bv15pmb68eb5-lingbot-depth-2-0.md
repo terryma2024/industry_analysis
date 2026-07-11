@@ -1,0 +1,54 @@
+---
+title: "深度补全新突破！LingBot-Depth 2.0 让机器人看清反光与透明物体"
+type: source
+date_created: 2026-07-11
+last_updated: 2026-07-11
+source_urls:
+  - https://www.bilibili.com/video/BV15pMb68Eb5
+evidence_grade: B
+sources:
+  - raw/_inbox/transcripts/2026-07-11-bilibili-bv15pmb68eb5-lingbot-depth-2-0.json
+tags:
+  - bilibili
+  - video
+  - ai-research
+  - robotics
+  - embodied-ai
+status: draft
+---
+
+# 深度补全新突破！LingBot-Depth 2.0 让机器人看清反光与透明物体
+
+> [!summary]
+> Bilibili video source packet captured by the daily AI / embodied-intelligence pipeline. This page is a traceable source card, not yet a full industry synthesis.
+
+## Source Metadata
+
+| Field | Value |
+|---|---|
+| Platform | Bilibili |
+| URL | https://www.bilibili.com/video/BV15pMb68Eb5 |
+| BV / video id | `BV15pMb68Eb5` |
+| Author | 失控的PM |
+| Published | unknown |
+| Favorited | unknown |
+| Category | unknown |
+| Tags | unknown |
+| Extraction method | volcengine-external-command:volc.seedasr.auc |
+| Raw artifact | `raw/_inbox/transcripts/2026-07-11-bilibili-bv15pmb68eb5-lingbot-depth-2-0.json` |
+
+## Transcript Excerpt
+
+嗨，大家好，我是司马。今天呢，我就用五张图，讲清楚，Linkbot DEPS 二点零到底做了什么。啊，这是一张全景图，那我把它给弄小了一点，让大家看得清楚。很多人认为机器人装上双目相机，结构光或者是 TOF 相机之后呢，就能够获取完整的三维世界。啊，其实不是的啊，所有的深度相机呢，本质上都只能测量它能够测量到的一个地方。一旦遇到一些黑色的物体啊、高反光的一些材质呀、玻璃呀、或者说透明的物体呀，传统的深度算法呢，就很容易失败。最后呢留下了非常多的一个空洞啊，您看这是在深度图上的一个空洞，也就是大家常说的 Deeps Home。所以呢，左边这个呢是真实的世界。中间呢是传感器的一个采集，右边呢就是得到的 raw depth 也就是原始的深度。大家会发现啊，这里其实很多的区域呢，都已经失效了。那 LiBOT depth 2.0呢，并不是说重新发明了一个新的深度相机啊，也不是改变光学的规律。它做的事情呢，只有一句话。就是利用 LiDAR localization 学到的这个空间知识啊，把原始深度呢补得更完整、更连续、更稳定。最后输出的就是 refind depth。啊，也就是增强深度。这个呢就是增强后的深度。那为什么传统的深度图会出现这些空洞呢？其实原因很简单啊，无论是双目也好，结构光也好，还是许多的 RGB-D 相机。本质上呢都需要做一件事情。啊，就是找到左右图像中对应的是相同的一个点。啊，找到之后呢，再根据视差去计算这个距离。但现实的世界没有那么理想啊。比如说黑色的物体，因为它的纹理太少，相机呢根本就不知道哪里该对应哪里。再比如镜面。啊，左相机看到的是这里，那右相机看到的是另一个反射的一个画面，两个画面呢根本就对应不上啊。还有玻璃，相机很多时候呢看到的是玻璃后面的这个背景。啊，而不是玻璃本身。于是呢，算法呢就开始猜不出来了。最后呢，只能输出两种结果。一种呢叫做空洞，就直接是没有了深度。另一种呢叫做错误的深度啊，算出来了，但它算出来的是个错的。所以呢在这里强调一点啊，问题呢不是相机本身坏了，而是传统的 Mach 啊已经失效了。那这个 Linbot DAPs 2.0是怎么解决的呢？我们来看一下它的核心原理啊。Inbounds Depths 呢，它不是说去重新计算深度，而是在传统的原始深度的基础上呢，给它加了一位老师。啊，这位老师呢，就是凌波特的 vision。凌波特 vision 呢，并不是说普通的图像分类模型。他学习的是整个空间世界。啊，比如哪里应该是边缘，哪里应该是一个平整的一个面？啊，桌子通常是长什么样的？墙壁应该是如何去连续的？那玻璃呢应该是什么样的几何结构？这些呢就叫做空间先验。于是啊，整个系统呢就有了三份信息。第一份呢就是真实测出来的。原始深度啊。第二份呢就是这个 RGB 的图像里的纹理和边界。那第三份呢就是 Linbot 的微视学习到的大量空间知识。啊，林伯特的 DEPS2.0就把这三个全部融合起来。最终呢，把原本断了的地方呢，给它补连续，把错误的地方呢，给它修正，把空洞的地方呢，补完整。所以呢它增强的是几何的理解能力，而不是改变物理的极限啊。那它整个技术流程到底是什么呢？我们通过这幅图来看。如果把整个流程画成一个流水线啊，其实就非常的容易去理解。第一步呢，就是传感器负责采集数据嘛，包括 RGB 图像以及原始的深度。那第二步呢，就是对这些数据啊进行预处理，包括同步啊、去畸变啊、校正等等。那第三步呢，就是把 RGB 图像送进这个 Linbot 的微信。这里不会直接输出深度，而是提取空间特征。例如边界、纹理、形状和语义关系。第四步呢，就是再把这些空间特征和原始的深度呢一起输入，Limbot Depths。模型呢就会根据这些信息啊，对深度进行几何的补全和。增强。最后呢，输出 refind depth 以及更完整的 point cloud 所以呢，大家记住一句话啊，硬件呢负责是真实的测量。 AI 呢负责空间的理解。这也是很多未来机器人视觉系统发展的一个方向吧。那为什么机器人行业会关注它呢？啊，其实对机器人行业来说，真正最重要的并不是漂亮的深度图，而是机器人能不能靠这些数据来完成任务。比如抓取，如果黑色的杯子深度缺失的话，那机器人根本就不知道杯子在哪里。啊，比如导航，像这种玻璃没有深度的话呢，机器人可能就直接啪撞过去了。那再比如，VIO A...
+
+## Research Handoff
+
+- Extract facts, estimates, judgments, and hypotheses from the full transcript in `raw/_inbox/transcripts/2026-07-11-bilibili-bv15pmb68eb5-lingbot-depth-2-0.json`.
+- Check whether this should update AI, robotics/embodied AI, integrated circuits, or another industry page.
+- Preserve source traceability using the Bilibili URL and BV / video id.
+- Do not treat this source as primary evidence for company financials, policy facts, or market size without cross-checking primary sources.
+
+## Related Links
+
+- [[robotics-embodied-ai/00-index|机器人与具身智能]]
+- [[ai/00-index|AI]]
