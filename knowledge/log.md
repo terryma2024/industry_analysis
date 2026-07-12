@@ -458,3 +458,16 @@ tags:
 - **变更**: 新增 4 篇 Bilibili 单视频深研页；补充自变量官网和 LingBot-Vision 论文交叉验证。
 - **结论**: 具身赛道中，数据采集的同步/标定可复用性、空间感知的置信度管理、仿真教程的工程正确性，以及公司模型方向与商业化事实必须分开验收。
 - **限制**: Bilibili 均为 B 级线索；除上述两项一级来源外，视频中的融资、客户、性能和教程准确性仍需独立验证。
+
+## [2026-07-12] ingest | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-12|Bilibili AI Daily Run 2026-07-12]]；处理 4 个 Bilibili 视频 source packet。
+- **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+- **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+## [2026-07-12] synthesis | Bilibili AI/具身智能四条单视频深研
+
+- **变更**: 新增 Kimodo、RKDA、Graph-as-Policy 和子虔科技云原生 CAD 四篇独立视频深研；更新 [[index|Knowledge Index]]、AI 与机器人具身智能来源台账。
+- **来源**: 四份 Bilibili ASR source packet；补充 NVIDIA Kimodo 文档/技术报告、GaP arXiv/项目页、CaP-X 开源仓库、子虔官网及浩辰软件公开公告。
+- **结论**: 动作生成、智能体编排和云 CAD 的共同产业价值在于将模型/工具输出置入可验证的约束、版本、仿真与执行闭环；RKDA 的具体论文和性能结论仍待定位一手来源。
+- **限制**: Bilibili 视频及演讲内未被一手材料覆盖的性能、客户、产品限制和商业化陈述均保留为待验证线索。

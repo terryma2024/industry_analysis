@@ -15,6 +15,14 @@ tags:
 
 ## Sources
 
+- [[_sources/bilibili-bv1sbtx6keh5-al-for-engineering|子虔科技Al For Engineering 具身智能机器人一体化设计平台]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
+- [[_sources/bilibili-bv1c5nj6ve6y-icra-2026-ken-goldberg-agentic-coding-va-agentic-robot|【ICRA 2026 】伯克利机器人学教授 Ken Goldberg：Agentic Coding能弥合机器人鸿沟吗？新应用范式VA/Agentic Robot]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
+- [[_sources/bilibili-bv1hdpnzte6d-cvpr-26|CVPR'26 | 浙江大学×宇树科技：首个具身智能终身学习的全生命周期闭环框架]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
+- [[_sources/bilibili-bv17ud6bzeqc-kimodo|Kimodo，全新且免费的生成式动画工具，人人可用！]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
 - [[_sources/bilibili-bv1y6m767e9x-2026-mujoco-python-ai|MuJoCo 具身智能建模教程]] — Bilibili source packet; installation instructions require official-document verification.
 - [[_sources/bilibili-bv1ekmn6megs-ego|Ego 无机器人数据采集平台拆解]] — Bilibili source packet on synchronized sensor data for robot training.
 - [[_sources/bilibili-bv15pmb68eb5-lingbot-depth-2-0|LingBot-Depth 2.0：反光与透明物体深度补全]] — Bilibili source packet; synthesized with the primary LingBot-Vision paper.
@@ -111,6 +119,12 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-ai-daily-run-2026-07-12|Bilibili AI Daily Run 2026-07-12]] — 20 candidates: 15 duplicates; four model-selected and processed.
+- [[_syntheses/bilibili-kimodo-controllable-motion-deep-dive-2026-07-12|Kimodo 可控动作生成视频深度调研]] — NVIDIA primary documentation separates controllable motion generation from executable robot control.
+- [[_syntheses/bilibili-rkda-embodied-lifelong-learning-deep-dive-2026-07-12|RKDA 具身终身学习闭环视频深度调研]] — Lifecycle architecture is useful, but the claimed CVPR 2026 paper remains to be located and verified.
+- [[_syntheses/bilibili-graph-as-policy-agentic-robotics-deep-dive-2026-07-12|Graph-as-Policy 智能体机器人视频深度调研]] — GaP primary paper supports modular agentic robotics with simulation-gated iteration.
+- [[_syntheses/bilibili-zixel-cloud-cad-embodied-engineering-deep-dive-2026-07-12|子虔科技云原生 CAD 与具身工程闭环视频深度调研]] — CAD/PDM should bind design versions to simulation, manufacturing and test evidence.
 
 - [[_syntheses/bilibili-ai-daily-run-2026-07-11|Bilibili AI Daily Run 2026-07-11]] — 20 candidates: 15 duplicates; four model-selected and processed.
 - [[_syntheses/bilibili-variable-robotics-deep-dive-2026-07-11|自变量机器人视频深度调研]] — Official model direction separated from unverified finance and commercial claims.
