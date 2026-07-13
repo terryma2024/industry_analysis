@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-07-03
+last_updated: 2026-07-13
 tags:
   - wiki
   - log
@@ -471,3 +471,10 @@ tags:
 - **来源**: 四份 Bilibili ASR source packet；补充 NVIDIA Kimodo 文档/技术报告、GaP arXiv/项目页、CaP-X 开源仓库、子虔官网及浩辰软件公开公告。
 - **结论**: 动作生成、智能体编排和云 CAD 的共同产业价值在于将模型/工具输出置入可验证的约束、版本、仿真与执行闭环；RKDA 的具体论文和性能结论仍待定位一手来源。
 - **限制**: Bilibili 视频及演讲内未被一手材料覆盖的性能、客户、产品限制和商业化陈述均保留为待验证线索。
+
+## [2026-07-13] automation | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-13|Bilibili AI Daily Run 2026-07-13]]；更新 [[index|Knowledge Index]]。
+- **来源**: 运行 `uv run python tools/bilibili_ai_daily_research.py --limit 20 --json` 获取默认收藏夹最新 20 个候选并完成模型复核。
+- **结果**: 19 个候选为 `skipped_duplicate`；唯一 `needs_model_review` 视频 `BV1SAMv6iELC` 是 BilibiliWorld 会场出行内容，判定与本自动化范围无关，模型选中 0、`processed=0`、`failed=0`，未进入第二阶段。
+- **限制**: 本轮没有新的 AI/具身智能视频内容可综合；未新增 transcript、source card、行业 `sources.csv` 或单视频深研页。

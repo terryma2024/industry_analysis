@@ -120,6 +120,7 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-07-13|Bilibili AI Daily Run 2026-07-13]] — 20 candidates: 19 duplicates; the sole model-review item was unrelated, so none was processed.
 - [[_syntheses/bilibili-ai-daily-run-2026-07-12|Bilibili AI Daily Run 2026-07-12]] — 20 candidates: 15 duplicates; four model-selected and processed.
 - [[_syntheses/bilibili-kimodo-controllable-motion-deep-dive-2026-07-12|Kimodo 可控动作生成视频深度调研]] — NVIDIA primary documentation separates controllable motion generation from executable robot control.
 - [[_syntheses/bilibili-rkda-embodied-lifelong-learning-deep-dive-2026-07-12|RKDA 具身终身学习闭环视频深度调研]] — Lifecycle architecture is useful, but the claimed CVPR 2026 paper remains to be located and verified.
