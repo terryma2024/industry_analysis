@@ -506,3 +506,17 @@ tags:
 - **来源**: 新增并成功捕获 `SRC-ai-061` 至 `SRC-ai-079`，覆盖 MediaPipe 官方仓库、Solutions/Tasks、Framework 原理、同步/GPU、Hand Landmarker、平台安装、Model Maker、LLM/RAG/Function Calling、LiteRT、最新版本说明与原始论文。
 - **结果**: 将 MediaPipe 定位为“现成任务 API + 预训练模型 + 端侧实时计算图框架”，说明检测—跟踪、时间戳同步、CPU/GPU 数据流和 IMAGE/VIDEO/LIVE_STREAM 用法；结论是经典视觉/音频 Tasks 与 Framework 仍有价值，Legacy Solutions 和已 deprecated/maintenance-only 的生成式 AI SDK 不宜作为新长期架构。
 - **限制**: 文档中的 Preview、iOS 支持和 Holistic 状态存在不一致；官方 benchmark 未在本地目标设备复现，具体项目仍需按语言包、模型版本和设备矩阵重新验证。
+
+## [2026-07-14] synthesis | Ego 视频到灵巧手训练数据系统方案
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/ego-video-to-dexterous-hand-training-data-system-design-2026-07-14|Ego 视频到灵巧手训练数据：技术路线、系统设计与落地方案]]；更新 [[index|Knowledge Index]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/09-training-data-deep-dive|训练数据深度调研]]、[[robotics-embodied-ai/research-notes/README|研究中间笔记]]、[[robotics-embodied-ai/00-source-capture-index|机器人来源抽取索引]] 和 `knowledge/robotics-embodied-ai/sources.csv`。
+- **来源**: 复用 `SRC-robotics-134` RealDexUMI 与 `SRC-robotics-241` Do As I Do；新增并成功捕获 `SRC-robotics-275` 至 `SRC-robotics-283`，覆盖 HaWoR、DexUMI、DexCap、UniDex、EgoScale、SPIDER 与 GeoRT 的论文或官方实现。
+- **结论**: 手骨架识别不能直接替代灵巧手动作数据；建议以受控 RGB-D/手姿采集跑通首个 PoC，以 HaWoR/Do As I Do 盘活存量单目视频，以 GeoRT 做实时运动学映射，以 SPIDER 做离线动力学修正，并用仿真和真机 rollout 双门验收。
+- **限制**: 论文中的成功率、数据规模和速度均为作者报告，未在目标国产灵巧手与实际任务上复现；200–500 个候选 episode 和 6–8 周为项目规划估计，需用首周通过率与硬件适配结果修正。
+
+## [2026-07-14] synthesis | Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]]；更新 [[index|Knowledge Index]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/research-notes/README|研究中间笔记]]、[[robotics-embodied-ai/12-robotics-engineering-platforms-2026-06-04|机器人工程平台综合调研]]、[[robotics-embodied-ai/00-source-capture-index|来源抽取索引]] 与 `knowledge/robotics-embodied-ai/sources.csv`。
+- **来源**: 新增并成功捕获 `SRC-robotics-284` 至 `SRC-robotics-295`，覆盖 Isaac Sim 6.0.1 下载/系统要求/许可、Gazebo Jetty/Harmonic 生命周期与 ROS 配套、MuJoCo 3.9.0/MJX-Warp/许可证官方资料。
+- **结论**: Isaac Sim 的优势是高保真传感器、合成数据、OpenUSD 和数字孪生；Gazebo 的优势是 ROS 2 系统联调；MuJoCo 的优势是控制、接触动力学、系统辨识和批量策略训练。应按任务采用一主一辅，并用统一 schema、回归测试和真机 rollout 验收。
+- **风险**: 尚无统一硬件/模型/精度条件下的三方 benchmark；Isaac Sim 对 RTX/许可交付依赖高，Gazebo 需严格锁定 ROS/版本，MuJoCo 的 ROS 与高保真传感器工作流需项目自建。

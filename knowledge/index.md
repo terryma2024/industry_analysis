@@ -123,6 +123,7 @@ tags:
 
 ## Syntheses
 
+- [[robotics-embodied-ai/research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]] — 基于 2026-07 官方版本与许可资料，区分高保真感知/合成数据、ROS 2 系统联调和控制/RL 三类核心需求，给出场景选型、双层仿真架构与中国团队依赖风险。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-14|Bilibili AI Daily Run 2026-07-14]] — 20 candidates: 19 duplicates; the selected UMI/SLAM/Diffusion Policy tutorial was transcribed successfully.
 - [[_syntheses/bilibili-umi-diffusion-policy-robotics-tutorial-deep-dive-2026-07-14|UMI、SLAM 与 Diffusion Policy 具身智能教程视频深度调研]] — 以一手 UMI/Diffusion Policy 资料校验最小操作闭环，并保留视频中未核验的公司、规格和实时性主张。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-13|Bilibili AI Daily Run 2026-07-13]] — 20 candidates: 19 duplicates; the sole model-review item was unrelated, so none was processed.
@@ -169,6 +170,7 @@ tags:
 - [[ai/research-notes/scale-ai-company-history-2026-06-02|Scale AI 公司发展史]] — Scale AI 从 2016 年人力任务 API、自动驾驶数据标注、大模型后训练到 2025 年 Meta 战略投资的完整复盘。
 - [[ai/research-notes/scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]] — Scale AI 从人力任务 API 到 Meta 战略投资的路径，以及中国 AI 数据基础设施公司对标。
 - [[ai/research-notes/google-mediapipe-comprehensive-guide-2026-07-14|Google MediaPipe 全面调研：功能、原理与使用方法]] — 拆解 Tasks、Framework、Models 与 LiteRT 的边界，系统说明感知任务、计算图、检测—跟踪、时序同步、跨端用法、工程选型和维护状态。
+- [[robotics-embodied-ai/research-notes/ego-video-to-dexterous-hand-training-data-system-design-2026-07-14|Ego 视频到灵巧手训练数据：技术路线、系统设计与落地方案]] — 区分手骨架、手物 4D 重建和机器人动作，比较 Do As I Do、HaWoR、DexCap、DexUMI/RealDexUMI、UniDex、EgoScale、GeoRT 与 SPIDER，并给出数据 schema、质量门和 PoC。
 - [[robotics-embodied-ai/09-training-data-deep-dive|机器人训练数据深度调研]] — 具身智能训练数据、地方政策、schema、失败轨迹和 UMI-like 业务路线综合。
 - [[robotics-embodied-ai/08-umi-gripper-research-and-business-plan|UMI Gripper 研究与业务计划]] — UMI-like 数据采集硬件、学习路径与 ToB 落地方案。
 - [[robotics-embodied-ai/11-embodied-ai-data-service-companies-2026-06-02|具身智能数据采集和服务公司对比]] — 对智元、补天石、它石、简智、Maxinsights、自变量、帕西尼的数据采集/服务路线、岗位和优劣势做横向分析。

@@ -27,6 +27,7 @@ aliases:
 | UMI 硬件国产化 | [umi_hardware_bom_and_localization.csv](../../raw/robotics-embodied-ai/data/umi_hardware_bom_and_localization.csv) / [[research-notes/umi-hardware-localization-2026-05-27]] | 已完成 |
 | UMI v0 SOP/schema/客户数据包模板 | [umi_v0_cup_transfer_sop_qc_template.csv](../../raw/robotics-embodied-ai/data/umi_v0_cup_transfer_sop_qc_template.csv)、[umi_zarr_lerobot_schema_crosswalk.csv](../../raw/robotics-embodied-ai/data/umi_zarr_lerobot_schema_crosswalk.csv) / [[research-notes/umi-v0-sop-schema-data-package-2026-05-28]] | 模板已完成，实采待验证 |
 | LeRobot 初学者教学 | [[research-notes/lerobot-beginner-guide-2026-05-28]] | 已完成 |
+| Ego 视频到灵巧手训练数据 | [[research-notes/ego-video-to-dexterous-hand-training-data-system-design-2026-07-14]] | 已完成方案设计，PoC 待实施 |
 
 ## 结论摘要
 

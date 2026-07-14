@@ -2,7 +2,7 @@
 title: 机器人工程平台综合调研
 type: synthesis
 date_created: 2026-06-04
-last_updated: 2026-06-23
+last_updated: 2026-07-14
 sources:
   - raw/robotics-embodied-ai/documents/SRC-robotics-014-unitree-g1-d-end-to-end-platform-for-humanoid-robot.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-052-lerobot-github-repository.md
@@ -44,6 +44,8 @@ aliases:
 
 > [!summary]
 > 机器人工程平台不是单个训练框架，也不是 ROS、仿真器或数据标注系统的任意一种。真正有选型价值的平台，要把 **数据采集/治理、训练、评测、部署、真机推理、回流迭代** 连成闭环。当前生态还没有一个“全能标准平台”，更现实的做法是按目标组合：`LeRobot/FluxVLA/OpenPI` 做学习与模型工程，`Isaac Sim/Lab` 做仿真与强化学习，`ROS/MoveIt` 接真机控制，`EmbodiFlow/AIRSPEED/Unitree G1-D/Genie Studio` 提供国内数据生产、企业化和硬件绑定工作流。
+
+仿真器专项选型见 [[research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]]。该页已按 Isaac Sim 6.0.1、Gazebo Jetty/Harmonic 与 MuJoCo 3.9.0 更新版本、硬件和许可边界。
 
 ## 一句话判断
 
@@ -208,6 +210,7 @@ OpenPI 和 OpenVLA 很重要，但它们更像模型工程包。完整平台需�
 - [[09-training-data-deep-dive|机器人训练数据深度调研]]
 - [[research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]]
 - [[research-notes/dora-1-vs-ros2-2026-06-23|dora 1.0 vs ROS 2 调研]]
+- [[research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]]
 - [[_entities/HuggingFaceLeRobot|Hugging Face LeRobot]]
 - [[_entities/AIRSPEED|AIRSPEED]]
 - [[_entities/LimXDynamics|LimX Dynamics]]

@@ -7,13 +7,21 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-07-13
+last_updated: 2026-07-14
 ---
 
 # 机器人（具身智能） - 研究中间笔记
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
+
+## 2026-07-14 机器人仿真平台选型
+
+- [[isaac-sim-vs-gazebo-vs-mujoco-2026-07-14]]: 基于 2026-07 官方版本与许可资料，对比 Isaac Sim、Gazebo、MuJoCo 的物理、渲染、传感器、ROS 2、RL/IL、资产格式、硬件、许可证和中国团队选型，并给出双层仿真架构。
+
+## 2026-07-14 Ego 视频到灵巧手训练数据
+
+- [[ego-video-to-dexterous-hand-training-data-system-design-2026-07-14]]: 区分手骨架识别、手物 4D 重建和机器人可执行动作，比较 Do As I Do、HaWoR、DexCap、DexUMI/RealDexUMI、UniDex、EgoScale、GeoRT 与 SPIDER，并给出系统架构、数据 schema、质量门和 PoC 路线。
 
 ## 2026-07-13 SRT 软体机器人公司调研
 

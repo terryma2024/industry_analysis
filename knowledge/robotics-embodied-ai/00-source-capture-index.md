@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-07-13
+last_updated: 2026-07-14
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -22,11 +22,19 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 65 | 已成功抽取的 raw artifact。 |
+| `ok` | 88 | 已成功抽取的 raw artifact。 |
 | `fallback_html` | 9 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 1 | 本轮因 defuddle 失败，从网页内嵌结构化数据生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
 | `failed` | 7 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+
+## Isaac Sim、Gazebo、MuJoCo 仿真平台来源
+
+| 平台 | SRC | raw artifact | 用途 |
+|---|---|---|---|
+| Isaac Sim | `SRC-robotics-284`–`286` | [6.0.1 下载页](../../raw/robotics-embodied-ai/documents/SRC-robotics-284-nvidia-isaac-sim-6-0-1-download-and-release-page.md)、[系统要求](../../raw/robotics-embodied-ai/documents/SRC-robotics-285-nvidia-isaac-sim-6-0-1-system-requirements.md)、[License FAQ](../../raw/robotics-embodied-ai/documents/SRC-robotics-286-nvidia-isaac-sim-6-0-1-license-faq.md) | 当前版本、RTX/VRAM 门槛和商业交付许可边界。 |
+| Gazebo | `SRC-robotics-287`–`290` | [版本生命周期](../../raw/robotics-embodied-ai/documents/SRC-robotics-287-gazebo-release-lifecycle.md)、[Jetty notes](../../raw/robotics-embodied-ai/documents/SRC-robotics-288-gazebo-jetty-release-notes.md)、[ROS 配套](../../raw/robotics-embodied-ai/documents/SRC-robotics-289-installing-gazebo-with-ros-compatibility-guide.md)、[官方仓库](../../raw/robotics-embodied-ai/documents/SRC-robotics-290-gazebo-sim-official-repository-features-and-license.md) | Jetty/Harmonic 选择、ROS 2 兼容、模块化能力与 Apache 2.0。 |
+| MuJoCo | `SRC-robotics-291`–`295` | [changelog](../../raw/robotics-embodied-ai/documents/SRC-robotics-291-mujoco-changelog.md)、[overview](../../raw/robotics-embodied-ai/documents/SRC-robotics-292-mujoco-overview-and-key-features.md)、[MJX/Warp](../../raw/robotics-embodied-ai/documents/SRC-robotics-293-mujoco-xla-and-mujoco-warp-documentation.md)、[releases](../../raw/robotics-embodied-ai/documents/SRC-robotics-294-mujoco-official-releases.md)、[license](../../raw/robotics-embodied-ai/documents/SRC-robotics-295-mujoco-apache-2-0-license.md) | 3.9.0、控制/物理定位、GPU 后端与 Apache 2.0。 |
 
 ## 快速定位
 
@@ -142,6 +150,20 @@ aliases:
 | [`SRC-robotics-240`](../../raw/robotics-embodied-ai/documents/SRC-robotics-240-nvidia-isaac-lab-binary-installation-documentation.md) | [Isaac Lab binary installation](../../raw/robotics-embodied-ai/documents/SRC-robotics-240-nvidia-isaac-lab-binary-installation-documentation.md) | 用于校验 Isaac Lab clone、symlink、`isaaclab.sh` 和环境管理流程。 |
 | [`SRC-robotics-241`](../../raw/robotics-embodied-ai/documents/SRC-robotics-241-do-as-i-do-dexterous-manipulation-data-from-everyday-human-videos.md) | [Do as I Do arXiv HTML](../../raw/robotics-embodied-ai/documents/SRC-robotics-241-do-as-i-do-dexterous-manipulation-data-from-everyday-human-videos.md) | 用于校验 `BV1WfTk6EEZ8` 中 monocular RGB reconstruction、retargeting、71% success rate 和 video filtering playbook。 |
 | [`SRC-robotics-242`](../../raw/robotics-embodied-ai/documents/SRC-robotics-242-abot-m0-5-unified-mobility-and-manipulation-world-action-model.md) | [ABot-M0.5 arXiv HTML](../../raw/robotics-embodied-ai/documents/SRC-robotics-242-abot-m0-5-unified-mobility-and-manipulation-world-action-model.md) | 用于校验 `BV1F7Ts6WEYj` 中 intermediate latent actions、D-MoT、Dream Forcing 和 WAM limitations。 |
+
+## 2026-07-14 Ego 视频到灵巧手训练数据来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-275`](../../raw/robotics-embodied-ai/documents/SRC-robotics-275-hawor-world-space-hand-motion-reconstruction-from-egocentric-videos.md) | [HaWoR CVPR 2025](../../raw/robotics-embodied-ai/documents/SRC-robotics-275-hawor-world-space-hand-motion-reconstruction-from-egocentric-videos.md) | 第一人称视频世界坐标手部重建、自适应 Ego SLAM 与缺失轨迹补全。 |
+| [`SRC-robotics-276`](../../raw/robotics-embodied-ai/documents/SRC-robotics-276-dexumi-using-human-hand-as-the-universal-manipulation-interface-for-dexterous-ma.md) | [DexUMI](../../raw/robotics-embodied-ai/documents/SRC-robotics-276-dexumi-using-human-hand-as-the-universal-manipulation-interface-for-dexterous-ma.md) | 可穿戴外骨骼、触觉反馈和机器人手图像修复；成功率为作者报告。 |
+| [`SRC-robotics-277`](../../raw/robotics-embodied-ai/documents/SRC-robotics-277-dexcap-scalable-and-portable-mocap-data-collection-system-for-dexterous-manipula.md) | [DexCap](../../raw/robotics-embodied-ai/documents/SRC-robotics-277-dexcap-scalable-and-portable-mocap-data-collection-system-for-dexterous-manipula.md) | 便携、抗遮挡手部动捕，以及 IK + 点云模仿学习和人类在环修正。 |
+| [`SRC-robotics-278`](../../raw/robotics-embodied-ai/documents/SRC-robotics-278-unidex-a-robot-foundation-suite-for-universal-dexterous-hand-control-from-egocen.md) | [UniDex 论文](../../raw/robotics-embodied-ai/documents/SRC-robotics-278-unidex-a-robot-foundation-suite-for-universal-dexterous-hand-control-from-egocen.md) | 50K+ 轨迹、8 种手、FAAS、UniDex-VLA 与 UniDex-Cap；规模和指标为作者报告。 |
+| [`SRC-robotics-279`](../../raw/robotics-embodied-ai/documents/SRC-robotics-279-unidex-official-implementation.md) | [UniDex 官方实现](../../raw/robotics-embodied-ai/documents/SRC-robotics-279-unidex-official-implementation.md) | 数据准备、多手重定向、预训练和真机后训练代码与环境要求。 |
+| [`SRC-robotics-280`](../../raw/robotics-embodied-ai/documents/SRC-robotics-280-egoscale-scaling-dexterous-manipulation-with-diverse-egocentric-human-data.md) | [EgoScale](../../raw/robotics-embodied-ai/documents/SRC-robotics-280-egoscale-scaling-dexterous-manipulation-with-diverse-egocentric-human-data.md) | 20,854 小时 Ego 视频、人类预训练 + 对齐中训练和 scaling 结论；指标为作者报告。 |
+| [`SRC-robotics-281`](../../raw/robotics-embodied-ai/documents/SRC-robotics-281-spider-scalable-physics-informed-dexterous-retargeting.md) | [SPIDER 论文](../../raw/robotics-embodied-ai/documents/SRC-robotics-281-spider-scalable-physics-informed-dexterous-retargeting.md) | 将运动学人类动作转为动态可行机器人轨迹；性能和规模为作者报告。 |
+| [`SRC-robotics-282`](../../raw/robotics-embodied-ai/documents/SRC-robotics-282-spider-official-implementation.md) | [SPIDER 官方实现](../../raw/robotics-embodied-ai/documents/SRC-robotics-282-spider-official-implementation.md) | 多本体、多数据集和多物理仿真器的人到机器人重定向工程底座。 |
+| [`SRC-robotics-283`](../../raw/robotics-embodied-ai/documents/SRC-robotics-283-geometric-retargeting-a-principled-ultrafast-neural-hand-retargeting-algorithm.md) | [GeoRT](../../raw/robotics-embodied-ai/documents/SRC-robotics-283-geometric-retargeting-a-principled-ultrafast-neural-hand-retargeting-algorithm.md) | 无监督几何手部重定向；1 kHz 推理速度为作者报告。 |
 
 ## 后续流程
 
