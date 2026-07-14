@@ -1,5 +1,5 @@
 ---
-source_id: "SRC-robotics-244"
+source_id: "SRC-robotics-272"
 title: "Vision Pretraining for Dense Spatial Perception"
 source_type: "paper"
 publisher: "arXiv"
@@ -13,7 +13,7 @@ tags:
   - source-type/paper
   - evidence/s
 aliases:
-  - SRC-robotics-244
+  - SRC-robotics-272
 ---
 # Vision Pretraining for Dense Spatial Perception
 

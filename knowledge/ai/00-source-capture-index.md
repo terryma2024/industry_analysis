@@ -2,7 +2,7 @@
 title: AI Source Capture Index
 type: index
 date_created: 2026-06-02
-last_updated: 2026-06-29
+last_updated: 2026-07-14
 status: active
 tags:
   - industry/ai
@@ -15,7 +15,7 @@ sources:
 # AI Source Capture Index
 
 > [!summary]
-> 本页登记 `knowledge/ai/sources.csv` 中网页来源的离线抓取状态。2026-06-02 已运行 `tools/extract_sources_with_defuddle.py --industry ai --timeout 60`：16 条 `ok`，7 条 `fallback_html`，1 条 `failed`。2026-06-29 追加 AI 总行业 analyst source notes（SRC-ai-033 至 SRC-ai-046），用于重做行业总览页。
+> 本页登记 `knowledge/ai/sources.csv` 中网页来源的离线抓取状态。2026-06-02 已运行 `tools/extract_sources_with_defuddle.py --industry ai --timeout 60`：16 条 `ok`，7 条 `fallback_html`，1 条 `failed`。2026-06-29 追加 AI 总行业 analyst source notes（SRC-ai-033 至 SRC-ai-046）。2026-07-14 新增并成功捕获 19 条 MediaPipe/LiteRT 官方来源与原始论文（SRC-ai-061 至 SRC-ai-079）。
 
 ## 状态说明
 
@@ -70,9 +70,29 @@ sources:
 | SRC-ai-055 | NVIDIA Isaac Lab binary installation documentation | ok | [raw](../../raw/ai/documents/SRC-ai-055-nvidia-isaac-lab-binary-installation-documentation.md) | 用于校验 Isaac Lab 安装、symlink、`isaaclab.sh` 和 Python 环境约束。 |
 | SRC-ai-056 | Do as I Do Dexterous Manipulation Data from Everyday Human Videos | ok | [raw](../../raw/ai/documents/SRC-ai-056-do-as-i-do-dexterous-manipulation-data-from-everyday-human-videos.md) | 用于校验 Do As I Do 视频中的论文方法、retargeting success rate 和数据筛选结论。 |
 | SRC-ai-057 | ABot-M0.5 Unified Mobility-and-Manipulation World Action Model | ok | [raw](../../raw/ai/documents/SRC-ai-057-abot-m0-5-unified-mobility-and-manipulation-world-action-model.md) | 用于校验 ABot-M0.5 视频中的 WAM 架构、D-MoT、Dream Forcing 和限制。 |
+| SRC-ai-061 | MediaPipe GitHub repository and README | ok | [raw](../../raw/ai/documents/SRC-ai-061-mediapipe-github-repository-and-readme.md) | 跟踪许可证、隐私声明、项目结构与最新仓库状态。 |
+| SRC-ai-062 | MediaPipe Solutions guide | ok | [raw](../../raw/ai/documents/SRC-ai-062-mediapipe-solutions-guide.md) | 跟踪 Solutions 平台矩阵、Preview 标记和 Legacy 迁移状态。 |
+| SRC-ai-063 | MediaPipe Tasks overview | ok | [raw](../../raw/ai/documents/SRC-ai-063-mediapipe-tasks-overview.md) | 与具体 Task 页面交叉核对平台支持，避免总览文案滞后。 |
+| SRC-ai-064 | MediaPipe Framework concepts | ok | [raw](../../raw/ai/documents/SRC-ai-064-mediapipe-framework-concepts.md) | 用于 Graph、Calculator、Packet、Stream 与 Side Packet 原理。 |
+| SRC-ai-065 | MediaPipe synchronization | ok | [raw](../../raw/ai/documents/SRC-ai-065-mediapipe-synchronization.md) | 用于时间戳同步、scheduler queue、executor、背压与确定性。 |
+| SRC-ai-066 | MediaPipe GPU framework support | ok | [raw](../../raw/ai/documents/SRC-ai-066-mediapipe-gpu-framework-support.md) | 用于 GPU context、GpuBuffer 与 CPU/GPU 传输约束。 |
+| SRC-ai-067 | MediaPipe Hand Landmarker guide | ok | [raw](../../raw/ai/documents/SRC-ai-067-mediapipe-hand-landmarker-guide.md) | 代表性 Task，用于检测—跟踪管线、输出和官方性能参考。 |
+| SRC-ai-068 | MediaPipe: A Framework for Building Perception Pipelines | ok | [raw](../../raw/ai/documents/SRC-ai-068-mediapipe-a-framework-for-building-perception-pipelines.md) | 原始论文，用于核验框架设计目标与跨平台流水线定位。 |
+| SRC-ai-069 | MediaPipe Model Maker overview | ok | [raw](../../raw/ai/documents/SRC-ai-069-mediapipe-model-maker-overview.md) | 已停止积极维护；若路线变化需更新选型建议。 |
+| SRC-ai-070 | MediaPipe LLM Inference guide | ok | [raw](../../raw/ai/documents/SRC-ai-070-mediapipe-llm-inference-guide.md) | maintenance-only；持续跟踪 LiteRT-LM 迁移。 |
+| SRC-ai-071 | LiteRT overview | ok | [raw](../../raw/ai/documents/SRC-ai-071-litert-overview.md) | 用于界定 MediaPipe Tasks 与底层通用端侧运行时的分工。 |
+| SRC-ai-072 | MediaPipe Python setup guide | ok | [raw](../../raw/ai/documents/SRC-ai-072-mediapipe-python-setup-guide.md) | 开发前复核 Python 与操作系统支持版本。 |
+| SRC-ai-073 | MediaPipe Web setup guide | ok | [raw](../../raw/ai/documents/SRC-ai-073-mediapipe-web-setup-guide.md) | 开发前复核 npm/CDN 包和浏览器支持。 |
+| SRC-ai-074 | MediaPipe Android setup guide | ok | [raw](../../raw/ai/documents/SRC-ai-074-mediapipe-android-setup-guide.md) | 开发前复核 SDK、依赖版本、assets 与 delegate。 |
+| SRC-ai-075 | MediaPipe iOS setup guide | ok | [raw](../../raw/ai/documents/SRC-ai-075-mediapipe-ios-setup-guide.md) | 与 Tasks 总览的 iOS 文案存在差异，应以具体 Task 为准。 |
+| SRC-ai-076 | MediaPipe v0.10.35 release | ok | [raw](../../raw/ai/documents/SRC-ai-076-mediapipe-v0-10-35-release.md) | 截至 2026-07-14 的最新已核验正式版；后续需增量检查。 |
+| SRC-ai-077 | MediaPipe Hand Landmarker Python guide | ok | [raw](../../raw/ai/documents/SRC-ai-077-mediapipe-hand-landmarker-python-guide.md) | 用于 IMAGE、VIDEO、LIVE_STREAM、时间戳和回调示例。 |
+| SRC-ai-078 | AI Edge RAG guide | ok | [raw](../../raw/ai/documents/SRC-ai-078-ai-edge-rag-guide.md) | deprecated；不应作为新长期架构。 |
+| SRC-ai-079 | AI Edge Function Calling guide | ok | [raw](../../raw/ai/documents/SRC-ai-079-ai-edge-function-calling-guide.md) | deprecated；官方建议迁移 LiteRT-LM。 |
 
 ## 关联连接
 
 - [[00-index|AI 相关 - 研究入口]]
 - [[sources.csv|AI sources.csv]]
 - [[research-notes/scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]]
+- [[research-notes/google-mediapipe-comprehensive-guide-2026-07-14|Google MediaPipe 全面调研：功能、原理与使用方法]]

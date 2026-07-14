@@ -7,13 +7,17 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-07-09
+last_updated: 2026-07-13
 ---
 
 # 机器人（具身智能） - 研究中间笔记
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
+
+## 2026-07-13 SRT 软体机器人公司调研
+
+- [[srt-soft-robot-tech-company-deep-dive-2026-07-13]]: 调研 SRT 的软体执行器产品化、技术壁垒、业务模式、融资股权、竞争格局、十五五关联、创始团队迁移与投前尽调清单。
 
 ## 2026-05-27 并行调研
 

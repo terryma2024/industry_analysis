@@ -491,3 +491,18 @@ tags:
 - **来源**: Bilibili `BV1qDjh64EEo` 的 ASR source packet；复用 UMI 官方项目/论文/代码仓库（`SRC-robotics-065`–`067`）与 Diffusion Policy 论文（`SRC-robotics-079`）。
 - **结论**: 具身智能的可交付最小闭环是任务、示教数据、观测/动作对齐、策略、部署与真机验收；双臂协作臂是验证受限操作任务的可行起点，但不能把视频中的公司、规格与实时性表述视为已证实事实。
 - **限制**: 视频是 B 级课程线索且使用 ASR；具体公司状态、自由度/精度、通信频率、纯视觉能力和通用化时间表仍须逐项一手核验。
+
+## [2026-07-13] synthesis | SRT 软体机器人公司深度调研
+
+- **变更**: 新增 [[robotics-embodied-ai/research-notes/srt-soft-robot-tech-company-deep-dive-2026-07-13|SRT 软体机器人公司深度调研]] 和 [[_entities/SRTSoftRobotTech|SRT 软体机器人实体页]]；更新 [[index|Knowledge Index]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/research-notes/README|机器人研究中间笔记]]、[[_entities/README|Entities Layer]]、[[robotics-embodied-ai/00-source-capture-index|机器人来源抽取索引]] 与 `knowledge/robotics-embodied-ai/sources.csv`。
+- **来源**: 新增并捕获 `SRC-robotics-254` 至 `SRC-robotics-270`，覆盖 SRT 官网/产品/融资、北京市政府报告、上交所招股书、工商聚合、创始人离职媒体线索和 OnRobot/柔触竞争对比；上交所 PDF 另生成 Markdown/JSON/key-info。
+- **初步结果**: SRT 的成熟定位是“气动柔性末端执行器 + 行业自动化方案”，而非通用人形整机或具身大模型；公开可识别融资约 3.1 亿元以上，但营收、毛利、复购、现金流、最新估值与完整 cap table 不公开。
+- **核心风险**: 媒体称创始人兼原 CEO 高少龙及两名前高管于 2026 年转向具身数据创业；融资、专利和客户数量存在统计口径差异；当前应优先核验团队迁移、标准品收入占比、应收回款和客户复购。
+- **限制**: `SRC-robotics-266` 与 `SRC-robotics-267` 的自动正文抽取质量不足，未作为关键结论的唯一依据；医疗注册证当前有效状态、法院案件详情和上市辅导状态仍待官方数据库复核。
+
+## [2026-07-14] synthesis | Google MediaPipe 功能、原理与使用指南
+
+- **变更**: 新增 [[ai/research-notes/google-mediapipe-comprehensive-guide-2026-07-14|Google MediaPipe 全面调研：功能、原理与使用方法]]；更新 [[ai/00-index|AI 研究入口]]、[[ai/research-notes/README|AI Research Notes]]、[[ai/00-source-capture-index|AI Source Capture Index]]、[[index|Knowledge Index]] 和 `knowledge/ai/sources.csv`。
+- **来源**: 新增并成功捕获 `SRC-ai-061` 至 `SRC-ai-079`，覆盖 MediaPipe 官方仓库、Solutions/Tasks、Framework 原理、同步/GPU、Hand Landmarker、平台安装、Model Maker、LLM/RAG/Function Calling、LiteRT、最新版本说明与原始论文。
+- **结果**: 将 MediaPipe 定位为“现成任务 API + 预训练模型 + 端侧实时计算图框架”，说明检测—跟踪、时间戳同步、CPU/GPU 数据流和 IMAGE/VIDEO/LIVE_STREAM 用法；结论是经典视觉/音频 Tasks 与 Framework 仍有价值，Legacy Solutions 和已 deprecated/maintenance-only 的生成式 AI SDK 不宜作为新长期架构。
+- **限制**: 文档中的 Preview、iOS 支持和 Holistic 状态存在不一致；官方 benchmark 未在本地目标设备复现，具体项目仍需按语言包、模型版本和设备矩阵重新验证。

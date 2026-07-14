@@ -1,5 +1,5 @@
 ---
-source_id: "SRC-robotics-243"
+source_id: "SRC-robotics-271"
 title: "自变量机器人官网：WALL-B 与公司信息"
 source_type: "company_website"
 publisher: "自变量机器人"
@@ -13,7 +13,7 @@ tags:
   - source-type/company-website
   - evidence/a
 aliases:
-  - SRC-robotics-243
+  - SRC-robotics-271
 ---
 # 自变量机器人官网：WALL-B 与公司信息
 

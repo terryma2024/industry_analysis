@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-07-09
+last_updated: 2026-07-13
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -52,6 +52,7 @@ sources:
 - `09-training-data-deep-dive.md`: 训练数据深度调研汇总页和并行研究入口，含 UMI v0 SOP/schema/客户数据包模板与 LeRobot 初学者教学入口。
 - `12-robotics-engineering-platforms-2026-06-04.md`: 机器人工程平台综合调研，覆盖数据、训练、评测、部署、真机推理和选型框架。
 - `13-robot-company-product-comparison-2026-06-08.md`: 主表机器人公司的产品型号全景对比，覆盖人形/轮式双臂、协作臂/工业机器人、AMR/移动操作的参数、技术路线、优缺点和待验证项。
+- [[research-notes/srt-soft-robot-tech-company-deep-dive-2026-07-13|SRT 软体机器人公司深度调研]]: 拆解柔性末端执行器技术、业务结构、融资与股权、竞争、十五五关联、创始团队迁移风险和投前尽调问题。
 - [[research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]]: 系统拆解 AIRSPEED 的开源采集核心、论文三服务架构、技术转移叙事、性能 claim、版本边界和对中国具身数据基础设施的启发。
 - [[research-notes/vla-world-model-data-infrastructure-platform-design-2026-07-06|VLA&世界模型数据基建平台系统调研与设计]]: 基于 `BV1ZFTq6pEA3` 的 15 阶段数据生产 SOP，设计面向 VLA、模仿学习和世界模型的数据生产平台，覆盖采集接入、同步缓存、自动质检、episode builder、多格式导出和失败补采闭环。
 - [[research-notes/teleoperation-training-data-cost-and-share-2026-07-09|遥操训练数据每小时成本与训练数据占比快速调研]]: 按有效可训练小时估算人类视频、UMI-like、单臂、双臂/人形/灵巧手遥操数据成本，并区分机器人 action 轨迹数据与 VLA foundation model 总训练混合中的遥操占比。
@@ -79,3 +80,4 @@ sources:
 - [[_concepts/robot-training-data|Robot Training Data]]
 - [[_concepts/universal-manipulation-interface|Universal Manipulation Interface]]
 - [[_entities/AIRSPEED|AIRSPEED]]
+- [[_entities/SRTSoftRobotTech|SRT 软体机器人]]

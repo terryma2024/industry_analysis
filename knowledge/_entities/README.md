@@ -2,7 +2,7 @@
 title: Entities Layer
 type: index
 date_created: 2026-05-29
-last_updated: 2026-06-23
+last_updated: 2026-07-13
 tags:
   - wiki
   - entities
@@ -21,6 +21,7 @@ tags:
 - [[Agibot]]
 - [[IOAI]]
 - [[AIRSPEED]]
+- [[SRTSoftRobotTech|SRT 软体机器人]]
 
 ## UMI 技术术语实体
 

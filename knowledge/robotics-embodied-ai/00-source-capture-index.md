@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-07-11
+last_updated: 2026-07-13
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -22,11 +22,11 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 28 | 已成功抽取的 raw artifact。 |
-| `fallback_html` | 8 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
+| `ok` | 65 | 已成功抽取的 raw artifact。 |
+| `fallback_html` | 9 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 1 | 本轮因 defuddle 失败，从网页内嵌结构化数据生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
-| `failed` | 5 | defuddle 与 HTML fallback 都失败，需要浏览器、官方 PDF 或手工补采。 |
+| `failed` | 7 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
 
 ## 快速定位
 
@@ -46,6 +46,8 @@ aliases:
 | `SRC-robotics-085` | `failed` | 深圳科创局页面 defuddle fetch failed，HTML fallback SSL BAD_ECPOINT。 | 用浏览器手工保存原文，或寻找深圳市政府/政策 PDF 镜像。 |
 | `SRC-robotics-105` | `failed` | TRON 1 用户手册 PDF 官网证书过期，自动下载失败。 | 用浏览器手工保存 PDF，或寻找新版下载地址。 |
 | `SRC-robotics-190` | `failed` | dora guides URL 自动抽取返回 404。 | 改用 GitHub raw docs、官网 `/book` 路径或浏览器手工保存后再核验。 |
+| `SRC-robotics-266` | `failed` | 团体标准站点抽取结果只有“系统错误”。 | 从全国团体标准信息平台或中关村标准化协会补正式 PDF。 |
+| `SRC-robotics-267` | `failed` | 高校页面只抽到导航，缺少新闻正文。 | 用浏览器手工保存或寻找学校/项目官方镜像。 |
 
 ## 已保存 fallback HTML 的来源
 
@@ -73,8 +75,23 @@ aliases:
 
 | SRC | raw artifact | 说明 |
 |---|---|---|
-| [`SRC-robotics-243`](../../raw/robotics-embodied-ai/documents/SRC-robotics-243-wall-b.md) | [自变量机器人官网](../../raw/robotics-embodied-ai/documents/SRC-robotics-243-wall-b.md) | 核验自变量公司身份、WALL-A/WALL-B、端到端方向和多地布局；不用于确认视频中的估值、营收或客户。 |
-| [`SRC-robotics-244`](../../raw/robotics-embodied-ai/documents/SRC-robotics-244-vision-pretraining-for-dense-spatial-perception.md) | [LingBot-Vision 论文](../../raw/robotics-embodied-ai/documents/SRC-robotics-244-vision-pretraining-for-dense-spatial-perception.md) | 核验 LingBot-Vision 与 LingBot-Depth 2.0 的稠密空间感知/深度补全定位；benchmark 数字仍为作者报告。 |
+| [`SRC-robotics-271`](../../raw/robotics-embodied-ai/documents/SRC-robotics-271-wall-b.md) | [自变量机器人官网](../../raw/robotics-embodied-ai/documents/SRC-robotics-271-wall-b.md) | 核验自变量公司身份、WALL-A/WALL-B、端到端方向和多地布局；不用于确认视频中的估值、营收或客户。 |
+| [`SRC-robotics-272`](../../raw/robotics-embodied-ai/documents/SRC-robotics-272-vision-pretraining-for-dense-spatial-perception.md) | [LingBot-Vision 论文](../../raw/robotics-embodied-ai/documents/SRC-robotics-272-vision-pretraining-for-dense-spatial-perception.md) | 核验 LingBot-Vision 与 LingBot-Depth 2.0 的稠密空间感知/深度补全定位；benchmark 数字仍为作者报告。 |
+
+## SRT 软体机器人公司调研来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-254`](../../raw/robotics-embodied-ai/documents/SRC-robotics-254-srt.md) | [SRT 企业简介](../../raw/robotics-embodied-ai/documents/SRC-robotics-254-srt.md) | 公司边界、产品矩阵、发展历程和融资金额口径。 |
+| [`SRC-robotics-256`](../../raw/robotics-embodied-ai/documents/SRC-robotics-256-sfg-snm2-n4049.md) | [SFG 产品页](../../raw/robotics-embodied-ai/documents/SRC-robotics-256-sfg-snm2-n4049.md) | 一个可核验型号的负载、节拍、寿命和工作压力。 |
+| [`SRC-robotics-258`](../../raw/robotics-embodied-ai/documents/SRC-robotics-258-2024-3.md) | [北京市专精特新报告](../../raw/robotics-embodied-ai/documents/SRC-robotics-258-2024-3.md) | 政府侧公司资质、专利、国家和客户覆盖口径。 |
+| [`SRC-robotics-259`](../../raw/robotics-embodied-ai/documents/SRC-robotics-259-source.md) | [北京经开区 2026 报道](../../raw/robotics-embodied-ai/documents/SRC-robotics-259-source.md) | 最新业务方向、产品覆盖和上市计划线索。 |
+| [`SRC-robotics-260`](../../raw/robotics-embodied-ai/documents/SRC-robotics-260-source.md) | [上交所招股书抽取](../../raw/robotics-embodied-ai/documents/SRC-robotics-260-source.md) | 金石基金投资 SRT 的历史注册资本与持股比例；同时保存 PDF/JSON/key-info。 |
+| [`SRC-robotics-263`](../../raw/robotics-embodied-ai/documents/SRC-robotics-263-ceo.md) | [高少龙再创业报道](../../raw/robotics-embodied-ai/documents/SRC-robotics-263-ceo.md) | 2026 年创始人及两名前高管迁移线索，需公司/工商进一步确认。 |
+| [`SRC-robotics-264`](../../raw/robotics-embodied-ai/documents/SRC-robotics-264-onrobot-soft-gripper-official-product-announcement.md) | [OnRobot Soft Gripper](../../raw/robotics-embodied-ai/documents/SRC-robotics-264-onrobot-soft-gripper-official-product-announcement.md) | 国际软夹爪可比产品参数和食品级/无外接气源差异。 |
+
+> [!warning]
+> `SRC-robotics-266` 自动抽取仅得到站点“系统错误”，`SRC-robotics-267` 未抽到高校新闻正文；两者虽被脚本记为 `ok`，本次不作为关键事实的唯一依据，后续应更换官方 PDF/可访问页面。
 
 ## AIRSPEED 数据生产平台来源
 

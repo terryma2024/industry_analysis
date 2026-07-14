@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-10
+last_updated: 2026-07-14
 tags:
   - wiki
   - index
@@ -87,6 +87,7 @@ tags:
 
 ## Entities
 
+- [[_entities/SRTSoftRobotTech|SRT 软体机器人]] — 中国气动柔性末端执行器与行业自动化公司；已完成软体夹爪产品化和医疗康复延伸，当前重点跟踪财务透明度与 2026 年创始团队迁移。
 - [[_entities/AndrejKarpathy|Andrej Karpathy]] — LLM Wiki 理念提出者，强调把知识管理从 RAG 转向持续编译。
 - [[_entities/ScaleAI|Scale AI]] — 美国 AI 数据基础设施公司，从自动驾驶标注扩展到大模型后训练、评测和政府 AI，并于 2025 年获得 Meta 战略投资。
 - [[_entities/HuggingFaceLeRobot|Hugging Face LeRobot]] — 机器人学习数据、加载、训练与评测工具链，也是 UMI 数据包可复现交付的重要格式入口。
@@ -136,6 +137,7 @@ tags:
 - [[_syntheses/bilibili-lingbot-depth-2-deep-dive-2026-07-11|LingBot-Depth 2.0 视频深度调研]] — Depth-completion signal with sensor-truth and safety boundaries.
 - [[_syntheses/bilibili-ego-data-capture-deep-dive-2026-07-11|Ego 无机器人数据采集平台视频深度调研]] — The value of timestamp, calibration and IMU alignment over video-only capture.
 - [[_syntheses/bilibili-mujoco-tutorial-deep-dive-2026-07-11|MuJoCo 教程视频深度调研]] — Simulation-learning path and installation-risk correction checklist.
+- [[robotics-embodied-ai/research-notes/srt-soft-robot-tech-company-deep-dive-2026-07-13|SRT 软体机器人公司深度调研]] — 拆解 SRT 的柔性末端执行器技术、业务结构、融资与股权、竞争格局、十五五关联、创始团队迁移风险和投前核验清单。
 
 - [[_syntheses/xiaohongshu-wam-robotics-infrastructure-deep-dive-2026-07-10|小红书 WAM 与具身智能基础设施线索深度调研]] — 基于两条小红书收藏、PAIWorld/WVM/WAM-TTT arXiv 和三个 GitHub Awesome 项目，判断具身智能竞争重心从单模型转向数据、记忆、评测和操作闭环基础设施。
 
@@ -166,6 +168,7 @@ tags:
 - [[_syntheses/karpathy-wiki-migration-plan|Karpathy Wiki Migration Plan]] — 本仓库从行业分析工作区升级为 LLM Wiki 的迁移设计。
 - [[ai/research-notes/scale-ai-company-history-2026-06-02|Scale AI 公司发展史]] — Scale AI 从 2016 年人力任务 API、自动驾驶数据标注、大模型后训练到 2025 年 Meta 战略投资的完整复盘。
 - [[ai/research-notes/scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]] — Scale AI 从人力任务 API 到 Meta 战略投资的路径，以及中国 AI 数据基础设施公司对标。
+- [[ai/research-notes/google-mediapipe-comprehensive-guide-2026-07-14|Google MediaPipe 全面调研：功能、原理与使用方法]] — 拆解 Tasks、Framework、Models 与 LiteRT 的边界，系统说明感知任务、计算图、检测—跟踪、时序同步、跨端用法、工程选型和维护状态。
 - [[robotics-embodied-ai/09-training-data-deep-dive|机器人训练数据深度调研]] — 具身智能训练数据、地方政策、schema、失败轨迹和 UMI-like 业务路线综合。
 - [[robotics-embodied-ai/08-umi-gripper-research-and-business-plan|UMI Gripper 研究与业务计划]] — UMI-like 数据采集硬件、学习路径与 ToB 落地方案。
 - [[robotics-embodied-ai/11-embodied-ai-data-service-companies-2026-06-02|具身智能数据采集和服务公司对比]] — 对智元、补天石、它石、简智、Maxinsights、自变量、帕西尼的数据采集/服务路线、岗位和优劣势做横向分析。

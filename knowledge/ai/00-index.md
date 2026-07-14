@@ -2,7 +2,7 @@
 title: AI相关 - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-06-29
+last_updated: 2026-07-14
 status: draft
 tags:
   - industry/ai
@@ -47,7 +47,7 @@ sources:
 - `05-investment-view.md`: 投资逻辑、风险和观察指标。
 - `06-career-view.md`: 岗位地图、学习路径和作品集建议。
 - [[00-source-capture-index|AI Source Capture Index]]: AI 行业来源抽取状态。
-- [[research-notes/README|research-notes/]]: Scale AI、数据基础设施、JEPA 等阶段性深度调研。
+- [[research-notes/README|research-notes/]]: MediaPipe、Scale AI、数据基础设施、JEPA 等阶段性深度调研。
 
 ## 待验证
 
@@ -60,4 +60,5 @@ sources:
 - [[README|Knowledge README]]
 - [[04-companies|AI 相关 - 公司与竞争]]
 - [[research-notes/scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]]
+- [[research-notes/google-mediapipe-comprehensive-guide-2026-07-14|Google MediaPipe 全面调研：功能、原理与使用方法]]
 - [[_concepts/joint-embedding-predictive-architecture|Joint-Embedding Predictive Architecture]]
