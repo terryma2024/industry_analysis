@@ -15,6 +15,8 @@ tags:
 
 ## Sources
 
+- [[_sources/bilibili-bv1qdjh64eeo-2026-docker-slam-diffusion-policy|公认2026具身智能天花板教程！一套吃透大模型机器人，Docker、SLAM、Diffusion Policy、扩散学习全覆盖]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
 - [[_sources/bilibili-bv1sbtx6keh5-al-for-engineering|子虔科技Al For Engineering 具身智能机器人一体化设计平台]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
 - [[_sources/bilibili-bv1c5nj6ve6y-icra-2026-ken-goldberg-agentic-coding-va-agentic-robot|【ICRA 2026 】伯克利机器人学教授 Ken Goldberg：Agentic Coding能弥合机器人鸿沟吗？新应用范式VA/Agentic Robot]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
@@ -120,6 +122,8 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-07-14|Bilibili AI Daily Run 2026-07-14]] — 20 candidates: 19 duplicates; the selected UMI/SLAM/Diffusion Policy tutorial was transcribed successfully.
+- [[_syntheses/bilibili-umi-diffusion-policy-robotics-tutorial-deep-dive-2026-07-14|UMI、SLAM 与 Diffusion Policy 具身智能教程视频深度调研]] — 以一手 UMI/Diffusion Policy 资料校验最小操作闭环，并保留视频中未核验的公司、规格和实时性主张。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-13|Bilibili AI Daily Run 2026-07-13]] — 20 candidates: 19 duplicates; the sole model-review item was unrelated, so none was processed.
 - [[_syntheses/bilibili-ai-daily-run-2026-07-12|Bilibili AI Daily Run 2026-07-12]] — 20 candidates: 15 duplicates; four model-selected and processed.
 - [[_syntheses/bilibili-kimodo-controllable-motion-deep-dive-2026-07-12|Kimodo 可控动作生成视频深度调研]] — NVIDIA primary documentation separates controllable motion generation from executable robot control.

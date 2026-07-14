@@ -478,3 +478,16 @@ tags:
 - **来源**: 运行 `uv run python tools/bilibili_ai_daily_research.py --limit 20 --json` 获取默认收藏夹最新 20 个候选并完成模型复核。
 - **结果**: 19 个候选为 `skipped_duplicate`；唯一 `needs_model_review` 视频 `BV1SAMv6iELC` 是 BilibiliWorld 会场出行内容，判定与本自动化范围无关，模型选中 0、`processed=0`、`failed=0`，未进入第二阶段。
 - **限制**: 本轮没有新的 AI/具身智能视频内容可综合；未新增 transcript、source card、行业 `sources.csv` 或单视频深研页。
+
+## [2026-07-14] ingest | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-14|Bilibili AI Daily Run 2026-07-14]]；处理 1 个 Bilibili 视频 source packet。
+- **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+- **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+## [2026-07-14] synthesis | Bilibili UMI、SLAM 与 Diffusion Policy 单视频深研
+
+- **变更**: 新增 [[_syntheses/bilibili-umi-diffusion-policy-robotics-tutorial-deep-dive-2026-07-14|UMI、SLAM 与 Diffusion Policy 具身智能教程视频深度调研]]；更新每日报告、[[index|Knowledge Index]]、AI 与机器人具身智能来源台账。
+- **来源**: Bilibili `BV1qDjh64EEo` 的 ASR source packet；复用 UMI 官方项目/论文/代码仓库（`SRC-robotics-065`–`067`）与 Diffusion Policy 论文（`SRC-robotics-079`）。
+- **结论**: 具身智能的可交付最小闭环是任务、示教数据、观测/动作对齐、策略、部署与真机验收；双臂协作臂是验证受限操作任务的可行起点，但不能把视频中的公司、规格与实时性表述视为已证实事实。
+- **限制**: 视频是 B 级课程线索且使用 ASR；具体公司状态、自由度/精度、通信频率、纯视觉能力和通用化时间表仍须逐项一手核验。
