@@ -22,7 +22,7 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 88 | 已成功抽取的 raw artifact。 |
+| `ok` | 99 | 已成功抽取的 raw artifact。 |
 | `fallback_html` | 9 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 1 | 本轮因 defuddle 失败，从网页内嵌结构化数据生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
@@ -35,6 +35,15 @@ aliases:
 | Isaac Sim | `SRC-robotics-284`–`286` | [6.0.1 下载页](../../raw/robotics-embodied-ai/documents/SRC-robotics-284-nvidia-isaac-sim-6-0-1-download-and-release-page.md)、[系统要求](../../raw/robotics-embodied-ai/documents/SRC-robotics-285-nvidia-isaac-sim-6-0-1-system-requirements.md)、[License FAQ](../../raw/robotics-embodied-ai/documents/SRC-robotics-286-nvidia-isaac-sim-6-0-1-license-faq.md) | 当前版本、RTX/VRAM 门槛和商业交付许可边界。 |
 | Gazebo | `SRC-robotics-287`–`290` | [版本生命周期](../../raw/robotics-embodied-ai/documents/SRC-robotics-287-gazebo-release-lifecycle.md)、[Jetty notes](../../raw/robotics-embodied-ai/documents/SRC-robotics-288-gazebo-jetty-release-notes.md)、[ROS 配套](../../raw/robotics-embodied-ai/documents/SRC-robotics-289-installing-gazebo-with-ros-compatibility-guide.md)、[官方仓库](../../raw/robotics-embodied-ai/documents/SRC-robotics-290-gazebo-sim-official-repository-features-and-license.md) | Jetty/Harmonic 选择、ROS 2 兼容、模块化能力与 Apache 2.0。 |
 | MuJoCo | `SRC-robotics-291`–`295` | [changelog](../../raw/robotics-embodied-ai/documents/SRC-robotics-291-mujoco-changelog.md)、[overview](../../raw/robotics-embodied-ai/documents/SRC-robotics-292-mujoco-overview-and-key-features.md)、[MJX/Warp](../../raw/robotics-embodied-ai/documents/SRC-robotics-293-mujoco-xla-and-mujoco-warp-documentation.md)、[releases](../../raw/robotics-embodied-ai/documents/SRC-robotics-294-mujoco-official-releases.md)、[license](../../raw/robotics-embodied-ai/documents/SRC-robotics-295-mujoco-apache-2-0-license.md) | 3.9.0、控制/物理定位、GPU 后端与 Apache 2.0。 |
+
+## 国产 GPU/AI 加速器适配来源
+
+| 类别 | SRC | raw artifact | 用途 |
+|---|---|---|---|
+| 通用后端 | `SRC-robotics-296`–`298` | [JAX accelerator matrix](../../raw/robotics-embodied-ai/documents/SRC-robotics-296-jax-installation-and-accelerator-backend-support.md)、[Gazebo OGRE2 backends](../../raw/robotics-embodied-ai/documents/SRC-robotics-297-gazebo-rendering-installation-and-backend-guide.md)、[Gazebo EGL headless](../../raw/robotics-embodied-ai/documents/SRC-robotics-298-gazebo-headless-rendering-with-egl.md) | 区分 JAX/PJRT 计算后端与 OpenGL/Vulkan/EGL 图形驱动路径。 |
+| 摩尔线程 | `SRC-robotics-299`–`300` | [MUSA SDK](../../raw/robotics-embodied-ai/documents/SRC-robotics-299-moore-threads-musa-sdk-software-stack.md)、[Moore Perf 图形 API](../../raw/robotics-embodied-ai/documents/SRC-robotics-300-moore-perf-system-graphics-api-support.md) | CUDA 迁移工具边界及 OpenGL/Vulkan PoC 依据。 |
+| 海光 | `SRC-robotics-301` | [DCU ROCm 披露](../../raw/robotics-embodied-ai/documents/SRC-robotics-301-hygon-dcu-rocm-compatibility-disclosure.md) | 证明 ROCm 兼容声明；不把它外推为 JAX/MJX 认证。 |
+| 国产 AI/通用计算栈 | `SRC-robotics-302`–`306` | [昇腾 CANN](../../raw/robotics-embodied-ai/documents/SRC-robotics-302-ascend-cann-8-3-rc1-documentation-index.md)、[沐曦 MXMACA](../../raw/robotics-embodied-ai/documents/SRC-robotics-303-metax-products-and-mxmaca-software-ecosystem.md)、[壁仞 BIRENSUPA](../../raw/robotics-embodied-ai/documents/SRC-robotics-304-birensupa-software-platform.md)、[天数智芯](../../raw/robotics-embodied-ai/documents/SRC-robotics-305-iluvatar-corex-software-stack.md)、[寒武纪 BANGPy](../../raw/robotics-embodied-ai/documents/SRC-robotics-306-cambricon-bangpy-developer-manual.md) | 核验各软件栈的公开定位，并界定图形渲染、仿真器直跑与 AI 推理旁路。 |
 
 ## 快速定位
 

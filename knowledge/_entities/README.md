@@ -2,7 +2,7 @@
 title: Entities Layer
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-13
+last_updated: 2026-07-14
 tags:
   - wiki
   - entities
@@ -22,6 +22,10 @@ tags:
 - [[IOAI]]
 - [[AIRSPEED]]
 - [[SRTSoftRobotTech|SRT 软体机器人]]
+
+## AI 搜索与规划实体
+
+- [[MonteCarloTreeSearch|Monte Carlo Tree Search（MCTS）]] — 用采样、树统计和探索—利用平衡搜索大规模序列决策空间，并可用于 Agent 工作流优化。
 
 ## UMI 技术术语实体
 

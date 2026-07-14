@@ -1,0 +1,361 @@
+---
+source_id: "SRC-robotics-306"
+title: "Cambricon BANGPy developer manual"
+source_type: "product_documentation"
+publisher: "Cambricon"
+source_date: "2021-06-23"
+url: "https://forum.cambricon.com/uploadfile/user/file/20210623/1624435112766564.pdf"
+evidence_grade: "A"
+capture_method: "pdf-key-info-draft"
+captured_at: "2026-07-14T06:35:16+00:00"
+source_markdown: "SRC-robotics-306-cambricon-bangpy-developer-manual.md"
+tags:
+  - raw/source
+  - raw/pdf
+  - source-type/product-documentation
+  - evidence/a
+aliases:
+  - SRC-robotics-306
+---
+# Cambricon BANGPy developer manual - Key Information Draft
+
+> [!warning]
+> This is an extraction draft for analyst review. Verify claims against the raw PDF/Markdown before using them in knowledge notes.
+
+## Source Trace
+
+- Source ID: `SRC-robotics-306`
+- Raw Markdown: [SRC-robotics-306-cambricon-bangpy-developer-manual.md](SRC-robotics-306-cambricon-bangpy-developer-manual.md)
+- Evidence grade: `A`
+
+## Page-Level Leads
+
+- [p. 1] 寒武纪 BANGPy 开发者手册 传 播 版本 1.1.0 请 勿 用 ， 学 专 教 2021 年 3 月 31 日
+- [p. 2] Cambricon® 目录 目录 i 插图目录 1 表格目录 2 1 版权声明 3 2 前言 5 2.1 2.2 播 版本记录 .
+- [p. 2] 5 5 3 概述 请 勿 7 4 开发前必读 4.1 用 ， 软件栈结构 .
+- [p. 3] Cambricon® 5.4.1 数值类型 .
+- [p. 3] 16 6 算子开发 17 6.1 TCP 算子开发流程 .
+- [p. 4] Cambricon® 7.2.2.1 dtype .
+- [p. 4] 41 7.3.3.3 multiply .
+- [p. 5] Cambricon® 7.3.5.2 greater .
+- [p. 5] 63 7.3.5.3 greater_equal .
+- [p. 6] Cambricon® 7.3.11.4 maxpool_index .
+- [p. 6] 100 7.3.11.5 maxpool_bp .
+- [p. 7] Cambricon® 8 TensorOp 接口 125 8.1 张量接口 .
+- [p. 7] 129 8.2.7 logical_not .
+- [p. 8] Cambricon® 8.5.2 运行 .
+- [p. 8] 148 9 通用接口 149 9.1 运行模块接口 .
+- [p. 9] Cambricon® 插图目录 4.1 BANGPy 软件栈示意图 .
+- [p. 9] 8 4.2 MLU270 结构示意图 .
+- [p. 10] Cambricon® 表格目录 2.1 版本记录 .
+- [p. 10] 5 7.1 conv 算子参数支持的数据类型 .
+- [p. 11] Cambricon® 1 版权声明 免责声明 中科寒武纪科技股份有限公司（下称“寒武纪” ）不代表、担保（明示、暗示或法定的）或保证本文件所 含信息，并明示放弃对可销售性、所有权、不侵犯知识产权或特定目的适用性做出任何和所有暗示担保， 且寒武纪不承担因应用或使用任何产品或服务而产生的任何责任。寒武纪不应对因下列原因产生的任何 违约、损害赔偿、成本或问题承担任何责任： （1）使用寒武纪产品的任何方式违背本指南；或（2）客户 产品设计。
+- [p. 11] 播 责任限制 在任何情况下，寒武纪都不对因使用或无法使用本指南而导致的任何损害（包括但不限于利润损失、业 勿 务中断和信息损失等损害）承担责任，即便寒武纪已被告知可能遭受该等损害。尽管客户可能因任何理 传 请 由遭受任何损害，根据寒武纪的产品销售条款与条件，寒武纪为本指南所述产品对客户承担的总共和累 计责任应受到限制。
+- [p. 12] 版权声明 式复制、重制、修改、出版、上传、发布、传输或分发本指南。除了客户使用本指南信息和产品的权利，根 据本指南，寒武纪不授予其他任何明示或暗示的权利或许可。未免疑义，寒武纪不根据任何专利、版权、 商标、商业秘密或任何其他寒武纪的知识产权或所有权对客户授予任何（明示或暗示的）权利或许可。
+- [p. 12] • 版权声明 • © 2021 中科寒武纪科技股份有限公司保留一切权利。
+- [p. 13] Cambricon® 2 前言 2.1 版本记录 表 2.1: 版本记录 文档名称 寒武纪 BANGPy 开发者手册 播 版本号 V 1.1.0 作者 Cambricon 勿 传 请 修改日期 2021 年 3 月 31 日 2.2 更新历史 用 ， • V1.1.0 学 专 教 更新时间: 2021 年 3 月 31 日 更新内容: – 增加了 BANGPy 对多架构的适配支持，如 MLU370。
+- [p. 13] – 修改数据搬运算子 接口，新增 dst_cluster 参数。
+- [p. 14] 更新历史 • V0.9.0 更新时间: 2020 年 12 月 05 日 更新内容: – 修改命名，规范化接口。
+- [p. 14] – 合并 cycle 类算子，降低算子复杂度，提高易用性。
+- [p. 15] Cambricon® 3 概述 随着神经网络技术的广泛应用，网络模型在专用硬件平台上的快速部署成为强需求。BANGPy 是一种基 于 Python 的编程框架，用于神经网络算子开发与网络搭建，为寒武纪 MLU 系列硬件平台提供便捷的软 件接口。
+- [p. 15] 面向张量编程: BANGPy 提供了张量（tensor）声明 API，并以张量作为基本操作对象。
+- [p. 16] Cambricon® 4 开发前必读 4.1 软件栈结构 传 播 请 勿 用 ， 学 专 教 图 4.1: BANGPy 软件栈示意图 如图，使用 BANGPy 接口描述的算子实现，经过 BANGPy 编译优化之后，会得到对应的 MLU 端 BANG C 代码（.mlu 为后缀的文件）、CPU 端动态链接库文件（.so 为后缀的文件）、可执行 module（Python 文件中的变量）。
+- [p. 16] BANGPy 编译生成的算子有两种格式： • BANG C 代码：用户可以基于 BANG C 源码修改，进行二次开发。
+- [p. 17] 硬件架构 BANGPy 能够编译算子，生成可执行 module，用来验证算子的正确性。
+- [p. 17] 关于寒武纪异构模型请参见《寒武纪 CNRT 用户手册》异构编程章节的描述。
+- [p. 18] 环境依赖 、TaskType.UNION1 、TaskType.UNION2 或 TaskType.UNION4 ，表示同时启用 1 个、4 个、8 个或 16 个 内核执行任务。
+- [p. 18] 在 BANGPy 中，用户可以调用接口: with for_range(0, task_num, task_num=task_num, task_type=task_type) as task_id: ...
+- [p. 19] 软件安装 Get various configuration information needed to compile programs which use LLVM.
+- [p. 19] Typically called from 'configure' scripts.
+- [p. 20] 软件安装 pip install numpy==1.18.0 scipy==1.1.0 setuptools==41.6.0 decorator attrs psutil 4.4.2 BANGPy 安装 注意: 安装 BANGPy 前，请确认已安装相关环境依赖的软件包，安装步骤请参见环境安装 。
+- [p. 20] 使用如下命令安装 BANGPy： pip install bangpy-1.1.0-py3-none-any.whl 2.
+- [p. 21] Cambricon® 5 基本概念 5.1 算子开发 算子 (operator)，简称 op，表示从一个函数空间到另一个函数空间的映射，在深度学习领域通常对应 于神经网络模型中的某个网络层，本手册中算子特指深度学习算法中的运算或操作。
+- [p. 21] 5.1.1 Cambricon Tensor Compute Primitive 传 播 BANGPy 提供了一系列 API 用于算子开发，称为 CAMBRICON TCPTM （Cambricon Tensor Compute 勿 Primitive，寒武纪张量计算原语），以下简称 TCP。详细的 TCP 接口列表请参见TCP 接口 章节。
+- [p. 22] 数值类型 5.2 数值类型 BANGPy 现支持的 数值类型 (dtype) 包括 int8、int16、int32、uint16、uint32、float16 和 float32，分 别使用 bangpy.int8、bangpy.int16、bangpy.int32、bangpy.uint16、bangpy.uint32、bangpy.float16 和 bangpy.float32 表示。
+- [p. 22] 5.3 张量 张量 (tensor) 是神经网络中的基本数据单元，数学上表示为多维数组。为了方便起见，本手册将一维数 组（向量）、二维数组（矩阵）也称为张量。
+- [p. 23] 张量 如当卷积算子的排布方式为 NCHW，用户可以用转置算子或者间隔取数的方式，将卷积的数据转换成 NHWC，待计算结束后再转回 NCHW。
+- [p. 23] 5.3.2 数值类型 张量的 数值类型 (dtype) 表示的是张量中每个标量元素的数值类型，需要用户在创建张量时给定，具体 请参见数值类型 节。关于不同 TCP 张量计算接口支持的数值类型，请参见TCP 接口 章节。
+- [p. 24] 标量 5.4 标量 在 TCP 中，标量是神经网络的一种数据单元，在数学上表示为一个单独的数值。它对应的是存储在芯片 寄存器里的数值。在 TCP 中，一个标量由它的 数据类型 (dtype) ，名称 (name) 和 初始值 (value) 确 定，可以用以下方式定义： bp = bangpy.tcp.TCP() scalar = bp.Scalar(dtyp, name, value) 5.4.1 数值类型 标量的 数值类型 (dtype) 表示的是标量元素的数值类型。具体可参见数值类型 节。在定义标量时可给出 初始值，若用户在定义时未给定初始值时，表示声明一个标量，该标量没有初始值。
+- [p. 24] 传 播 请 勿 用 ， 学 专 教 Copyright © 2021 Cambricon Corporation.
+- [p. 25] Cambricon® 6 算子开发 6.1 TCP 算子开发流程 本节以张量加算子为例，介绍算子开发流程和常见接口使用。
+- [p. 25] 传 播 请 勿 用 ， 学 专 教 图 6.1: TCP 算子开发流程示意图 图 6.1 展示了 TCP 算子开发的大致流程，主要步骤如下： 1.
+- [p. 26] TCP 算子开发流程 6.1.1 样例 实现两个张量相加的部分代码如下，完整代码参见安装目录/tests/tcp/test_get_started.py： ...
+- [p. 26] # 获取 numpy 的输入输出数据 data_in0 = np.random.uniform(low=-10, high=10, size=SHAPE) data_in1 = np.random.uniform(low=-10, high=10, size=SHAPE) data_out = data_in0 + data_in1 length = np.prod(data_in0.shape) # 创建 TCP 容器 bp = tcp.TCP() # 计算分块次数 播 assert length % task_num == 0 传 core_wl = 3 * length // task_num 勿 loop_num = np.ceil(core_wl * dtype_sz / NRAM
+- [p. 27] TCP 算子开发流程 # 调用 TCP 接口进行张量搬运与计算 bp.memcpy(tensor_in0_n, tensor_in0[start:stop]) bp.memcpy(tensor_in1_n, tensor_in1[start:stop]) bp.add(tensor_out_n, tensor_in0_n, tensor_in1_n) bp.memcpy(tensor_out[start:stop], tensor_out_n) # 编译生成可执行 module fvec_add = bp.BuildBANG(inputs=[tensor_in0, tensor_in1], outputs=[tensor_out], kernel_name= ,→ "fvec_add") #
+- [p. 27] from bangpy import tcp bp = tcp.TCP(target) Copyright © 2021 Cambricon Corporation.
+- [p. 28] TCP 算子开发流程 6.1.2.2 计算描述 在 TCP 容器中使用 TCP 接口描述计算，包括以下流程。
+- [p. 28] 定义张量 定义张量需要给定张量的数值类型、形状、名字、地址空间。算子开发过程中，算子的输入张量和输出 张量的地址空间需要定义为 global，例如： tensor_in0 = bp.Tensor(shape=(64000,), name="INPUT0", dtype=bangpy.float16, scope="global") 上述示例定义了一个有 64000 个元素的一维张量。TCP 支持动态形状的输入输出张量，用户可以使用 Var 类型在计算描述阶段来描述输入输出张量的形状，TCP 在编译阶段会自动将形状作为算子的输入参 数代入算子。例如： shape_in = bp.Var("shape_in") 播 tensor_in0 = bp.Tensor(shape=(shape_in,)
+- [p. 29] TCP 算子开发流程 定义可变参数 TCP 提供了 Var 接口来定义算子中的可变参数，例如： length = bp.Var("length") 并行编程 用户可以使用如下方式实现 task_num 数量的多核并行编程： task_type = TaskType.get_task_type(task_num) with bp.for_range(0, task_num, task_num=task_num, task_type=task_type) as task_id: # for_body 条件和循环控制 TCP 提供了对循环和条件判断的支持，例如： 传 播 with bp.for_range(0, loop_num) as i: 请 勿 ， # for_body 专用 with bp
+- [p. 29] 使用示例 下面的代码展示了如何使用张量搬运、张量计算、循环控制接口，描述张量加的分块逻辑: with bp.for_range(0, loop_num) as i: start = task_id * core_wl + i * loop_wl stop = start + loop_wl bp.memcpy(tensor_in0_n, tensor_in0[start:stop]) bp.memcpy(tensor_in1_n, tensor_in1[start:stop]) bp.add(tensor_out_n, tensor_in0_n, tensor_in1_n) bp.memcpy(tensor_out[start:stop], tensor_out_n) Copyright ©
+- [p. 30] TCP 算子开发流程 上面的代码中，每个核处理的数据量为 core_wl, 核内每次循环处理的数据量为 loop_wl, 循环次数为 loop_num，task_id 索引核，i 索引循环次数。
+- [p. 30] 6.1.2.3 编译 调用编译接口生成可执行 module fvec_add。如下所示： fvec_add = bp.BuildBANG(inputs=[tensor_in0, tensor_in1], outputs=[tensor_out], kernel_name= ,→ "fvec_add") 用户可以通过如下方式，保存 CPU 端 module 到目录 dirname 中的 host.so 文件，保存 MLU 端 module 到目录 dirname 中的 device.mlu 文件: fvec_add.save(dirname) 用户可以通过如下方式载入运行： from bangpy import load_module fadd = load_module(dirname, t
+- [p. 31] TENSOROP 算子开发流程 6.1.2.5 调试分析 采用如下两种方式进行调试分析； • 插入打印语句，打印张量中某个元素的值，进行调试分析。
+- [p. 31] bp.print(tensor[index]) 注意: bp.print 接口仅支持 int32，float16 和 float32 数值类型。
+- [p. 32] TENSOROP 算子开发流程 # 保存生成的算子文件到指定目录 fmlu.save(path_to_save_ops) # 生成随机数并在 mlu 和 cpu 上测试 data0 = generate_data(shape, dtype) ctx = bangpy.context(0) data_dev = bangpy.Array(data0, ctx) fmlu.set_input("input0", data_dev) fmlu.run() out_dev = fmlu.get_output(0) cpu_output = run_cpu(data0) # 比较 mlu 和 cpu 上运行结果 bangpy.assert_allclose(out_dev.asnumpy(), cpu
+- [p. 32] 教 np.random.uniform(size=shape, low=-0.9, high=0.9).astype(dtype) 6.2.2.2 计算描述 使用 TensorOp 接口描述计算，包括以下流程。
+- [p. 33] TENSOROP 算子开发流程 调用计算接口 调用 TensorOp 中的计算接口。例如： out_atanh = 0.5 * tsop.log((1 + input0) / (1 - input0)) 6.2.2.3 编译 调用编译接口可生成可执行 module fmlu。如下所示： fmlu = tsop.BuildBANG([input0], [out_atanh], target=target) 用户可以通过如下方式，保存 CPU 端 module 到目录 dirname 中的 host.so 文件，保存 MLU 端 module 到目录 dirname 中的 device.mlu 文件: fmlu.save(dirname) 用户可以通过如下方式载入运行： 传 播 from ban
+- [p. 33] 编译生成的可执行 module 会占用算子文件和目录的资源，因此用户在删除算子文件和目录之前， 需要确保可执行 module 已经释放。
+- [p. 34] TENSOROP 算子开发流程 6.2.2.4 运行验证 这里用随机产生的输入数据和 numpy 的计算结果作为参考，验证结果正确性。如下所示： data_dev = bangpy.Array(data0, ctx) fmlu.set_input(input0=data_dev) out_dev = fmlu.get_output(0) cpu_output = run_cpu(data0) bangpy.assert_allclose(out_dev.asnumpy(), cpu_output, rtol=1e-2, atol=1e-2) 6.2.2.5 调试分析 在编译时加上 dump_ir 的选项，用来保存中间表示文件，进行调试分析。
+- [p. 34] fmlu = tsop.BuildBANG([input0], [out_atanh], dump_ir=True, target=target) 传 播 请 勿 用 ， 学 专 教 Copyright © 2021 Cambricon Corporation.
+- [p. 35] Cambricon® 7 TCP 接口 7.1 张量接口 7.1.1 创建张量 Tensor( shape, dtype, 传 播 勿 name, 请 scope ) 用 ， 专 在 TCP 容器中创建一个张量。
+- [p. 35] 学 参数说明 教 shape: 张量形状。类型: tuple of int。
+- [p. 36] 张量接口 7.1.2 张量的属性 7.1.2.1 dtype dtype 获取张量元素的数值类型。
+- [p. 36] 返回值描述 • 张量元素的数值类型，参见数值类型 节。
+- [p. 37] 张量接口 7.1.2.3 scope scope 获取张量的存储空间类型。
+- [p. 37] 返回值描述 • 张量的存储空间类型。类型: str。
+- [p. 38] 张量接口 7.1.2.5 shape shape 获取张量的形状。
+- [p. 38] 返回值描述 • 张量的形状。类型: tuple of int。
+- [p. 39] 张量接口 7.1.2.7 is_contiguous is_contiguous 判断张量是否连续存储。
+- [p. 39] 返回值描述 • 张量是否连续存储。类型: bool。
+- [p. 40] 张量接口 示例 tensor = bp.Tensor(shape=(1, 56, 56, 256), name='input_tensor', dtype=bangpy.float16, scope= ,→ "global") new_tensor = tensor.reshape((256, 3136)) 7.1.3.2 flatten flatten() 将张量的形状展平。
+- [p. 40] 返回值描述 播 • 展平的一维张量。类型: Tensor。
+- [p. 41] 张量接口 注意事项 • 返回值所描述的张量和原张量共享数据元素，如果需要拷贝数据元素请使用 memcpy 接口。
+- [p. 41] • 返回值所描述的张量和原张量数值类型不同，但是存储比特位相同。
+- [p. 42] 张量接口 # output: Tensor("tensor", shape=(28, 56, 256), dtype=info(dtype=float16, scope=global,␣ ,→ buffer=buffer(tensor, 0x1ad8000)) print(tensor[:, 1:2, 2:3, 4:5]) # output: Tensor("tensor", shape=(1, 1, 1, 1), dtype=info(dtype=float16, scope=global,␣ ,→ buffer=buffer(tensor, 0x1ad8000)) # print(tensor[0][0:9:2]) # 不支持 step 不是 1 的索引 # print(tensor[0
+- [p. 42] 勿 参数说明 • • index: 索引值。类型: int, Scalar, Tensor, slice。
+- [p. 43] 标量接口 7.2 标量接口 7.2.1 创建标量 Scalar( dtype, name, value=None ) 在 TCP 容器中创建一个标量。
+- [p. 43] 参数说明 • dtype: 标量的数值类型，参见数值类型 节。
+- [p. 44] 标量接口 7.2.2.2 name 获取标量的名字，类型: str。
+- [p. 44] 示例 scalar = bp.Scalar(name='input_scalar', dtype=bangpy.float16, value=6) print(scalar.name) # output: input_scalar 7.2.3 标量的方法 7.2.3.1 assign assign( value 播 ) 通过 assign 接口来设置或者改变标量的值。
+- [p. 45] 标量接口 对原标量进行数值类型转换，产生一个具有新的数值类型的副本标量。
+- [p. 45] 参数说明 • dtype: 新的副本标量的数值类型。类型：int8, int16, int32, uint16, uint32, float16, float32。
+- [p. 46] 张量计算接口 7.3 张量计算接口 注意: 除了数据搬运算子，本节的其他所有算子接口的操作数张量都必须连续存储。
+- [p. 46] 7.3.1 数据搬运算子 7.3.1.1 memcpy memcpy( dst_data, src_data, dst_cluster=None 传 播 勿 ) 请 实现数据搬运，包括将 GDRAM 中的数据搬运到 NRAM 中，将 NRAM 中的数据搬运到 GDRAM 中，及将 ， NRAM 中的数据缓存到 NRAM 中。
+- [p. 47] 张量计算接口 7.3.2 内存初始化算子 7.3.2.1 assign assign( dst_data, value ) 初始化 GDRAM 和 NRAM 中的内存。
+- [p. 47] 参数说明 • dst_data: 目的操作数，要被初始化的张量。
+- [p. 48] 张量计算接口 计算得到: output = (m1 + n1, m2 + n2, m3 + n3) 张量和标量相加: input1 = (m1, m2, m3), input2 = n1 计算得到: output = (m1 + n1, m2 + n1, m3 + n1) 循环加法运算: input1 = (m1, m2, m3, m4), input2 = (n1, n2) 计算得到: output = (m1 + n1, m2 + n2, m3 + n1, m4 + n2) 参数说明 • output: 输出张量，存储两个输入张量逐元素相加后的结果，数值类型和源操作数相同。
+- [p. 48] • input1, input2: 源操作数，可以是两个都是张量，也可以是一个张量，一个标量。当循环相加时 (cycle=True)，input1 的数据长度必须能整除 input2 的数据长度。
+- [p. 49] 张量计算接口 bp.add(Output, Input1, Input2, cycle=True) 7.3.3.2 divide divide( output, input1, input2 ) 对输入张量进行除法运算。
+- [p. 49] 参数说明 • • output: 输出张量，存储两个输入张量逐元素相除得到的结果，数值类型和源操作数相同。
+- [p. 50] 张量计算接口 7.3.3.3 multiply multiply( output, input1, input2, cycle=False ) 对输入张量进行乘法运算。支持循环乘法运算。
+- [p. 50] 参数说明 • output: 输出张量，存储数据相乘后的结果，数值类型和源操作数相同。
+- [p. 51] 张量计算接口 Input1 = bp.Tensor(shape=(a,b), name='Input1', dtype=bangpy.float32, scope="nram") Input2 = bp.Tensor(shape=(1,b), name='Input2', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.multiply(Output, Input1, Input2, cycle=True) 7.3.3.4 subtract subtract( output, input1, inp
+- [p. 51] 用 input1: 源操作数，被减数张量。
+- [p. 52] 张量计算接口 Input1 = bp.Tensor(shape=(a,b), name='Input1', dtype=bangpy.float32, scope="nram") Input2 = be.Scalar(name='Input2', dtype=bangpy.float32, value=c) Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.subtract(Output, Input1, Input2) • 循环相减： Input1 = bp.Tensor(shape=(a,b), name='Input1', dtype=bangpy.float32,
+- [p. 52] 参数说明 • dst_data: 挑选之后的数据，类型: Tensor。
+- [p. 53] 张量计算接口 Input = bp.Tensor(shape=(a,b), name='Input', dtype=bangpy.float32, scope="nram") mask = bp.Tensor(shape=(a,b), name='mask', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.take(Output, Input, mask) 7.3.3.6 take_bitindex take_bitindex( dst_data, src_data, bitmask ) 根据 b
+- [p. 53] 传 播 参数说明 请 勿 ， • dst_data: 挑选之后的数据，类型: Tensor。
+- [p. 54] 张量计算接口 7.3.4 单目运算算子 7.3.4.1 abs abs( dst_data, src_data ) 对输入张量中每个元素取绝对值。
+- [p. 54] 参数说明 • dst_data: 对输入张量中每个元素取绝对值后的结果，数值类型和源操作数相同，类型: Tensor。
+- [p. 55] 参数说明 • dst_data: 目的操作数，类型: Tensor。
+- [p. 55] • src_data: 源操作数，类型: Tensor。
+- [p. 56] 张量计算接口 7.3.4.3 exp exp( dst_data, src_data, mode=”” ) 对输入张量中每个元素进行幂运算，底数为 e。
+- [p. 56] 例如: src_data = (m1, m2, m3) 计算得到: dst_data = (em1 , em2 , em3 ) 参数说明 • dst_data: 对输入张量中每个元素进行幂运算之后的结果，数值类型和源操作数相同，类型: Tensor。
+- [p. 57] 张量计算接口 7.3.4.4 exp2 exp2( dst_data, src_data, ) 对输入张量中每个元素进行幂运算，底数为 2。
+- [p. 57] 例如: src_data = (m1, m2, m3) 计算得到: dst_data = (2m1 , 2m2 , 2m3 ) 参数说明 • dst_data: 对输入张量中每个元素进行幂运算之后的结果，数值类型和源操作数相同，类型: Tensor。
+- [p. 58] 张量计算接口 参数说明 • dst_data: 对输入张量中每个元素进行运算之后的结果，数值类型和源操作数相同，类型: Tensor。
+- [p. 58] • src_data: 源操作数，类型: Tensor。
+- [p. 59] 张量计算接口 • src_data 的数据大小范围为: [0.00002,60000]。
+- [p. 59] • 输入输出数据必须 128 字节对齐且形状相同。
+- [p. 60] 张量计算接口 bp.reciprocal(Output, Input) 7.3.4.8 relu relu( dst_data, src_data ) 对输入张量中每个元素进行 relu 运算。
+- [p. 60] 例如: src_data = (m1, m2, m3)#m1, m2为正数，m3为负数 计算得到: dst_data = (m1, m2, 0) 参数说明 传 播 勿 • dst_data: 输出数据，如果输入元素为非负数，对应的输出元素等于输入元素，如果为负数，输出元素 就为 0。数值类型和源操作数相同，类型: Tensor。
+- [p. 61] 张量计算接口 7.3.4.9 rsqrt rsqrt( dst_data, src_data, high_precision=False ) 对输入张量中每个元素，先开方再求倒数。
+- [p. 61] 例如: src_data = (m1, m2, m3) √ √ √ 计算得到: dst_data = (1/ m1, 1/ m2, 1/ m3) 参数说明 • dst_data: 输出数据，数值类型和源操作数相同，类型: Tensor。
+- [p. 62] 张量计算接口 aux2=None, mode=”taylor3” ) 对输入张量中每个元素进行 sigmoid 运算，可将输入数据映射到 (0,1) 的区间。
+- [p. 62] 例如: src_data = (m1, m2, m3) 计算得到: dst_data = (1/(1 + e−m1 ), 1/(1 + e−m2 ), 1/(1 + e−m3 )) 参数说明 • dst_data: 目的操作数，类型: Tensor。
+- [p. 63] 张量计算接口 7.3.4.11 sqrt sqrt( dst_data, src_data, high_precision=False ) 对输入张量中每个元素进行开方运算。
+- [p. 63] 例如: src_data = (m1, m2, m3) 计算得到: dst_data = (sqrtm1, sqrtm2, sqrtm3) 参数说明 • dst_data: 输出数据，数值类型和源操作数相同，类型: Tensor。
+- [p. 64] 张量计算接口 对输入张量中每个元素求平方。
+- [p. 64] 参数说明 • dst_data: 输出数据，数值类型和源操作数相同，类型: Tensor。
+- [p. 65] 张量计算接口 Input = bp.Tensor(shape=(a,b), name='Input', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.sign(Output, Input) 7.3.4.14 sin sin( dst_data, src_data, aux1=None, aux2=None, mode=”taylor3” ) 传 播 勿 sine 正弦函数。
+- [p. 65] 参数说明 ， 请 用 • dst_data: 目的操作数，类型: Tensor。
+- [p. 66] 张量计算接口 bp.sin(Output, Input) • 多阶泰勒展开正弦运算： Input = bp.Tensor(shape=(a,b), name='Input', dtype=bangpy.float32, scope="nram") Aux1 = bp.Tensor(shape=(a,b), name='Aux1', dtype=bangpy.float32, scope="nram") Aux2 = bp.Tensor(shape=(a,b), name='Aux2', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32,
+- [p. 66] • src_data: 源操作数，类型: Tensor。
+- [p. 67] 张量计算接口 • 输入输出数据必须 128 字节对齐且长度，数值类型相同。
+- [p. 67] • aux1,aux2 必须和 src_data 形状一致，数值类型一致。
+- [p. 68] 张量计算接口 • 支持的数值类型: float16, float32。
+- [p. 68] • 输入输出数据必须 128 字节对齐且长度，数值类型相同。
+- [p. 69] 张量计算接口 Input = bp.Tensor(shape=(a,b), name='Input', dtype=bangpy.float32, scope="nram") bp.rand(Output) 7.3.4.18 zeros zeros( dst_data ) 给张量赋初值 0。
+- [p. 69] 参数说明 • dst_data: 输出张量，必须定义在 NRAM 空间上，类型: Tensor。
+- [p. 70] 张量计算接口 对输入张量进行比较，判断是否: input1 == input2 。mode 是支持设置的模式，共支持三种，mode=[ “”, “cycle”, “bit_index”]。
+- [p. 70] 参数说明 • output: 输出张量，存储数据比较后的结果，类型: Tensor。
+- [p. 71] 张量计算接口 Input1 = bp.Tensor(shape=(a,b), name='Input1', dtype=bangpy.float32, scope="nram") Input2 = bp.Tensor(shape=(1,b), name='Input2', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.equal(Output, Input1, Input2，mode="cycle") • mode=“bit_index”: Input1 = bp.Tensor(shape=(a,
+- [p. 71] 参数说明 • output: 输出张量，存储数据比较后的结果，类型: Tensor。
+- [p. 72] 张量计算接口 模式参数缺省值为空字符串，输入是两个张量，或者一个张量和一个标量。张量元素个数必 须被 64 整除，输入张量与输出张量的 shape 一致，逐个元素进行比较，大于结果为 1，否 则为 0，存入输出张量中。
+- [p. 72] 2) mode=“cycle”，循环比较： 模式参数值为字符串“cycle”，输入是两个张量。两个张量的长度必须 128 字节对齐。第一 个输入张量 input1 元素个数能够被第二个输入张量 input2 元素个数整除。
+- [p. 73] 张量计算接口 7.3.5.3 greater_equal greater_equal( output, input1, input2, mode=”” ) 对输入张量进行比较，判断是否: input1 >= input2 。mode 是支持设置的模式，共支持三种，mode=[ “”, “cycle”, “bit_index”]。
+- [p. 73] 参数说明 • output: 输出张量，存储数据比较后的结果，类型: Tensor。
+- [p. 74] 张量计算接口 Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.greater_equal(Output, Input1, Input2) Input1 = bp.Tensor(shape=(a,b), name='Input1', dtype=bangpy.float32, scope="nram") Input2 = bp.Scalar(name='Input2', dtype=bangpy.float32, value=c) Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, sc
+- [p. 74] 参数说明 • output: 输出张量，存储数据比较后的结果，类型: Tensor。
+- [p. 75] 张量计算接口 • input1, input2: 源操作数，类型: Tensor 或 Scalar。
+- [p. 75] 注意事项 • 输入和输出张量必须定义在 NRAM 空间上。
+- [p. 76] 张量计算接口 bp.less(Output, Input1, Input2, mode="cycle") • mode=“bit_index”: Input1 = bp.Tensor(shape=(a,b), name='Input1', dtype=bangpy.float32, scope="nram") Input2 = bp.Tensor(shape=(a,b), name='Input2', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.less(Output, Input1, Inpu
+- [p. 76] 参数说明 教 • • 学 output: 输出张量，存储数据比较后的结果，类型: Tensor。
+- [p. 77] 张量计算接口 模式参数值为字符串“cycle”，输入是两个张量。两个张量的长度必须 128 字节对齐。第一 个输入张量 input1 元素个数能够被第二个输入张量 input2 元素个数整除。
+- [p. 77] 3) mode=“bit_index”，逐个比特位比较： 模式参数值为字符串“bit_index”, 输入是两个张量。输出张量的比特位数与输入张量的元 素个数相同，用每一个比特位表示对应位置张量元素的比较结果，小于等于则比特位位置为 1，否则为 0。输入张量的元素个数必须是 512 的倍数。
+- [p. 78] 张量计算接口 7.3.5.6 not_equal not_equal( output, input1, input2, mode=”” ) 对输入张量进行比较，判断是否: input1!
+- [p. 78] = input2 。mode 是支持设置的模式，共支持三种，mode=[ “”, “cycle”, “bit_index”]。
+- [p. 79] 张量计算接口 Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.not_equal(Output, Input1, Input2) Input1 = bp.Tensor(shape=(a,b), name='Input1', dtype=bangpy.float32, scope="nram") Input2 = bp.Scalar(name='Input2', dtype=bangpy.float32, value=c) Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope=
+- [p. 79] 参数说明 • output: 输出张量，存储数据比较后的结果，类型: Tensor。
+- [p. 80] 张量计算接口 • input1, input2: 源操作数，类型: Tensor 或 Scalar。
+- [p. 80] 注意事项 • 输入和输出张量必须定义在 NRAM 空间上。
+- [p. 81] 张量计算接口 7.3.5.8 minimum minimum( output, input1, input2, mode=”” ) 对输入张量中的元素进行逐个比较，选取两个数中较小的那个数并将结果存储在输出张量中。mode 是 支持设置的模式，共支持两种，mode=[“”, “cycle”]。
+- [p. 81] 参数说明 • output: 输出张量，存储数据比较后的结果，类型: Tensor。
+- [p. 82] 张量计算接口 Input1 = bp.Tensor(shape=(a,b), name='Input1', dtype=bangpy.float32, scope="nram") Input2 = bp.Scalar(name='Input2', dtype=bangpy.float32, value=c) Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.minimum(Output, Input1, Input2) • mode=“cycle”： Input1 = bp.Tensor(shape=(a,b), name='Input1', dtype=bangpy.f
+- [p. 82] 参数说明 • output: 输出张量，存储源操作数进行逻辑与运算后的结果，数值类型和源操作数相同。
+- [p. 83] 张量计算接口 • 进行非循环运算时，输入输出张量的长度必须一致。
+- [p. 83] 示例 • 普通相与运算： Input1 = bp.Tensor(shape=(a,b), name='Input1', dtype=bangpy.float32, scope="nram") Input2 = bp.Tensor(shape=(a,b), name='Input2', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.logical_and(Output, Input1, Input2) • 循环相与运算： Input1 = bp.Tensor(shape=(a,b), name='I
+- [p. 84] 张量计算接口 • 在进行非循环运算时，输入输出张量的元素个数必须是 64 的倍数。在进行循环运算时，输入输出张量 的数据长度必须 128 字节对齐。
+- [p. 84] • 进行非循环运算时，输入输出张量的长度必须一致。
+- [p. 85] 张量计算接口 • 支持的数值类型: float16, float32。
+- [p. 85] • 在进行非循环运算时，输入输出张量的元素个数必须是 64 的倍数。在进行循环运算时，输入输出张量 的数据长度必须 128 字节对齐。
+- [p. 86] 张量计算接口 示例 Input = bp.Tensor(shape=(a,b), name='Input', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.logical_not(Output, Input) 7.3.7 归约类算子 7.3.7.1 sum sum( dst_data, src_data 播 ) 对源操作数每 128 字节的元素求和。
+- [p. 86] 参数说明 勿 传 • ， 请 dst_data: 输出张量，每 128 字节内，第一个元素是对应的源操作数 128 字节求和后的结果，后面元 用 素是 0。
+- [p. 87] 张量计算接口 7.3.7.2 first_nonzero first_nonzero( dst_data, src_data ) 找到第一个源操作数的第一个非 0 数，并将 index 存在输出张量的第一个元素中，如果源操作数均为 0， 则输出张量第一个元素中的值为‑1。
+- [p. 87] 参数说明 • dst_data: 输出张量，类型: Tensor。
+- [p. 88] 张量计算接口 • src_data: 源操作数，类型: Tensor。
+- [p. 88] 注意事项 • 输入和输出张量必须定义在 NRAM 空间上。
+- [p. 89] 张量计算接口 Input = bp.Tensor(shape=(a,b), name='Input', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.float32, scope="nram") bp.amax(Output, Input) 7.3.7.5 amin amin( dst_data, src_data ) 选取输入张量中所有元素的最小值，并记录最小值的坐标。输出张量首位置存储的是输入张量中的最小 值，第二个位置存储的是最小值对应的下标。
+- [p. 89] 参数说明 传 播 勿 • dst_data: 输出张量，类型: Tensor。
+- [p. 90] 张量计算接口 7.3.7.6 count_nonzero count_nonzero( dst_data, src_data, bit_count=False ) 统计输入张量里的所有非零元素个数。当 bit_count 为 True 时，统计输入张量里的所有元素的比特位中 非零元素个数。
+- [p. 90] 参数说明 • dst_data: 目的操作数，必须定义 NRAM 空间上，类型: Tensor。
+- [p. 91] 张量计算接口 对输入数据进行原子加法操作。将 input1 与 input2 进行加法运算，运算结果写入 input1，input1 原始 的数据写入 output。所有的操作会在一条指令中完成。
+- [p. 91] 参数说明 • output: 输出张量，存储源操作数 input1 在进行加法运算之前的数据，必须位于 NRAM 空间。
+- [p. 92] 张量计算接口 返回值描述 • 无返回值。
+- [p. 92] 注意事项 • 支持的数值类型: uint16, int16, uint32, int32。
+- [p. 93] 张量计算接口 • 当 input2 的类型为标量时，input1 张量的元素个数必须为 1。
+- [p. 93] 示例 Input1 = bp.Tensor(shape=(a,b), name='Input1', dtype=bangpy.int32, scope="global") Input2 = bp.Tensor(shape=(a,b), name='Input2', dtype=bangpy.int32, scope="nram") Output = bp.Tensor(shape=(a,b), name='Output', dtype=bangpy.int32, scope="nram") bp.atomic_dec(Output, Input1, Input2) 7.3.8.4 atomic_exch atomic_exch( output, input1, ) input2 传 播 请 
+- [p. 94] 张量计算接口 7.3.8.5 atomic_inc atomic_inc( output, input1, input2 ) 对输入数据进行原子递加运算。将 input1 与 input2 进行递加运算，运算结果写入 input1，input1 原始 的数据写入 output。所有的操作会在一条指令中完成。
+- [p. 94] 递减运算: output = (input1 >= input2)?0 : (input1 + 1) 参数说明 • output: 输出张量，存储源操作数 input1 在进行递加运算之前的数据，必须位于 NRAM 空间。
+- [p. 95] 张量计算接口 7.3.8.6 atomic_max atomic_max( output, input1, input2 ) 将 input1 与 input2 进行逐元素比较运算并将较大值写入 input1，input1 原始的数据写入 output。所 有的操作会在一条指令中完成。
+- [p. 95] 参数说明 • output: 输出张量，存储源操作数 input1 在进行比较运算之前的数据，必须位于 NRAM 空间。
+- [p. 96] 张量计算接口 ) 将 input1 与 input2 进行逐元素比较运算并将较小值写入 input1，input1 原始的数据写入 output。所 有的操作会在一条指令中完成。
+- [p. 96] 参数说明 • output: 输出张量，存储源操作数 input1 在进行比较运算之前的数据，必须位于 NRAM 空间。
+- [p. 97] 张量计算接口 • input1: 源操作数 1，类型是张量，与源操作数 2 进行相或运算并存储运算结果，必须位于 GDRAM 空 间。
+- [p. 97] • input2: 源操作数 2，类型可以是张量或标量，必须位于 NRAM 空间。
+- [p. 98] 张量计算接口 • 支持的数值类型: uint16, int16, uint32, int32。
+- [p. 98] • 输入输出张量中的元素个数必须是 16 的倍数，且输出输出张量形状相同，数值类型相同。
+- [p. 99] 张量计算接口 注意事项 • 源操作数的 shape 为 [in, ih, iw, ic] • 卷积核的 shape 为 [oc, kh, kw, ic] • 偏置的大小为输出通道数的大小。
+- [p. 99] • 输出张量的 shape 为 [oc, oh, ow, in]。参数计算如下: oh = (ih − kh)/stride_x + 1 ow = (iw − kw)/stride_y + 1 • 约束限制: 1) 输入通道数长度必须 64 字节对齐。
+- [p. 100] 张量计算接口 表 7.1: conv 算子参数支持的数据类型 src_data kernel dst_data bias int8 int8 float16 None int8 int8 float32 None int8 int8 int16 None int16 int8 float16 None int16 int8 float32 None int16 int8 int16 None 播 int16 int16 float16 None int16 int16 float32 勿 传 None 请 int8 int8 float16 float16 int8 用 ， int8 float32 float32 专 int8 int8 int16 int16 教 int16 int16 
+- [p. 101] 张量计算接口 7.3.9.2 conv_partial conv_partial( dst_data, src_data, kernel, partial, stride_x, stride_y, fix_postion ) 卷积算子。
+- [p. 101] 参数说明 传 播 勿 • dst_data: 目的操作数，必须定义在 NRAM 上，类型: Tensor。
+- [p. 102] 张量计算接口 表 7.2: conv_partial 算子参数支持的数据类型 src_data kernel dst_data partial int8 int8 float32 float32 int16 int8 float32 float32 int16 int16 float32 float32 int16 int16 float16 float16 int16 int8 float16 float16 int8 int8 float16 float16 播 示例 传 Input = bp.Tensor(shape=(in,ih,iw,ic), name='Input', dtype=bangpy.int8, scope="nram") 勿 kernel = bp.Tensor(sh
+- [p. 102] 无 bias，dst_data = src_data · weight 参数说明 Copyright © 2021 Cambricon Corporation.
+- [p. 103] 张量计算接口 • dst_data: 目的操作数，数据格式 [H, W]，必须位于 NRAM 空间上，类型: Tensor。
+- [p. 103] • src_data: 源操作数, 数据格式 [H, W]，必须位于 NRAM 空间上，类型: Tensor。
+- [p. 104] 张量计算接口 Output = bp.Tensor(shape=(a+1+2,b+3+4,c), name='Output', dtype=bangpy.float16, scope="nram") bp.dense(Output, Input, weight, 0, bias) 7.3.10 数据填充算子 7.3.10.1 pad pad( dst_data, src_data, pad_top, pad_bottom, pad_left, 传 播 勿 pad_right 请 ) ， 对源操作数的 H 和 W 进行 0 填充，并将填充结果存在目的操作数中。
+- [p. 104] 用 专 参数说明 学 • dst_data: 目的操作数，数据格式 [H, W, C]，必须位于 NRAM 空间上，类型: Tensor。
+- [p. 105] 张量计算接口 3) ((pad_top × (pad_lef t + pad_right + src_width) + pad_lef t) × channel) ÷ 64 == 0 4) ((pad_bottom × (pad_lef t + pad_right + width) + pad_right) × channel) ÷ 64 == 0 示例 Input = bp.Tensor(shape=(a,b,c), name='Input', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(a+1+2,b+3+4,c), name='Output', dtype=bangpy.float32, scope="nr
+- [p. 105] 参数说明 ) 学 • dst_data: 取滑动窗口内所有元素和的平均值，是一个 shape=(h,w,c) 的三维张量，类型: Tensor。
+- [p. 106] 张量计算接口 示例 Input = bp.Tensor(shape=(h,w,c), name='Input', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(oh,ow,oc), name='Output', dtype=bangpy.float32, scope="nram") bp.avgpool(Output, Input, kernel_height, kernel_width, stride_x, stride_y) 7.3.11.2 avgpool_bp avgpool_bp( dst_data, src_data, kernel_height, kernel_width, stride_x, 传 播
+- [p. 106] ， 请 参数说明 专用 学 • dst_data: 目的操作数，是一个 shape=(h,w,c) 的三维张量，类型: Tensor。
+- [p. 107] 张量计算接口 Input = bp.Tensor(shape=(h,w,c), name='Input', dtype=bangpy.float32, scope="nram") Output = bp.Tensor(shape=(oh,ow,oc), name='Output', dtype=bangpy.float32, scope="nram") bp.avgpool_bp(Output, Input, kernel_height, kernel_width, stride_x, stride_y) 7.3.11.3 maxpool maxpool( dst_data, src_data, kernel_height, kernel_width, stride_x, stride_y 
+- [p. 107] ， 请 用 参数说明 专 • dst_data: 取滑动窗口内的最大值，是一个 shape=(h,w,c) 的三维矩阵，类型: Tensor。
+- [p. 108] 张量计算接口 7.3.11.4 maxpool_index maxpool_index( dst_data, src_data, kernel_height, kernel_width, stride_x, stride_y ) 最大池化操作过程中的位置标记。
+- [p. 108] 参数说明 • • dst_data: 取滑动窗口内最大值的标记位置，是一个 shape=(h,w,c) 的三维矩阵，类型: Tensor。
+- [p. 109] 张量计算接口 7.3.11.5 maxpool_bp maxpool_bp( dst_data, src_data, kernel_height, kernel_width, stride_x, stride_y ) 反向最大池化操作。
+- [p. 109] 参数说明 • • dst_data: 目的操作数，是一个 shape=(h,w,c) 的三维张量，类型: Tensor。
+- [p. 110] 张量计算接口 7.3.11.6 minpool minpool( dst_data, src_data, kernel_height, kernel_width, stride_x, stride_y ) 最小池化操作。
+- [p. 110] 参数说明 • • dst_data: 取滑动窗口内的最小值，是一个 shape=(h,w,c) 的三维张量，类型: Tensor。
+- [p. 111] 张量计算接口 7.3.11.7 minpool_index minpool_index( dst_data, src_data, kernel_height, kernel_width, stride_x, stride_y ) 最小池化操作过程中的位置标记。
+- [p. 111] 参数说明 • • dst_data: 取滑动窗口内最小值的标记位置，是一个 shape=(h,w,c) 的三维矩阵，类型: Tensor。
+- [p. 112] 张量计算接口 7.3.11.8 sumpool sumpool( dst_data, src_data, kernel_height, kernel_width, stride_x, stride_y ) 加和池化操作。
+- [p. 112] 参数说明 • • dst_data: 取滑动窗口内的所有元素的和，是一个 shape=(h,w,c) 的三维张量，类型: Tensor。
+- [p. 113] 张量计算接口 7.3.11.9 unpool unpool( dst_data, src_data, kernel_height, kernel_width, stride_x, stride_y, index ) 上采样算子。
+- [p. 113] 传 播 请 勿 用 ， 学 专 教 图 7.1: unpool 示意图 参数说明 • dst_data: 取滑动窗口内的最小值，是一个 shape=(h,w,c) 的三维张量，类型: Tensor。
+- [p. 114] 张量计算接口 • stride_x: 沿 x 方向的步长，类型: int。
+- [p. 114] • stride_y: 沿 y 方向的步长，类型: int。
+- [p. 115] 张量计算接口 注意事项 • 支持的数值类型: float16, int16, uint16, int8, float32, int32, uint32。
+- [p. 115] • 当 axes 为 None 时，表示该操作是对二维张量的转置，src_data 与 dst_data 必须是二维张量，且每 个维度上的数据长度必须 64 字节对齐。当 axes 不为 None 时，表示该操作是对四维张量 (N,H,W,C) 的形状变换。
+- [p. 116] 张量计算接口 7.3.12.3 rot90 rot90( dst_data, src_data ) 将二维张量按顺时针旋转 90 度。
+- [p. 116] 参数说明 • dst_data: 旋转后的数据，类型: Tensor，数值类型与源操作数相同。
+- [p. 117] 注意事项 • 支持的数值类型: float16, int16, uint16, int8, float32, int32, uint32。
+- [p. 117] • 输入输出张量的 H 和 W 必须 128 字节对齐且输入输出张量的长度相同。
+- [p. 118] 张量计算接口 7.3.13 张量数值类型转换算子 下文提到的舍入模式，如下表所示： 表 7.4: 舍入模式示意表 舍入类型 描述 原始数据 舍入后的数据 tz 向零取整 1.5 1 tz 向零取整 1.4 1 tz 向零取整 ‑1.5 ‑1 oz 远离零取整 1.5 2 oz 远离零取整 1.4 2 oz 远离零取整 ‑1.5 ‑2 传 播 rd 四舍五入 1.5 请 勿 2 rd 用 ， 四舍五入 1.4 1 专 rd 四舍五入 ‑1.5 ‑2 教 dn dn 学 向下取整 向下取整 1.5 1.4 1 1 dn 向下取整 ‑1.5 ‑2 up 向上取整 1.5 2 up 向上取整 1.4 2 up 向上取整 ‑1.5 ‑1 Copyright © 2021 Cambricon Corpo
+- [p. 119] 张量计算接口 7.3.13.1 type_convert type_convert( dst_data, src_data, fix_pos, rounding=”rd” ) 转换输入数值类型。
+- [p. 119] 参数说明 • dst_data: 转换之后的数据，类型: Tensor。
+- [p. 120] 标量计算接口 7.4 标量计算接口 7.4.1 scalar_max scalar_max( value_a, value_b ) 返回两个输入标量的最大值。
+- [p. 120] 参数说明 • value_a、value_b: 输入标量，类型：Scalar。
+- [p. 121] 标量计算接口 • 返回两个输入标量的最小值，类型：Scalar。
+- [p. 121] 注意事项 • 支持的数值类型：int32，float32。
+- [p. 122] 标量计算接口 7.4.4 scalar_abs scalar_abs( src_data ) 返回输入标量的绝对值。
+- [p. 122] 参数说明 • src_data: 输入标量，类型：Scalar。
+- [p. 123] 标量计算接口 Input1 = bp.Scalar(name='Input1', dtype=bangpy.float32, value=6) print(bp.scalar_sin(Input1)) 7.4.6 scalar_cos scalar_cos( src_data ) 返回输入标量的余弦值。
+- [p. 123] 参数说明 • src_data: 输入标量，类型：Scalar。
+- [p. 124] 标量计算接口 注意事项 • 支持的数值类型：float32。
+- [p. 124] 示例 Input1 = bp.Scalar(name='Input1', dtype=bangpy.float32, value=6) print(bp.scalar_log(Input1)) 7.4.8 scalar_sqrt scalar_sqrt( src_data ) 播 对输入标量进行开方运算。
+- [p. 125] 标量计算接口 返回值描述 • 返回输入标量舍尾运算的结果，类型：Scalar。
+- [p. 125] 注意事项 • 支持的数值类型：float32。
+- [p. 126] 标量计算接口 7.4.11 scalar_floor scalar_floor( src_data ) 对输入标量向下取整。
+- [p. 126] 参数说明 • src_data: 输入标量，类型：Scalar。
+- [p. 127] 控制流接口 Input1 = bp.Scalar(name='Input1', dtype=bangpy.float32, value=6) print(bp.scalar_round(Input1)) 7.5 控制流接口 7.5.1 for_range for_range( begin, end, name=”i”, 播 stage=1, task_num=1, task_type=TaskType.BLOCK, 勿 传 ， dtype=”int32” 请 用 ) 专 创建一个 BANGPy 的 for 循环语句，可在 for 循环中循环执行语句和开启多核运行功能。
+- [p. 127] 学 教 参数说明 • begin: 循环起点，类型: Scalar, int。
+- [p. 128] 控制流接口 • task_type 有五种取值：TaskType.BLOCK，TaskType.UNION1，UNION2, UNION4。分别对应的并行 任务数为 1, 4, 8, 16。
+- [p. 128] • for_range 在 with⋯as⋯中使用，as 的结果是 for 循环的 Scalar 类型循环变量。
+- [p. 129] 编译接口 x = bp.Tensor(shape=[10,], dtype=bangpy.float32, name="x", scope="nram") with bp.if_scope((i % 2) == 0): x[i] = x[i - 1] + 1 j = bp.Scalar(name='j', dtype=bangpy.int32, value=8) with bp.if_scope(bp.all(i == j, i > 1)): ...
+- [p. 129] with bp.if_scope(bp.any(i == j, i > 1)): ...
+- [p. 130] 运行模块接口 dump_ir=False, kernel_name=”” ) 将 TCP 容器中的计算描述编译成可执行 module。
+- [p. 130] 参数说明 • inputs: 输入张量，类型: list of Tensor。
+- [p. 131] 调试接口 注意事项 • 参数 args 的顺序必须与 BuildBANG 的中的 [inputs, outputs] 顺序对应。
+- [p. 131] 示例 fvec_add = bp.BuildBANG(inputs=[tensor_in0, tensor_in1], outputs=[tensor_out], dump_ir=True, kernel_name="fvec_add") fvec_add(a, b, c) 7.8 调试接口 7.8.1 print print( 传 播 勿 input_data 请 ) ， 打印输入数据，可用于 debug。
+- [p. 132] 调试接口 7.8.2 time_evaluator time_evaluator( ctx=tvm.mlu(0), number=10, repeat=1, min_repeat_ms=0 ) 评估程序运行时间。
+- [p. 132] 参数说明 • ctx: 程序运行的 ctx，默认是 tvm.mlu(0)，类型: TVMContext。
+- [p. 133] Cambricon® 8 TensorOp 接口 8.1 张量接口 8.1.1 创建张量 tensor( shape, dtype, 传 播 勿 name 请 ) ， 创建一个 TensorOp 张量。
+- [p. 133] 用 专 参数说明 学 • shape: 张量形状。类型: tuple of int。
+- [p. 134] 单目运算算子 8.2 单目运算算子 8.2.1 abs abs( src_data ) 对输入张量中每个元素取绝对值。
+- [p. 134] 参数说明 • src_data: 源操作数，类型: tensor_op.Tensor。
+- [p. 135] 单目运算算子 • 支持的数值类型: float16, float32。
+- [p. 135] • 输入数据范围：(−2 ∗ π, 2 ∗ π) 。
+- [p. 136] 单目运算算子 8.2.4 exp2 exp2( src_data ) 对输入张量中每个元素进行以 2 为底数的幂运算。
+- [p. 136] 参数说明 • src_data: 源操作数，类型: tensor_op.Tensor。
+- [p. 137] 单目运算算子 示例 from bangpy import tesnor_op as tsop input0 = tsop.tensor(shape, dtype, name) output = tsop.gelu(input0) 8.2.6 log log( src_data ) 对输入张量中每个元素取以 e 为底数的对数。
+- [p. 137] 参数说明 • src_data: 源操作数，类型: tensor_op.Tensor。
+- [p. 138] 单目运算算子 • src_data: 源操作数，类型: tensor_op.Tensor。
+- [p. 138] 返回值描述 • 计算结果。类型: tensor_op.Tensor。
+- [p. 139] 单目运算算子 8.2.9 relu relu( src_data ) 对输入张量使用 ReLU 激活函数激活。
+- [p. 139] 参数说明 • src_data: 源操作数，类型: tensor_op.Tensor。
+- [p. 140] 单目运算算子 示例 from bangpy import tesnor_op as tsop input0 = tsop.tensor(shape, dtype, name) output = tsop.rsqrt(input0) 8.2.11 sigmoid sigmoid( src_data ) 对输入张量使用 sigmoid 激活函数激活。
+- [p. 140] 参数说明 • src_data: 源操作数，类型: tensor_op.Tensor。
+- [p. 141] 单目运算算子 • src_data: 源操作数，类型: tensor_op.Tensor。
+- [p. 141] 返回值描述 • 计算结果。类型: tensor_op.Tensor。
+- [p. 142] 单目运算算子 8.2.14 sqrt sqrt( src_data ) 对输入张量中每个元素开方。
+- [p. 142] 参数说明 • src_data: 源操作数，类型: tensor_op.Tensor。
+- [p. 143] 双目运算算子 示例 from bangpy import tesnor_op as tsop input0 = tsop.tensor(shape, dtype, name) output = tsop.square(input0) 8.2.16 tanh tanh( src_data ) 对输入张量中每个元素取双曲正切值。
+- [p. 143] 参数说明 • src_data: 源操作数，类型: tensor_op.Tensor。
+- [p. 144] 双目运算算子 ) 两个张量元素对应相加，或者一个张量中每个元素加常量。
+- [p. 144] 参数说明 • lhs: 源操作数，类型: tensor_op.Tensor。
+- [p. 145] 双目运算算子 • 计算结果。类型: tensor_op.Tensor。
+- [p. 145] 注意事项 • 支持的数值类型: float16, float32。
+- [p. 146] 双目运算算子 示例 from bangpy import tesnor_op as tsop lhs = tsop.tensor(shape, dtype, name) rhs = tsop.tensor(shape, dtype, name) output = tsop.subtract(lhs, rhs) output = tsop.subtract(lhs, 1) output = lhs - rhhs output = lhs - 1 output = 1 - rhs 8.3.4 divide divide( 播 lhs, rhs 勿传 请 ) ， 两个张量元素对应相除。
+- [p. 146] 参数说明 • 专用 lhs: 源操作数，类型: tensor_op.Tensor。
+- [p. 147] 双目运算算子 output = tsop.divide(lhs, rhs) output = lhs / rhs output = 2 / rhs output = lhs / 2 8.3.5 logical_and logical_and( lhs, rhs ) 两个张量元素对应进行逻辑与操作。
+- [p. 147] 播 参数说明 传 • lhs: 源操作数，类型: tensor_op.Tensor。
+- [p. 148] 双目运算算子 8.3.6 logical_or logical_or( lhs, rhs ) 两个张量元素对应进行逻辑或操作。
+- [p. 148] 参数说明 • lhs: 源操作数，类型: tensor_op.Tensor。
+- [p. 149] 双目运算算子 返回值描述 • 计算结果。类型: tensor_op.Tensor。
+- [p. 149] 注意事项 • 支持的数值类型: float16, float32。
+- [p. 150] 双目运算算子 8.3.9 greater greater( lhs, rhs ) 两个张量元素对应比较大小，左操作数中元素大于右操作数中元素则输出张量对应位置为 1，否则为 0。
+- [p. 150] 参数说明 • lhs: 源操作数，类型: tensor_op.Tensor。
+- [p. 151] 双目运算算子 返回值描述 • 计算结果。类型: tensor_op.Tensor。
+- [p. 151] 注意事项 • 支持的数值类型: float16, float32。
+- [p. 152] 双目运算算子 8.3.12 less_equal less_equal( lhs, rhs ) 两个张量元素对应比较大小，左操作数中元素小于等于右操作数中元素则输出张量对应位置为 1，否则 为 0。
+- [p. 152] 参数说明 • lhs: 源操作数，类型: tensor_op.Tensor。
+- [p. 153] 双目运算算子 返回值描述 • 计算结果。类型: tensor_op.Tensor。
+- [p. 153] 注意事项 • 支持的数值类型: float16, float32。
+- [p. 154] 编译接口 8.4 编译接口 8.4.1 BuildBANG BuildBANG( inputs, outputs, target, dump_ir=False, ) 将 TensorOp 的计算描述编译成运行时 module。
+- [p. 154] 参数说明 • • inputs: 输入张量列表，类型: list of tensor_op.Tensor。
+- [p. 155] 参数说明 • param: 输入参数列表。类型：dict。
+- [p. 155] 注意事项 • 参 数 写 成 param_name0=data0, param_name1=data1, ⋯ 的 形 式， 其 中 param_name0, param_name1 是 TensorOp 描 述 计 算 时 声 明 的 张 量 的 名 字，data0，data1 是 bangpy.Array 或 numpy.ndarray 类型的输入数据。
+- [p. 156] 运行模块接口 8.5.3 获得输出数据 BANGGraphModule.get_output( index ) 获得输出数据。
+- [p. 156] 参数说明 • index: 输出的索引。类型: int。
+- [p. 157] Cambricon® 9 通用接口 9.1 运行模块接口 9.1.1 save save( dirname ) 传 播 勿 将可执行 Module 在给定目录中保存为 so 文件和 mlu 文件。
+- [p. 157] 请 参数说明 • ， dirname: 用来保存 so 文件和 mlu 文件的目录的路径。类型: str。
+- [p. 158] 芯片信息接口 9.1.2 load_module load_module( dirname, target ) 从给定目录中载入 so 文件和 mlu 文件，根据指定的架构 target，形成可执行 module。
+- [p. 158] 参数说明 • dirname: 用来保存 so 文件和 mlu 文件的目录的路径。类型: str。
+- [p. 159] 芯片信息接口 参数说明 • ram_scope: 片上存储类型。类型: str。
+- [p. 159] 返回值描述 • 空间大小，以字节为单位。类型: int。
+
+## Extracted Tables
+
+### Table 1 (p. 92)
+
+递减运算: output = (input1 == 0||input1 > input2)?input2 : (input1 − 1)
+
+
+## Analyst Checklist
+
+- Facts: extract numeric claims, dates, policy names, technical claims, and company disclosures.
+- Estimates: mark market-size forecasts, CAGR, shipment forecasts, and assumptions.
+- Judgments: separate source judgments from your own investment/career analysis.
+- Traceability: cite page numbers or table numbers before moving claims into `knowledge/` notes.

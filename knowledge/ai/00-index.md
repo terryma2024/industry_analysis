@@ -61,4 +61,6 @@ sources:
 - [[04-companies|AI 相关 - 公司与竞争]]
 - [[research-notes/scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]]
 - [[research-notes/google-mediapipe-comprehensive-guide-2026-07-14|Google MediaPipe 全面调研：功能、原理与使用方法]]
+- [[news/2026-07-14-harness-engineering-self-improvement-deep-dive|Harness Engineering for Self-Improvement 深度研读与公式通俗解释]]
+- [[_entities/MonteCarloTreeSearch|Monte Carlo Tree Search（MCTS）]]
 - [[_concepts/joint-embedding-predictive-architecture|Joint-Embedding Predictive Architecture]]

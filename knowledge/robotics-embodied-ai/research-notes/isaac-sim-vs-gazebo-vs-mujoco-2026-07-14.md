@@ -17,6 +17,17 @@ sources:
   - raw/robotics-embodied-ai/documents/SRC-robotics-293-mujoco-xla-and-mujoco-warp-documentation.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-294-mujoco-official-releases.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-295-mujoco-apache-2-0-license.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-296-jax-installation-and-accelerator-backend-support.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-297-gazebo-rendering-installation-and-backend-guide.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-298-gazebo-headless-rendering-with-egl.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-299-moore-threads-musa-sdk-software-stack.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-300-moore-perf-system-graphics-api-support.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-301-hygon-dcu-rocm-compatibility-disclosure.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-302-ascend-cann-8-3-rc1-documentation-index.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-303-metax-products-and-mxmaca-software-ecosystem.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-304-birensupa-software-platform.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-305-iluvatar-corex-software-stack.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-306-cambricon-bangpy-developer-manual.md
 tags:
   - industry/robotics-embodied-ai
   - research-note
@@ -24,6 +35,7 @@ tags:
   - isaac-sim
   - gazebo
   - mujoco
+  - domestic-gpu
 status: active
 aliases:
   - Isaac Sim、Gazebo、MuJoCo 对比
@@ -33,7 +45,7 @@ aliases:
 # Isaac Sim vs Gazebo vs MuJoCo：机器人仿真平台选型调研
 
 > [!summary] 核心结论
-> 三者不是简单的同类替代品。**Isaac Sim** 最适合高保真视觉/传感器仿真、合成数据、OpenUSD 数字孪生和 Isaac Lab 学习闭环；**Gazebo** 最适合 ROS 2 系统联调、移动机器人/导航、传感器与中间件集成；**MuJoCo** 最适合控制、接触密集任务、系统辨识和大规模策略训练。具身智能团队通常应按任务选择一主一辅，而不是从第一天同时维护三套资产。
+> 三者不是简单的同类替代品。**Isaac Sim** 最适合高保真视觉/传感器仿真、合成数据、OpenUSD 数字孪生和 Isaac Lab 学习闭环；**Gazebo** 最适合 ROS 2 系统联调、移动机器人/导航、传感器与中间件集成；**MuJoCo** 最适合控制、接触密集任务、系统辨识和大规模策略训练。若把国产 GPU 纳入硬约束：**Gazebo 的标准图形 API 路径最有工程适配空间，MuJoCo 核心可稳定退回 CPU，但 MJX 国产加速仍缺官方 JAX/Warp 后端，Isaac Sim 则没有脱离 NVIDIA RTX 栈的官方运行路径**。具身智能团队通常应按任务选择一主一辅，而不是从第一天同时维护三套资产。
 
 > [!warning] 名称与比较口径
 > 正确拼写是 **Isaac Sim**，不是 “Issac Sim”。另外，Isaac Sim 是完整仿真平台，Gazebo 是模块化机器人系统仿真器，MuJoCo 更接近可嵌入的物理引擎/库；Isaac Lab、MJX/MuJoCo Warp 才分别承担更直接的机器人学习并行训练能力。
@@ -47,6 +59,7 @@ aliases:
 | 强化学习、模仿学习、运动控制、接触优化 | **MuJoCo** | 低层 API、MJCF、控制/逆动力学/系统辨识能力和 MJX-Warp 批量仿真 | 用 Isaac Sim/Gazebo 做系统级验证 |
 | 教学、CI、无高端 GPU 的快速原型 | **MuJoCo 或 Gazebo** | CPU 可用、部署和自动化测试成本更低 | 有明确感知需求再引入 Isaac Sim |
 | 工业场景 USD/CAD 资产、仓储/工厂数字孪生 | **Isaac Sim** | OpenUSD、CAD 导入、资产材质与场景工具链更强 | Gazebo 做 ROS fleet 接口测试 |
+| 国产 GPU/AI 加速器是硬约束 | **Gazebo 或 CPU MuJoCo** | Gazebo 可基于 OpenGL/Vulkan/EGL 驱动做适配；MuJoCo 物理核心不依赖 GPU | 国产 AI 加速器承担感知/VLA 推理旁路 |
 
 ## 当前版本基线（2026-07-14）
 
@@ -188,6 +201,77 @@ Gazebo 传感器清单与噪声模型见 [`SRC-robotics-290`](../../../raw/robot
 - **创业产品**：面向客户销售“仿真平台服务”时，Isaac Sim 的交付许可、GPU 成本和 USD 资产治理必须提前进入商业模型；只做内部研发或销售仿真输出时边界更宽松。
 - **十五五关联**：三者都服务于机器人、工业软件、智能制造和具身智能研发，但中国平台机会不只是“重做一个仿真器”，更现实的是 sim-ready 资产、国产硬件适配、仿真评测、数据闭环和行业数字孪生工具。
 
+## 中国国产 GPU/AI 加速器支持情况（截至 2026-07-14）
+
+### 先定义“支持”
+
+国产厂商常用“兼容 CUDA/ROCm、支持主流框架”描述软件生态，但这不足以证明某个仿真平台能直接运行。本文把支持拆成四级：
+
+| 级别 | 含义 | 本文判定方法 |
+|---|---|---|
+| **官方支持** | 平台安装包、兼容矩阵或厂商联合方案明确列出该硬件 | 可直接进入生产 PoC |
+| **标准 API 可适配** | 平台通过 OpenGL/Vulkan/EGL 等标准接口，GPU 厂商提供对应 Linux 图形驱动 | 先做正确性与稳定性验证，不能默认性能达标 |
+| **需移植** | 厂商有 CUDA/ROCm 兼容层，但平台依赖未被覆盖的 JAX/PJRT、Warp、RTX/OptiX、二进制插件或扩展 | 视为研发项目，不视为现成支持 |
+| **推理旁路** | 仿真器仍运行在 CPU/另一张 GPU，国产加速器通过 ROS 2、共享内存或 RPC 执行感知、VLA、策略推理 | 可用于国产算力闭环，但不是“仿真器跑在国产 GPU 上” |
+
+> [!warning] 负面证据的口径
+> 下文的“无官方支持”表示截至调研日，在已核验的平台兼容矩阵和厂商官方材料中**未发现明确支持声明**；它不等于技术上永远无法移植，也不排除厂商或客户存在未公开的适配项目。
+
+### 平台级结论
+
+| 平台/能力层 | 国产硬件结论 | 证据与边界 |
+|---|---|---|
+| **Isaac Sim 整体运行** | **❌ 无官方国产 GPU 路径** | 6.0.1 最低配置明确为 NVIDIA RTX 4080，且无 RT Core 的 A100/H100 也不受支持，说明依赖的不只是 CUDA 通用计算，而是 RTX/Omniverse/驱动能力组合。[`SRC-robotics-285`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-285-nvidia-isaac-sim-6-0-1-system-requirements.md) |
+| **Isaac Sim + 国产 AI 卡** | **↔️ 仅建议推理旁路** | 可让昇腾、寒武纪、壁仞、天数智芯、海光等执行策略/VLA/视觉模型，再经 ROS 2 或 RPC 与运行在 NVIDIA RTX 上的 Isaac Sim 通信；这不解除 Isaac Sim 主机的 NVIDIA 依赖。 |
+| **Gazebo 物理/server-only** | **✅ 可不依赖 GPU** | 物理和系统联调可在 CPU 运行；无 GPU 时 OGRE 还能回退到软件渲染，适合 CI 和内网服务器。[`SRC-robotics-298`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-298-gazebo-headless-rendering-with-egl.md) |
+| **Gazebo GUI、相机与 GPU 传感器** | **⚠️ 国产图形 GPU 有适配路径，未见官方认证** | Gazebo Rendering 的 OGRE2 后端支持 `vulkan` 与 `gl3plus`，headless 使用 EGL；因此关键是国产驱动是否完整实现目标 Ubuntu、OpenGL/Vulkan/EGL 组合，而不是 CUDA 兼容性。[`SRC-robotics-297`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-297-gazebo-rendering-installation-and-backend-guide.md) [`SRC-robotics-298`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-298-gazebo-headless-rendering-with-egl.md) |
+| **MuJoCo 核心物理** | **✅ CPU 路径稳定，GPU 厂商无关** | 基础仿真、控制、系统辨识和无渲染 rollout 可直接使用 CPU；这是国产化场景中风险最低的路径。 |
+| **MuJoCo OpenGL viewer** | **⚠️ 国产图形 GPU 可测试** | viewer 使用 OpenGL；能否稳定显示取决于显卡驱动、窗口系统、离屏/EGL 与纹理/深度缓冲兼容性，官方未给出国产 GPU 矩阵。[`SRC-robotics-292`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-292-mujoco-overview-and-key-features.md) |
+| **MJX-JAX GPU 加速** | **❌ 无国产 GPU 官方后端；🧪 可研究移植** | JAX 官方安装矩阵列出 NVIDIA CUDA、AMD ROCm、TPU、CPU及实验性 Intel GPU 插件，没有列出国产后端。[`SRC-robotics-296`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-296-jax-installation-and-accelerator-backend-support.md) |
+| **MJX-Warp / MuJoCo Warp** | **❌ 当前绑定 NVIDIA CUDA** | MuJoCo 官方文档把 Warp 实现定义为面向 NVIDIA GPU 的后端；国产厂商的 CUDA 迁移工具或兼容层不能自动覆盖 Warp kernel、driver API 与二进制依赖。[`SRC-robotics-293`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-293-mujoco-xla-and-mujoco-warp-documentation.md) |
+
+### 主要国产厂商的可行性矩阵
+
+| 国产硬件/软件栈 | Isaac Sim | Gazebo | MuJoCo | 当前更现实的定位 |
+|---|---|---|---|---|
+| **摩尔线程 MUSA / 全功能 GPU** | ❌ 无官方支持；`musify` 不能替代 RTX/Omniverse 运行时 | **⚠️ 第一优先 PoC 候选**：官方工具覆盖 OpenGL、OpenGL ES、Vulkan 与 D3D，具备验证 OGRE2 的接口基础 | 核心 CPU ✅；OpenGL viewer ⚠️；MJX/Warp ❌ 官方支持 | 国产图形渲染 + ROS 仿真；AI 推理可同卡或分卡部署。[`SRC-robotics-299`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-299-moore-threads-musa-sdk-software-stack.md) [`SRC-robotics-300`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-300-moore-perf-system-graphics-api-support.md) |
+| **沐曦 MXMACA / 曦彩 G 系列等** | ❌ 无官方支持 | **⚠️ 候选**：官方称产品覆盖图形渲染，但公开页面未给出 Gazebo、OGRE2 或具体 OpenGL/Vulkan/EGL 认证 | 核心 CPU ✅；viewer 与 MJX 均需实测/移植 | 向厂商索取 Linux 图形 API、EGL headless 与 OGRE2 兼容清单后再做 PoC。[`SRC-robotics-303`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-303-metax-products-and-mxmaca-software-ecosystem.md) |
+| **海光 DCU / ROCm 兼容栈** | ❌ 无官方支持 | ↔️ 更适合 AI/HPC 旁路，不把 DCU 默认当作 OGRE 图形卡 | 核心 CPU ✅；MJX-JAX **🧪**，需验证 PJRT/XLA plugin、算子与 JAX wheel | 海光披露 DCU 全面兼容 ROCm，但 JAX 的官方 ROCm 路径由 AMD 提供且面向 AMD GPU，不能据此直接判定 MJX 可用。[`SRC-robotics-301`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-301-hygon-dcu-rocm-compatibility-disclosure.md) [`SRC-robotics-296`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-296-jax-installation-and-accelerator-backend-support.md) |
+| **昇腾 CANN / Atlas** | ❌ 无官方支持 | ↔️ 作为 ROS 2 感知/VLA 节点；Gazebo 仍走 CPU/图形 GPU | 核心 CPU ✅；MJX/Warp ❌ 官方支持；可做策略推理旁路 | CANN 官方定位是 AI 异构计算并支持 MindSpore、PyTorch、TensorFlow等，不是通用图形渲染或 JAX/Warp 后端。[`SRC-robotics-302`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-302-ascend-cann-8-3-rc1-documentation-index.md) |
+| **壁仞 BIRENSUPA、天数智芯软件栈** | ❌ 无官方支持 | ↔️ AI/HPC 旁路；公开页未披露 Gazebo/OGRE 图形支持 | 核心 CPU ✅；MJX/Warp ❌ 官方支持 | 两者公开材料重点均是训练、推理、主流 AI 框架和通用计算，不能外推成仿真器支持。[`SRC-robotics-304`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-304-birensupa-software-platform.md) [`SRC-robotics-305`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-305-iluvatar-corex-software-stack.md) |
+| **寒武纪 MLU / BANGPy** | ❌ 无官方支持 | ↔️ 感知/VLA 推理旁路 | 核心 CPU ✅；MJX/Warp ❌ 官方支持 | BANGPy 面向 MLU 神经网络算子开发，不提供 Gazebo 图形后端或 JAX/Warp 兼容承诺。[`SRC-robotics-306`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-306-cambricon-bangpy-developer-manual.md) |
+
+### 推荐的国产算力组合
+
+如果目标是“机器人研发链路尽可能国产化”，当前更可落地的是**解耦式异构架构**，而不是强行让每个仿真器都直接运行在同一张国产卡上：
+
+```mermaid
+flowchart LR
+    A["Gazebo 或 MuJoCo CPU 物理"] --> B["统一 observation/action schema"]
+    C["国产图形 GPU：OGRE/OpenGL/Vulkan"] --> A
+    B --> D["国产 AI 加速器：感知/VLA/策略推理"]
+    D --> B
+    B --> E["ROS 2 / 共享内存 / gRPC"]
+    E --> F["真机控制器与评测系统"]
+```
+
+- **系统仿真主线**：Gazebo Harmonic/Jetty + CPU 物理；优先测试摩尔线程，其次测试具备明确 Linux 图形产品线的沐曦。
+- **控制/RL 主线**：MuJoCo CPU 先建立可复现基线；只有厂商能提供 JAX/PJRT 或 Warp 适配承诺时，才把国产 GPU 并行训练列入里程碑。
+- **模型推理主线**：昇腾、寒武纪、壁仞、天数智芯、海光等通过 ROS 2 node、共享内存或 RPC 运行感知/VLA/策略；把端到端延迟、拷贝次数和时间戳一致性纳入评测。
+- **高保真 NVIDIA 隔离线**：若项目必须使用 Isaac Sim，将其保留为 NVIDIA RTX 上的合成数据/视觉回归工位，不让它成为国产部署链路的唯一验证入口。
+
+### 国产 GPU PoC 验收清单
+
+1. 固定 OS、kernel、GPU driver、Gazebo/MuJoCo 版本和容器镜像，记录完整 BOM。
+2. 分别验证 GUI、OpenGL/Vulkan backend、EGL headless、无 GPU 软件渲染，不把“窗口能打开”当作传感器正确。
+3. 对 RGB、depth、segmentation、2D/3D LiDAR、阴影、透明材质、纹理和坐标系做像素/点云基准对比。
+4. 连续运行 24 小时，记录 crash、GPU reset、显存增长、帧时间 P50/P95/P99 和驱动日志。
+5. 测试容器权限、多卡枚举、远程桌面/无头模式、ROS 2 QoS 与仿真时钟；国产 AI 卡旁路还要测 host-device 拷贝和端到端控制延迟。
+6. 对 MJX 候选后端先跑 JAX 官方 smoke test，再跑 MuJoCo contact、batch、render 和数值一致性测试；只有通过后才报告 steps/s。
+
+> [!important] 采购建议
+> 当前不宜按厂商宣称的 CUDA/ROCm 兼容率直接采购仿真集群。采购前应要求厂商提供：目标 OS/驱动、OpenGL/Vulkan/EGL conformance、JAX/PJRT 或 Warp 支持状态、已复现的 Gazebo/MuJoCo 版本，以及可由客户复跑的容器和测试脚本。
+
 ## 推荐的双层仿真架构
 
 ```mermaid
@@ -226,7 +310,7 @@ flowchart LR
 ## 本调研未解决的问题
 
 - 尚未在同一机器人、同一接触容差、同一传感器负载和同一硬件上做三方 benchmark。
-- 未验证国产 GPU 对 Gazebo 渲染、MJX-JAX 和 Isaac Sim 的实际兼容性；Isaac Sim 官方最低规格仍明确是 NVIDIA RTX。
+- 已完成国产 GPU 的官方资料与接口层可行性判断，但尚未在摩尔线程、沐曦、海光、昇腾等实机上验证 Gazebo 渲染、MuJoCo viewer、MJX-JAX 或推理旁路性能。
 - 未按目标机器人资产实测 URDF/SDF/MJCF/USD 转换损失。
 - 许可证结论只覆盖核心官方页面，未覆盖目标项目的第三方模型、纹理、插件和数据集。
 
@@ -263,3 +347,17 @@ flowchart LR
 - [`SRC-robotics-293`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-293-mujoco-xla-and-mujoco-warp-documentation.md)：MJX-JAX/MJX-Warp、硬件支持和自动微分边界。
 - [`SRC-robotics-294`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-294-mujoco-official-releases.md)：官方 release 列表。
 - [`SRC-robotics-295`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-295-mujoco-apache-2-0-license.md)：Apache 2.0 许可证。
+
+### 国产 GPU/AI 加速器与通用后端
+
+- [`SRC-robotics-296`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-296-jax-installation-and-accelerator-backend-support.md)：JAX 官方 accelerator backend 安装矩阵。
+- [`SRC-robotics-297`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-297-gazebo-rendering-installation-and-backend-guide.md)：Gazebo Rendering 的 OGRE2、Vulkan 与 `gl3plus` 后端。
+- [`SRC-robotics-298`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-298-gazebo-headless-rendering-with-egl.md)：Gazebo 的 OGRE2/EGL headless 路径与软件渲染回退。
+- [`SRC-robotics-299`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-299-moore-threads-musa-sdk-software-stack.md)：摩尔线程 MUSA 软件栈与 `musify` 转换工具。
+- [`SRC-robotics-300`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-300-moore-perf-system-graphics-api-support.md)：摩尔线程 OpenGL/Vulkan 等图形 API 覆盖。
+- [`SRC-robotics-301`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-301-hygon-dcu-rocm-compatibility-disclosure.md)：海光 DCU 的 ROCm 兼容披露。
+- [`SRC-robotics-302`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-302-ascend-cann-8-3-rc1-documentation-index.md)：昇腾 CANN 的 AI 框架与编程定位。
+- [`SRC-robotics-303`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-303-metax-products-and-mxmaca-software-ecosystem.md)：沐曦 GPU 产品线、图形渲染定位与 MXMACA 软件栈。
+- [`SRC-robotics-304`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-304-birensupa-software-platform.md)：壁仞 BIRENSUPA 软件平台。
+- [`SRC-robotics-305`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-305-iluvatar-corex-software-stack.md)：天数智芯训练、推理与通用计算软件栈。
+- [`SRC-robotics-306`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-306-cambricon-bangpy-developer-manual.md)：寒武纪 BANGPy/MLU 算子开发栈。

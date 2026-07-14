@@ -2,7 +2,7 @@
 title: 新闻速记
 type: moc
 created: 2026-05-29
-updated: 2026-06-05
+updated: 2026-07-14
 tags:
   - news
   - moc
@@ -16,6 +16,7 @@ tags:
 
 | 日期 | 标题 | 来源 | 主题 |
 | --- | --- | --- | --- |
+| 2026-07-14 | [[2026-07-14-harness-engineering-self-improvement-deep-dive\|Harness Engineering for Self-Improvement 深度研读与公式通俗解释]] | Lil’Log / MCE / STOP / Meta-Harness / Self-Harness / DGM 等论文 | #ai #agent #harness-engineering #context-engineering #rsi |
 | 2026-06-05 | [[2026-06-05-nvidia-cosmos-3-getting-started-plan\|NVIDIA Cosmos 3 上手调研与计划]] | NVIDIA Newsroom / Developer Blog / GitHub / Hugging Face / arXiv | #ai #robotics #embodied-ai #world-model |
 | 2026-05-29 | [[2026-05-29-us-productivity-miracle\|美国正在爆发一场生产力奇迹]] | Bilibili / The Economist | #productivity #us-economy #ai #energy |
 

@@ -104,6 +104,7 @@ tags:
 - [[_entities/Agibot|Agibot]] — 中国具身智能公司，现有研究中用于跟踪开放数据集和整机生态。
 - [[_entities/IOAI|IO-AI]] — 中国具身数据基础设施公司，现有研究中用于跟踪遥操作、数据标注管理与格式导出。
 - [[_entities/AIRSPEED|AIRSPEED]] — AIRS/AIRSPEED 具身智能数据生产平台项目，当前开源核心偏 ROS2/YAML/HDF5 数据采集，论文/报告目标覆盖采集、仿真生成和数据集构建。
+- [[_entities/MonteCarloTreeSearch|Monte Carlo Tree Search（MCTS）]] — 以选择、扩展、模拟和回传循环搜索大规模决策树，并通过 UCT 平衡已知高分分支与低访问分支。
 
 ## Concepts
 
@@ -123,7 +124,7 @@ tags:
 
 ## Syntheses
 
-- [[robotics-embodied-ai/research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]] — 基于 2026-07 官方版本与许可资料，区分高保真感知/合成数据、ROS 2 系统联调和控制/RL 三类核心需求，给出场景选型、双层仿真架构与中国团队依赖风险。
+- [[robotics-embodied-ai/research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]] — 基于 2026-07 官方版本、许可与加速后端资料，区分高保真感知/合成数据、ROS 2 系统联调和控制/RL 三类需求；新增摩尔线程、沐曦、海光、昇腾、寒武纪、壁仞、天数智芯的支持矩阵、解耦式国产算力架构与 PoC 清单。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-14|Bilibili AI Daily Run 2026-07-14]] — 20 candidates: 19 duplicates; the selected UMI/SLAM/Diffusion Policy tutorial was transcribed successfully.
 - [[_syntheses/bilibili-umi-diffusion-policy-robotics-tutorial-deep-dive-2026-07-14|UMI、SLAM 与 Diffusion Policy 具身智能教程视频深度调研]] — 以一手 UMI/Diffusion Policy 资料校验最小操作闭环，并保留视频中未核验的公司、规格和实时性主张。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-13|Bilibili AI Daily Run 2026-07-13]] — 20 candidates: 19 duplicates; the sole model-review item was unrelated, so none was processed.
@@ -217,6 +218,7 @@ tags:
 ## News
 
 - [[news/00-index|新闻速记]] — ad hoc 新闻/文章/视频摘要入口；每条摘要独立成文。
+- [[news/2026-07-14-harness-engineering-self-improvement-deep-dive|Harness Engineering for Self-Improvement 深度研读与公式通俗解释]] — 梳理 harness 从上下文、工作流到自改进代码的研究谱系，逐式解释 MCE 与 STOP，并校正 STOP 元效用公式中的重复归一化记号。
 - [[news/2026-06-05-nvidia-cosmos-3-getting-started-plan|NVIDIA Cosmos 3 上手调研与计划]] — NVIDIA 2026 年发布的 Cosmos 3 omnimodal world model 调研、关键事实与两周上手计划。
 
 ## Operations

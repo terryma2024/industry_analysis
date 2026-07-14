@@ -45,7 +45,7 @@ aliases:
 > [!summary]
 > 机器人工程平台不是单个训练框架，也不是 ROS、仿真器或数据标注系统的任意一种。真正有选型价值的平台，要把 **数据采集/治理、训练、评测、部署、真机推理、回流迭代** 连成闭环。当前生态还没有一个“全能标准平台”，更现实的做法是按目标组合：`LeRobot/FluxVLA/OpenPI` 做学习与模型工程，`Isaac Sim/Lab` 做仿真与强化学习，`ROS/MoveIt` 接真机控制，`EmbodiFlow/AIRSPEED/Unitree G1-D/Genie Studio` 提供国内数据生产、企业化和硬件绑定工作流。
 
-仿真器专项选型见 [[research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]]。该页已按 Isaac Sim 6.0.1、Gazebo Jetty/Harmonic 与 MuJoCo 3.9.0 更新版本、硬件和许可边界。
+仿真器专项选型见 [[research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]]。该页已按 Isaac Sim 6.0.1、Gazebo Jetty/Harmonic 与 MuJoCo 3.9.0 更新版本、硬件和许可边界，并补充国产 GPU/AI 加速器的官方支持、标准 API 适配、移植与推理旁路判断。
 
 ## 一句话判断
 

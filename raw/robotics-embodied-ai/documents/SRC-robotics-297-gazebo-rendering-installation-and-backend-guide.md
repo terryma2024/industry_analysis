@@ -1,0 +1,289 @@
+---
+source_id: "SRC-robotics-297"
+title: "Gazebo Rendering installation and backend guide"
+source_type: "product_documentation"
+publisher: "Open Robotics"
+source_date: "2026-07-14"
+url: "https://gazebosim.org/api/rendering/7/installation.html"
+evidence_grade: "A"
+capture_method: "defuddle"
+captured_at: "2026-07-14T06:34:51+00:00"
+tags:
+  - raw/source
+  - source-type/product-documentation
+  - evidence/a
+aliases:
+  - SRC-robotics-297
+---
+# Gazebo Rendering installation and backend guide
+
+These instructions are for installing only Gazebo Rendering. If you're interested in using all the Gazebo libraries, check out this [Gazebo installation](https://gazebosim.org/docs/latest/install).
+
+We recommend following the Binary Install instructions to get up and running as quickly and painlessly as possible.
+
+The Source Install instructions should be used if you need the very latest software improvements, you need to modify the code, or you plan to make a contribution.
+
+## Ubuntu
+
+## Binary Installation
+
+Install dependencies:
+
+sudo apt-get update
+
+sudo apt-get -y install wget lsb-release gnupg
+
+Setup your computer to accept software from [packages.osrfoundation.org](http://packages.osrfoundation.org/):
+
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable \`lsb\_release -cs\` main" > /etc/apt/sources.list.d/gazebo-stable.list'
+
+Setup keys:
+
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+
+Install:
+
+sudo apt-get update
+
+sudo apt-get install libgz-rendering<#>-dev
+
+Be sure to replace `<#>` with a number value, such as `1` or `2`, depending on which version you need.
+
+## Source Installation
+
+### Prerequisites
+
+Ubuntu Focal 20.04 or above:
+
+Install dependencies:
+
+sudo apt -y install wget lsb-release gnupg
+
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable \`lsb\_release -cs\` main" > /etc/apt/sources.list.d/gazebo-stable.list'
+
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+
+sudo apt update
+
+sudo apt install -y \\
+
+cmake \\
+
+pkg-config \\
+
+git \\
+
+libglew-dev \\
+
+libfreeimage-dev \\
+
+freeglut3-dev \\
+
+libxmu-dev \\
+
+libxi-dev \\
+
+libgz-cmake3-dev \\
+
+libgz-math7-dev \\
+
+libgz-common5-dev \\
+
+libgz-plugin2-dev
+
+### Supported Rendering Engines
+
+Gazebo Rendering will look for rendering libraries installed in the system and build the relevant plugins if dependencies are found.
+
+**OGRE 1.x**
+
+\# this installs ogre 1.9. Alternatively, you can install 1.8
+
+sudo apt-get install libogre-1.9-dev
+
+**OGRE 2.x (supported in Versions >= gz-rendering1)**
+
+Add OSRF packages if you have not done so already:
+
+sudo apt -y install wget lsb-release gnupg
+
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable \`lsb\_release -cs\` main" > /etc/apt/sources.list.d/gazebo-stable.list'
+
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+
+sudo apt update
+
+Install OGRE 2.2 debs
+
+sudo apt install libogre-2.2-dev
+
+**OptiX (experimental)**
+
+Download and install by following instructions on NVIDIA website
+
+CUDA: [http://docs.nvidia.com/cuda](http://docs.nvidia.com/cuda)
+
+OptiX: [https://developer.nvidia.com/optix](https://developer.nvidia.com/optix)
+
+Update `LD_LIBRARY_PATH` and add an `OPTIX_INSTALL_DIR` environment variables so that gz-rendering can find Optix, e.g. if you installed version 4.0.2 in HOME/optix:
+
+export LD\_LIBRARY\_PATH= ${HOME}/optix/NVIDIA-OptiX-SDK-4.0.2-linux64/lib64:${LD\_LIBRARY\_PATH}
+
+export OPTIX\_INSTALL\_DIR=${HOME}/optix/NVIDIA-OptiX-SDK-4.0.2-linux64
+
+Note: If you encounter errors about different exception specifiers in optix math when building Gazebo Rendering OptiX plugin, edit `[optix_install_dir]/include/optixu/optixu_math_namespace.h` and comment out the section that defines `fminf`, fmaxf, and `copysignf` (for optix sdk 4.0.2, comment out lines 167-206).
+
+### Build from Source
+
+1. Clone the repository
+	\# Optionally, append \`-b ign-rendering#\` (replace # with a number) to check out a specific version
+	git clone http://github.com/gazebosim/gz-rendering
+2. Configure and build
+	cd gz-rendering
+	mkdir build
+	cd build
+	cmake.. -DCMAKE\_INSTALL\_PREFIX=/path/to/install/dir
+	make
+	Replace `/path/to/install/dir` to whatever directory you want to install this package to
+3. Optionally, install
+	make install
+
+## Windows
+
+On Windows, only OGRE 1 is currently supported.
+
+## Prerequisites
+
+First, follow the [gz-cmake](https://github.com/gazebosim/gz-cmake) tutorial for installing Conda, Visual Studio, CMake, and other prerequisites, and also for creating a Conda environment.
+
+Navigate to `condabin` if necessary to use the `conda` command (i.e., if Conda is not in your `PATH` environment variable. You can find the location of `condabin` in Anaconda Prompt, `where conda`).
+
+Create if necessary, and activate a Conda environment:
+
+conda create -n gz-ws
+
+conda activate gz-ws
+
+## Binary Installation
+
+`libgz-rendering<#>` Conda feedstock is not yet available, pending [conda-forge/staged-recipes#13551](https://github.com/conda-forge/staged-recipes/issues/13551).
+
+## Source Installation
+
+This assumes you have created and activated a Conda environment while installing the Prerequisites.
+
+1. Install dependencies:
+	conda install ogre --channel conda-forge
+2. Install Gazebo dependencies:
+	You can view available versions and their dependencies:
+	conda search libgz-rendering\* --channel conda-forge --info
+	Install dependencies, replacing `<#>` with the desired versions:
+	conda install libgz-cmake<#> libgz-common<#> libgz-math<#> libgz-plugin<#> --channel conda-forge
+3. Navigate to where you would like to build the library, and clone the repository.
+	\# Optionally, append \`-b ign-rendering#\` (replace # with a number) to check out a specific version
+	git clone https://github.com/gazebosim/gz-rendering.git
+4. Configure and build
+	cd gz-rendering
+	mkdir build
+	cd build
+	cmake.. -DBUILD\_TESTING=OFF # Optionally, -DCMAKE\_INSTALL\_PREFIX=path\\to\\install
+	cmake --build. --config Release
+5. Optionally, install
+	cmake --install. --config Release
+
+## macOS
+
+## Binary Installation
+
+On macOS, add OSRF packages:
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew tap osrf/simulation
+
+Install Gazebo Rendering:
+
+brew install gz-rendering<#>
+
+Be sure to replace `<#>` with a number value, such as 5 or 6, depending on which version you need.
+
+## Source Installation
+
+1. Clone the repository
+	git clone https://github.com/gazebosim/gz-rendering -b ign-rendering<#>
+	Be sure to replace `<#>` with a number value, such as 5 or 6, depending on which version you need.
+2. Install dependencies
+	brew install --only-dependencies gz-rendering<#>
+	Be sure to replace `<#>` with a number value, such as 5 or 6, depending on which version you need.
+3. Configure and build
+	cd gz-rendering
+	mkdir build
+	cd build
+	cmake..
+	make
+4. Optionally, install
+	sudo make install
+
+## Documentation
+
+API documentation can be generated using Doxygen
+
+sudo apt install -y doxygen
+
+Build documentation
+
+cd build
+
+make doc
+
+View documentation
+
+firefox doxygen/html/index.html
+
+## Testing
+
+Tests can be run by building the `test` target:
+
+cd build
+
+make test
+
+Most tests can be run against multiple render engine configurations (if available). To control the testing configuration, use the following environment variables:
+
+\# Specify the rendering engine to use (ogre, ogre2, optix)
+
+GZ\_ENGINE\_TO\_TEST=ogre2
+
+\# Specify the ogre2 backend to use (vulkan, gl3plus, metal (macOS))
+
+GZ\_ENGINE\_BACKEND=vulkan
+
+\# Specify if using "headless mode" (EGL or vulkan NULL window)
+
+GZ\_ENGINE\_HEADLESS=1
+
+A full invocation of a test would be
+
+GZ\_ENGINE\_TO\_TEST=ogre2 GZ\_ENGINE\_BACKEND=gl3plus./bin/UNIT\_Camera\_TEST
+
+Additionally, each test is registered with `ctest` for each engine/backend configuration available at build time. These can then be filtered with the `ctest` command line.
+
+\# See a list of all available tests
+
+ctest -N
+
+\# Run all ogre2 tests (verbose)
+
+ctest -R ogre2 -V
+
+\# Run all ogre2/vulkan tests (verbose)
+
+ctest -R ogre2\_vulkan -V
+
+\# Run all OpenGL tests (verbose)
+
+ctest -R gl3plus -V
+
+\# Run all INTEGRATION tests (verbose)
+
+ctest -R INTEGRATION -V

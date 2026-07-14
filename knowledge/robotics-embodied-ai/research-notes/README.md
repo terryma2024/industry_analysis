@@ -17,7 +17,7 @@ last_updated: 2026-07-14
 
 ## 2026-07-14 机器人仿真平台选型
 
-- [[isaac-sim-vs-gazebo-vs-mujoco-2026-07-14]]: 基于 2026-07 官方版本与许可资料，对比 Isaac Sim、Gazebo、MuJoCo 的物理、渲染、传感器、ROS 2、RL/IL、资产格式、硬件、许可证和中国团队选型，并给出双层仿真架构。
+- [[isaac-sim-vs-gazebo-vs-mujoco-2026-07-14]]: 基于 2026-07 官方版本、许可与后端资料，对比 Isaac Sim、Gazebo、MuJoCo 的物理、渲染、传感器、ROS 2、RL/IL、资产格式和商业边界；新增国产 GPU/AI 加速器支持矩阵、异构组合架构与采购 PoC 清单。
 
 ## 2026-07-14 Ego 视频到灵巧手训练数据
 

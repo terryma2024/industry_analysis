@@ -21,6 +21,7 @@ tags:
 - [[scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]]
 - [[jepa-core-principles-2026-06-11|JEPA 核心原理快速调研]]
 - [[google-mediapipe-comprehensive-guide-2026-07-14|Google MediaPipe 全面调研：功能、原理与使用方法]]
+- [[news/2026-07-14-harness-engineering-self-improvement-deep-dive|Harness Engineering for Self-Improvement 深度研读与公式通俗解释]]
 
 ## 关联连接
 

@@ -520,3 +520,24 @@ tags:
 - **来源**: 新增并成功捕获 `SRC-robotics-284` 至 `SRC-robotics-295`，覆盖 Isaac Sim 6.0.1 下载/系统要求/许可、Gazebo Jetty/Harmonic 生命周期与 ROS 配套、MuJoCo 3.9.0/MJX-Warp/许可证官方资料。
 - **结论**: Isaac Sim 的优势是高保真传感器、合成数据、OpenUSD 和数字孪生；Gazebo 的优势是 ROS 2 系统联调；MuJoCo 的优势是控制、接触动力学、系统辨识和批量策略训练。应按任务采用一主一辅，并用统一 schema、回归测试和真机 rollout 验收。
 - **风险**: 尚无统一硬件/模型/精度条件下的三方 benchmark；Isaac Sim 对 RTX/许可交付依赖高，Gazebo 需严格锁定 ROS/版本，MuJoCo 的 ROS 与高保真传感器工作流需项目自建。
+
+## [2026-07-14] research | Harness Engineering for Self-Improvement 深度研读
+
+- **变更**: 新增 [[news/2026-07-14-harness-engineering-self-improvement-deep-dive|Harness Engineering for Self-Improvement 深度研读与公式通俗解释]]；保存 Lilian Weng 原文 Defuddle 快照；更新 [[news/00-index|新闻速记]]、[[ai/00-index|AI 研究入口]]、[[ai/research-notes/README|AI Research Notes]] 与 [[index|Knowledge Index]]。
+- **来源**: Lil’Log 原文；交叉核验 MCE、STOP、Meta-Harness、ADAS、AFlow、Self-Harness、DGM 与 SIA 的论文页面。
+- **结论**: 近中期可执行的自我改进主要发生在模型外部 harness；MCE 用双层优化同时搜索上下文与上下文工程技能，STOP 用跨任务元效用让改进器把自身代码当作待优化对象。博客的 STOP 元效用公式疑似把“样本平均求和”与“期望”重复归一化，已按原论文更正并保留冲突说明。
+- **限制**: 多篇 2026 工作仍为预印本，模型、任务、预算和评估器不统一；benchmark 增益不等价于开放世界长期 RSI。
+
+## [2026-07-14] entity | Monte Carlo Tree Search
+
+- **变更**: 新增 [[_entities/MonteCarloTreeSearch|Monte Carlo Tree Search（MCTS）]] 实体页；更新 [[_entities/README|Entities Layer]]、[[index|Knowledge Index]]、[[ai/00-index|AI 研究入口]] 和 [[news/2026-07-14-harness-engineering-self-improvement-deep-dive|Harness Engineering 深度研读]]回链。
+- **来源**: Kocsis 与 Szepesvári 的 UCT 原始论文、Browne 等人的 MCTS 综述、AFlow 论文及既有 Harness 研究笔记。
+- **内容**: 解释选择—扩展—模拟—回传循环、UCT 公式、探索系数、数值例子、相邻搜索方法、Agent 工作流映射、工程设计与易错边界。
+- **边界**: 遵照用户要求归入 `_entities/`，实体类型标记为 `entity/algorithm`；从知识本体角度它也可视为算法概念，但本轮不重复建立 `_concepts/` 页面。
+
+## [2026-07-14] update | 仿真平台国产 GPU/AI 加速器支持矩阵
+
+- **变更**: 更新 [[robotics-embodied-ai/research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]]、[[index|Knowledge Index]]、[[robotics-embodied-ai/00-index|机器人研究入口]]、[[robotics-embodied-ai/research-notes/README|研究中间笔记]]、[[robotics-embodied-ai/12-robotics-engineering-platforms-2026-06-04|机器人工程平台综合调研]]、[[robotics-embodied-ai/00-source-capture-index|来源抽取索引]] 与 `knowledge/robotics-embodied-ai/sources.csv`。
+- **来源**: 新增并成功捕获 `SRC-robotics-296` 至 `SRC-robotics-306`，覆盖 JAX 官方 accelerator matrix、Gazebo OGRE2/Vulkan/OpenGL/EGL 文档，以及摩尔线程、海光、昇腾、沐曦、壁仞、天数智芯、寒武纪官方材料；两份 PDF 已生成 `pdftotext` Markdown sidecar。
+- **结论**: Isaac Sim 无脱离 NVIDIA RTX 的官方路径；Gazebo 依靠标准图形 API，最有国产全功能 GPU 适配空间；MuJoCo 核心可走 CPU，但 MJX-JAX 未列国产 backend，MuJoCo Warp 仍绑定 NVIDIA CUDA。国产 AI 加速器现阶段更适合作为 ROS 2/RPC 推理旁路。
+- **边界**: 厂商的 CUDA/ROCm 或主流框架兼容声明不等于平台认证；所有性能、渲染正确性、EGL headless、JAX/PJRT 与长期稳定性结论仍需目标硬件 PoC。
