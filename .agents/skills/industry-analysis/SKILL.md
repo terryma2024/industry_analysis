@@ -12,17 +12,18 @@ Build durable research assets, not one-off chat summaries. Preserve source trace
 ## Workflow
 
 1. Read `knowledge/index.md` first when the task depends on existing repository knowledge.
-2. Identify the industry slug from `tools/industry_registry.json`; create a new slug only if no existing one fits.
-3. Put original documents under `raw/<slug>/documents/` and raw datasets under `raw/<slug>/data/`. Use `raw/_inbox/` for uncategorized sources before assignment.
-4. Record used sources in `knowledge/<slug>/sources.csv` with an evidence grade.
-5. Compile durable knowledge into the appropriate wiki layer:
+2. For every deep-research task, read `references/research-report-taxonomy.md`, choose one primary report category (`R01`–`R10`) plus up to two optional secondary categories, and record the classification reason and research boundary in the report. For article, Xiaohongshu, Bilibili, podcast, interview, or other content-led research, classify after extracting the source claims and before expanding the research. If no category fits, use the `R00` full-chain fallback defined in that reference.
+3. Identify the industry slug from `tools/industry_registry.json`; create a new slug only if no existing one fits.
+4. Put original documents under `raw/<slug>/documents/` and raw datasets under `raw/<slug>/data/`. Use `raw/_inbox/` for uncategorized sources before assignment.
+5. Record used sources in `knowledge/<slug>/sources.csv` with an evidence grade.
+6. Compile durable knowledge into the appropriate wiki layer:
    - `knowledge/_sources/` for one-source or source-set summaries.
    - `knowledge/_entities/` for people, companies, institutions, tools, products, and projects.
    - `knowledge/_concepts/` for reusable concepts, frameworks, methods, and technologies.
    - `knowledge/_claims/` for important atomic facts, estimates, judgments, and hypotheses.
    - `knowledge/_syntheses/` for cross-source or cross-industry analysis and high-value query outputs.
    - `knowledge/<slug>/` for industry-specific synthesis using the standard files.
-6. For each industry, keep the standard files:
+7. For each industry, keep the standard files:
    - `00-index.md`
    - `01-industry-map.md`
    - `02-technology-and-products.md`
@@ -30,12 +31,13 @@ Build durable research assets, not one-off chat summaries. Preserve source trace
    - `04-companies.md`
    - `05-investment-view.md`
    - `06-career-view.md`
-7. Separate facts, estimates, judgments, and hypotheses.
-8. For each industry, explain its China policy position: why it matters to national strategy, which 15th Five-Year Plan themes it connects to, and where China has strengths, bottlenecks, or supply-chain dependencies.
-9. For investment analysis, always include China-specific thesis, policy catalyst, risk, what would change the thesis, and monitoring indicators.
-10. For career analysis, always include China role families, skill requirements, learning path, portfolio ideas, and hiring signals.
-11. Treat `knowledge/` as an Obsidian vault. Use Obsidian-compatible Markdown, wikilinks, index/MOC notes, source backlinks, and `## 关联连接` sections when creating or maintaining knowledge artifacts.
-12. After significant writes, update `knowledge/index.md` and append `knowledge/log.md`.
+8. Separate facts, estimates, judgments, and hypotheses.
+9. Every report category must include explicit sections for `商业应用可能性` and `中小型创业者的机会`, following the mandatory questions in `references/research-report-taxonomy.md`. If evidence is insufficient or the opportunity is unsuitable, state that conclusion and why; do not omit the sections.
+10. For each industry, explain its China policy position: why it matters to national strategy, which 15th Five-Year Plan themes it connects to, and where China has strengths, bottlenecks, or supply-chain dependencies.
+11. For investment analysis, always include China-specific thesis, policy catalyst, risk, what would change the thesis, and monitoring indicators.
+12. For career analysis, always include China role families, skill requirements, learning path, portfolio ideas, and hiring signals.
+13. Treat `knowledge/` as an Obsidian vault. Use Obsidian-compatible Markdown, wikilinks, index/MOC notes, source backlinks, and `## 关联连接` sections when creating or maintaining knowledge artifacts.
+14. After significant writes, update `knowledge/index.md` and append `knowledge/log.md`. Keep one `## [YYYY-MM-DD]` section per date and add same-day events as compact `- **action | summary**` list items; do not create duplicate date headings.
 
 ## LLM Wiki Operations
 
@@ -57,6 +59,7 @@ Evidence grades:
 
 ## Useful Resources
 
+- Read `references/research-report-taxonomy.md` for the mandatory deep-research classification and per-category report requirements.
 - Read `references/research-framework.md` for the analysis checklist.
 - Read `references/source-quality.md` when judging evidence quality.
 - Run `uv run python .agents/skills/industry-analysis/scripts/check_workspace.py` to verify required project directories exist.

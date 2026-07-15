@@ -221,10 +221,19 @@ For every video that is both selected by model judgment and `status=processed`, 
 
 - source metadata and transcript path;
 - full-video thesis, not just isolated clips;
+- the primary research category (`R01`–`R10`), up to two optional secondary categories, the classification reason, and the research boundary, following `.agents/skills/industry-analysis/references/research-report-taxonomy.md`;
 - facts, estimates, judgments, and hypotheses separated clearly;
 - primary-source verification for important claims when available;
-- industry implications, investment/career angles when relevant, risks, and monitoring indicators;
+- all mandatory requirements of the selected primary category;
+- explicit `商业应用可能性` and `中小型创业者的机会` sections in every report, including a negative or `待验证` conclusion when appropriate;
+- industry implications, investment/career angles when relevant, risks, falsification conditions, and monitoring indicators;
 - follow-up verification tasks and Obsidian wikilinks.
+
+If no `R01`–`R10` category fits, use the `R00` full-chain fallback:
+
+> 行业全景 → 关键产业环节 → 技术与公司 → 产品与场景 → 商业真实性 → 成本与市场空间 → 投资、创业或职业决策
+
+The source platform is not the report category. A Bilibili video is a B-grade research lead; classify by the question and decision that the deep research needs to answer. Do not let the video's narrative order dictate the report structure.
 
 Cross-video daily overview pages are optional navigation/synthesis artifacts. They must not replace the per-selected-video deep-research pages. Videos that are `failed`, `skipped_duplicate`, or not selected should not receive fabricated deep-research pages; record them as retry or follow-up items instead.
 
