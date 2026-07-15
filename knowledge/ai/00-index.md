@@ -2,7 +2,7 @@
 title: AI相关 - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-07-14
+last_updated: 2026-07-15
 status: draft
 tags:
   - industry/ai
@@ -47,6 +47,7 @@ sources:
 - `05-investment-view.md`: 投资逻辑、风险和观察指标。
 - `06-career-view.md`: 岗位地图、学习路径和作品集建议。
 - [[00-source-capture-index|AI Source Capture Index]]: AI 行业来源抽取状态。
+- [[_syntheses/bilibili-enpire-physical-autoresearch-deep-dive-2026-07-15|ENPIRE 真实世界机器人自我改进视频深度调研]]: 真实世界 agentic robotics 的自动复位、验证、rollout 和演化闭环。
 - [[research-notes/README|research-notes/]]: MediaPipe、Scale AI、数据基础设施、JEPA 等阶段性深度调研。
 
 ## 待验证

@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-14
+last_updated: 2026-07-15
 tags:
   - wiki
   - index
@@ -14,6 +14,8 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/bilibili-bv1wlja6gewq-ai-ai-ai|AI自己做科研了，那么人干嘛？#AI #AI科研 #英伟达 #人工智能 #科技改变生活]] — Bilibili source packet; synthesized after ENPIRE primary-source verification.
 
 - [[_sources/bilibili-bv1qdjh64eeo-2026-docker-slam-diffusion-policy|公认2026具身智能天花板教程！一套吃透大模型机器人，Docker、SLAM、Diffusion Policy、扩散学习全覆盖]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
@@ -124,6 +126,8 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-07-15|Bilibili AI Daily Run 2026-07-15]] — 20 candidates: 19 duplicates; one AI-research video processed successfully.
+- [[_syntheses/bilibili-enpire-physical-autoresearch-deep-dive-2026-07-15|ENPIRE 真实世界机器人自我改进视频深度调研]] — 将短视频的“AI 自己做科研”叙事校正为真实世界、受任务和安全边界约束的 agentic policy-improvement 闭环。
 - [[robotics-embodied-ai/research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]] — 基于 2026-07 官方版本、许可与加速后端资料，区分高保真感知/合成数据、ROS 2 系统联调和控制/RL 三类需求；新增摩尔线程、沐曦、海光、昇腾、寒武纪、壁仞、天数智芯的支持矩阵、解耦式国产算力架构与 PoC 清单。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-14|Bilibili AI Daily Run 2026-07-14]] — 20 candidates: 19 duplicates; the selected UMI/SLAM/Diffusion Policy tutorial was transcribed successfully.
 - [[_syntheses/bilibili-umi-diffusion-policy-robotics-tutorial-deep-dive-2026-07-14|UMI、SLAM 与 Diffusion Policy 具身智能教程视频深度调研]] — 以一手 UMI/Diffusion Policy 资料校验最小操作闭环，并保留视频中未核验的公司、规格和实时性主张。

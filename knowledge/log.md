@@ -541,3 +541,16 @@ tags:
 - **来源**: 新增并成功捕获 `SRC-robotics-296` 至 `SRC-robotics-306`，覆盖 JAX 官方 accelerator matrix、Gazebo OGRE2/Vulkan/OpenGL/EGL 文档，以及摩尔线程、海光、昇腾、沐曦、壁仞、天数智芯、寒武纪官方材料；两份 PDF 已生成 `pdftotext` Markdown sidecar。
 - **结论**: Isaac Sim 无脱离 NVIDIA RTX 的官方路径；Gazebo 依靠标准图形 API，最有国产全功能 GPU 适配空间；MuJoCo 核心可走 CPU，但 MJX-JAX 未列国产 backend，MuJoCo Warp 仍绑定 NVIDIA CUDA。国产 AI 加速器现阶段更适合作为 ROS 2/RPC 推理旁路。
 - **边界**: 厂商的 CUDA/ROCm 或主流框架兼容声明不等于平台认证；所有性能、渲染正确性、EGL headless、JAX/PJRT 与长期稳定性结论仍需目标硬件 PoC。
+
+## [2026-07-15] ingest | Bilibili AI/具身智能每日视频采集
+
+- **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-15|Bilibili AI Daily Run 2026-07-15]]；处理 1 个 Bilibili 视频 source packet。
+- **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+- **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+## [2026-07-15] synthesis | Bilibili ENPIRE 真实世界机器人自我改进单视频深研
+
+- **变更**: 新增 [[_syntheses/bilibili-enpire-physical-autoresearch-deep-dive-2026-07-15|ENPIRE 真实世界机器人自我改进视频深度调研]]；更新 source card、[[ai/00-source-capture-index|AI Source Capture Index]]、[[index|Knowledge Index]] 和 AI 来源台账；归档 [`SRC-ai-080`](../raw/ai/documents/SRC-ai-080-enpire-agentic-robot-policy-self-improvement-in-the-real-world.md)。
+- **来源**: Bilibili `BV1WLja6gEwq` 的 ASR source packet；ENPIRE 官方 NVIDIA 项目页与 arXiv `2606.19980`。
+- **结论**: ENPIRE 的核心是把已定义的真实世界机器人任务组织为可复位、可验证、可审计的 EN–PI–R–E 优化闭环；其 `99% pass@8` 是带上下文重试/恢复的任务指标，不能外推为无重试、跨场景的通用机器人成功率或通用科研自动化。
+- **限制**: 视频为 B 级线索且存在框架名 ASR 误识别；具体 coding-agent 对比、硬件配置、人工参与边界、O.O.D. 泛化与生产部署可靠性仍需回到论文完整实验和现场验证。
