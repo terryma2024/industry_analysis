@@ -90,6 +90,7 @@ sources:
 | SRC-ai-078 | AI Edge RAG guide | ok | [raw](../../raw/ai/documents/SRC-ai-078-ai-edge-rag-guide.md) | deprecated；不应作为新长期架构。 |
 | SRC-ai-079 | AI Edge Function Calling guide | ok | [raw](../../raw/ai/documents/SRC-ai-079-ai-edge-function-calling-guide.md) | deprecated；官方建议迁移 LiteRT-LM。 |
 | SRC-ai-080 | ENPIRE Agentic Robot Policy Self-Improvement in the Real World | ok | [raw](../../raw/ai/documents/SRC-ai-080-enpire-agentic-robot-policy-self-improvement-in-the-real-world.md) | 用于校验 ENPIRE 四模块、真实世界闭环、任务范围与 pass@8 指标边界。 |
+| SRC-ai-081 | 国务院关于深入实施“人工智能+”行动的意见 | ok | [raw](../../raw/ai/documents/SRC-ai-081-source.md) | 用于校验 AI 人才培养、青年人才、期权激励与就业风险评估，不用于证明视频中的薪资或岗位数字。 |
 
 ## 关联连接
 

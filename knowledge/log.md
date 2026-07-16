@@ -529,3 +529,16 @@ tags:
   - **变更**: 将历史日志从“每项变更重复一个日期标题”重排为“每个日期一个二级标题、当天事件使用紧凑列表”，并按日期恢复时间顺序。
   - **保留范围**: 原有 action、summary、变更、来源、结论、限制和待继续内容均保留，只压缩结构与空白，不改写历史事实。
   - **新规则**: 后续同一天的日志继续追加到当天 `## [YYYY-MM-DD]` 下，不再创建重复日期标题。
+
+## [2026-07-16]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-16|Bilibili AI Daily Run 2026-07-16]]；处理 1 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+- **synthesis | Bilibili AI 人才市场与职业路径单视频深研**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-talent-market-and-career-path-deep-dive-2026-07-16|AI 人才市场与职业路径视频深度调研]]；更新 [[ai/06-career-view|AI 求职与学习视角]]、[[ai/00-source-capture-index|AI 来源抽取索引]]、[[index|Knowledge Index]]、AI 来源台账与日运行报告；修复每日脚本写入日志时的日期标题格式。
+  - **来源**: Bilibili `BV152Ne6qEuF` ASR source packet（B）与国务院《人工智能+》行动意见 `SRC-ai-081`（S）。
+  - **结论**: 国家政策支持长期 AI 人才培养、青年人才发展、产教融合及规范期权激励；视频中的薪酬、岗位数、人员流动与资本市场数字未取得原始表或披露，均保留为待核验线索。
+  - **限制**: 本轮不对个体薪酬、公司招聘强度或 AI 周期作价格预测；后续应取得招聘平台方法页、官方 JD/公告和公司财务资料。

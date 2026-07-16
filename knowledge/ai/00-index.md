@@ -2,7 +2,7 @@
 title: AI相关 - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-07-15
+last_updated: 2026-07-16
 status: draft
 tags:
   - industry/ai
@@ -48,6 +48,7 @@ sources:
 - `06-career-view.md`: 岗位地图、学习路径和作品集建议。
 - [[00-source-capture-index|AI Source Capture Index]]: AI 行业来源抽取状态。
 - [[_syntheses/bilibili-enpire-physical-autoresearch-deep-dive-2026-07-15|ENPIRE 真实世界机器人自我改进视频深度调研]]: 真实世界 agentic robotics 的自动复位、验证、rollout 和演化闭环。
+- [[_syntheses/bilibili-ai-talent-market-and-career-path-deep-dive-2026-07-16|AI 人才市场与职业路径视频深度调研]]: 政策支持长期人才能力建设，但短视频薪酬与岗位数字不应直接作为职业定价依据。
 - [[research-notes/README|research-notes/]]: MediaPipe、Scale AI、数据基础设施、JEPA 等阶段性深度调研。
 
 ## 待验证

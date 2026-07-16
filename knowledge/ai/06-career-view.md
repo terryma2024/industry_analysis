@@ -2,7 +2,7 @@
 title: AI相关 - 求职与学习视角
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-06-29
+last_updated: 2026-07-16
 status: draft
 tags:
   - industry/ai
@@ -42,8 +42,14 @@ sources:
 - 面试准备：解释一个 AI 产品如何从 demo 到生产，包括数据、模型、评测、上线、监控、合规和 ROI。
 - 招聘信号：JD 中出现推理服务、RAG、Agent、模型评测、GPU 调度、MLOps、AI 平台、数据治理、企业知识库，通常比“会 prompt”更有含金量。
 
+## 人才市场观察（2026-07-16）
+
+- 国家层面已把高层次、青年与复合型 AI 人才培养、符合岗位特点的评价、产教融合以及股权/期权等中长期激励纳入“人工智能+”行动；这表明人才供给与留用是长期能力建设议题，而非单次校招热度。证据：[`SRC-ai-081`](../../raw/ai/documents/SRC-ai-081-source.md)。
+- 但“顶尖人才高价竞争”不等于一般 AI 岗位普涨。求职与转岗应以可复用的工程交付证据（数据、评测、成本、安全、行业流程）判断，不以短视频中的年薪、岗位数或个别跳槽传闻推断个人市场价。详见 [[_syntheses/bilibili-ai-talent-market-and-career-path-deep-dive-2026-07-16|AI 人才市场与职业路径视频深度调研]]。
+
 ## 关联连接
 
 - [[00-index|AI 相关 - 研究入口]]
 - [[03-market-and-policy|AI 相关 - 市场与政策]]
+- [[_syntheses/bilibili-ai-talent-market-and-career-path-deep-dive-2026-07-16|AI 人才市场与职业路径视频深度调研]]
 - [[research-notes/README|AI Research Notes]]

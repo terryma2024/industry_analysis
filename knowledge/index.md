@@ -15,6 +15,8 @@ tags:
 
 ## Sources
 
+- [[_sources/bilibili-bv152ne6qeuf-18-ai-ai|18岁年薪百万，AI抢人大战开始了！AI天才的收入有多疯狂？]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
 - [[_sources/bilibili-bv1wlja6gewq-ai-ai-ai|AI自己做科研了，那么人干嘛？#AI #AI科研 #英伟达 #人工智能 #科技改变生活]] — Bilibili source packet; synthesized after ENPIRE primary-source verification.
 
 - [[_sources/bilibili-bv1qdjh64eeo-2026-docker-slam-diffusion-policy|公认2026具身智能天花板教程！一套吃透大模型机器人，Docker、SLAM、Diffusion Policy、扩散学习全覆盖]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
@@ -125,6 +127,9 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-ai-talent-market-and-career-path-deep-dive-2026-07-16|AI 人才市场与职业路径视频深度调研]] — 将 AI 抢人视频分类为 R10 职业路径调研；政策支持长期人才建设，但视频中的薪资、岗位量和市场数字均保留为待核验线索。
+- [[_syntheses/bilibili-ai-daily-run-2026-07-16|Bilibili AI Daily Run 2026-07-16]] — 20 个候选，19 个重复；唯一模型选中的 AI 人才市场视频已成功转录并完成单视频深研。
 
 - [[_syntheses/bilibili-ai-daily-run-2026-07-15|Bilibili AI Daily Run 2026-07-15]] — 20 candidates: 19 duplicates; one AI-research video processed successfully.
 - [[_syntheses/bilibili-enpire-physical-autoresearch-deep-dive-2026-07-15|ENPIRE 真实世界机器人自我改进视频深度调研]] — 将短视频的“AI 自己做科研”叙事校正为真实世界、受任务和安全边界约束的 agentic policy-improvement 闭环。

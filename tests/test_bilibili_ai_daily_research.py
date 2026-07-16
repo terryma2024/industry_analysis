@@ -245,6 +245,30 @@ class BilibiliAiDailyResearchTests(unittest.TestCase):
         self.assertIn("asr-audio/2026/07/08", text)
         self.assertIn("Objects found: 0", text)
 
+    def test_append_log_uses_one_date_only_heading(self) -> None:
+        candidate = tool.VideoCandidate(
+            title="AI video",
+            url="https://www.bilibili.com/video/BV1logcheck",
+            bvid="BV1logcheck",
+        )
+        decision = tool.CandidateDecision(candidate=candidate, status="selected", reason="selected")
+        result = tool.ProcessResult(decision=decision, status="processed", reason="captured")
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            old_log = tool.KNOWLEDGE_LOG
+            tool.KNOWLEDGE_LOG = Path(tmpdir) / "log.md"
+            tool.KNOWLEDGE_LOG.write_text("# Wiki Log\n", encoding="utf-8")
+            try:
+                with mock.patch.object(tool, "today_str", return_value="2026-07-16"):
+                    tool.append_log(Path("bilibili-ai-daily-run-2026-07-16.md"), [result])
+                    tool.append_log(Path("bilibili-ai-daily-run-2026-07-16.md"), [result])
+                text = tool.KNOWLEDGE_LOG.read_text(encoding="utf-8")
+            finally:
+                tool.KNOWLEDGE_LOG = old_log
+
+        self.assertEqual(text.count("## [2026-07-16]"), 1)
+        self.assertIn("**ingest | Bilibili AI/具身智能每日视频采集**", text)
+
     def test_tos_audio_status_uses_tos_sdk_runner_for_list_check(self) -> None:
         env = {
             "TOS_ACCESS_KEY_ID": "ak",

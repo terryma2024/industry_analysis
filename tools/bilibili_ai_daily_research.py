@@ -1180,14 +1180,15 @@ def append_log(report_path: Path, results: list[ProcessResult]) -> None:
     if not processed:
         return
     log_entry = f"""
-## [{date}] ingest | Bilibili AI/具身智能每日视频采集
+## [{date}]
 
-- **变更**: 新增或更新 [[_syntheses/{report_path.stem}|Bilibili AI Daily Run {date}]]；处理 {len(processed)} 个 Bilibili 视频 source packet。
-- **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
-- **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/{report_path.stem}|Bilibili AI Daily Run {date}]]；处理 {len(processed)} 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
 """
     existing = KNOWLEDGE_LOG.read_text(encoding="utf-8") if KNOWLEDGE_LOG.exists() else ""
-    marker = f"## [{date}] ingest | Bilibili AI/具身智能每日视频采集"
+    marker = f"## [{date}]"
     if marker not in existing:
         KNOWLEDGE_LOG.write_text(existing.rstrip() + "\n\n" + log_entry.strip() + "\n", encoding="utf-8")
 
