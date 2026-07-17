@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-07-15
+last_updated: 2026-07-17
 tags:
   - wiki
   - log
@@ -542,3 +542,9 @@ tags:
   - **来源**: Bilibili `BV152Ne6qEuF` ASR source packet（B）与国务院《人工智能+》行动意见 `SRC-ai-081`（S）。
   - **结论**: 国家政策支持长期 AI 人才培养、青年人才发展、产教融合及规范期权激励；视频中的薪酬、岗位数、人员流动与资本市场数字未取得原始表或披露，均保留为待核验线索。
   - **限制**: 本轮不对个体薪酬、公司招聘强度或 AI 周期作价格预测；后续应取得招聘平台方法页、官方 JD/公告和公司财务资料。
+
+## [2026-07-17]
+
+- **automation | Bilibili 收藏夹每日候选去重**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-17|Bilibili AI Daily Run 2026-07-17]] 并更新 [[index|Knowledge Index]]。
+  - **结果**: 20 个候选全部命中既有 BV 标识；0 个进入模型复核，0 个转录或深研。TOS 当日前缀为空符合未处理音频的预期。

@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-15
+last_updated: 2026-07-17
 tags:
   - wiki
   - index
@@ -130,6 +130,7 @@ tags:
 
 - [[_syntheses/bilibili-ai-talent-market-and-career-path-deep-dive-2026-07-16|AI 人才市场与职业路径视频深度调研]] — 将 AI 抢人视频分类为 R10 职业路径调研；政策支持长期人才建设，但视频中的薪资、岗位量和市场数字均保留为待核验线索。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-16|Bilibili AI Daily Run 2026-07-16]] — 20 个候选，19 个重复；唯一模型选中的 AI 人才市场视频已成功转录并完成单视频深研。
+- [[_syntheses/bilibili-ai-daily-run-2026-07-17|Bilibili AI Daily Run 2026-07-17]] — 20 个候选均为重复；未进入模型复核、转录或单视频深研。
 
 - [[_syntheses/bilibili-ai-daily-run-2026-07-15|Bilibili AI Daily Run 2026-07-15]] — 20 candidates: 19 duplicates; one AI-research video processed successfully.
 - [[_syntheses/bilibili-enpire-physical-autoresearch-deep-dive-2026-07-15|ENPIRE 真实世界机器人自我改进视频深度调研]] — 将短视频的“AI 自己做科研”叙事校正为真实世界、受任务和安全边界约束的 agentic policy-improvement 闭环。
