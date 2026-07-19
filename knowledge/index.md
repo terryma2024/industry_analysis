@@ -128,6 +128,9 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-07-18|Bilibili AI Daily Run 2026-07-18]] — 20 个候选，18 个重复；模型选中并成功转录 RoboTTT 机器人长上下文与 Codex/Blender MCP 两条视频，均已完成单视频深研。
+- [[_syntheses/bilibili-robottt-long-context-robot-policy-deep-dive-2026-07-18|RoboTTT 长上下文机器人策略视频深度调研]] — R04 主分类：一手预印本支持 8K 时间步、fast weights 与论文内任务增益，但尚不等同于现场商业可靠性。
+- [[_syntheses/bilibili-codex-blender-mcp-toolchain-deep-dive-2026-07-18|Codex 与 Blender MCP 工具链视频深度调研]] — R05 主分类：确认 BlenderMCP 的工具架构，保留视频 ASR 中模型品牌、质量、耗时与成本主张为待验证。
 - [[_syntheses/bilibili-ai-talent-market-and-career-path-deep-dive-2026-07-16|AI 人才市场与职业路径视频深度调研]] — 将 AI 抢人视频分类为 R10 职业路径调研；政策支持长期人才建设，但视频中的薪资、岗位量和市场数字均保留为待核验线索。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-16|Bilibili AI Daily Run 2026-07-16]] — 20 个候选，19 个重复；唯一模型选中的 AI 人才市场视频已成功转录并完成单视频深研。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-17|Bilibili AI Daily Run 2026-07-17]] — 20 个候选均为重复；未进入模型复核、转录或单视频深研。

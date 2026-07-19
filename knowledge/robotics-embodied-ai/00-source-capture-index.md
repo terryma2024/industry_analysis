@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-07-14
+last_updated: 2026-07-18
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -22,7 +22,7 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 99 | 已成功抽取的 raw artifact。 |
+| `ok` | 100 | 已成功抽取的 raw artifact。 |
 | `fallback_html` | 9 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 1 | 本轮因 defuddle 失败，从网页内嵌结构化数据生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
@@ -44,6 +44,12 @@ aliases:
 | 摩尔线程 | `SRC-robotics-299`–`300` | [MUSA SDK](../../raw/robotics-embodied-ai/documents/SRC-robotics-299-moore-threads-musa-sdk-software-stack.md)、[Moore Perf 图形 API](../../raw/robotics-embodied-ai/documents/SRC-robotics-300-moore-perf-system-graphics-api-support.md) | CUDA 迁移工具边界及 OpenGL/Vulkan PoC 依据。 |
 | 海光 | `SRC-robotics-301` | [DCU ROCm 披露](../../raw/robotics-embodied-ai/documents/SRC-robotics-301-hygon-dcu-rocm-compatibility-disclosure.md) | 证明 ROCm 兼容声明；不把它外推为 JAX/MJX 认证。 |
 | 国产 AI/通用计算栈 | `SRC-robotics-302`–`306` | [昇腾 CANN](../../raw/robotics-embodied-ai/documents/SRC-robotics-302-ascend-cann-8-3-rc1-documentation-index.md)、[沐曦 MXMACA](../../raw/robotics-embodied-ai/documents/SRC-robotics-303-metax-products-and-mxmaca-software-ecosystem.md)、[壁仞 BIRENSUPA](../../raw/robotics-embodied-ai/documents/SRC-robotics-304-birensupa-software-platform.md)、[天数智芯](../../raw/robotics-embodied-ai/documents/SRC-robotics-305-iluvatar-corex-software-stack.md)、[寒武纪 BANGPy](../../raw/robotics-embodied-ai/documents/SRC-robotics-306-cambricon-bangpy-developer-manual.md) | 核验各软件栈的公开定位，并界定图形渲染、仿真器直跑与 AI 推理旁路。 |
+
+## 2026-07-18 RoboTTT 长上下文策略来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-307`](../../raw/robotics-embodied-ai/documents/SRC-robotics-307-robottt-context-scaling-for-robot-policies.md) | [RoboTTT arXiv preprint](../../raw/robotics-embodied-ai/documents/SRC-robotics-307-robottt-context-scaling-for-robot-policies.md) | 核验 `BV1HkKG69EeD` 的 8K time-step、TTT/fast weights、论文内真机任务与作者报告指标；预印本不证明跨工厂部署、订单或中国商业化。 |
 
 ## 快速定位
 

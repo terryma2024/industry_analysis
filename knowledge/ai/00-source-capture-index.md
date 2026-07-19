@@ -15,7 +15,7 @@ sources:
 # AI Source Capture Index
 
 > [!summary]
-> 本页登记 `knowledge/ai/sources.csv` 中网页来源的离线抓取状态。2026-06-02 已运行 `tools/extract_sources_with_defuddle.py --industry ai --timeout 60`：16 条 `ok`，7 条 `fallback_html`，1 条 `failed`。2026-06-29 追加 AI 总行业 analyst source notes（SRC-ai-033 至 SRC-ai-046）。2026-07-14 新增并成功捕获 19 条 MediaPipe/LiteRT 官方来源与原始论文（SRC-ai-061 至 SRC-ai-079）；2026-07-15 追加 ENPIRE 一手论文归档（SRC-ai-080）。
+> 本页登记 `knowledge/ai/sources.csv` 中网页来源的离线抓取状态。2026-06-02 已运行 `tools/extract_sources_with_defuddle.py --industry ai --timeout 60`：16 条 `ok`，7 条 `fallback_html`，1 条 `failed`。2026-06-29 追加 AI 总行业 analyst source notes（SRC-ai-033 至 SRC-ai-046）。2026-07-14 新增并成功捕获 19 条 MediaPipe/LiteRT 官方来源与原始论文（SRC-ai-061 至 SRC-ai-079）；2026-07-15 追加 ENPIRE 一手论文归档（SRC-ai-080）；2026-07-18 归档 BlenderMCP 项目 README（SRC-ai-082）。
 
 ## 状态说明
 
@@ -91,6 +91,7 @@ sources:
 | SRC-ai-079 | AI Edge Function Calling guide | ok | [raw](../../raw/ai/documents/SRC-ai-079-ai-edge-function-calling-guide.md) | deprecated；官方建议迁移 LiteRT-LM。 |
 | SRC-ai-080 | ENPIRE Agentic Robot Policy Self-Improvement in the Real World | ok | [raw](../../raw/ai/documents/SRC-ai-080-enpire-agentic-robot-policy-self-improvement-in-the-real-world.md) | 用于校验 ENPIRE 四模块、真实世界闭环、任务范围与 pass@8 指标边界。 |
 | SRC-ai-081 | 国务院关于深入实施“人工智能+”行动的意见 | ok | [raw](../../raw/ai/documents/SRC-ai-081-source.md) | 用于校验 AI 人才培养、青年人才、期权激励与就业风险评估，不用于证明视频中的薪资或岗位数字。 |
+| SRC-ai-082 | BlenderMCP project README | ok | [raw](../../raw/ai/documents/SRC-ai-082-blendermcp-project-readme.md) | 用于核验 `BV1JhNC6zE8X` 中的 add-on + MCP server 架构、Blender 操作范围与凭证/安全边界；不核验模型品牌或视频效果。 |
 
 ## 关联连接
 

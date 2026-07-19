@@ -548,3 +548,16 @@ tags:
 - **automation | Bilibili 收藏夹每日候选去重**
   - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-17|Bilibili AI Daily Run 2026-07-17]] 并更新 [[index|Knowledge Index]]。
   - **结果**: 20 个候选全部命中既有 BV 标识；0 个进入模型复核，0 个转录或深研。TOS 当日前缀为空符合未处理音频的预期。
+
+## [2026-07-18]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-18|Bilibili AI Daily Run 2026-07-18]]；处理 2 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+- **synthesis | Bilibili RoboTTT 与 Codex/Blender MCP 单视频深研**
+  - **变更**: 新增 [[_syntheses/bilibili-robottt-long-context-robot-policy-deep-dive-2026-07-18|RoboTTT 长上下文机器人策略视频深度调研]]（R04，R07）与 [[_syntheses/bilibili-codex-blender-mcp-toolchain-deep-dive-2026-07-18|Codex 与 Blender MCP 工具链视频深度调研]]（R05，R07）；更新两张 source card、每日报告、全局索引、AI/机器人来源台账及来源抽取 MOC。
+  - **来源**: 新增并成功捕获 `SRC-robotics-307` RoboTTT arXiv 预印本与 `SRC-ai-082` BlenderMCP 项目 README；视频转录均保留 B 级边界。
+  - **结论**: RoboTTT 的可信增量是长程视觉—动作上下文的 fast-weight TTT 机制及论文内结果，现场商业可靠性待验证；BlenderMCP 证明 Agent 可操控 Blender 的工具层，而 ASR 所称模型品牌、质量、耗时和成本不构成已核验事实。
+  - **限制**: TOS 当日前缀记录 4 个音频对象而仅有 2 条 processed source packet；一次受控补跑在 Volcengine 查询阶段 TLS/remote-disconnect 失败，未写入第三份 source packet。精确对象—尝试映射待在存储生命周期审查后确认，不应据此推断第三条视频。
