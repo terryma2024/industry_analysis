@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-17
+last_updated: 2026-07-19
 tags:
   - wiki
   - index
@@ -14,6 +14,14 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/bilibili-bv1b2kc6heyx-pi-ai-7-18-13-survey-2026|PI 机器人 AI 创业公司 · 7 位创始人 · 18 个月 · 13 项产出【Survey 2026】]] — 已综合为 [[_syntheses/bilibili-physical-intelligence-vla-experience-loop-deep-dive-2026-07-19|PI VLA 与经验闭环深研]]；关键模型主张以一手论文校验。
+
+- [[_sources/bilibili-bv13ykv6gek8-bilibili-video|做具身智能一定要几十万吗？我们带着答案拿了个冠军]] — 已综合为 [[_syntheses/bilibili-low-cost-embodied-robot-project-deep-dive-2026-07-19|低成本具身机器人项目深研]]；成本与开源交付物仍待验证。
+
+- [[_sources/bilibili-bv1jhnc6ze8x-gpt-5-6-sol-blender-mcp|GPT 5.6 Sol 操控 Blender 有多强？社区案例、MCP 安装与真实实测]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
+- [[_sources/bilibili-bv1hkkg69eed-jim-fan-robottt-8k|李飞飞、Jim Fan新作！RoboTTT把上下文拉到8K，机器人终于不再转头就忘]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
 - [[_sources/bilibili-bv152ne6qeuf-18-ai-ai|18岁年薪百万，AI抢人大战开始了！AI天才的收入有多疯狂？]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
@@ -128,6 +136,9 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-07-19|Bilibili AI Daily Run 2026-07-19]] — 20 个候选、18 个重复；模型选择并成功转录低成本具身机器人项目与 Physical Intelligence 调研两条视频，均完成单视频深研。
+- [[_syntheses/bilibili-low-cost-embodied-robot-project-deep-dive-2026-07-19|低成本具身智能机器人项目视频深度调研]] — R05 主分类、R07 次分类：把“低成本”拆回可复现实验闭环、工程总拥有成本与待开源验证项。
+- [[_syntheses/bilibili-physical-intelligence-vla-experience-loop-deep-dive-2026-07-19|Physical Intelligence VLA 与经验闭环视频深度调研]] — R04 主分类、R07 次分类：一手论文支持 π0、π0.5 与 RECAP 的研究结论，但不支持把视频中的全部版本、公司与商业化叙事当成事实。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-18|Bilibili AI Daily Run 2026-07-18]] — 20 个候选，18 个重复；模型选中并成功转录 RoboTTT 机器人长上下文与 Codex/Blender MCP 两条视频，均已完成单视频深研。
 - [[_syntheses/bilibili-robottt-long-context-robot-policy-deep-dive-2026-07-18|RoboTTT 长上下文机器人策略视频深度调研]] — R04 主分类：一手预印本支持 8K 时间步、fast weights 与论文内任务增益，但尚不等同于现场商业可靠性。
 - [[_syntheses/bilibili-codex-blender-mcp-toolchain-deep-dive-2026-07-18|Codex 与 Blender MCP 工具链视频深度调研]] — R05 主分类：确认 BlenderMCP 的工具架构，保留视频 ASR 中模型品牌、质量、耗时与成本主张为待验证。

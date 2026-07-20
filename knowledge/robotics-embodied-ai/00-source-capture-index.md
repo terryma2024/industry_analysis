@@ -180,6 +180,13 @@ aliases:
 | [`SRC-robotics-282`](../../raw/robotics-embodied-ai/documents/SRC-robotics-282-spider-official-implementation.md) | [SPIDER 官方实现](../../raw/robotics-embodied-ai/documents/SRC-robotics-282-spider-official-implementation.md) | 多本体、多数据集和多物理仿真器的人到机器人重定向工程底座。 |
 | [`SRC-robotics-283`](../../raw/robotics-embodied-ai/documents/SRC-robotics-283-geometric-retargeting-a-principled-ultrafast-neural-hand-retargeting-algorithm.md) | [GeoRT](../../raw/robotics-embodied-ai/documents/SRC-robotics-283-geometric-retargeting-a-principled-ultrafast-neural-hand-retargeting-algorithm.md) | 无监督几何手部重定向；1 kHz 推理速度为作者报告。 |
 
+## 2026-07-19 Physical Intelligence VLA 与经验闭环来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-308`](../../raw/robotics-embodied-ai/documents/SRC-robotics-308-0-5-a-vision-language-action-model-with-open-world-generalization.md) | [π0.5 arXiv HTML](../../raw/robotics-embodied-ai/documents/SRC-robotics-308-0-5-a-vision-language-action-model-with-open-world-generalization.md) | 用于核验异构机器人数据与多模态语义共训、未见住宅中的长程操作；实验结论不外推为商业部署。 |
+| [`SRC-robotics-309`](../../raw/robotics-embodied-ai/documents/SRC-robotics-309-0-6-a-vla-that-learns-from-experience.md) | [π*0.6 / RECAP arXiv HTML](../../raw/robotics-embodied-ai/documents/SRC-robotics-309-0-6-a-vla-that-learns-from-experience.md) | 用于核验自主 rollout、人类遥操纠正、advantage conditioning 和论文内的吞吐/失败率效果边界。 |
+
 ## 后续流程
 
 - 新增来源后先更新 [[sources.csv]]，再运行 `uv run python tools/extract_sources_with_defuddle.py --industry robotics-embodied-ai`。

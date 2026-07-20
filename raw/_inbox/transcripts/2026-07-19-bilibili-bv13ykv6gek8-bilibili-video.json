@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-07-19T01:03:09.874273+00:00",
+  "platform": "bilibili",
+  "video": {
+    "title": "做具身智能一定要几十万吗？我们带着答案拿了个冠军",
+    "url": "https://www.bilibili.com/video/BV13yKV6GEK8",
+    "bvid": "BV13yKV6GEK8",
+    "aid": "",
+    "video_id": "",
+    "author": "黑狗木",
+    "published_at": "",
+    "favorited_at": "",
+    "description": "",
+    "tags": [],
+    "category": "",
+    "raw": {
+      "rank": 1,
+      "title": "做具身智能一定要几十万吗？我们带着答案拿了个冠军",
+      "author": "黑狗木",
+      "plays": 2166,
+      "url": "https://www.bilibili.com/video/BV13yKV6GEK8"
+    }
+  },
+  "target_industries": [
+    "robotics-embodied-ai",
+    "ai"
+  ],
+  "relevance": {
+    "score": 4,
+    "matched_terms": [
+      "具身",
+      "具身智能"
+    ]
+  },
+  "extraction_method": "volcengine-external-command:volc.seedasr.auc",
+  "transcript_text": "前几天我们带着这台自己做的机器人去了北京参加一场具身智能探月计划黑客松。经过48小时极限开发，进入决赛路演。然后拿了总冠军。但这台机器一开始并不是为了比赛做的，它来自一个我想了很久的问题，做具身智能一定要几十万吗？对于很多学生、小团队，甚至一些实验室来说，大家都知道居身智能是风口，但想真正做一次真机实验，设备贵、资料少，第一步就很难迈出去。所以我从软件开始，一点点学结构、3D打印、钣金、CNC、电器和控制。于是就有了它。这台 HiReReLift 双臂升降机器人，它可以全向移动、升降、双臂操作。通过 VR 遥操作采集数据，再让模型回到真实机器人上推理。拿到冠军是对它的一次验证。但接下来我想做一件更重要的事，把它的硬件、软件和复现过程完整开源。项目即将完整开源，7月23日正式发布。所以说做具身智能真的一定要几十万吗？"
+}
