@@ -17,6 +17,8 @@ tags:
 
 - [[_sources/zsibot-matrix-robotics-simulator-source-set|zsibot/matrix（MATRiX）机器人仿真平台来源集]] — 固定提交 README、v0.1.2、GitHub API/issue/PR/tag、上游项目与政策证据；综合于 [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|MATRiX 深度调研]]。
 
+- [[_sources/bilibili-bv17wnv6gero-bilibili-video|途见科技：国家认证的“皮肤级”触觉方案]] — 已综合为 [[_syntheses/bilibili-tachin-flexible-electronic-skin-deep-dive-2026-07-20|途见科技柔性电子皮肤视频深度调研]]；产品定位有官方材料，融资、订单、量产和性能主张仍待验证。
+
 - [[_sources/bilibili-bv1b2kc6heyx-pi-ai-7-18-13-survey-2026|PI 机器人 AI 创业公司 · 7 位创始人 · 18 个月 · 13 项产出【Survey 2026】]] — 已综合为 [[_syntheses/bilibili-physical-intelligence-vla-experience-loop-deep-dive-2026-07-19|PI VLA 与经验闭环深研]]；关键模型主张以一手论文校验。
 
 - [[_sources/bilibili-bv13ykv6gek8-bilibili-video|做具身智能一定要几十万吗？我们带着答案拿了个冠军]] — 已综合为 [[_syntheses/bilibili-low-cost-embodied-robot-project-deep-dive-2026-07-19|低成本具身机器人项目深研]]；成本与开源交付物仍待验证。
@@ -140,6 +142,8 @@ tags:
 ## Syntheses
 
 - [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|zsibot/matrix（MATRiX）机器人仿真平台深度调研]] — R05 主分类、R04/R07 次分类：审计架构、发行包、代码开放边界、维护活跃度、文档漂移、许可与商业落地；结论是“值得做限定 PoC，不宜未经验证替换通用仿真底座”。
+- [[_syntheses/bilibili-ai-daily-run-2026-07-20|Bilibili AI Daily Run 2026-07-20]] — 20 个候选、19 个重复；唯一模型选中的柔性电子皮肤视频已完成转录与 R03/R07 单视频深研。
+- [[_syntheses/bilibili-tachin-flexible-electronic-skin-deep-dive-2026-07-20|途见科技柔性电子皮肤视频深度调研]] — R03 主分类、R07 次分类：区分可确认的产品方向/共同展示与未验证的融资、供应、性能、订单和规模化叙事。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-19|Bilibili AI Daily Run 2026-07-19]] — 20 个候选、18 个重复；模型选择并成功转录低成本具身机器人项目与 Physical Intelligence 调研两条视频，均完成单视频深研。
 - [[_syntheses/bilibili-low-cost-embodied-robot-project-deep-dive-2026-07-19|低成本具身智能机器人项目视频深度调研]] — R05 主分类、R07 次分类：把“低成本”拆回可复现实验闭环、工程总拥有成本与待开源验证项。
 - [[_syntheses/bilibili-physical-intelligence-vla-experience-loop-deep-dive-2026-07-19|Physical Intelligence VLA 与经验闭环视频深度调研]] — R04 主分类、R07 次分类：一手论文支持 π0、π0.5 与 RECAP 的研究结论，但不支持把视频中的全部版本、公司与商业化叙事当成事实。

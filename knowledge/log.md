@@ -581,3 +581,14 @@ tags:
   - **来源**: 固定提交源码/文档审计、v0.1.2 Release 与资产 manifest、GitHub API/issue/PR/tag、GENISOM.AI 官方目录、致谢上游、相关预印本、2026 真实场景训练行动和国家标准计划；归档 `SRC-robotics-310`–`317`。
   - **结论**: MATRiX 的现实价值是把 MuJoCo 控制/动力学与 Unreal 高保真场景包装为面向四足机器人的本土化联调和演示入口；当前更适合限定 PoC，不宜未经实测替代 Gazebo、MuJoCo 或 Isaac Sim 等通用底座。
   - **限制**: 未在 Ubuntu、NVIDIA GPU 和目标真机上运行多 GB 发行包；性能、确定性、传感器标定、批量并行、许可证链与若干文档漂移问题仍需供应商答复和现场验收。
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-20|Bilibili AI Daily Run 2026-07-20]]；处理 1 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+- **synthesis | Bilibili 途见科技柔性电子皮肤单视频深研**
+  - **变更**: 新增 [[_syntheses/bilibili-tachin-flexible-electronic-skin-deep-dive-2026-07-20|途见科技柔性电子皮肤视频深度调研]]（R03，R07）；更新 source card、每日运行报告、[[index|Knowledge Index]]、机器人来源台账和来源抽取 MOC。
+  - **来源**: B 级 `BV17WNv6GEro` ASR transcript；A 级 `SRC-robotics-318` 途见官网与 `SRC-robotics-319` 深圳发改委托管报道；S 级 `SRC-robotics-320` 兆威机电 2025 年报。
+  - **结论**: 可确认公司面向灵巧手、机器人全身和数据采集的触觉产品方向，以及 2025 CES 与兆威共同展示；现有材料不确认融资额、客户订单、量产、性能、投资或供应关系。最小商业验证应比较有/无触觉时的任务成功率、人工干预、寿命与单位合格任务成本。
+  - **限制**: `SRC-robotics-319` 因源站 TLS `BAD_ECPOINT` 未能自动抽取，`SRC-robotics-320` PDF 文本转换失败但 PDF 已留存；两者均记录在 manifest/MOC，后续需补稳定镜像或转换后端。

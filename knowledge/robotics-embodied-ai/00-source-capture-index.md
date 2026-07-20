@@ -200,6 +200,14 @@ aliases:
 | [`SRC-robotics-308`](../../raw/robotics-embodied-ai/documents/SRC-robotics-308-0-5-a-vision-language-action-model-with-open-world-generalization.md) | [π0.5 arXiv HTML](../../raw/robotics-embodied-ai/documents/SRC-robotics-308-0-5-a-vision-language-action-model-with-open-world-generalization.md) | 用于核验异构机器人数据与多模态语义共训、未见住宅中的长程操作；实验结论不外推为商业部署。 |
 | [`SRC-robotics-309`](../../raw/robotics-embodied-ai/documents/SRC-robotics-309-0-6-a-vla-that-learns-from-experience.md) | [π*0.6 / RECAP arXiv HTML](../../raw/robotics-embodied-ai/documents/SRC-robotics-309-0-6-a-vla-that-learns-from-experience.md) | 用于核验自主 rollout、人类遥操纠正、advantage conditioning 和论文内的吞吐/失败率效果边界。 |
 
+## 2026-07-20 途见科技柔性电子皮肤视频一级校验来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-318`](../../raw/robotics-embodied-ai/documents/SRC-robotics-318-source.md) | [途见官网 raw](../../raw/robotics-embodied-ai/documents/SRC-robotics-318-source.md) | 核验其自述的材料—器件—电路—算法定位与 EI-H/EI-B/EI-G 产品类别；不认作第三方性能/收入证明。 |
+| `SRC-robotics-319` | 抽取失败（源站 TLS `BAD_ECPOINT`） | 深圳发改委托管报道：URL/正文已人工核验 2025 CES 共同展示与创始人供应链陈述；保留失败 manifest，不证明订单、收入或量产指标。 |
+| [`SRC-robotics-320`](../../raw/robotics-embodied-ai/documents/SRC-robotics-320-2025.md) | [兆威年报 PDF sidecar](../../raw/robotics-embodied-ai/documents/SRC-robotics-320-2025.md) | 核验其仿生灵巧手研发/量产目标；PDF 已留存，文本转换失败待补；未点名途见，不能用于证明供应关系或投资。 |
+
 ## 后续流程
 
 - 新增来源后先更新 [[sources.csv]]，再运行 `uv run python tools/extract_sources_with_defuddle.py --industry robotics-embodied-ai`。
