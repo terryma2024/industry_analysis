@@ -7,13 +7,17 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-07-14
+last_updated: 2026-07-20
 ---
 
 # 机器人（具身智能） - 研究中间笔记
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
+
+## 2026-07-20 MATRiX 仿真平台深研
+
+- [[zsibot-matrix-robotics-simulator-deep-dive-2026-07-20]]: 对 `zsibot/matrix` 做固定提交、发行包、代码、文档、issue/PR、上游和政策证据审计；结论为“适合四足导航/感知联调的限定 PoC，尚不足以替代通用仿真底座”，并给出商业应用与中小创业边界。
 
 ## 2026-07-14 机器人仿真平台选型
 

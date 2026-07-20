@@ -573,3 +573,11 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-low-cost-embodied-robot-project-deep-dive-2026-07-19|低成本具身智能机器人项目视频深度调研]]（R05，R07）与 [[_syntheses/bilibili-physical-intelligence-vla-experience-loop-deep-dive-2026-07-19|Physical Intelligence VLA 与经验闭环视频深度调研]]（R04，R07）；修复当日汇总被重试覆盖的 processed 计数，更新两张 source card、全局索引及机器人来源台账。
   - **来源**: B 级 ASR transcript；S 级 `SRC-robotics-061`、`SRC-robotics-308`、`SRC-robotics-309`。
   - **限制**: HiReReLift 的获奖、成本、规格和开源交付物尚无一手可复核材料；PI 视频中的 π0.7、PI Layer、OpenPI、创始/融资与全部数字未逐一被一手来源支持。
+
+## [2026-07-20]
+
+- **synthesis | zsibot/matrix（MATRiX）机器人仿真平台深度调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|MATRiX 深度调研]]、[[_sources/zsibot-matrix-robotics-simulator-source-set|来源集]]与[[_entities/MATRiXSimulator|实体页]]；更新全局索引、机器人 MOC、研究笔记索引和来源捕获索引。
+  - **来源**: 固定提交源码/文档审计、v0.1.2 Release 与资产 manifest、GitHub API/issue/PR/tag、GENISOM.AI 官方目录、致谢上游、相关预印本、2026 真实场景训练行动和国家标准计划；归档 `SRC-robotics-310`–`317`。
+  - **结论**: MATRiX 的现实价值是把 MuJoCo 控制/动力学与 Unreal 高保真场景包装为面向四足机器人的本土化联调和演示入口；当前更适合限定 PoC，不宜未经实测替代 Gazebo、MuJoCo 或 Isaac Sim 等通用底座。
+  - **限制**: 未在 Ubuntu、NVIDIA GPU 和目标真机上运行多 GB 发行包；性能、确定性、传感器标定、批量并行、许可证链与若干文档漂移问题仍需供应商答复和现场验收。

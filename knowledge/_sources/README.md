@@ -2,7 +2,7 @@
 title: Sources Layer
 type: index
 date_created: 2026-05-29
-last_updated: 2026-06-23
+last_updated: 2026-07-20
 tags:
   - wiki
   - sources
@@ -17,3 +17,4 @@ tags:
 - [[karpathy-llm-wiki-pattern|Karpathy LLM Wiki Pattern]]
 - [[roboalign-r1-reward-aligned-robot-video-world-models|RoboAlign-R1 - Reward-Aligned Robot Video World Models]]
 - [[airspeed-open-source-data-production-platform|AIRSPEED - Open-source Data Production Platform for Embodied AI]]
+- [[zsibot-matrix-robotics-simulator-source-set|zsibot/matrix（MATRiX）机器人仿真平台来源集]]

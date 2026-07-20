@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-07-18
+last_updated: 2026-07-20
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -22,11 +22,24 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 100 | 已成功抽取的 raw artifact。 |
+| `ok` | 108 | 已成功抽取的 raw artifact。 |
 | `fallback_html` | 9 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
-| `manual_parse` | 1 | 本轮因 defuddle 失败，从网页内嵌结构化数据生成 Markdown。 |
+| `manual_parse` | 2 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据或 GitHub API 生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
 | `failed` | 7 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+
+## 2026-07-20 MATRiX 机器人仿真平台来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-310`](../../raw/robotics-embodied-ai/documents/SRC-robotics-310-matrix-repository-readme-at-audited-commit.md) | [固定提交 README](../../raw/robotics-embodied-ai/documents/SRC-robotics-310-matrix-repository-readme-at-audited-commit.md) | 核验安装入口、支持机器人、演示与仓库自述；营销表述不作为独立性能证据。 |
+| [`SRC-robotics-311`](../../raw/robotics-embodied-ai/documents/SRC-robotics-311-matrix-v0-1-2-release-and-package-manifest.md) | [v0.1.2 Release](../../raw/robotics-embodied-ai/documents/SRC-robotics-311-matrix-v0-1-2-release-and-package-manifest.md) | 核验公开稳定发行说明；实际包体、下载量与 tag 异常由 `SRC-robotics-312` 补充。 |
+| [`SRC-robotics-312`](../../raw/robotics-embodied-ai/documents/SRC-robotics-312-matrix-github-maintenance-and-issue-audit.md) | [GitHub API 审计](../../raw/robotics-embodied-ai/documents/SRC-robotics-312-matrix-github-maintenance-and-issue-audit.md) | 2026-07-20 快照：提交、贡献者、stars/forks、发行资产、issue/PR 与 tag；动态指标不可视为永久事实。 |
+| [`SRC-robotics-313`](../../raw/robotics-embodied-ai/documents/SRC-robotics-313-genisom-ai-official-open-source-catalog.md) | [GENISOM.AI 开源目录](../../raw/robotics-embodied-ai/documents/SRC-robotics-313-genisom-ai-official-open-source-catalog.md) | 核验 MATRiX 在 RoamerX、VLN、SDK 与 URDF 资源生态中的定位。 |
+| [`SRC-robotics-314`](../../raw/robotics-embodied-ai/documents/SRC-robotics-314-mujoco-unreal-engine-plugin-upstream-repository.md) | [MuJoCo–UE 上游仓库](../../raw/robotics-embodied-ai/documents/SRC-robotics-314-mujoco-unreal-engine-plugin-upstream-repository.md) | 核验 MATRiX 致谢的上游项目和公开许可状态；不据此推断未公开代码关系。 |
+| [`SRC-robotics-315`](../../raw/robotics-embodied-ai/documents/SRC-robotics-315-unreal-robotics-lab-a-high-fidelity-robotics-simulator-with-advanced-physics-and.md) | [Unreal Robotics Lab 预印本](../../raw/robotics-embodied-ai/documents/SRC-robotics-315-unreal-robotics-lab-a-high-fidelity-robotics-simulator-with-advanced-physics-and.md) | 证明 2025 年已有 UE + MuJoCo 公开系统与实验，限制“全球首个”类无限定营销说法。 |
+| [`SRC-robotics-316`](../../raw/robotics-embodied-ai/documents/SRC-robotics-316-2026.md) | [2026 真实场景训练行动](../../raw/robotics-embodied-ai/documents/SRC-robotics-316-2026.md) | 核验四足机器人、成熟仿真平台和成功率/效率/安全/经济性等政策测量要求。 |
+| [`SRC-robotics-317`](../../raw/robotics-embodied-ai/documents/SRC-robotics-317-source.md) | [机器人模型训练平台国家标准计划](../../raw/robotics-embodied-ai/documents/SRC-robotics-317-source.md) | 核验训练平台规范化与标准化方向；不能直接证明 MATRiX 已符合标准。 |
 
 ## Isaac Sim、Gazebo、MuJoCo 仿真平台来源
 

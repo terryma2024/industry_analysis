@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-19
+last_updated: 2026-07-20
 tags:
   - wiki
   - index
@@ -14,6 +14,8 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/zsibot-matrix-robotics-simulator-source-set|zsibot/matrix（MATRiX）机器人仿真平台来源集]] — 固定提交 README、v0.1.2、GitHub API/issue/PR/tag、上游项目与政策证据；综合于 [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|MATRiX 深度调研]]。
 
 - [[_sources/bilibili-bv1b2kc6heyx-pi-ai-7-18-13-survey-2026|PI 机器人 AI 创业公司 · 7 位创始人 · 18 个月 · 13 项产出【Survey 2026】]] — 已综合为 [[_syntheses/bilibili-physical-intelligence-vla-experience-loop-deep-dive-2026-07-19|PI VLA 与经验闭环深研]]；关键模型主张以一手论文校验。
 
@@ -99,6 +101,7 @@ tags:
 
 ## Entities
 
+- [[_entities/MATRiXSimulator|MATRiX Simulator]] — GENISOM.AI / zsibot 面向四足机器人开发的 MuJoCo + Unreal Engine 仿真工具；当前开源仓库主要是脚本、配置、教程和二进制分发入口，适合经 PoC 后用于导航/感知联调与演示，不宜直接视为成熟训练基础设施。
 - [[_entities/SRTSoftRobotTech|SRT 软体机器人]] — 中国气动柔性末端执行器与行业自动化公司；已完成软体夹爪产品化和医疗康复延伸，当前重点跟踪财务透明度与 2026 年创始团队迁移。
 - [[_entities/AndrejKarpathy|Andrej Karpathy]] — LLM Wiki 理念提出者，强调把知识管理从 RAG 转向持续编译。
 - [[_entities/ScaleAI|Scale AI]] — 美国 AI 数据基础设施公司，从自动驾驶标注扩展到大模型后训练、评测和政府 AI，并于 2025 年获得 Meta 战略投资。
@@ -136,6 +139,7 @@ tags:
 
 ## Syntheses
 
+- [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|zsibot/matrix（MATRiX）机器人仿真平台深度调研]] — R05 主分类、R04/R07 次分类：审计架构、发行包、代码开放边界、维护活跃度、文档漂移、许可与商业落地；结论是“值得做限定 PoC，不宜未经验证替换通用仿真底座”。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-19|Bilibili AI Daily Run 2026-07-19]] — 20 个候选、18 个重复；模型选择并成功转录低成本具身机器人项目与 Physical Intelligence 调研两条视频，均完成单视频深研。
 - [[_syntheses/bilibili-low-cost-embodied-robot-project-deep-dive-2026-07-19|低成本具身智能机器人项目视频深度调研]] — R05 主分类、R07 次分类：把“低成本”拆回可复现实验闭环、工程总拥有成本与待开源验证项。
 - [[_syntheses/bilibili-physical-intelligence-vla-experience-loop-deep-dive-2026-07-19|Physical Intelligence VLA 与经验闭环视频深度调研]] — R04 主分类、R07 次分类：一手论文支持 π0、π0.5 与 RECAP 的研究结论，但不支持把视频中的全部版本、公司与商业化叙事当成事实。
