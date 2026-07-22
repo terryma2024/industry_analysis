@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-20
+last_updated: 2026-07-22
 tags:
   - wiki
   - index
@@ -141,6 +141,7 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-07-22|Bilibili AI Daily Run 2026-07-22]] — 20 个候选、15 个重复；模型选中 4 个 AI/具身智能相关视频，但首个外部 ASR 调用上传音频后无输出，未产生可综合的 source packet。
 - [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|zsibot/matrix（MATRiX）机器人仿真平台深度调研]] — R05 主分类、R04/R07 次分类：审计架构、发行包、代码开放边界、维护活跃度、文档漂移、许可与商业落地；结论是“值得做限定 PoC，不宜未经验证替换通用仿真底座”。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-20|Bilibili AI Daily Run 2026-07-20]] — 20 个候选、19 个重复；唯一模型选中的柔性电子皮肤视频已完成转录与 R03/R07 单视频深研。
 - [[_syntheses/bilibili-tachin-flexible-electronic-skin-deep-dive-2026-07-20|途见科技柔性电子皮肤视频深度调研]] — R03 主分类、R07 次分类：区分可确认的产品方向/共同展示与未验证的融资、供应、性能、订单和规模化叙事。

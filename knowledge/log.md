@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-07-17
+last_updated: 2026-07-22
 tags:
   - wiki
   - log
@@ -592,3 +592,10 @@ tags:
   - **来源**: B 级 `BV17WNv6GEro` ASR transcript；A 级 `SRC-robotics-318` 途见官网与 `SRC-robotics-319` 深圳发改委托管报道；S 级 `SRC-robotics-320` 兆威机电 2025 年报。
   - **结论**: 可确认公司面向灵巧手、机器人全身和数据采集的触觉产品方向，以及 2025 CES 与兆威共同展示；现有材料不确认融资额、客户订单、量产、性能、投资或供应关系。最小商业验证应比较有/无触觉时的任务成功率、人工干预、寿命与单位合格任务成本。
   - **限制**: `SRC-robotics-319` 因源站 TLS `BAD_ECPOINT` 未能自动抽取，`SRC-robotics-320` PDF 文本转换失败但 PDF 已留存；两者均记录在 manifest/MOC，后续需补稳定镜像或转换后端。
+
+## [2026-07-22]
+
+- **ingest | Bilibili AI/具身智能每日视频采集失败记录**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-22|Bilibili AI Daily Run 2026-07-22]]；20 个候选中 15 个重复，模型选中 4 个，未创建 transcript/source card/单视频深研页。
+  - **来源**: TOS `asr-audio/2026/07/22` 前缀的两个 102,786,476-byte 音频对象及本地 ASR 进程诊断。
+  - **限制**: `BV1cRK86zEpQ` 在上传后约七分钟没有 ASR 输出；另三条选中视频没有启动。需先核验 Volcengine 任务/配额与上传对象映射，再做一次有界重试。
