@@ -21,7 +21,7 @@ status: active
 - Selected for transcript extraction: 1
 - Duplicate skipped: 13
 - Needs model review: 6
-- Processed: 1
+- Processed: 2 (one completed after the initial report)
 - Failed: 0
 
 ## OpenCLI / Fetch Notes
@@ -68,13 +68,14 @@ status: active
 ## Processing Results
 
 - `BV1X45w6YENG` 【教程】具身智能实操，蚂蚁灵波VLA上手体验: processed; transcript captured and source card written; raw=`raw/_inbox/transcripts/2026-07-23-bilibili-bv1x45w6yeng-vla.json`; source=`knowledge/_sources/bilibili-bv1x45w6yeng-vla.md`
+- `BV1cRK86zEpQ` 蚂蚁灵波沈宇军访谈: processed; transcript captured after the initial report; raw=`raw/_inbox/transcripts/2026-07-23-bilibili-bv1crk86zepq-scale-up.json`; source=`knowledge/_sources/bilibili-bv1crk86zepq-scale-up.md`
 
 ## Codex Model Decision And Failure Investigation
 
 - 本次候选池有 6 条 AI/具身智能相关视频：本页已处理的 `BV1X45w6YENG`，以及 `BV17doLBJEBt`、`BV1cRK86zEpQ`、`BV1KtKY6RExA`、`BV1q7Ny6TE8V`、`BV1pNKU6dE3V`；哲学人生感悟视频不相关。表格保留脚本的原始 `needs_model_review` 状态，模型判断以本节为准。
 - `BV1X45w6YENG` 通过 `volc.bigasr.auc` fallback 成功生成 transcript；该条已完成 R05（次 R04/R07）单视频深研。
 - 随后对 ASR 适配器做的单条健康诊断返回 `Volcengine HTTP 429`，响应 code `45000292`、message `quota exceeded for types: audio_duration_lifetime`。这是外部语音识别生命周期时长配额耗尽，不是 Bilibili 412、TOS 可达性或仓库脚本错误。
-- 为避免重复上传，余 5 条已选视频没有启动，未生成 transcript/source card/深研页。恢复配额后应从这 5 个 BV 做一次有界重试；不要重跑重复或不相关候选。
+- 后台转写随后完成 `BV1cRK86zEpQ`；其余 4 条已选视频没有启动，未生成 transcript/source card/深研页。恢复配额后应从这 4 个 BV 做一次有界重试；不要重跑重复或不相关候选。
 
 ## Codex Research Handoff
 

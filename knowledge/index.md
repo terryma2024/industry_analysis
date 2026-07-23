@@ -15,6 +15,8 @@ tags:
 
 ## Sources
 
+- [[_sources/bilibili-bv1crk86zepq-scale-up|蚂蚁灵波沈宇军具身原生模型访谈]] — B 级访谈 source packet；已用 LingBot-VLA 官方仓库与技术报告限定其技术主张。
+
 - [[_sources/bilibili-bv1x45w6yeng-vla|【教程】具身智能实操，蚂蚁灵波VLA上手体验]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
 - [[_sources/zsibot-matrix-robotics-simulator-source-set|zsibot/matrix（MATRiX）机器人仿真平台来源集]] — 固定提交 README、v0.1.2、GitHub API/issue/PR/tag、上游项目与政策证据；综合于 [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|MATRiX 深度调研]]。
@@ -142,6 +144,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-robbyant-native-embodied-model-strategy-deep-dive-2026-07-23|蚂蚁灵波具身原生模型战略访谈深度调研]] — R03 主分类、R04/R07 次分类：开源技术资产可核验，组织、数据联盟、商业化与竞争叙事仍待一手证据。
 
 - [[_syntheses/bilibili-lingbot-vla-hands-on-deep-dive-2026-07-23|LingBot-VLA 上手教程视频深度调研]] — R05 主分类、R04/R07 次分类：开源 VLA 的价值在可审计的后训练与部署工具链；模型分数不能替代目标工位的闭环成功率、人工干预与单位任务成本。
 

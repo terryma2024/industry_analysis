@@ -607,3 +607,7 @@ tags:
   - **来源**: B 级 `BV1X45w6YENG` ASR transcript；S 级 `SRC-robotics-321` 官方代码/文档与 `SRC-robotics-322` 技术报告。
   - **结论**: 公开后训练与部署闭环可确认；论文/README 分数不等同于目标工位的商业可靠性。
   - **限制**: 5 条已选视频未启动；Volcengine `45000292` 表示 `audio_duration_lifetime` 配额耗尽，需恢复配额后有界重试。
+
+- **synthesis | 蚂蚁灵波具身原生模型战略访谈深研补录**
+  - **变更**: 后台完成 `BV1cRK86zEpQ` 转写后，新增 [[_syntheses/bilibili-robbyant-native-embodied-model-strategy-deep-dive-2026-07-23|蚂蚁灵波具身原生模型战略访谈深度调研]] 并更新 source card、来源台账与全局索引。
+  - **结论**: 确认公开 LingBot-VLA 技术资产和后训练入口；访谈中的组织、数据联盟、竞争与商业化主张保持 B 级待验证。
