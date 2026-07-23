@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-22
+last_updated: 2026-07-23
 tags:
   - wiki
   - index
@@ -14,6 +14,8 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/bilibili-bv1x45w6yeng-vla|【教程】具身智能实操，蚂蚁灵波VLA上手体验]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
 - [[_sources/zsibot-matrix-robotics-simulator-source-set|zsibot/matrix（MATRiX）机器人仿真平台来源集]] — 固定提交 README、v0.1.2、GitHub API/issue/PR/tag、上游项目与政策证据；综合于 [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|MATRiX 深度调研]]。
 
@@ -140,6 +142,10 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-lingbot-vla-hands-on-deep-dive-2026-07-23|LingBot-VLA 上手教程视频深度调研]] — R05 主分类、R04/R07 次分类：开源 VLA 的价值在可审计的后训练与部署工具链；模型分数不能替代目标工位的闭环成功率、人工干预与单位任务成本。
+
+- [[_syntheses/bilibili-ai-daily-run-2026-07-23|Bilibili AI Daily Run 2026-07-23]] — 20 个候选、13 个重复；模型判断 6 条相关，成功转写 1 条并完成单视频深研，余 5 条因 Volcengine 音频时长配额耗尽未启动。
 
 - [[_syntheses/bilibili-ai-daily-run-2026-07-22|Bilibili AI Daily Run 2026-07-22]] — 20 个候选、15 个重复；模型选中 4 个 AI/具身智能相关视频，但首个外部 ASR 调用上传音频后无输出，未产生可综合的 source packet。
 - [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|zsibot/matrix（MATRiX）机器人仿真平台深度调研]] — R05 主分类、R04/R07 次分类：审计架构、发行包、代码开放边界、维护活跃度、文档漂移、许可与商业落地；结论是“值得做限定 PoC，不宜未经验证替换通用仿真底座”。

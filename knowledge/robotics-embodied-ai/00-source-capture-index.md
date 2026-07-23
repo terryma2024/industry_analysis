@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-07-20
+last_updated: 2026-07-23
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -209,6 +209,13 @@ aliases:
 | [`SRC-robotics-320`](../../raw/robotics-embodied-ai/documents/SRC-robotics-320-2025.md) | [兆威年报 PDF sidecar](../../raw/robotics-embodied-ai/documents/SRC-robotics-320-2025.md) | 核验其仿生灵巧手研发/量产目标；PDF 已留存，文本转换失败待补；未点名途见，不能用于证明供应关系或投资。 |
 
 ## 后续流程
+
+## 2026-07-23 LingBot-VLA 教程视频一级校验来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-321`](../../raw/robotics-embodied-ai/documents/SRC-robotics-321-lingbot-vla.md) | [LingBot-VLA 官方仓库](../../raw/robotics-embodied-ai/documents/SRC-robotics-321-lingbot-vla.md) | 核验开源权重/代码、Apache-2.0、LeRobot v3、数据映射、归一化、后训练与真机接口；README benchmark 不等于商业可靠性。 |
+| [`SRC-robotics-322`](../../raw/robotics-embodied-ai/documents/SRC-robotics-322-a-pragmatic-vla-foundation-model.md) | [LingBot-VLA 技术报告](../../raw/robotics-embodied-ai/documents/SRC-robotics-322-a-pragmatic-vla-foundation-model.md) | 核验 20,000 小时、9 双臂本体、四平台/每任务 130 episode 的论文边界；不证明订单或可复制交付。 |
 
 - 新增来源后先更新 [[sources.csv]]，再运行 `uv run python tools/extract_sources_with_defuddle.py --industry robotics-embodied-ai`。
 - 对知识笔记中的关键判断，使用 `SRC-*` 编号引用，并在需要时链接到 raw extract。

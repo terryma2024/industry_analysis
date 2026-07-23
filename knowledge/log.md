@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-07-22
+last_updated: 2026-07-23
 tags:
   - wiki
   - log
@@ -599,3 +599,11 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-22|Bilibili AI Daily Run 2026-07-22]]；20 个候选中 15 个重复，模型选中 4 个，未创建 transcript/source card/单视频深研页。
   - **来源**: TOS `asr-audio/2026/07/22` 前缀的两个 102,786,476-byte 音频对象及本地 ASR 进程诊断。
   - **限制**: `BV1cRK86zEpQ` 在上传后约七分钟没有 ASR 输出；另三条选中视频没有启动。需先核验 Volcengine 任务/配额与上传对象映射，再做一次有界重试。
+
+## [2026-07-23]
+
+- **ingest | Bilibili AI/具身智能每日视频采集与 LingBot-VLA 深研**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-23|Bilibili AI Daily Run 2026-07-23]] 与 [[_syntheses/bilibili-lingbot-vla-hands-on-deep-dive-2026-07-23|LingBot-VLA 上手教程视频深度调研]]；更新视频 source card、全局索引、机器人来源台账与来源 MOC。
+  - **来源**: B 级 `BV1X45w6YENG` ASR transcript；S 级 `SRC-robotics-321` 官方代码/文档与 `SRC-robotics-322` 技术报告。
+  - **结论**: 公开后训练与部署闭环可确认；论文/README 分数不等同于目标工位的商业可靠性。
+  - **限制**: 5 条已选视频未启动；Volcengine `45000292` 表示 `audio_duration_lifetime` 配额耗尽，需恢复配额后有界重试。
