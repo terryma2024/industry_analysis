@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-23
+last_updated: 2026-07-24
 tags:
   - wiki
   - index
@@ -14,6 +14,10 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/bilibili-bv17dolbjebt-pi0-7-memoryvla-vla|PI0.7再次引用MemoryVLA，聊一聊 VLA 中的“记忆"]] — Bilibili source packet; synthesized as [[_syntheses/bilibili-memoryvla-temporal-memory-deep-dive-2026-07-24|MemoryVLA 时序记忆视频深度调研]].
+
+- [[_sources/bilibili-bv17oosb2e93-bilibili-video|人形机器人运控算法概览]] — Bilibili source packet; synthesized as [[_syntheses/bilibili-humanoid-motion-control-algorithms-deep-dive-2026-07-24|人形机器人运控算法深度调研]].
 
 - [[_sources/bilibili-bv1crk86zepq-scale-up|蚂蚁灵波沈宇军具身原生模型访谈]] — B 级访谈 source packet；已用 LingBot-VLA 官方仓库与技术报告限定其技术主张。
 
@@ -144,6 +148,12 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-humanoid-motion-control-algorithms-deep-dive-2026-07-24|人形机器人运控算法概览视频深度调研]] — R04 主分类、R07 次分类：运控应按安全伺服、模型控制、学习策略和高层任务模型分层验收；仿真动作与展示不能外推为真机商业可靠性。
+
+- [[_syntheses/bilibili-memoryvla-temporal-memory-deep-dive-2026-07-24|MemoryVLA 时序记忆视频深度调研]] — R04 主分类、R07 次分类：MemoryVLA 可缓解历史不可见操作混淆，但论文结果不等于跨客户或跨 episode 的产品化记忆。
+
+- [[_syntheses/bilibili-ai-daily-run-2026-07-24|Bilibili AI Daily Run 2026-07-24]] — 20 个候选、17 个重复；模型选择两条具身智能视频并均成功转录、完成单视频深研。
 
 - [[_syntheses/bilibili-robbyant-native-embodied-model-strategy-deep-dive-2026-07-23|蚂蚁灵波具身原生模型战略访谈深度调研]] — R03 主分类、R04/R07 次分类：开源技术资产可核验，组织、数据联盟、商业化与竞争叙事仍待一手证据。
 

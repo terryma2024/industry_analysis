@@ -611,3 +611,11 @@ tags:
 - **synthesis | 蚂蚁灵波具身原生模型战略访谈深研补录**
   - **变更**: 后台完成 `BV1cRK86zEpQ` 转写后，新增 [[_syntheses/bilibili-robbyant-native-embodied-model-strategy-deep-dive-2026-07-23|蚂蚁灵波具身原生模型战略访谈深度调研]] 并更新 source card、来源台账与全局索引。
   - **结论**: 确认公开 LingBot-VLA 技术资产和后训练入口；访谈中的组织、数据联盟、竞争与商业化主张保持 B 级待验证。
+
+## [2026-07-24]
+
+- **ingest | Bilibili 人形机器人运控与 MemoryVLA 视频深研**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-24|Bilibili AI Daily Run 2026-07-24]]、两篇视频 source card、[[_syntheses/bilibili-humanoid-motion-control-algorithms-deep-dive-2026-07-24|运控算法深研]]与[[_syntheses/bilibili-memoryvla-temporal-memory-deep-dive-2026-07-24|MemoryVLA 深研]]；更新 AI/机器人来源台账和全局索引。
+  - **来源**: B 级 `BV17ooSB2E93`、`BV17doLBJEBt` ASR transcripts；S 级 DeepMimic、AMP、MemoryVLA/ReMem-VLA 论文和 `SRC-robotics-001` / `SRC-robotics-316`。
+  - **结论**: 运控和 VLA 记忆都应按实际任务的鲁棒性、接管、延迟与安全分层验收；仿真/论文结果不能外推为商业可靠性。
+  - **限制**: 两条 source packet 已成功生成；TOS 当日 6 个对象包含重试上传，数量不等于成功转录数。
