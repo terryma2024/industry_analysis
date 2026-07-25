@@ -15,9 +15,15 @@ tags:
 
 ## Sources
 
-- [[_sources/bilibili-bv17dolbjebt-pi0-7-memoryvla-vla|PI0.7再次引用MemoryVLA，聊一聊 VLA 中的“记忆"]] — Bilibili source packet; synthesized as [[_syntheses/bilibili-memoryvla-temporal-memory-deep-dive-2026-07-24|MemoryVLA 时序记忆视频深度调研]].
+- [[_sources/bilibili-bv17dolbjebt-pi0-7-memoryvla-vla|PI0.7再次引用MemoryVLA，聊一聊 VLA 中的“记忆"]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
-- [[_sources/bilibili-bv17oosb2e93-bilibili-video|人形机器人运控算法概览]] — Bilibili source packet; synthesized as [[_syntheses/bilibili-humanoid-motion-control-algorithms-deep-dive-2026-07-24|人形机器人运控算法深度调研]].
+- [[_sources/bilibili-bv17oosb2e93-bilibili-video|人形机器人运控算法概览]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
+- [[_sources/bilibili-bv1pnku6de3v-vincent-koc-openclaw-agent-b-x-waic-ai-101|对话Vincent Koc：OpenClaw的反思与进化，与Agent的下一步 | B站 x WAIC AI会客厅【101视频播客】]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
+- [[_sources/bilibili-bv1q7ny6te8v-77k-star-ai|🔥77K Star！一句话生成模版！ai设计工具他来了]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
+- [[_sources/bilibili-bv1ktky6rexa-superpowers-mattpocock-skills|模型越强， Superpowers 和 MattPocock-Skills 应该删除谁？]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
 - [[_sources/bilibili-bv1crk86zepq-scale-up|蚂蚁灵波沈宇军具身原生模型访谈]] — B 级访谈 source packet；已用 LingBot-VLA 官方仓库与技术报告限定其技术主张。
 

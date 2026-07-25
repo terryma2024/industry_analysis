@@ -18,10 +18,10 @@ status: active
 ## Run Summary
 
 - Candidate videos: 20
-- Selected for transcript extraction: 1
-- Duplicate skipped: 13
-- Needs model review: 6
-- Processed: 2 (one completed after the initial report)
+- Selected for transcript extraction: 4
+- Duplicate skipped: 15
+- Needs model review: 1
+- Processed: 4
 - Failed: 0
 
 ## OpenCLI / Fetch Notes
@@ -32,25 +32,29 @@ status: active
 
 - Check enabled: True
 - Prefix: `asr-audio/2026/07/23`
-- Objects found: 5
+- Objects found: 11
 - Recent keys:
   - `asr-audio/2026/07/23/010225-asr-audio.m4a`
   - `asr-audio/2026/07/23/010244-asr-audio.m4a`
   - `asr-audio/2026/07/23/010413-asr-audio.m4a`
   - `asr-audio/2026/07/23/010419-asr-audio.m4a`
   - `asr-audio/2026/07/23/010525-asr-audio.m4a`
+  - `asr-audio/2026/07/23/011126-asr-audio.m4a`
+  - `asr-audio/2026/07/23/011130-asr-audio.m4a`
+  - `asr-audio/2026/07/23/011229-asr-audio.m4a`
+  - `asr-audio/2026/07/23/011231-asr-audio.m4a`
+  - `asr-audio/2026/07/23/011301-asr-audio.m4a`
+  - `asr-audio/2026/07/23/011310-asr-audio.m4a`
 
 ## Candidate Decisions
 
 | Status | Title | Video ID | Score | Reason |
 |---|---|---:|---:|---|
-| selected | 【教程】具身智能实操，蚂蚁灵波VLA上手体验 | `BV1X45w6YENG` | 4 | selected by model relevance judgment |
-| needs_model_review | PI0.7再次引用MemoryVLA，聊一聊 VLA 中的“记忆" | `BV17doLBJEBt` | 2 | awaiting model relevance judgment; keyword score is diagnostic only |
 | needs_model_review | 985哲学系，大厂离职，旅居20个国家后的人生感悟 | `BV1cvTq68E5g` | 0 | awaiting model relevance judgment; keyword score is diagnostic only |
-| needs_model_review | 和蚂蚁灵波沈宇军聊：机器人原生基础模型、大脑和本体的关系、预训练与数据scale up、老师汤晓鸥 | `BV1cRK86zEpQ` | 4 | awaiting model relevance judgment; keyword score is diagnostic only |
-| needs_model_review | 模型越强， Superpowers 和 MattPocock-Skills 应该删除谁？ | `BV1KtKY6RExA` | 0 | awaiting model relevance judgment; keyword score is diagnostic only |
-| needs_model_review | 🔥77K Star！一句话生成模版！ai设计工具他来了 | `BV1q7Ny6TE8V` | 0 | awaiting model relevance judgment; keyword score is diagnostic only |
-| needs_model_review | 对话Vincent Koc：OpenClaw的反思与进化，与Agent的下一步 \| B站 x WAIC AI会客厅【101视频播客】 | `BV1pNKU6dE3V` | 0 | awaiting model relevance judgment; keyword score is diagnostic only |
+| selected | 和蚂蚁灵波沈宇军聊：机器人原生基础模型、大脑和本体的关系、预训练与数据scale up、老师汤晓鸥 | `BV1cRK86zEpQ` | 4 | selected by model relevance judgment |
+| selected | 模型越强， Superpowers 和 MattPocock-Skills 应该删除谁？ | `BV1KtKY6RExA` | 0 | selected by model relevance judgment |
+| selected | 🔥77K Star！一句话生成模版！ai设计工具他来了 | `BV1q7Ny6TE8V` | 0 | selected by model relevance judgment |
+| selected | 对话Vincent Koc：OpenClaw的反思与进化，与Agent的下一步 \| B站 x WAIC AI会客厅【101视频播客】 | `BV1pNKU6dE3V` | 0 | selected by model relevance judgment |
 | skipped_duplicate | 途见科技：国家认证的“皮肤级”触觉方案 | `BV17WNv6GEro` | 0 | video identifier already appears in raw/ or knowledge/ |
 | skipped_duplicate | 做具身智能一定要几十万吗？我们带着答案拿了个冠军 | `BV13yKV6GEK8` | 0 | video identifier already appears in raw/ or knowledge/ |
 | skipped_duplicate | PI 机器人 AI 创业公司 · 7 位创始人 · 18 个月 · 13 项产出【Survey 2026】 | `BV1B2Kc6HEyX` | 0 | video identifier already appears in raw/ or knowledge/ |
@@ -64,18 +68,15 @@ status: active
 | skipped_duplicate | 【ICRA 2026 】伯克利机器人学教授 Ken Goldberg：Agentic Coding能弥合机器人鸿沟吗？新应用范式VA/Agentic Robot | `BV1C5Nj6vE6y` | 0 | video identifier already appears in raw/ or knowledge/ |
 | skipped_duplicate | 子虔科技Al For Engineering 具身智能机器人一体化设计平台 | `BV1sBTX6kEH5` | 0 | video identifier already appears in raw/ or knowledge/ |
 | skipped_duplicate | 自变量机器人：估值200亿，真智能还是真泡沫？ | `BV1UTNj6gE75` | 0 | video identifier already appears in raw/ or knowledge/ |
+| skipped_duplicate | 深度补全新突破！LingBot-Depth 2.0 让机器人看清反光与透明物体 | `BV15pMb68Eb5` | 0 | video identifier already appears in raw/ or knowledge/ |
+| skipped_duplicate | 具身智能真正基建：Ego无机器人数据采集平台拆解 | `BV1eKMn6MEgS` | 0 | video identifier already appears in raw/ or knowledge/ |
 
 ## Processing Results
 
-- `BV1X45w6YENG` 【教程】具身智能实操，蚂蚁灵波VLA上手体验: processed; transcript captured and source card written; raw=`raw/_inbox/transcripts/2026-07-23-bilibili-bv1x45w6yeng-vla.json`; source=`knowledge/_sources/bilibili-bv1x45w6yeng-vla.md`
-- `BV1cRK86zEpQ` 蚂蚁灵波沈宇军访谈: processed; transcript captured after the initial report; raw=`raw/_inbox/transcripts/2026-07-23-bilibili-bv1crk86zepq-scale-up.json`; source=`knowledge/_sources/bilibili-bv1crk86zepq-scale-up.md`
-
-## Codex Model Decision And Failure Investigation
-
-- 本次候选池有 6 条 AI/具身智能相关视频：本页已处理的 `BV1X45w6YENG`，以及 `BV17doLBJEBt`、`BV1cRK86zEpQ`、`BV1KtKY6RExA`、`BV1q7Ny6TE8V`、`BV1pNKU6dE3V`；哲学人生感悟视频不相关。表格保留脚本的原始 `needs_model_review` 状态，模型判断以本节为准。
-- `BV1X45w6YENG` 通过 `volc.bigasr.auc` fallback 成功生成 transcript；该条已完成 R05（次 R04/R07）单视频深研。
-- 随后对 ASR 适配器做的单条健康诊断返回 `Volcengine HTTP 429`，响应 code `45000292`、message `quota exceeded for types: audio_duration_lifetime`。这是外部语音识别生命周期时长配额耗尽，不是 Bilibili 412、TOS 可达性或仓库脚本错误。
-- 后台转写随后完成 `BV1cRK86zEpQ`；其余 4 条已选视频没有启动，未生成 transcript/source card/深研页。恢复配额后应从这 4 个 BV 做一次有界重试；不要重跑重复或不相关候选。
+- `BV1cRK86zEpQ` 和蚂蚁灵波沈宇军聊：机器人原生基础模型、大脑和本体的关系、预训练与数据scale up、老师汤晓鸥: processed; transcript captured and source card written; raw=`raw/_inbox/transcripts/2026-07-23-bilibili-bv1crk86zepq-scale-up.json`; source=`knowledge/_sources/bilibili-bv1crk86zepq-scale-up.md`
+- `BV1KtKY6RExA` 模型越强， Superpowers 和 MattPocock-Skills 应该删除谁？: processed; transcript captured and source card written; raw=`raw/_inbox/transcripts/2026-07-23-bilibili-bv1ktky6rexa-superpowers-mattpocock-skills.json`; source=`knowledge/_sources/bilibili-bv1ktky6rexa-superpowers-mattpocock-skills.md`
+- `BV1q7Ny6TE8V` 🔥77K Star！一句话生成模版！ai设计工具他来了: processed; transcript captured and source card written; raw=`raw/_inbox/transcripts/2026-07-23-bilibili-bv1q7ny6te8v-77k-star-ai.json`; source=`knowledge/_sources/bilibili-bv1q7ny6te8v-77k-star-ai.md`
+- `BV1pNKU6dE3V` 对话Vincent Koc：OpenClaw的反思与进化，与Agent的下一步 | B站 x WAIC AI会客厅【101视频播客】: processed; transcript captured and source card written; raw=`raw/_inbox/transcripts/2026-07-23-bilibili-bv1pnku6de3v-vincent-koc-openclaw-agent-b-x-waic-ai-101.json`; source=`knowledge/_sources/bilibili-bv1pnku6de3v-vincent-koc-openclaw-agent-b-x-waic-ai-101.md`
 
 ## Codex Research Handoff
 
