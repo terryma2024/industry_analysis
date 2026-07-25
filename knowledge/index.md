@@ -149,6 +149,8 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-07-25|Bilibili AI Daily Run 2026-07-25]] — 20 个候选、19 个重复；唯一模型复核项为无关个人感悟内容，未选中、未转录或深研。
+
 - [[_syntheses/bilibili-humanoid-motion-control-algorithms-deep-dive-2026-07-24|人形机器人运控算法概览视频深度调研]] — R04 主分类、R07 次分类：运控应按安全伺服、模型控制、学习策略和高层任务模型分层验收；仿真动作与展示不能外推为真机商业可靠性。
 
 - [[_syntheses/bilibili-memoryvla-temporal-memory-deep-dive-2026-07-24|MemoryVLA 时序记忆视频深度调研]] — R04 主分类、R07 次分类：MemoryVLA 可缓解历史不可见操作混淆，但论文结果不等于跨客户或跨 episode 的产品化记忆。

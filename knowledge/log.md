@@ -619,3 +619,10 @@ tags:
   - **来源**: B 级 `BV17ooSB2E93`、`BV17doLBJEBt` ASR transcripts；S 级 DeepMimic、AMP、MemoryVLA/ReMem-VLA 论文和 `SRC-robotics-001` / `SRC-robotics-316`。
   - **结论**: 运控和 VLA 记忆都应按实际任务的鲁棒性、接管、延迟与安全分层验收；仿真/论文结果不能外推为商业可靠性。
   - **限制**: 两条 source packet 已成功生成；TOS 当日 6 个对象包含重试上传，数量不等于成功转录数。
+
+## [2026-07-25]
+
+- **automation | Bilibili 收藏夹每日候选去重与模型相关性判断**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-25|Bilibili AI Daily Run 2026-07-25]] 并更新 [[index|Knowledge Index]]。
+  - **结果**: 20 个候选中 19 个命中既有 BV 标识；唯一 `needs_model_review` 项 `BV1cvTq68E5g` 是个人经历/人生感悟内容，与 AI/具身智能调研范围无关。模型选中 0 个，未启动转录、ASR、source card 或单视频深研。
+  - **限制**: TOS 前缀 `asr-audio/2026/07/25` 为空，符合本日没有选中音频处理任务的预期。
