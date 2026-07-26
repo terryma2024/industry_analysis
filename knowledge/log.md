@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-07-23
+last_updated: 2026-07-26
 tags:
   - wiki
   - log
@@ -626,3 +626,10 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-25|Bilibili AI Daily Run 2026-07-25]] 并更新 [[index|Knowledge Index]]。
   - **结果**: 20 个候选中 19 个命中既有 BV 标识；唯一 `needs_model_review` 项 `BV1cvTq68E5g` 是个人经历/人生感悟内容，与 AI/具身智能调研范围无关。模型选中 0 个，未启动转录、ASR、source card 或单视频深研。
   - **限制**: TOS 前缀 `asr-audio/2026/07/25` 为空，符合本日没有选中音频处理任务的预期。
+
+## [2026-07-26]
+
+- **automation | Bilibili 收藏夹每日候选与失败记录**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-26|Bilibili AI Daily Run 2026-07-26]] 并更新 [[index|Knowledge Index]]。
+  - **结果**: 20 个候选中 18 个重复；模型选中 `BV1DKMt6HEvk`（DYNA 机器人联创访谈），`BV1cvTq68E5g`（个人感悟）不相关而未选。字幕路径未返回文本，Volcengine `volc.seedasr.auc` 与 `volc.bigasr.auc` 的 5 秒有界诊断均超时；0 个 processed、0 个 source card、0 篇单视频深研。
+  - **限制**: TOS `asr-audio/2026/07/26` 可列出 4 个本次尝试音频对象，说明上传可达但不表示转录成功。下次应在可执行长轮询的环境按默认时限有界重试，并保留 submit/query 状态、`X-Tt-Logid` 与配额错误。
