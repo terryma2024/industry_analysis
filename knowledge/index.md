@@ -19,6 +19,8 @@ tags:
 
 - [[_sources/bilibili-bv1uwgf6veeh-2026-rlinf-ppo|2026智源大会丨清华于超主讲：具身智能为什么需要强化学习？面向具身智能的高灵活大规模强化学习框架RLinf！—具身智能机器人/PPO算法]] — 已综合为 [[_syntheses/bilibili-rlinf-embodied-reinforcement-learning-infrastructure-deep-dive-2026-07-28|RLinf 具身强化学习基础设施深研]]；仅将官方仓库/论文支持的机制视为事实。
 
+- [[_sources/bilibili-bv1dkmt6hevk-dyna-york-yang|对话DYNA机器人联创York Yang]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
 - [[_sources/bilibili-bv17dolbjebt-pi0-7-memoryvla-vla|PI0.7再次引用MemoryVLA，聊一聊 VLA 中的“记忆"]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
 - [[_sources/bilibili-bv17oosb2e93-bilibili-video|人形机器人运控算法概览]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
@@ -159,11 +161,11 @@ tags:
 
 ## Syntheses
 
-- [[_syntheses/bilibili-ai-daily-run-2026-07-26|Bilibili AI Daily Run 2026-07-26]] — 20 个候选、18 个重复；选中 DYNA 机器人访谈但字幕与有界 ASR 诊断均未成功，未创建 source packet 或深研。
-
 - [[_syntheses/bilibili-ai-daily-run-2026-07-28|Bilibili AI Daily Run 2026-07-28]] — 20 个候选、17 个重复；模型选中并成功转录 RLinf 和开源机械臂选型两条视频。
 - [[_syntheses/bilibili-rlinf-embodied-reinforcement-learning-infrastructure-deep-dive-2026-07-28|RLinf 具身强化学习基础设施视频深度调研]] — R04 主分类、R07 次分类：应以任务级安全/成本/收益的 A/B 验收来判断 RL 后训练基础设施，而非采用视频 benchmark 或采用方叙事。
 - [[_syntheses/bilibili-open-robot-arm-platform-selection-deep-dive-2026-07-28|开源机器人与机械臂成套方案选型视频深度调研]] — R05 主分类、R07 次分类：平台选型先审 BOM、控制、数据、部署、许可证与安全闭环，再做单臂 PoC，不能按视频价格/展示排名。
+
+- [[_syntheses/bilibili-ai-daily-run-2026-07-26|Bilibili AI Daily Run 2026-07-26]] — 20 个候选、18 个重复；选中 DYNA 机器人访谈但字幕与有界 ASR 诊断均未成功，未创建 source packet 或深研。
 
 - [[_syntheses/bilibili-ai-daily-run-2026-07-25|Bilibili AI Daily Run 2026-07-25]] — 20 个候选、19 个重复；唯一模型复核项为无关个人感悟内容，未选中、未转录或深研。
 
