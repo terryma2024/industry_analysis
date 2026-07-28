@@ -633,3 +633,15 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-07-26|Bilibili AI Daily Run 2026-07-26]] 并更新 [[index|Knowledge Index]]。
   - **结果**: 20 个候选中 18 个重复；模型选中 `BV1DKMt6HEvk`（DYNA 机器人联创访谈），`BV1cvTq68E5g`（个人感悟）不相关而未选。字幕路径未返回文本，Volcengine `volc.seedasr.auc` 与 `volc.bigasr.auc` 的 5 秒有界诊断均超时；0 个 processed、0 个 source card、0 篇单视频深研。
   - **限制**: TOS `asr-audio/2026/07/26` 可列出 4 个本次尝试音频对象，说明上传可达但不表示转录成功。下次应在可执行长轮询的环境按默认时限有界重试，并保留 submit/query 状态、`X-Tt-Logid` 与配额错误。
+
+## [2026-07-28]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-07-28|Bilibili AI Daily Run 2026-07-28]]；处理 2 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+- **synthesis | RLinf 与开源机械臂两条单视频深研**
+  - **变更**: 新增 [[_syntheses/bilibili-rlinf-embodied-reinforcement-learning-infrastructure-deep-dive-2026-07-28|RLinf 具身强化学习基础设施视频深研]]（R04，R07）和 [[_syntheses/bilibili-open-robot-arm-platform-selection-deep-dive-2026-07-28|开源机器人与机械臂选型视频深研]]（R05，R07）；补充 `SRC-robotics-323`–`326` raw captures、来源 MOC、source card 回链与全局索引。
+  - **结论**: RL 基础设施应以目标任务的安全、成本与可复现 A/B 证明价值；开源机器人选择的最小闭环是 BOM/CAD、控制、标定/遥操、可训练数据、部署、许可证和安全，而非视频价格或“开源”标签。
+  - **限制**: Bilibili ASR 中的性能、价格、平台/数据集名称、采用方和商业化信息未逐一得到一手来源支持，均未升级为行业事实。

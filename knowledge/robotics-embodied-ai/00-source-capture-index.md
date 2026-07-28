@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-07-23
+last_updated: 2026-07-28
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -27,6 +27,15 @@ aliases:
 | `manual_parse` | 2 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据或 GitHub API 生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
 | `failed` | 7 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+
+## 2026-07-28 RLinf 与开源机械臂视频深研来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| `SRC-robotics-323` | RLinf official repository | 核验 RLinf 的开源定位、工作流、集成与许可；仓库自述的采用/性能不作为独立商业或可靠性证据。 |
+| `SRC-robotics-324` | π_RL preprint | 核验 Flow-Noise/Flow-SDE 方法、实验和作者报告的效率/效果边界；预印本不等同于现场部署证据。 |
+| `SRC-robotics-325` | LeRobot SO-101 official docs | 核验 leader/follower 架构、组装与软件依赖；不核验视频中的人民币价格或任务成功率。 |
+| `SRC-robotics-326` | OpenArm official repository | 核验公开硬件/软件/仿真范围和许可；当前售价、供货、维保和性能另行询价/实测。 |
 
 ## 2026-07-20 MATRiX 机器人仿真平台来源
 
