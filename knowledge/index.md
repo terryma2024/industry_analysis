@@ -15,6 +15,8 @@ tags:
 
 ## Sources
 
+- [[_sources/jetson-thor-edge-ai-compute-platform-source-set|Jetson Thor 与边缘 AI 计算平台来源集]] — NVIDIA/Qualcomm/AMD/Hailo/Huawei/Horizon 官方规格、当前官方价格及动态库存证据；综合于 [[robotics-embodied-ai/research-notes/jetson-thor-and-alternatives-spec-price-comparison-2026-08-05|Jetson Thor 选型调研]]。
+
 - [[_sources/bilibili-bv1z33l6ge9y-bilibili-video|开源机器人与机械臂成套方案选型调研]] — 已综合为 [[_syntheses/bilibili-open-robot-arm-platform-selection-deep-dive-2026-07-28|开源机器人与机械臂选型深研]]；视频价格/性能保持 B 级待验证。
 
 - [[_sources/bilibili-bv1uwgf6veeh-2026-rlinf-ppo|2026智源大会丨清华于超主讲：具身智能为什么需要强化学习？面向具身智能的高灵活大规模强化学习框架RLinf！—具身智能机器人/PPO算法]] — 已综合为 [[_syntheses/bilibili-rlinf-embodied-reinforcement-learning-infrastructure-deep-dive-2026-07-28|RLinf 具身强化学习基础设施深研]]；仅将官方仓库/论文支持的机制视为事实。
@@ -38,6 +40,10 @@ tags:
 - [[_sources/zsibot-matrix-robotics-simulator-source-set|zsibot/matrix（MATRiX）机器人仿真平台来源集]] — 固定提交 README、v0.1.2、GitHub API/issue/PR/tag、上游项目与政策证据；综合于 [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|MATRiX 深度调研]]。
 
 - [[_sources/roboverse-platform-dataset-benchmark-source-set|RoboVerse 平台、数据集与基准来源集]] — RSS 2025 论文、固定提交仓库/文档、数据格式、学习工作流、维护信号与官方竞品资料；综合于 [[robotics-embodied-ai/research-notes/roboverse-platform-and-real-data-deep-dive-2026-07-28|RoboVerse 深度调研]]。
+
+- [[_sources/orb-slam3-paper-code-benchmark-source-set|ORB-SLAM3 论文、代码与 benchmark 来源集]] — T-RO/arXiv 论文、固定提交官方仓库/校准/依赖、2026-08-05 GitHub 快照、EuRoC/TUM-VI 与 VINS-Fusion/OpenVINS/RTAB-Map/cuVSLAM 官方对照；综合于 [[robotics-embodied-ai/research-notes/orb-slam3-technology-engineering-commercial-deep-dive-2026-08-05|ORB-SLAM3 深度调研]]。
+
+- [[_sources/rtabmap-cuvslam-openvins-source-set|RTAB-Map、cuVSLAM、OpenVINS 论文、文档与代码来源集]] — 三套系统的一手论文、固定提交文档/许可证、2026-08-05 GitHub 审计与性能证据边界；综合于 [[robotics-embodied-ai/research-notes/rtabmap-cuvslam-openvins-comparative-deep-dive-2026-08-05|三方案深度调研]]。
 
 - [[_sources/wechat-embodied-intelligence-robotics-core-technology-overview|一文速览具身智能机器人相关核心技术体系]] — 古月居 / 机器人小毛的 C 级入门综述；可作感知—决策—执行—反馈—学习概念地图，企业、政策、市场与产业主张均保留为待验证线索。
 
@@ -136,6 +142,10 @@ tags:
 - [[_entities/README|Entities Layer]] — 人物、公司、工具、产品和 UMI 技术术语实体索引。
 - [[_entities/UniversalManipulationInterface|Universal Manipulation Interface]] — 低成本手持夹爪示教路线，把人类操作转成机器人可训练轨迹数据。
 - [[_entities/SLAM|SLAM]] — UMI-like 数据采集中的位姿恢复与轨迹质量核心模块。
+- [[_entities/ORBSLAM3|ORB-SLAM3]] — 稀疏特征视觉/视觉惯性、多地图 SLAM 经典库；适合作研究基线、轨迹恢复和限定 PoC，但官方上游为 ROS1-era、GPLv3，且不是稠密语义导航产品。
+- [[_entities/RTABMap|RTAB-Map]] — 可接视觉/LiDAR/外部里程计的长期 graph-SLAM、数据库与 ROS 2 地图集成；适合 AMR/Nav2 和 2D/3D occupancy，需管理参数、退化与大图资源。
+- [[_entities/cuVSLAM|cuVSLAM]] — NVIDIA CUDA 多模式、多相机 VO/VIO/VSLAM SDK；适合 Jetson/Isaac ROS，商业许可限定 NVIDIA Platforms。
+- [[_entities/OpenVINS|OpenVINS]] — MSCKF/EKF visual-inertial estimation 研究平台；强于标定、仿真和可解释状态估计，不是默认长期地图/导航栈，许可证 GPL-3.0。
 - [[_entities/DiffusionPolicy|Diffusion Policy]] — UMI 常用的机器人模仿学习策略模型基线。
 - [[_entities/ActionChunkingTransformer|ACT]] — 用 Transformer 一次预测动作 chunk 的模仿学习基线。
 - [[_entities/DataPackage|Data Package]] — ToB 机器人数据服务的交付资产包概念。
@@ -165,6 +175,11 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[robotics-embodied-ai/research-notes/jetson-thor-and-alternatives-spec-price-comparison-2026-08-05|Jetson Thor 与同类替代平台规格、价格及选型调研]] — R05/R06：当前 Thor 开发套件已为 US$5,499；以真实模型 p95、内存、功耗、I/O、迁移与量产 TCO 比较 T5000/T4000、Orin、IQ-9075、DGX Spark、AMD 128GB 和降档 NPU。
+
+- [[robotics-embodied-ai/research-notes/orb-slam3-technology-engineering-commercial-deep-dive-2026-08-05|ORB-SLAM3 技术原理、工程选型与商业落地深度调研]] — R04 主分类、R05/R07 次分类：判断其仍是经典而强的多地图 V/VI-SLAM 基线，但 2026 年商业选型必须先过目标场景失败率、ROS 2 维护、GPL 许可与下游 ROI 四道门。
+- [[robotics-embodied-ai/research-notes/rtabmap-cuvslam-openvins-comparative-deep-dive-2026-08-05|RTAB-Map、cuVSLAM、OpenVINS 技术与工程选型深度调研]] — R05 主分类、R04/R07 次分类：区分长期导航 SLAM、NVIDIA 多相机 VSLAM SDK 与 MSCKF VIO 研究平台，给出统一选型、许可边界和任务级 PoC。
 
 - [[_syntheses/bilibili-ai-daily-run-2026-07-28|Bilibili AI Daily Run 2026-07-28]] — 20 个候选、17 个重复；模型选中并成功转录 RLinf 和开源机械臂选型两条视频。
 - [[_syntheses/bilibili-rlinf-embodied-reinforcement-learning-infrastructure-deep-dive-2026-07-28|RLinf 具身强化学习基础设施视频深度调研]] — R04 主分类、R07 次分类：应以任务级安全/成本/收益的 A/B 验收来判断 RL 后训练基础设施，而非采用视频 benchmark 或采用方叙事。

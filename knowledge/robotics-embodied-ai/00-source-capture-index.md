@@ -21,12 +21,30 @@ aliases:
 
 | 状态 | 数量 | 含义 |
 |---|---:|---|
-| `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 127 | 已成功抽取的 raw artifact。 |
+| `exists` | 116 | 既有 Markdown/PDF raw artifact。 |
+| `ok` | 145 | 已成功抽取的 raw artifact。 |
 | `fallback_html` | 10 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
-| `manual_parse` | 2 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据或 GitHub API 生成 Markdown。 |
+| `manual_parse` | 10 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据、GitHub API 或固定提交文本生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
-| `failed` | 8 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+| `failed` | 11 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+
+## 2026-08-05 RTAB-Map、cuVSLAM、OpenVINS 深度调研来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-350`](../../raw/robotics-embodied-ai/documents/SRC-robotics-350-rtab-map-large-scale-and-long-term-lidar-and-visual-slam-paper-full-pdf.md)–[`353`](../../raw/robotics-embodied-ai/documents/SRC-robotics-353-rtab-map-github-repository-release-and-maintenance-audit.md) | RTAB-Map 论文、core README/许可证与 GitHub 审计 | 核验 WM/LTM、回环/图/occupancy、当前 release/head 与 BSD；论文旧硬件数值不外推。 |
+| [`SRC-robotics-354`](../../raw/robotics-embodied-ai/documents/SRC-robotics-354-cuvslam-cuda-accelerated-visual-odometry-and-mapping-paper-full-pdf.md)–[`356`](../../raw/robotics-embodied-ai/documents/SRC-robotics-356-cuvslam-github-repository-release-and-maintenance-audit.md) | cuVSLAM 论文、NVIDIA Community License 与 GitHub 审计 | 核验 CUDA/multi-camera/VIO、作者 benchmark、v17 和 NVIDIA Platforms 限定；不视作现场 SLA。 |
+| [`SRC-robotics-357`](../../raw/robotics-embodied-ai/documents/SRC-robotics-357-openvins-research-platform-for-visual-inertial-estimation-paper-full-pdf.md)–[`361`](../../raw/robotics-embodied-ai/documents/SRC-robotics-361-openvins-gpl-3-0-license-at-audited-commit.md) | OpenVINS 论文、官方架构/标定、GitHub 审计与 GPL | 核验 MSCKF、标定、回环边界、head/tag；GPL 解释不构成法律意见。 |
+
+## 2026-08-05 ORB-SLAM3 深度调研来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-338`](../../raw/robotics-embodied-ai/documents/SRC-robotics-338-orb-slam3-full-paper.md) | [ORB-SLAM3 完整论文](../../raw/robotics-embodied-ai/documents/SRC-robotics-338-orb-slam3-full-paper.md) | 核验系统架构、MAP 视觉惯性初始化、Atlas、多数据关联、EuRoC/TUM-VI 作者实验、timing 和低纹理失败；不外推为现场 SLA。 |
+| [`SRC-robotics-339`](../../raw/robotics-embodied-ai/documents/SRC-robotics-339-orb-slam3-official-repository-readme-at-audited-commit.md)–[`342`](../../raw/robotics-embodied-ai/documents/SRC-robotics-342-orb-slam3-dependency-and-license-inventory-at-audited-commit.md) | 官方固定提交 README、GitHub 审计、校准和依赖 | 核验支持模式、ROS1-era 环境、当前 head/release、坐标/标定与 GPL/依赖许可；动态社区计数不可视为采用或质量。 |
+| [`SRC-robotics-343`](../../raw/robotics-embodied-ai/documents/SRC-robotics-343-vins-fusion-official-repository-readme-at-audited-commit.md)–[`346`](../../raw/robotics-embodied-ai/documents/SRC-robotics-346-nvidia-cuvslam-official-repository-readme-at-audited-commit.md) | VINS-Fusion、OpenVINS、RTAB-Map ROS2、cuVSLAM | 官方替代方案边界对照；未做统一硬件性能排名。 |
+| [`SRC-robotics-347`](../../raw/robotics-embodied-ai/documents/SRC-robotics-347-tum-vi-benchmark-official-dataset-page.md)–[`348`](../../raw/robotics-embodied-ai/documents/SRC-robotics-348-euroc-mav-dataset-official-page.md) | TUM-VI 与 EuRoC 官方 benchmark | 限定论文数据的传感器、同步、ground-truth 和场景口径。 |
+| [`SRC-robotics-349`](../../raw/robotics-embodied-ai/documents/SRC-robotics-349-rtab-map-ros2-bsd-3-clause-license-at-audited-commit.md) | RTAB-Map ROS2 固定提交许可证 | 核验 BSD-3-Clause 对照；不覆盖依赖、数据和机器人集成许可。 |
 
 ## 2026-08-05 微信具身智能技术综述
 
@@ -250,3 +268,17 @@ aliases:
 - 新增来源后先更新 [[sources.csv]]，再运行 `uv run python tools/extract_sources_with_defuddle.py --industry robotics-embodied-ai`。
 - 对知识笔记中的关键判断，使用 `SRC-*` 编号引用，并在需要时链接到 raw extract。
 - 对 failed/fallback 来源，优先寻找官方 PDF、GitHub raw、论文 arXiv、监管/公告页等更稳定来源替换。
+
+## 2026-08-05 Jetson Thor 与边缘 AI 计算平台来源
+
+| SRC | raw artifact / 状态 | 说明 |
+|---|---|---|
+| [`SRC-robotics-363`](../../raw/robotics-embodied-ai/documents/SRC-robotics-363-nvidia-jetson-thor-official-product-specifications.md) | [Thor 官方规格](../../raw/robotics-embodied-ai/documents/SRC-robotics-363-nvidia-jetson-thor-official-product-specifications.md) | T5000/T4000、128/64GB、功耗、I/O 与开发套件。 |
+| [`SRC-robotics-364`](../../raw/robotics-embodied-ai/documents/SRC-robotics-364-nvidia-jetson-faq-current-pricing-and-lifecycle.md) | [Jetson 当前价格与生命周期](../../raw/robotics-embodied-ai/documents/SRC-robotics-364-nvidia-jetson-faq-current-pricing-and-lifecycle.md) | 2026-08-05 当前 MSRP、1KU+ 建议价和 dev kit/production module 边界。 |
+| `SRC-robotics-366`–`371`、`373`、`375` | Defuddle 已捕获 | JetPack/benchmark、Qualcomm、AMD/MINISFORUM、Hailo 与 Journey 6 官方页面。 |
+| `SRC-robotics-365`、`372` | 自动抽取超时 | NVIDIA Marketplace 动态价格由 2026-08-05 live page 核验；后续重试或保存浏览器快照。 |
+| `SRC-robotics-374` | 旧页面 404；官方 PDF 已人工核验 | 8 INT8 TOPS、4GB ECC、24W 和接口来自 2025-03-04 官方 PDF；后续补 PDF raw artifact。 |
+| [`SRC-robotics-376`](../../raw/robotics-embodied-ai/documents/SRC-robotics-376-jetson-agx-thor-china-channel-listing.md) | [中国渠道动态页](../../raw/robotics-embodied-ai/documents/SRC-robotics-376-jetson-agx-thor-china-channel-listing.md) | ¥40,999 含税报价仅作 B 级采购线索，需书面复核。 |
+
+- 来源集：[[_sources/jetson-thor-edge-ai-compute-platform-source-set|Jetson Thor 与边缘 AI 计算平台来源集]]
+- 数据表：[候选规格与价格 CSV](../../raw/robotics-embodied-ai/data/jetson-thor-alternatives-spec-price-2026-08-05.csv)

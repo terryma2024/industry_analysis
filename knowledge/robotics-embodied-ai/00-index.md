@@ -54,6 +54,9 @@ sources:
 - `13-robot-company-product-comparison-2026-06-08.md`: 主表机器人公司的产品型号全景对比，覆盖人形/轮式双臂、协作臂/工业机器人、AMR/移动操作的参数、技术路线、优缺点和待验证项。
 - [[research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|zsibot/matrix（MATRiX）机器人仿真平台深度调研]]: 审计 MuJoCo + Unreal Engine 架构、四足机器人与 ROS 2 能力、发行包和开放边界，并给出商业应用、中小创业机会、PoC 验收与停用条件。
 - [[research-notes/roboverse-platform-and-real-data-deep-dive-2026-07-28|RoboVerse 能力边界与具身数采数据增益深度调研]]: 拆解 RoboVerse/MetaSim 的平台边界、多后端任务/数据/学习能力，判断真实数采数据对数据集、仿真、benchmark 和模型的不同增益，并给出 L0–L4 接入契约与四组 A/B PoC。
+- [[research-notes/orb-slam3-technology-engineering-commercial-deep-dive-2026-08-05|ORB-SLAM3 技术原理、工程选型与商业落地深度调研]]: R04 主分类、R05/R07 次分类；拆解 ORB 特征、视觉惯性 MAP 初始化、Atlas 多地图、论文 benchmark/失败模式、ROS 2 与 GPL 边界，对照 VINS-Fusion/OpenVINS/RTAB-Map/cuVSLAM，并给出 UMI 与商业 PoC。
+- [[research-notes/rtabmap-cuvslam-openvins-comparative-deep-dive-2026-08-05|RTAB-Map、cuVSLAM、OpenVINS 技术与工程选型深度调研]]: R05 主分类、R04/R07 次分类；区分长期 ROS 2 导航/占据建图、NVIDIA 多相机 CUDA VSLAM 与 MSCKF 滤波 VIO，覆盖维护、许可、商业/创业机会和统一 PoC。
+- [[research-notes/jetson-thor-and-alternatives-spec-price-comparison-2026-08-05|Jetson Thor 与同类替代平台规格、价格及选型调研]]: R05 主分类、R06 次分类；核验 2026-08-05 当前价格，按内存、功耗、机器人 I/O、软件迁移、量产生命周期与目标模型 PoC 比较 Thor、Orin、IQ-9075、DGX Spark、AMD 128GB 系统及降档方案。
 - [[_sources/wechat-embodied-intelligence-robotics-core-technology-overview|一文速览具身智能机器人相关核心技术体系]]: 微信公众号 C 级入门综述来源卡；保留技术地图，并显式隔离未经一级来源验证的企业、政策、市场和产业主张。
 - [[research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]]: 按高保真感知/合成数据、ROS 2 系统联调、控制/RL、硬件与商业许可拆解三者边界；包含国产 GPU/AI 加速器支持矩阵、组合架构与 PoC 验收项。
 - [[research-notes/srt-soft-robot-tech-company-deep-dive-2026-07-13|SRT 软体机器人公司深度调研]]: 拆解柔性末端执行器技术、业务结构、融资与股权、竞争、十五五关联、创始团队迁移风险和投前尽调问题。

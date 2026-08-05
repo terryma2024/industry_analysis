@@ -658,3 +658,21 @@ tags:
   - **变更**: 新增 [[_sources/wechat-embodied-intelligence-robotics-core-technology-overview|来源卡]]和 `SRC-robotics-337` Defuddle 全文；更新机器人来源台账、来源 MOC、行业索引与全局索引。
   - **结论**: 该文可作感知—决策—执行—反馈—学习的入门地图，不能单独支撑商业成熟度、政策、市场或产业链判断。
   - **限制**: 原文发布日期未从页面元数据可靠提取；公司案例、进口依赖、政策预测和 2030 年市场表述均保留为 C 级待验证线索。
+
+- **synthesis | ORB-SLAM3 技术、工程与商业深度调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/orb-slam3-technology-engineering-commercial-deep-dive-2026-08-05|ORB-SLAM3 深度调研]]、[[_sources/orb-slam3-paper-code-benchmark-source-set|来源集]]，扩充 [[_entities/ORBSLAM3|ORB-SLAM3 实体页]]；归档 `SRC-robotics-338`–`349` 并更新来源 MOC、行业/全局索引。
+  - **来源**: ORB-SLAM3 T-RO/arXiv 论文、固定提交官方 README/Calibration/Dependencies、2026-08-05 GitHub API 快照、EuRoC/TUM-VI 官方 benchmark，以及 VINS-Fusion/OpenVINS/RTAB-Map/cuVSLAM 官方资料。
+  - **结论**: ORB-SLAM3 仍是理解和验证稀疏特征、紧耦合视觉惯性、回环与 Atlas 多地图的强基线；它不是稠密语义导航产品。2026 年新商业项目必须先验证目标场景失效率、现代 ROS 2/依赖维护、GPL/商业许可和下游任务 ROI。
+  - **限制**: 未在目标相机、ROS 2、国产算力或客户现场编译复现；论文 ATE/timing 是作者实验，商业订单、许可费用、SLA 与现场长期可靠性均待询价和 PoC。
+
+- **synthesis | RTAB-Map、cuVSLAM、OpenVINS 技术与工程选型深度调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/rtabmap-cuvslam-openvins-comparative-deep-dive-2026-08-05|三方案深度调研]]、[[_sources/rtabmap-cuvslam-openvins-source-set|来源集]]和 [[_entities/RTABMap|RTAB-Map]]、[[_entities/cuVSLAM|cuVSLAM]]、[[_entities/OpenVINS|OpenVINS]] 实体页；归档 `SRC-robotics-350`–`361` 并更新来源 MOC、行业/全局索引。
+  - **来源**: RTAB-Map 2019 JFR/2024 arXiv 全文、cuVSLAM 2025 technical report、OpenVINS ICRA 2020 论文，三方固定提交 README/许可证/官方文档及 2026-08-05 GitHub API 快照。
+  - **结论**: RTAB-Map 是长期 ROS 2 graph-SLAM/数据库/occupancy 层，cuVSLAM 是 NVIDIA 多相机低延迟 VO/VSLAM SDK，OpenVINS 是 MSCKF VIO/标定研究平台；默认选型分别对应 AMR/Nav2、Jetson 多相机和 estimator 研发。
+  - **限制**: 未做统一 rig/硬件复现；作者 benchmark 不可跨论文横排。cuVSLAM NVIDIA-only 授权、OpenVINS GPL 与最终依赖/分发架构仍需法律审核和任务级 PoC。
+
+- **synthesis | Jetson Thor 与替代边缘 AI 平台规格、价格及选型调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/jetson-thor-and-alternatives-spec-price-comparison-2026-08-05|Jetson Thor 选型调研]]、[[_sources/jetson-thor-edge-ai-compute-platform-source-set|来源集]]和机器可读规格/价格 CSV；登记 `SRC-robotics-363`–`375`，完成 Thor 与 Orin、IQ-9075、DGX Spark、Ryzen AI Max+ 395、Hailo/Atlas/征程 6 的分层比较。
+  - **来源**: NVIDIA 当前 Thor/Jetson FAQ/Marketplace/JetPack/benchmark，Qualcomm IQ-9075，AMD 与 MINISFORUM，DGX Spark、Hailo、华为昇腾和地平线官方页面，以及 iCEasy 中国渠道动态报价线索（B 级）。
+  - **结论**: 2026-08-05 当前 Thor 开发套件官方价为 US$5,499，而非仍被旧材料引用的 US$3,499；Thor 的一比一价值来自 128GB、CUDA/Isaac、机器人 I/O 和量产模组路径，不能用异精度 TOPS 或美元/TOPS 替代目标模型 PoC。
+  - **限制**: 未取得 IQ-9075/国产方案书面报价，也未用同一真实 VLA/VLM、传感器与功耗条件做跨平台 A/B；动态价格、库存和交期必须在采购日复核。
