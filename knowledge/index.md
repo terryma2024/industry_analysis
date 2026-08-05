@@ -37,6 +37,8 @@ tags:
 
 - [[_sources/zsibot-matrix-robotics-simulator-source-set|zsibot/matrix（MATRiX）机器人仿真平台来源集]] — 固定提交 README、v0.1.2、GitHub API/issue/PR/tag、上游项目与政策证据；综合于 [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|MATRiX 深度调研]]。
 
+- [[_sources/roboverse-platform-dataset-benchmark-source-set|RoboVerse 平台、数据集与基准来源集]] — RSS 2025 论文、固定提交仓库/文档、数据格式、学习工作流、维护信号与官方竞品资料；综合于 [[robotics-embodied-ai/research-notes/roboverse-platform-and-real-data-deep-dive-2026-07-28|RoboVerse 深度调研]]。
+
 - [[_sources/bilibili-bv17wnv6gero-bilibili-video|途见科技：国家认证的“皮肤级”触觉方案]] — 已综合为 [[_syntheses/bilibili-tachin-flexible-electronic-skin-deep-dive-2026-07-20|途见科技柔性电子皮肤视频深度调研]]；产品定位有官方材料，融资、订单、量产和性能主张仍待验证。
 
 - [[_sources/bilibili-bv1b2kc6heyx-pi-ai-7-18-13-survey-2026|PI 机器人 AI 创业公司 · 7 位创始人 · 18 个月 · 13 项产出【Survey 2026】]] — 已综合为 [[_syntheses/bilibili-physical-intelligence-vla-experience-loop-deep-dive-2026-07-19|PI VLA 与经验闭环深研]]；关键模型主张以一手论文校验。
@@ -123,6 +125,7 @@ tags:
 
 ## Entities
 
+- [[_entities/RoboVerse|RoboVerse]] — MetaSim 之上的任务、资产、数据集、benchmark 与学习工作流层；可用于多后端仿真、IL/VLA/RL、Real2Sim 和 sim-to-real 研究，但不是基础模型或企业真机数据湖。
 - [[_entities/MATRiXSimulator|MATRiX Simulator]] — GENISOM.AI / zsibot 面向四足机器人开发的 MuJoCo + Unreal Engine 仿真工具；当前开源仓库主要是脚本、配置、教程和二进制分发入口，适合经 PoC 后用于导航/感知联调与演示，不宜直接视为成熟训练基础设施。
 - [[_entities/SRTSoftRobotTech|SRT 软体机器人]] — 中国气动柔性末端执行器与行业自动化公司；已完成软体夹爪产品化和医疗康复延伸，当前重点跟踪财务透明度与 2026 年创始团队迁移。
 - [[_entities/AndrejKarpathy|Andrej Karpathy]] — LLM Wiki 理念提出者，强调把知识管理从 RAG 转向持续编译。
@@ -182,6 +185,7 @@ tags:
 - [[_syntheses/bilibili-ai-daily-run-2026-07-23|Bilibili AI Daily Run 2026-07-23]] — 20 个候选、13 个重复；模型判断 6 条相关，成功转写 1 条并完成单视频深研，余 5 条因 Volcengine 音频时长配额耗尽未启动。
 
 - [[_syntheses/bilibili-ai-daily-run-2026-07-22|Bilibili AI Daily Run 2026-07-22]] — 20 个候选、15 个重复；模型选中 4 个 AI/具身智能相关视频，但首个外部 ASR 调用上传音频后无输出，未产生可综合的 source packet。
+- [[robotics-embodied-ai/research-notes/roboverse-platform-and-real-data-deep-dive-2026-07-28|RoboVerse 能力边界与具身数采数据增益深度调研]] — R05 主分类、R04/R07 次分类：区分 RoboVerse 与 MetaSim/基础模型/真机数据平台，给出六类真实数据增益路径、L0–L4 接入等级、四组 A/B 和商业/创业边界。
 - [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|zsibot/matrix（MATRiX）机器人仿真平台深度调研]] — R05 主分类、R04/R07 次分类：审计架构、发行包、代码开放边界、维护活跃度、文档漂移、许可与商业落地；结论是“值得做限定 PoC，不宜未经验证替换通用仿真底座”。
 - [[_syntheses/bilibili-ai-daily-run-2026-07-20|Bilibili AI Daily Run 2026-07-20]] — 20 个候选、19 个重复；唯一模型选中的柔性电子皮肤视频已完成转录与 R03/R07 单视频深研。
 - [[_syntheses/bilibili-tachin-flexible-electronic-skin-deep-dive-2026-07-20|途见科技柔性电子皮肤视频深度调研]] — R03 主分类、R07 次分类：区分可确认的产品方向/共同展示与未验证的融资、供应、性能、订单和规模化叙事。

@@ -7,13 +7,17 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-07-20
+last_updated: 2026-07-28
 ---
 
 # 机器人（具身智能） - 研究中间笔记
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
+
+## 2026-07-28 RoboVerse 平台与真实数据增益
+
+- [[roboverse-platform-and-real-data-deep-dive-2026-07-28]]: 按 R05 主分类、R04/R07 次分类审阅 RSS 2025 论文、固定提交仓库/文档和数据格式，区分平台、仿真底座与基础模型，形成真实数采数据接入契约、增益路径、A/B 验收和商业/创业判断。
 
 ## 2026-07-20 MATRiX 仿真平台深研
 

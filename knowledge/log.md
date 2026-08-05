@@ -645,3 +645,9 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-rlinf-embodied-reinforcement-learning-infrastructure-deep-dive-2026-07-28|RLinf 具身强化学习基础设施视频深研]]（R04，R07）和 [[_syntheses/bilibili-open-robot-arm-platform-selection-deep-dive-2026-07-28|开源机器人与机械臂选型视频深研]]（R05，R07）；补充 `SRC-robotics-323`–`326` raw captures、来源 MOC、source card 回链与全局索引。
   - **结论**: RL 基础设施应以目标任务的安全、成本与可复现 A/B 证明价值；开源机器人选择的最小闭环是 BOM/CAD、控制、标定/遥操、可训练数据、部署、许可证和安全，而非视频价格或“开源”标签。
   - **限制**: Bilibili ASR 中的性能、价格、平台/数据集名称、采用方和商业化信息未逐一得到一手来源支持，均未升级为行业事实。
+
+- **synthesis | RoboVerse 能力边界与具身数采数据增益深研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/roboverse-platform-and-real-data-deep-dive-2026-07-28|RoboVerse 深度调研]]、[[_sources/roboverse-platform-dataset-benchmark-source-set|来源集]]与[[_entities/RoboVerse|实体页]]；归档 `SRC-robotics-327`–`336` 并更新全局/行业/研究笔记/来源索引。
+  - **来源**: RSS 2025 论文、固定提交 `e9b5c6e` 的 RoboVerse 仓库与文档、2026-07-28 GitHub 元数据、Isaac Lab/LeRobot/ManiSkill 官方文档。
+  - **结论**: RoboVerse 是 MetaSim 之上的任务、数据、benchmark 和学习层，不是基础模型；L2 以上的真实 episode、Real2Sim 扫描、物理参数、失败/接管和真机 holdout 能提升其数据、仿真、评测或其中训练的模型，但必须用 real-only/sim-only/naive-mix/calibrated-mix 四组 A/B 证明。
+  - **限制**: 未运行 Linux/GPU 环境或独立复现实验；论文 mixed world-model 增益主要为定性，sim-to-real 样本有限，第三方资产许可仍需逐项审计。

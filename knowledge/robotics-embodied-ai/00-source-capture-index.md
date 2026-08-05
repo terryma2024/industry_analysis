@@ -22,8 +22,8 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 108 | 已成功抽取的 raw artifact。 |
-| `fallback_html` | 9 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
+| `ok` | 126 | 已成功抽取的 raw artifact。 |
+| `fallback_html` | 10 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 2 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据或 GitHub API 生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
 | `failed` | 7 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
@@ -216,6 +216,21 @@ aliases:
 | [`SRC-robotics-318`](../../raw/robotics-embodied-ai/documents/SRC-robotics-318-source.md) | [途见官网 raw](../../raw/robotics-embodied-ai/documents/SRC-robotics-318-source.md) | 核验其自述的材料—器件—电路—算法定位与 EI-H/EI-B/EI-G 产品类别；不认作第三方性能/收入证明。 |
 | `SRC-robotics-319` | 抽取失败（源站 TLS `BAD_ECPOINT`） | 深圳发改委托管报道：URL/正文已人工核验 2025 CES 共同展示与创始人供应链陈述；保留失败 manifest，不证明订单、收入或量产指标。 |
 | [`SRC-robotics-320`](../../raw/robotics-embodied-ai/documents/SRC-robotics-320-2025.md) | [兆威年报 PDF sidecar](../../raw/robotics-embodied-ai/documents/SRC-robotics-320-2025.md) | 核验其仿生灵巧手研发/量产目标；PDF 已留存，文本转换失败待补；未点名途见，不能用于证明供应关系或投资。 |
+
+## 2026-07-28 RoboVerse 平台、数据与真实数采增益来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-327`](../../raw/robotics-embodied-ai/documents/SRC-robotics-327-roboverse-towards-a-unified-platform-dataset-and-benchmark-for-scalable-and-gene.md) | [RoboVerse arXiv 元数据](../../raw/robotics-embodied-ai/documents/SRC-robotics-327-roboverse-towards-a-unified-platform-dataset-and-benchmark-for-scalable-and-gene.md) | 核验论文身份、总体定位与摘要；详细实验看 `SRC-robotics-336`。 |
+| [`SRC-robotics-336`](../../raw/robotics-embodied-ai/documents/SRC-robotics-336-roboverse-rss-2025-paper-full-pdf.md) | [完整论文 Markdown](../../raw/robotics-embodied-ai/documents/SRC-robotics-336-roboverse-rss-2025-paper-full-pdf.md) / [PDF](../../raw/robotics-embodied-ai/documents/SRC-robotics-336-roboverse-rss-2025-paper-full-pdf.pdf) | 核验数据统计、DROID+RoboVerse 世界模型、Real2Sim、sim-to-real 与限制；均为作者实验。 |
+| [`SRC-robotics-328`](../../raw/robotics-embodied-ai/documents/SRC-robotics-328-roboverse-repository-readme-at-audited-commit.md) | [固定提交 README](../../raw/robotics-embodied-ai/documents/SRC-robotics-328-roboverse-repository-readme-at-audited-commit.md) | 当前安装、后端/数据来源、Apache-2.0 根许可证和资产许可待补声明。 |
+| [`SRC-robotics-329`](../../raw/robotics-embodied-ai/documents/SRC-robotics-329-roboverse-scope-and-architecture-documentation-at-audited-commit.md) | [范围与架构](../../raw/robotics-embodied-ai/documents/SRC-robotics-329-roboverse-scope-and-architecture-documentation-at-audited-commit.md) | 区分 RoboVerse 内容/学习层与 MetaSim simulator core。 |
+| [`SRC-robotics-330`](../../raw/robotics-embodied-ai/documents/SRC-robotics-330-roboverse-multi-agent-trajectory-format-and-cross-simulator-replay-documentation.md) | [轨迹格式](../../raw/robotics-embodied-ai/documents/SRC-robotics-330-roboverse-multi-agent-trajectory-format-and-cross-simulator-replay-documentation.md) | robot-keyed PKL、双臂数据与 state replay 不等于 dynamics/task success 的边界。 |
+| [`SRC-robotics-331`](../../raw/robotics-embodied-ai/documents/SRC-robotics-331-roboverse-smolvla-and-lerobot-data-pipeline-documentation.md) | [SmolVLA/LeRobot pipeline](../../raw/robotics-embodied-ai/documents/SRC-robotics-331-roboverse-smolvla-and-lerobot-data-pipeline-documentation.md) | 仿真 demo→LeRobot→训练→RoboVerse 评测工作流，不等于任意真机数据通用 importer。 |
+| `SRC-robotics-332` | [GitHub API fallback HTML](../../raw/robotics-embodied-ai/documents/SRC-robotics-332-roboverse-github-repository-and-issue-audit.html) | 自动抽取失败后保留原始 API HTML；维护/issue 仅作工程信号。 |
+| [`SRC-robotics-333`](../../raw/robotics-embodied-ai/documents/SRC-robotics-333-isaac-lab-official-framework-overview.md) | [Isaac Lab 官方概览](../../raw/robotics-embodied-ai/documents/SRC-robotics-333-isaac-lab-official-framework-overview.md) | 单一 NVIDIA/PhysX 生态对照。 |
+| [`SRC-robotics-334`](../../raw/robotics-embodied-ai/documents/SRC-robotics-334-lerobotdataset-v3-official-specification.md) | [LeRobotDataset v3](../../raw/robotics-embodied-ai/documents/SRC-robotics-334-lerobotdataset-v3-official-specification.md) | 真机数据格式/共享层对照。 |
+| [`SRC-robotics-335`](../../raw/robotics-embodied-ai/documents/SRC-robotics-335-maniskill-official-framework-documentation.md) | [ManiSkill 官方概览](../../raw/robotics-embodied-ai/documents/SRC-robotics-335-maniskill-official-framework-documentation.md) | manipulation GPU simulation 对照。 |
 
 ## 后续流程
 
