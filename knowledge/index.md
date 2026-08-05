@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-28
+last_updated: 2026-08-05
 tags:
   - wiki
   - index
@@ -38,6 +38,8 @@ tags:
 - [[_sources/zsibot-matrix-robotics-simulator-source-set|zsibot/matrix（MATRiX）机器人仿真平台来源集]] — 固定提交 README、v0.1.2、GitHub API/issue/PR/tag、上游项目与政策证据；综合于 [[robotics-embodied-ai/research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|MATRiX 深度调研]]。
 
 - [[_sources/roboverse-platform-dataset-benchmark-source-set|RoboVerse 平台、数据集与基准来源集]] — RSS 2025 论文、固定提交仓库/文档、数据格式、学习工作流、维护信号与官方竞品资料；综合于 [[robotics-embodied-ai/research-notes/roboverse-platform-and-real-data-deep-dive-2026-07-28|RoboVerse 深度调研]]。
+
+- [[_sources/wechat-embodied-intelligence-robotics-core-technology-overview|一文速览具身智能机器人相关核心技术体系]] — 古月居 / 机器人小毛的 C 级入门综述；可作感知—决策—执行—反馈—学习概念地图，企业、政策、市场与产业主张均保留为待验证线索。
 
 - [[_sources/bilibili-bv17wnv6gero-bilibili-video|途见科技：国家认证的“皮肤级”触觉方案]] — 已综合为 [[_syntheses/bilibili-tachin-flexible-electronic-skin-deep-dive-2026-07-20|途见科技柔性电子皮肤视频深度调研]]；产品定位有官方材料，融资、订单、量产和性能主张仍待验证。
 

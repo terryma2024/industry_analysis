@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-07-28
+last_updated: 2026-08-05
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -54,6 +54,7 @@ sources:
 - `13-robot-company-product-comparison-2026-06-08.md`: 主表机器人公司的产品型号全景对比，覆盖人形/轮式双臂、协作臂/工业机器人、AMR/移动操作的参数、技术路线、优缺点和待验证项。
 - [[research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|zsibot/matrix（MATRiX）机器人仿真平台深度调研]]: 审计 MuJoCo + Unreal Engine 架构、四足机器人与 ROS 2 能力、发行包和开放边界，并给出商业应用、中小创业机会、PoC 验收与停用条件。
 - [[research-notes/roboverse-platform-and-real-data-deep-dive-2026-07-28|RoboVerse 能力边界与具身数采数据增益深度调研]]: 拆解 RoboVerse/MetaSim 的平台边界、多后端任务/数据/学习能力，判断真实数采数据对数据集、仿真、benchmark 和模型的不同增益，并给出 L0–L4 接入契约与四组 A/B PoC。
+- [[_sources/wechat-embodied-intelligence-robotics-core-technology-overview|一文速览具身智能机器人相关核心技术体系]]: 微信公众号 C 级入门综述来源卡；保留技术地图，并显式隔离未经一级来源验证的企业、政策、市场和产业主张。
 - [[research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]]: 按高保真感知/合成数据、ROS 2 系统联调、控制/RL、硬件与商业许可拆解三者边界；包含国产 GPU/AI 加速器支持矩阵、组合架构与 PoC 验收项。
 - [[research-notes/srt-soft-robot-tech-company-deep-dive-2026-07-13|SRT 软体机器人公司深度调研]]: 拆解柔性末端执行器技术、业务结构、融资与股权、竞争、十五五关联、创始团队迁移风险和投前尽调问题。
 - [[research-notes/airspeed-data-production-platform-2026-06-23|AIRSPEED 具身智能数据生产平台调研]]: 系统拆解 AIRSPEED 的开源采集核心、论文三服务架构、技术转移叙事、性能 claim、版本边界和对中国具身数据基础设施的启发。

@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-07-28
+last_updated: 2026-08-05
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -22,11 +22,17 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 108 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 126 | 已成功抽取的 raw artifact。 |
+| `ok` | 127 | 已成功抽取的 raw artifact。 |
 | `fallback_html` | 10 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 2 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据或 GitHub API 生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
-| `failed` | 7 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+| `failed` | 8 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+
+## 2026-08-05 微信具身智能技术综述
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-337`](../../raw/robotics-embodied-ai/documents/SRC-robotics-337-source.md) | [微信文章 Defuddle 全文](../../raw/robotics-embodied-ai/documents/SRC-robotics-337-source.md) | 用于建立感知—决策—执行—反馈—学习入门地图；作者署名“机器人小毛”、公众号“古月居”，发布日期待验证。无一级引用的公司、政策、市场与性能主张不作为已验证事实。 |
 
 ## 2026-07-28 RLinf 与开源机械臂视频深研来源
 

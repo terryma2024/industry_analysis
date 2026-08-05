@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-07-26
+last_updated: 2026-08-05
 tags:
   - wiki
   - log
@@ -651,3 +651,10 @@ tags:
   - **来源**: RSS 2025 论文、固定提交 `e9b5c6e` 的 RoboVerse 仓库与文档、2026-07-28 GitHub 元数据、Isaac Lab/LeRobot/ManiSkill 官方文档。
   - **结论**: RoboVerse 是 MetaSim 之上的任务、数据、benchmark 和学习层，不是基础模型；L2 以上的真实 episode、Real2Sim 扫描、物理参数、失败/接管和真机 holdout 能提升其数据、仿真、评测或其中训练的模型，但必须用 real-only/sim-only/naive-mix/calibrated-mix 四组 A/B 证明。
   - **限制**: 未运行 Linux/GPU 环境或独立复现实验；论文 mixed world-model 增益主要为定性，sim-to-real 样本有限，第三方资产许可仍需逐项审计。
+
+## [2026-08-05]
+
+- **ingest | 微信《一文速览具身智能机器人相关核心技术体系》入库**
+  - **变更**: 新增 [[_sources/wechat-embodied-intelligence-robotics-core-technology-overview|来源卡]]和 `SRC-robotics-337` Defuddle 全文；更新机器人来源台账、来源 MOC、行业索引与全局索引。
+  - **结论**: 该文可作感知—决策—执行—反馈—学习的入门地图，不能单独支撑商业成熟度、政策、市场或产业链判断。
+  - **限制**: 原文发布日期未从页面元数据可靠提取；公司案例、进口依赖、政策预测和 2030 年市场表述均保留为 C 级待验证线索。
