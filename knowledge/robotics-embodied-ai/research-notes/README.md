@@ -15,6 +15,14 @@ last_updated: 2026-08-06
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
 
+## 2026-08-06 3D 仿真资产生产管线调研
+
+- [[3d-simulation-asset-production-pipelines-comparison-2026-08-06]]: 按 R05 主分类、R04/R02 次分类，比较 DCC、CAD/BIM、摄影测量、LiDAR/RGB-D、NeRF/3DGS、程序化、生成式 3D、资产库和混合式资产工厂；给出 SimAsset 合同、七道质量门、方案栈、六周 PoC、商业应用与中小创业机会。
+
+## 2026-08-06 光轮智能同类创业公司扫描
+
+- [[lightwheel-peer-companies-business-model-comparison-2026-08-06]]: 按 R06 主分类、R03/R07 次分类，用六层能力矩阵比较 12 家中国/海外候选；区分中立基础设施、纵向一体化和数据/评测局部供应商，并输出机器可读 CSV 与下一轮商业尽调问题。
+
 ## 2026-08-06 光轮智能公司与商业模式调研
 
 - [[lightwheel-company-and-commercial-model-deep-dive-2026-08-06]]: 按 R03 主分类、R07 次分类，核验团队、产品栈、开源资产、NVIDIA/吉利部署、5.5 亿元订单与密集融资；结论是技术和资本势能强，但收入确认、回款、毛利、客户集中和复购仍需财务与合同尽调。

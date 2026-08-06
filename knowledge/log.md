@@ -679,6 +679,17 @@ tags:
 
 ## [2026-08-06]
 
+- **synthesis | 3D 仿真资产生产技术管线综合调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/3d-simulation-asset-production-pipelines-comparison-2026-08-06|3D 仿真资产管线调研]]、[[_sources/3d-simulation-asset-production-pipeline-source-set|来源集]]和九路线机器可读 CSV；登记并捕获 `SRC-robotics-407`–`422`，更新行业/研究笔记/来源/全局索引。
+  - **来源**: OpenUSD、UsdPhysics、SimReady Foundation、Isaac Sim、Datasmith、COLMAP、ReCap、Nerfstudio、Infinigen-Sim、Hunyuan3D、TRELLIS、MuJoCo、ROS 2 URDF 和 Houdini Solaris 官方文档/代码/论文。
+  - **结论**: CAD 保工程结构，扫描保尺度/外观，3DGS/NeRF 保视觉，程序化保规模，生成式 3D 保候选速度；生产默认应采用 OpenUSD canonical package，并独立编译 collision、physics、articulation、semantics、sensor material 和 runtime adapter，再以任务证据验收。
+  - **限制**: 未做统一资产和人员条件下的跨工具成本 benchmark，也未验证多仿真器物理等价；生成式 3D 的 metric、physics、许可与真机增益仍需目标 PoC。
+
+- **synthesis | 光轮智能同类创业公司与商业模式扫描**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/lightwheel-peer-companies-business-model-comparison-2026-08-06|同类公司对比调研]]、[[_sources/lightwheel-peer-physical-ai-data-simulation-companies-source-set|来源集]]和机器可读候选矩阵；登记/捕获 `SRC-robotics-394`–`406`，更新行业公司表、来源 MOC、研究笔记 MOC 和全局索引。
+  - **结论**: Applied Intuition 是最接近的平台商业对标，Parallel Domain 最接近 Real2Sim 资产飞轮，Duality AI 最接近 SimReady/合成数据/验证组合；求之科技是中国产品覆盖最接近候选，极佳视界则是纵向一体化替代。
+  - **限制**: 多数未上市公司不公开收入、毛利、回款和复购；Rendered.ai 抓取 403、具身智境 TLS 失败，极佳官网为 HTML fallback；官网客户数、订单和性能均未升级为审计事实。
+
 - **synthesis | 光轮智能公司与商业模式深度调研**
   - **变更**: 新增 [[robotics-embodied-ai/research-notes/lightwheel-company-and-commercial-model-deep-dive-2026-08-06|光轮智能深度调研]]、[[_sources/lightwheel-company-technology-commercial-source-set|来源集]]和 [[_entities/LightwheelAI|实体页]]；登记并捕获 `SRC-robotics-377`–`393`，更新全局/行业/研究笔记/公司/实体/来源索引。
   - **来源**: 光轮官网与产品页、NVIDIA/吉利部署案例、政府平台订单与交付报道、GitHub/Hugging Face 公开资产、融资媒体及奇绩创坛团队资料。

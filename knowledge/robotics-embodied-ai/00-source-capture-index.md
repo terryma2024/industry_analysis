@@ -22,11 +22,21 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 116 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 145 | 已成功抽取的 raw artifact。 |
-| `fallback_html` | 10 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
+| `ok` | 188 | 已成功抽取的 raw artifact。 |
+| `fallback_html` | 11 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 10 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据、GitHub API 或固定提交文本生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
-| `failed` | 11 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+| `failed` | 14 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+
+## 2026-08-06 3D 仿真资产生产管线调研来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-407`](../../raw/robotics-embodied-ai/documents/SRC-robotics-407-openusd-introduction-and-composition-model.md)–[`409`](../../raw/robotics-embodied-ai/documents/SRC-robotics-409-simready-foundation-specification-and-validation-framework.md) | OpenUSD、UsdPhysics、SimReady Foundation | 定义组合式 canonical asset、刚体物理 schema 和机器可检查质量门；不证明跨引擎数值等价。 |
+| [`SRC-robotics-410`](../../raw/robotics-embodied-ai/documents/SRC-robotics-410-nvidia-isaac-sim-current-asset-ingestion-overview.md)–[`413`](../../raw/robotics-embodied-ai/documents/SRC-robotics-413-unreal-engine-datasmith-cad-import-and-tessellation-workflow.md) | Isaac Sim/URDF/Replicator 与 Datasmith CAD | 核验多源导入、合成数据和 CAD tessellation 工作流；导入成功不等于任务可信。 |
+| [`SRC-robotics-414`](../../raw/robotics-embodied-ai/documents/SRC-robotics-414-colmap-structure-from-motion-and-multi-view-stereo-pipeline.md)–[`416`](../../raw/robotics-embodied-ai/documents/SRC-robotics-416-nerfstudio-gaussian-splatting-implementation-and-export-limits.md) | COLMAP、ReCap、Nerfstudio | 对照摄影测量、LiDAR scan-to-mesh 和 3DGS appearance 表示；均需额外物理/语义编译。 |
+| [`SRC-robotics-417`](../../raw/robotics-embodied-ai/documents/SRC-robotics-417-infinigen-sim-procedural-articulated-simulation-assets.md)–[`419`](../../raw/robotics-embodied-ai/documents/SRC-robotics-419-trellis-structured-3d-latent-asset-generation.md) | Infinigen-Sim、Hunyuan3D、TRELLIS | 核验程序化 articulated asset 与生成式 mesh/PBR/Gaussian 能力；作者指标不外推为 metric/physics 保证。 |
+| [`SRC-robotics-420`](../../raw/robotics-embodied-ai/documents/SRC-robotics-420-mujoco-model-asset-collision-and-inertia-documentation.md)–[`422`](../../raw/robotics-embodied-ai/documents/SRC-robotics-422-houdini-solaris-procedural-usd-workflow.md) | MuJoCo、ROS 2 URDF、Houdini Solaris | 区分 visual/collision/inertial，并核验程序化 USD 资产工厂入口。 |
 
 ## 2026-08-05 RTAB-Map、cuVSLAM、OpenVINS 深度调研来源
 
@@ -267,6 +277,17 @@ aliases:
 | [`SRC-robotics-381`](../../raw/robotics-embodied-ai/documents/SRC-robotics-381-beijing-government-report-on-lightwheel-financing-orders-and-delivery-scale.md) | 政府平台报道 | 记录 5.5 亿元新增订单、150 万小时及复售率等公司口径；非审计财务。 |
 | [`SRC-robotics-382`](../../raw/robotics-embodied-ai/documents/SRC-robotics-382-lw-benchhub-official-repository.md)–[`SRC-robotics-384`](../../raw/robotics-embodied-ai/documents/SRC-robotics-384-lightwheelocc-autonomous-driving-synthetic-dataset.md) | GitHub 与 Hugging Face | 可检查的代码、任务、资产与数据集；不等于企业版 SLA 或收入。 |
 | [`SRC-robotics-385`](../../raw/robotics-embodied-ai/documents/SRC-robotics-385-lightwheel-early-angel-financing-and-initial-customer-status.md)–[`SRC-robotics-393`](../../raw/robotics-embodied-ai/documents/SRC-robotics-393-lightwheel-miracleplus-accelerator-company-profile.md) | 融资、团队、生态资料 | 形成融资和团队时间线；`SRC-robotics-390` 旧链接 404，已保留失败 manifest。 |
+
+## 2026-08-06 光轮智能同类物理 AI 基础设施公司来源
+
+| SRC | raw artifact / 状态 | 说明 |
+|---|---|---|
+| [`SRC-robotics-394`](../../raw/robotics-embodied-ai/documents/SRC-robotics-394-applied-intuition-end-to-end-physical-ai-platform.md)–[`SRC-robotics-397`](../../raw/robotics-embodied-ai/documents/SRC-robotics-397-scale-ai-physical-ai-data-engine.md) | Applied Intuition、Duality AI、Parallel Domain、Scale AI 官方页 | 核验海外平台、Real2Sim、数字孪生、数据与评测模块；财务和机器人业务拆分不公开。 |
+| `SRC-robotics-398` | Rendered.ai 抓取失败 | Defuddle 与 fallback HTML 均返回 403；仅保留来源记录和公开搜索快照，待官方 PDF/文档补采。 |
+| [`SRC-robotics-399`](../../raw/robotics-embodied-ai/documents/SRC-robotics-399-foretellix-data-driven-autonomy-verification-and-validation-toolchain.md)–[`SRC-robotics-400`](../../raw/robotics-embodied-ai/documents/SRC-robotics-400-discover-robotics-rsr-embodied-data-closed-loop-platform.md) | Foretellix 与求之科技 | 核验自动驾驶 V&V 和中国具身数据/仿真闭环产品；客户经济性待验证。 |
+| [`SRC-robotics-401`](../../raw/robotics-embodied-ai/documents/SRC-robotics-401-gigaai-company-and-full-stack-physical-agi-platform.md)–[`SRC-robotics-402`](../../raw/robotics-embodied-ai/documents/SRC-robotics-402-gigaai-financing-and-industrial-deployment-report.md) | 极佳视界官网 fallback 与政府平台报道 | 核验全栈路线和公开融资/部署口径；公司披露不等于审计财务或独立 benchmark。 |
+| [`SRC-robotics-403`](../../raw/robotics-embodied-ai/documents/SRC-robotics-403-51world-company-and-51sim-physical-ai-platform.md)–[`SRC-robotics-405`](../../raw/robotics-embodied-ai/documents/SRC-robotics-405-nexastar-real-world-interaction-data-infrastructure.md) | 51WORLD、IO-AI、NexaStar 官方页 | 区分仿真平台、真实数据平台和数据中心/交易模式；官网规模数字均需第三方及合同穿透。 |
+| `SRC-robotics-406` | 具身智境抓取失败 | TLS 在安全握手前断开；保留官网来源记录，客户、产品和复购均待补证。 |
 
 ## 2026-07-23 LingBot-VLA 教程视频一级校验来源
 

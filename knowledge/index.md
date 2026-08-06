@@ -15,6 +15,10 @@ tags:
 
 ## Sources
 
+- [[_sources/3d-simulation-asset-production-pipeline-source-set|3D 仿真资产生产技术管线来源集]] — OpenUSD/UsdPhysics/SimReady、Isaac/Datasmith、COLMAP/ReCap/Nerfstudio、Infinigen-Sim、Hunyuan3D/TRELLIS、MuJoCo/URDF/Houdini 官方来源；限定“可生成/可导入”与“可物理交互/可任务验证”的边界。
+
+- [[_sources/lightwheel-peer-physical-ai-data-simulation-companies-source-set|光轮智能同类物理 AI 数据、仿真与评测公司来源集]] — 汇总 Applied Intuition、Duality AI、Parallel Domain、求之科技、极佳视界等 12 家候选的官方产品证据、抓取状态与商业证据限制。
+
 - [[_sources/lightwheel-company-technology-commercial-source-set|光轮智能公司、技术与商业化来源集]] — 汇总公司产品、NVIDIA/吉利部署、开源代码与数据、订单交付口径及融资证据；明确订单不等于收入、合作案例不等于规模复购。
 
 - [[_sources/jetson-thor-edge-ai-compute-platform-source-set|Jetson Thor 与边缘 AI 计算平台来源集]] — NVIDIA/Qualcomm/AMD/Hailo/Huawei/Horizon 官方规格、当前官方价格及动态库存证据；综合于 [[robotics-embodied-ai/research-notes/jetson-thor-and-alternatives-spec-price-comparison-2026-08-05|Jetson Thor 选型调研]]。
@@ -179,6 +183,10 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[robotics-embodied-ai/research-notes/3d-simulation-asset-production-pipelines-comparison-2026-08-06|3D 仿真资产生产技术管线综合调研]] — R05 主分类、R04/R02 次分类：比较九条资产生产路线，推荐“多源输入 + OpenUSD 规范化 + 物理/语义编译 + 多仿真器 adapter + 任务证据”的混合资产工厂，并给出七道质量门和六周 PoC。
+
+- [[robotics-embodied-ai/research-notes/lightwheel-peer-companies-business-model-comparison-2026-08-06|光轮智能同类创业公司与商业模式对比调研]] — R06 主分类、R03/R07 次分类：Applied Intuition 是最接近的平台商业对标，Parallel Domain 最接近 Real2Sim 资产飞轮，求之科技是中国产品覆盖最相似候选，但商业质量均需合同、回款与复购穿透。
 
 - [[robotics-embodied-ai/research-notes/lightwheel-company-and-commercial-model-deep-dive-2026-08-06|光轮智能公司与商业模式深度调研]] — R03 主分类、R07 次分类：判断其已越过概念与单一 Demo，但 5.5 亿元新增订单、150 万小时交付和复售率仍需用合同、收入、回款、毛利及复购穿透验证。
 
