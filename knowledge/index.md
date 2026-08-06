@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-08-05
+last_updated: 2026-08-06
 tags:
   - wiki
   - index
@@ -14,6 +14,8 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/lightwheel-company-technology-commercial-source-set|光轮智能公司、技术与商业化来源集]] — 汇总公司产品、NVIDIA/吉利部署、开源代码与数据、订单交付口径及融资证据；明确订单不等于收入、合作案例不等于规模复购。
 
 - [[_sources/jetson-thor-edge-ai-compute-platform-source-set|Jetson Thor 与边缘 AI 计算平台来源集]] — NVIDIA/Qualcomm/AMD/Hailo/Huawei/Horizon 官方规格、当前官方价格及动态库存证据；综合于 [[robotics-embodied-ai/research-notes/jetson-thor-and-alternatives-spec-price-comparison-2026-08-05|Jetson Thor 选型调研]]。
 
@@ -133,6 +135,8 @@ tags:
 
 ## Entities
 
+- [[_entities/LightwheelAI|光轮智能]] — 中国物理 AI 数据、仿真与评测基础设施公司；已形成 SimReady、EgoSuite、RoboFinals 与 Real2Sim2Real 产品链，财务质量仍待验证。
+
 - [[_entities/RoboVerse|RoboVerse]] — MetaSim 之上的任务、资产、数据集、benchmark 与学习工作流层；可用于多后端仿真、IL/VLA/RL、Real2Sim 和 sim-to-real 研究，但不是基础模型或企业真机数据湖。
 - [[_entities/MATRiXSimulator|MATRiX Simulator]] — GENISOM.AI / zsibot 面向四足机器人开发的 MuJoCo + Unreal Engine 仿真工具；当前开源仓库主要是脚本、配置、教程和二进制分发入口，适合经 PoC 后用于导航/感知联调与演示，不宜直接视为成熟训练基础设施。
 - [[_entities/SRTSoftRobotTech|SRT 软体机器人]] — 中国气动柔性末端执行器与行业自动化公司；已完成软体夹爪产品化和医疗康复延伸，当前重点跟踪财务透明度与 2026 年创始团队迁移。
@@ -175,6 +179,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[robotics-embodied-ai/research-notes/lightwheel-company-and-commercial-model-deep-dive-2026-08-06|光轮智能公司与商业模式深度调研]] — R03 主分类、R07 次分类：判断其已越过概念与单一 Demo，但 5.5 亿元新增订单、150 万小时交付和复售率仍需用合同、收入、回款、毛利及复购穿透验证。
 
 - [[robotics-embodied-ai/research-notes/jetson-thor-and-alternatives-spec-price-comparison-2026-08-05|Jetson Thor 与同类替代平台规格、价格及选型调研]] — R05/R06：当前 Thor 开发套件已为 US$5,499；以真实模型 p95、内存、功耗、I/O、迁移与量产 TCO 比较 T5000/T4000、Orin、IQ-9075、DGX Spark、AMD 128GB 和降档 NPU。
 

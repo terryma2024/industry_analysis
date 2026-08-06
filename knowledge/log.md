@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-08-05
+last_updated: 2026-08-06
 tags:
   - wiki
   - log
@@ -676,3 +676,11 @@ tags:
   - **来源**: NVIDIA 当前 Thor/Jetson FAQ/Marketplace/JetPack/benchmark，Qualcomm IQ-9075，AMD 与 MINISFORUM，DGX Spark、Hailo、华为昇腾和地平线官方页面，以及 iCEasy 中国渠道动态报价线索（B 级）。
   - **结论**: 2026-08-05 当前 Thor 开发套件官方价为 US$5,499，而非仍被旧材料引用的 US$3,499；Thor 的一比一价值来自 128GB、CUDA/Isaac、机器人 I/O 和量产模组路径，不能用异精度 TOPS 或美元/TOPS 替代目标模型 PoC。
   - **限制**: 未取得 IQ-9075/国产方案书面报价，也未用同一真实 VLA/VLM、传感器与功耗条件做跨平台 A/B；动态价格、库存和交期必须在采购日复核。
+
+## [2026-08-06]
+
+- **synthesis | 光轮智能公司与商业模式深度调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/lightwheel-company-and-commercial-model-deep-dive-2026-08-06|光轮智能深度调研]]、[[_sources/lightwheel-company-technology-commercial-source-set|来源集]]和 [[_entities/LightwheelAI|实体页]]；登记并捕获 `SRC-robotics-377`–`393`，更新全局/行业/研究笔记/公司/实体/来源索引。
+  - **来源**: 光轮官网与产品页、NVIDIA/吉利部署案例、政府平台订单与交付报道、GitHub/Hugging Face 公开资产、融资媒体及奇绩创坛团队资料。
+  - **结论**: 公司已越过概念和单一 Demo，形成真实数据、SimReady、训练、评测和部署反馈闭环；但 5.5 亿元新增订单不等于收入或回款，150 万小时与复售率等口径仍需合同、财务和客户复购穿透。
+  - **限制**: 未获得审计财务、合同、回款、客户集中度、平台定价或 cap table；`SRC-robotics-390` 旧经纬页面自动抽取返回 404，失败记录已保留。

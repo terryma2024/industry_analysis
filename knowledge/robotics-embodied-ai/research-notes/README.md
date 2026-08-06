@@ -7,13 +7,17 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-07-28
+last_updated: 2026-08-06
 ---
 
 # 机器人（具身智能） - 研究中间笔记
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
+
+## 2026-08-06 光轮智能公司与商业模式调研
+
+- [[lightwheel-company-and-commercial-model-deep-dive-2026-08-06]]: 按 R03 主分类、R07 次分类，核验团队、产品栈、开源资产、NVIDIA/吉利部署、5.5 亿元订单与密集融资；结论是技术和资本势能强，但收入确认、回款、毛利、客户集中和复购仍需财务与合同尽调。
 
 ## 2026-08-05 Jetson Thor 与替代平台选型
 

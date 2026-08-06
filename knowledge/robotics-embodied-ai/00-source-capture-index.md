@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-08-05
+last_updated: 2026-08-06
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -257,6 +257,16 @@ aliases:
 | [`SRC-robotics-335`](../../raw/robotics-embodied-ai/documents/SRC-robotics-335-maniskill-official-framework-documentation.md) | [ManiSkill 官方概览](../../raw/robotics-embodied-ai/documents/SRC-robotics-335-maniskill-official-framework-documentation.md) | manipulation GPU simulation 对照。 |
 
 ## 后续流程
+
+## 2026-08-06 光轮智能公司、技术与商业化来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-377`](../../raw/robotics-embodied-ai/documents/SRC-robotics-377-lightwheel-official-company-and-product-overview.md)–[`SRC-robotics-378`](../../raw/robotics-embodied-ai/documents/SRC-robotics-378-lightwheel-platform-enterprise-workflow-and-capabilities.md) | 公司官网与企业平台 | 核验当前产品结构；不证明收入和独立性能。 |
+| [`SRC-robotics-379`](../../raw/robotics-embodied-ai/documents/SRC-robotics-379-lightwheel-nvidia-customer-story-and-geely-factory-deployment.md)–[`SRC-robotics-380`](../../raw/robotics-embodied-ai/documents/SRC-robotics-380-geely-humanoid-real2sim2real-deployment-case.md) | NVIDIA/光轮吉利案例 | 核验 GR00T、Isaac 与工厂部署工作流；同一合作链不算完全独立双重验证。 |
+| [`SRC-robotics-381`](../../raw/robotics-embodied-ai/documents/SRC-robotics-381-beijing-government-report-on-lightwheel-financing-orders-and-delivery-scale.md) | 政府平台报道 | 记录 5.5 亿元新增订单、150 万小时及复售率等公司口径；非审计财务。 |
+| [`SRC-robotics-382`](../../raw/robotics-embodied-ai/documents/SRC-robotics-382-lw-benchhub-official-repository.md)–[`SRC-robotics-384`](../../raw/robotics-embodied-ai/documents/SRC-robotics-384-lightwheelocc-autonomous-driving-synthetic-dataset.md) | GitHub 与 Hugging Face | 可检查的代码、任务、资产与数据集；不等于企业版 SLA 或收入。 |
+| [`SRC-robotics-385`](../../raw/robotics-embodied-ai/documents/SRC-robotics-385-lightwheel-early-angel-financing-and-initial-customer-status.md)–[`SRC-robotics-393`](../../raw/robotics-embodied-ai/documents/SRC-robotics-393-lightwheel-miracleplus-accelerator-company-profile.md) | 融资、团队、生态资料 | 形成融资和团队时间线；`SRC-robotics-390` 旧链接 404，已保留失败 manifest。 |
 
 ## 2026-07-23 LingBot-VLA 教程视频一级校验来源
 

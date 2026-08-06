@@ -2,7 +2,7 @@
 title: Entities Layer
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-20
+last_updated: 2026-08-06
 tags:
   - wiki
   - entities
@@ -23,6 +23,7 @@ tags:
 - [[AIRSPEED]]
 - [[SRTSoftRobotTech|SRT 软体机器人]]
 - [[MATRiXSimulator|MATRiX Simulator]]
+- [[LightwheelAI|光轮智能]]
 
 ## AI 搜索与规划实体
 
