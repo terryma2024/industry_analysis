@@ -52,7 +52,9 @@ sources:
 - `09-training-data-deep-dive.md`: 训练数据深度调研汇总页和并行研究入口，含 UMI v0 SOP/schema/客户数据包模板与 LeRobot 初学者教学入口。
 - `12-robotics-engineering-platforms-2026-06-04.md`: 机器人工程平台综合调研，覆盖数据、训练、评测、部署、真机推理和选型框架。
 - `13-robot-company-product-comparison-2026-06-08.md`: 主表机器人公司的产品型号全景对比，覆盖人形/轮式双臂、协作臂/工业机器人、AMR/移动操作的参数、技术路线、优缺点和待验证项。
-- [[research-notes/3d-simulation-asset-production-pipelines-comparison-2026-08-06|3D 仿真资产生产技术管线综合调研]]: R05 主分类、R04/R02 次分类；比较 CAD、扫描、NeRF/3DGS、程序化和生成式 3D 等九条路线，给出 OpenUSD canonical package、Sim-Ready 质量门、多运行时适配、统一 PoC、商业和创业选型。
+- [[research-notes/unreal-engine-in-robotics-and-embodied-ai-2026-08-06|Unreal Engine 在机器人与具身智能中的应用、开源项目和论文调研]]: R04 主分类、R05/R06 次分类；梳理合成数据、自主系统、数字孪生、灾害/水下、多机器人和 VLM/VLA 场景，核验 20 个项目、18 篇论文、许可边界、混合物理架构和 PoC。
+- [[research-notes/unity-in-robotics-and-embodied-ai-2026-08-06|Unity 在机器人与具身智能中的应用、开源项目和论文调研]]: R04 主分类、R05/R06 次分类；覆盖 Unity Robotics、ML-Agents/Perception、AI2-THOR 系列、家庭/VR、AWSIM/Flightmare/CLOiSim，核验 23 个项目、16 篇论文、维护状态与分层许可，并给出 UE/专用模拟器对照和 PoC。
+- [[research-notes/3d-simulation-asset-production-pipelines-comparison-2026-08-06|3D 仿真资产生产技术管线综合调研]]: R05 主分类、R04/R02 次分类；比较 CAD、扫描、NeRF/3DGS、程序化和生成式 3D 等九条路线，给出 OpenUSD canonical package、SimReady L1/L2/L3 三级验收、Profile 选型、机器可读验收清单、多运行时适配、统一 PoC、商业和创业选型。
 - [[research-notes/zsibot-matrix-robotics-simulator-deep-dive-2026-07-20|zsibot/matrix（MATRiX）机器人仿真平台深度调研]]: 审计 MuJoCo + Unreal Engine 架构、四足机器人与 ROS 2 能力、发行包和开放边界，并给出商业应用、中小创业机会、PoC 验收与停用条件。
 - [[research-notes/roboverse-platform-and-real-data-deep-dive-2026-07-28|RoboVerse 能力边界与具身数采数据增益深度调研]]: 拆解 RoboVerse/MetaSim 的平台边界、多后端任务/数据/学习能力，判断真实数采数据对数据集、仿真、benchmark 和模型的不同增益，并给出 L0–L4 接入契约与四组 A/B PoC。
 - [[research-notes/orb-slam3-technology-engineering-commercial-deep-dive-2026-08-05|ORB-SLAM3 技术原理、工程选型与商业落地深度调研]]: R04 主分类、R05/R07 次分类；拆解 ORB 特征、视觉惯性 MAP 初始化、Atlas 多地图、论文 benchmark/失败模式、ROS 2 与 GPL 边界，对照 VINS-Fusion/OpenVINS/RTAB-Map/cuVSLAM，并给出 UMI 与商业 PoC。

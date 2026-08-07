@@ -1,0 +1,61 @@
+---
+source_id: "SRC-robotics-448"
+title: "UnrealROX official repository README"
+source_type: "code_repository"
+publisher: "3D Perception Lab University of Alicante"
+source_date: "2026-08-06"
+url: "https://github.com/3dperceptionlab/unrealrox/blob/master/README.md"
+evidence_grade: "S"
+capture_method: "direct-download"
+captured_at: "2026-08-06T07:11:41+00:00"
+tags:
+  - raw/source
+  - source-type/code-repository
+  - evidence/s
+aliases:
+  - SRC-robotics-448
+---
+# UnrealROX official repository README
+
+# UnrealROX
+
+Data-driven algorithms have surpassed traditional techniques in almost every aspect in robotic vision problems. Such algorithms need vast amounts of quality data to be able to work properly after their training process. Gathering and annotating that sheer amount of data in the real world is a time-consuming and error-prone task. Those problems limit scale and quality. Synthetic data generation has become increasingly popular since it is faster to generate and automatic to annotate. However, most of the current datasets and environments lack realism, interactions, and details from the real world. UnrealROX is an environment built over Unreal Engine 4 which aims to reduce that reality gap by leveraging hyperrealistic indoor scenes that are explored by robot agents which also interact with objects in a visually realistic manner in that simulated world. Photorealistic scenes and robots are rendered by Unreal Engine into a virtual reality headset which captures gaze so that a human operator can move the robot and use controllers for the robotic hands; scene information is dumped on a per-frame basis so that it can be reproduced offline to generate raw data and ground truth annotations. This virtual reality environment enables robotic vision researchers to generate realistic and visually plausible data with full ground truth for a wide variety of problems such as class and instance semantic segmentation, object detection, depth estimation, visual grasping, and navigation.
+
+## Documentation
+
+Visit the [ReadTheDocs](https://unrealrox.readthedocs.io/en/latest/) website for instructions on how to setup the environment and detailed usage tutorials.
+
+## Paper
+
+Pablo Martinez-Gonzalez, Sergiu Oprea, Alberto Garcia-Garcia, Alvaro Jover-Alvarez, Sergio Orts-Escolano, Jose Garcia-Rodriguez <br>
+[UnrealROX: An eXtremely Photorealistic Virtual Reality Environment for Robotics Simulations and Synthetic Data Generation](https://doi.org/10.1007/s10055-019-00399-5) <br> Published in Virtual Reality journal. <br> Also available on [ArXiv](https://arxiv.org/abs/1810.06936).
+
+If you use UnrealROX, please cite:
+
+```
+@article{Martinez2019unrealrox,
+  title={{UnrealROX}: An eXtremely Photorealistic Virtual Reality Environment for Robotics Simulations and Synthetic Data Generation},
+  author={Martinez-Gonzalez, Pablo and Oprea, Sergiu and Garcia-Garcia, Alberto and Jover-Alvarez, Alvaro and Orts-Escolano, Sergio and Garcia-Rodriguez, Jose},
+  journal={Virtual Reality},
+  issn="1434-9957",
+  doi="10.1007/s10055-019-00399-5",
+  url="https://doi.org/10.1007/s10055-019-00399-5",
+  year={2019}
+}
+```
+
+## License
+
+This code is released under the MIT License.
+
+## Contact / Authors
+
+Any criticism and improvements is welcome using the issue system from this repository. For other questions, contact the corresponding authors:
+
+- Pablo Martinez-Gonzalez [Design, UE4 Backend, Lead Programmer] ([pmartinez@dtic.ua.es](mailto:pmartinez@dtic.ua.es))
+- Sergiu Oprea [Design, Grasping, Support Programmer] ([soprea@dtic.ua.es](mailto:soprea@dtic.ua.es))
+- Alberto Garcia-Garcia [Design, Prototyping, Project Lead] ([agarcia@dtic.ua.es](mailto:agarcia@dtic.ua.es))
+- John A. Castro-Vargas [Design, Support Programmer] ([jacastro@dtic.ua.es](mailto:jacastro@dtic.ua.es))
+- Alvaro Jover-Alvarez [UE4 Expert, Support Programmer] ([ajover@dtic.ua.es](mailto:ajover@dtic.ua.es))
+- Sergio Orts-Escolano [Design, Technical Advice] ([sorts@ua.es](mailto:sorts@ua.es))
+- Jose Garcia-Rodriguez [Technical Advice] ([jgarcia@dtic.ua.es](mailto:jgarcia@dtic.ua.es))

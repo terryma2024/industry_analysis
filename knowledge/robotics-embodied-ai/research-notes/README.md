@@ -15,9 +15,17 @@ last_updated: 2026-08-06
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
 
+## 2026-08-06 Unity 机器人与具身智能调研
+
+- [[unity-in-robotics-and-embodied-ai-2026-08-06]]: 按 R04 主分类、R05/R06 次分类，拆解 Unity 的 ROS/URDF、ML-Agents、合成数据、室内具身世界、VR 示教、自动驾驶/UAV/多机器人应用，核验 23 个项目、16 篇论文及代码—引擎—资产分层许可，并与 UE/专用机器人模拟器对照。
+
+## 2026-08-06 Unreal Engine 机器人与具身智能调研
+
+- [[unreal-engine-in-robotics-and-embodied-ai-2026-08-06]]: 按 R04 主分类、R05/R06 次分类，拆解 UE 的场景/传感器/ROS/数字孪生/混合物理位置，核验 20 个公开项目或研究交付物与 18 篇论文；区分仓库可见、完整开源、许可证可商用和实际可复现，并给出 4 周 PoC、商业应用与创业边界。
+
 ## 2026-08-06 3D 仿真资产生产管线调研
 
-- [[3d-simulation-asset-production-pipelines-comparison-2026-08-06]]: 按 R05 主分类、R04/R02 次分类，比较 DCC、CAD/BIM、摄影测量、LiDAR/RGB-D、NeRF/3DGS、程序化、生成式 3D、资产库和混合式资产工厂；给出 SimAsset 合同、七道质量门、方案栈、六周 PoC、商业应用与中小创业机会。
+- [[3d-simulation-asset-production-pipelines-comparison-2026-08-06]]: 按 R05 主分类、R04/R02 次分类，比较 DCC、CAD/BIM、摄影测量、LiDAR/RGB-D、NeRF/3DGS、程序化、生成式 3D、资产库和混合式资产工厂；给出 SimAsset 合同、SimReady L1 规范/L2 运行时/L3 任务三级验收、机器可读清单、六周 PoC、商业应用与中小创业机会。
 
 ## 2026-08-06 光轮智能同类创业公司扫描
 

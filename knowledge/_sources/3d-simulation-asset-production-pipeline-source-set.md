@@ -14,6 +14,9 @@ sources:
   - raw/robotics-embodied-ai/documents/SRC-robotics-417-infinigen-sim-procedural-articulated-simulation-assets.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-418-hunyuan3d-2-1-image-to-3d-and-pbr-asset-generation.md
   - raw/robotics-embodied-ai/documents/SRC-robotics-419-trellis-structured-3d-latent-asset-generation.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-423-simready-foundation-profile-validation-workflow-2026-04-1.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-424-simready-foundation-asset-validation-cli-and-metadata-stamping-2026-04-1.md
+  - raw/robotics-embodied-ai/documents/SRC-robotics-425-simready-foundation-requirement-severity-conventions-2026-04-1.md
 tags:
   - industry/robotics-embodied-ai
   - source-set
@@ -50,6 +53,9 @@ aliases:
 | [`SRC-robotics-420`](../../raw/robotics-embodied-ai/documents/SRC-robotics-420-mujoco-model-asset-collision-and-inertia-documentation.md) | S | visual mesh、convex collision、inertia inference 的区别 | 网格推断惯量等于实测惯量 |
 | [`SRC-robotics-421`](../../raw/robotics-embodied-ai/documents/SRC-robotics-421-ros-2-urdf-physical-and-collision-properties-tutorial.md) | S | URDF visual/collision/inertial/joint dynamics 分层 | Humble 教程代表所有当前发行实现细节 |
 | [`SRC-robotics-422`](../../raw/robotics-embodied-ai/documents/SRC-robotics-422-houdini-solaris-procedural-usd-workflow.md) | S | 程序化 USD component、material、variant、payload、layer | Houdini 是所有团队的最低成本方案 |
+| [`SRC-robotics-423`](../../raw/robotics-embodied-ai/documents/SRC-robotics-423-simready-foundation-profile-validation-workflow-2026-04-1.md) | S | 当前 profile 列表、版本化 feature 集和失败传播规则 | Profile 通过自动证明 runtime/任务有效 |
+| [`SRC-robotics-424`](../../raw/robotics-embodied-ai/documents/SRC-robotics-424-simready-foundation-asset-validation-cli-and-metadata-stamping-2026-04-1.md) | S | validator CLI、JSON、非零失败状态和 USD metadata stamp | stamp 替代证据包或真实任务测试 |
+| [`SRC-robotics-425`](../../raw/robotics-embodied-ai/documents/SRC-robotics-425-simready-foundation-requirement-severity-conventions-2026-04-1.md) | S | MUST/SHOULD 严重度边界 | 基础规范自动包含所有项目任务阈值 |
 
 ## 证据缺口
 

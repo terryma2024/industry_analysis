@@ -684,6 +684,7 @@ tags:
   - **来源**: OpenUSD、UsdPhysics、SimReady Foundation、Isaac Sim、Datasmith、COLMAP、ReCap、Nerfstudio、Infinigen-Sim、Hunyuan3D、TRELLIS、MuJoCo、ROS 2 URDF 和 Houdini Solaris 官方文档/代码/论文。
   - **结论**: CAD 保工程结构，扫描保尺度/外观，3DGS/NeRF 保视觉，程序化保规模，生成式 3D 保候选速度；生产默认应采用 OpenUSD canonical package，并独立编译 collision、physics、articulation、semantics、sensor material 和 runtime adapter，再以任务证据验收。
   - **限制**: 未做统一资产和人员条件下的跨工具成本 benchmark，也未验证多仿真器物理等价；生成式 3D 的 metric、physics、许可与真机增益仍需目标 PoC。
+  - **补充验收**: 新增 SimReady L1 规范/L2 运行时/L3 任务三级验收、Profile 选择矩阵、`PASS/CONDITIONAL PASS/FAIL/NOT APPLICABLE` 判定、机器可读清单；登记并捕获 `SRC-robotics-423`–`425`。正式 L1 门采用选定 Profile requirement 零失败，MUST 不允许豁免，SHOULD 偏离需批准；官方通过不替代 runtime 与 real holdout。
 
 - **synthesis | 光轮智能同类创业公司与商业模式扫描**
   - **变更**: 新增 [[robotics-embodied-ai/research-notes/lightwheel-peer-companies-business-model-comparison-2026-08-06|同类公司对比调研]]、[[_sources/lightwheel-peer-physical-ai-data-simulation-companies-source-set|来源集]]和机器可读候选矩阵；登记/捕获 `SRC-robotics-394`–`406`，更新行业公司表、来源 MOC、研究笔记 MOC 和全局索引。
@@ -695,3 +696,15 @@ tags:
   - **来源**: 光轮官网与产品页、NVIDIA/吉利部署案例、政府平台订单与交付报道、GitHub/Hugging Face 公开资产、融资媒体及奇绩创坛团队资料。
   - **结论**: 公司已越过概念和单一 Demo，形成真实数据、SimReady、训练、评测和部署反馈闭环；但 5.5 亿元新增订单不等于收入或回款，150 万小时与复售率等口径仍需合同、财务和客户复购穿透。
   - **限制**: 未获得审计财务、合同、回款、客户集中度、平台定价或 cap table；`SRC-robotics-390` 旧经纬页面自动抽取返回 404，失败记录已保留。
+
+- **synthesis | Unreal Engine 在机器人与具身智能中的应用、开源项目和论文调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/unreal-engine-in-robotics-and-embodied-ai-2026-08-06|UE 机器人与具身智能调研]]、[[_sources/unreal-engine-robotics-embodied-ai-source-set|来源集]]及项目/论文两个机器可读 CSV；登记 `SRC-robotics-426`–`462`，更新行业、研究笔记、来源和全局索引。
+  - **来源**: Epic 官方许可/Chaos 文档，UnrealCV、AirSim 系列、CARLA、URLab、SPEAR、SimWorld、ROS 接口、UnrealROX、UNav-Sim、HoloOcean 等官方仓库/文档及代表论文；GitHub 动态元数据查询于 2026-08-06。
+  - **结论**: UE 最适合作为高真实感场景、传感器、人机交互和数字孪生层；精确操作与控制优先采用 UE + MuJoCo/专用物理 + ROS 2。第一梯队 PoC 为 UnrealCV、SPEAR、URLab、Project/Cosys-AirSim、CARLA、rclUE 和 MATRiX。
+  - **限制**: 未逐一编译运行项目；Epic licensing 自动抽取 403；VirtualEnv 未定位官方仓库，SimWorld Studio 公开构建依赖受限源码，HERCULES 未完成仓库审计；论文指标不跨项目横排。
+
+- **synthesis | Unity 在机器人与具身智能中的应用、开源项目和论文调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/unity-in-robotics-and-embodied-ai-2026-08-06|Unity 机器人与具身智能调研]]、[[_sources/unity-robotics-embodied-ai-source-set|来源集]]及项目/论文机器可读 CSV；登记并捕获 `SRC-robotics-463`–`501`，更新行业、研究笔记、来源和全局索引，并从 UE 报告回链。
+  - **来源**: Unity 当前产品/条款、Unity Robotics/ML-Agents/Perception、RobotecAI/ROS#、AI2-THOR/ProcTHOR/ALFRED/TEACh、VirtualHome/TDW、Flightmare/AWSIM/SVL/AutoDRIVE/CLOiSim 官方仓库和代表论文；GitHub 动态元数据查询于 2026-08-06。
+  - **结论**: Unity 最适合构建可编程交互世界、室内具身任务、合成观测、VR 示教和 ROS/学习闭环；ML-Agents 与 AI2-THOR 生态是突出优势。代码开源、Unity 引擎、资产、数据和云服务必须分层审计。
+  - **限制**: 未逐一编译 23 个项目；Perception 已停更，SVL 已 sunset，TDW 处于 LTS；AWSIM 代码 Apache-2.0 而资产 CC BY-NC；`SRC-robotics-474`、`484` 为 fallback HTML，论文指标未独立复现。

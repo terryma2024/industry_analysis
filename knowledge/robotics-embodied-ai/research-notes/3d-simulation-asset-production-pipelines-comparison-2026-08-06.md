@@ -6,6 +6,7 @@ last_updated: 2026-08-06
 sources:
   - knowledge/_sources/3d-simulation-asset-production-pipeline-source-set.md
   - raw/robotics-embodied-ai/data/3d-simulation-asset-production-routes-comparison-2026-08-06.csv
+  - raw/robotics-embodied-ai/data/simready-acceptance-checklist-2026-08-06.csv
 tags:
   - industry/robotics-embodied-ai
   - simulation
@@ -220,28 +221,106 @@ NVIDIA 的当前 Isaac Sim 入口同样把 CAD、URDF 和现实采集先转换�
 - **Neural appearance**：PLY/专用 3DGS 或 neural field 与 proxy mesh 并存，不强行把 appearance layer 当 canonical geometry。
 - **Material**：尽量采用 PBR + MaterialX/USDShade，并对 LiDAR/雷达等传感器响应维护独立参数层。
 
-## 六、质量门与自动化
+## 六、SimReady 验收标准与自动化
 
-### 6.1 七道门
+> [!important]
+> **“SimReady 验收通过”必须说明通过了哪一个 Profile、哪个版本、哪一个资产 hash、哪些目标运行时和哪些任务。** 官方 SimReady validator 通过只构成 **L1 规范符合性**；生产发布还必须通过 **L2 运行时验收** 和适用的 **L3 任务验收**。不得用 L1 通过替代物理可信、传感器增益或真机任务证据。
 
-| Gate | 必检项 | 自动化程度 | 发布阻断条件示例 |
-|---|---|---:|---|
-| G0 权属与血缘 | 来源、许可、客户授权、版本、hash | 高 | 来源或商用权不明 |
-| G1 坐标与尺度 | units、up axis、origin、frame tree、关键尺寸 | 高 | 尺度错误、左右手系未声明 |
-| G2 视觉几何 | 法线、UV、纹理、LOD、非流形、洞、材质绑定 | 中高 | 关键表面缺失、纹理或路径断链 |
-| G3 碰撞与物理 | collider、质量、质心、惯量、摩擦、关节和限位 | 中 | 无 collider、惯量非正定、关节树异常 |
-| G4 语义与传感器 | class/instance/part/affordance、sensor material | 中高 | 训练标签缺失或同类命名不一致 |
-| G5 运行时 | Isaac/Gazebo/MuJoCo/UE 加载、接触、性能、确定性 | 中高 | 崩溃、穿透、严重抖动、性能超预算 |
-| G6 任务证据 | grasp/navigation/perception/control A/B、real holdout | 低到中 | 未达到目标 KPI 或 sim-only 提升无法迁移 |
+机器可执行的验收模板见 [SimReady 验收清单 CSV](../../../raw/robotics-embodied-ai/data/simready-acceptance-checklist-2026-08-06.csv)。
+
+### 6.1 三级验收模型
+
+| 层级 | 回答的问题 | 主要依据 | 通过条件 | 单独通过能否发布 |
+|---|---|---|---|---|
+| L1 规范符合性 | USD 是否满足选定 SimReady Profile | Profile → Feature → Requirement → Rule | 选定 profile 的 requirement 零失败；MUST 零豁免；SHOULD 偏离有批准记录 | 否 |
+| L2 运行时验收 | 在目标 simulator/runtime 中是否稳定、正确且满足预算 | clean load、physics sanity、关节 sweep、性能和重复性测试 | 所有声明运行时的适用 MUST test 通过，未知 warning 为零 | 否，若资产承载任务 |
+| L3 任务验收 | 是否支持感知、导航、抓取或控制目标 | 仿真闭环、真实 holdout、失败分类和 A/B | 达到预先冻结的任务 KPI；关键 asset-induced failure 为零 | 是，连同 L1/L2 和证据包 |
+
+官方规范把 profile 定义为具名、版本化的 feature 集；验证时逐级解析 feature、requirement 和 Python rule。任一 requirement 失败会使其 feature 失败，并最终使 profile 失败。[`SRC-robotics-423`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-423-simready-foundation-profile-validation-workflow-2026-04-1.md)
+
+### 6.2 Profile 选择和冻结
+
+| 资产类型/目标 | 默认候选 Profile | 验收重点 | 额外说明 |
+|---|---|---|---|
+| 普通机器人场景道具，运行时中立 | `Prop-Robotics-Neutral` | core、neutral rigid body、multi-body、grasp、materials | 适合作 canonical base，不代表 PhysX/Isaac runtime 已通过 |
+| 道具面向 PhysX | `Prop-Robotics-Physx` | Neutral 基础 + PhysX physics/collider | 需再做目标 PhysX 版本运行时测试 |
+| 道具面向 Isaac Sim | `Prop-Robotics-Isaac` | PhysX 基础 + Isaac composition/adaptation | Isaac adapter 不能写回污染 neutral canonical |
+| 机器人本体，运行时中立 | `Robot-Body-Neutral` | rigid body、articulation、driven joints、base hierarchy | 适合跨运行时源资产 |
+| 可运行机器人，PhysX | `Robot-Body-Runnable` | PhysX physics、robot core、PhysX joints | 仍需控制、关节 sweep 和稳定性验收 |
+| 机器人面向 Isaac Sim | `Robot-Body-Isaac` | Isaac robot core、joints、composition | 仍需目标 Isaac 版本和控制栈回归 |
+| 需要 semantic label 的合成数据资产 | 以上合适 profile + semantic feature，或项目自定义 labeled profile | class/instance/part 等 label rule | **不能假设基础 prop/robot profile 已包含业务所需语义** |
+| environment、vehicle、deformable、特殊 sensor material | 先查现有 profile；不匹配则扩展项目 profile | 场景专用 feature 和 rules | 不应拿不适用的 prop profile 通过来宣称完整 SimReady |
+
+以上 profile 列表来自 2026.04.1 官方工作流；生产必须把 `spec release + profile name + profile version` 固定在验收合同和 CI 中，不追随 `latest` 漂移。[`SRC-robotics-423`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-423-simready-foundation-profile-validation-workflow-2026-04-1.md)
+
+### 6.3 L1 规范符合性：硬性判定
+
+1. 资产必须声明唯一的 `asset_id`、版本、内容 hash、目标用途和所选 Profile/版本。
+2. 在锁定的 validator、rules、features 和 profiles 环境中执行 `simready-validate`。
+3. **选定 Profile 的失败 requirement 数必须为 0。** 不能因为“当前任务看起来不受影响”而把失败的 requirement 当作通过；应修复、换成正确 Profile，或升级为明确的项目扩展/偏离流程。
+4. 官方 `MUST` 是绝对要求，违反即 spec error；`SHOULD` 偏离必须有书面理由、影响、责任人和到期/修复日期。[`SRC-robotics-425`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-425-simready-foundation-requirement-severity-conventions-2026-04-1.md)
+5. 保存 JSON 结果、exit code、触发 prim path、工具与 profile 版本、命令、环境 lockfile 和资产 hash。
+6. 仅在完整通过后写入 `SimReady_Metadata` validation stamp；stamp 至少关联 profile、版本、日期和通过的 features。官方 CLI 支持 JSON 结果与 `customLayerData` 验证历史，失败运行返回非零状态。[`SRC-robotics-424`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-424-simready-foundation-asset-validation-cli-and-metadata-stamping-2026-04-1.md)
+
+> [!warning]
+> 官方示例文档中存在用于演示流程的已知 failing requirements；这不等于生产资产可以带失败项发布。生产验收采用“所选 Profile requirement 零失败”，否则状态为 `FAIL`，而不是“基本通过”。
+
+### 6.4 L1 之外的项目强制项
+
+| Gate | 必检项 | 生产通过标准 | 典型阻断项 |
+|---|---|---|---|
+| G0 合同、权属与血缘 | source、许可、客户授权、recipe、version、hash | 资产、来源、构建和分发权可追溯 | 来源或商用/再分发权不明 |
+| G1 包、坐标与尺度 | default prim、dependency、units、up axis、origin、frame tree | clean environment 全部解析；关键尺寸满足预先冻结容差 | 断链、尺度错误、左右手系未声明 |
+| G2 visual | geometry、normal、UV、texture、material、LOD/proxy | Profile rules 通过且目标视图无缺件/错误 fallback | 关键表面缺失、材质/纹理断链 |
+| G3 collision/physics | collider、mass、CoM、inertia、friction、restitution、damping | validator 通过；接触关键面保留；sanity test 达标 | 无 collider、惯量非法、持续穿透/爆炸/抖动 |
+| G4 articulation | link/joint、axis、limit、drive、self-collision、initial state | hierarchy 通过；全行程 sweep 无断裂、异常碰撞或不稳定 | 轴/限位错误、驱动失控、意外自碰撞 |
+| G5 semantics/sensor | ontology、instance/part/affordance、sensor response | consumer 要求全部进入 profile 或项目 lint；真实数据对比达标 | 语义缺失、sensor material 只靠视觉 PBR 代替 |
+| G6 runtime | target adapter、clean load、warning、memory、step/render、repeatability | 每个声明 runtime 独立通过预算和回归 | 崩溃、未知 warning、性能超预算、结果漂移 |
+| G7 task evidence | perception/navigation/manipulation/control、real holdout | 达到冻结 KPI；关键 asset-induced failure 为零 | sim-only 提升无法迁移、任务成功率不足 |
 
 MuJoCo 官方文档明确区分 visual mesh 与碰撞：任意三角网格可以被显示，但碰撞检测使用 convex hull；它还能从网格推断惯量，但这建立在形状和密度假设上，不等于实测物性。[`SRC-robotics-420`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-420-mujoco-model-asset-collision-and-inertia-documentation.md) ROS 2 的 URDF 教程也把 visual、collision、inertial 和 joint dynamics 分开定义。[`SRC-robotics-421`](../../../raw/robotics-embodied-ai/documents/SRC-robotics-421-ros-2-urdf-physical-and-collision-properties-tutorial.md)
 
-### 6.2 不应使用的验收口径
+### 6.5 L2 运行时最小测试集
 
-- “成功导入”不等于坐标、惯量和接触正确。
-- “画面逼真/PSNR 高”不等于 metric、semantic 或 physics 正确。
-- “碰撞不穿透”不等于接触力和摩擦可迁移。
-- “仿真任务成功”不等于真机成功；必须保留真实 holdout。
+| 测试 | Props | Robot/articulated | Environment | 通过判据 |
+|---|---:|---:|---:|---|
+| clean-cache load + dependency resolution | 必须 | 必须 | 必须 | 无 missing dependency/fatal；所有 warning 已处置 |
+| 静置稳定性 | 动态件必须 | 必须 | 可选 | 冻结时窗内无非预期漂移、穿透或能量爆炸 |
+| drop / incline / push / grasp-slip | 按任务 | 按任务 | 不适用 | 与实测或批准的随机范围一致 |
+| joint full-range sweep | 不适用或按需 | 必须 | 动态门/设备必须 | 轴、限位、驱动和 collision 连续正确 |
+| contact stress | 交互件必须 | 必须 | 导航/交互区必须 | contact 数、求解稳定性和 step rate 在预算内 |
+| fixed-seed repeat | 训练件必须 | 训练件必须 | 训练场景必须 | 结果差异在合同容差内；随机源和 seed 可追溯 |
+| resource/performance | 必须 | 必须 | 必须 | load、RAM/VRAM、render/physics throughput 达预算 |
+| adapter comparison | 多运行时必须 | 多运行时必须 | 多运行时必须 | canonical hash 不变；每个 adapter 独立出具报告 |
+
+所有数字阈值必须在制作前由目标消费者冻结。报告不设置“一刀切”的三角数、纹理尺寸、毫米误差或 FPS，因为抓取、导航、视觉背景和工业装配的容差不同；未冻结阈值时只能记 `OPEN`，不能验收为 `PASS`。
+
+### 6.6 L3 任务级验收
+
+- **感知/合成数据**：在 held-out real data 上与 agreed baseline 做 A/B；至少报告 detection/segmentation/6D pose 等任务 KPI、分场景失败和置信区间。画面相似或 synthetic-only 分数不能替代 real holdout。
+- **导航**：验证 traversability、clearance、碰撞、定位/感知输出、规划成功、安全停止和计算预算；扫描外观层与 navigation collider 分开验收。
+- **抓取/操作**：验证接触关键面、摩擦/滑移、抓取稳定、开合/插入成功、力/力矩、人工接管和真机 holdout。
+- **机器人本体/控制**：验证 joint limits、drive、self-collision、传感器 frame、静态姿态、轨迹跟踪和控制周期；“模型能站住/能加载”不足以验收。
+- **失败归因**：必须区分 asset、runtime、sensor、controller/policy 和 task definition；关键 asset-induced failure 未关闭时不得发布。
+
+### 6.7 结果状态与签署
+
+| 状态 | 定义 | 是否允许生产发布 |
+|---|---|---|
+| `PASS` | L1 零失败；所有适用 L2/L3 MUST 通过；证据包和签署完整 | 是 |
+| `CONDITIONAL PASS` | 仅存在批准的 SHOULD 偏离或非关键、有限期问题；不得含 L1 failure 或适用 MUST failure | 仅限批准范围和期限 |
+| `FAIL` | 任一 Profile requirement、项目 MUST、运行时硬门或任务硬门失败 | 否 |
+| `NOT APPLICABLE` | 经消费者和审核者确认不属于资产用途；有理由和签署 | 不计失败，但保留记录 |
+
+最终证据包必须包含：canonical asset、runtime adapters、manifest、source/license ledger、build recipe、profile/spec/tool 版本、validator JSON 与 stamp、偏离记录、几何/物性测量、L2 报告、L3 报告、失败清单和 exact release hash。最低签署人为资产负责人、仿真/运行时负责人和任务消费者；涉及合成数据、现场安全或第三方权利时增加数据、安全或法务负责人。
+
+### 6.8 不应使用的验收口径
+
+- “成功导入”不等于 Profile、坐标、惯量和接触正确。
+- “validator 大部分通过”不等于所选 Profile 通过。
+- “画面逼真/PSNR 高”不等于 metric、semantic、sensor 或 physics 正确。
+- “碰撞不穿透”不等于接触力、摩擦和任务行为可迁移。
+- “仿真任务成功”不等于真机成功；适用任务必须保留真实 holdout。
 - “USD/URDF 合规”不等于跨引擎数值一致；adapter 必须分别回归。
 
 ## 七、统一 PoC 设计与选型建议

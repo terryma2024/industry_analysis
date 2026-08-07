@@ -22,11 +22,33 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 116 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 188 | 已成功抽取的 raw artifact。 |
-| `fallback_html` | 11 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
+| `ok` | 260 | 已成功抽取的 raw artifact。 |
+| `fallback_html` | 16 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 10 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据、GitHub API 或固定提交文本生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
-| `failed` | 14 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+| `failed` | 16 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+
+## 2026-08-06 Unreal Engine 机器人与具身智能来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| `SRC-robotics-426`–`430` | Epic 许可/Chaos、UnrealCV、Gym-UnrealCV | 定义 UE proprietary license、游戏物理和可编程视觉世界边界；Epic licensing 自动抽取 403，保留失败记录并以官方页面实时核验。 |
+| `SRC-robotics-431`–`439` | AirSim、Project AirSim、Cosys-AirSim、CARLA、CARLA-Air | 核验 UAV、道路、SIL/HIL、ROS 2 和空地协同；CARLA-Air 为非商业许可，AirSim release 与 archived 标志分开处理。 |
+| `SRC-robotics-440`–`445` | Unreal Robotics Lab、SPEAR、SimWorld-Robotics | 核验 UE + MuJoCo、通用 UE Python 控制和城市具身 benchmark；论文性能不跨项目排名。 |
+| `SRC-robotics-446`–`455` | rclUE、ROSIntegration、UnrealROX、RobotriX、UNav-Sim、HoloOcean、NDDS | 覆盖 ROS 接口、室内视觉、海洋机器人和历史合成数据；NDDS 为 CC BY-NC-SA 且长期不活跃。 |
+| `SRC-robotics-456`–`462` | HERCULES、HEROES、数字孪生、3DGS、VirtualEnv、SimWorld Studio | 覆盖多机器人、灾害、协作机械臂和 Agent 生成世界；多项仍是论文确认而非完整仓库审计。 |
+
+## 2026-08-06 Unity 机器人与具身智能来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-463`](../../raw/robotics-embodied-ai/documents/SRC-robotics-463-unity-plans-pricing-and-editor-software-terms.md)–[`469`](../../raw/robotics-embodied-ai/documents/SRC-robotics-469-unity-perception-official-repository-readme.md) | Unity 条款、Robotics Hub、ROS/URDF、ML-Agents、Perception | 核验引擎与代码许可分层、官方机器人接入和学习/合成数据工具；Perception 已明确停更。 |
+| [`SRC-robotics-470`](../../raw/robotics-embodied-ai/documents/SRC-robotics-470-ros2-for-unity-official-repository-readme.md)–[`472`](../../raw/robotics-embodied-ai/documents/SRC-robotics-472-ros-sharp-official-repository-readme.md) | ros2-for-unity、Robotec GPU LiDAR、ROS# | 核验原生 ROS 2、GPU LiDAR 与历史 C#/rosbridge 接入；部署兼容和组件许可另验。 |
+| [`SRC-robotics-473`](../../raw/robotics-embodied-ai/documents/SRC-robotics-473-ai2-thor-official-repository-readme.md)–[`484`](../../raw/robotics-embodied-ai/documents/SRC-robotics-484-teach-task-driven-embodied-agents-that-chat.md) | AI2-THOR、RoboTHOR、ProcTHOR、ManipulaTHOR、Holodeck、ALFRED、TEACh | 覆盖室内交互、sim-to-real、程序化世界、移动操作、语言任务与对话；离散动作不外推为真机控制。 |
+| [`SRC-robotics-485`](../../raw/robotics-embodied-ai/documents/SRC-robotics-485-virtualhome-official-repository-readme.md)–[`490`](../../raw/robotics-embodied-ai/documents/SRC-robotics-490-threedworld-a-platform-for-interactive-multi-modal-physical-simulation.md) | VirtualHome、VRKitchen、ThreeDWorld | 覆盖家庭活动程序、VR 示教、多模态和物理交互；TDW 已进入 LTS。 |
+| [`SRC-robotics-491`](../../raw/robotics-embodied-ai/documents/SRC-robotics-491-flightmare-official-repository-readme.md)–[`501`](../../raw/robotics-embodied-ai/documents/SRC-robotics-501-dmava-distributed-multi-autonomous-vehicle-architecture-using-autoware.md) | Flightmare、AWSIM、SVL、AutoDRIVE、CLOiSim、分布式 AWSIM | 覆盖 UAV、自动驾驶、多机器人和 HIL；AWSIM 代码/资产异许可，SVL 已 sunset。 |
+
+`SRC-robotics-474` 与 `484` 自动正文抽取退化为 HTML fallback，但已保留页面和元数据；其论文事实同时由 arXiv 当前页面核验。
 
 ## 2026-08-06 3D 仿真资产生产管线调研来源
 
@@ -37,6 +59,7 @@ aliases:
 | [`SRC-robotics-414`](../../raw/robotics-embodied-ai/documents/SRC-robotics-414-colmap-structure-from-motion-and-multi-view-stereo-pipeline.md)–[`416`](../../raw/robotics-embodied-ai/documents/SRC-robotics-416-nerfstudio-gaussian-splatting-implementation-and-export-limits.md) | COLMAP、ReCap、Nerfstudio | 对照摄影测量、LiDAR scan-to-mesh 和 3DGS appearance 表示；均需额外物理/语义编译。 |
 | [`SRC-robotics-417`](../../raw/robotics-embodied-ai/documents/SRC-robotics-417-infinigen-sim-procedural-articulated-simulation-assets.md)–[`419`](../../raw/robotics-embodied-ai/documents/SRC-robotics-419-trellis-structured-3d-latent-asset-generation.md) | Infinigen-Sim、Hunyuan3D、TRELLIS | 核验程序化 articulated asset 与生成式 mesh/PBR/Gaussian 能力；作者指标不外推为 metric/physics 保证。 |
 | [`SRC-robotics-420`](../../raw/robotics-embodied-ai/documents/SRC-robotics-420-mujoco-model-asset-collision-and-inertia-documentation.md)–[`422`](../../raw/robotics-embodied-ai/documents/SRC-robotics-422-houdini-solaris-procedural-usd-workflow.md) | MuJoCo、ROS 2 URDF、Houdini Solaris | 区分 visual/collision/inertial，并核验程序化 USD 资产工厂入口。 |
+| [`SRC-robotics-423`](../../raw/robotics-embodied-ai/documents/SRC-robotics-423-simready-foundation-profile-validation-workflow-2026-04-1.md)–[`425`](../../raw/robotics-embodied-ai/documents/SRC-robotics-425-simready-foundation-requirement-severity-conventions-2026-04-1.md) | SimReady 2026.04.1 profile、validator、severity | 定义 Profile 选型、零失败规范门、JSON/stamp 证据和 MUST/SHOULD 边界；运行时与任务级另行验收。 |
 
 ## 2026-08-05 RTAB-Map、cuVSLAM、OpenVINS 深度调研来源
 

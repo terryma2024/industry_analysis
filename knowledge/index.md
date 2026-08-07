@@ -15,7 +15,10 @@ tags:
 
 ## Sources
 
-- [[_sources/3d-simulation-asset-production-pipeline-source-set|3D 仿真资产生产技术管线来源集]] — OpenUSD/UsdPhysics/SimReady、Isaac/Datasmith、COLMAP/ReCap/Nerfstudio、Infinigen-Sim、Hunyuan3D/TRELLIS、MuJoCo/URDF/Houdini 官方来源；限定“可生成/可导入”与“可物理交互/可任务验证”的边界。
+- [[_sources/unreal-engine-robotics-embodied-ai-source-set|Unreal Engine 机器人与具身智能来源集]] — Epic 许可与 Chaos、20 个公开项目或研究交付物、18 篇论文及 GitHub 维护快照；区分 UE 场景/传感器层、专用物理层、代码开放和商业许可。
+- [[_sources/unity-robotics-embodied-ai-source-set|Unity 机器人与具身智能来源集]] — Unity 当前条款、机器人接入、学习/合成数据、室内具身环境和垂直模拟器的 39 项一级来源；区分项目代码、引擎、资产、数据和云服务许可。
+
+- [[_sources/3d-simulation-asset-production-pipeline-source-set|3D 仿真资产生产技术管线来源集]] — OpenUSD/UsdPhysics/SimReady、Isaac/Datasmith、COLMAP/ReCap/Nerfstudio、Infinigen-Sim、Hunyuan3D/TRELLIS、MuJoCo/URDF/Houdini 官方来源；补充 SimReady 2026.04.1 Profile、validator、stamp 和 MUST/SHOULD 验收边界。
 
 - [[_sources/lightwheel-peer-physical-ai-data-simulation-companies-source-set|光轮智能同类物理 AI 数据、仿真与评测公司来源集]] — 汇总 Applied Intuition、Duality AI、Parallel Domain、求之科技、极佳视界等 12 家候选的官方产品证据、抓取状态与商业证据限制。
 
@@ -184,7 +187,10 @@ tags:
 
 ## Syntheses
 
-- [[robotics-embodied-ai/research-notes/3d-simulation-asset-production-pipelines-comparison-2026-08-06|3D 仿真资产生产技术管线综合调研]] — R05 主分类、R04/R02 次分类：比较九条资产生产路线，推荐“多源输入 + OpenUSD 规范化 + 物理/语义编译 + 多仿真器 adapter + 任务证据”的混合资产工厂，并给出七道质量门和六周 PoC。
+- [[robotics-embodied-ai/research-notes/unreal-engine-in-robotics-and-embodied-ai-2026-08-06|Unreal Engine 在机器人与具身智能中的应用、开源项目和论文调研]] — R04 主分类、R05/R06 次分类：UE 最适合作为高真实感世界、观测、人机交互和数字孪生层；接触操作与控制优先采用 UE + MuJoCo/专用物理 + ROS 2，并以真机 holdout 验收。
+- [[robotics-embodied-ai/research-notes/unity-in-robotics-and-embodied-ai-2026-08-06|Unity 在机器人与具身智能中的应用、开源项目和论文调研]] — R04 主分类、R05/R06 次分类：Unity 强项是可编程交互世界、ML-Agents、AI2-THOR 家庭具身任务、VR 示教和 ROS/垂直模拟器；项目开源不代表 Unity/资产可商用。
+
+- [[robotics-embodied-ai/research-notes/3d-simulation-asset-production-pipelines-comparison-2026-08-06|3D 仿真资产生产技术管线综合调研]] — R05 主分类、R04/R02 次分类：比较九条资产生产路线，推荐“多源输入 + OpenUSD 规范化 + 物理/语义编译 + 多仿真器 adapter + 任务证据”的混合资产工厂；补充 Profile 版本冻结、零失败规范门、L1/L2/L3 三级验收与机器可读清单。
 
 - [[robotics-embodied-ai/research-notes/lightwheel-peer-companies-business-model-comparison-2026-08-06|光轮智能同类创业公司与商业模式对比调研]] — R06 主分类、R03/R07 次分类：Applied Intuition 是最接近的平台商业对标，Parallel Domain 最接近 Real2Sim 资产飞轮，求之科技是中国产品覆盖最相似候选，但商业质量均需合同、回款与复购穿透。
 
