@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-08-06
+last_updated: 2026-08-09
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -16,6 +16,23 @@ aliases:
 
 > [!summary]
 > 本页是 [[00-index|机器人（具身智能）]] 的来源抽取 MOC。来源编号仍以 [[sources.csv]] 为准；原文/清洗件保存在 `raw/robotics-embodied-ai/documents/`，抽取状态见 [source_capture_manifest.csv](../../raw/robotics-embodied-ai/documents/source_capture_manifest.csv)。
+
+## 2026-08-09 EtherCAT 技术与生态来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| `SRC-robotics-505`–`510` | ETG 技术、标准化、许可、Implementation Guide、EtherCAT G/TSN | 核验协议机制、IEC、许可、一致性和扩展；`508` 官方 PDF 自动抽取未产出 raw，待补采；ETG 性能数字不作为任意产品 SLA。 |
+| `SRC-robotics-511`–`512` | SOEM 与 IgH 官方资料 | 核验两条开源 MainDevice 实现路线；未在实时内核/机器人台架运行。 |
+| `SRC-robotics-513` | ODVA CIP Motion 官方页 | 竞品机制对照；未做统一硬件性能横评。 |
+| `SRC-robotics-514`–`515` | 工信部人形机器人及工业互联网政策 | 限定十五五关联；政策未点名 EtherCAT。 |
+
+## 2026-08-09 DexCap 灵巧操作数采来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-277`](../../raw/robotics-embodied-ai/documents/SRC-robotics-277-dexcap-scalable-and-portable-mocap-data-collection-system-for-dexterous-manipula.md) | RSS 2024 / arXiv 论文 | 核验硬件、DexIL、六任务结果和三项明确限制；均为作者实验。 |
+| [`SRC-robotics-502`](../../raw/robotics-embodied-ai/documents/SRC-robotics-502-dexcap-project-page.md) | 官方项目页 | 核验演示、工作流与 human-in-the-loop；不作为商业客户证据。 |
+| [`SRC-robotics-504`](../../raw/robotics-embodied-ai/documents/SRC-robotics-504-dexcap-official-code-repository-at-commit-4b0bed0.md) | 固定提交 README | 核验采集、处理、HDF5、训练和 MIT 许可；未编译，第三方许可另审。 |
 
 ## 当前状态
 

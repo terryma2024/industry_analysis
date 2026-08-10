@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-08-06
+last_updated: 2026-08-09
 tags:
   - wiki
   - index
@@ -14,6 +14,10 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/ethercat-technology-implementation-policy-source-set|EtherCAT 技术、实现、生态与政策来源集]] — ETG 官方技术/标准/许可/实现、SOEM/IgH、ODVA 竞品与工信部政策证据；综合于 [[robotics-embodied-ai/research-notes/ethercat-technology-ecosystem-engineering-deep-dive-2026-08-09|EtherCAT 深度调研]]，并区分协议实时、整机实时和政策映射边界。
+
+- [[_sources/dexcap-paper-project-code-source-set|DexCap 论文、官网与代码来源集]] — RSS 2024 论文、官方项目页与固定提交代码；综合于 [[robotics-embodied-ai/research-notes/dexcap-dexterous-mocap-data-collection-deep-dive-2026-08-09|DexCap 深度调研]]，并区分研究成功率、复现条件和商业真实性。
 
 - [[_sources/unreal-engine-robotics-embodied-ai-source-set|Unreal Engine 机器人与具身智能来源集]] — Epic 许可与 Chaos、20 个公开项目或研究交付物、18 篇论文及 GitHub 维护快照；区分 UE 场景/传感器层、专用物理层、代码开放和商业许可。
 - [[_sources/unity-robotics-embodied-ai-source-set|Unity 机器人与具身智能来源集]] — Unity 当前条款、机器人接入、学习/合成数据、室内具身环境和垂直模拟器的 39 项一级来源；区分项目代码、引擎、资产、数据和云服务许可。
@@ -142,6 +146,8 @@ tags:
 
 ## Entities
 
+- [[_entities/DexCap|DexCap]] — RSS 2024 便携式灵巧手动作采集系统与 DexIL 学习链路；强项是自然人类动作吞吐，商业化仍受力觉、跨本体、原 BOM 生命周期和真机增益验证约束。
+
 - [[_entities/LightwheelAI|光轮智能]] — 中国物理 AI 数据、仿真与评测基础设施公司；已形成 SimReady、EgoSuite、RoboFinals 与 Real2Sim2Real 产品链，财务质量仍待验证。
 
 - [[_entities/RoboVerse|RoboVerse]] — MetaSim 之上的任务、资产、数据集、benchmark 与学习工作流层；可用于多后端仿真、IL/VLA/RL、Real2Sim 和 sim-to-real 研究，但不是基础模型或企业真机数据湖。
@@ -186,6 +192,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[robotics-embodied-ai/research-notes/ethercat-technology-ecosystem-engineering-deep-dive-2026-08-09|EtherCAT 技术原理、产业生态与机器人工程选型深度调研]] — R04 主分类、R05/R07 次分类：EtherCAT 适合作为机器人确定性内环，但总线实时不等于整机硬实时；选型需联合验证 OS、主站、NIC、驱动器、安全和故障恢复。
 
 - [[robotics-embodied-ai/research-notes/unreal-engine-in-robotics-and-embodied-ai-2026-08-06|Unreal Engine 在机器人与具身智能中的应用、开源项目和论文调研]] — R04 主分类、R05/R06 次分类：UE 最适合作为高真实感世界、观测、人机交互和数字孪生层；接触操作与控制优先采用 UE + MuJoCo/专用物理 + ROS 2，并以真机 holdout 验收。
 - [[robotics-embodied-ai/research-notes/unity-in-robotics-and-embodied-ai-2026-08-06|Unity 在机器人与具身智能中的应用、开源项目和论文调研]] — R04 主分类、R05/R06 次分类：Unity 强项是可编程交互世界、ML-Agents、AI2-THOR 家庭具身任务、VR 示教和 ROS/垂直模拟器；项目开源不代表 Unity/资产可商用。

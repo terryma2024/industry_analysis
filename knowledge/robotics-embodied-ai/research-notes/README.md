@@ -7,13 +7,21 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-08-06
+last_updated: 2026-08-09
 ---
 
 # 机器人（具身智能） - 研究中间笔记
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
+
+## 2026-08-09 EtherCAT 实时工业以太网
+
+- [[ethercat-technology-ecosystem-engineering-deep-dive-2026-08-09]]: 按 R04 主分类、R05/R07 次分类，拆解 on-the-fly、FMMU、Distributed Clocks、CoE/CiA 402、FSoE、MainDevice/SubDevice 实现与许可，给出机器人分层架构、竞品边界、商业/创业机会和 6/12 轴 PoC。
+
+## 2026-08-09 DexCap 灵巧操作数采
+
+- [[dexcap-dexterous-mocap-data-collection-deep-dive-2026-08-09]]: 拆解 DexCap/DexIL 的穿戴动捕、跨本体重定向、点云 Diffusion Policy、人工纠偏、六任务证据、硬件/代码边界，以及中国数据服务的可验证切口。
 
 ## 2026-08-06 Unity 机器人与具身智能调研
 

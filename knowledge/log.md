@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-08-06
+last_updated: 2026-08-09
 tags:
   - wiki
   - log
@@ -708,3 +708,16 @@ tags:
   - **来源**: Unity 当前产品/条款、Unity Robotics/ML-Agents/Perception、RobotecAI/ROS#、AI2-THOR/ProcTHOR/ALFRED/TEACh、VirtualHome/TDW、Flightmare/AWSIM/SVL/AutoDRIVE/CLOiSim 官方仓库和代表论文；GitHub 动态元数据查询于 2026-08-06。
   - **结论**: Unity 最适合构建可编程交互世界、室内具身任务、合成观测、VR 示教和 ROS/学习闭环；ML-Agents 与 AI2-THOR 生态是突出优势。代码开源、Unity 引擎、资产、数据和云服务必须分层审计。
   - **限制**: 未逐一编译 23 个项目；Perception 已停更，SVL 已 sunset，TDW 处于 LTS；AWSIM 代码 Apache-2.0 而资产 CC BY-NC；`SRC-robotics-474`、`484` 为 fallback HTML，论文指标未独立复现。
+
+## [2026-08-09]
+
+- **synthesis | EtherCAT 技术、生态与机器人工程选型深度调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/ethercat-technology-ecosystem-engineering-deep-dive-2026-08-09|EtherCAT 深度调研]]和[[_sources/ethercat-technology-implementation-policy-source-set|来源集]]；登记 `SRC-robotics-505`–`515`，成功捕获其中 10 项网页来源，更新行业、研究笔记、来源与全局索引。
+  - **来源**: ETG 官方技术/标准化/许可/Implementation Guide/EtherCAT G/TSN、SOEM、IgH、ODVA CIP Motion 和工信部政策文件。
+  - **结论**: EtherCAT 的价值来自帧内处理、逻辑过程映像、分布式时钟与成熟 profile，适合机器人控制器到驱动/I/O 的确定性内环；协议实时不能替代 OS、控制算法、驱动器与安全的端到端验收。
+  - **限制**: `SRC-robotics-508` 官方 PDF 自动抽取未产出 raw，待补采；未运行真实 6/12 轴台架，也未取得中国市场份额、供应商报价、功能安全证书或客户复购数据；ETG 性能数字为官方口径，政策未点名 EtherCAT。
+
+- **synthesis | DexCap 灵巧操作动捕数据采集系统深度调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/dexcap-dexterous-mocap-data-collection-deep-dive-2026-08-09|DexCap 深度调研]]、[[_sources/dexcap-paper-project-code-source-set|来源集]]和 [[_entities/DexCap|实体页]]；复用既有论文 `SRC-robotics-277`，新增并捕获官网/固定提交代码 `SRC-robotics-502`、`504`，更新行业、研究笔记、来源和全局索引。
+  - **结论**: DexCap 证明人类穿戴动捕可提升灵巧示教吞吐，并通过点云重定向训练 robot policy；但无力觉、跨本体接触差异、视野盲区、40 分钟续航和老化 BOM 使其更适合研究/数据服务 PoC，而不是直接量产复制。
+  - **限制**: 未复现双 Franka/LEAP 实验，未核验当前完整 BOM、数据商业许可或客户收入；作者任务成功率不构成产品 SLA。
