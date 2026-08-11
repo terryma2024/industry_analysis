@@ -2,7 +2,7 @@
 title: Sources Layer
 type: index
 date_created: 2026-05-29
-last_updated: 2026-08-06
+last_updated: 2026-08-11
 tags:
   - wiki
   - sources
@@ -14,6 +14,7 @@ tags:
 
 ## 当前来源摘要
 
+- [[wechat-embodied-data-processing-roadmap|具身数据 RoadMap 微信文章来源卡]]
 - [[unity-robotics-embodied-ai-source-set|Unity 机器人与具身智能项目、论文、维护和许可来源集]]
 - [[unreal-engine-robotics-embodied-ai-source-set|Unreal Engine 机器人与具身智能项目、论文和许可来源集]]
 - [[karpathy-llm-wiki-pattern|Karpathy LLM Wiki Pattern]]

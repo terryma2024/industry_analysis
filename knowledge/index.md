@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-08-09
+last_updated: 2026-08-11
 tags:
   - wiki
   - index
@@ -14,6 +14,10 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/wechat-embodied-data-processing-roadmap|具身数据 RoadMap 微信文章来源卡]] — C 级从业者文章的问题地图；已把动作表征、时间对齐、质量门、标注、训练配比和部署回流编译为 [[robotics-embodied-ai/research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11|具身智能模型数据处理闭环]]，毛利、单价、`50 ms` 与周期数字保持待验证。
+
+- [[_sources/onshape-to-robot-official-source-set|onshape-to-robot 官方仓库、文档、示例与问题来源集]] — 固定提交核验 CAD→URDF/SDF/MuJoCo 工作流、装配命名约定、配置、processors、版本差异、示例和 open-issue 风险；综合于 [[robotics-embodied-ai/research-notes/onshape-to-robot-usage-selection-deep-dive-2026-08-10|onshape-to-robot 用法与选型调研]]。
 
 - [[_sources/ethercat-technology-implementation-policy-source-set|EtherCAT 技术、实现、生态与政策来源集]] — ETG 官方技术/标准/许可/实现、SOEM/IgH、ODVA 竞品与工信部政策证据；综合于 [[robotics-embodied-ai/research-notes/ethercat-technology-ecosystem-engineering-deep-dive-2026-08-09|EtherCAT 深度调研]]，并区分协议实时、整机实时和政策映射边界。
 
@@ -181,7 +185,7 @@ tags:
 - [[_concepts/knowledge-compilation|Knowledge Compilation]] — 把原始来源在摄入阶段编译为可复用、可链接、可审计的知识资产。
 - [[_concepts/source-traceability|Source Traceability]] — 本仓库的核心质量约束：重要判断必须能回到原始来源。
 - [[_concepts/embodied-ai|Embodied AI]] — AI 进入物理世界的机器人产业化方向。
-- [[_concepts/robot-training-data|Robot Training Data]] — 具身智能训练数据、episode、schema、质检与交付体系。
+- [[_concepts/robot-training-data|Robot Training Data]] — 具身智能训练数据、采集前契约、raw/canonical/model-view 分层、episode、schema、质检、真实 holdout 与部署回流体系。
 - [[_concepts/vision-language-tactile-action|Vision-Language-Tactile-Action]] — 视觉、语言、触觉/力觉和动作轨迹融合的具身模型/数据范式。
 - [[_concepts/universal-manipulation-interface|Universal Manipulation Interface]] — UMI-like 采集设备和机器人示教数据包路线。
 - [[_concepts/lerobot-dataset-schema|LeRobot Dataset Schema]] — LeRobot v3 及相关机器人数据格式概念。
@@ -192,6 +196,10 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[robotics-embodied-ai/research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11|具身智能模型数据处理闭环]] — R02 主分类、R05 次分类：将数据处理定义为从采集前契约到部署问题回流的十层闭环，给出同步/标定、自动质量门、分层标注、action/schema 编译、无泄漏切分、训练时增强、真实 holdout、交付物与创业边界。
+
+- [[robotics-embodied-ai/research-notes/onshape-to-robot-usage-selection-deep-dive-2026-08-10|onshape-to-robot 用法、工程边界与选型调研]] — R05 主分类、R04 次分类：适合 Onshape-first 团队把版本化装配编译成 URDF/SDF/MuJoCo，但必须补齐模型 CI、ROS 2/MoveIt/控制、碰撞、动力学与真实 API PoC；报告含最小配置、故障定位、安全边界和创业机会。
 
 - [[robotics-embodied-ai/research-notes/ethercat-technology-ecosystem-engineering-deep-dive-2026-08-09|EtherCAT 技术原理、产业生态与机器人工程选型深度调研]] — R04 主分类、R05/R07 次分类：EtherCAT 适合作为机器人确定性内环，但总线实时不等于整机硬实时；选型需联合验证 OS、主站、NIC、驱动器、安全和故障恢复。
 

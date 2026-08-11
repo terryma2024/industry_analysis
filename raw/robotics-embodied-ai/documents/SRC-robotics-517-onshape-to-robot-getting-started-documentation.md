@@ -1,0 +1,119 @@
+---
+source_id: "SRC-robotics-517"
+title: "onshape-to-robot getting started documentation"
+source_type: "technical_documentation"
+publisher: "Rhoban"
+source_date: "2026-08-10"
+url: "https://onshape-to-robot.readthedocs.io/en/latest/getting_started.html"
+evidence_grade: "S"
+capture_method: "defuddle"
+captured_at: "2026-08-10T15:46:26+00:00"
+tags:
+  - raw/source
+  - source-type/technical-documentation
+  - evidence/s
+aliases:
+  - SRC-robotics-517
+---
+# onshape-to-robot getting started documentation
+
+## Getting started
+
+## Installing the package
+
+Run the following to install onshape-to-robot from [pypi](https://pypi.org/project/onshape-to-robot/):
+
+```bash
+pip install onshape-to-robot
+```
+
+## Setting up your Authentication
+
+### Developer Keys
+
+You will need to obtain API key and secret from the [My Account > Developer menu](https://cad.onshape.com/user/developer/apiKeys)
+
+API key must be set as environment variables.
+
+#### Using.bashrc
+
+You can add something like this in your `.bashrc`:
+
+```bash
+# .bashrc
+# Obtained at https://dev-portal.onshape.com/keys
+export ONSHAPE_API=https://cad.onshape.com
+export ONSHAPE_ACCESS_KEY=Your_Access_Key
+export ONSHAPE_SECRET_KEY=Your_Secret_Key
+```
+
+#### Using.env file
+
+Alternatively, you can also create a `.env` file in the root of your project:
+
+```bash
+# .env
+# Obtained at https://dev-portal.onshape.com/keys
+ONSHAPE_API=https://cad.onshape.com
+ONSHAPE_ACCESS_KEY=Your_Access_Key
+ONSHAPE_SECRET_KEY=Your_Secret_Key
+```
+
+### OAuth2
+
+Onshape alternatively supports [OAuth2 authentication](https://onshape-public.github.io/docs/auth/oauth/). To authenticate this app with an OAuth token, you can instead set the following in .barshrc or .env:
+
+```bash
+ONSHAPE_API=https://cad.onshape.com
+ONSHAPE_SECRET_BEARER=Your_Access_Key
+```
+
+## Setting up your export
+
+To export your own robot, first create a directory:
+
+```bash
+mkdir my-robot
+```
+
+Then edit `my-robot/config.json`, here is the minimum example:
+
+```json
+{
+    // Onshape URL of the assembly
+    "url": "https://cad.onshape.com/documents/11a7f59e37f711d732274fca/w/7807518dc67487ad405722c8/e/5233c6445c575366a6cc0d50",
+    // Output format
+    "output_format": "urdf"
+}
+```
+
+> [!note] Note
+> The Onshape URL should be the one of your assembly. Be sure to be on the right tab when you copy it.
+
+Once this is done, run the following command:
+
+```bash
+onshape-to-robot my-robot
+```
+
+## Testing your export
+
+You can test your export by running (PyBullet):
+
+```bash
+onshape-to-robot-bullet my-robot
+```
+
+Or (MuJoCo):
+
+```bash
+onshape-to-robot-mujoco my-robot
+```
+
+## What’s next?
+
+Before you can actually enjoy your export, you need to pay attention to the following:
+
+- `onshape-to-robot` comes with some conventions to follow, in order to understand what in your robot is a degree of freedom, a link, a frame, etc. Make sure to read the [design-time considerations](https://onshape-to-robot.readthedocs.io/en/latest/design.html).
+- There are some options you might want to specify in the [config.json](https://onshape-to-robot.readthedocs.io/en/latest/config.html) file.
+- Have a look at the [examples](https://github.com/rhoban/onshape-to-robot-examples) available on GitHub.

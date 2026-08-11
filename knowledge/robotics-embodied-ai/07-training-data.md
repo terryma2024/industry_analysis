@@ -1,6 +1,7 @@
 ---
 title: 机器人（具身智能） - 训练数据生产与处理
 date: 2026-05-26
+last_updated: 2026-08-11
 tags:
   - industry/robotics-embodied-ai
   - data
@@ -37,6 +38,8 @@ aliases:
 | 线上部署闭环   | 已交付机器人运行日志、失败回放、人工接管                   | 商业场景持续优化        | 真实 ROI 场景，数据价值最高  | 安全、隐私、客户授权和责任边界        | AMR/工业移动操作/服务机器人公司，待验证                           |
 
 ## 数据处理流水线
+
+本节的详细工程版见 [[research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11|具身智能模型数据处理闭环]]。新增的核心约束是：数据处理从采集前的 `data_contract` 开始；raw、canonical dataset 和 model view 分层保存；同步阈值按具体任务误差预算确定；最终用 baseline 与真实 holdout 验收，而不是用数据小时数或 loader 成功代替。
 
 ```mermaid
 flowchart LR
@@ -118,4 +121,5 @@ flowchart LR
 - 已推进：完成“失败轨迹”和“人工接管数据”稀缺资产调研，见 [[research-notes/failure-intervention-data-2026-05-27]]。
 - 已推进：补齐 UMI-like v0 采集 SOP/QC、UMI/Zarr 与 LeRobot schema 对照和客户数据包模板，见 [[research-notes/umi-v0-sop-schema-data-package-2026-05-28]]。
 - 已推进：补充 LeRobot 初学者教学，解释 LeRobotDataset、目录结构、UMI/Zarr 转换和 ToB 数据服务意义，见 [[research-notes/lerobot-beginner-guide-2026-05-28]]。
+- 已推进：从微信文章的从业者问题地图出发，补齐采集前契约、raw 保真、时间对齐、自动质量门、episode/事件切片、schema/action 编译、无泄漏切分、训练时增强、真实 holdout 与部署回流，见 [[research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11]]。
 - 待继续：下载最小样例数据核验字段和 license；合并升级 `training_data_companies.csv`；补充 Robotin/FirstMove/GenRobot/灵初等工商、招聘和客户交付证据；按 [[00-source-capture-index]] SOP 抽取本轮新增来源 raw artifact。

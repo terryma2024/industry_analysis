@@ -7,13 +7,21 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-08-09
+last_updated: 2026-08-11
 ---
 
 # 机器人（具身智能） - 研究中间笔记
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
+
+## 2026-08-11 具身智能模型数据处理闭环
+
+- [[embodied-ai-model-data-processing-pipeline-2026-08-11]]: 按 R02 主分类、R05 次分类，从微信从业者文章提炼问题地图，再用 LeRobot/OXE/DROID/HIL 一手资料限定边界；形成采集前契约、raw 保真、同步/标定、自动质量门、episode/事件、分层标注、schema/action 编译、无泄漏切分、训练时增强、真实 holdout 和部署回流的十层闭环。
+
+## 2026-08-10 onshape-to-robot CAD 转机器人描述
+
+- [[onshape-to-robot-usage-selection-deep-dive-2026-08-10]]: 按 R05 主分类、R04 次分类，拆解 Onshape 顶层装配与 mate connector 约定、API 认证、版本锁定、URDF/SDF/MuJoCo、processors、示例和 open-issue 风险；结论是适合 Onshape-first 团队做版本化 CAD→机器人描述编译，但不能替代 ROS 2/MoveIt/控制、碰撞和动力学验证。
 
 ## 2026-08-09 EtherCAT 实时工业以太网
 

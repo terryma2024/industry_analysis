@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-08-09
+last_updated: 2026-08-11
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -16,6 +16,21 @@ aliases:
 
 > [!summary]
 > 本页是 [[00-index|机器人（具身智能）]] 的来源抽取 MOC。来源编号仍以 [[sources.csv]] 为准；原文/清洗件保存在 `raw/robotics-embodied-ai/documents/`，抽取状态见 [source_capture_manifest.csv](../../raw/robotics-embodied-ai/documents/source_capture_manifest.csv)。
+
+## 2026-08-11 微信具身数据处理 RoadMap
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-529`](../../raw/robotics-embodied-ai/documents/SRC-robotics-529-50-vs-ego-roadmap.md) | [微信文章 Defuddle 全文](../../raw/robotics-embodied-ai/documents/SRC-robotics-529-50-vs-ego-roadmap.md) | 提炼多模态采集、动作表征、同步、标注、质量筛选、训练配比和部署回流问题；C 级文章，发布日期、毛利、价格、`50 ms` 与周期数字均待验证。 |
+
+- 来源卡：[[_sources/wechat-embodied-data-processing-roadmap|具身数据 RoadMap 微信文章来源卡]]。
+- 下游编译：[[research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11|具身智能模型数据处理闭环]]。
+
+## 2026-08-10 onshape-to-robot 官方来源
+
+- [[_sources/onshape-to-robot-official-source-set|onshape-to-robot 官方仓库、文档、示例与问题来源集]]：固定主仓库 commit `7d0803d`、示例 commit `7e40fd6`，并捕获安装、设计约定、config、URDF/SDF/MuJoCo、processors 和三个具体 issue。
+- `SRC-robotics-516`–`524`、`526`–`528` 已形成可读 raw Markdown；`SRC-robotics-525` PyPI 页面 Defuddle 超时，已保留 HTML，版本/依赖由 PyPI JSON 与固定 `pyproject.toml` 交叉核验。
+- 综合于 [[research-notes/onshape-to-robot-usage-selection-deep-dive-2026-08-10|onshape-to-robot 用法与选型调研]]；本轮未使用 Onshape 密钥，真实 API 导出仍待 PoC。
 
 ## 2026-08-09 EtherCAT 技术与生态来源
 
@@ -39,8 +54,8 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 116 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 260 | 已成功抽取的 raw artifact。 |
-| `fallback_html` | 16 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
+| `ok` | 286 | 已成功抽取的 raw artifact。 |
+| `fallback_html` | 17 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 10 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据、GitHub API 或固定提交文本生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
 | `failed` | 16 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |

@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-08-09
+last_updated: 2026-08-11
 tags:
   - wiki
   - log
@@ -721,3 +721,19 @@ tags:
   - **变更**: 新增 [[robotics-embodied-ai/research-notes/dexcap-dexterous-mocap-data-collection-deep-dive-2026-08-09|DexCap 深度调研]]、[[_sources/dexcap-paper-project-code-source-set|来源集]]和 [[_entities/DexCap|实体页]]；复用既有论文 `SRC-robotics-277`，新增并捕获官网/固定提交代码 `SRC-robotics-502`、`504`，更新行业、研究笔记、来源和全局索引。
   - **结论**: DexCap 证明人类穿戴动捕可提升灵巧示教吞吐，并通过点云重定向训练 robot policy；但无力觉、跨本体接触差异、视野盲区、40 分钟续航和老化 BOM 使其更适合研究/数据服务 PoC，而不是直接量产复制。
   - **限制**: 未复现双 Franka/LEAP 实验，未核验当前完整 BOM、数据商业许可或客户收入；作者任务成功率不构成产品 SLA。
+
+## [2026-08-10]
+
+- **synthesis | onshape-to-robot 用法、工程边界与选型调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/onshape-to-robot-usage-selection-deep-dive-2026-08-10|onshape-to-robot 用法与选型调研]]和[[_sources/onshape-to-robot-official-source-set|官方来源集]]；登记 `SRC-robotics-516`–`528`，更新行业、研究笔记、来源与全局索引。
+  - **来源**: 固定主仓库 commit `7d0803d`、示例 commit `7e40fd6`、官方 Read the Docs/PyPI、固定源码 diff，以及 API rate limit、嵌套 DoF 和 retrieve/convert 配置行为三个具体 GitHub issue。
+  - **结论**: 该工具适合 Onshape-first 团队把版本化装配编译为 URDF/SDF/MuJoCo，并减少结构、几何和惯量的重复录入；不能替代 ROS 2/MoveIt/控制器、碰撞优化、动力学辨识和任务级模型验收。PyPI v1.8.2 与 latest master 存在未发布差异，SDF 用户必须 pin 并回归。
+  - **限制**: 本轮未使用 Onshape API 密钥或真实用户装配，只有源码 `compileall` 和静态/文档审计；`SRC-robotics-525` PyPI 正文 Defuddle 超时但 HTML 已保存，版本和依赖由 PyPI JSON 与 `pyproject.toml` 交叉核验。
+
+## [2026-08-11]
+
+- **ingest | 微信具身数据处理 RoadMap 入库并编译工程知识**
+  - **变更**: 登记并捕获 `SRC-robotics-529`，新增 [[_sources/wechat-embodied-data-processing-roadmap|文章来源卡]]、[[robotics-embodied-ai/research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11|具身智能模型数据处理闭环]]，扩充 [[_concepts/robot-training-data|Robot Training Data]]，并更新训练数据父页、深研汇总、行业/来源/研究笔记/全局索引。
+  - **结论**: 数据处理从采集前的数据契约开始，必须分层保留 raw、canonical dataset 与 model view；同步、标定、自动质量门、episode/事件、action/schema、无泄漏切分、baseline、真实 holdout 和部署失败回流共同构成可训练闭环。
+  - **来源**: 微信文章作为 C 级问题地图；LeRobot v3、Open X-Embodiment、DROID 与 LeRobot HIL 作为 S 级工程边界。
+  - **限制**: 原文发布日期未可靠返回；毛利、标注价格、`50 ms` 同步阈值和优化周期均无可核查口径，未升级为行业事实。真实机器人 raw→训练→部署回流 PoC 尚未执行。
