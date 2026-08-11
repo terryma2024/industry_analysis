@@ -645,3 +645,16 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-rlinf-embodied-reinforcement-learning-infrastructure-deep-dive-2026-07-28|RLinf 具身强化学习基础设施视频深研]]（R04，R07）和 [[_syntheses/bilibili-open-robot-arm-platform-selection-deep-dive-2026-07-28|开源机器人与机械臂选型视频深研]]（R05，R07）；补充 `SRC-robotics-323`–`326` raw captures、来源 MOC、source card 回链与全局索引。
   - **结论**: RL 基础设施应以目标任务的安全、成本与可复现 A/B 证明价值；开源机器人选择的最小闭环是 BOM/CAD、控制、标定/遥操、可训练数据、部署、许可证和安全，而非视频价格或“开源”标签。
   - **限制**: Bilibili ASR 中的性能、价格、平台/数据集名称、采用方和商业化信息未逐一得到一手来源支持，均未升级为行业事实。
+
+## [2026-08-11]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-08-11|Bilibili AI Daily Run 2026-08-11]]；首轮中断前与有界复跑合计取得 5 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+- **synthesis | Isaac Lab 与光模块工位两条单视频深研**
+  - **变更**: 新增 [[_syntheses/bilibili-isaac-lab-empty-scene-tutorial-deep-dive-2026-08-11|Isaac Lab 空场景教程视频深度调研]]（R05，R04）和 [[_syntheses/bilibili-optical-module-robotic-workcell-commercial-validation-deep-dive-2026-08-11|光模块工位机器人与人类数据路线视频深度调研]]（R07，R04/R02）；更新两张 source card 与 [[index|Knowledge Index]]。
+  - **来源**: B 级 `BV1R3Yiz4E2s`、`BV1iyNR68EMQ` ASR transcripts；A 级 Isaac Lab 官方安装/空场景文档与仓库；S 级 `SRC-robotics-280` EgoScale 原论文。
+  - **结论**: 空场景只验证 Isaac Lab 的最小 API 路径，平台选择仍需资产/训练/真机 PoC；人类第一视角数据路线有研究支持，但视频所称公司、模型、10 万小时数据、现场连续生产和订单均不构成商业事实。
+  - **限制**: 3 条选中视频字幕路径失败且 Volcengine 返回 `audio_duration_lifetime` 配额耗尽；`volc.bigasr.auc` 在 90 秒边界内未返回。需恢复配额后重试，不能建立深研页。

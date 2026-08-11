@@ -1,0 +1,39 @@
+{
+  "captured_at": "2026-08-11T04:24:26.715263+00:00",
+  "platform": "bilibili",
+  "video": {
+    "title": "B站强推！2025公认最通俗易懂的【 Isaac Lab】教程，全套付费课程（附资料）NVIDIA_Isaac_Lab",
+    "url": "https://www.bilibili.com/video/BV1R3Yiz4E2s",
+    "bvid": "BV1R3Yiz4E2s",
+    "aid": "",
+    "video_id": "",
+    "author": "具身机器人开发",
+    "published_at": "",
+    "favorited_at": "",
+    "description": "",
+    "tags": [],
+    "category": "",
+    "raw": {
+      "rank": 6,
+      "title": "B站强推！2025公认最通俗易懂的【 Isaac Lab】教程，全套付费课程（附资料）NVIDIA_Isaac_Lab",
+      "author": "具身机器人开发",
+      "plays": 39166,
+      "url": "https://www.bilibili.com/video/BV1R3Yiz4E2s"
+    }
+  },
+  "target_industries": [
+    "robotics-embodied-ai",
+    "ai"
+  ],
+  "relevance": {
+    "score": 8,
+    "matched_terms": [
+      "\\bisaac\\b",
+      "具身",
+      "机器人",
+      "nvidia"
+    ]
+  },
+  "extraction_method": "volcengine-external-command:volc.bigasr.auc",
+  "transcript_text": "Hello, everyone. I figured I start a series on teaching iSLIP, as I'm quite fascinated about it myself. And this is kind of a way of sharing the knowledge that I'm gaining. So, I wanted to do tutorial videos, as I'm hoping to help people getting more familiar with iCicle. The series will start with the tutorials on the official ISAAC lab documentation. I will make it very beginner friendly. However, the requirements are that you know in general what NVIDIA Omniverse and ISAAC Sim is. And that you have already installed Isaac lab. In case you haven't installed it, I will provide the official guide for the installation below, as well as the great video from Shane, in which he shows the complete installation. So, yeah, I highly recommend watching it. I will provide all the links below in the description. OK, so after having installed iSIK lab You can find the tutorial under the Asic lab folder, source, standalone tutorials, 00SIM, and create empty Pi. In this tutorial, we will go over how to create an empty scene. The very same tutorial can be found under the ISA lab documentation website. When you scroll down, you go to resources, tutorials, and creating an empty scene. So before we actually dive right into the code, I want to just quickly show how toExecute the code and launch ISA SIM, which ISA lab is built on. So, before we actually do this, we need to ensure that we are connected to the Conda environment ISA lab. Which will be created during the installation. So, a very easy way is to just click the run Python file. This will now open ISIXEM from the terminal, and and will create us an empty stage. as you could also see the simulation is running automatically. in order to stop the simulation, we will go into VS Code, go into the terminal and press Control C. Another way is to use the IceLab batch script or shell script depending on if you use Windows or Linux. I'm using Windows. And yeah, you can't forget to use the comment, minus p. Or what you could also just simply do is to just have a packing as you already connected to the conda environment. And then presenter. Now, I'm going to explain the code step by step. Since we're working with the standalone script, we need to set up the simulation app to launch Isaclab. First We import the modules arc parts, which is a standard Python module for passing arguments. And then the app launcher, which is a utility class from the IceC lab library. That acts as a wrapper around the simulation app, which you may already know from running scripts in ISIX. The app launcher helps us to simplify the process of launching the simulation app. And also handles configurations using a command line arguments or environment variables. So before starting this stage, we first create the arg parser, which will for now have a description. Next step, we will extend the parser by adding predefined command line arguments like the headless mode, the life stream mode, or rendering options. In case we use command line arguments, we will then pass these. And initialize the app launcher with them. Now finally, we can launch the simulation app with the configuration of the app launcher. Now for example, we can run the script with the flag help. In order to see all the options and the description tutorial on creating empty stage options and the arguments, which some of those I already mentioned. We can also use the arguments, for example, headless, which will run the simulation in headless mode, meaning it will not open. Now that we have started to launch the simulation app with the configuration, we can import all necessary modules. But it's important to note that the simulation must run before importing these. Otherwise, you will run into some errors. We will import the module only Isac Labsim, which is a subpackage and gives us the ability to spawn different objects and materials, define and modify its use the prims. And converts files such as URDF, OBJ, STR, FBX to USD. And lastly, the utility classes which we use the simulation context. Which is controlling the simulation related events such as physics stepping and rendering, and the simulation cfg which configures the simulation physics. Now we're coming to the main part. Here, we will first set up the simulation configuration in which we can define the simulation physics with attributes such as gravity, device to use, or Simulation time step, as we use here with DT equals to 0.01 seconds. The simulation context gives the user the control over playing, pausing and stepping the simulator. And also to initialize the simulation with the configs. Now we create a camera which has a position in the three D space with 2.5 meters in every direction. And also a target point to look at, which is the center, 000. After setting up the simulation scene, the first thing we have to do is to call the simulation context reset method. It plays the timeline and initializes the physics handles, which must always be called first before stepping the simulator. It's important to note that the reset method is different from the simulation context play method, which only plays the timeline and doesn't initialize the physics engine. OK, so now we're coming to the last piece in which we create a loop. By stepping the simulation while the simulation is running, which is true, since the reset method automatically starts the simulation. One little notice that the step method takes in the argument render, which dictates whether the step includes Updating the rendering related events or not. By default, the flag is set to true. Finally, we run the main function, and since it's a loop, we will have to manually close the ISim window or use control C in the terminal to stop the simulation. We also have the close method, which can also close the simulation, and should be included to properly close the simulation app. So, in this little tutorial, we have learned how to create an empty scene. Which taught us the basics of how Isaac lab works, and how to set up and control the simulation. If you have found this tutorial helpful, and want to see more, consider subscribing. Also comment on what you would like to see next. As this was my first tutorial with audio recording, I also much appreciate your feedback. Thank you, bye."
+}

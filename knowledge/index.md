@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-07-28
+last_updated: 2026-08-11
 tags:
   - wiki
   - index
@@ -14,6 +14,14 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/bilibili-bv19kxhbme5f-bilibili-video|FlexiTac 开源触觉系统]] — 已综合为 [[_syntheses/bilibili-flexitac-open-tactile-system-deep-dive-2026-08-11|FlexiTac 触觉系统深研]]；开源边界经项目/论文核验。
+- [[_sources/bilibili-bv1cuuj6ce5b-icml-2025-sam2act|SAM2Act 记忆机器人操作]] — 已综合为 [[_syntheses/bilibili-sam2act-memory-robot-manipulation-deep-dive-2026-08-11|SAM2Act 深研]]；基准指标仅代表论文实验。
+- [[_sources/bilibili-bv14fmk6qecv-arxiv-2026-turbovla-1-gb-rtx-4090-32-hz|TurboVLA 实时 VLA]] — 已综合为 [[_syntheses/bilibili-turbovla-real-time-vla-deep-dive-2026-08-11|TurboVLA 深研]]；RTX 4090 指标不可直接外推。
+
+- [[_sources/bilibili-bv1iynr68emq-bilibili-video|“偷师”人类数据，机器人在光模块工位干活了！]] — 已综合为 [[_syntheses/bilibili-optical-module-robotic-workcell-commercial-validation-deep-dive-2026-08-11|光模块工位机器人与人类数据路线深研]]；公司、数据规模、模型与商业化仍是 B 级待验证线索。
+
+- [[_sources/bilibili-bv1r3yiz4e2s-b-2025-isaac-lab-nvidia-isaac-lab|B站强推！2025公认最通俗易懂的【 Isaac Lab】教程，全套付费课程（附资料）NVIDIA_Isaac_Lab]] — 已综合为 [[_syntheses/bilibili-isaac-lab-empty-scene-tutorial-deep-dive-2026-08-11|Isaac Lab 空场景教程深研]]；教程/API 经官方资料核验，部署与真机 ROI 仍待 PoC。
 
 - [[_sources/bilibili-bv1z33l6ge9y-bilibili-video|开源机器人与机械臂成套方案选型调研]] — 已综合为 [[_syntheses/bilibili-open-robot-arm-platform-selection-deep-dive-2026-07-28|开源机器人与机械臂选型深研]]；视频价格/性能保持 B 级待验证。
 
@@ -160,6 +168,13 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-ai-daily-run-2026-08-11|Bilibili AI Daily Run 2026-08-11]] — 20 个候选、13 个重复；模型选中 5 条，2 条成功转录并完成单视频深研，3 条因 ASR 音频时长配额耗尽失败。
+- [[_syntheses/bilibili-isaac-lab-empty-scene-tutorial-deep-dive-2026-08-11|Isaac Lab 空场景教程视频深度调研]] — R05 主分类、R04 次分类：官方空场景可作为仿真 API smoke test，不等同于训练吞吐或 sim-to-real 成功。
+- [[_syntheses/bilibili-optical-module-robotic-workcell-commercial-validation-deep-dive-2026-08-11|光模块工位机器人与人类数据路线视频深度调研]] — R07 主分类、R04/R02 次分类：人类数据路线有论文支持，但视频的公司、模型、现场能力与订单仍须以工位级 ROI/连续运行验证。
+- [[_syntheses/bilibili-flexitac-open-tactile-system-deep-dive-2026-08-11|FlexiTac 开源触觉系统视频深度调研]] — R02 主分类、R04 次分类：触觉传感器价值应由接触任务的损伤、接管和总拥有成本验证。
+- [[_syntheses/bilibili-sam2act-memory-robot-manipulation-deep-dive-2026-08-11|SAM2Act 记忆机器人操作视频深度调研]] — R04 主分类、R07 次分类：记忆模块只应在反马尔可夫任务用真机 AB 验收。
+- [[_syntheses/bilibili-turbovla-real-time-vla-deep-dive-2026-08-11|TurboVLA 实时 VLA 视频深度调研]] — R04 主分类、R05 次分类：模型推理延迟不是机器人端到端闭环延迟。
 
 - [[_syntheses/bilibili-ai-daily-run-2026-07-28|Bilibili AI Daily Run 2026-07-28]] — 20 个候选、17 个重复；模型选中并成功转录 RLinf 和开源机械臂选型两条视频。
 - [[_syntheses/bilibili-rlinf-embodied-reinforcement-learning-infrastructure-deep-dive-2026-07-28|RLinf 具身强化学习基础设施视频深度调研]] — R04 主分类、R07 次分类：应以任务级安全/成本/收益的 A/B 验收来判断 RL 后训练基础设施，而非采用视频 benchmark 或采用方叙事。
