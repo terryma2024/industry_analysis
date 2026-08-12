@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -16,6 +16,16 @@ aliases:
 
 > [!summary]
 > 本页是 [[00-index|机器人（具身智能）]] 的来源抽取 MOC。来源编号仍以 [[sources.csv]] 为准；原文/清洗件保存在 `raw/robotics-embodied-ai/documents/`，抽取状态见 [source_capture_manifest.csv](../../raw/robotics-embodied-ai/documents/source_capture_manifest.csv)。
+
+## 2026-08-12 EtherCAT 与 TCP/IP 实时控制对照来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-530`](../../raw/robotics-embodied-ai/documents/SRC-robotics-530-rfc-9293-transmission-control-protocol-tcp.md) | IETF RFC 9293 TCP 标准 | 核验可靠、有序字节流、ACK、重传、动态 RTO 和拥塞控制；不代表具体机器人 TCP 实现的实测性能。 |
+| [`SRC-robotics-531`](../../raw/robotics-embodied-ai/documents/SRC-robotics-531-rfc-768-user-datagram-protocol.md) | IETF RFC 768 UDP 标准 | 核验最小 datagram 机制及不保证送达/去重/有序；UDP 仍不自动提供 DC、过程映像和 WKC。 |
+
+- 与 `SRC-robotics-505` 的 ETG on-the-fly、ESC、DC、WKC 一手说明合并为 [[research-notes/ethercat-vs-tcp-ip-robot-control-latency-2026-08-12|EtherCAT vs TCP/IP 机器人控制时延专题]]。
+- 本轮无统一硬件 A/B benchmark；不提供协议性能倍数。
 
 ## 2026-08-11 微信具身数据处理 RoadMap
 
@@ -36,7 +46,7 @@ aliases:
 
 | SRC | raw artifact | 用途与边界 |
 |---|---|---|
-| `SRC-robotics-505`–`510` | ETG 技术、标准化、许可、Implementation Guide、EtherCAT G/TSN | 核验协议机制、IEC、许可、一致性和扩展；`508` 官方 PDF 自动抽取未产出 raw，待补采；ETG 性能数字不作为任意产品 SLA。 |
+| `SRC-robotics-505`–`510` | ETG 技术、标准化、许可、Implementation Guide、EtherCAT G/TSN | 核验协议机制、IEC、许可、一致性和扩展；`508` 官方 PDF 已用 PyMuPDF4LLM 捕获；ETG 性能数字不作为任意产品 SLA。 |
 | `SRC-robotics-511`–`512` | SOEM 与 IgH 官方资料 | 核验两条开源 MainDevice 实现路线；未在实时内核/机器人台架运行。 |
 | `SRC-robotics-513` | ODVA CIP Motion 官方页 | 竞品机制对照；未做统一硬件性能横评。 |
 | `SRC-robotics-514`–`515` | 工信部人形机器人及工业互联网政策 | 限定十五五关联；政策未点名 EtherCAT。 |
@@ -54,7 +64,7 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 116 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 286 | 已成功抽取的 raw artifact。 |
+| `ok` | 288 | 已成功抽取的 raw artifact。 |
 | `fallback_html` | 17 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 10 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据、GitHub API 或固定提交文本生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |

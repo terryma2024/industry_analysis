@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -52,6 +52,7 @@ sources:
 - `09-training-data-deep-dive.md`: 训练数据深度调研汇总页和并行研究入口，含 UMI v0 SOP/schema/客户数据包模板与 LeRobot 初学者教学入口。
 - `12-robotics-engineering-platforms-2026-06-04.md`: 机器人工程平台综合调研，覆盖数据、训练、评测、部署、真机推理和选型框架。
 - `13-robot-company-product-comparison-2026-06-08.md`: 主表机器人公司的产品型号全景对比，覆盖人形/轮式双臂、协作臂/工业机器人、AMR/移动操作的参数、技术路线、优缺点和待验证项。
+- [[research-notes/ethercat-vs-tcp-ip-robot-control-latency-2026-08-12|EtherCAT 为什么在机器人实时控制中通常比 TCP/IP 更快]]: R04 主分类、R05 次分类；优势来自单帧多节点、ESC 硬件穿越、固定调度、DC 与 WKC，不是 100 Mbit/s 峰值带宽；给出指标口径、适用边界和 6/12 轴 A/B PoC。
 - [[research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11|具身智能模型数据处理闭环]]: R02 主分类、R05 次分类；把数据处理拆成采集前契约、原始保真、同步/标定、自动质量门、episode/标注、schema/action 编译、配比/切分、训练时增强、真实 holdout 与部署回流，并给出质量指标、交付物和创业边界。
 - [[research-notes/onshape-to-robot-usage-selection-deep-dive-2026-08-10|onshape-to-robot 用法、工程边界与选型调研]]: R05 主分类、R04 次分类；核验 Onshape 装配约定、认证、配置、URDF/SDF/MuJoCo、processors、版本漂移、安全边界、真实模型 PoC、商业应用与中小创业机会。
 - [[research-notes/ethercat-technology-ecosystem-engineering-deep-dive-2026-08-09|EtherCAT 技术原理、产业生态与机器人工程选型深度调研]]: R04 主分类、R05/R07 次分类；覆盖帧内处理、分布式时钟、驱动 profile、开源/商业主站、许可与一致性，区分总线实时和整机实时，并给出机器人 PoC 与创业切口。

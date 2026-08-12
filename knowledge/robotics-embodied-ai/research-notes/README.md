@@ -7,13 +7,17 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 ---
 
 # 机器人（具身智能） - 研究中间笔记
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
+
+## 2026-08-12 EtherCAT 与 TCP/IP 机器人控制时延
+
+- [[ethercat-vs-tcp-ip-robot-control-latency-2026-08-12]]: 按 R04 主分类、R05 次分类，解释 EtherCAT 的单帧多节点、ESC on-the-fly、统一过程映像、DC 和 WKC 为什么比普通 TCP/UDP socket 更适合多轴周期控制；同时证明“更快”不等于峰值吞吐量更高，并给出 6/12 轴 A/B PoC。
 
 ## 2026-08-11 具身智能模型数据处理闭环
 

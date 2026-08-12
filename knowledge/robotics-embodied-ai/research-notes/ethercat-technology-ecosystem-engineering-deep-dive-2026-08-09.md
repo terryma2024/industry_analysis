@@ -2,7 +2,7 @@
 title: EtherCAT 技术原理、产业生态与机器人工程选型深度调研
 type: synthesis
 date_created: 2026-08-09
-last_updated: 2026-08-09
+last_updated: 2026-08-12
 sources:
   - knowledge/_sources/ethercat-technology-implementation-policy-source-set.md
 tags:
@@ -135,6 +135,8 @@ MainDevice 不要求专用通信处理器，普通 Ethernet MAC 即可；但“�
 
 ## 9. 与替代方案的关系
 
+EtherCAT 与普通 TCP/UDP socket 的协议位置、周期时延和同步语义详见 [[ethercat-vs-tcp-ip-robot-control-latency-2026-08-12]]。
+
 | 方案 | 强项 | 相对 EtherCAT 的典型差异 | 何时优先 |
 |---|---|---|---|
 | PROFINET IRT | Siemens/欧洲工厂自动化生态、控制与 IT 融合 | 交换式调度/IRT 生态不同 | 已标准化 Siemens 工厂和供应链 |
@@ -245,7 +247,7 @@ EtherCAT 与 TSN 不必二选一：TSN 可承载控制器到 EtherCAT segment �
 ## 关联连接
 
 - [[_sources/ethercat-technology-implementation-policy-source-set|EtherCAT 技术、实现、生态与政策来源集]]
+- [[ethercat-vs-tcp-ip-robot-control-latency-2026-08-12]]
 - [[embodied-ai|具身智能]]
 - [[robotics-embodied-ai/02-technology-and-products|机器人技术与产品]]
 - [[robotics-embodied-ai/research-notes/00-index|机器人研究笔记索引]]
-

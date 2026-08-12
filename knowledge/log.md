@@ -737,3 +737,10 @@ tags:
   - **结论**: 数据处理从采集前的数据契约开始，必须分层保留 raw、canonical dataset 与 model view；同步、标定、自动质量门、episode/事件、action/schema、无泄漏切分、baseline、真实 holdout 和部署失败回流共同构成可训练闭环。
   - **来源**: 微信文章作为 C 级问题地图；LeRobot v3、Open X-Embodiment、DROID 与 LeRobot HIL 作为 S 级工程边界。
   - **限制**: 原文发布日期未可靠返回；毛利、标注价格、`50 ms` 同步阈值和优化周期均无可核查口径，未升级为行业事实。真实机器人 raw→训练→部署回流 PoC 尚未执行。
+
+## [2026-08-12]
+
+- **synthesis | EtherCAT 与 TCP/IP 机器人实时控制时延专题**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/ethercat-vs-tcp-ip-robot-control-latency-2026-08-12|EtherCAT vs TCP/IP 时延专题]]；登记并捕获 IETF `SRC-robotics-530`–`531`，更新 EtherCAT 来源集、来源 MOC、行业/研究笔记/全局索引，并从原 EtherCAT 深调回链。
+  - **结论**: EtherCAT 在多轴控制中的优势来自单帧服务多节点、ESC on-the-fly 硬件处理、固定主站/拓扑、Distributed Clocks 和 Working Counter，不是峰值带宽；TCP 的可靠有序重传适合通用数据，但会在丢包后放大控制尾时延。
+  - **边界**: TCP 连接并非每周期握手，UDP 也不自动具备实时同步；1/10 Gbit/s IP 网络在吞吐和理想串行化时间上可快于 100 Mbit/s EtherCAT。未做统一 6/12 轴台架，因此不提供“快几倍”的产品结论。

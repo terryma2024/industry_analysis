@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 tags:
   - wiki
   - index
@@ -19,7 +19,7 @@ tags:
 
 - [[_sources/onshape-to-robot-official-source-set|onshape-to-robot 官方仓库、文档、示例与问题来源集]] — 固定提交核验 CAD→URDF/SDF/MuJoCo 工作流、装配命名约定、配置、processors、版本差异、示例和 open-issue 风险；综合于 [[robotics-embodied-ai/research-notes/onshape-to-robot-usage-selection-deep-dive-2026-08-10|onshape-to-robot 用法与选型调研]]。
 
-- [[_sources/ethercat-technology-implementation-policy-source-set|EtherCAT 技术、实现、生态与政策来源集]] — ETG 官方技术/标准/许可/实现、SOEM/IgH、ODVA 竞品与工信部政策证据；综合于 [[robotics-embodied-ai/research-notes/ethercat-technology-ecosystem-engineering-deep-dive-2026-08-09|EtherCAT 深度调研]]，并区分协议实时、整机实时和政策映射边界。
+- [[_sources/ethercat-technology-implementation-policy-source-set|EtherCAT 技术、实现、生态与政策来源集]] — ETG 官方技术/标准/许可/实现、IETF TCP/UDP 标准、SOEM/IgH、ODVA 竞品与工信部政策证据；综合于 [[robotics-embodied-ai/research-notes/ethercat-technology-ecosystem-engineering-deep-dive-2026-08-09|EtherCAT 深度调研]]和 [[robotics-embodied-ai/research-notes/ethercat-vs-tcp-ip-robot-control-latency-2026-08-12|EtherCAT vs TCP/IP 时延专题]]。
 
 - [[_sources/dexcap-paper-project-code-source-set|DexCap 论文、官网与代码来源集]] — RSS 2024 论文、官方项目页与固定提交代码；综合于 [[robotics-embodied-ai/research-notes/dexcap-dexterous-mocap-data-collection-deep-dive-2026-08-09|DexCap 深度调研]]，并区分研究成功率、复现条件和商业真实性。
 
@@ -196,6 +196,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[robotics-embodied-ai/research-notes/ethercat-vs-tcp-ip-robot-control-latency-2026-08-12|EtherCAT 为什么在机器人实时控制中通常比 TCP/IP 更快]] — R04 主分类、R05 次分类：EtherCAT 的实时优势来自单帧多节点、ESC on-the-fly、固定周期、DC 和 WKC，而不是峰值带宽；TCP 的可靠有序语义适合通用数据，丢包时却会增加控制尾时延。
 
 - [[robotics-embodied-ai/research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11|具身智能模型数据处理闭环]] — R02 主分类、R05 次分类：将数据处理定义为从采集前契约到部署问题回流的十层闭环，给出同步/标定、自动质量门、分层标注、action/schema 编译、无泄漏切分、训练时增强、真实 holdout、交付物与创业边界。
 
