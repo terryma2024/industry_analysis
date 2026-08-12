@@ -658,3 +658,15 @@ tags:
   - **来源**: B 级 `BV1R3Yiz4E2s`、`BV1iyNR68EMQ` ASR transcripts；A 级 Isaac Lab 官方安装/空场景文档与仓库；S 级 `SRC-robotics-280` EgoScale 原论文。
   - **结论**: 空场景只验证 Isaac Lab 的最小 API 路径，平台选择仍需资产/训练/真机 PoC；人类第一视角数据路线有研究支持，但视频所称公司、模型、10 万小时数据、现场连续生产和订单均不构成商业事实。
   - **限制**: 3 条选中视频字幕路径失败且 Volcengine 返回 `audio_duration_lifetime` 配额耗尽；`volc.bigasr.auc` 在 90 秒边界内未返回。需恢复配额后重试，不能建立深研页。
+
+## [2026-08-12]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-08-12|Bilibili AI Daily Run 2026-08-12]]；处理 1 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+- **synthesis | CodeX—ROS 2 MCP 工具链单视频深研**
+  - **变更**: 新增 [[_syntheses/bilibili-codex-ros2-mcp-robot-control-deep-dive-2026-08-12|R05/R07 深研]]，并回链 source card、全局索引与 AI/机器人 sources CSV。
+  - **来源**: B 级 `BV1o5ud6kE7G` ASR 原文；A 级 ROS MCP 项目资料；S 级 ROS rosbridge_suite、协议与 Nav2 文档。
+  - **结论**: MCP 可用于受策略约束的 ROS 2 诊断/任务编排；演示不能外推为车端安全或生产可靠性，需以车端策略、急停和重复试验验收。

@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-08-11
+last_updated: 2026-08-12
 tags:
   - wiki
   - index
@@ -14,6 +14,8 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/bilibili-bv1o5ud6ke7g-codex-ros2|具身探索-CodeX控制ROS2机器人]] — 已综合为 [[_syntheses/bilibili-codex-ros2-mcp-robot-control-deep-dive-2026-08-12|CodeX、ROS MCP Server 与 ROS 2 机器人控制深研]]；接入可用性不等于车端安全控制。
 
 - [[_sources/bilibili-bv19kxhbme5f-bilibili-video|FlexiTac 开源触觉系统]] — 已综合为 [[_syntheses/bilibili-flexitac-open-tactile-system-deep-dive-2026-08-11|FlexiTac 触觉系统深研]]；开源边界经项目/论文核验。
 - [[_sources/bilibili-bv1cuuj6ce5b-icml-2025-sam2act|SAM2Act 记忆机器人操作]] — 已综合为 [[_syntheses/bilibili-sam2act-memory-robot-manipulation-deep-dive-2026-08-11|SAM2Act 深研]]；基准指标仅代表论文实验。
@@ -169,6 +171,8 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-codex-ros2-mcp-robot-control-deep-dive-2026-08-12|CodeX、ROS MCP Server 与 ROS 2 机器人控制视频深度调研]] — R05 主分类、R07 次分类：MCP 应限于受策略约束的诊断和任务编排，安全闭环必须独立留在车端。
+- [[_syntheses/bilibili-ai-daily-run-2026-08-12|Bilibili AI Daily Run 2026-08-12]] — 20 个候选、13 个重复；模型选中 5 条，仅 CodeX—ROS 2 视频成功转录并完成 R05/R07 单视频深研，另 4 条受 ASR 配额限制失败。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-11|Bilibili AI Daily Run 2026-08-11]] — 20 个候选、13 个重复；模型选中 5 条，2 条成功转录并完成单视频深研，3 条因 ASR 音频时长配额耗尽失败。
 - [[_syntheses/bilibili-isaac-lab-empty-scene-tutorial-deep-dive-2026-08-11|Isaac Lab 空场景教程视频深度调研]] — R05 主分类、R04 次分类：官方空场景可作为仿真 API smoke test，不等同于训练吞吐或 sim-to-real 成功。
 - [[_syntheses/bilibili-optical-module-robotic-workcell-commercial-validation-deep-dive-2026-08-11|光模块工位机器人与人类数据路线视频深度调研]] — R07 主分类、R04/R02 次分类：人类数据路线有论文支持，但视频的公司、模型、现场能力与订单仍须以工位级 ROI/连续运行验证。
