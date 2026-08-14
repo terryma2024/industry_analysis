@@ -732,6 +732,10 @@ tags:
 
 ## [2026-08-11]
 
+- **synthesis | Bilibili AI/具身智能视频入库**
+  - **变更**: 新增每日运行页及 FlexiTac、SAM2Act、TurboVLA、光模块工位、Isaac Lab 五篇单视频深研，并归档原文/source card。
+  - **限制**: 视频性能、价格、公司和订单主张均保持 B 级，关键技术只按论文/官方资料交叉验证。
+
 - **ingest | 微信具身数据处理 RoadMap 入库并编译工程知识**
   - **变更**: 登记并捕获 `SRC-robotics-529`，新增 [[_sources/wechat-embodied-data-processing-roadmap|文章来源卡]]、[[robotics-embodied-ai/research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11|具身智能模型数据处理闭环]]，扩充 [[_concepts/robot-training-data|Robot Training Data]]，并更新训练数据父页、深研汇总、行业/来源/研究笔记/全局索引。
   - **结论**: 数据处理从采集前的数据契约开始，必须分层保留 raw、canonical dataset 与 model view；同步、标定、自动质量门、episode/事件、action/schema、无泄漏切分、baseline、真实 holdout 和部署失败回流共同构成可训练闭环。
@@ -740,7 +744,23 @@ tags:
 
 ## [2026-08-12]
 
+- **synthesis | CodeX—ROS 2 视频深研入库**
+  - **变更**: 新增每日运行页、source card、原文与 [[_syntheses/bilibili-codex-ros2-mcp-robot-control-deep-dive-2026-08-12|R05/R07 深研]]。
+  - **结论**: MCP 工具编排不能替代车端安全状态机、限幅和急停。
+
 - **synthesis | EtherCAT 与 TCP/IP 机器人实时控制时延专题**
   - **变更**: 新增 [[robotics-embodied-ai/research-notes/ethercat-vs-tcp-ip-robot-control-latency-2026-08-12|EtherCAT vs TCP/IP 时延专题]]；登记并捕获 IETF `SRC-robotics-530`–`531`，更新 EtherCAT 来源集、来源 MOC、行业/研究笔记/全局索引，并从原 EtherCAT 深调回链。
   - **结论**: EtherCAT 在多轴控制中的优势来自单帧服务多节点、ESC on-the-fly 硬件处理、固定主站/拓扑、Distributed Clocks 和 Working Counter，不是峰值带宽；TCP 的可靠有序重传适合通用数据，但会在丢包后放大控制尾时延。
   - **边界**: TCP 连接并非每周期握手，UDP 也不自动具备实时同步；1/10 Gbit/s IP 网络在吞吐和理想串行化时间上可快于 100 Mbit/s EtherCAT。未做统一 6/12 轴台架，因此不提供“快几倍”的产品结论。
+
+## [2026-08-13]
+
+- **synthesis | Bilibili 已处理视频深研补齐**
+  - **变更**: 归档 ROS 2、具身数据集、空间智能、Harness VLA、EtherCAT 与人形机器人研究方法的 source packet；六条均有独立深研。
+  - **限制**: ASR/视频是 B 级线索；数据集、Harness、EtherCAT 机制以一手论文/官方资料为界，商业数字仍待核验。
+
+## [2026-08-14]
+
+- **automation | Bilibili 收藏夹候选采集未启动**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-08-14|Bilibili AI Daily Run 2026-08-14]]；未创建本日 transcript 或 source card。
+  - **失败边界**: OpenCLI `bilibili favorite` 返回 `BROWSER_CONNECT`，Browser Bridge extension 未连接；启用并连接 Chrome/Chromium 扩展后再执行候选命令。

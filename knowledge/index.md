@@ -15,6 +15,19 @@ tags:
 
 ## Sources
 
+- [[_sources/bilibili-bv1dxg36sen1-2026-8|人形机器人研究方法及心得 2026.8]] — 已综合为 [[_syntheses/bilibili-humanoid-investment-research-method-deep-dive-2026-08-14|人形机器人研究方法与投资验证深研]]；视频数字维持 B 级待验证。
+- [[_sources/bilibili-bv1ucjj62eq4-ethercat|EtherCAT通讯原理讲解]] — 已综合为 [[_syntheses/bilibili-ethercat-robotics-control-network-deep-dive-2026-08-14|EtherCAT 机器人控制网络深研]]；协议机制经 ETG 资料核验。
+- [[_sources/bilibili-bv1hnu26zebe-talk-144-vla-harness-vla|Harness VLA 记忆增强执行框架]] — 已综合为 [[_syntheses/bilibili-harness-vla-deep-dive-2026-08-14|Harness VLA 视频深研]]；真机商业化边界待 PoC。
+- [[_sources/bilibili-bv1cu3b6vec4-bilibili-video|李飞飞空间智能访谈]] — 已综合为 [[_syntheses/bilibili-world-labs-spatial-intelligence-deep-dive-2026-08-14|World Labs 空间智能视频深研]]；R2S2R 为公司路线，待真机验证。
+- [[_sources/bilibili-bv1di546yefr-bilibili-video|具身领域三大代表性数据集]] — 已综合为 [[_syntheses/bilibili-embodied-dataset-landscape-deep-dive-2026-08-14|具身数据集视频深研]]；RoboMIND 2.0 核心数据以论文为准。
+- [[_sources/bilibili-bv1ftu96zeng-ros2|ROS2 运行在机器人的哪里？]] — 已综合为 [[_syntheses/bilibili-ros2-compute-layering-deep-dive-2026-08-13|ROS 2 实时控制边界深研]]。
+- [[_sources/bilibili-bv1o5ud6ke7g-codex-ros2|具身探索-CodeX控制ROS2机器人]] — 已综合为 [[_syntheses/bilibili-codex-ros2-mcp-robot-control-deep-dive-2026-08-12|CodeX、ROS MCP 与 ROS 2 深研]]。
+- [[_sources/bilibili-bv19kxhbme5f-bilibili-video|FlexiTac 开源触觉系统]] — 已综合为 [[_syntheses/bilibili-flexitac-open-tactile-system-deep-dive-2026-08-11|FlexiTac 触觉系统深研]]。
+- [[_sources/bilibili-bv1cuuj6ce5b-icml-2025-sam2act|SAM2Act 记忆机器人操作]] — 已综合为 [[_syntheses/bilibili-sam2act-memory-robot-manipulation-deep-dive-2026-08-11|SAM2Act 深研]]。
+- [[_sources/bilibili-bv14fmk6qecv-arxiv-2026-turbovla-1-gb-rtx-4090-32-hz|TurboVLA 实时 VLA]] — 已综合为 [[_syntheses/bilibili-turbovla-real-time-vla-deep-dive-2026-08-11|TurboVLA 深研]]。
+- [[_sources/bilibili-bv1iynr68emq-bilibili-video|光模块工位机器人与人类数据路线]] — 已综合为 [[_syntheses/bilibili-optical-module-robotic-workcell-commercial-validation-deep-dive-2026-08-11|光模块工位机器人深研]]。
+- [[_sources/bilibili-bv1r3yiz4e2s-b-2025-isaac-lab-nvidia-isaac-lab|Isaac Lab 教程]] — 已综合为 [[_syntheses/bilibili-isaac-lab-empty-scene-tutorial-deep-dive-2026-08-11|Isaac Lab 空场景教程深研]]。
+
 - [[_sources/wechat-embodied-data-processing-roadmap|具身数据 RoadMap 微信文章来源卡]] — C 级从业者文章的问题地图；已把动作表征、时间对齐、质量门、标注、训练配比和部署回流编译为 [[robotics-embodied-ai/research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11|具身智能模型数据处理闭环]]，毛利、单价、`50 ms` 与周期数字保持待验证。
 
 - [[_sources/onshape-to-robot-official-source-set|onshape-to-robot 官方仓库、文档、示例与问题来源集]] — 固定提交核验 CAD→URDF/SDF/MuJoCo 工作流、装配命名约定、配置、processors、版本差异、示例和 open-issue 风险；综合于 [[robotics-embodied-ai/research-notes/onshape-to-robot-usage-selection-deep-dive-2026-08-10|onshape-to-robot 用法与选型调研]]。
@@ -196,6 +209,23 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-ai-daily-run-2026-08-14|Bilibili AI Daily Run 2026-08-14]] — 收藏夹候选拉取失败：OpenCLI Browser Bridge 未连接；未处理本日视频。
+- [[_syntheses/bilibili-humanoid-investment-research-method-deep-dive-2026-08-14|人形机器人研究方法与投资验证视频深研]] — R09/R07：以订单、回款、连续运行和单位经济性替代展示与出货叙事。
+- [[_syntheses/bilibili-ethercat-robotics-control-network-deep-dive-2026-08-14|EtherCAT 机器人控制网络视频深研]] — R05/R02：按周期、互操作、安全和 TCO 选型。
+- [[_syntheses/bilibili-harness-vla-deep-dive-2026-08-14|Harness VLA 记忆增强执行框架视频深研]] — R04/R05：planner 编排不等于可绕过低层安全闭环。
+- [[_syntheses/bilibili-world-labs-spatial-intelligence-deep-dive-2026-08-14|World Labs 空间智能与机器人训练场视频深研]] — R04/R07：R2S2R 需要真机 holdout 证实价值。
+- [[_syntheses/bilibili-embodied-dataset-landscape-deep-dive-2026-08-14|具身三类代表性数据集视频深研]] — R06/R04：按可用 episode、质量与真实增益选择数据资产。
+- [[_syntheses/bilibili-ai-daily-run-2026-08-13|Bilibili AI Daily Run 2026-08-13]] — 20 个候选、12 个重复；六条已处理并完成单视频深研。
+- [[_syntheses/bilibili-ros2-compute-layering-deep-dive-2026-08-13|ROS 2 机器人计算分层与实时控制边界深研]] — R05/R04：高层 ROS 2 与独立安全控制链需分别验收。
+- [[_syntheses/bilibili-ai-daily-run-2026-08-12|Bilibili AI Daily Run 2026-08-12]] — CodeX—ROS 2 视频成功处理并完成 R05/R07 深研。
+- [[_syntheses/bilibili-codex-ros2-mcp-robot-control-deep-dive-2026-08-12|CodeX、ROS MCP Server 与 ROS 2 机器人控制视频深研]] — R05/R07：MCP 应受策略约束且安全闭环独立留在车端。
+- [[_syntheses/bilibili-ai-daily-run-2026-08-11|Bilibili AI Daily Run 2026-08-11]] — 五条成功转录并完成独立深研。
+- [[_syntheses/bilibili-flexitac-open-tactile-system-deep-dive-2026-08-11|FlexiTac 触觉系统深研]] — R02/R04：以接触任务损伤、接管和 TCO 验收触觉价值。
+- [[_syntheses/bilibili-sam2act-memory-robot-manipulation-deep-dive-2026-08-11|SAM2Act 深研]] — R04/R07：记忆模块需在反马尔可夫任务做真机 AB。
+- [[_syntheses/bilibili-turbovla-real-time-vla-deep-dive-2026-08-11|TurboVLA 深研]] — R04/R05：模型推理延迟不等于端到端闭环延迟。
+- [[_syntheses/bilibili-optical-module-robotic-workcell-commercial-validation-deep-dive-2026-08-11|光模块工位机器人与人类数据路线深研]] — R07/R04/R02：以工位 ROI、连续运行与订单核验。
+- [[_syntheses/bilibili-isaac-lab-empty-scene-tutorial-deep-dive-2026-08-11|Isaac Lab 空场景教程深研]] — R05/R04：空场景 smoke test 不等于 sim-to-real 成功。
 
 - [[robotics-embodied-ai/research-notes/ethercat-vs-tcp-ip-robot-control-latency-2026-08-12|EtherCAT 为什么在机器人实时控制中通常比 TCP/IP 更快]] — R04 主分类、R05 次分类：EtherCAT 的实时优势来自单帧多节点、ESC on-the-fly、固定周期、DC 和 WKC，而不是峰值带宽；TCP 的可靠有序语义适合通用数据，丢包时却会增加控制尾时延。
 
