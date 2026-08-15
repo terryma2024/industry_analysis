@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-08-11
+last_updated: 2026-08-15
 tags:
   - wiki
   - log
@@ -764,3 +764,10 @@ tags:
 - **automation | Bilibili 收藏夹候选采集未启动**
   - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-08-14|Bilibili AI Daily Run 2026-08-14]]；未创建本日 transcript 或 source card。
   - **失败边界**: OpenCLI `bilibili favorite` 返回 `BROWSER_CONNECT`，Browser Bridge extension 未连接；启用并连接 Chrome/Chromium 扩展后再执行候选命令。
+
+## [2026-08-15]
+
+- **automation | Bilibili 收藏夹候选筛选完成，无新增研究包**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-08-15|Bilibili AI Daily Run 2026-08-15]] 并更新 [[index|Knowledge Index]]。
+  - **结果**: 20 个候选中 18 个为既有记录；剩余 `BV1s43t6UEaW` 与 `BV1cvTq68E5g` 经模型审阅均非 AI/具身智能相关，未运行二阶段转录、ASR、source card 或单视频深研。
+  - **限制**: TOS 前缀 `asr-audio/2026/08/15` 可检查但为空；这是零视频被选中的正常结果，而非处理失败。

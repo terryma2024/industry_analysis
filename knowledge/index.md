@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-08-12
+last_updated: 2026-08-15
 tags:
   - wiki
   - index
@@ -210,6 +210,7 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-08-15|Bilibili AI Daily Run 2026-08-15]] — 20 个候选、18 个重复；其余两条经模型复核均无关，未进行下载、ASR 或深研。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-14|Bilibili AI Daily Run 2026-08-14]] — 收藏夹候选拉取失败：OpenCLI Browser Bridge 未连接；未处理本日视频。
 - [[_syntheses/bilibili-humanoid-investment-research-method-deep-dive-2026-08-14|人形机器人研究方法与投资验证视频深研]] — R09/R07：以订单、回款、连续运行和单位经济性替代展示与出货叙事。
 - [[_syntheses/bilibili-ethercat-robotics-control-network-deep-dive-2026-08-14|EtherCAT 机器人控制网络视频深研]] — R05/R02：按周期、互操作、安全和 TCO 选型。
