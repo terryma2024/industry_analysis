@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-08-16
+last_updated: 2026-08-17
 tags:
   - wiki
   - index
@@ -210,6 +210,7 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-08-17|Bilibili AI Daily Run 2026-08-17]] — 20 个候选、18 个重复；其余两条经模型复核均无关，未进行下载、ASR 或深研。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-16|Bilibili AI Daily Run 2026-08-16]] — 20 个候选、18 个重复；其余两条经模型复核均无关，未进行下载、ASR 或深研。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-15|Bilibili AI Daily Run 2026-08-15]] — 20 个候选、18 个重复；其余两条经模型复核均无关，未进行下载、ASR 或深研。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-14|Bilibili AI Daily Run 2026-08-14]] — 收藏夹候选拉取失败：OpenCLI Browser Bridge 未连接；未处理本日视频。
