@@ -167,6 +167,14 @@ class BilibiliAiDailyResearchTests(unittest.TestCase):
         self.assertEqual(candidates[0].bvid, "BV1agent123")
         self.assertEqual(candidates[0].author, "UP")
 
+    def test_parse_opencli_json_ignores_node_warning_before_payload(self) -> None:
+        payload = tool.parse_opencli_json(
+            "(node:45130) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental\n"
+            '[{"title":"机器人视频","url":"https://www.bilibili.com/video/BV1warning"}]\n'
+        )
+
+        self.assertEqual(payload, [{"title": "机器人视频", "url": "https://www.bilibili.com/video/BV1warning"}])
+
     def test_external_asr_falls_back_to_big_model(self) -> None:
         candidate = tool.VideoCandidate(
             title="机器人视频",

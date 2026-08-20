@@ -508,16 +508,18 @@ def parse_opencli_json(stdout: str) -> Any:
         return None
     try:
         return json.loads(text)
-    except json.JSONDecodeError:
-        start = text.find("[")
-        end = text.rfind("]")
-        if start >= 0 and end > start:
-            return json.loads(text[start : end + 1])
-        start = text.find("{")
-        end = text.rfind("}")
-        if start >= 0 and end > start:
-            return json.loads(text[start : end + 1])
-        raise
+    except json.JSONDecodeError as exc:
+        last_error = exc
+
+    decoder = json.JSONDecoder()
+    for match in re.finditer(r"[\[{]", text):
+        try:
+            payload, _ = decoder.raw_decode(text, match.start())
+            return payload
+        except json.JSONDecodeError as exc:
+            last_error = exc
+
+    raise last_error
 
 
 def flatten_command_entries(payload: Any) -> list[dict[str, Any]]:
