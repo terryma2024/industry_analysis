@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-08-21
+last_updated: 2026-08-23
 tags:
   - wiki
   - log
@@ -820,3 +820,10 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-08-22|Bilibili AI Daily Run 2026-08-22]] 并更新 [[index|Knowledge Index]]。
   - **结果**: 20 个候选中 18 个为既有记录；剩余 `BV1s43t6UEaW` 与 `BV1cvTq68E5g` 经模型审阅均非 AI/具身智能相关，未运行二阶段转录、ASR、source card 或单视频深研。
   - **限制**: TOS 前缀 `asr-audio/2026/08/22` 可检查但为空；这是零视频被选中的正常结果，而非处理失败。
+
+## [2026-08-23]
+
+- **automation | Bilibili 收藏夹候选筛选完成，无新增研究包**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-08-23|Bilibili AI Daily Run 2026-08-23]] 并更新 [[index|Knowledge Index]]。
+  - **结果**: 20 个候选中 18 个为既有记录；剩余 `BV1s43t6UEaW` 与 `BV1cvTq68E5g` 经模型审阅均非 AI/具身智能相关，未运行二阶段转录、ASR、source card 或单视频深研。
+  - **限制**: TOS 前缀 `asr-audio/2026/08/23` 可检查但为空；这是零视频被选中的正常结果，而非处理失败。
