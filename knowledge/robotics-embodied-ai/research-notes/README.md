@@ -7,13 +7,17 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-08-12
+last_updated: 2026-08-26
 ---
 
 # 机器人（具身智能） - 研究中间笔记
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
+
+## 2026-08-26 可靠性、模型规模与按结果付费
+
+- [[embodied-ai-reliability-scaling-and-outcome-pricing-2026-08-26]]: 按 R07 主分类、R04/R03 次分类，把原子技能可靠性、陌生分布覆盖、长程任务 SLA、模型 scaling 与结果计价放在同一商业化框架中；`99%`、两个 `80%`、`7B`、万卡和毛利数字均保留证据边界，并给出按任务/合格件计费的验收与创业切口。
 
 ## 2026-08-12 EtherCAT 与 TCP/IP 机器人控制时延
 

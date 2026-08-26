@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-08-24
+last_updated: 2026-08-26
 tags:
   - wiki
   - index
@@ -14,7 +14,6 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
-
 - [[_sources/bilibili-bv1dxg36sen1-2026-8|人形机器人研究方法及心得 2026.8]] — 已综合为 [[_syntheses/bilibili-humanoid-investment-research-method-deep-dive-2026-08-14|人形机器人研究方法与投资验证深研]]；视频数字维持 B 级待验证。
 - [[_sources/bilibili-bv1ucjj62eq4-ethercat|EtherCAT通讯原理讲解]] — 已综合为 [[_syntheses/bilibili-ethercat-robotics-control-network-deep-dive-2026-08-14|EtherCAT 机器人控制网络深研]]；协议机制经 ETG 资料核验。
 - [[_sources/bilibili-bv1hnu26zebe-talk-144-vla-harness-vla|Harness VLA 记忆增强执行框架]] — 已综合为 [[_syntheses/bilibili-harness-vla-deep-dive-2026-08-14|Harness VLA 视频深研]]；真机商业化边界待 PoC。
@@ -27,6 +26,7 @@ tags:
 - [[_sources/bilibili-bv14fmk6qecv-arxiv-2026-turbovla-1-gb-rtx-4090-32-hz|TurboVLA 实时 VLA]] — 已综合为 [[_syntheses/bilibili-turbovla-real-time-vla-deep-dive-2026-08-11|TurboVLA 深研]]。
 - [[_sources/bilibili-bv1iynr68emq-bilibili-video|光模块工位机器人与人类数据路线]] — 已综合为 [[_syntheses/bilibili-optical-module-robotic-workcell-commercial-validation-deep-dive-2026-08-11|光模块工位机器人深研]]。
 - [[_sources/bilibili-bv1r3yiz4e2s-b-2025-isaac-lab-nvidia-isaac-lab|Isaac Lab 教程]] — 已综合为 [[_syntheses/bilibili-isaac-lab-empty-scene-tutorial-deep-dive-2026-08-11|Isaac Lab 空场景教程深研]]。
+- [[_sources/wechat-wrc-embodied-ai-reliability-scaling-token-business|WRC 可靠性、模型规模与物理 Token 微信文章来源卡]] — C 级从业者评论，补充两项 B 级演讲/访谈整理；已编译为 [[robotics-embodied-ai/research-notes/embodied-ai-reliability-scaling-and-outcome-pricing-2026-08-26|具身智能可靠性、模型规模与按结果付费的商业化门槛]]，`99%`、两个 `80%`、`7B`、万卡和毛利数字均保留证据边界。
 
 - [[_sources/wechat-embodied-data-processing-roadmap|具身数据 RoadMap 微信文章来源卡]] — C 级从业者文章的问题地图；已把动作表征、时间对齐、质量门、标注、训练配比和部署回流编译为 [[robotics-embodied-ai/research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11|具身智能模型数据处理闭环]]，毛利、单价、`50 ms` 与周期数字保持待验证。
 
@@ -209,7 +209,6 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
-
 - [[_syntheses/bilibili-ai-daily-run-2026-08-26|Bilibili AI Daily Run 2026-08-26]] — 20 个候选、18 个重复；其余两条经模型复核均无关，未进行下载、ASR 或深研。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-24|Bilibili AI Daily Run 2026-08-24]] — 20 个候选、18 个重复；其余两条经模型复核均无关，未进行下载、ASR 或深研。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-23|Bilibili AI Daily Run 2026-08-23]] — 20 个候选、18 个重复；其余两条经模型复核均无关，未进行下载、ASR 或深研。
@@ -237,6 +236,7 @@ tags:
 - [[_syntheses/bilibili-turbovla-real-time-vla-deep-dive-2026-08-11|TurboVLA 深研]] — R04/R05：模型推理延迟不等于端到端闭环延迟。
 - [[_syntheses/bilibili-optical-module-robotic-workcell-commercial-validation-deep-dive-2026-08-11|光模块工位机器人与人类数据路线深研]] — R07/R04/R02：以工位 ROI、连续运行与订单核验。
 - [[_syntheses/bilibili-isaac-lab-empty-scene-tutorial-deep-dive-2026-08-11|Isaac Lab 空场景教程深研]] — R05/R04：空场景 smoke test 不等于 sim-to-real 成功。
+- [[robotics-embodied-ai/research-notes/embodied-ai-reliability-scaling-and-outcome-pricing-2026-08-26|具身智能可靠性、模型规模与按结果付费的商业化门槛]] — R07 主分类、R04/R03 次分类：商业化应联合验收原子技能、长程任务、陌生分布与生产运营；模型规模是变量而非里程碑，“物理 Token”只有映射到可审计结果、责任和正单位经济性时才成立。
 
 - [[robotics-embodied-ai/research-notes/ethercat-vs-tcp-ip-robot-control-latency-2026-08-12|EtherCAT 为什么在机器人实时控制中通常比 TCP/IP 更快]] — R04 主分类、R05 次分类：EtherCAT 的实时优势来自单帧多节点、ESC on-the-fly、固定周期、DC 和 WKC，而不是峰值带宽；TCP 的可靠有序语义适合通用数据，丢包时却会增加控制尾时延。
 

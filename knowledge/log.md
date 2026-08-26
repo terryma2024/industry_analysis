@@ -841,3 +841,9 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-08-26|Bilibili AI Daily Run 2026-08-26]] 并更新 [[index|Knowledge Index]]。
   - **结果**: 20 个候选中 18 个为既有记录；`BV1s43t6UEaW` 与 `BV1cvTq68E5g` 经模型审阅均非 AI/具身智能相关，未运行二阶段转录、ASR、source card 或单视频深研。
   - **限制**: TOS 前缀 `asr-audio/2026/08/26` 可检查但为空；这是零视频被选中的正常结果，而非处理失败。
+
+- **ingest | WRC 具身大脑可靠性、模型规模与按结果付费文章入库**
+  - **变更**: 登记并捕获 `SRC-robotics-534`–`536`，新增 [[_sources/wechat-wrc-embodied-ai-reliability-scaling-token-business|文章来源卡]]和[[robotics-embodied-ai/research-notes/embodied-ai-reliability-scaling-and-outcome-pricing-2026-08-26|商业化门槛调研]]，更新来源 MOC、行业/来源/研究笔记/全局索引。
+  - **来源**: 微信文章作为 C 级问题地图；雷峰网 WRC 演讲整理和量子位/AITNT 访谈作为 B 级归因证据；π0、OpenVLA 与政策原文用于限制模型规模、真实场景验收和按效用付费边界。
+  - **结论**: 原子技能可靠性、长程任务、陌生分布和生产运营必须分层验收；`7B`/万卡不是已验证的能力门槛；“物理 Token”近期应还原为按任务、合格件或可用小时计费，并同时验证 SLA、责任、复购和单位经济性。
+  - **限制**: 原文发布日期未可靠返回；公司成功率、训练规模、毛利和客户部署缺少原始演讲、trial protocol、审计财务和客户侧验收，均未升级为事实。

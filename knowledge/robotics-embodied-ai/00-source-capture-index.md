@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-08-12
+last_updated: 2026-08-26
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -16,6 +16,17 @@ aliases:
 
 > [!summary]
 > 本页是 [[00-index|机器人（具身智能）]] 的来源抽取 MOC。来源编号仍以 [[sources.csv]] 为准；原文/清洗件保存在 `raw/robotics-embodied-ai/documents/`，抽取状态见 [source_capture_manifest.csv](../../raw/robotics-embodied-ai/documents/source_capture_manifest.csv)。
+
+## 2026-08-26 WRC 具身大脑可靠性、规模与商业模式来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-534`](../../raw/robotics-embodied-ai/documents/SRC-robotics-534-wrc.md) | 微信文章 Defuddle 全文 | 提取可靠性、模型 scaling 与“物理 Token”问题框架；C 级二次转述，发布日期和关键数字待验证。 |
+| [`SRC-robotics-535`](../../raw/robotics-embodied-ai/documents/SRC-robotics-535-token-wrc-2026.md) | 雷峰网 WRC 演讲整理 | 支持星海图商业路径的公开归因；B 级媒体编辑稿，不验证毛利、成功率或单位经济性。 |
+| [`SRC-robotics-536`](../../raw/robotics-embodied-ai/documents/SRC-robotics-536-waic-ceo-99.md) | 量子位/AITNT 访谈 | 支持苏度把 `99%+` 视为部署前提的公开归因；B 级，缺 trial protocol 与客户验收。 |
+
+- 来源卡：[[_sources/wechat-wrc-embodied-ai-reliability-scaling-token-business|WRC 可靠性、模型规模与物理 Token 微信文章来源卡]]。
+- 下游编译：[[research-notes/embodied-ai-reliability-scaling-and-outcome-pricing-2026-08-26|具身智能可靠性、模型规模与按结果付费的商业化门槛]]。
 
 ## 2026-08-12 EtherCAT 与 TCP/IP 实时控制对照来源
 
@@ -64,7 +75,7 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 116 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 288 | 已成功抽取的 raw artifact。 |
+| `ok` | 291 | 已成功抽取的 raw artifact。 |
 | `fallback_html` | 17 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 10 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据、GitHub API 或固定提交文本生成 Markdown。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
