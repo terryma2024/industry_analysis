@@ -209,6 +209,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/bilibili-ai-daily-run-2026-08-27|Bilibili AI Daily Run 2026-08-27]] — 收藏夹候选拉取失败：OpenCLI Browser Bridge 未连接；未产生候选、下载、ASR 或单视频深研。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-26|Bilibili AI Daily Run 2026-08-26]] — 20 个候选、18 个重复；其余两条经模型复核均无关，未进行下载、ASR 或深研。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-24|Bilibili AI Daily Run 2026-08-24]] — 20 个候选、18 个重复；其余两条经模型复核均无关，未进行下载、ASR 或深研。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-23|Bilibili AI Daily Run 2026-08-23]] — 20 个候选、18 个重复；其余两条经模型复核均无关，未进行下载、ASR 或深研。
