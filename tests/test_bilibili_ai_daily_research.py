@@ -175,6 +175,43 @@ class BilibiliAiDailyResearchTests(unittest.TestCase):
 
         self.assertEqual(payload, [{"title": "机器人视频", "url": "https://www.bilibili.com/video/BV1warning"}])
 
+    def test_opencli_discovery_only_invokes_favorite_command(self) -> None:
+        """A non-favorite Bilibili command must never be used as a candidate source."""
+        registry = json.dumps(
+            [
+                {
+                    "site": "bilibili",
+                    "name": "favorite",
+                    "description": "我的收藏夹视频",
+                },
+                {
+                    "site": "bilibili",
+                    "name": "comments",
+                    "description": "收藏视频的评论",
+                },
+            ]
+        )
+        calls: list[list[str]] = []
+
+        def fake_run_command(args, cwd=tool.REPO_ROOT, timeout=180):
+            calls.append(args)
+            if args[:3] == ["opencli", "list", "-f"]:
+                return tool.subprocess.CompletedProcess(args, 0, registry, "")
+            if args[-1] == "--help":
+                return tool.subprocess.CompletedProcess(args, 0, "--limit", "")
+            return tool.subprocess.CompletedProcess(args, 0, "[]", "")
+
+        with mock.patch.dict(os.environ, {}, clear=True):
+            with mock.patch.object(tool.shutil, "which", return_value="opencli"):
+                with mock.patch.object(tool, "run_command", side_effect=fake_run_command):
+                    candidates, errors = tool.fetch_candidates_with_opencli(limit=20)
+
+        self.assertIn(["opencli", "bilibili", "favorite", "-f", "json", "--limit", "20"], calls)
+        adapter_calls = [call for call in calls if call[:2] == ["opencli", "bilibili"] and call[-1] != "--help"]
+        self.assertEqual(candidates, [])
+        self.assertEqual(adapter_calls, [["opencli", "bilibili", "favorite", "-f", "json", "--limit", "20"]])
+        self.assertIn("bilibili favorite returned no video-like items", errors)
+
     def test_external_asr_falls_back_to_big_model(self) -> None:
         candidate = tool.VideoCandidate(
             title="机器人视频",

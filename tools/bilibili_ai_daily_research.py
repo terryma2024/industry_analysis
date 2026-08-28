@@ -564,6 +564,9 @@ def fetch_candidates_with_opencli(limit: int) -> tuple[list[VideoCandidate], lis
         haystack = " ".join(str(entry.get(key, "")) for key in ("site", "name", "aliases", "description")).lower()
         if not any(token in haystack for token in ("bilibili", "bili", "哔哩", "b站")):
             continue
+        command_name = str(entry.get("name") or "").strip().lower()
+        if not any(token in command_name for token in ("favorite", "favorites", "fav", "collection", "folder", "收藏")):
+            continue
         score = 0
         for token in ("favorite", "favorites", "fav", "collection", "folder", "收藏", "默认收藏夹"):
             if token in haystack:
