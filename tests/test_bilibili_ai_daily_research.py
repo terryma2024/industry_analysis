@@ -212,6 +212,36 @@ class BilibiliAiDailyResearchTests(unittest.TestCase):
         self.assertEqual(adapter_calls, [["opencli", "bilibili", "favorite", "-f", "json", "--limit", "20"]])
         self.assertIn("bilibili favorite returned no video-like items", errors)
 
+    def test_opencli_favorite_retries_transient_navigation_failure(self) -> None:
+        """A one-off Browser Bridge rejection must not erase the daily candidate pool."""
+        registry = json.dumps(
+            [{"site": "bilibili", "name": "favorite", "description": "我的收藏夹视频"}]
+        )
+        favorite_attempts = 0
+
+        def fake_run_command(args, cwd=tool.REPO_ROOT, timeout=180):
+            nonlocal favorite_attempts
+            if args[:3] == ["opencli", "list", "-f"]:
+                return tool.subprocess.CompletedProcess(args, 0, registry, "")
+            if args[-1] == "--help":
+                return tool.subprocess.CompletedProcess(args, 0, "--limit", "")
+            favorite_attempts += 1
+            if favorite_attempts == 1:
+                return tool.subprocess.CompletedProcess(args, 1, "", "Navigation rejected")
+            payload = json.dumps(
+                [{"title": "机器人视频", "url": "https://www.bilibili.com/video/BV1retry123"}]
+            )
+            return tool.subprocess.CompletedProcess(args, 0, payload, "")
+
+        with mock.patch.dict(os.environ, {}, clear=True):
+            with mock.patch.object(tool.shutil, "which", return_value="opencli"):
+                with mock.patch.object(tool, "run_command", side_effect=fake_run_command):
+                    candidates, errors = tool.fetch_candidates_with_opencli(limit=20)
+
+        self.assertEqual(favorite_attempts, 2)
+        self.assertEqual([candidate.bvid for candidate in candidates], ["BV1retry123"])
+        self.assertEqual(errors, [])
+
     def test_external_asr_falls_back_to_big_model(self) -> None:
         candidate = tool.VideoCandidate(
             title="机器人视频",

@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-08-29
+last_updated: 2026-08-30
 tags:
   - wiki
   - log
@@ -12,6 +12,14 @@ tags:
 # Wiki Log
 
 本文件为按日期归并的 append-only 操作日志。每个日期只使用一个 `## [YYYY-MM-DD]`，当天的变更使用 `- **action | summary**` 紧凑追加在该日期下；便于按日期检索，同时避免重复日期标题。
+
+## [2026-08-30]
+
+- **automation | Bilibili 收藏夹筛选完成并修复瞬时抓取失败**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-08-30|Bilibili AI Daily Run 2026-08-30]]；更新 [[index|Knowledge Index]]、`tools/bilibili_ai_daily_research.py` 与其回归测试。
+  - **结果**: 20 个候选中 18 个为已有 source packet/研究资产；`BV1s43t6UEaW` 与 `BV1cvTq68E5g` 经模型复核均非 AI/具身智能相关，模型选中 0，未运行二阶段，也未创建 transcript、ASR、source card、`sources.csv` 或单视频深研。
+  - **修复与验证**: Browser Bridge 的首次 `Navigation rejected` 可由同一只读请求重试恢复；收藏夹抓取增加一次有界重试，`uv run python -m unittest tests.test_bilibili_ai_daily_research` 通过（19 tests）。
+  - **限制**: TOS 前缀 `asr-audio/2026/08/30` 为空，符合零视频选中的预期；不存在待重试视频。
 
 ## [2026-08-29]
 

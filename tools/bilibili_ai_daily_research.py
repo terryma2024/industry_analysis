@@ -588,7 +588,11 @@ def fetch_candidates_with_opencli(limit: int) -> tuple[list[VideoCandidate], lis
             args.extend(["--limit", str(limit)])
         proc = run_command(args, timeout=240)
         if proc.returncode != 0:
-            errors.append(f"{site} {name} failed: {proc.stderr.strip() or proc.stdout.strip()}")
+            # Browser Bridge navigation can fail transiently even when the daemon
+            # and extension are healthy; retry the read-only favorite request once.
+            proc = run_command(args, timeout=240)
+        if proc.returncode != 0:
+            errors.append(f"{site} {name} failed after 2 attempts: {proc.stderr.strip() or proc.stdout.strip()}")
             continue
         try:
             payload = parse_opencli_json(proc.stdout)
