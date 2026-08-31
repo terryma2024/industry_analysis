@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-08-30
+last_updated: 2026-08-31
 tags:
   - wiki
   - log
@@ -12,6 +12,13 @@ tags:
 # Wiki Log
 
 本文件为按日期归并的 append-only 操作日志。每个日期只使用一个 `## [YYYY-MM-DD]`，当天的变更使用 `- **action | summary**` 紧凑追加在该日期下；便于按日期检索，同时避免重复日期标题。
+
+## [2026-08-31]
+
+- **automation | Bilibili 收藏夹候选读取失败，未生成研究包**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-08-31|Bilibili AI Daily Run 2026-08-31]]；更新 [[index|Knowledge Index]]。
+  - **结果**: `opencli doctor` 显示 daemon 正常但 Browser Bridge extension 未连接；规范第一阶段及一次直接 `bilibili favorite` 读取均未产生可解析候选，故候选、重复跳过、模型选中、processed 均为 0。
+  - **限制**: 未运行第二阶段、TOS/ASR、source card、`sources.csv` 或单视频深研；在 Chrome/Chromium 恢复 OpenCLI Browser Bridge 连接后从第一阶段重跑。
 
 ## [2026-08-30]
 
