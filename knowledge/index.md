@@ -210,6 +210,7 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-09-01|Bilibili AI Daily Run 2026-09-01]] — 收藏夹候选读取被未连接的 OpenCLI Browser Bridge 阻断；未生成候选、转录或深研，待浏览器桥接恢复后重跑。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-31|Bilibili AI Daily Run 2026-08-31]] — 收藏夹候选读取被未连接的 OpenCLI Browser Bridge 阻断；未生成候选、转录或深研，待浏览器桥接恢复后重跑。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-30|Bilibili AI Daily Run 2026-08-30]] — 20 个候选中 18 个重复；两条经模型复核均无关，未产生下载、ASR 或单视频深研；新增收藏夹读取的有界重试。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-29|Bilibili AI Daily Run 2026-08-29]] — 收藏夹恢复读取：20 个候选中 18 个重复，其余两条经模型复核无关；未产生下载、ASR 或单视频深研。
