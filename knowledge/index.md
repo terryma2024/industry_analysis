@@ -14,6 +14,12 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/bilibili-bv1s43t6ueaw-70|70分钟完整版！质疑苏度，理解苏度，成为苏度]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
+- [[_sources/bilibili-bv1yk8x6jedp-s10e26|宇树上市震荡，机器人商业化还需要更大的想象力｜S10E26]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+
+- [[_sources/bilibili-bv1r2th6tesk-microduck|Microduck硬件架构拆解]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 - [[_sources/bilibili-bv1dxg36sen1-2026-8|人形机器人研究方法及心得 2026.8]] — 已综合为 [[_syntheses/bilibili-humanoid-investment-research-method-deep-dive-2026-08-14|人形机器人研究方法与投资验证深研]]；视频数字维持 B 级待验证。
 - [[_sources/bilibili-bv1ucjj62eq4-ethercat|EtherCAT通讯原理讲解]] — 已综合为 [[_syntheses/bilibili-ethercat-robotics-control-network-deep-dive-2026-08-14|EtherCAT 机器人控制网络深研]]；协议机制经 ETG 资料核验。
 - [[_sources/bilibili-bv1hnu26zebe-talk-144-vla-harness-vla|Harness VLA 记忆增强执行框架]] — 已综合为 [[_syntheses/bilibili-harness-vla-deep-dive-2026-08-14|Harness VLA 视频深研]]；真机商业化边界待 PoC。
@@ -210,6 +216,10 @@ tags:
 
 ## Syntheses
 
+- [[_syntheses/bilibili-ai-daily-run-2026-09-02|Bilibili AI Daily Run 2026-09-02]] — 20 个收藏夹候选中 17 个重复，模型选择并成功转录 3 个 AI/具身智能视频。
+- [[_syntheses/bilibili-microduck-hardware-architecture-deep-dive-2026-09-02|Microduck 低成本双足机器人硬件架构视频深度调研]] — R05/R04：以官方软件架构界定轻量本体、50 Hz 策略和可验证 PoC 边界。
+- [[_syntheses/bilibili-unitree-commercialization-and-valuation-deep-dive-2026-09-02|宇树上市与机器人商业化视频深度调研]] — R03/R07/R09：将上市事实、存量业务与人形期权分开审视。
+- [[_syntheses/bilibili-sudo-technology-full-stack-embodied-ai-deep-dive-2026-09-02|苏度科技软硬一体具身智能路线视频深度调研]] — R03/R04/R07：仿真/真机数据和全栈交付的商业验证框架。
 - [[_syntheses/bilibili-ai-daily-run-2026-09-01|Bilibili AI Daily Run 2026-09-01]] — 收藏夹候选读取被未连接的 OpenCLI Browser Bridge 阻断；未生成候选、转录或深研，待浏览器桥接恢复后重跑。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-31|Bilibili AI Daily Run 2026-08-31]] — 收藏夹候选读取被未连接的 OpenCLI Browser Bridge 阻断；未生成候选、转录或深研，待浏览器桥接恢复后重跑。
 - [[_syntheses/bilibili-ai-daily-run-2026-08-30|Bilibili AI Daily Run 2026-08-30]] — 20 个候选中 18 个重复；两条经模型复核均无关，未产生下载、ASR 或单视频深研；新增收藏夹读取的有界重试。

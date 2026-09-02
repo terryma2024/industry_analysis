@@ -891,3 +891,14 @@ tags:
   - **来源**: 微信文章作为 C 级问题地图；雷峰网 WRC 演讲整理和量子位/AITNT 访谈作为 B 级归因证据；π0、OpenVLA 与政策原文用于限制模型规模、真实场景验收和按效用付费边界。
   - **结论**: 原子技能可靠性、长程任务、陌生分布和生产运营必须分层验收；`7B`/万卡不是已验证的能力门槛；“物理 Token”近期应还原为按任务、合格件或可用小时计费，并同时验证 SLA、责任、复购和单位经济性。
   - **限制**: 原文发布日期未可靠返回；公司成功率、训练规模、毛利和客户部署缺少原始演讲、trial protocol、审计财务和客户侧验收，均未升级为事实。
+
+## [2026-09-02]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-09-02|Bilibili AI Daily Run 2026-09-02]]；处理 3 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+- **research | 完成 3 篇 Bilibili 单视频深度调研**
+  - **变更**: 新增 [[_syntheses/bilibili-microduck-hardware-architecture-deep-dive-2026-09-02|Microduck 架构]]、[[_syntheses/bilibili-unitree-commercialization-and-valuation-deep-dive-2026-09-02|宇树商业化]]、[[_syntheses/bilibili-sudo-technology-full-stack-embodied-ai-deep-dive-2026-09-02|苏度全栈路线]]，并更新 [[index|Knowledge Index]]。
+  - **结论**: Microduck 的公开证据支持轻量控制架构而非量产/成本主张；宇树的上市事实与人形商业化期权应分开看；苏度的仿真+真机全栈路线需以多客户回款和可靠性验证。
+  - **限制**: Bilibili 仅为 B 级线索；价格、订单、估值、融资与成功率均未提升为事实。
