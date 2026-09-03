@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-08-26
+last_updated: 2026-09-02
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -27,6 +27,17 @@ aliases:
 
 - 来源卡：[[_sources/wechat-wrc-embodied-ai-reliability-scaling-token-business|WRC 可靠性、模型规模与物理 Token 微信文章来源卡]]。
 - 下游编译：[[research-notes/embodied-ai-reliability-scaling-and-outcome-pricing-2026-08-26|具身智能可靠性、模型规模与按结果付费的商业化门槛]]。
+
+## 2026-09-02 宇树上市供应链公司来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| `SRC-robotics-541`–`544` | [新洁能年报](../../raw/robotics-embodied-ai/documents/SRC-robotics-541-2025.pdf)、[蔚蓝锂芯业绩会](../../raw/robotics-embodied-ai/documents/SRC-robotics-542-2024.pdf)、[创世纪调研记录](../../raw/robotics-embodied-ai/documents/SRC-robotics-543-2025-3-2.pdf)、[丰立智能发行预案](../../raw/robotics-embodied-ai/documents/SRC-robotics-544-2025-a.pdf) | 核验批量、持续供货、重要供应商和验证/小批量阶段；PDF 已保存，自动抽取因代理依赖失败，正文由本地 `pdftotext` 复核。 |
+| `SRC-robotics-545` | [长盛轴承互动易归档](../../raw/robotics-embodied-ai/documents/SRC-robotics-545-source.md) | 核验合作产品为自润滑轴承；动态页面只形成 fallback HTML/Markdown。 |
+| `SRC-robotics-546`–`550` | [统一行情底表](../../raw/robotics-embodied-ai/data/unitree-public-supply-chain-market-snapshot-2026-08-31.csv) | 2026-08-31 收盘价、市值、近一个月和上市日表现；B 级聚合行情，部分动态页未形成完整 raw 正文，交易前需用券商终端复核。 |
+
+- 来源卡：[[_sources/unitree-listed-supply-chain-source-set|宇树科技上市供应链公司来源集]]。
+- 下游编译：[[research-notes/unitree-listed-supply-chain-public-companies-2026-09-02|宇树科技上市供应链 A 股公司调研]]。
 
 ## 2026-08-12 EtherCAT 与 TCP/IP 实时控制对照来源
 
@@ -75,11 +86,11 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 116 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 291 | 已成功抽取的 raw artifact。 |
-| `fallback_html` | 17 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
-| `manual_parse` | 10 | defuddle 或静态网页不能承载审计信息时，由网页内嵌结构化数据、GitHub API 或固定提交文本生成 Markdown。 |
+| `ok` | 292 | 已成功抽取的 raw artifact。 |
+| `fallback_html` | 18 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
+| `manual_parse` | 14 | defuddle、静态网页或自动 PDF 抽取不能承载审计信息时，由本地 PDF 文本、网页内嵌结构化数据、GitHub API 或固定提交文本复核。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
-| `failed` | 16 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
+| `failed` | 20 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |
 
 ## 2026-08-06 Unreal Engine 机器人与具身智能来源
 

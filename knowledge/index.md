@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-08-31
+last_updated: 2026-09-02
 tags:
   - wiki
   - index
@@ -14,6 +14,8 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/unitree-listed-supply-chain-source-set|宇树科技上市供应链公司来源集]] — 汇总宇树招股书、5 家上市公司一级供应关系证据和 2026-08-31 统一行情快照；明确上市供应商不等于前五大供应商，且五家公司均未披露宇树收入占比。
 
 - [[_sources/bilibili-bv1s43t6ueaw-70|70分钟完整版！质疑苏度，理解苏度，成为苏度]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 
@@ -215,6 +217,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[robotics-embodied-ai/research-notes/unitree-listed-supply-chain-public-companies-2026-09-02|宇树科技上市供应链 A 股公司调研]] — R09 主分类、R02/R03 次分类：确认蔚蓝锂芯、新洁能、创世纪、丰立智能、长盛轴承 5 家直接关系，比较 2026-08-31 股价/市值、近一个月与上市日走势，并指出宇树收入、份额和毛利均未披露。
 
 - [[_syntheses/bilibili-ai-daily-run-2026-09-02|Bilibili AI Daily Run 2026-09-02]] — 20 个收藏夹候选中 17 个重复，模型选择并成功转录 3 个 AI/具身智能视频。
 - [[_syntheses/bilibili-microduck-hardware-architecture-deep-dive-2026-09-02|Microduck 低成本双足机器人硬件架构视频深度调研]] — R05/R04：以官方软件架构界定轻量本体、50 Hz 策略和可验证 PoC 边界。

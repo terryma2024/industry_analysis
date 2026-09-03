@@ -1,0 +1,6 @@
+company,ticker,market,supply_chain_role,relationship_status,relationship_evidence_grade,close_2026_08_03_cny,close_2026_08_31_cny,one_month_return_pct,market_cap_2026_08_31_cny_100m,listing_day_2026_08_19_return_pct,market_data_source_id,relationship_source_id,notes
+蔚蓝锂芯,002245,SZSE,圆柱锂电池/电芯,重要锂电池供应商,S,15.78,17.57,11.34,300.48,-4.59,SRC-robotics-546,SRC-robotics-542,宇树特定客户收入未披露
+新洁能,605111,SSE,功率MOSFET/关节电机驱动与BMS,多款机型批量供货,S,45.83,59.19,29.15,245.84,-5.12,SRC-robotics-547,SRC-robotics-541,宇树特定客户收入未披露
+创世纪,300083,SZSE,数控机床/生产设备,自2022年持续供货,S,10.68,13.76,28.84,233.99,-8.94,SRC-robotics-548,SRC-robotics-543,具体供货产品与宇树收入占比未披露
+丰立智能,301368,SZSE,精密减速器,验证导入或小批量供货,S,41.60,39.07,-6.08,55.15,-10.02,SRC-robotics-549,SRC-robotics-544,公告合并描述宇树等多家客户因此不能视为宇树已量产
+长盛轴承,300718,SZSE,自润滑轴承,已合作;机器人零部件整体有小批量销售,S,64.96,56.42,-13.15,168.57,-16.06,SRC-robotics-550,SRC-robotics-545,公司机器人零部件整体收入占比不足1%;宇树特定量未披露

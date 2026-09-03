@@ -902,3 +902,8 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-microduck-hardware-architecture-deep-dive-2026-09-02|Microduck 架构]]、[[_syntheses/bilibili-unitree-commercialization-and-valuation-deep-dive-2026-09-02|宇树商业化]]、[[_syntheses/bilibili-sudo-technology-full-stack-embodied-ai-deep-dive-2026-09-02|苏度全栈路线]]，并更新 [[index|Knowledge Index]]。
   - **结论**: Microduck 的公开证据支持轻量控制架构而非量产/成本主张；宇树的上市事实与人形商业化期权应分开看；苏度的仿真+真机全栈路线需以多客户回款和可靠性验证。
   - **限制**: Bilibili 仅为 B 级线索；价格、订单、估值、融资与成功率均未提升为事实。
+- **research | 宇树科技上市供应链 A 股公司核验**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/unitree-listed-supply-chain-public-companies-2026-09-02|宇树科技上市供应链 A 股公司调研]]、[[_sources/unitree-listed-supply-chain-source-set|来源集]]和统一行情 CSV；登记 `SRC-robotics-541`–`550`，更新行业、来源、研究笔记与全局索引。
+  - **结论**: 直接证据支持蔚蓝锂芯、新洁能、创世纪、丰立智能、长盛轴承 5 家核心名单；宇树招股书前五大供应商多数匿名或非上市，上市供应链股不等于最大供应商。5 家在宇树上市日全部下跌，近一个月表现分化。
+  - **来源**: 上交所/巨潮披露与互动易为 S 级关系证据；2026-08-31 行情快照为 B 级聚合数据。
+  - **限制**: 五家公司均未披露宇树收入、毛利、份额或订单占比；动态行情页部分 raw 抽取失败，真实交易前需券商终端复核。
