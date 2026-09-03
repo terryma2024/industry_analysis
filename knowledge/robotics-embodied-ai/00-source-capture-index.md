@@ -17,6 +17,22 @@ aliases:
 > [!summary]
 > 本页是 [[00-index|机器人（具身智能）]] 的来源抽取 MOC。来源编号仍以 [[sources.csv]] 为准；原文/清洗件保存在 `raw/robotics-embodied-ai/documents/`，抽取状态见 [source_capture_manifest.csv](../../raw/robotics-embodied-ai/documents/source_capture_manifest.csv)。
 
+## 2026-09-02 Microduck DIY 复刻与官方校验来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-558`](../../raw/robotics-embodied-ai/documents/SRC-robotics-558-microduck.md) | 微信文章 Defuddle 全文 | 提取 BOM、结构、供电、软件、工期和风险问题地图；C 级，关节、价格、工期和开源范围不可直接采用。 |
+| [`SRC-robotics-559`](../../raw/robotics-embodied-ai/documents/SRC-robotics-559-microduck-official-press-kit.md) | Pollen Robotics press kit | 核验预售、基础规格、交付目标及“只开源软件”的边界；部分规格仍明确为 provisional。 |
+| [`SRC-robotics-560`](../../raw/robotics-embodied-ai/documents/SRC-robotics-560-microduck-runtime-official-repository-at-commit-2c61dcc.md) | runtime 固定提交 README | 核验 Rust runtime、RK3566、50 Hz 和 15 舵机；本轮另审阅同提交关节表、控制配置与硬件 roadmap，未做实机运行。 |
+| [`SRC-robotics-561`](../../raw/robotics-embodied-ai/documents/SRC-robotics-561-microduck-rl-official-repository-at-commit-badc4e7.md) | RL 固定提交 README | 核验 MuJoCo/mjlab、PPO、ONNX、CUDA、14 策略关节、XL330 模型及分层许可；作者结果未独立复现。 |
+| [`SRC-robotics-562`](../../raw/robotics-embodied-ai/documents/SRC-robotics-562-dynamixel-xl330-m288-t-e-manual.md) | XL330 官方 e-Manual | 核验电压、扭矩、速度、电流及“堵转扭矩不等于连续输出”的边界。 |
+| [`SRC-robotics-563`](../../raw/robotics-embodied-ai/documents/SRC-robotics-563-dynamixel-xl-series-official-price-page.md) | ROBOTIS US 价格页 fallback HTML | 2026-09-02 零售价快照；HTML 保留 USD 27.49 单价，价格与中国渠道需刷新。 |
+| [`SRC-robotics-564`](../../raw/robotics-embodied-ai/documents/SRC-robotics-564-radxa-zero-3w-official-product-page.md) | Radxa ZERO 3W 官方页 | 核验 RK3566、内存/存储系列、无线与 MIPI CSI；Microduck 的最终板级配置另验。 |
+
+- 来源卡：[[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]]。
+- 实体：[[Microduck]]。
+- 下游编译：[[research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck DIY 复刻可行性与教学平台选型]]。
+
 ## 2026-08-26 WRC 具身大脑可靠性、规模与商业模式来源
 
 | SRC | raw artifact | 用途与边界 |
@@ -86,8 +102,8 @@ aliases:
 | 状态 | 数量 | 含义 |
 |---|---:|---|
 | `exists` | 116 | 既有 Markdown/PDF raw artifact。 |
-| `ok` | 292 | 已成功抽取的 raw artifact。 |
-| `fallback_html` | 18 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
+| `ok` | 298 | 已成功抽取的 raw artifact。 |
+| `fallback_html` | 19 | 正文抽取失败但已保存 HTML 或 raw sidecar。 |
 | `manual_parse` | 14 | defuddle、静态网页或自动 PDF 抽取不能承载审计信息时，由本地 PDF 文本、网页内嵌结构化数据、GitHub API 或固定提交文本复核。 |
 | `manual_capture` | 1 | 手工 curl 保存 HTML，未生成清洗 Markdown。 |
 | `failed` | 20 | defuddle 与 HTML fallback 都失败，或正文质量经复核不可用，需要浏览器、官方 PDF 或手工补采。 |

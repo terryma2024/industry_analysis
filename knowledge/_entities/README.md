@@ -2,7 +2,7 @@
 title: Entities Layer
 type: index
 date_created: 2026-05-29
-last_updated: 2026-08-06
+last_updated: 2026-09-02
 tags:
   - wiki
   - entities
@@ -24,6 +24,7 @@ tags:
 - [[SRTSoftRobotTech|SRT 软体机器人]]
 - [[MATRiXSimulator|MATRiX Simulator]]
 - [[LightwheelAI|光轮智能]]
+- [[Microduck|Microduck 双足机器鸭]]
 
 ## AI 搜索与规划实体
 
@@ -139,6 +140,7 @@ tags:
 
 - [[GoPro|GoPro]]
 - [[IntelRealSenseT265|Intel RealSense T265]]
+- [[Microduck|Microduck 双足机器鸭]]
 
 ### project
 

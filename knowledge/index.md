@@ -15,6 +15,8 @@ tags:
 
 ## Sources
 
+- [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
+
 - [[_sources/unitree-listed-supply-chain-source-set|宇树科技上市供应链公司来源集]] — 汇总宇树招股书、5 家上市公司一级供应关系证据和 2026-08-31 统一行情快照；明确上市供应商不等于前五大供应商，且五家公司均未披露宇树收入占比。
 
 - [[_sources/bilibili-bv1s43t6ueaw-70|70分钟完整版！质疑苏度，理解苏度，成为苏度]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
@@ -171,6 +173,8 @@ tags:
 
 ## Entities
 
+- [[_entities/Microduck|Microduck]] — Pollen Robotics / Hugging Face 的 25 cm 强化学习双足机器人；截至 2026-09-02 为 399 美元预售，官方只开源软件，真实交付、可靠性与中国到岸成本待验证。
+
 - [[_entities/DexCap|DexCap]] — RSS 2024 便携式灵巧手动作采集系统与 DexIL 学习链路；强项是自然人类动作吞吐，商业化仍受力觉、跨本体、原 BOM 生命周期和真机增益验证约束。
 
 - [[_entities/LightwheelAI|光轮智能]] — 中国物理 AI 数据、仿真与评测基础设施公司；已形成 SimReady、EgoSuite、RoboFinals 与 Real2Sim2Real 产品链，财务质量仍待验证。
@@ -217,6 +221,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck DIY 复刻可行性与教学平台选型]] — R05 主分类、R08/R04 次分类：忠实复刻缺制造资料和零售 BOM 优势；学习者优先仿真并在交付后购买，独立 DIY 应按新机器人研发验收。
 
 - [[robotics-embodied-ai/research-notes/unitree-listed-supply-chain-public-companies-2026-09-02|宇树科技上市供应链 A 股公司调研]] — R09 主分类、R02/R03 次分类：确认蔚蓝锂芯、新洁能、创世纪、丰立智能、长盛轴承 5 家直接关系，比较 2026-08-31 股价/市值、近一个月与上市日走势，并指出宇树收入、份额和毛利均未披露。
 

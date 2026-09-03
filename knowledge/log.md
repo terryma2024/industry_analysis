@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-09-01
+last_updated: 2026-09-02
 tags:
   - wiki
   - log
@@ -907,3 +907,9 @@ tags:
   - **结论**: 直接证据支持蔚蓝锂芯、新洁能、创世纪、丰立智能、长盛轴承 5 家核心名单；宇树招股书前五大供应商多数匿名或非上市，上市供应链股不等于最大供应商。5 家在宇树上市日全部下跌，近一个月表现分化。
   - **来源**: 上交所/巨潮披露与互动易为 S 级关系证据；2026-08-31 行情快照为 B 级聚合数据。
   - **限制**: 五家公司均未披露宇树收入、毛利、份额或订单占比；动态行情页部分 raw 抽取失败，真实交易前需券商终端复核。
+
+- **ingest | Microduck DIY 复刻文章入库与事实校正**
+  - **变更**: 登记并捕获 `SRC-robotics-558`–`564`，新增 [[_sources/wechat-microduck-diy-replica-analysis|文章来源卡]]、[[_entities/Microduck|Microduck 实体]]和[[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|复刻与教学平台选型调研]]，更新来源 MOC、行业/实体/来源/研究笔记/全局索引及产品页。
+  - **来源**: 微信文章作为 C 级 BOM 与风险问题地图；Pollen Robotics press kit、runtime/RL 固定提交、ROBOTIS e-Manual/价格页和 Radxa 官方页用于核验产品状态、关节、软件、许可、组件与价格。
+  - **结论**: 官方只开源软件，不开放机械/电子设计；15 个 XL330 的美国官网零售价合计 412.35 美元，已高于 399 美元整机预售价。学习 RL/sim-to-real 优先仿真并在交付后购买，独立 DIY 应视为新机器人研发而非忠实低成本复制。
+  - **限制**: 产品仍在预售，未做本地训练或实机验证；文章来源日期、中国渠道 BOM、最终量产传感器、真实续航、可靠性和售后均待验证。`SRC-robotics-563` 为 fallback HTML，但价格字段已保存在原始 HTML 中。

@@ -52,6 +52,7 @@ sources:
 - `09-training-data-deep-dive.md`: 训练数据深度调研汇总页和并行研究入口，含 UMI v0 SOP/schema/客户数据包模板与 LeRobot 初学者教学入口。
 - `12-robotics-engineering-platforms-2026-06-04.md`: 机器人工程平台综合调研，覆盖数据、训练、评测、部署、真机推理和选型框架。
 - `13-robot-company-product-comparison-2026-06-08.md`: 主表机器人公司的产品型号全景对比，覆盖人形/轮式双臂、协作臂/工业机器人、AMR/移动操作的参数、技术路线、优缺点和待验证项。
+- [[research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck DIY 复刻可行性与教学平台选型]]: R05 主分类、R08/R04 次分类；官方开源只覆盖软件，15 个 XL330 的美国官网零售价合计已高于整机预售价，忠实复刻应视为研发项目而非低成本替代。
 - [[research-notes/embodied-ai-reliability-scaling-and-outcome-pricing-2026-08-26|具身智能可靠性、模型规模与按结果付费的商业化门槛]]: R07 主分类、R04/R03 次分类；区分原子技能、长程工作流、陌生分布和生产运营四层指标，校正 `p^n` 与 `7B`/万卡阈值外推，并把“物理 Token”还原为需要 SLA、计量审计和正单位经济性的按结果收费假设。
 - [[research-notes/unitree-listed-supply-chain-public-companies-2026-09-02|宇树科技上市供应链 A 股公司调研]]: R09 主分类、R02/R03 次分类；核验蔚蓝锂芯、新洁能、创世纪、丰立智能、长盛轴承 5 家直接关系，比较业务、关系阶段、股价、市值和近一个月趋势，并隔离未证实传闻股。
 - [[research-notes/ethercat-vs-tcp-ip-robot-control-latency-2026-08-12|EtherCAT 为什么在机器人实时控制中通常比 TCP/IP 更快]]: R04 主分类、R05 次分类；优势来自单帧多节点、ESC 硬件穿越、固定调度、DC 与 WKC，不是 100 Mbit/s 峰值带宽；给出指标口径、适用边界和 6/12 轴 A/B PoC。
