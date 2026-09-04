@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-09-02
+last_updated: 2026-09-04
 tags:
   - wiki
   - log
@@ -12,6 +12,13 @@ tags:
 # Wiki Log
 
 本文件为按日期归并的 append-only 操作日志。每个日期只使用一个 `## [YYYY-MM-DD]`，当天的变更使用 `- **action | summary**` 紧凑追加在该日期下；便于按日期检索，同时避免重复日期标题。
+
+## [2026-09-04]
+
+- **automation | Bilibili 收藏夹 Qwen-Drive-1.0 候选完成单视频深研**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-09-04|Bilibili AI Daily Run 2026-09-04]]、[[_sources/bilibili-bv1ktte6tet2-qwen-drive-1-0|Qwen-Drive-1.0 source card]]、[[_syntheses/bilibili-qwen-drive-1-0-autonomous-driving-vlm-deep-dive-2026-09-04|Qwen-Drive-1.0 深研]] 和 raw ASR artifact；更新 [[index|Knowledge Index]]、AI `sources.csv`。
+  - **结果**: 20 个候选中 19 个已重复；唯一模型选中视频 `BV1kTtE6tET2` 使用 Volcengine fallback ASR 成功转录。深研为 R04，次分类 R05/R07；官方论文、发布页与代码支持其“共享 VLM + BEV 探针 + Planning Expert”的研究定位。
+  - **限制**: 论文/作者 benchmark 与开源推理不构成量产道路安全、订单或跨域泛化证据。TOS 前缀含 2 个临时音频对象；不纳入版本控制。
 
 ## [2026-09-01]
 
@@ -913,3 +920,10 @@ tags:
   - **来源**: 微信文章作为 C 级 BOM 与风险问题地图；Pollen Robotics press kit、runtime/RL 固定提交、ROBOTIS e-Manual/价格页和 Radxa 官方页用于核验产品状态、关节、软件、许可、组件与价格。
   - **结论**: 官方只开源软件，不开放机械/电子设计；15 个 XL330 的美国官网零售价合计 412.35 美元，已高于 399 美元整机预售价。学习 RL/sim-to-real 优先仿真并在交付后购买，独立 DIY 应视为新机器人研发而非忠实低成本复制。
   - **限制**: 产品仍在预售，未做本地训练或实机验证；文章来源日期、中国渠道 BOM、最终量产传感器、真实续航、可靠性和售后均待验证。`SRC-robotics-563` 为 fallback HTML，但价格字段已保存在原始 HTML 中。
+
+## [2026-09-04]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-09-04|Bilibili AI Daily Run 2026-09-04]]；处理 1 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。

@@ -64,3 +64,6 @@ SRC-ai-079,AI Edge Function Calling guide,https://developers.google.com/edge/med
 SRC-ai-080,ENPIRE Agentic Robot Policy Self-Improvement in the Real World,https://arxiv.org/abs/2606.19980,defuddle,ok,raw/ai/documents/SRC-ai-080-enpire-agentic-robot-policy-self-improvement-in-the-real-world.md,2026-07-15T01:03:13+00:00,
 SRC-ai-081,国务院关于深入实施“人工智能+”行动的意见,https://www.miit.gov.cn/xwfb/szyw/art/2025/art_f8bd63905b384841a84e643c1b9455c7.html,defuddle,ok,raw/ai/documents/SRC-ai-081-source.md,2026-07-16T04:26:00+00:00,
 SRC-ai-082,BlenderMCP project README,https://github.com/ahujasid/blender-mcp,defuddle,ok,raw/ai/documents/SRC-ai-082-blendermcp-project-readme.md,2026-07-18T03:24:08+00:00,
+SRC-ai-083,Qwen-Drive-1.0 technical report,https://arxiv.org/abs/2609.00111,defuddle,ok,raw/ai/documents/SRC-ai-083-qwen-drive-1-0-technical-report.md,2026-09-04T01:16:43+00:00,
+SRC-ai-084,Qwen-Drive-1.0 official launch blog,https://qwen.ai/blog?id=qwen-drive-1.0,defuddle,fallback_html,raw/ai/documents/SRC-ai-084-qwen-drive-1-0-official-launch-blog.md,2026-09-04T01:16:52+00:00,Error: No content could be extracted from https://qwen.ai/blog?id=qwen-drive-1.0
+SRC-ai-085,Qwen-Drive-1.0 official repository,https://github.com/QwenLM/Qwen-Drive-1.0,defuddle,ok,raw/ai/documents/SRC-ai-085-qwen-drive-1-0-official-repository.md,2026-09-04T01:17:00+00:00,

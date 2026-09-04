@@ -2,7 +2,7 @@
 title: AI Source Capture Index
 type: index
 date_created: 2026-06-02
-last_updated: 2026-07-15
+last_updated: 2026-09-04
 status: active
 tags:
   - industry/ai
@@ -22,6 +22,10 @@ sources:
 - `ok`: defuddle 抽取到可读 Markdown。
 - `fallback_html`: defuddle 失败或内容过短，但已保留原始 HTML 或 sidecar Markdown。
 - `failed`: 未能抓取，需后续用浏览器、替代来源、官方 PDF 或手工摘录补证。
+
+## 2026-09-04 增量
+
+- `SRC-ai-083` 至 `SRC-ai-085`：Qwen-Drive-1.0 技术报告、官方发布页与官方仓库。用于核验 `BV1kTtE6tET2` 的架构、公开评测与复现边界；抓取状态以 `raw/ai/documents/source_capture_manifest.csv` 为准。
 
 ## Source Capture Manifest
 
@@ -92,6 +96,9 @@ sources:
 | SRC-ai-080 | ENPIRE Agentic Robot Policy Self-Improvement in the Real World | ok | [raw](../../raw/ai/documents/SRC-ai-080-enpire-agentic-robot-policy-self-improvement-in-the-real-world.md) | 用于校验 ENPIRE 四模块、真实世界闭环、任务范围与 pass@8 指标边界。 |
 | SRC-ai-081 | 国务院关于深入实施“人工智能+”行动的意见 | ok | [raw](../../raw/ai/documents/SRC-ai-081-source.md) | 用于校验 AI 人才培养、青年人才、期权激励与就业风险评估，不用于证明视频中的薪资或岗位数字。 |
 | SRC-ai-082 | BlenderMCP project README | ok | [raw](../../raw/ai/documents/SRC-ai-082-blendermcp-project-readme.md) | 用于核验 `BV1JhNC6zE8X` 中的 add-on + MCP server 架构、Blender 操作范围与凭证/安全边界；不核验模型品牌或视频效果。 |
+| SRC-ai-083 | Qwen-Drive-1.0 technical report | ok | [raw](../../raw/ai/documents/SRC-ai-083-qwen-drive-1-0-technical-report.md) | 核验统一 VLM、BEV 探针、规划专家及作者 benchmark 协议；结果不外推为量产安全。 |
+| SRC-ai-084 | Qwen-Drive-1.0 official launch blog | fallback_html | [raw](../../raw/ai/documents/SRC-ai-084-qwen-drive-1-0-official-launch-blog.md) | 以保留的官方页面 HTML 支持发布定位；正文解析失败时以技术报告/仓库交叉核验。 |
+| SRC-ai-085 | Qwen-Drive-1.0 official repository | ok | [raw](../../raw/ai/documents/SRC-ai-085-qwen-drive-1-0-official-repository.md) | 核验公开推理包、BEV 输出、环境和复现边界。 |
 
 ## 关联连接
 

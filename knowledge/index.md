@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-09-02
+last_updated: 2026-09-04
 tags:
   - wiki
   - index
@@ -16,6 +16,7 @@ tags:
 ## Sources
 
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
+- [[_sources/bilibili-bv1ktte6tet2-qwen-drive-1-0|Qwen-Drive-1.0正式发布 | 首个能"开车"的通用大模型]] — 已综合为 [[_syntheses/bilibili-qwen-drive-1-0-autonomous-driving-vlm-deep-dive-2026-09-04|Qwen-Drive-1.0 自动驾驶视觉语言基础模型深研]]；公开结果不等于道路安全或量产证据。
 
 - [[_sources/unitree-listed-supply-chain-source-set|宇树科技上市供应链公司来源集]] — 汇总宇树招股书、5 家上市公司一级供应关系证据和 2026-08-31 统一行情快照；明确上市供应商不等于前五大供应商，且五家公司均未披露宇树收入占比。
 
