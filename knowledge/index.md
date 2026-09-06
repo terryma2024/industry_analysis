@@ -17,6 +17,7 @@ tags:
 
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
 - [[_sources/bilibili-bv1ktte6tet2-qwen-drive-1-0|Qwen-Drive-1.0正式发布 | 首个能"开车"的通用大模型]] — 已综合为 [[_syntheses/bilibili-qwen-drive-1-0-autonomous-driving-vlm-deep-dive-2026-09-04|Qwen-Drive-1.0 自动驾驶视觉语言基础模型深研]]；公开结果不等于道路安全或量产证据。
+- [[_sources/bilibili-bv1jpti63eyf-ai-0-1|机械做具身智能吃香吗？]] — 已综合为 [[_syntheses/bilibili-embodied-robotics-engineering-learning-path-deep-dive-2026-09-06|机器人工程化学习路径视频深研]]；课程视频仅作问题线索，不构成通用岗位要求证据。
 
 - [[_sources/unitree-listed-supply-chain-source-set|宇树科技上市供应链公司来源集]] — 汇总宇树招股书、5 家上市公司一级供应关系证据和 2026-08-31 统一行情快照；明确上市供应商不等于前五大供应商，且五家公司均未披露宇树收入占比。
 
@@ -224,6 +225,7 @@ tags:
 ## Syntheses
 
 - [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck DIY 复刻可行性与教学平台选型]] — R05 主分类、R08/R04 次分类：忠实复刻缺制造资料和零售 BOM 优势；学习者优先仿真并在交付后购买，独立 DIY 应按新机器人研发验收。
+- [[_syntheses/bilibili-embodied-robotics-engineering-learning-path-deep-dive-2026-09-06|机器人工程化学习路径视频深研]] — R10/R05：把课程视频的工具栈叙事还原为可复现系统作品集与当期 JD 核验，而非统一就业门槛。
 
 - [[robotics-embodied-ai/research-notes/unitree-listed-supply-chain-public-companies-2026-09-02|宇树科技上市供应链 A 股公司调研]] — R09 主分类、R02/R03 次分类：确认蔚蓝锂芯、新洁能、创世纪、丰立智能、长盛轴承 5 家直接关系，比较 2026-08-31 股价/市值、近一个月与上市日走势，并指出宇树收入、份额和毛利均未披露。
 

@@ -369,6 +369,13 @@ aliases:
 | [`SRC-robotics-334`](../../raw/robotics-embodied-ai/documents/SRC-robotics-334-lerobotdataset-v3-official-specification.md) | [LeRobotDataset v3](../../raw/robotics-embodied-ai/documents/SRC-robotics-334-lerobotdataset-v3-official-specification.md) | 真机数据格式/共享层对照。 |
 | [`SRC-robotics-335`](../../raw/robotics-embodied-ai/documents/SRC-robotics-335-maniskill-official-framework-documentation.md) | [ManiSkill 官方概览](../../raw/robotics-embodied-ai/documents/SRC-robotics-335-maniskill-official-framework-documentation.md) | manipulation GPU simulation 对照。 |
 
+## 2026-09-06 机器人工程化学习路径视频交叉核验来源
+
+| SRC | raw artifact | 说明 |
+|---|---|---|
+| [`SRC-robotics-565`](../../raw/robotics-embodied-ai/documents/SRC-robotics-565-gazebo-ros-2-interoperability-documentation.md) | [Gazebo ROS 2 interoperability](../../raw/robotics-embodied-ai/documents/SRC-robotics-565-gazebo-ros-2-interoperability-documentation.md) | 核验 ROS 2 与 Gazebo 的模型、`/tf`、状态发布和 bridge 工作流；不推出仿真等于真机可靠。 |
+| [`SRC-robotics-566`](../../raw/robotics-embodied-ai/documents/SRC-robotics-566-nvidia-tensorrt-onnx-deployment-guide.md) | [TensorRT ONNX deployment](../../raw/robotics-embodied-ai/documents/SRC-robotics-566-nvidia-tensorrt-onnx-deployment-guide.md) | 核验 ONNX 导出、engine 构建、runtime 与算子兼容约束；不将其视为所有机器人岗位的必备项。 |
+
 ## 后续流程
 
 ## 2026-08-06 光轮智能公司、技术与商业化来源
