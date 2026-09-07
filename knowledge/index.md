@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-09-04
+last_updated: 2026-09-07
 tags:
   - wiki
   - index
@@ -16,6 +16,7 @@ tags:
 ## Sources
 
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
+- [[_syntheses/bilibili-ai-daily-run-2026-09-07|Bilibili AI Daily Run 2026-09-07]] — 20 个候选均已存在于知识库或 raw 层；未进入模型复核、转录或单视频深研。
 - [[_sources/bilibili-bv1ktte6tet2-qwen-drive-1-0|Qwen-Drive-1.0正式发布 | 首个能"开车"的通用大模型]] — 已综合为 [[_syntheses/bilibili-qwen-drive-1-0-autonomous-driving-vlm-deep-dive-2026-09-04|Qwen-Drive-1.0 自动驾驶视觉语言基础模型深研]]；公开结果不等于道路安全或量产证据。
 - [[_sources/bilibili-bv1jpti63eyf-ai-0-1|机械做具身智能吃香吗？]] — 已综合为 [[_syntheses/bilibili-embodied-robotics-engineering-learning-path-deep-dive-2026-09-06|机器人工程化学习路径视频深研]]；课程视频仅作问题线索，不构成通用岗位要求证据。
 

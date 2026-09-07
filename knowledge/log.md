@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-09-04
+last_updated: 2026-09-07
 tags:
   - wiki
   - log
@@ -12,6 +12,13 @@ tags:
 # Wiki Log
 
 本文件为按日期归并的 append-only 操作日志。每个日期只使用一个 `## [YYYY-MM-DD]`，当天的变更使用 `- **action | summary**` 紧凑追加在该日期下；便于按日期检索，同时避免重复日期标题。
+
+## [2026-09-07]
+
+- **automation | Bilibili 收藏夹候选均为重复，未生成新研究包**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-09-07|Bilibili AI Daily Run 2026-09-07]]，更新 [[index|Knowledge Index]]。
+  - **结果**: 成功读取 20 个候选，全部已在 `raw/` 或 `knowledge/` 中存在；模型选中、处理成功与失败均为 0，未运行第二阶段、ASR、source card、`sources.csv` 或单视频深研。
+  - **限制**: TOS 前缀 `asr-audio/2026/09/07` 为空，符合零视频选中的预期；无待人工处理的视频。
 
 ## [2026-09-04]
 
