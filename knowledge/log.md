@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-09-07
+last_updated: 2026-09-08
 tags:
   - wiki
   - log
@@ -946,3 +946,15 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-embodied-robotics-engineering-learning-path-deep-dive-2026-09-06|R10/R05 深研]]，登记并捕获 `SRC-robotics-558`–`559`，更新视频 source card、来源 MOC 与全局索引。
   - **结论**: ROS 2、仿真、感知/标定、部署和真机验收可组成有价值的作品集，但课程视频不能证明它们是所有岗位的统一门槛；求职应以可复现的端到端交付物和具体 JD 作为证据。
   - **限制**: 视频未披露课程、岗位、雇主、薪资、就业率或真机项目的可审计数据；中国岗位的城市和实时招聘需求需逐岗核验。
+
+## [2026-09-08]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-09-08|Bilibili AI Daily Run 2026-09-08]]；处理 1 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+- **synthesis | Microduck 商业逻辑完成证据限定的单视频深研**
+  - **变更**: 新增 [[_syntheses/bilibili-microduck-commercial-model-deep-dive-2026-09-08|Microduck 开源机器人平台商业逻辑视频深度调研]]，捕获 `SRC-robotics-551`–`552` raw artifact，并更新 [[index|Knowledge Index]]。
+  - **结论**: 官方代码支持 RK3566、15 舵机、50 Hz、MuJoCo/PPO 和 ONNX 技术链路；近期最可验证收入场景是教育/开发工具。
+  - **限制**: 、 万/24 小时、6,500 台、5 万台、Hugging Face 经营归属、策略市场收入和 data flywheel 都无可审计一级证据。

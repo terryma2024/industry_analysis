@@ -14,6 +14,16 @@ aliases:
 
 # 机器人（具身智能） - 来源抽取索引
 
+## 2026-09-08 Microduck 商业模式来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-551`](../../raw/robotics-embodied-ai/documents/SRC-robotics-551-microduck-official-repository.md) | Pollen 官方仓库 | 核验 RK3566、15 舵机、50 Hz、MuJoCo/PPO 与 ONNX；不支持销售额、订单、利润或平台收入。 |
+| [`SRC-robotics-552`](../../raw/robotics-embodied-ai/documents/SRC-robotics-552-microduck-robotd-design.md) | Pollen `robotd` 设计 | 核验单 UART、16 设备与 alpha/draft 边界；不等同量产可靠性或 SLA。 |
+| `SRC-robotics-567` | Bilibili ASR source packet | 低价入口、开发者生态与策略/数据飞轮的归因；销量、价格、公司关系、复购和数据资产均待一级来源验证。 |
+
+- 下游编译：[[_syntheses/bilibili-microduck-commercial-model-deep-dive-2026-09-08|Microduck 开源机器人平台商业逻辑视频深度调研]]。
+
 > [!summary]
 > 本页是 [[00-index|机器人（具身智能）]] 的来源抽取 MOC。来源编号仍以 [[sources.csv]] 为准；原文/清洗件保存在 `raw/robotics-embodied-ai/documents/`，抽取状态见 [source_capture_manifest.csv](../../raw/robotics-embodied-ai/documents/source_capture_manifest.csv)。
 
