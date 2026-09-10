@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-09-09
+last_updated: 2026-09-10
 tags:
   - wiki
   - log
@@ -965,3 +965,15 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-microduck-commercial-model-deep-dive-2026-09-08|Microduck 开源机器人平台商业逻辑视频深度调研]]，捕获 `SRC-robotics-551`–`552` raw artifact，并更新 [[index|Knowledge Index]]。
   - **结论**: 官方代码支持 RK3566、15 舵机、50 Hz、MuJoCo/PPO 和 ONNX 技术链路；近期最可验证收入场景是教育/开发工具。
   - **限制**: 、 万/24 小时、6,500 台、5 万台、Hugging Face 经营归属、策略市场收入和 data flywheel 都无可审计一级证据。
+
+## [2026-09-10]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-09-10|Bilibili AI Daily Run 2026-09-10]]；处理 3 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+- **synthesis | 3 个 Bilibili 具身智能视频完成单视频深研**
+  - **变更**: 新增学习路径（R10/R04）、SO-ARM101 选型（R05/R04）与 SO-101 ACT 真机 PoC（R05/R04）三页，并更新全局/行业索引。
+  - **结论**: 最稳健的切口是可复现单任务数据—策略—holdout 闭环；视频市场、性能与课程承诺均未提升为一级事实。
+  - **限制**: `BV13bLyzKES8` ASR 仅返回 `4054854`，其视频细节待字幕或人工复核；TOS 前缀出现 10 个对象，因早期重复启动产生的额外上传已记录为运行限制。

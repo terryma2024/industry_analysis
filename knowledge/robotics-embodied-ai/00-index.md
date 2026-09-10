@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-09-02
+last_updated: 2026-09-10
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -37,6 +37,10 @@ sources:
 - 地方落地线索：北京、上海、深圳、浙江、安徽等地正在围绕机器人和具身智能建设产业集群，需继续建立地方政策表。
 
 ## 文件导航
+
+- [[_syntheses/bilibili-embodied-ai-learning-path-reality-check-2026-09-10|具身智能入门教程：学习路径与产业现实核验]]：R10/R04，隔离未核验的市场/课程宣传并给出项目式入门路径。
+- [[_syntheses/bilibili-lerobot-so-arm101-assembly-selection-deep-dive-2026-09-10|LeRobot SO-ARM101 组装与选型深研]]：R05/R04，明确无语义 ASR 限制与官方工作流边界。
+- [[_syntheses/bilibili-lerobot-so101-act-real-robot-poc-deep-dive-2026-09-10|SO-101 ACT 真机 PoC 深研]]：R05/R04，以 OOD 误推反例定义评测门槛。
 
 - `00-source-acquisition-plan.md`: 信息获取路线、来源等级和已验证站点。
 - `00-source-capture-index.md`: 来源抽取 MOC、raw artifacts、manifest 和补采状态。

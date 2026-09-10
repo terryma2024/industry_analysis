@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-09-09
+last_updated: 2026-09-10
 tags:
   - wiki
   - index
@@ -16,6 +16,12 @@ tags:
 ## Sources
 
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
+- [[_syntheses/bilibili-embodied-ai-learning-path-reality-check-2026-09-10|具身智能入门教程：学习路径与产业现实核验]] — R10/R04；将视频市场和就业承诺限制为待验证线索，并给出可复现学习闭环。
+- [[_syntheses/bilibili-lerobot-so-arm101-assembly-selection-deep-dive-2026-09-10|LeRobot SO-ARM101 组装与选型深研]] — R05/R04；ASR 无语义，结论仅依官方工作流和 PoC 验收。
+- [[_syntheses/bilibili-lerobot-so101-act-real-robot-poc-deep-dive-2026-09-10|SO-101 ACT 真机 PoC 深研]] — R05/R04；将现场 OOD 误推水果作为泛化与验收的反方证据。
+- [[_sources/bilibili-bv1enhizcek6-lerobot-so-101-act|LeRobot训练SO-101机械臂ACT模型全流程解析]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+- [[_sources/bilibili-bv13blyzkes8-lerobot-so-arm101|【全球首发】LeRobot SO-ARM101 具身智能机械臂 - 组装和配置教程]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+- [[_sources/bilibili-bv1vjdzbgehk-2026|2026具身智能入门最强教程！机器人学习：模仿学习、最优控制与规划、策略梯度方法、离线强化学习、机器人模拟]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 - [[_syntheses/bilibili-ai-daily-run-2026-09-09|Bilibili AI Daily Run 2026-09-09]] — 20 个收藏夹候选均已存在于 `raw/` 或知识库；未进入模型复核、转录或单视频深研。
 - [[_sources/bilibili-bv1qftg6cevn-microduck|Microduck商业逻辑分析]] — 已综合为 [[_syntheses/bilibili-microduck-commercial-model-deep-dive-2026-09-08|Microduck 开源机器人平台商业逻辑视频深度调研]]；销量、价格、公司关系与数据飞轮仍为 B 级待验证线索。
 - [[_syntheses/bilibili-ai-daily-run-2026-09-07|Bilibili AI Daily Run 2026-09-07]] — 20 个候选均已存在于知识库或 raw 层；未进入模型复核、转录或单视频深研。

@@ -1,0 +1,54 @@
+---
+title: "2026具身智能入门最强教程！机器人学习：模仿学习、最优控制与规划、策略梯度方法、离线强化学习、机器人模拟"
+type: source
+date_created: 2026-09-10
+last_updated: 2026-09-10
+source_urls:
+  - https://www.bilibili.com/video/BV1vjdzBgEHk
+evidence_grade: B
+sources:
+  - raw/_inbox/transcripts/2026-09-10-bilibili-bv1vjdzbgehk-2026.json
+tags:
+  - bilibili
+  - video
+  - ai-research
+  - robotics
+  - embodied-ai
+status: draft
+---
+
+# 2026具身智能入门最强教程！机器人学习：模仿学习、最优控制与规划、策略梯度方法、离线强化学习、机器人模拟
+
+> [!summary]
+> Bilibili video source packet captured by the daily AI / embodied-intelligence pipeline. This page is a traceable source card, not yet a full industry synthesis.
+
+## Source Metadata
+
+| Field | Value |
+|---|---|
+| Platform | Bilibili |
+| URL | https://www.bilibili.com/video/BV1vjdzBgEHk |
+| BV / video id | `BV1vjdzBgEHk` |
+| Author | CV前沿与深度学习 |
+| Published | unknown |
+| Favorited | unknown |
+| Category | unknown |
+| Tags | unknown |
+| Extraction method | volcengine-external-command:volc.bigasr.auc |
+| Raw artifact | `raw/_inbox/transcripts/2026-09-10-bilibili-bv1vjdzbgehk-2026.json` |
+
+## Transcript Excerpt
+
+大家好，如果你现在走在2026年的街头，你会发现一个现象，机器人不再是只会重复动作的铁疙瘩了，它们开始能听懂人话，能看懂环境，甚至能像人一样思考。这就是具身智能 Embodied AI 简单来说就是给 AI 装上了一具身体。传统的 AI 只有大脑，活在数字世界里。传统的机器人只有身体。却只能听死板的程序。而具身智能是让 AI 的大脑和机器人的身体结合，实现了从数字空间到物理实体世界的跨越。为什么它在2026年爆发？主要有三个推手。第一，技术突破，大模型和世界模型的出现，让机器人拥有了通用的认知能力。第二，社会刚需。面对全球老龄化，特别是我们面临的护理人员短缺，我们需要这样的机器人员工。第三，政策落地。今年工信部发布的全球首份行业标准。正式把具身智能纳入了十五五未来产业体系。那么这个聪明的机器人大脑到底是怎么运作的呢？我们可以把2026年的具身智能技术栈看作一个以大模型为核心、硬件为载体的复杂系统。它主要由四层构成，最顶层是认知大脑，这里运行着具身大模型和世界模型。它负责理解你的指令，比如帮我倒杯水，并规划出完整的行动路径。第二层是感知交互，通过视觉、触觉、力觉等多模态传感器构建环境的数字孪生，实时感知周围的变化。第三层是控制执行，将高层的抽象指令转化为毫秒级的电机控制信号。最底层是硬件本体，也就是机器人的身体。无论是人形机器人如 Optimus 四足机器人如宇树科技，还是工业机械臂。它们都是具身智能的物理载体。这种架构让机器人不再只是执行单一任务，而是具备了在复杂环境中自主适应的能力。讲了这么多理论，2026年的具身智能到底发展到什么程度了？我可以告诉大家一个振奋人心的数据，2026年全球具身智能市场规模已经突破900亿，而中国市场占比超过65%，是当之无愧的全球增长引擎。现在的具身智能已经从实验室走向了千行百业。在工业制造领域，特斯拉的 Optimus 和优必选的 Walker S2已经能承担汽车装配和3C精密质检。效率提升超过50%。在医疗养老领域，这是最触动人心的。外骨骼机器人帮助偏瘫患者恢复肢体功能，临床有效率高达85%。养老陪护机器人则缓解了千万家庭的照护焦虑。在特种场景，比如电力巡检和消防救援，机器人已经成为了人类的替身，去往那些人类无法到达的危险环境。这标志着具身智能已经正式从单一指令执行迈向了自主交互的新阶段。当然我们在兴奋的同时也要看到眼前的挑战。目前行业面临最大的三个瓶颈是数据稀缺，高质量的真实交互数据太难采集了。泛化不足，机器人面对从未见过的长尾场景时，还容易犯傻。软硬协同，高层决策和底层控制之间还存在时延差。但这些问题正在被解决。展望未来，随着核心零部件国产化率突破75%。成本正在大幅下探，工业级人形机器人的单价已经从百万级降到了20~50万，消费级四足机器人更是进入了3万元以内的大众消费区间。最后，如果你也想加入这个领域，建议你遵循这四阶段的学习路线。打基础，学好数学、 Python 和 PyTorch 学原理，掌握机器人运动学和强化学习。练算法，攻克 VIOA 大模型和世界模型。做实战，去接触真机，完成自主导航或抓取任务。具身智能正在重新定义生产力。如果你对这个领域感兴趣不妨从今天开始迈出第一步。给大家准备了一套非常系统的人工智能学习体系内容，相当有2~3年人工智能工作经验，直接能到中高级算法工程师水平。不管你是想读研读博，还是单纯爱好 AI 这套内容都超适配。内容上先帮你打牢基础，Python 编程、高等数学、机器学习基础全都有，能帮你查漏补缺，把底子扎稳。然后是核心模块，计算机视觉部分，从深度学习理论讲到 OpenCV 实操，最后还有商业级 CV 项目实战，学完就能上手做实际项目。而且课程还在不断更，像穿梭摩尔图神经网络，还有智能交通、医学领域的前沿应用和热门案例都会持续加进去。自然语言处理也不落下，理论知识讲透，还搭配 Bert 项目实战，边学边练不枯燥。除此之外，还有科研写作指导和答疑服务，帮你解决学术上的难题。另外还额外送语音识别、推荐系统的内容，帮你拓宽学习视野，把 AI 知识体系补得更全。
+
+## Research Handoff
+
+- Extract facts, estimates, judgments, and hypotheses from the full transcript in `raw/_inbox/transcripts/2026-09-10-bilibili-bv1vjdzbgehk-2026.json`.
+- Check whether this should update AI, robotics/embodied AI, integrated circuits, or another industry page.
+- Preserve source traceability using the Bilibili URL and BV / video id.
+- Do not treat this source as primary evidence for company financials, policy facts, or market size without cross-checking primary sources.
+
+## Related Links
+
+- [[robotics-embodied-ai/00-index|机器人与具身智能]]
+- [[ai/00-index|AI]]

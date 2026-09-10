@@ -1,0 +1,39 @@
+{
+  "captured_at": "2026-09-10T01:05:40.873587+00:00",
+  "platform": "bilibili",
+  "video": {
+    "title": "【全球首发】LeRobot SO-ARM101 具身智能机械臂 - 组装和配置教程",
+    "url": "https://www.bilibili.com/video/BV13bLyzKES8",
+    "bvid": "BV13bLyzKES8",
+    "aid": "",
+    "video_id": "",
+    "author": "WowRobo机器人",
+    "published_at": "",
+    "favorited_at": "",
+    "description": "",
+    "tags": [],
+    "category": "",
+    "raw": {
+      "rank": 2,
+      "title": "【全球首发】LeRobot SO-ARM101 具身智能机械臂 - 组装和配置教程",
+      "author": "WowRobo机器人",
+      "plays": 18232,
+      "url": "https://www.bilibili.com/video/BV13bLyzKES8"
+    }
+  },
+  "target_industries": [
+    "robotics-embodied-ai",
+    "ai"
+  ],
+  "relevance": {
+    "score": 8,
+    "matched_terms": [
+      "\\ble?robot\\b",
+      "具身",
+      "具身智能",
+      "机器人"
+    ]
+  },
+  "extraction_method": "volcengine-external-command:volc.bigasr.auc",
+  "transcript_text": "4054854"
+}
