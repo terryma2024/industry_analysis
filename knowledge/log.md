@@ -13,6 +13,14 @@ tags:
 
 本文件为按日期归并的 append-only 操作日志。每个日期只使用一个 `## [YYYY-MM-DD]`，当天的变更使用 `- **action | summary**` 紧凑追加在该日期下；便于按日期检索，同时避免重复日期标题。
 
+## [2026-09-11]
+
+- **automation | Bilibili favorites: three AI and embodied software-stack videos completed**
+  - **Changed**: Added [[_syntheses/bilibili-ai-daily-run-2026-09-11|daily run]], three raw transcripts, three source cards, and three standalone R05 deep-research notes; updated [[index|Knowledge Index]] and relevant AI/robotics source ledgers.
+  - **Result**: 20 candidates, 17 duplicate skips, three model selections and three successful ASR captures. R05/R02 covers RTOS control-stack selection; two R05/R04 notes cover LeRobot plus LingBot-VLA workflow and MuJoCo synthetic-data PoC.
+  - **Evidence boundary**: Video board counts, memory figures, training/data/price/performance numbers remain B-grade. The durable conclusion is to use fixed configuration, independent holdout, safety limits and real-robot validation.
+  - **TOS**: The daily prefix contained six temporary audio objects; none are versioned.
+
 ## [2026-09-09]
 
 - **automation | Bilibili 收藏夹候选均为重复，未生成新研究包**
@@ -977,3 +985,10 @@ tags:
   - **变更**: 新增学习路径（R10/R04）、SO-ARM101 选型（R05/R04）与 SO-101 ACT 真机 PoC（R05/R04）三页，并更新全局/行业索引。
   - **结论**: 最稳健的切口是可复现单任务数据—策略—holdout 闭环；视频市场、性能与课程承诺均未提升为一级事实。
   - **限制**: `BV13bLyzKES8` ASR 仅返回 `4054854`，其视频细节待字幕或人工复核；TOS 前缀出现 10 个对象，因早期重复启动产生的额外上传已记录为运行限制。
+
+## [2026-09-11]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-09-11|Bilibili AI Daily Run 2026-09-11]]；处理 3 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。

@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-09-10
+last_updated: 2026-09-11
 tags:
   - wiki
   - index
@@ -16,6 +16,13 @@ tags:
 ## Sources
 
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
+- [[_syntheses/bilibili-ai-daily-run-2026-09-11|Bilibili AI Daily Run 2026-09-11]] — 20 candidates; 17 duplicates; three captured videos each have a deep-research note.
+- [[_syntheses/bilibili-rtos-control-stack-selection-deep-dive-2026-09-11|RTOS control-stack selection]] — R05/R02; BSP and footprint numbers need PoC verification.
+- [[_syntheses/bilibili-lerobot-lingbot-vla-training-workflow-deep-dive-2026-09-11|LeRobot and LingBot-VLA workflow]] — R05/R04; data contract, holdout and safety define real-robot value.
+- [[_syntheses/bilibili-mujoco-pick-place-synthetic-data-poc-deep-dive-2026-09-11|MuJoCo synthetic-data PoC]] — R05/R04; synthetic episodes are not proof of real-robot transfer.
+- [[_sources/bilibili-bv14h8b6zefu-mujoco-pick-place|Mujoco仿真自动采集pick&place数据（附代码）]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+- [[_sources/bilibili-bv1sjlx6he5d-lerobot-lingbot-vla|速通具身智能毕业论文！LeRobot+LingBot-VLA训推全流程]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+- [[_sources/bilibili-bv1kjl56qehb-freertos-rt-thread-zephyr|FreeRTOS · RT-Thread · Zephyr——差距到底在哪？]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 - [[_syntheses/bilibili-embodied-ai-learning-path-reality-check-2026-09-10|具身智能入门教程：学习路径与产业现实核验]] — R10/R04；将视频市场和就业承诺限制为待验证线索，并给出可复现学习闭环。
 - [[_syntheses/bilibili-lerobot-so-arm101-assembly-selection-deep-dive-2026-09-10|LeRobot SO-ARM101 组装与选型深研]] — R05/R04；ASR 无语义，结论仅依官方工作流和 PoC 验收。
 - [[_syntheses/bilibili-lerobot-so101-act-real-robot-poc-deep-dive-2026-09-10|SO-101 ACT 真机 PoC 深研]] — R05/R04；将现场 OOD 误推水果作为泛化与验收的反方证据。
