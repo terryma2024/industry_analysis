@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-09-10
+last_updated: 2026-09-12
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -37,6 +37,9 @@ sources:
 - 地方落地线索：北京、上海、深圳、浙江、安徽等地正在围绕机器人和具身智能建设产业集群，需继续建立地方政策表。
 
 ## 文件导航
+
+- [[_syntheses/bilibili-robot-foundation-models-air-52-deep-dive-2026-09-12|机器人基础模型：操作、数据与世界模型深研]]：R04/R07/R05；把路线判断收敛为真实 holdout、安全与单位成本验证。
+- [[_syntheses/bilibili-nvidia-cosmos-3-physical-ai-course-selection-deep-dive-2026-09-12|NVIDIA Cosmos 3 物理 AI 课程与平台选型深研]]：R05/R04/R07；区分 Reasoner/Generator、动作 schema 与真机安全边界。
 
 - [[_syntheses/bilibili-embodied-ai-learning-path-reality-check-2026-09-10|具身智能入门教程：学习路径与产业现实核验]]：R10/R04，隔离未核验的市场/课程宣传并给出项目式入门路径。
 - [[_syntheses/bilibili-lerobot-so-arm101-assembly-selection-deep-dive-2026-09-10|LeRobot SO-ARM101 组装与选型深研]]：R05/R04，明确无语义 ASR 限制与官方工作流边界。

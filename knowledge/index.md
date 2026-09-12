@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-09-11
+last_updated: 2026-09-12
 tags:
   - wiki
   - index
@@ -16,6 +16,11 @@ tags:
 ## Sources
 
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
+- [[_syntheses/bilibili-ai-daily-run-2026-09-12|Bilibili AI Daily Run 2026-09-12]] — 20 candidates; 18 duplicate skips; two selected videos both captured and synthesized.
+- [[_syntheses/bilibili-robot-foundation-models-air-52-deep-dive-2026-09-12|机器人基础模型、操作与世界模型]] — R04/R07/R05; treat three-year forecasts as B-grade, and validate through real-robot holdouts.
+- [[_syntheses/bilibili-nvidia-cosmos-3-physical-ai-course-selection-deep-dive-2026-09-12|NVIDIA Cosmos 3 course and platform selection]] — R05/R04/R07; Reasoner and Generator are distinct surfaces, not a safety-certified controller.
+- [[_sources/bilibili-bv1h1yl6yezh-nvidia-dli-cosmos-3-ai|深度拆解 NVIDIA DLI 课程《从感知到预测：使用 Cosmos 3 开发物理 AI》]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
+- [[_sources/bilibili-bv1qvyl6se56-air-52|AIR学术沙龙第52期｜机器人基础模型的进展、机遇与挑战]] — Bilibili video source packet captured by the daily AI/embodied research pipeline; pending synthesis.
 - [[_syntheses/bilibili-ai-daily-run-2026-09-11|Bilibili AI Daily Run 2026-09-11]] — 20 candidates; 17 duplicates; three captured videos each have a deep-research note.
 - [[_syntheses/bilibili-rtos-control-stack-selection-deep-dive-2026-09-11|RTOS control-stack selection]] — R05/R02; BSP and footprint numbers need PoC verification.
 - [[_syntheses/bilibili-lerobot-lingbot-vla-training-workflow-deep-dive-2026-09-11|LeRobot and LingBot-VLA workflow]] — R05/R04; data contract, holdout and safety define real-robot value.

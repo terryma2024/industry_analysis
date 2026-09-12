@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-09-02
+last_updated: 2026-09-12
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -13,6 +13,15 @@ aliases:
 ---
 
 # 机器人（具身智能） - 来源抽取索引
+
+## 2026-09-12 机器人基础模型与 Cosmos 3 来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [SRC-robotics-568](../../raw/robotics-embodied-ai/documents/SRC-robotics-568-nvidia-cosmos-3-official-repository.md) | NVIDIA Cosmos 官方仓库 | 核验模型族、Reasoner/Generator、I/O、动作工作流、集成与许可证；不验证真机安全或 ROI。 |
+| [SRC-robotics-569](../../raw/robotics-embodied-ai/documents/SRC-robotics-569-nvidia-cosmos-3-physical-ai-technical-blog.md) | NVIDIA 技术博客 | 核验统一架构与厂商定义的适配路径；部署/benchmark 仍需目标场景复现。 |
+
+- 下游编译：[[_syntheses/bilibili-robot-foundation-models-air-52-deep-dive-2026-09-12|机器人基础模型深研]]、[[_syntheses/bilibili-nvidia-cosmos-3-physical-ai-course-selection-deep-dive-2026-09-12|Cosmos 3 平台选型深研]]。
 
 ## 2026-09-08 Microduck 商业模式来源
 

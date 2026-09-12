@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-09-10
+last_updated: 2026-09-12
 tags:
   - wiki
   - log
@@ -992,3 +992,16 @@ tags:
   - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-09-11|Bilibili AI Daily Run 2026-09-11]]；处理 3 个 Bilibili 视频 source packet。
   - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
   - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+## [2026-09-12]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-09-12|Bilibili AI Daily Run 2026-09-12]]；处理 2 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+- **synthesis | 两条 processed 视频完成单视频深研**
+  - **Changed**: Added [[_syntheses/bilibili-robot-foundation-models-air-52-deep-dive-2026-09-12|机器人基础模型深研]] and [[_syntheses/bilibili-nvidia-cosmos-3-physical-ai-course-selection-deep-dive-2026-09-12|Cosmos 3 平台选型深研]]; captured NVIDIA primary sources `SRC-robotics-561`–`562`; updated robotics source ledger/MOC, industry index and global index.
+  - **Classification**: AIR salon is R04 with R07/R05; Cosmos 3 course is R05 with R04/R07.
+  - **Conclusion**: Reasoner/Generator and synthetic data require real-robot holdout, safety constraints and unit-cost proof; Bilibili commercial, timing and performance claims remain unverified.
+  - **TOS**: Four temporary audio objects were observed for the two ASR runs; no temporary audio is committed.
