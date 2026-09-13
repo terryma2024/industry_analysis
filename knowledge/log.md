@@ -1005,3 +1005,9 @@ tags:
   - **Classification**: AIR salon is R04 with R07/R05; Cosmos 3 course is R05 with R04/R07.
   - **Conclusion**: Reasoner/Generator and synthetic data require real-robot holdout, safety constraints and unit-cost proof; Bilibili commercial, timing and performance claims remain unverified.
   - **TOS**: Four temporary audio objects were observed for the two ASR runs; no temporary audio is committed.
+## [2026-09-13]
+
+- **automation | Bilibili 收藏夹候选筛选完成，无新增研究包**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-09-13|Bilibili AI Daily Run 2026-09-13]] 并更新 [[index|Knowledge Index]]。
+  - **结果**: 20 个候选均为既有记录；无 `needs_model_review` 视频，未运行二阶段转录、ASR、source card 或单视频深研。
+  - **限制**: TOS 前缀 `asr-audio/2026/09/13` 可检查但为空；这是零视频被选中的正常结果，而非处理失败。
