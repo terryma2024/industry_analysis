@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-09-13
+last_updated: 2026-09-14
 tags:
   - wiki
   - index
@@ -16,6 +16,7 @@ tags:
 ## Sources
 
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
+- [[_syntheses/bilibili-ai-daily-run-2026-09-14|Bilibili AI Daily Run 2026-09-14]] — 20 candidates; all were duplicates, so no transcript or deep research was repeated.
 - [[_syntheses/bilibili-ai-daily-run-2026-09-13|Bilibili AI Daily Run 2026-09-13]] — 20 candidates; all were duplicates, so no transcript or deep research was repeated.
 - [[_syntheses/bilibili-ai-daily-run-2026-09-12|Bilibili AI Daily Run 2026-09-12]] — 20 candidates; 18 duplicate skips; two selected videos both captured and synthesized.
 - [[_syntheses/bilibili-robot-foundation-models-air-52-deep-dive-2026-09-12|机器人基础模型、操作与世界模型]] — R04/R07/R05; treat three-year forecasts as B-grade, and validate through real-robot holdouts.
