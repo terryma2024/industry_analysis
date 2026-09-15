@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-09-14
+last_updated: 2026-09-15
 tags:
   - wiki
   - index
@@ -16,6 +16,7 @@ tags:
 ## Sources
 
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
+- [[_sources/bilibili-bv19xye66e6g-bilibili-video|【十字路口】当具身智能走到十字路口｜和苏度、蚂蚁灵波、自变量、破壳：四种一线判断【视频播客】]] — Bilibili B-grade source packet; company/model claims remain pending primary evidence.
 - [[_syntheses/bilibili-ai-daily-run-2026-09-14|Bilibili AI Daily Run 2026-09-14]] — 20 candidates; all were duplicates, so no transcript or deep research was repeated.
 - [[_syntheses/bilibili-ai-daily-run-2026-09-13|Bilibili AI Daily Run 2026-09-13]] — 20 candidates; all were duplicates, so no transcript or deep research was repeated.
 - [[_syntheses/bilibili-ai-daily-run-2026-09-12|Bilibili AI Daily Run 2026-09-12]] — 20 candidates; 18 duplicate skips; two selected videos both captured and synthesized.
@@ -248,6 +249,7 @@ tags:
 ## Syntheses
 
 - [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck DIY 复刻可行性与教学平台选型]] — R05 主分类、R08/R04 次分类：忠实复刻缺制造资料和零售 BOM 优势；学习者优先仿真并在交付后购买，独立 DIY 应按新机器人研发验收。
+- [[_syntheses/bilibili-embodied-ai-crossroads-data-model-scenario-deep-dive-2026-09-15|具身智能十字路口：数据、模型与场景商业化验证]] — R07/R04/R02：仿真、真机数据和上层模型须以真机 holdout、任务 SLA、现场成本和持续付费共同验收。
 - [[_syntheses/bilibili-embodied-robotics-engineering-learning-path-deep-dive-2026-09-06|机器人工程化学习路径视频深研]] — R10/R05：把课程视频的工具栈叙事还原为可复现系统作品集与当期 JD 核验，而非统一就业门槛。
 
 - [[robotics-embodied-ai/research-notes/unitree-listed-supply-chain-public-companies-2026-09-02|宇树科技上市供应链 A 股公司调研]] — R09 主分类、R02/R03 次分类：确认蔚蓝锂芯、新洁能、创世纪、丰立智能、长盛轴承 5 家直接关系，比较 2026-08-31 股价/市值、近一个月与上市日走势，并指出宇树收入、份额和毛利均未披露。

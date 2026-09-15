@@ -38,6 +38,8 @@ sources:
 
 ## 文件导航
 
+- [[_syntheses/bilibili-embodied-ai-crossroads-data-model-scenario-deep-dive-2026-09-15|具身智能十字路口：数据、模型与场景商业化验证]]：R07/R04/R02；用数据合同、四层能力和任务级 SLA 取代路线口号与演示外推。
+
 - [[_syntheses/bilibili-robot-foundation-models-air-52-deep-dive-2026-09-12|机器人基础模型：操作、数据与世界模型深研]]：R04/R07/R05；把路线判断收敛为真实 holdout、安全与单位成本验证。
 - [[_syntheses/bilibili-nvidia-cosmos-3-physical-ai-course-selection-deep-dive-2026-09-12|NVIDIA Cosmos 3 物理 AI 课程与平台选型深研]]：R05/R04/R07；区分 Reasoner/Generator、动作 schema 与真机安全边界。
 
