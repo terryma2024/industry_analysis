@@ -1037,3 +1037,15 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-embodied-ai-crossroads-data-model-scenario-deep-dive-2026-09-15|单视频深研]]，更新来源卡、[[robotics-embodied-ai/00-index|机器人 MOC]] 与 [[index|全局索引]]。
   - **结论**: 仿真/真机/通用模型不是互斥选项；只有任务级真机 holdout、SLA、交付成本与持续付费共同改善，才能证明商业化。
   - **限制**: 视频中公司、性能、客户、模型名称与时间表均为 B 级或 ASR 不确定线索，未升级为事实。
+
+## [2026-09-17]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-09-17|Bilibili AI Daily Run 2026-09-17]]；处理 3 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+- **synthesis | 三条 2026-09-17 processed 视频完成独立深研**
+  - **变更**: 新增 [[_syntheses/bilibili-vla-action-tokenization-deep-dive-2026-09-17|VLA 动作词表化]]（R04/R05）、[[_syntheses/bilibili-nvidia-physical-ai-stack-deep-dive-2026-09-17|Physical AI 平台栈]]（R05/R04/R07）与 [[_syntheses/bilibili-slam-engineering-learning-deep-dive-2026-09-17|SLAM 工程学习]]（R04/R10），并更新全局/行业 MOC。
+  - **结论**: 可交付价值不在模型或教程口号，而在可追溯数据/资产、真机或真实场景 holdout、安全与延迟 SLA、失败诊断以及正单位经济性。
+  - **限制**: 三条视频均为 B 级线索；未核验的模型名、加速倍数、客户、订单、课程和岗位宣传均保留为待验证事项。

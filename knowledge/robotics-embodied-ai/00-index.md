@@ -38,6 +38,10 @@ sources:
 
 ## 文件导航
 
+- [[_syntheses/bilibili-vla-action-tokenization-deep-dive-2026-09-17|VLA 动作词表化与残差量化视频深度调研]]：R04/R05；动作 tokenization 需要与连续路线在真机 holdout、延迟和安全层下对照。
+- [[_syntheses/bilibili-nvidia-physical-ai-stack-deep-dive-2026-09-17|NVIDIA Physical AI 三计算机与仿真数据栈深度调研]]：R05/R04/R07；将平台组合拆为数据、仿真、训练、部署与真实 SLA 验证。
+- [[_syntheses/bilibili-slam-engineering-learning-deep-dive-2026-09-17|机器人 SLAM 工程学习与验证路径深度调研]]：R04/R10；以标定、基线、诊断和真实场景复测替代课程时长作为能力证据。
+
 - [[_syntheses/bilibili-embodied-ai-crossroads-data-model-scenario-deep-dive-2026-09-15|具身智能十字路口：数据、模型与场景商业化验证]]：R07/R04/R02；用数据合同、四层能力和任务级 SLA 取代路线口号与演示外推。
 
 - [[_syntheses/bilibili-robot-foundation-models-air-52-deep-dive-2026-09-12|机器人基础模型：操作、数据与世界模型深研]]：R04/R07/R05；把路线判断收敛为真实 holdout、安全与单位成本验证。

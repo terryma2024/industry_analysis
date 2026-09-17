@@ -40,6 +40,8 @@ sources:
 
 ## 文件导航
 
+- [[_syntheses/bilibili-nvidia-physical-ai-stack-deep-dive-2026-09-17|NVIDIA Physical AI 三计算机与仿真数据栈深度调研]]：R05/R04/R07；供应商平台能力必须经真实场景 SLA、数据治理和单位经济性核验。
+
 - `01-industry-map.md`: AI 产业链和价值流。
 - `02-technology-and-products.md`: 技术路线、产品形态和成熟度。
 - `03-market-and-policy.md`: 中国市场、政策监管和数据口径。
