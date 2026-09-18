@@ -1049,3 +1049,10 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-vla-action-tokenization-deep-dive-2026-09-17|VLA 动作词表化]]（R04/R05）、[[_syntheses/bilibili-nvidia-physical-ai-stack-deep-dive-2026-09-17|Physical AI 平台栈]]（R05/R04/R07）与 [[_syntheses/bilibili-slam-engineering-learning-deep-dive-2026-09-17|SLAM 工程学习]]（R04/R10），并更新全局/行业 MOC。
   - **结论**: 可交付价值不在模型或教程口号，而在可追溯数据/资产、真机或真实场景 holdout、安全与延迟 SLA、失败诊断以及正单位经济性。
   - **限制**: 三条视频均为 B 级线索；未核验的模型名、加速倍数、客户、订单、课程和岗位宣传均保留为待验证事项。
+
+## [2026-09-18]
+
+- **automation | Bilibili 收藏夹候选筛选完成，无新增研究包**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-09-18|Bilibili AI Daily Run 2026-09-18]] 并更新 [[index|Knowledge Index]]。
+  - **结果**: 20 个候选中 19 个已存在；唯一 `needs_model_review` 候选 `BV1s1Y76GEca` 为无关动漫，模型选中数为 0，未运行二阶段转录、ASR、source card 或单视频深研。
+  - **限制**: TOS 前缀 `asr-audio/2026/09/18` 为空，符合零视频被选中的预期；无失败项。
