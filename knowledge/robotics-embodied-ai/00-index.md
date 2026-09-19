@@ -38,6 +38,7 @@ sources:
 
 ## 文件导航
 
+- [[_syntheses/bilibili-panogs-slam-panoramic-3dgs-deep-dive-2026-09-19|PanoGS-SLAM 全景 3DGS-SLAM 单视频深度调研]]：R04/R05；先以 PALVIO/SynPano、失跟踪率、资源/热约束和现场导航成功率验证全景传感的系统价值。
 - [[_syntheses/bilibili-vla-action-tokenization-deep-dive-2026-09-17|VLA 动作词表化与残差量化视频深度调研]]：R04/R05；动作 tokenization 需要与连续路线在真机 holdout、延迟和安全层下对照。
 - [[_syntheses/bilibili-nvidia-physical-ai-stack-deep-dive-2026-09-17|NVIDIA Physical AI 三计算机与仿真数据栈深度调研]]：R05/R04/R07；将平台组合拆为数据、仿真、训练、部署与真实 SLA 验证。
 - [[_syntheses/bilibili-slam-engineering-learning-deep-dive-2026-09-17|机器人 SLAM 工程学习与验证路径深度调研]]：R04/R10；以标定、基线、诊断和真实场景复测替代课程时长作为能力证据。

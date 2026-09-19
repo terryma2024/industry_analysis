@@ -14,6 +14,14 @@ aliases:
 
 # 机器人（具身智能） - 来源抽取索引
 
+## 2026-09-19 PanoGS-SLAM 全景 3DGS-SLAM 来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-570`](../../raw/robotics-embodied-ai/documents/SRC-robotics-570-panogs-slam-panoramic-3d-gaussian-splatting-slam.md) | PanoGS-SLAM 作者预印本（HTML sidecar） | 核验球面域可微渲染、畸变补偿损失、深度引导初始化及 PALVIO/SynPano 作者实验；页面过大导致自动抽取降级，代码尚未发布，不能据此推断现场导航 SLA、安全、单位成本或量产采用。 |
+
+- 下游编译：[[_syntheses/bilibili-panogs-slam-panoramic-3dgs-deep-dive-2026-09-19|PanoGS-SLAM 全景 3DGS-SLAM 单视频深度调研]]。
+
 ## 2026-09-12 机器人基础模型与 Cosmos 3 来源
 
 | SRC | raw artifact | 用途与边界 |

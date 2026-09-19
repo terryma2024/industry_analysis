@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 date_created: 2026-05-29
-last_updated: 2026-09-16
+last_updated: 2026-09-19
 tags:
   - wiki
   - log
@@ -1056,3 +1056,15 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-09-18|Bilibili AI Daily Run 2026-09-18]] 并更新 [[index|Knowledge Index]]。
   - **结果**: 20 个候选中 19 个已存在；唯一 `needs_model_review` 候选 `BV1s1Y76GEca` 为无关动漫，模型选中数为 0，未运行二阶段转录、ASR、source card 或单视频深研。
   - **限制**: TOS 前缀 `asr-audio/2026/09/18` 为空，符合零视频被选中的预期；无失败项。
+
+## [2026-09-19]
+
+- **ingest | Bilibili AI/具身智能每日视频采集**
+  - **变更**: 新增或更新 [[_syntheses/bilibili-ai-daily-run-2026-09-19|Bilibili AI Daily Run 2026-09-19]]；处理 1 个 Bilibili 视频 source packet。
+  - **来源**: `raw/_inbox/transcripts/` 与 `knowledge/_sources/` 中的 Bilibili 视频转录产物。
+  - **限制**: 脚本只完成候选筛选、去重、转录和 source card 交接；行业判断仍需 Codex 后续综合，并对关键事实做一级来源交叉验证。
+
+- **synthesis | PanoGS-SLAM 全景 3DGS-SLAM 完成单视频深研**
+  - **变更**: 新增 [[_syntheses/bilibili-panogs-slam-panoramic-3dgs-deep-dive-2026-09-19|R04/R05 深研]]，登记 `SRC-robotics-563` 及其 raw fallback HTML/source card，并更新 [[robotics-embodied-ai/00-index|机器人 MOC]] 与 [[index|全局索引]]。
+  - **结论**: 球面域渲染、等距柱状投影面积补偿和深度引导初始化由作者预印本支持；应以全景标定、失跟踪率、p95 延迟、热/功耗和真实导航成功率决定是否进入系统。
+  - **限制**: 作者 benchmark 未经独立复现，代码待公开；自动正文抽取因页面过大降级为 HTML sidecar，不把“实时/优于基线”外推为客户 SLA、安全或商业采用。

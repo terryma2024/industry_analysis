@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-09-18
+last_updated: 2026-09-19
 tags:
   - wiki
   - index
@@ -16,6 +16,7 @@ tags:
 ## Sources
 
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
+- [[_sources/bilibili-bv1zdey61eqm-slam-ep003-panogs-slam-3dgs-slam|【每日SLAM论文讲解 EP003】PanoGS-SLAM：全景相机遇上 3DGS，第一个全景高斯SLAM来了]] — Bilibili B 级线索已由作者预印本交叉核验；关联 [[_syntheses/bilibili-panogs-slam-panoramic-3dgs-deep-dive-2026-09-19|PanoGS-SLAM 单视频深度调研]]。
 - [[_syntheses/bilibili-ai-daily-run-2026-09-18|Bilibili AI Daily Run 2026-09-18]] — 20 candidates; 19 duplicates and one unrelated anime, so no transcript or deep research was created.
 - [[_syntheses/bilibili-slam-engineering-learning-deep-dive-2026-09-17|机器人 SLAM 工程学习与验证路径深度调研]] — R04/R10; uses the Bilibili source packet as a lead, then requires reproducible calibration, baselines, diagnostics and real-scene validation.
 - [[_syntheses/bilibili-nvidia-physical-ai-stack-deep-dive-2026-09-17|NVIDIA Physical AI 三计算机与仿真数据栈深度调研]] — R05/R04/R07; separates platform scope from real-world SLA and unit-economics evidence.
