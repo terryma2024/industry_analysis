@@ -1068,3 +1068,11 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-panogs-slam-panoramic-3dgs-deep-dive-2026-09-19|R04/R05 深研]]，登记 `SRC-robotics-563` 及其 raw fallback HTML/source card，并更新 [[robotics-embodied-ai/00-index|机器人 MOC]] 与 [[index|全局索引]]。
   - **结论**: 球面域渲染、等距柱状投影面积补偿和深度引导初始化由作者预印本支持；应以全景标定、失跟踪率、p95 延迟、热/功耗和真实导航成功率决定是否进入系统。
   - **限制**: 作者 benchmark 未经独立复现，代码待公开；自动正文抽取因页面过大降级为 HTML sidecar，不把“实时/优于基线”外推为客户 SLA、安全或商业采用。
+
+
+## [2026-09-20]
+
+- **automation | Bilibili 收藏夹候选筛选完成，无新增研究包**
+  - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-09-20|Bilibili AI Daily Run 2026-09-20]] 并更新 [[index|Knowledge Index]]。
+  - **结果**: 20 个候选中 19 个已存在；唯一 `needs_model_review` 候选 `BV1s1Y76GEca` 为无关动漫，模型选中数为 0，未运行二阶段转录、ASR、source card 或单视频深研。
+  - **限制**: TOS 前缀 `asr-audio/2026/09/20` 为空，符合零视频被选中的预期；无失败项。
