@@ -1076,3 +1076,11 @@ tags:
   - **变更**: 新增 [[_syntheses/bilibili-ai-daily-run-2026-09-20|Bilibili AI Daily Run 2026-09-20]] 并更新 [[index|Knowledge Index]]。
   - **结果**: 20 个候选中 19 个已存在；唯一 `needs_model_review` 候选 `BV1s1Y76GEca` 为无关动漫，模型选中数为 0，未运行二阶段转录、ASR、source card 或单视频深研。
   - **限制**: TOS 前缀 `asr-audio/2026/09/20` 为空，符合零视频被选中的预期；无失败项。
+
+## [2026-09-21]
+
+- **research | 国内外忆阻器存算一体企业、成果与上市公司半年股价调研**
+  - **变更**: 新增 [[integrated-circuits/research-notes/memristor-compute-in-memory-companies-and-stock-screen-2026-09-21|R06/R04/R09 深研]]、公司候选池与半年股价 CSV；登记 `SRC-ic-036` 至 `057`，新增 [[integrated-circuits/00-source-capture-index|集成电路来源抓取索引]]，更新行业与全局索引。
+  - **结论**: ReRAM 存储/IP 已有商业化，但真正忆阻器-CIM 仍主要在研究芯片、工程样片或开发板前夜；TetraMem 最接近直接产品化，上市标的多数只是低纯度研发或参股映射。
+  - **股票**: 统一按 2026-03-31 至最近完整收盘日计算 8 家上市映射公司价格变化，不含股息；明确不能把 HBM、代工或集团主业驱动的涨跌归因于忆阻器 CIM。
+  - **限制**: `SRC-ic-048` 与 `052` 自动 PDF 下载失败；TetraMem、新忆页面使用 fallback HTML；厂商性能、交付和量产宣称需客户、财报或第三方实测继续验证。

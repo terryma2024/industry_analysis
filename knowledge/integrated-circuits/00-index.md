@@ -2,7 +2,7 @@
 title: 集成电路 - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-06-11
+last_updated: 2026-09-21
 status: draft
 tags:
   - industry/integrated-circuits
@@ -43,10 +43,14 @@ sources:
 - [[integrated-circuits/05-investment-view|05-investment-view.md]]: 投资逻辑和风险。
 - [[integrated-circuits/06-career-view|06-career-view.md]]: 岗位地图和学习路径。
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11.md]]: AI 芯片全球上市公司、供应链关系与股票初筛。
+- [[integrated-circuits/research-notes/memristor-compute-in-memory-companies-and-stock-screen-2026-09-21|忆阻器存算一体企业、研发成果与上市公司半年股价调研]]: 区分研究芯片、ReRAM 存储/IP、工程产品和上市资本映射，并记录半年收盘价。
+- [[integrated-circuits/00-source-capture-index|Source Capture Index]]: 集成电路来源抓取状态与 raw 证据入口。
 
 ## 数据资产
 
 - `raw/integrated-circuits/data/ai_chip_listed_company_universe_2026-06-11.csv`: 第一版全球 AI 芯片及上下游上市公司筛选表。
+- `raw/integrated-circuits/data/memristor_cim_company_universe_2026-09-21.csv`: 国内外忆阻器存算一体企业/成果/成熟度候选池。
+- `raw/integrated-circuits/data/memristor_cim_listed_stock_6m_2026-09-21.csv`: 8 家上市映射公司近半年收盘价、区间高低和主题暴露说明。
 
 ## 关联连接
 

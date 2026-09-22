@@ -430,6 +430,7 @@ tags:
 - [[ai/research-notes/jepa-core-principles-2026-06-11|JEPA 核心原理快速调研]] — 系统拆解 JEPA、I-JEPA、V-JEPA、V-JEPA 2 与世界模型/机器人规划的核心原理、差异和局限。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] — 第一版全球 AI 芯片及上下游上市公司池，记录主营业务、公开供应链关系、近一年市值变化、筛选框架和待补证据。
+- [[integrated-circuits/research-notes/memristor-compute-in-memory-companies-and-stock-screen-2026-09-21|国内外忆阻器存算一体企业、研发成果与上市公司半年股价调研]] — R06/R04/R09 深研；区分研究芯片、ReRAM 存储/IP、工程样片和规模营收，并给出 8 家上市映射公司的半年收盘价与伪归因风险。
 - [[_syntheses/matlab-simulink-agentic-ai-tools-bilibili-2026-07-02|MATLAB/Simulink Agentic AI 工具链视频调研]] — 基于 Bilibili 视频和 MathWorks 官方 GitHub 项目，分析工程软件 Agent 化的工具层、技能层和反馈闭环。
 - [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]] — 从每日收藏夹成功转录的视频中抽取 VLA、世界模型、机器人数据基建、仿真资产、家庭机器人 PMF、ForceBand、ROS2/LiDAR 和 TensorRT 的 B 级研究线索。
 - [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]] — 从每日收藏夹成功转录视频中抽取 PhysisForcing 物理一致世界模型和 ESP Cloud 自然语言驱动嵌入式开发的 B 级线索。
