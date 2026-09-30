@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-09-12
+last_updated: 2026-09-30
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -13,6 +13,19 @@ aliases:
 ---
 
 # 机器人（具身智能） - 来源抽取索引
+
+## 2026-09-30 GPT-6-Astra 机器人控制复现来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`582`](../../raw/robotics-embodied-ai/documents/SRC-robotics-582-gpt-6-astra-model-api-documentation.md)–[`583`](../../raw/robotics-embodied-ai/documents/SRC-robotics-583-openai-function-calling-guide.md)、[`592`](../../raw/robotics-embodied-ai/documents/SRC-robotics-592-openai-api-deployment-checklist.md) | OpenAI 官方模型、函数调用与部署文档 | 核验图像输入、工具调用、Responses API、价格和高推理档请求参数；账号权限与每任务账单未验证。 |
+| [`584`](../../raw/robotics-embodied-ai/documents/SRC-robotics-584-quackd-readme-at-9777c0a.md) | quackd 固定提交 README | 核验 SO-101/Astra 真机作者演示、mock/MuJoCo/真机路径和 Apache-2.0；无独立真机复跑。 |
+| [`585`](../../raw/robotics-embodied-ai/documents/SRC-robotics-585-gpt-policy-readme-at-ab970d8.md)、[`590`](../../raw/robotics-embodied-ai/documents/SRC-robotics-590-in-context-robot-learning-with-vlm-agents.md) | GPT-Policy 代码说明与作者论文 | 核验 ARX/YAM 管线、闭环架构、许可待定和缺失评测资料；作者结果不可跨设备外推。 |
+| [`586`](../../raw/robotics-embodied-ai/documents/SRC-robotics-586-rpent-readme-at-ec4e18f.md) | RPent 固定提交 README | 核验 Astra/Codex 规划器 + 冻结 VLA 和 LIBERO-PRO 作者报告；需 GPU/资产/权重。 |
+| [`587`](../../raw/robotics-embodied-ai/documents/SRC-robotics-587-robodawn-readme-at-9247f36.md)、[`591`](../../raw/robotics-embodied-ai/documents/SRC-robotics-591-transferring-the-intelligence-of-vlms-to-robotic-control.md) | RoboDawn 代码说明与作者论文 | 核验仿真演示、命令语法、数据包及官方 API 高推理档参数待核验边界。 |
+| [`588`](../../raw/robotics-embodied-ai/documents/SRC-robotics-588-ros-mcp-server-readme-at-476591a.md)–[`589`](../../raw/robotics-embodied-ai/documents/SRC-robotics-589-lerobot-so-101-and-policy-docs.md) | ROS MCP 与 LeRobot 官方仓库文档 | 核验可复用的 ROS/臂接口；不构成 Astra 的独立成功证据。 |
+
+- 下游编译：[[research-notes/gpt-6-astra-open-robot-control-reproduction-2026-09-30|GPT-6-Astra 机器人控制开源复现项目调研]]。11 个本次新增来源均抓取成功；manifest 仍保留历史 `SRC-robotics-580` 失败项。
 
 ## 2026-09-19 PanoGS-SLAM 全景 3DGS-SLAM 来源
 

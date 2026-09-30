@@ -7,13 +7,17 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-09-02
+last_updated: 2026-09-30
 ---
 
 # 机器人（具身智能） - 研究中间笔记
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
+
+## 2026-09-30 GPT-6-Astra 控制机器人开源复现项目
+
+- [[gpt-6-astra-open-robot-control-reproduction-2026-09-30]]: R05/R04/R06；固定提交对比五条路线，给出 SO-101 quackd 复现、RPent 仿真、RoboDawn API 参数核验、GPT-Policy 许可限制及统一验收门槛。
 
 ## 2026-09-02 Microduck DIY 复刻与教学平台选型
 

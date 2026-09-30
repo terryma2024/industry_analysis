@@ -1084,3 +1084,10 @@ tags:
   - **结论**: ReRAM 存储/IP 已有商业化，但真正忆阻器-CIM 仍主要在研究芯片、工程样片或开发板前夜；TetraMem 最接近直接产品化，上市标的多数只是低纯度研发或参股映射。
   - **股票**: 统一按 2026-03-31 至最近完整收盘日计算 8 家上市映射公司价格变化，不含股息；明确不能把 HBM、代工或集团主业驱动的涨跌归因于忆阻器 CIM。
   - **限制**: `SRC-ic-048` 与 `052` 自动 PDF 下载失败；TetraMem、新忆页面使用 fallback HTML；厂商性能、交付和量产宣称需客户、财报或第三方实测继续验证。
+
+## [2026-09-30]
+
+- **research | GPT-6-Astra 控制机器人开源复现项目调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/gpt-6-astra-open-robot-control-reproduction-2026-09-30|R05/R04/R06 深研]]；登记并抓取 `SRC-robotics-582`–`592`，更新机器人 MOC、研究笔记、来源抽取索引和全局索引。
+  - **结论**: SO-101 真机低风险复现优先 quackd，仿真规划/VLA 优先 RPent，纯 VLM 离散动作研究用 RoboDawn；GPT-Policy 的 ARX/YAM 管线虽发布但许可待定且完整实验资料缺失。
+  - **限制**: 未运行付费模型、GPU 仿真或真机；作者报告成绩未独立复现。RoboDawn 文本调用不属于 API function calling，但默认 `temperature=0` 与 Astra 高推理档的官方请求要求不一致，需接口探针。

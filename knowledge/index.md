@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-09-20
+last_updated: 2026-09-30
 tags:
   - wiki
   - index
@@ -15,6 +15,7 @@ tags:
 
 ## Sources
 
+- [[robotics-embodied-ai/research-notes/gpt-6-astra-open-robot-control-reproduction-2026-09-30|GPT-6-Astra 机器人控制开源复现项目调研]] — R05/R04/R06；固定提交比较 quackd、RPent、RoboDawn、GPT-Policy 与 ROS MCP，提供 SO-101/仿真复现命令、API 参数核验、安全验收及许可边界。
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
 - [[_syntheses/bilibili-ai-daily-run-2026-09-20|Bilibili AI Daily Run 2026-09-20]] — 20 candidates; 19 duplicates and one unrelated anime, so no transcript or deep research was created.
 - [[_sources/bilibili-bv1zdey61eqm-slam-ep003-panogs-slam-3dgs-slam|【每日SLAM论文讲解 EP003】PanoGS-SLAM：全景相机遇上 3DGS，第一个全景高斯SLAM来了]] — Bilibili B 级线索已由作者预印本交叉核验；关联 [[_syntheses/bilibili-panogs-slam-panoramic-3dgs-deep-dive-2026-09-19|PanoGS-SLAM 单视频深度调研]]。

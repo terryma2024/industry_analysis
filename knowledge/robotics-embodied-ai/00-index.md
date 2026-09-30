@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-09-12
+last_updated: 2026-09-30
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -13,6 +13,8 @@ sources:
 ---
 
 # 机器人（具身智能） - 研究入口
+
+- [[research-notes/gpt-6-astra-open-robot-control-reproduction-2026-09-30|GPT-6-Astra 控制机器人开源复现项目调研]]：R05/R04/R06；SO-101 优先 quackd，仿真研究比较 RPent/RoboDawn，并核验 GPT-Policy 许可与 ROS MCP 接入边界。
 
 ## 当前摘要
 
