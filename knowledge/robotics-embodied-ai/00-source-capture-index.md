@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-09-30
+last_updated: 2026-10-20
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -13,6 +13,11 @@ aliases:
 ---
 
 # 机器人（具身智能） - 来源抽取索引
+
+## 2026-10-20 触觉末端来源
+
+- [[_sources/tactile-end-effectors-source-set-2026-10-20|25条来源与本地证据]]：SRC-robotics-593–617；22条干净抽取，602为HTML回退，605/607为403失败，后3条有网页核阅选摘。自动失败记录保留，未修改历史raw正文。
+- [[robotics-embodied-ai/research-notes/tactile-end-effectors-hands-grippers-selection-2026-10-20|方案报告]]：20个方案组、分层选型和验收。
 
 ## 2026-09-30 GPT-6-Astra 机器人控制复现来源
 

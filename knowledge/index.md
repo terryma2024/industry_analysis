@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-09-30
+last_updated: 2026-10-20
 tags:
   - wiki
   - index
@@ -14,6 +14,8 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/tactile-end-effectors-source-set-2026-10-20|触觉末端方案来源集]] — 25条官方产品/SDK/论文，保留自动抓取失败与网页核阅补录边界。
 
 - [[robotics-embodied-ai/research-notes/gpt-6-astra-open-robot-control-reproduction-2026-09-30|GPT-6-Astra 机器人控制开源复现项目调研]] — R05/R04/R06；固定提交比较 quackd、RPent、RoboDawn、GPT-Policy 与 ROS MCP，提供 SO-101/仿真复现命令、API 参数核验、安全验收及许可边界。
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
@@ -255,6 +257,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[robotics-embodied-ai/research-notes/tactile-end-effectors-hands-grippers-selection-2026-10-20|触觉末端执行器：灵巧手、夹爪与改装方案]] — R06/R05/R04；20个方案组、国产短名单、触觉数据与闭环边界、TCO、商业场景和PoC。
 
 - [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck DIY 复刻可行性与教学平台选型]] — R05 主分类、R08/R04 次分类：忠实复刻缺制造资料和零售 BOM 优势；学习者优先仿真并在交付后购买，独立 DIY 应按新机器人研发验收。
 - [[_syntheses/bilibili-embodied-ai-crossroads-data-model-scenario-deep-dive-2026-09-15|具身智能十字路口：数据、模型与场景商业化验证]] — R07/R04/R02：仿真、真机数据和上层模型须以真机 holdout、任务 SLA、现场成本和持续付费共同验收。

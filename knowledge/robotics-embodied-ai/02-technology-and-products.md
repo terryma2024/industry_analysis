@@ -12,6 +12,10 @@ aliases:
 
 # 机器人（具身智能） - 技术与产品
 
+## 触觉末端执行器专题（2026-10-20）
+
+- [[robotics-embodied-ai/research-notes/tactile-end-effectors-hands-grippers-selection-2026-10-20|有触觉的末端执行器方案]]：双指触觉夹爪、多指手与传感器改装的可交付边界；力分辨率、精度、采样率、通信与闭环分别核验。
+
 ## 技术路线
 
 | 路线 | 原理/特点 | 成熟度 | 优势 | 风险 | 代表玩家 |

@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-09-30
+last_updated: 2026-10-20
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -13,6 +13,10 @@ sources:
 ---
 
 # 机器人（具身智能） - 研究入口
+
+## 2026-10-20 触觉末端执行器方案
+
+- [[robotics-embodied-ai/research-notes/tactile-end-effectors-hands-grippers-selection-2026-10-20|灵巧手、触觉夹爪与改装方案]]：R06/R05/R04；20个方案组、25条来源，区分触觉选配、采样与闭环、真实触点与派生属性，提供分层短名单、TCO与PoC。
 
 - [[research-notes/gpt-6-astra-open-robot-control-reproduction-2026-09-30|GPT-6-Astra 控制机器人开源复现项目调研]]：R05/R04/R06；SO-101 优先 quackd，仿真研究比较 RPent/RoboDawn，并核验 GPT-Policy 许可与 ROS MCP 接入边界。
 

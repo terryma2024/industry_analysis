@@ -1091,3 +1091,11 @@ tags:
   - **变更**: 新增 [[robotics-embodied-ai/research-notes/gpt-6-astra-open-robot-control-reproduction-2026-09-30|R05/R04/R06 深研]]；登记并抓取 `SRC-robotics-582`–`592`，更新机器人 MOC、研究笔记、来源抽取索引和全局索引。
   - **结论**: SO-101 真机低风险复现优先 quackd，仿真规划/VLA 优先 RPent，纯 VLM 离散动作研究用 RoboDawn；GPT-Policy 的 ARX/YAM 管线虽发布但许可待定且完整实验资料缺失。
   - **限制**: 未运行付费模型、GPU 仿真或真机；作者报告成绩未独立复现。RoboDawn 文本调用不属于 API function calling，但默认 `temperature=0` 与 Astra 高推理档的官方请求要求不一致，需接口探针。
+
+## [2026-10-20]
+
+- **research | 触觉灵巧手、夹爪与传感器改装方案调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/tactile-end-effectors-hands-grippers-selection-2026-10-20|R06/R05/R04报告]]、[[_sources/tactile-end-effectors-source-set-2026-10-20|来源集]]与20行候选CSV；登记SRC-robotics-593–617，更新行业、研究笔记、技术、来源与全局索引。
+  - **结论**: 常规触觉抓取先比较DM-Tac G/极光Lite；低维拟人抓取与高自由度手内操作分开选型；触觉选配、真实触点、力精度、采样与闭环不可混用。
+  - **证据**: 22条干净抓取、602为HTML回退、605/607为403失败；后3条另有网页核阅选摘，manifest失败记录保留。DIGIT设计CC-by-NC且归档；2FC页面写2027 Q1交付。
+  - **限制**: 价格/现货/寿命/闭环和客户复购待验证；无采购、外部联系、实机测试或训练。

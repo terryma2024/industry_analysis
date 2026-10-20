@@ -7,10 +7,14 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-09-30
+last_updated: 2026-10-20
 ---
 
 # 机器人（具身智能） - 研究中间笔记
+
+## 2026-10-20 触觉末端执行器
+
+- [[tactile-end-effectors-hands-grippers-selection-2026-10-20|触觉末端方案比较]]：国产夹爪/灵巧手、可更换皮肤与科研改装；20个方案组、采购状态、PoC、商业应用与创业切口。
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
