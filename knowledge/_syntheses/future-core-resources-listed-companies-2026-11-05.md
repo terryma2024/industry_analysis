@@ -264,7 +264,7 @@ Constellation已经包含Calpine资产，不能继续按“纯核电公司”理
 ## 知识冲突
 
 - **旧芯片股票池与当前时点：** [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|6月芯片股票池]]的市值/估值只代表当时；本报告未将它们沿用为11月估值。
-- **国产芯片利润增长与现金回报：** 此前9月国产GPU比较（本地草稿，未随本次提交发布）使用H1数据；本轮Q3累计数据表明海光CFO仍为负、寒武纪现金转换仍低。两份报告期间不同，不能用最新收入增长直接消除旧风险。
+- **国产芯片利润增长与现金回报：** [[integrated-circuits/research-notes/china-gpu-ai-chip-providers-investment-comparison-2026-09-22|9月国产GPU比较]]使用H1数据；本轮Q3累计数据表明海光CFO仍为负、寒武纪现金转换仍低。两份报告期间不同，不能用最新收入增长直接消除旧风险。
 - **平台“现金牛”与新AI投入：** 腾讯已有盈利业务与当前负FCF同时成立；要等后续采购、使用率和变现共同验证，不能只接受剔除预付款的口径。
 - **核电标签与资产边界：** Constellation并入Calpine后需重新拆核电/燃气和债务；SPGI分拆/战略评估后也需重新确认数据业务边界。[[_sources/future-core-resources-source-set-2026-11-05#S07|S07]][[_sources/future-core-resources-source-set-2026-11-05#S28|S28]]
 

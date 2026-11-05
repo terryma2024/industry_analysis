@@ -16,9 +16,11 @@ last_updated: 2026-10-26
 
 - [[robot-physics-engines-sim2real-2026-10-26|物理解算技术报告]]：R04/R05/R06；22候选、九类问题、22论文，59来源；明确未复现作者成绩或真机迁移。
 
+
 ## 2026-10-20 触觉末端执行器
 
 - [[tactile-end-effectors-hands-grippers-selection-2026-10-20|触觉末端方案比较]]：国产夹爪/灵巧手、可更换皮肤与科研改装；20个方案组、采购状态、PoC、商业应用与创业切口。
+
 
 > [!info]
 > 本目录保存专题深度调研的中间笔记。结论成熟后再汇总进入上层知识笔记，如 [[07-training-data|训练数据生产与处理]] 和 [[09-training-data-deep-dive|训练数据深度调研]]。
@@ -26,6 +28,10 @@ last_updated: 2026-10-26
 ## 2026-09-30 GPT-6-Astra 控制机器人开源复现项目
 
 - [[gpt-6-astra-open-robot-control-reproduction-2026-09-30]]: R05/R04/R06；固定提交对比五条路线，给出 SO-101 quackd 复现、RPent 仿真、RoboDawn API 参数核验、GPT-Policy 许可限制及统一验收门槛。
+
+## 2026-09-22 3DGS PLY 到 SimReady 仿真资产
+
+- [[3dgs-ply-to-simready-assets-for-robot-simulation-2026-09-22]]: R05 主分类、R04 次分类；明确 3DGS PLY 不是物理点云，设计“splat/render mesh + collision proxy + physics/semantics + runtime adapter”资产包，覆盖 Isaac Sim 6、MuJoCo、ManiSkill、三级验收、商业应用与创业边界。
 
 ## 2026-09-02 Microduck DIY 复刻与教学平台选型
 

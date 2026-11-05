@@ -16,18 +16,22 @@ tags:
 ## Sources
 
 - [[_sources/future-core-resources-valuation-source-set-2026-11-05|21家公司估值来源集]] — 41项增补来源；25证券2026-11-04收盘、ECB汇率、最新财务及抓取限制。
+
 - [[_syntheses/future-core-resources-listed-companies-2026-11-05|未来五类核心资源上市公司研究]] — R09/R06/R02；A股、港股、美股50家公司，现金质量、估值框架、风险及创业机会；未完成同日估值。
 - [[_sources/future-core-resources-source-set-2026-11-05|五类核心资源来源集]] — 53项来源及自动归档/网页摘记边界。
+
 
 - [[_sources/robot-physics-engines-sim2real-source-set-2026-10-26|机器人物理解算与Sim2Real来源集]] — 59条一级资料；区分平台/引擎/solver，保留RST回退、迁移路径失败与替代来源。
 - [[robotics-embodied-ai/research-notes/robot-physics-engines-sim2real-2026-10-26|机器人物理引擎与Sim2Real技术调研]] — R04/R05/R06；22个引擎/框架、九类误差、22篇论文与真实数据验证协议；无独立引擎或真机复现。
 - [[_concepts/robot-contact-model-solver-and-sim2real-gap|接触模型、数值误差与现实差距]] — 区分模型、离散、数值、梯度与闭环迁移评价。
+
 
 - [[_sources/emotional-consumption-listed-company-source-set-2026-10-22|实体情绪消费上市公司来源集]] — 18条来源记录，12家公司2026H1披露、政策及反方线索；保留004失败、018替代与015动态页回退。
 
 - [[_sources/tactile-end-effectors-source-set-2026-10-20|触觉末端方案来源集]] — 25条官方产品/SDK/论文，保留自动抓取失败与网页核阅补录边界。
 
 - [[robotics-embodied-ai/research-notes/gpt-6-astra-open-robot-control-reproduction-2026-09-30|GPT-6-Astra 机器人控制开源复现项目调研]] — R05/R04/R06；固定提交比较 quackd、RPent、RoboDawn、GPT-Policy 与 ROS MCP，提供 SO-101/仿真复现命令、API 参数核验、安全验收及许可边界。
+- [[_sources/3dgs-ply-to-simready-source-set|3DGS PLY 到 SimReady 仿真资产来源集]] — 3DGS 表示、Isaac Sim 6 ParticleField、SimReady、SuGaR/GOF、MuJoCo collision/USD 与 ManiSkill asset loader 的一级资料；区分原生外观、mesh 提取、碰撞代理和物理/语义合同。
 - [[_sources/wechat-microduck-diy-replica-analysis|Microduck DIY 复刻文章来源卡]] — C 级微信拆解经 Pollen Robotics、固定提交代码、ROBOTIS 与 Radxa 官方资料校正；已编译为 [[robotics-embodied-ai/research-notes/microduck-diy-replication-feasibility-2026-09-02|Microduck 复刻与教学平台选型]]。
 - [[_syntheses/bilibili-ai-daily-run-2026-09-20|Bilibili AI Daily Run 2026-09-20]] — 20 candidates; 19 duplicates and one unrelated anime, so no transcript or deep research was created.
 - [[_sources/bilibili-bv1zdey61eqm-slam-ep003-panogs-slam-3dgs-slam|【每日SLAM论文讲解 EP003】PanoGS-SLAM：全景相机遇上 3DGS，第一个全景高斯SLAM来了]] — Bilibili B 级线索已由作者预印本交叉核验；关联 [[_syntheses/bilibili-panogs-slam-panoramic-3dgs-deep-dive-2026-09-19|PanoGS-SLAM 单视频深度调研]]。
@@ -332,6 +336,7 @@ tags:
 - [[robotics-embodied-ai/research-notes/unreal-engine-in-robotics-and-embodied-ai-2026-08-06|Unreal Engine 在机器人与具身智能中的应用、开源项目和论文调研]] — R04 主分类、R05/R06 次分类：UE 最适合作为高真实感世界、观测、人机交互和数字孪生层；接触操作与控制优先采用 UE + MuJoCo/专用物理 + ROS 2，并以真机 holdout 验收。
 - [[robotics-embodied-ai/research-notes/unity-in-robotics-and-embodied-ai-2026-08-06|Unity 在机器人与具身智能中的应用、开源项目和论文调研]] — R04 主分类、R05/R06 次分类：Unity 强项是可编程交互世界、ML-Agents、AI2-THOR 家庭具身任务、VR 示教和 ROS/垂直模拟器；项目开源不代表 Unity/资产可商用。
 
+- [[robotics-embodied-ai/research-notes/3dgs-ply-to-simready-assets-for-robot-simulation-2026-09-22|3DGS PLY 到 SimReady 仿真资产技术调研]] — R05/R04：Isaac Sim 6 可原生渲染 ParticleField，但 MuJoCo/ManiSkill 需 render mesh 与独立 collider；给出输入审计、SuGaR/GOF/TSDF 路线、三引擎 adapter、三级验收和机器可读 pipeline。
 - [[robotics-embodied-ai/research-notes/3d-simulation-asset-production-pipelines-comparison-2026-08-06|3D 仿真资产生产技术管线综合调研]] — R05 主分类、R04/R02 次分类：比较九条资产生产路线，推荐“多源输入 + OpenUSD 规范化 + 物理/语义编译 + 多仿真器 adapter + 任务证据”的混合资产工厂；补充 Profile 版本冻结、零失败规范门、L1/L2/L3 三级验收与机器可读清单。
 
 - [[robotics-embodied-ai/research-notes/lightwheel-peer-companies-business-model-comparison-2026-08-06|光轮智能同类创业公司与商业模式对比调研]] — R06 主分类、R03/R07 次分类：Applied Intuition 是最接近的平台商业对标，Parallel Domain 最接近 Real2Sim 资产飞轮，求之科技是中国产品覆盖最相似候选，但商业质量均需合同、回款与复购穿透。
@@ -451,7 +456,8 @@ tags:
 - [[ai/research-notes/jepa-core-principles-2026-06-11|JEPA 核心原理快速调研]] — 系统拆解 JEPA、I-JEPA、V-JEPA、V-JEPA 2 与世界模型/机器人规划的核心原理、差异和局限。
 - [[_syntheses/china-umi-gripper-purchase-scan-2026-06-08|中国可购买 UMI 夹爪设备检索]] — 追踪 LUMOS FastUMI、觅蜂 MEgo Gripper、BeingBeyond U1 等 UMI-like 数采设备在中国的购买状态、价格线索和待验证事项。
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]] — 第一版全球 AI 芯片及上下游上市公司池，记录主营业务、公开供应链关系、近一年市值变化、筛选框架和待补证据。
-- [[integrated-circuits/research-notes/memristor-compute-in-memory-companies-and-stock-screen-2026-09-21|国内外忆阻器存算一体企业、研发成果与上市公司半年股价调研]] — R06/R04/R09 深研；区分研究芯片、ReRAM 存储/IP、工程样片和规模营收，并给出 8 家上市映射公司的半年收盘价与伪归因风险。
+- [[integrated-circuits/research-notes/memristor-compute-in-memory-companies-and-stock-screen-2026-09-21|国内外忆阻器存算一体企业、技术原理、规模化路线与上市公司调研]] — R06/R04/R09 深研；区分研究芯片、ReRAM 存储/IP、工程样片和规模营收，解释交叉阵列到大模型的容量、精度、ADC、互连、编译、训练与量产关口，并保留 8 家上市映射公司的半年行情。
+- [[integrated-circuits/research-notes/china-gpu-ai-chip-providers-investment-comparison-2026-09-22|中国 GPU 与 AI 芯片提供商投资比较]] — R09/R03/R04 深研；统一比较华为、寒武纪、海光、摩尔线程和沐曦的路线、产品、2025/2026H1 财务、客户集中、现金流、2026-09-21 市值和 TTM P/S。
 - [[_syntheses/matlab-simulink-agentic-ai-tools-bilibili-2026-07-02|MATLAB/Simulink Agentic AI 工具链视频调研]] — 基于 Bilibili 视频和 MathWorks 官方 GitHub 项目，分析工程软件 Agent 化的工具层、技能层和反馈闭环。
 - [[_syntheses/bilibili-embodied-ai-signals-2026-07-02|Bilibili 具身智能与 AI 工具链线索 2026-07-02]] — 从每日收藏夹成功转录的视频中抽取 VLA、世界模型、机器人数据基建、仿真资产、家庭机器人 PMF、ForceBand、ROS2/LiDAR 和 TensorRT 的 B 级研究线索。
 - [[_syntheses/bilibili-ai-embodied-signals-2026-07-03|Bilibili AI 与具身智能线索 2026-07-03]] — 从每日收藏夹成功转录视频中抽取 PhysisForcing 物理一致世界模型和 ESP Cloud 自然语言驱动嵌入式开发的 B 级线索。

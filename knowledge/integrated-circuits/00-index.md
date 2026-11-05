@@ -43,7 +43,8 @@ sources:
 - [[integrated-circuits/05-investment-view|05-investment-view.md]]: 投资逻辑和风险。
 - [[integrated-circuits/06-career-view|06-career-view.md]]: 岗位地图和学习路径。
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11.md]]: AI 芯片全球上市公司、供应链关系与股票初筛。
-- [[integrated-circuits/research-notes/memristor-compute-in-memory-companies-and-stock-screen-2026-09-21|忆阻器存算一体企业、研发成果与上市公司半年股价调研]]: 区分研究芯片、ReRAM 存储/IP、工程产品和上市资本映射，并记录半年收盘价。
+- [[integrated-circuits/research-notes/memristor-compute-in-memory-companies-and-stock-screen-2026-09-21|忆阻器存算一体企业、技术原理、规模化路线与上市公司调研]]: 区分研究芯片、ReRAM 存储/IP、工程产品和上市资本映射；解释交叉阵列、全栈架构及走向大模型的十个工程关口。
+- [[integrated-circuits/research-notes/china-gpu-ai-chip-providers-investment-comparison-2026-09-22|中国 GPU 与 AI 芯片提供商投资比较]]: 对比华为、摩尔线程、寒武纪、沐曦和海光的路线、产品、2025/2026H1 财务、市值、估值、客户集中与现金流风险。
 - [[integrated-circuits/00-source-capture-index|Source Capture Index]]: 集成电路来源抓取状态与 raw 证据入口。
 
 ## 数据资产
@@ -51,6 +52,7 @@ sources:
 - `raw/integrated-circuits/data/ai_chip_listed_company_universe_2026-06-11.csv`: 第一版全球 AI 芯片及上下游上市公司筛选表。
 - `raw/integrated-circuits/data/memristor_cim_company_universe_2026-09-21.csv`: 国内外忆阻器存算一体企业/成果/成熟度候选池。
 - `raw/integrated-circuits/data/memristor_cim_listed_stock_6m_2026-09-21.csv`: 8 家上市映射公司近半年收盘价、区间高低和主题暴露说明。
+- `raw/integrated-circuits/data/china-gpu-ai-chip-investment-comparison-2026-09-22.csv`: 五家公司路线、财务、客户集中度、固定日期市值和 TTM P/S 对比。
 
 ## 关联连接
 

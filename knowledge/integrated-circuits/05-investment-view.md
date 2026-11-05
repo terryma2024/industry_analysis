@@ -2,7 +2,7 @@
 title: 集成电路 - 投资视角
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-06-11
+last_updated: 2026-09-22
 status: draft
 tags:
   - industry/integrated-circuits
@@ -55,9 +55,17 @@ sources:
 - 定制 ASIC 大规模侵蚀通用 GPU 训练/推理利润池。
 - 中国国产 AI 芯片无法解决软件生态、可用性和供给问题，导致订单无法持续。
 
+## 中国 GPU/AI 芯片专项更新
+
+- 2025 年报和 2026H1 显示，海光信息、寒武纪已进入规模与利润兑现阶段；摩尔线程、沐曦仍需用扣非利润和经营现金流证明盈利质量。
+- 2026-09-21 的简化 TTM P/S 约为：海光 31.8x、寒武纪 72.7x、摩尔线程 76.2x、沐曦 109.9x。高增长不自动等于有安全边际。
+- 四家上市公司的前五大客户占比为 61.46%–91.36%；海光第一大关联客户占 56.68%，客户结构、应收和回款应进入核心估值折扣。
+- 详见 [[integrated-circuits/research-notes/china-gpu-ai-chip-providers-investment-comparison-2026-09-22|中国 GPU 与 AI 芯片提供商投资比较]]。
+
 ## 关联连接
 
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]]
+- [[integrated-circuits/research-notes/china-gpu-ai-chip-providers-investment-comparison-2026-09-22|中国 GPU 与 AI 芯片提供商投资比较]]
 - [[integrated-circuits/04-companies|集成电路 - 公司与竞争]]
 
 ## 核心资源估值跟进（2026-11-05）

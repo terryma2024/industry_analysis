@@ -19,10 +19,12 @@ aliases:
 - [[_sources/robot-physics-engines-sim2real-source-set-2026-10-26|59条官方资料、论文与抓取边界]]：SRC-robotics-618–676；57条ok（含3份PDF），623为RST纯文本回退，674旧latest路径失败、676新路径成功。
 - [[robotics-embodied-ai/research-notes/robot-physics-engines-sim2real-2026-10-26|技术报告]]：22个候选和22篇论文；论文作者报告与本地验证分开，未改写历史raw正文。
 
+
 ## 2026-10-20 触觉末端来源
 
 - [[_sources/tactile-end-effectors-source-set-2026-10-20|25条来源与本地证据]]：SRC-robotics-593–617；22条干净抽取，602为HTML回退，605/607为403失败，后3条有网页核阅选摘。自动失败记录保留，未修改历史raw正文。
 - [[robotics-embodied-ai/research-notes/tactile-end-effectors-hands-grippers-selection-2026-10-20|方案报告]]：20个方案组、分层选型和验收。
+
 
 ## 2026-09-30 GPT-6-Astra 机器人控制复现来源
 
@@ -36,6 +38,19 @@ aliases:
 | [`588`](../../raw/robotics-embodied-ai/documents/SRC-robotics-588-ros-mcp-server-readme-at-476591a.md)–[`589`](../../raw/robotics-embodied-ai/documents/SRC-robotics-589-lerobot-so-101-and-policy-docs.md) | ROS MCP 与 LeRobot 官方仓库文档 | 核验可复用的 ROS/臂接口；不构成 Astra 的独立成功证据。 |
 
 - 下游编译：[[research-notes/gpt-6-astra-open-robot-control-reproduction-2026-09-30|GPT-6-Astra 机器人控制开源复现项目调研]]。11 个本次新增来源均抓取成功；manifest 仍保留历史 `SRC-robotics-580` 失败项。
+
+## 2026-09-22 3DGS PLY 到 SimReady 仿真资产来源
+
+| SRC | raw artifact | 用途与边界 |
+|---|---|---|
+| [`SRC-robotics-571`](../../raw/robotics-embodied-ai/documents/SRC-robotics-571-3d-gaussian-splatting-for-real-time-radiance-field-rendering-official-repository.md)、[`581`](../../raw/robotics-embodied-ai/documents/SRC-robotics-581-omniverse-gsplat-converter-user-manual.md) | 3DGS 官方实现、Omniverse converter contract | 核验标准 PLY 的位置/尺度/旋转/opacity/SH 字段；PLY 方言仍需逐文件审计。 |
+| [`SRC-robotics-572`](../../raw/robotics-embodied-ai/documents/SRC-robotics-572-gaussian-splats-particle-fields-in-omniverse.md)–[`574`](../../raw/robotics-embodied-ai/documents/SRC-robotics-574-simready-specification-and-physics-best-practices.md) | Omniverse ParticleField、Isaac Sim 6 NuRec、SimReady | 核验原生 splat 渲染与 SimReady 元数据/物理合同；ParticleField 没有明确定义表面，不能替代 collider。 |
+| [`SRC-robotics-575`](../../raw/robotics-embodied-ai/documents/SRC-robotics-575-sugar-surface-aligned-gaussian-splatting-official-implementation.md)–[`576`](../../raw/robotics-embodied-ai/documents/SRC-robotics-576-gaussian-opacity-fields-official-implementation.md) | SuGaR、Gaussian Opacity Fields | 核验 3DGS 训练链中的 mesh 提取；作者结果不保证任意 PLY 一键生产级转换。 |
+| [`SRC-robotics-577`](../../raw/robotics-embodied-ai/documents/SRC-robotics-577-mujoco-collision-detection-and-modeling-documentation.md)–[`579`](../../raw/robotics-embodied-ai/documents/SRC-robotics-579-maniskill-loading-actors-and-articulations-documentation.md) | MuJoCo collision/OpenUSD、ManiSkill loader | 核验凸碰撞、实验性 USD import 与 visual/collision/physics 分层；不证明两者原生渲染 ParticleField。 |
+
+- `SRC-robotics-580` SAPIEN 教程自动抓取因网络/SSL 超时失败，已在 manifest 保留 `failed`；其内容未作为独立关键证据。
+- 来源卡：[[_sources/3dgs-ply-to-simready-source-set|3DGS PLY 到 SimReady 来源集]]。
+- 下游编译：[[research-notes/3dgs-ply-to-simready-assets-for-robot-simulation-2026-09-22|3DGS PLY 到 SimReady 仿真资产技术调研]]。
 
 ## 2026-09-19 PanoGS-SLAM 全景 3DGS-SLAM 来源
 

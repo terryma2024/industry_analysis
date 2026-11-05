@@ -2,13 +2,14 @@
 title: 集成电路 - 公司与竞争
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-06-11
+last_updated: 2026-09-22
 status: draft
 tags:
   - industry/integrated-circuits
 sources:
   - integrated-circuits/sources.csv
   - raw/integrated-circuits/data/ai_chip_listed_company_universe_2026-06-11.csv
+  - raw/integrated-circuits/data/china-gpu-ai-chip-investment-comparison-2026-09-22.csv
 ---
 
 # 集成电路 - 公司与竞争
@@ -27,7 +28,11 @@ sources:
 | AMAT/LRCX/KLAC/TEL | 半导体设备 | 设备+服务 | 晶圆厂/存储厂 | 受益先进制程和存储扩产 | 设备周期、出口限制 | SRC-ic-016 |
 | Cadence/Synopsys/Arm | EDA/IP | 软件授权、IP授权、版税 | 芯片设计公司 | 高毛利、高粘性 | 出口限制、估值 | SRC-ic-016 |
 | Amkor/ASE/JCET/Tongfu/Huatian | 封装测试 | 封装和测试服务 | 芯片设计/IDM/代工生态 | 先进封装需求提升 | 毛利低、客户议价强 | SRC-ic-010 |
-| 寒武纪/海光信息 | 中国 AI 芯片 | 加速器、CPU/DCU、软件栈 | 中国数据中心/政企客户待逐项核验 | 国产替代弹性 | 制程、生态、估值 | SRC-ic-023, SRC-ic-024 |
+| 华为昇腾 | 中国 AI 芯片/系统 | NPU、整机、SuperPoD、CANN | 数据中心、政企、运营商 | 系统工程、交付与生态 | 非上市；昇腾分部财务不披露 | SRC-ic-068, SRC-ic-069 |
+| 寒武纪 | 中国 AI 加速器 | MLU、NeuWare、云端产品 | 中国数据中心/政企 | AI 专注、收入利润快速兑现 | 产品和客户集中、估值 | SRC-ic-077 至 SRC-ic-079 |
+| 海光信息 | 中国 CPU/DCU | x86 兼容 CPU、DCU、DTK | 数据中心、政企、科研 | CPU+DCU 组合、规模与利润 | 关联客户集中、分部透明度 | SRC-ic-080, SRC-ic-081 |
+| 摩尔线程 | 中国全功能 GPU | MUSA、GPU、集群 | AI、图形、HPC、云桌面 | 通用生态期权 | 扣非与现金流待验证 | SRC-ic-070 至 SRC-ic-072 |
+| 沐曦股份 | 中国 GPGPU | N/C/G/X 产品族、MXMACA | AI、图形、HPC | 产品族清晰、收入增长 | 核心盈利与现金流待验证 | SRC-ic-073 至 SRC-ic-076 |
 | 北方华创/中微公司/拓荆/华海清科 | 中国设备 | 设备销售和服务 | 国内晶圆厂 | 国产替代核心 | 技术差距、订单周期 | SRC-ic-026 至 SRC-ic-029 |
 
 ## 竞争格局
@@ -41,11 +46,13 @@ sources:
 ## 需要跟踪的公司
 
 - 上市公司：见 `raw/integrated-circuits/data/ai_chip_listed_company_universe_2026-06-11.csv`。
-- 未上市公司：Huawei Ascend/海思、Biren、Moore Threads、Iluvatar、燧原、沐曦、曦智科技等需要另建未上市观察表。
+- 已上市国产算力：寒武纪、海光信息、摩尔线程、沐曦股份；详见公司投资比较报告。
+- 未上市公司：Huawei Ascend/海思、壁仞科技、天数智芯、燧原科技、曦智科技等需单独建立观察表；华为为非上市集团，不应使用公开市值口径横比。
 - 海外公司：NVIDIA、AMD、Broadcom、Marvell、TSMC、ASML、SK hynix、Micron、Samsung、AMAT、LRCX、KLAC、TEL、Advantest、Teradyne。
 - 产业链关键供应商：HBM、先进封装、EUV、测试、光互连、PCB/载板。
 
 ## 关联连接
 
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]]
+- [[integrated-circuits/research-notes/china-gpu-ai-chip-providers-investment-comparison-2026-09-22|中国 GPU 与 AI 芯片提供商投资比较]]
 - [[integrated-circuits/05-investment-view|集成电路 - 投资视角]]

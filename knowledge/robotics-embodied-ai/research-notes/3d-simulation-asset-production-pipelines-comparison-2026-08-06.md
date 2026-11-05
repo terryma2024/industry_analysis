@@ -2,7 +2,7 @@
 title: 3D 仿真资产生产技术管线综合调研与方案对比
 type: synthesis
 date_created: 2026-08-06
-last_updated: 2026-08-06
+last_updated: 2026-09-22
 sources:
   - knowledge/_sources/3d-simulation-asset-production-pipeline-source-set.md
   - raw/robotics-embodied-ai/data/3d-simulation-asset-production-routes-comparison-2026-08-06.csv
@@ -472,6 +472,7 @@ MuJoCo 官方文档明确区分 visual mesh 与碰撞：任意三角网格可以
 
 ## 关联连接
 
+- [[robotics-embodied-ai/research-notes/3dgs-ply-to-simready-assets-for-robot-simulation-2026-09-22|3DGS PLY 到 SimReady 仿真资产技术调研]]
 - [[robotics-embodied-ai/research-notes/isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo]]
 - [[robotics-embodied-ai/research-notes/roboverse-platform-and-real-data-deep-dive-2026-07-28|RoboVerse 与 Real2Sim 数据增益]]
 - [[robotics-embodied-ai/research-notes/lightwheel-company-and-commercial-model-deep-dive-2026-08-06|光轮智能与 SimReady 商业模式]]

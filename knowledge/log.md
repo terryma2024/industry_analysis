@@ -1085,6 +1085,25 @@ tags:
   - **股票**: 统一按 2026-03-31 至最近完整收盘日计算 8 家上市映射公司价格变化，不含股息；明确不能把 HBM、代工或集团主业驱动的涨跌归因于忆阻器 CIM。
   - **限制**: `SRC-ic-048` 与 `052` 自动 PDF 下载失败；TetraMem、新忆页面使用 fallback HTML；厂商性能、交付和量产宣称需客户、财报或第三方实测继续验证。
 
+## [2026-09-22]
+
+- **research update | 忆阻器存算一体技术原理与大规模 AI 路线**
+  - **变更**: 向 [[integrated-circuits/research-notes/memristor-compute-in-memory-companies-and-stock-screen-2026-09-21|原调研报告]] 追加 R04/R05 技术深挖，新增 `SRC-ic-058` 至 `067` 十条论文 raw artifact，并更新行业 MOC、全局索引和来源抓取索引。
+  - **结论**: 交叉阵列已能用欧姆/基尔霍夫定律执行并行 VMM；走向大模型仍需跨过器件一致性、ADC/DAC、有效精度、容量/3D、互连、编译、KV cache/动态状态、训练耐久、量产测试和系统 TCO 十个关口。
+  - **规模边界**: 清华 8 芯片原型约容纳 57.6 万个 4-bit 有符号权重；7B W4 模型为 3.5 GB 权重，机械外推约需 1.2 万套该原型。该估算只说明数量级鸿沟，不作成本或产品预测。
+  - **限制**: 现有 LLM 证据以器件模型、硬件感知训练和 3D/MoE 架构模拟为主；尚缺至少 1B 级模型在物理忆阻器硬件上的端到端 token/s、p99、墙插功耗和长期稳定性公开验证。
+
+- **research | 3DGS PLY 到 SimReady 仿真资产技术调研**
+  - **变更**: 新增 [[robotics-embodied-ai/research-notes/3dgs-ply-to-simready-assets-for-robot-simulation-2026-09-22|R05/R04 深研]]、[[_sources/3dgs-ply-to-simready-source-set|来源集]] 与机器可读 pipeline CSV；登记 `SRC-robotics-571`–`581`，更新全局/行业/来源/研究笔记索引。
+  - **结论**: 3DGS PLY 是外观表示而非物理点云；Isaac Sim 6 可原生渲染 OpenUSD ParticleField，但 MuJoCo/ManiSkill 与三引擎共享仍需 render mesh、独立 collider、实测物性、语义和 runtime adapter。
+  - **限制**: SuGaR/GOF 不是任意 PLY 的无损一键转换；用户实际 PLY、传感器 annotator、几何/物理误差和目标硬件性能尚待 PoC。`SRC-robotics-580` 自动抓取因网络/SSL 超时失败并已在 manifest 留痕。
+
+- **research | 中国 GPU 与 AI 芯片提供商商业投资比较**
+  - **变更**: 新增 [[integrated-circuits/research-notes/china-gpu-ai-chip-providers-investment-comparison-2026-09-22|R09/R03/R04 深研]] 与机器可读比较 CSV；登记并捕获 `SRC-ic-068` 至 `092`，更新公司、投资、行业、全局与来源抓取索引。
+  - **结论**: 海光和寒武纪进入规模与利润兑现层，但客户集中和估值约束显著；摩尔线程、沐曦仍处于高增长但扣非利润与经营现金流待验证层；华为是系统级产业标杆而非同口径可交易标的。
+  - **估值**: 按 2026-09-21 不复权收盘价和简化 TTM 收入，海光、寒武纪、摩尔线程、沐曦 P/S 约为 31.8x、72.7x、76.2x、109.9x；不把沐曦公允价值收益当作主业盈利拐点。
+  - **限制**: 缺少统一第三方性能/集群 benchmark；华为昇腾分部财务、海光 CPU/DCU 拆分和多家公司客户复购信息不足；市值为单日快照。
+
 ## [2026-09-30]
 
 - **research | GPT-6-Astra 控制机器人开源复现项目调研**
