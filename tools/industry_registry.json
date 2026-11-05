@@ -9,5 +9,6 @@
   {"name": "未来能源", "slug": "future-energy"},
   {"name": "量子科技", "slug": "quantum-technology"},
   {"name": "脑机接口", "slug": "brain-computer-interface"},
-  {"name": "6G", "slug": "6g"}
+  {"name": "6G", "slug": "6g"},
+  {"name": "情绪价值实体消费", "slug": "emotional-consumption"}
 ]

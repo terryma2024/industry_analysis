@@ -28,6 +28,8 @@
 
 ## 分类入口
 
+- [[emotional-consumption/00-index|情绪价值实体消费]]：年轻人潮玩、毛绒、谷子与IP文创的上市公司研究。
+
 - [[news/00-index|新闻速记]]：临时新闻、文章、视频和音频摘要。
 - [[ai/00-index|AI]]
 - [[future-energy/00-index|未来能源]]

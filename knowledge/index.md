@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-10-20
+last_updated: 2026-10-22
 tags:
   - wiki
   - index
@@ -14,6 +14,8 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/emotional-consumption-listed-company-source-set-2026-10-22|实体情绪消费上市公司来源集]] — 18条来源记录，12家公司2026H1披露、政策及反方线索；保留004失败、018替代与015动态页回退。
 
 - [[_sources/tactile-end-effectors-source-set-2026-10-20|触觉末端方案来源集]] — 25条官方产品/SDK/论文，保留自动抓取失败与网页核阅补录边界。
 
@@ -242,6 +244,8 @@ tags:
 
 ## Concepts
 
+- [[_concepts/emotional-consumption-ip-exposure|IP权利与收入暴露]] — 区分版权、授权、分销、业务收入及青年收入代理指标。
+
 - [[_concepts/llm-wiki|LLM Wiki]] — 以 Markdown wiki 作为 LLM 可维护的持久知识编译层。
 - [[_concepts/knowledge-compilation|Knowledge Compilation]] — 把原始来源在摄入阶段编译为可复用、可链接、可审计的知识资产。
 - [[_concepts/source-traceability|Source Traceability]] — 本仓库的核心质量约束：重要判断必须能回到原始来源。
@@ -257,6 +261,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[emotional-consumption/research-notes/china-emotional-value-physical-goods-stock-screen-2026-10-22|中国年轻人实体情绪消费股票池]] — R09/R06/R03；12家公司分层、2026H1财务、风险/证伪、估值框架及小团队机会，当前估值待统一快照。
 
 - [[robotics-embodied-ai/research-notes/tactile-end-effectors-hands-grippers-selection-2026-10-20|触觉末端执行器：灵巧手、夹爪与改装方案]] — R06/R05/R04；20个方案组、国产短名单、触觉数据与闭环边界、TCO、商业场景和PoC。
 
@@ -443,6 +449,8 @@ tags:
 - [[_syntheses/bilibili-esp-claw-embedded-ai-deep-dive-2026-07-03|ESP-Claw 自然语言驱动嵌入式开发视频深度调研]] — 对 `BV1PCjA6bEi4` 做单视频深研，并用乐鑫 ESP-Claw 官网、文档和 GitHub 校验项目形态。
 
 ## Industries
+
+- [[emotional-consumption/00-index|情绪价值实体消费]] — 潮玩、毛绒、拼搭、谷子与IP文创，排除纯服务，珠宝单列扩展池。
 
 - [[6g/00-index|6G]] — 6G 初步调研入口，覆盖 IMT-2030、通感一体、空天地一体和运营商/设备商链条。
 - [[aerospace/00-index|航空航天]] — 航空航天初步调研入口，覆盖商业航天、卫星互联网、发射与空间基础设施。

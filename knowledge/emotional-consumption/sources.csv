@@ -1,0 +1,19 @@
+id,title,source_type,publisher,date,url_or_path,evidence_grade,notes
+SRC-emotion-001,Pop Mart 2026 interim results,filing,泡泡玛特,2026-08-20,https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0820/2026082000354_c.pdf,S,财务及IP/品类/地域收入，半年报口径
+SRC-emotion-002,Bloks 2026 interim report,filing,布鲁可,2026-09-16,https://www.hkexnews.hk/listedco/listconews/sehk/2026/0916/2026091600892_c.pdf,S,拼搭角色玩具与授权IP集中度
+SRC-emotion-003,MINISO 2026 interim report,filing,名创优品,2026-09-24,https://www.hkexnews.hk/listedco/listconews/sehk/2026/0924/2026092400867_c.pdf,S,TOP TOY分部、非IFRS调整与投资损益
+SRC-emotion-004,M and G 2026 half year report,filing,晨光股份,2026-08-29,https://www.mg-pen.com/uploadfiles/2026/09/20260907171238515.pdf,S,九木杂物社分部与集团稀释
+SRC-emotion-005,Guangbo 2026 half year report,filing,广博股份（新浪公告转载）,2026-08-22,https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-8/2026-08-22/12514844.PDF,S,公司公告原文的第三方PDF载体；优先以交易所版本复核
+SRC-emotion-006,Alpha Group 2026 half year report,filing,奥飞娱乐,2026-08-25,https://static.cninfo.com.cn/finalpage/2026-08-25/1225496186.PDF,S,玩点无限及非经常损益
+SRC-emotion-007,Shifeng 2026 half year report,filing,实丰文化,2026-08-29,https://static.cninfo.com.cn/finalpage/2026-08-29/1225525206.PDF,S,潮流玩具、智能玩具收入及游戏业务
+SRC-emotion-008,Rastar 2026 half year report,filing,星辉娱乐,2026-08-29,https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-29/6f0fe6bf-6d60-449a-abfa-7a520dc9d048.PDF,S,车模及游戏足球业务稀释
+SRC-emotion-009,Cre8 2026 half year report,filing,创源股份（新浪公告转载）,2026-08-27,https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12546470&stockid=300703,S,公司公告转载，创酷未来90%为交易安排，非酷乐集团90%
+SRC-emotion-010,Wahlap 2026 half year report,filing,华立科技（新浪公告转载）,2026-08-27,https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12545608&stockid=301011,S,公司公告转载，卡牌与游艺服务混合
+SRC-emotion-011,Laopu Gold 2026 interim report,filing,老铺黄金,2026-09-23,https://www.hkexnews.hk/listedco/listconews/sehk/2026/0923/2026092300467_c.pdf,S,高客单珠宝扩展观察，非年轻人纯标的
+SRC-emotion-012,CHJ 2026 half year results summary,filing,潮宏基（东方财富公告转载）,2026-08-27,https://data.eastmoney.com/notices/detail/002345/AN202608260006752020.html,S,公司公告摘要转载，珠宝收入非纯情绪消费
+SRC-emotion-013,China consumption action plan 2025,policy,中办国办/工信部转新华社,2025-03-16,https://www.miit.gov.cn/xwfb/szyw/art/2025/art_7db74afdaaac4b77abcc70f669bb998d.html,S,第十八项原创IP及周边衍生消费
+SRC-emotion-014,SAMR blind box guidelines 2023,policy,国家市场监管总局,2023-06-08,https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zfjcs/art/2023/art_e2facd76a7fb4e90b03912cffb5e7d53.html,S,未成年人、概率公示与营销规范
+SRC-emotion-015,Pop Mart investor announcements index,web,泡泡玛特,2026-10-22,https://www.popmart.com.cn/home/investor,S,动态目录，仅检索时点；不能证明截至日所有公告完备
+SRC-emotion-016,Goldman channel tracker reported October 2026,web,观点网转述高盛,2026-10-13,https://www.guandian.hk/article/20261013/10027563.html,B,线上渠道跟踪为反方线索，不等于公司总收入或审计数据
+SRC-emotion-017,Kayou IPO progress September 2026,web,财中社,2026-09-14,https://m.caizhongshe.cn/article-6095735797259138888.html,B,仅作待上市观察；非当日上市状态的一级证明
+SRC-emotion-018,M and G 2026 half year report official disclosure,filing,晨光股份/巨潮资讯,2026-08-29,https://static.cninfo.com.cn/finalpage/2026-08-29/1225530466.PDF,S,替代官网返回HTML的失败抓取；保留SRC-emotion-004原始返回以审计
