@@ -1,0 +1,5 @@
+﻿name,h_ticker,h_price_hkd,a_ticker,a_price_cny,cny_to_hkd,h_price_cny,a_premium,h_buy_low,h_buy_high,a_buy_low,a_buy_high,tax_basis
+中国广核,1816.HK,3.47,003816.SZ,4.69,1.1758782606382272,2.951,0.589299,2.75,3.15,2.35,2.65,pre-tax; dividend withholding/FX/fees depend on access route; not an arbitrage
+中国海油,0883.HK,23.78,600938.SH,33.15,1.1758782606382272,20.2232,0.639208,16.3,18.7,13.9,15.9,pre-tax; dividend withholding/FX/fees depend on access route; not an arbitrage
+紫金矿业,2899.HK,29.38,601899.SH,29.25,1.1758782606382272,24.9856,0.170675,17.6,20.4,15.0,17.3,pre-tax; dividend withholding/FX/fees depend on access route; not an arbitrage
+中国神华,1088.HK,43.6,601088.SH,50.98,1.1758782606382272,37.0787,0.374915,23.8,27.2,20.2,23.1,pre-tax; dividend withholding/FX/fees depend on access route; not an arbitrage

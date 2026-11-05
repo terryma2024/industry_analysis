@@ -2,7 +2,7 @@
 title: 未来能源 Source Capture Index
 type: index
 date_created: 2026-06-29
-last_updated: 2026-06-29
+last_updated: 2026-11-05
 status: draft
 tags:
   - industry/future-energy
@@ -30,3 +30,13 @@ tags:
 ## 关联连接
 
 - [[00-index|未来能源 - 研究入口]]
+
+## 五类核心资源跨市场研究（2026-11-05）
+
+- [[_syntheses/future-core-resources-listed-companies-2026-11-05|50家上市公司筛选与财务反证]]
+- [[_sources/future-core-resources-source-set-2026-11-05|来源集、原始材料与抓取状态]]
+
+## 核心资源估值跟进（2026-11-05）
+
+- [[_syntheses/future-core-resources-valuation-2026-11-05|21家公司估值与10家候选]]：统一2026-11-04收盘价、正常化盈利、三情景与买入区间；与前轮产业质量筛选分开。
+- [[_sources/future-core-resources-valuation-source-set-2026-11-05|估值来源集与归档限制]]：41条增补记录，部分下载失败或正文过薄，另有网页核阅摘记。

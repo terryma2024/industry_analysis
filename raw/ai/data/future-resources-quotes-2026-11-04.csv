@@ -1,0 +1,8 @@
+ticker,price,currency,date,time,type,url,sector,source_id
+GOOGL,288.93,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/googl/history/,ai,SRC-ai-val-001
+SPGI,481.69,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/spgi/history/,ai,SRC-ai-val-002
+ICE,174.92,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/ice/history/,ai,SRC-ai-val-003
+TRI,117.23,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/tri/history/,ai,SRC-ai-val-004
+MSFT,555.8,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/msft/history/,ai,SRC-ai-val-005
+AMZN,266.03,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/amzn/history/,ai,SRC-ai-val-006
+0700.HK,401.6,HKD,2026-11-04,16:15 HKT quote / next-day previous-close,close-or-previous-close,https://content.etnet.com.hk/content/cpyrevamp/sc/stock_quote.php?code=00700,ai,SRC-ai-val-015

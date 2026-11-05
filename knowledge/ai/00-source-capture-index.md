@@ -2,7 +2,7 @@
 title: AI Source Capture Index
 type: index
 date_created: 2026-06-02
-last_updated: 2026-09-04
+last_updated: 2026-11-05
 status: active
 tags:
   - industry/ai
@@ -106,3 +106,13 @@ sources:
 - [[sources.csv|AI sources.csv]]
 - [[research-notes/scale-ai-and-china-data-infrastructure-peers-2026-06-02|Scale AI 发展历程与中国对标公司]]
 - [[research-notes/google-mediapipe-comprehensive-guide-2026-07-14|Google MediaPipe 全面调研：功能、原理与使用方法]]
+
+## 五类核心资源跨市场研究（2026-11-05）
+
+- [[_syntheses/future-core-resources-listed-companies-2026-11-05|50家上市公司筛选与财务反证]]
+- [[_sources/future-core-resources-source-set-2026-11-05|来源集、原始材料与抓取状态]]
+
+## 核心资源估值跟进（2026-11-05）
+
+- [[_syntheses/future-core-resources-valuation-2026-11-05|21家公司估值与10家候选]]：统一2026-11-04收盘价、正常化盈利、三情景与买入区间；与前轮产业质量筛选分开。
+- [[_sources/future-core-resources-valuation-source-set-2026-11-05|估值来源集与归档限制]]：41条增补记录，部分下载失败或正文过薄，另有网页核阅摘记。

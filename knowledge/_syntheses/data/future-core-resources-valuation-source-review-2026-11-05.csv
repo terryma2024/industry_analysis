@@ -1,0 +1,42 @@
+﻿source_id,title,grade,url,capture_status,thin_extraction,raw_path,review_note
+SRC-ai-val-001,GOOGL close 2026-11-04,B,https://stockanalysis.com/stocks/googl/history/,ok,False,raw/ai/documents/SRC-ai-val-001-googl-close-2026-11-04.md,
+SRC-ai-val-002,SPGI close 2026-11-04,B,https://stockanalysis.com/stocks/spgi/history/,ok,False,raw/ai/documents/SRC-ai-val-002-spgi-close-2026-11-04.md,
+SRC-ai-val-003,ICE close 2026-11-04,B,https://stockanalysis.com/stocks/ice/history/,ok,False,raw/ai/documents/SRC-ai-val-003-ice-close-2026-11-04.md,
+SRC-ai-val-004,TRI close 2026-11-04,B,https://stockanalysis.com/stocks/tri/history/,ok,False,raw/ai/documents/SRC-ai-val-004-tri-close-2026-11-04.md,
+SRC-ai-val-005,MSFT close 2026-11-04,B,https://stockanalysis.com/stocks/msft/history/,ok,False,raw/ai/documents/SRC-ai-val-005-msft-close-2026-11-04.md,
+SRC-ai-val-006,AMZN close 2026-11-04,B,https://stockanalysis.com/stocks/amzn/history/,ok,False,raw/ai/documents/SRC-ai-val-006-amzn-close-2026-11-04.md,
+SRC-ic-val-007,NVDA close 2026-11-04,B,https://stockanalysis.com/stocks/nvda/history/,ok,False,raw/integrated-circuits/documents/SRC-ic-val-007-nvda-close-2026-11-04.md,
+SRC-ic-val-008,AVGO close 2026-11-04,B,https://stockanalysis.com/stocks/avgo/history/,ok,False,raw/integrated-circuits/documents/SRC-ic-val-008-avgo-close-2026-11-04.md,
+SRC-ic-val-009,TSM close 2026-11-04,B,https://stockanalysis.com/stocks/tsm/history/,ok,False,raw/integrated-circuits/documents/SRC-ic-val-009-tsm-close-2026-11-04.md,
+SRC-ic-val-010,ASML close 2026-11-04,B,https://stockanalysis.com/stocks/asml/history/,ok,False,raw/integrated-circuits/documents/SRC-ic-val-010-asml-close-2026-11-04.md,
+SRC-ic-val-011,KLAC close 2026-11-04,B,https://stockanalysis.com/stocks/klac/history/,ok,False,raw/integrated-circuits/documents/SRC-ic-val-011-klac-close-2026-11-04.md,
+SRC-energy-val-012,ETN close 2026-11-04,B,https://stockanalysis.com/stocks/etn/history/,ok,False,raw/future-energy/documents/SRC-energy-val-012-etn-close-2026-11-04.md,
+SRC-energy-val-013,BHP close 2026-11-04,B,https://stockanalysis.com/stocks/bhp/history/,ok,False,raw/future-energy/documents/SRC-energy-val-013-bhp-close-2026-11-04.md,
+SRC-energy-val-014,AEM close 2026-11-04,B,https://stockanalysis.com/stocks/aem/history/,ok,False,raw/future-energy/documents/SRC-energy-val-014-aem-close-2026-11-04.md,
+SRC-ai-val-015,0700.HK close 2026-11-04,B,https://content.etnet.com.hk/content/cpyrevamp/sc/stock_quote.php?code=00700,ok,False,raw/ai/documents/SRC-ai-val-015-0700-hk-close-2026-11-04.md,
+SRC-energy-val-016,1816.HK close 2026-11-04,B,https://content.etnet.com.hk/content/cpyrevamp/sc/stock_quote.php?code=01816,ok,False,raw/future-energy/documents/SRC-energy-val-016-1816-hk-close-2026-11-04.md,
+SRC-energy-val-017,0883.HK close 2026-11-04,B,https://content.etnet.com.hk/content/cpyrevamp/sc/stock_quote.php?code=00883,ok,False,raw/future-energy/documents/SRC-energy-val-017-0883-hk-close-2026-11-04.md,
+SRC-energy-val-018,1088.HK close 2026-11-04,B,https://content.etnet.com.hk/content/cpyrevamp/sc/stock_quote.php?code=01088,ok,False,raw/future-energy/documents/SRC-energy-val-018-1088-hk-close-2026-11-04.md,
+SRC-energy-val-019,2899.HK close 2026-11-04,B,https://content.etnet.com.hk/content/cpyrevamp/sc/stock_quote.php?code=02899,ok,False,raw/future-energy/documents/SRC-energy-val-019-2899-hk-close-2026-11-04.md,
+SRC-ic-val-020,002371.SZ close 2026-11-04,B,https://cn.investing.com/equities/sevenstar-elec-a-historical-data,failed,False,,raw/integrated-circuits/documents/SRC-ic-val-020-web-review-note.md
+SRC-energy-val-021,600900.SH close 2026-11-04,B,https://cn.investing.com/equities/yangtze-power-historical-data,failed,False,,raw/future-energy/documents/SRC-energy-val-021-web-review-note.md
+SRC-energy-val-022,003816.SZ close 2026-11-04,B,https://cn.investing.com/equities/cgn-power-historical-data,failed,False,,raw/future-energy/documents/SRC-energy-val-022-web-review-note.md
+SRC-energy-val-023,600938.SH close 2026-11-04,B,https://summary.jrj.com.cn/stock/sh/600938,ok,False,raw/future-energy/documents/SRC-energy-val-023-600938-sh-close-2026-11-04.md,
+SRC-energy-val-024,601088.SH close 2026-11-04,B,https://palmmicro.com/woody/res/mystockcn.php?symbol=SH601088,ok,False,raw/future-energy/documents/SRC-energy-val-024-601088-sh-close-2026-11-04.md,
+SRC-energy-val-025,601899.SH close 2026-11-04,B,https://summary.jrj.com.cn/stock/sh/601899,ok,False,raw/future-energy/documents/SRC-energy-val-025-601899-sh-close-2026-11-04.md,
+SRC-ai-val-101,ECB EUR USD reference rate,S,https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html,ok,False,raw/ai/documents/SRC-ai-val-101-ecb-eur-usd-reference-rate.md,
+SRC-ai-val-102,ECB EUR HKD reference rate,S,https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-hkd.en.html,ok,False,raw/ai/documents/SRC-ai-val-102-ecb-eur-hkd-reference-rate.md,
+SRC-ai-val-103,ECB EUR CNY reference rate,S,https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-cny.pl.html,ok,False,raw/ai/documents/SRC-ai-val-103-ecb-eur-cny-reference-rate.md,
+SRC-ai-val-104,Amazon Q3 2026 earnings PDF,S,https://ir.aboutamazon.com/files/doc_earnings/2026/q3/earnings-result/AMZN-Q3-2026-Earnings-Release.pdf,failed,False,,raw/ai/documents/SRC-ai-val-104-web-review-note.md
+SRC-ic-val-105,Broadcom Q3 2026 Form 10Q,S,https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm,ok,False,raw/integrated-circuits/documents/SRC-ic-val-105-broadcom-q3-2026-form-10q.md,
+SRC-ic-val-106,ASML Q3 2026 US GAAP statements,S,https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm,ok,False,raw/integrated-circuits/documents/SRC-ic-val-106-asml-q3-2026-us-gaap-statements.md,
+SRC-energy-val-107,CNOOC Q3 2026 full report,S,https://static.cninfo.com.cn/finalpage/2026-10-31/1225649273.PDF,ok,False,raw/future-energy/documents/SRC-energy-val-107-cnooc-q3-2026-full-report.pdf,
+SRC-energy-val-108,BHP FY2026 exchange release,S,https://www.bhp.com/-/media/documents/media/reports-and-presentations/2026/260818_bhpresultsfortheyearended30june2026_exchangerelease.pdf,failed,False,,raw/future-energy/documents/SRC-energy-val-108-web-review-note.md
+SRC-energy-val-109,BHP ADS ratio FAQ,S,https://www.bhp.com/investor-centre/shareholder-information/frequently-asked-questions,failed,False,,raw/future-energy/documents/SRC-energy-val-109-web-review-note.md
+SRC-energy-val-110,Shenhua Q3 2026 full report mirror,B,https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12657705&stockid=601088,ok,False,raw/future-energy/documents/SRC-energy-val-110-shenhua-q3-2026-full-report-mirror.md,
+SRC-energy-val-111,Agnico Eagle Q3 2026 detailed release,S,https://www.agnicoeagle.com/English/news-and-media/news-releases/news-details/2026/AGNICO-EAGLE-REPORTS-THIRD-QUARTER-2026-RESULTS---STRONG-FREE-CASH-FLOW-GENERATION-DRIVEN-BY-SOLID-OPERATIONAL-PERFORMANCE-ON-TRACK-TO-ACHIEVE-2026-PRODUCTION-AND-COST-GUIDANCE/default.aspx,ok,False,raw/future-energy/documents/SRC-energy-val-111-agnico-eagle-q3-2026-detailed-release.md,raw/future-energy/documents/SRC-energy-val-111-web-review-note.md
+SRC-ai-val-112,Thomson Reuters Q3 2026 release alternate,S,https://ir.thomsonreuters.com/news-releases/news-release-details/thomson-reuters-reports-third-quarter-2026-results,failed,False,,raw/ai/documents/SRC-ai-val-112-web-review-note.md
+SRC-ic-val-113,TSMC Q3 2026 presentation,S,https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/9f58506f6f114f91cefbf86820cc63297b39b130/3Q26%20Presentation%20(E).pdf,failed,False,,raw/integrated-circuits/documents/SRC-ic-val-113-web-review-note.md
+SRC-ic-val-114,TSMC Q3 2026 earnings release ADR,S,https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/526b65af7305df2dde6b9ece6812b1fdf1e49f9b/3Q26%20EarningsRelease.pdf,failed,False,,raw/integrated-circuits/documents/SRC-ic-val-114-web-review-note.md
+SRC-energy-val-115,Shenhua A close crosscheck,B,https://hk.investing.com/equities/china-shenhua-historical-data,failed,False,,raw/future-energy/documents/SRC-energy-val-115-web-review-note.md
+SRC-energy-val-116,Shenhua H close crosscheck,B,https://hk.finance.yahoo.com/quote/1088.HK/history/,fallback_html,True,raw/future-energy/documents/SRC-energy-val-116-shenhua-h-close-crosscheck.md,raw/future-energy/documents/SRC-energy-val-116-web-review-note.md

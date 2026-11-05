@@ -2,7 +2,7 @@
 title: 集成电路 Source Capture Index
 type: index
 date_created: 2026-09-21
-last_updated: 2026-09-21
+last_updated: 2026-11-05
 sources:
   - integrated-circuits/sources.csv
   - raw/integrated-circuits/documents/source_capture_manifest.csv
@@ -46,3 +46,13 @@ tags:
 - [[00-index|集成电路 - 研究入口]]
 - [[research-notes/memristor-compute-in-memory-companies-and-stock-screen-2026-09-21|国内外忆阻器存算一体企业、研发成果与上市公司半年股价调研]]
 - [[sources.csv|集成电路 sources.csv]]
+
+## 五类核心资源跨市场研究（2026-11-05）
+
+- [[_syntheses/future-core-resources-listed-companies-2026-11-05|50家上市公司筛选与财务反证]]
+- [[_sources/future-core-resources-source-set-2026-11-05|来源集、原始材料与抓取状态]]
+
+## 核心资源估值跟进（2026-11-05）
+
+- [[_syntheses/future-core-resources-valuation-2026-11-05|21家公司估值与10家候选]]：统一2026-11-04收盘价、正常化盈利、三情景与买入区间；与前轮产业质量筛选分开。
+- [[_sources/future-core-resources-valuation-source-set-2026-11-05|估值来源集与归档限制]]：41条增补记录，部分下载失败或正文过薄，另有网页核阅摘记。

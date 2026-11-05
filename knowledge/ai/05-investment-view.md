@@ -64,3 +64,8 @@ sources:
 - [[00-index|AI 相关 - 研究入口]]
 - [[04-companies|AI 相关 - 公司与竞争]]
 - [[integrated-circuits/07-ai-chip-global-supply-chain-and-stock-screen-2026-06-11|AI 芯片全球上市公司、供应链关系与股票初筛]]
+
+## 核心资源估值跟进（2026-11-05）
+
+- [[_syntheses/future-core-resources-valuation-2026-11-05|21家公司估值与10家候选]]：统一2026-11-04收盘价、正常化盈利、三情景与买入区间；与前轮产业质量筛选分开。
+- [[_sources/future-core-resources-valuation-source-set-2026-11-05|估值来源集与归档限制]]：41条增补记录，部分下载失败或正文过薄，另有网页核阅摘记。

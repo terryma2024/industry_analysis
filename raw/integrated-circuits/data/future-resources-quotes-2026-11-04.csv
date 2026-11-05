@@ -1,0 +1,7 @@
+ticker,price,currency,date,time,type,url,sector,source_id
+NVDA,200.13,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/nvda/history/,integrated-circuits,SRC-ic-val-007
+AVGO,325.48,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/avgo/history/,integrated-circuits,SRC-ic-val-008
+TSM,395.75,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/tsm/history/,integrated-circuits,SRC-ic-val-009
+ASML,1496.3,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/asml/history/,integrated-circuits,SRC-ic-val-010
+KLAC,149.79,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/klac/history/,integrated-circuits,SRC-ic-val-011
+002371.SZ,535.5,CNY,2026-11-04,15:00 CST close (vendor timestamp varies),regular-session-close,https://cn.investing.com/equities/sevenstar-elec-a-historical-data,integrated-circuits,SRC-ic-val-020

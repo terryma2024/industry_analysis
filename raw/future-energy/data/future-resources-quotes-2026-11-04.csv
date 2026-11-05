@@ -1,0 +1,13 @@
+ticker,price,currency,date,time,type,url,sector,source_id
+ETN,353.08,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/etn/history/,future-energy,SRC-energy-val-012
+BHP,80.14,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/bhp/history/,future-energy,SRC-energy-val-013
+AEM,183.45,USD,2026-11-04,16:00 EST,regular-session-close,https://stockanalysis.com/stocks/aem/history/,future-energy,SRC-energy-val-014
+1816.HK,3.47,HKD,2026-11-04,16:15 HKT quote / next-day previous-close,close-or-previous-close,https://content.etnet.com.hk/content/cpyrevamp/sc/stock_quote.php?code=01816,future-energy,SRC-energy-val-016
+0883.HK,23.78,HKD,2026-11-04,16:15 HKT quote / next-day previous-close,close-or-previous-close,https://content.etnet.com.hk/content/cpyrevamp/sc/stock_quote.php?code=00883,future-energy,SRC-energy-val-017
+1088.HK,43.6,HKD,2026-11-04,16:15 HKT quote / next-day previous-close,close-or-previous-close,https://content.etnet.com.hk/content/cpyrevamp/sc/stock_quote.php?code=01088,future-energy,SRC-energy-val-018
+2899.HK,29.38,HKD,2026-11-04,16:15 HKT quote / next-day previous-close,close-or-previous-close,https://content.etnet.com.hk/content/cpyrevamp/sc/stock_quote.php?code=02899,future-energy,SRC-energy-val-019
+600900.SH,29.67,CNY,2026-11-04,15:00 CST close (vendor timestamp varies),regular-session-close,https://cn.investing.com/equities/yangtze-power-historical-data,future-energy,SRC-energy-val-021
+003816.SZ,4.69,CNY,2026-11-04,15:00 CST close (vendor timestamp varies),regular-session-close,https://cn.investing.com/equities/cgn-power-historical-data,future-energy,SRC-energy-val-022
+600938.SH,33.15,CNY,2026-11-04,15:00 CST close (vendor timestamp varies),regular-session-close,https://summary.jrj.com.cn/stock/sh/600938,future-energy,SRC-energy-val-023
+601088.SH,50.98,CNY,2026-11-04,15:00 CST close (vendor timestamp varies),regular-session-close,https://palmmicro.com/woody/res/mystockcn.php?symbol=SH601088,future-energy,SRC-energy-val-024
+601899.SH,29.25,CNY,2026-11-04,15:00 CST close (vendor timestamp varies),regular-session-close,https://summary.jrj.com.cn/stock/sh/601899,future-energy,SRC-energy-val-025

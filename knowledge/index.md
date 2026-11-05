@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-10-26
+last_updated: 2026-11-05
 tags:
   - wiki
   - index
@@ -14,6 +14,10 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/future-core-resources-valuation-source-set-2026-11-05|21家公司估值来源集]] — 41项增补来源；25证券2026-11-04收盘、ECB汇率、最新财务及抓取限制。
+- [[_syntheses/future-core-resources-listed-companies-2026-11-05|未来五类核心资源上市公司研究]] — R09/R06/R02；A股、港股、美股50家公司，现金质量、估值框架、风险及创业机会；未完成同日估值。
+- [[_sources/future-core-resources-source-set-2026-11-05|五类核心资源来源集]] — 53项来源及自动归档/网页摘记边界。
 
 - [[_sources/robot-physics-engines-sim2real-source-set-2026-10-26|机器人物理解算与Sim2Real来源集]] — 59条一级资料；区分平台/引擎/solver，保留RST回退、迁移路径失败与替代来源。
 - [[robotics-embodied-ai/research-notes/robot-physics-engines-sim2real-2026-10-26|机器人物理引擎与Sim2Real技术调研]] — R04/R05/R06；22个引擎/框架、九类误差、22篇论文与真实数据验证协议；无独立引擎或真机复现。
@@ -265,6 +269,8 @@ tags:
 - [[_claims/README|Claims Index]] — 原子化、可溯源判断的登记区；当前先建规则，后续在研究深化时逐条抽取。
 
 ## Syntheses
+
+- [[_syntheses/future-core-resources-valuation-2026-11-05|21家公司估值、安全边际与10家候选]] — R09/R08/R06；三情景、未来EPS、A/H比价、买入区间与可复算模型；仅腾讯进入本轮严格区间。
 
 - [[emotional-consumption/research-notes/china-emotional-value-physical-goods-stock-screen-2026-10-22|中国年轻人实体情绪消费股票池]] — R09/R06/R03；12家公司分层、2026H1财务、风险/证伪、估值框架及小团队机会，当前估值待统一快照。
 
