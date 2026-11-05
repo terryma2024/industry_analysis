@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-10-22
+last_updated: 2026-10-26
 tags:
   - wiki
   - index
@@ -14,6 +14,10 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/robot-physics-engines-sim2real-source-set-2026-10-26|机器人物理解算与Sim2Real来源集]] — 59条一级资料；区分平台/引擎/solver，保留RST回退、迁移路径失败与替代来源。
+- [[robotics-embodied-ai/research-notes/robot-physics-engines-sim2real-2026-10-26|机器人物理引擎与Sim2Real技术调研]] — R04/R05/R06；22个引擎/框架、九类误差、22篇论文与真实数据验证协议；无独立引擎或真机复现。
+- [[_concepts/robot-contact-model-solver-and-sim2real-gap|接触模型、数值误差与现实差距]] — 区分模型、离散、数值、梯度与闭环迁移评价。
 
 - [[_sources/emotional-consumption-listed-company-source-set-2026-10-22|实体情绪消费上市公司来源集]] — 18条来源记录，12家公司2026H1披露、政策及反方线索；保留004失败、018替代与015动态页回退。
 

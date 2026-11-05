@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-10-20
+last_updated: 2026-10-26
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -13,6 +13,10 @@ sources:
 ---
 
 # 机器人（具身智能） - 研究入口
+
+## 2026-10-26 机器人物理引擎与Sim2Real
+
+- [[robotics-embodied-ai/research-notes/robot-physics-engines-sim2real-2026-10-26|物理解算技术调研]]：22个开源/专有候选、PGS/TGS/凸优化等路线、九类迁移误差与22篇论文；技术为主，商业仅作适用性说明。
 
 ## 2026-10-20 触觉末端执行器方案
 

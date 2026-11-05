@@ -1,0 +1,196 @@
+---
+source_id: "SRC-robotics-637"
+title: "Jolt Physics official repository and license"
+source_type: "repository"
+publisher: "Jolt Physics"
+source_date: "待验证"
+url: "https://github.com/jrouwe/JoltPhysics"
+evidence_grade: "S"
+capture_method: "defuddle"
+captured_at: "2026-10-26T01:35:43+00:00"
+tags:
+  - raw/source
+  - source-type/repository
+  - evidence/s
+aliases:
+  - SRC-robotics-637
+---
+# Jolt Physics official repository and license
+
+[![CLA assistant](https://camo.githubusercontent.com/b9758c9c09d4a5b2432c60484173b0bebbcba6cbb905fec3428b68e1ea4bd945/68747470733a2f2f636c612d617373697374616e742e696f2f726561646d652f62616467652f6a726f7577652f4a6f6c7450687973696373)](https://cla-assistant.io/jrouwe/JoltPhysics) [![Build Status](https://github.com/jrouwe/JoltPhysics/actions/workflows/build.yml/badge.svg)](https://github.com/jrouwe/JoltPhysics/actions/) [![Quality Gate Status](https://camo.githubusercontent.com/cfc2c8a944a4a2996fd2ccff5db128eaff8446bf0b1b53ae3a506b739e2caaa9/68747470733a2f2f736f6e6172636c6f75642e696f2f6170692f70726f6a6563745f6261646765732f6d6561737572653f70726f6a6563743d6a726f7577655f4a6f6c7450687973696373266d65747269633d616c6572745f737461747573)](https://sonarcloud.io/dashboard?id=jrouwe_JoltPhysics) [![Bugs](https://camo.githubusercontent.com/b5c17252fddbc6f635aede8dcdbc3ae72b49c34fd2a7bebf08e71b47ae65cc34/68747470733a2f2f736f6e6172636c6f75642e696f2f6170692f70726f6a6563745f6261646765732f6d6561737572653f70726f6a6563743d6a726f7577655f4a6f6c7450687973696373266d65747269633d62756773)](https://sonarcloud.io/dashboard?id=jrouwe_JoltPhysics) [![Code Smells](https://camo.githubusercontent.com/dbc941a45aacd63c53e4e96a5b2c3130a337007b77fc759d3ed7f139422cbe05/68747470733a2f2f736f6e6172636c6f75642e696f2f6170692f70726f6a6563745f6261646765732f6d6561737572653f70726f6a6563743d6a726f7577655f4a6f6c7450687973696373266d65747269633d636f64655f736d656c6c73)](https://sonarcloud.io/dashboard?id=jrouwe_JoltPhysics) [![Coverage](https://camo.githubusercontent.com/70fabbab2eac17ee0ac6669ccb7b1f99c6e7aada7ee657143adaec48757de797/68747470733a2f2f736f6e6172636c6f75642e696f2f6170692f70726f6a6563745f6261646765732f6d6561737572653f70726f6a6563743d6a726f7577655f4a6f6c7450687973696373266d65747269633d636f766572616765)](https://sonarcloud.io/dashboard?id=jrouwe_JoltPhysics)
+
+## Jolt Physics
+
+A multi core friendly rigid body physics and collision detection library. Suitable for games and VR applications. Used by Horizon Forbidden West and Death Stranding 2: On the Beach.
+
+[![Horizon Forbidden West Cover Art](https://camo.githubusercontent.com/c6c0b589b1aa9174417313811ea75605d3079242fd3d1326d5e8289702347f77/68747470733a2f2f6a726f7577652e6e6c2f6a6f6c742f486f72697a6f6e5f466f7262696464656e5f576573742e706e67)](https://www.playstation.com/en-us/games/horizon-forbidden-west/) [![Death Stranding 2 Cover Art](https://camo.githubusercontent.com/c72327b80b4128a9f156aa1727cd86b62341321ff0310821a94b3a6f301ff016/68747470733a2f2f6a726f7577652e6e6c2f6a6f6c742f44656174685f537472616e64696e675f322e706e67)](https://www.playstation.com/en-us/games/death-stranding-2-on-the-beach/)
+
+| [![Ragdoll Pile](https://camo.githubusercontent.com/96f9501e5569da8bd652045809c6abdb53784c0f9b92ee78369a2367f6e7b084/68747470733a2f2f696d672e796f75747562652e636f6d2f76692f707779435730794e4b4d412f687164656661756c742e6a7067)](https://www.youtube.com/watch?v=pwyCW0yNKMA) |
+| --- |
+| *A YouTube video showing a ragdoll pile simulated with Jolt Physics.* |
+
+For more demos and [videos](https://www.youtube.com/watch?v=pwyCW0yNKMA&list=PLYXVwtOr1CBxbA50jVg2dKUQvHW_5OOom) go to the [Samples](https://github.com/jrouwe/JoltPhysics/blob/master/Docs/Samples.md) section.
+
+## Design considerations
+
+Why create yet another physics engine? Firstly, it has been a personal learning project. Secondly, I wanted to address some issues that I had with existing physics engines:
+
+- Games do more than simulating physics. These things happen across multiple threads. We emphasize on concurrently accessing physics data outside of the main simulation update:
+	- Sections of the simulation can be loaded / unloaded in the background. We prepare a batch of physics bodies on a background thread without locking or affecting the simulation. We insert the batch into the simulation with a minimal impact on performance.
+		- Collision queries can run parallel to adding / removing or updating a body. If a change to a body happened on the same thread, the change will be immediately visible. If the change happened on another thread, the query will see a consistent before or after state. An alternative would be to have a read and write version of the world. This prevents changes from being visible immediately, so we avoid this.
+		- Collision queries can run parallel to the main physics simulation. We do a coarse check (broad phase query) before the simulation step and do fine checks (narrow phase query) in the background. This way, long running processes (like navigation mesh generation) can be spread out across multiple frames.
+- Accidental wake up of bodies cause performance problems when loading / unloading content. Therefore, bodies will not automatically wake up when created. Neighboring bodies will not be woken up when bodies are removed. This can be triggered manually if desired.
+- The simulation runs deterministically. You can replicate a simulation to a remote client by merely replicating the inputs to the simulation. Read the [Deterministic Simulation](https://jrouwe.github.io/JoltPhysics/#deterministic-simulation) section to understand the limits.
+- We try to simulate behavior of rigid bodies in the real world but make approximations. Therefore, this library should mainly be used for games or VR simulations.
+
+## Features
+
+- Simulation of rigid bodies of various shapes using continuous collision detection:
+	- Sphere
+		- Box
+		- Capsule
+		- Tapered-capsule
+		- Cylinder
+		- Tapered-cylinder
+		- Convex hull
+		- Plane
+		- Compound
+		- Mesh (triangle)
+		- Terrain (height field)
+- Simulation of constraints between bodies:
+	- Fixed
+		- Point
+		- Distance (including springs)
+		- Hinge
+		- Slider (also called prismatic)
+		- Cone
+		- Rack and pinion
+		- Gear
+		- Pulley
+		- Smooth spline paths
+		- Swing-twist (for humanoid shoulders)
+		- 6 DOF
+- Motors to drive the constraints.
+- Collision detection:
+	- Casting rays.
+		- Testing shapes vs shapes.
+		- Casting a shape vs another shape.
+		- Broadphase only tests to quickly determine which objects may intersect.
+- Sensors (trigger volumes).
+- Animated ragdolls:
+	- Hard keying (kinematic only rigid bodies).
+		- Soft keying (setting velocities on dynamic rigid bodies).
+		- Driving constraint motors to an animated pose.
+		- Mapping a high detail (animation) skeleton onto a low detail (ragdoll) skeleton and vice versa.
+- Game character simulation (capsule)
+	- Rigid body character. Moves during the physics simulation. Cheapest option and most accurate collision response between character and dynamic bodies.
+		- Virtual character. Does not have a rigid body in the simulation but simulates one using collision checks. Updated outside of the physics update for more control. Less accurate interaction with dynamic bodies.
+- Vehicles
+	- Wheeled vehicles.
+		- Tracked vehicles.
+		- Motorcycles.
+- Soft body simulation (e.g. a soft ball or piece of cloth).
+	- Edge constraints.
+		- Dihedral bend constraints.
+		- Cosserat rod constraints (an edge with an orientation that can be used to orient geometry, e.g. a plant leaf).
+		- Tetrahedron volume constraints.
+		- Long range attachment constraints (also called tethers).
+		- Limiting the simulation to stay within a certain range of a skinned vertex.
+		- Internal pressure.
+		- Collision with simulated rigid bodies.
+		- Collision tests against soft bodies.
+- A strand based hair simulation running on GPU
+	- System is based on Cosserad rods.
+		- Can use long range attachment constraints to limit the stretch of hairs.
+		- Supports simulation (guide) and render (follow) hairs.
+		- Hair vs hair collision is handled by accumulating the average velocity in a grid and using those velocities to drive hairs.
+		- Supports collision with the environment, although it only supports ConvexHull and CompoundShapes at the moment.
+		- The roots of the hairs can be skinned to the scalp mesh.
+- Water buoyancy calculations.
+- An optional double precision mode that allows large worlds.
+
+## Supported platforms
+
+- Windows x86/x64/ARM64
+- Linux (tested on Ubuntu) x86/x64/ARM32/ARM64/RISC-V64/LoongArch64/PowerPC64LE
+- FreeBSD
+- Android x86/x64/ARM32/ARM64
+- Platform Blue (a popular game console) x64
+- macOS x64/ARM64
+- iOS x64/ARM64
+- MSYS2 MinGW64
+- WebAssembly, see [this](https://github.com/jrouwe/JoltPhysics.js) separate project.
+
+## Required CPU features
+
+- On x86/x64 the minimal requirements are SSE2. The library can be compiled using SSE4.1, SSE4.2, AVX, AVX2, or AVX512.
+- On ARM64 (AArch64) the library uses NEON and is compatible with Armv8-A. On ARM32 (AArch32) it doesn't use any special CPU instructions.
+
+## Documentation
+
+To get started, look at the [HelloWorld](https://github.com/jrouwe/JoltPhysics/blob/master/HelloWorld/HelloWorld.cpp) example. A [HelloWorld example using CMake FetchContent](https://github.com/jrouwe/JoltPhysicsHelloWorld) is also available to show how you can integrate Jolt Physics in a CMake project.
+
+Every feature in Jolt has its own sample. [Running the Samples application](https://github.com/jrouwe/JoltPhysics/blob/master/Docs/Samples.md) and browsing through the [code](https://github.com/jrouwe/JoltPhysics/tree/master/Samples/Tests) is a great way to learn about the library!
+
+To learn more about Jolt go to the latest [Architecture and API documentation](https://jrouwe.github.io/JoltPhysics/). Documentation for [a specific release is also available](https://jrouwe.github.io/JoltPhysicsDocs/).
+
+Some algorithms used by Jolt are described in detail in my GDC 2022 talk: Architecting Jolt Physics for 'Horizon Forbidden West' ([slides](https://gdcvault.com/play/1027560/Architecting-Jolt-Physics-for-Horizon), [slides with speaker notes](https://jrouwe.nl/architectingjolt/ArchitectingJoltPhysics_Rouwe_Jorrit_Notes.pdf), [video](https://gdcvault.com/play/1027891/Architecting-Jolt-Physics-for-Horizon)).
+
+## Compiling
+
+- Compiles with Visual Studio 2022+, Clang 16+ or GCC 12+.
+- Uses C++ 17.
+- Depends only on the standard template library.
+- Doesn't use RTTI.
+- Doesn't use exceptions.
+
+If you want to run on Platform Blue you'll need to provide your own build environment and PlatformBlue.h due to NDA requirements. This file is available on the Platform Blue developer forum.
+
+For build instructions go to the [Build](https://github.com/jrouwe/JoltPhysics/blob/master/Build/README.md) section. When upgrading from an older version of the library go to the [Release Notes](https://github.com/jrouwe/JoltPhysics/blob/master/Docs/ReleaseNotes.md) or [API Changes](https://github.com/jrouwe/JoltPhysics/blob/master/Docs/APIChanges.md) sections.
+
+## Performance
+
+If you're interested in how Jolt scales with multiple CPUs and compares to other physics engines, take a look at [this document](https://jrouwe.nl/jolt/JoltPhysicsMulticoreScaling.pdf).
+
+## Folder structure
+
+- Assets - This folder contains assets used by the TestFramework, Samples and JoltViewer.
+- Build - Contains everything needed to build the library, see the [Build](https://github.com/jrouwe/JoltPhysics/blob/master/Build/README.md) section.
+- Docs - Contains documentation for the library.
+- HelloWorld - A simple application demonstrating how to use the Jolt Physics library.
+- Jolt - All source code for the library is in this folder.
+- JoltViewer - It is possible to record the output of the physics engine using the DebugRendererRecorder class (a.jor file), this folder contains the source code to an application that can visualize a recording. This is useful for e.g. visualizing the output of the PerformanceTest from different platforms. Currently available on Windows, macOS and Linux.
+- PerformanceTest - Contains a simple application that runs a [performance test](https://github.com/jrouwe/JoltPhysics/blob/master/Docs/PerformanceTest.md) and collects timing information.
+- Samples - This contains the sample application, see the [Samples](https://github.com/jrouwe/JoltPhysics/blob/master/Docs/Samples.md) section. Currently available on Windows, macOS and Linux.
+- TestFramework - A rendering framework to visualize the results of the physics engine. Used by Samples and JoltViewer. Currently available on Windows, macOS and Linux.
+- UnitTests - A set of unit tests to validate the behavior of the physics engine.
+
+## Bindings for other languages
+
+- C [here](https://github.com/amerkoleci/joltc), [here](https://github.com/zig-gamedev/zphysics/tree/main/libs/JoltC), [here](https://github.com/SecondHalfGames/JoltC/) and [here](https://github.com/ostef/JoltC/)
+- [C#](https://github.com/amerkoleci/JoltPhysicsSharp)
+- Java or Kotlin [here](https://stephengold.github.io/jolt-jni-docs) and [here](https://github.com/Morgoth398/JoltPhysics-JavaFFM)
+- [JavaScript](https://github.com/jrouwe/JoltPhysics.js)
+- [Rust](https://github.com/SecondHalfGames/jolt-rust)
+- [Python](https://github.com/Evilpasture/Culverin)
+- [Zig](https://github.com/zig-gamedev/zphysics)
+- [Jai](https://github.com/ostef/Jolt-Jai), based on this [bindings generator](https://github.com/ostef/JoltC-BindGen)
+- [Nim](https://github.com/puffball1567/jolt-nim)
+
+## Integrations in other engines
+
+- [Godot](https://github.com/godotengine/godot)
+- [Source Engine](https://github.com/Joshua-Ashton/VPhysics-Jolt)
+- Unreal Plugin [here](https://github.com/OversizedSunCoreDev/ArtilleryEco) and [here](https://github.com/Yadhu-S/UnrealJolt)
+
+See [a list of projects that use Jolt Physics here](https://github.com/jrouwe/JoltPhysics/blob/master/Docs/ProjectsUsingJolt.md).
+
+## License
+
+The project is distributed under the [MIT license](https://github.com/jrouwe/JoltPhysics/blob/master/LICENSE).
+
+## Contributions
+
+All contributions are welcome! If you intend to make larger changes, please discuss first in the GitHub Discussion section. For non-trivial changes, we require that you agree to a [Contributor Agreement](https://github.com/jrouwe/JoltPhysics/blob/master/ContributorAgreement.md). When you create a PR, [CLA assistant](https://cla-assistant.io/) will prompt you to sign it.
+
+Note that all PRs will be squashed before merging, so there's no need to force-push to git to keep the history clean.

@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-10-20
+last_updated: 2026-10-26
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -13,6 +13,11 @@ aliases:
 ---
 
 # 机器人（具身智能） - 来源抽取索引
+
+## 2026-10-26 物理解算与Sim2Real来源
+
+- [[_sources/robot-physics-engines-sim2real-source-set-2026-10-26|59条官方资料、论文与抓取边界]]：SRC-robotics-618–676；57条ok（含3份PDF），623为RST纯文本回退，674旧latest路径失败、676新路径成功。
+- [[robotics-embodied-ai/research-notes/robot-physics-engines-sim2real-2026-10-26|技术报告]]：22个候选和22篇论文；论文作者报告与本地验证分开，未改写历史raw正文。
 
 ## 2026-10-20 触觉末端来源
 

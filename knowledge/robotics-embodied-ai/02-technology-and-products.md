@@ -12,6 +12,10 @@ aliases:
 
 # 机器人（具身智能） - 技术与产品
 
+## 物理解算与Sim2Real（2026-10-26）
+
+- [[robotics-embodied-ai/research-notes/robot-physics-engines-sim2real-2026-10-26|物理引擎、接触求解与迁移误差]]：模型精度、数值精度、梯度与策略迁移分别验证；附开源/专有矩阵、论文与实验协议。
+
 ## 触觉末端执行器专题（2026-10-20）
 
 - [[robotics-embodied-ai/research-notes/tactile-end-effectors-hands-grippers-selection-2026-10-20|有触觉的末端执行器方案]]：双指触觉夹爪、多指手与传感器改装的可交付边界；力分辨率、精度、采样率、通信与闭环分别核验。
