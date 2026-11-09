@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-11-05
+last_updated: 2026-11-09
 tags:
   - wiki
   - index
@@ -481,6 +481,8 @@ tags:
 - [[robotics-embodied-ai/00-index|机器人与具身智能]] — 机器人与具身智能行业研究入口。
 
 ## News
+
+- [[news/2026-11-09-ai-at-the-scale-of-human-civilization|AI 放在人类文明的尺度上，是什么｜核心观点萃取]] — 基于约1.54万字全片ASR，整理文明级联、AI再压缩、现实校准及论证边界。
 
 - [[news/00-index|新闻速记]] — ad hoc 新闻/文章/视频摘要入口；每条摘要独立成文。
 - [[news/2026-07-14-harness-engineering-self-improvement-deep-dive|Harness Engineering for Self-Improvement 深度研读与公式通俗解释]] — 梳理 harness 从上下文、工作流到自改进代码的研究谱系，逐式解释 MCE 与 STOP，并校正 STOP 元效用公式中的重复归一化记号。

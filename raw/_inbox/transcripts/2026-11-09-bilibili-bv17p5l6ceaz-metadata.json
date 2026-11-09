@@ -1,0 +1,269 @@
+{
+  "code": 0,
+  "message": "OK",
+  "ttl": 1,
+  "data": {
+    "bvid": "BV17p5L6CEAZ",
+    "aid": 116564489674049,
+    "videos": 1,
+    "tid": 250,
+    "tid_v2": 2098,
+    "tname": "",
+    "tname_v2": "",
+    "copyright": 1,
+    "pic": "http://i2.hdslb.com/bfs/archive/01b67ca38736955f651de47224c564dd9bf82658.jpg",
+    "title": "【EP03】AI 放在人类文明的尺度上, 是什么.",
+    "pubdate": 1778633142,
+    "ctime": 1778633143,
+    "desc": "不是AI多聪明，而是我们一直把它放错了尺度。\n\n这期我想把AI从“新大脑”“新物种”“会不会超过人类”这些叙事里拿出来，放回一条更长的线里看：基因、神经系统、语言、文字、数学、科学、工业、计算，一直到AI。\n\n我的判断是：AI不是突然出现的新心智，而是五万年文明级联长出的一个递归压缩层。它真正“赢”的不是某一颗大脑，而是整个人类已经结晶下来的文明输出。\n\n所以真正的问题也许不是“AI会不会超过人”，而是：当文明开始压缩自己的输出时，我们还能不能保留那条回到现实的校准回路。",
+    "desc_v2": [
+      {
+        "raw_text": "不是AI多聪明，而是我们一直把它放错了尺度。\n\n这期我想把AI从“新大脑”“新物种”“会不会超过人类”这些叙事里拿出来，放回一条更长的线里看：基因、神经系统、语言、文字、数学、科学、工业、计算，一直到AI。\n\n我的判断是：AI不是突然出现的新心智，而是五万年文明级联长出的一个递归压缩层。它真正“赢”的不是某一颗大脑，而是整个人类已经结晶下来的文明输出。\n\n所以真正的问题也许不是“AI会不会超过人”，而是：当文明开始压缩自己的输出时，我们还能不能保留那条回到现实的校准回路。",
+        "type": 1,
+        "biz_id": 0
+      }
+    ],
+    "state": 0,
+    "duration": 3204,
+    "rights": {
+      "bp": 0,
+      "elec": 0,
+      "download": 1,
+      "movie": 0,
+      "pay": 0,
+      "hd5": 0,
+      "no_reprint": 1,
+      "autoplay": 1,
+      "ugc_pay": 0,
+      "is_cooperation": 0,
+      "ugc_pay_preview": 0,
+      "no_background": 0,
+      "clean_mode": 0,
+      "is_stein_gate": 0,
+      "is_360": 0,
+      "no_share": 0,
+      "arc_pay": 0,
+      "free_watch": 0
+    },
+    "owner": {
+      "mid": 333553457,
+      "name": "辞月赴尘",
+      "face": "https://i2.hdslb.com/bfs/face/1e20c7c5b488cee4e6b24e6ce702319f6ed9d131.jpg"
+    },
+    "stat": {
+      "aid": 116564489674049,
+      "view": 30647,
+      "danmaku": 63,
+      "reply": 268,
+      "favorite": 1600,
+      "coin": 451,
+      "share": 128,
+      "now_rank": 0,
+      "his_rank": 0,
+      "like": 1361,
+      "dislike": 0,
+      "evaluation": "",
+      "vt": 0
+    },
+    "argue_info": {
+      "argue_msg": "",
+      "argue_type": 0,
+      "argue_link": ""
+    },
+    "dynamic": "",
+    "cid": 38291768395,
+    "dimension": {
+      "width": 2880,
+      "height": 2160,
+      "rotate": 0
+    },
+    "season_id": 8074845,
+    "premiere": null,
+    "teenage_mode": 1,
+    "is_chargeable_season": false,
+    "is_story": false,
+    "is_upower_exclusive": false,
+    "is_upower_play": false,
+    "is_upower_preview": false,
+    "enable_vt": 0,
+    "vt_display": "",
+    "is_upower_exclusive_with_qa": false,
+    "is_hua_sheng": false,
+    "no_cache": false,
+    "pages": [
+      {
+        "cid": 38291768395,
+        "page": 1,
+        "from": "vupload",
+        "part": "【EP03】AI 放在人类文明的尺度上, 是什么.",
+        "duration": 3204,
+        "vid": "",
+        "weblink": "",
+        "dimension": {
+          "width": 2880,
+          "height": 2160,
+          "rotate": 0
+        },
+        "first_frame": "http://i1.hdslb.com/bfs/storyff/_000031k7t2pkwo9cy2tzszacdftk4sb_firsti.jpg",
+        "ctime": 1778633143,
+        "asr_language": "cmn"
+      }
+    ],
+    "subtitle": {
+      "allow_submit": false,
+      "list": []
+    },
+    "ugc_season": {
+      "id": 8074845,
+      "title": "P1",
+      "cover": "https://archive.biliimg.com/bfs/archive/c0404b7d40af67f1acbfe95b70b650f17bef85ae.jpg",
+      "mid": 333553457,
+      "intro": "",
+      "sign_state": 0,
+      "attribute": 140,
+      "stat": {
+        "season_id": 8074845,
+        "view": 30646,
+        "danmaku": 63,
+        "reply": 268,
+        "fav": 1600,
+        "coin": 451,
+        "share": 128,
+        "now_rank": 0,
+        "his_rank": 0,
+        "like": 1361,
+        "vt": 0,
+        "vv": 30646
+      },
+      "ep_count": 1,
+      "season_type": 1,
+      "is_pay_season": false,
+      "enable_vt": 0,
+      "sections": [
+        {
+          "season_id": 8074845,
+          "id": 8972255,
+          "title": "正片",
+          "type": 1,
+          "episodes": [
+            {
+              "season_id": 8074845,
+              "section_id": 8972255,
+              "id": 195063615,
+              "aid": 116564489674049,
+              "cid": 38291768395,
+              "title": "【EP03】AI 放在人类文明的尺度上, 是什么.",
+              "attribute": 0,
+              "arc": {
+                "aid": 116564489674049,
+                "videos": 0,
+                "type_id": 0,
+                "type_name": "",
+                "copyright": 0,
+                "pic": "http://i2.hdslb.com/bfs/archive/01b67ca38736955f651de47224c564dd9bf82658.jpg",
+                "title": "【EP03】AI 放在人类文明的尺度上, 是什么.",
+                "pubdate": 1778633142,
+                "ctime": 1778633142,
+                "desc": "",
+                "state": 0,
+                "duration": 3204,
+                "rights": {
+                  "bp": 0,
+                  "elec": 0,
+                  "download": 0,
+                  "movie": 0,
+                  "pay": 0,
+                  "hd5": 0,
+                  "no_reprint": 0,
+                  "autoplay": 0,
+                  "ugc_pay": 0,
+                  "is_cooperation": 0,
+                  "ugc_pay_preview": 0,
+                  "arc_pay": 0,
+                  "free_watch": 0
+                },
+                "author": {
+                  "mid": 333553457,
+                  "name": "辞月赴尘",
+                  "face": "https://i2.hdslb.com/bfs/face/1e20c7c5b488cee4e6b24e6ce702319f6ed9d131.jpg"
+                },
+                "stat": {
+                  "aid": 116564489674049,
+                  "view": 30647,
+                  "danmaku": 63,
+                  "reply": 268,
+                  "fav": 1600,
+                  "coin": 451,
+                  "share": 128,
+                  "now_rank": 0,
+                  "his_rank": 0,
+                  "like": 1361,
+                  "dislike": 0,
+                  "evaluation": "",
+                  "argue_msg": "",
+                  "vt": 0,
+                  "vv": 30647
+                },
+                "dynamic": "",
+                "dimension": {
+                  "width": 0,
+                  "height": 0,
+                  "rotate": 0
+                },
+                "desc_v2": null,
+                "is_chargeable_season": false,
+                "is_blooper": false,
+                "enable_vt": 0,
+                "vt_display": "",
+                "type_id_v2": 0,
+                "type_name_v2": "",
+                "is_lesson_video": 0
+              },
+              "page": {
+                "cid": 38291768395,
+                "page": 1,
+                "from": "vupload",
+                "part": "【EP03】AI 放在人类文明的尺度上, 是什么.",
+                "duration": 3204,
+                "vid": "",
+                "weblink": "",
+                "dimension": {
+                  "width": 2880,
+                  "height": 2160,
+                  "rotate": 0
+                }
+              },
+              "bvid": "BV17p5L6CEAZ",
+              "pages": [
+                {
+                  "cid": 38291768395,
+                  "page": 1,
+                  "from": "vupload",
+                  "part": "【EP03】AI 放在人类文明的尺度上, 是什么.",
+                  "duration": 3204,
+                  "vid": "",
+                  "weblink": "",
+                  "dimension": {
+                    "width": 2880,
+                    "height": 2160,
+                    "rotate": 0
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "is_season_display": true,
+    "user_garb": {
+      "url_image_ani_cut": ""
+    },
+    "honor_reply": {},
+    "like_icon": "",
+    "need_jump_bv": false,
+    "disable_show_up_info": false,
+    "is_story_play": 1,
+    "is_view_self": false
+  }
+}

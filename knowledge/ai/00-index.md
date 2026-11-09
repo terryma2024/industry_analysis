@@ -2,7 +2,7 @@
 title: AI相关 - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-11-05
+last_updated: 2026-11-09
 status: draft
 tags:
   - industry/ai
@@ -59,6 +59,8 @@ sources:
 - 头部公司需要补财报/年报/招股书；创业公司需要补融资、客户和招聘证据。
 
 ## 关联连接
+
+- [[news/2026-11-09-ai-at-the-scale-of-human-civilization|AI 文明级联与现实校准视频萃取]]
 
 - [[index|Knowledge Index]]
 - [[README|Knowledge README]]
