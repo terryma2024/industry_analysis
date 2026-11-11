@@ -1,0 +1,44 @@
+[
+  {
+    "path": "submodules/gaussian-splatting-wrapper/gaussian_splatting",
+    "mode": "160000",
+    "type": "commit",
+    "sha": "89c8f2522f12d5550006d2c50757063062c2a554"
+  },
+  {
+    "path": "submodules/gello_software",
+    "mode": "160000",
+    "type": "commit",
+    "sha": "ca1db2d08236ec81730344ae6a24fb17fa949c7c"
+  },
+  {
+    "path": "submodules/ghalton",
+    "mode": "160000",
+    "type": "commit",
+    "sha": "7a2cf120944513f56283d613c45487502d3cd61b"
+  },
+  {
+    "path": "submodules/pybullet-URDF-models",
+    "mode": "160000",
+    "type": "commit",
+    "sha": "ca8f7951c965a1fc29e518cfa599d64e92ad311d"
+  },
+  {
+    "path": "submodules/pybullet-playground-wrapper/pybullet_playground",
+    "mode": "160000",
+    "type": "commit",
+    "sha": "6196ef41d0afe69d3c1007dc222376489af639f0"
+  },
+  {
+    "path": "submodules/pybullet_ur5_gripper",
+    "mode": "160000",
+    "type": "commit",
+    "sha": "15df93f30d00ce0d985b5d5470ac77b0a7c4af65"
+  },
+  {
+    "path": "submodules/simple-knn",
+    "mode": "160000",
+    "type": "commit",
+    "sha": "60f461f4a56b7967e5d8045bf92f8c33f36976d0"
+  }
+]

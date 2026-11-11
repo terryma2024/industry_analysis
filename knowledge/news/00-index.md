@@ -16,6 +16,7 @@ tags:
 
 | 日期 | 标题 | 来源 | 主题 |
 | --- | --- | --- | --- |
+| 2026-11-09 | [[2026-11-09-3dgs-robot-simulation-data-real2sim-vlk\|仿真数据采集：3DGS、场地导航与 VLK]] | 微信／敢敢AUTOHUB；Niantic、VLK 一级核查 | #robotics #3dgs #sim2real |
 | 2026-11-09 | [[2026-11-09-ai-at-the-scale-of-human-civilization\|AI 放在人类文明的尺度上，是什么｜核心观点萃取]] | Bilibili／辞月赴尘 | #ai #civilization #knowledge-management |
 | 2026-07-14 | [[2026-07-14-harness-engineering-self-improvement-deep-dive\|Harness Engineering for Self-Improvement 深度研读与公式通俗解释]] | Lil’Log / MCE / STOP / Meta-Harness / Self-Harness / DGM 等论文 | #ai #agent #harness-engineering #context-engineering #rsi |
 | 2026-06-05 | [[2026-06-05-nvidia-cosmos-3-getting-started-plan\|NVIDIA Cosmos 3 上手调研与计划]] | NVIDIA Newsroom / Developer Blog / GitHub / Hugging Face / arXiv | #ai #robotics #embodied-ai #world-model |

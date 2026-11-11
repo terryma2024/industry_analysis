@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-10-26
+last_updated: 2026-11-10
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -13,6 +13,38 @@ sources:
 ---
 
 # 机器人（具身智能） - 研究入口
+
+## 2026-11-10 门／抽屉代码深查
+
+- [[research-notes/door-drawer-interactive-reconstruction-code-audit-2026-11-10|DISCOVERSE、ϕ-RIE、RialTo核查]]：推荐显式MJCF关节＋分件资产，先mesh后逐link GS；不含训练部署。
+
+## 2026-11-10 当前任务：可交互房间Sim
+
+- [[research-notes/interactive-room-sim-reconstruction-alternatives-2026-11-10|对象化重建与交互路线比较]]：当前仅场景层，I0/I1/I2验收；策略训练和真机部署暂缓。
+
+## 2026-11-10 SO-101开源替代路线
+
+- [[research-notes/so101-open-source-room-reconstruction-training-alternatives-2026-11-10|六路线比较与执行选择]]：开放主线优先mesh/MuJoCo/ACT；Playground为独立RL与sysid参考，GS和Isaac为条件分支。
+
+## 2026-11-10 工作台小样操作手册
+
+- [[research-notes/so101-workbench-pilot-capture-sop-2026-11-10|照着操作的采集SOP]]：手机＋D435i，先30秒测试回放，再扫台、拍照和核验。
+
+## 2026-11-10 SO-101房间重建执行方案
+
+- [[research-notes/so101-room-high-fidelity-sim-reconstruction-plan-2026-11-10|完整执行方案]]：先工作台小样，再全房；含精度目标、设备分支、采集清单与验收。
+
+## 2026-11-10 Niantic／Flexion 工作流与公开资产
+
+- [[robotics-embodied-ai/research-notes/niantic-flexion-real2sim-zero-shot-project-fit-2026-11-10|场景重建、RL经验与项目适配]]：完整8条件基准；HF样例是资产非示教，Pondicherry碰撞网格静态核查，真实迁移和MuJoCo适配待实验。
+
+## 2026-11-10 VLK 论文、实现与项目适配
+
+- [[robotics-embodied-ai/research-notes/vlk-synthetic-data-zero-shot-project-fit-2026-11-10|合成数据、零样本边界及 SO-101／Microduck 适配]]：48k/环境、场地特化与样本口径冲突；区分VLK未发布主实现与SceneBot公开推理demo。
+
+## 2026-11-09 仿真数据采集文章入库
+
+- [[news/2026-11-09-3dgs-robot-simulation-data-real2sim-vlk|3DGS、场地导航与 VLK 文章核验]]：补入 Niantic/Flexion 与 VLK 原始披露；仿真成功率不作真机结论，纠正 VLK 真机微调表述。
 
 ## 2026-10-26 机器人物理引擎与Sim2Real
 

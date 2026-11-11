@@ -12,6 +12,26 @@ last_updated: 2026-10-26
 
 # 机器人（具身智能） - 研究中间笔记
 
+- [[door-drawer-interactive-reconstruction-code-audit-2026-11-10|门与抽屉可开合的三项目深查]]：代码链、根／子依赖许可、有限MuJoCo与body映射探针、阶段验收。
+
+- [[interactive-room-sim-reconstruction-alternatives-2026-11-10|当前主线：可交互房间重建]]：静态结构、可动刚体、条件关节，比较PhiRIE／DISCOVERSE／SimFoundry等；不含训练部署。
+
+- [[so101-open-source-room-reconstruction-training-alternatives-2026-11-10|SO-101开源房间重建与训练替代方案]]：固定版本比较许可、完整性与当前项目接口，推荐分阶段执行。
+
+- [[so101-workbench-pilot-capture-sop-2026-11-10|工作台小样采集操作手册]]：D435i按钮步骤、手机路线、测量表和采集／重建两级判定。
+
+## 2026-11-10 SO-101房间重建
+
+- [[so101-room-high-fidelity-sim-reconstruction-plan-2026-11-10|高保真Sim重建执行方案]]：R05/R04，阶段职责、独立验证与数据版本；设计完成，未执行。
+
+## 2026-11-10 Niantic／Flexion 工作流
+
+- [[niantic-flexion-real2sim-zero-shot-project-fit-2026-11-10|Niantic／Flexion 深研]]：R05/R04/R07；在线合成交互、场景资产检查、真实迁移边界和两项目接入选择。
+
+## 2026-11-10 VLK 合成数据与项目适配
+
+- [[vlk-synthetic-data-zero-shot-project-fit-2026-11-10|VLK 论文与实现深研]]：R04/R05；合成数据工序、240/120计数冲突、零真机微调范围、代码开放层次及现有仿真项目适配。
+
 ## 2026-10-26 物理引擎与Sim2Real
 
 - [[robot-physics-engines-sim2real-2026-10-26|物理解算技术报告]]：R04/R05/R06；22候选、九类问题、22论文，59来源；明确未复现作者成绩或真机迁移。

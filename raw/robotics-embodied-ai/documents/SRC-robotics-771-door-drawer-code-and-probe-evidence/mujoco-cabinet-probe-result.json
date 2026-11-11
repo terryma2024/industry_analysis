@@ -1,0 +1,56 @@
+{
+  "mujoco_version": "4.0.0",
+  "source_sha256": "aba6208f964c0ed655f3fdcbf94df3640ea4aecb45813b76a10d7d69ded3d8be",
+  "wrapper": "Unchanged upstream include bodies in standalone radian MJCF; no robot scene or graphics",
+  "model_njnt": 2,
+  "joints": [
+    {
+      "id": 0,
+      "type": 3,
+      "limited": true,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "range": [
+        0.0,
+        3.1416
+      ],
+      "qposadr": 0
+    },
+    {
+      "id": 1,
+      "type": 2,
+      "limited": true,
+      "axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "range": [
+        0.0,
+        0.22
+      ],
+      "qposadr": 1
+    }
+  ],
+  "forward_drawer_delta_at_0_1m": [
+    -0.10000000000000003,
+    0.0,
+    0.0
+  ],
+  "hinge_rotation_changed": true,
+  "force_step_100_qpos_start": [
+    0.3,
+    0.08
+  ],
+  "force_step_100_qpos_end": [
+    0.4538447701548914,
+    0.09478581811069216
+  ],
+  "finite": true,
+  "limits_runtime_tested": false,
+  "render_or_GS_tested": false,
+  "full_DISCOVERSE_tested": false
+}

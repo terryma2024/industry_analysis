@@ -1,0 +1,116 @@
+{
+  "repositories": [
+    {
+      "repo": "insait-institute/PhiRIE",
+      "sha": "a03543f6472451ffc079502417a48d64c2a6e7f1",
+      "commit_date": "2026-10-01T09:10:33Z",
+      "files": [
+        "README.md",
+        "LICENSE"
+      ]
+    },
+    {
+      "repo": "RunyiYang/PhysicalView",
+      "sha": "2b7a01505d84d09e925c0d8b77ef61bfd7151b8f",
+      "commit_date": "2026-09-14T21:28:07Z",
+      "files": [
+        "README.md",
+        "LICENSE"
+      ]
+    },
+    {
+      "repo": "discoverse-dev/DISCOVERSE",
+      "sha": "d67f47c084aba0e0cf422a8725235f8b9238655a",
+      "commit_date": "2026-02-24T15:47:40Z",
+      "files": [
+        "README.md",
+        "LICENSE",
+        ".gitmodules"
+      ]
+    },
+    {
+      "repo": "discoverse-dev/DISCOVERSE-Real2Sim",
+      "sha": "1fd9ecdbb02fe3b28bce5db28a3b968b4d3d4d57",
+      "commit_date": "2025-10-29T07:49:13Z",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "repo": "real-to-sim-to-real/RialToGUI",
+      "sha": "9f0191453d7884d6eaf301a12e6f1cdb24a0ae28",
+      "commit_date": "2024-04-09T15:20:08Z",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "repo": "NVlabs/SimFoundry",
+      "sha": "9e34ebefcd020583fbb755a8b57268dce78eca26",
+      "commit_date": "2026-08-27T02:13:06Z",
+      "files": [
+        "README.md",
+        "LICENSE"
+      ]
+    },
+    {
+      "repo": "robosimstudio/robosimstudio",
+      "sha": "013b7181d3f5810cd29f954e00131bf6d7b97b61",
+      "commit_date": "2026-11-05T20:35:32Z",
+      "files": [
+        "README.md",
+        "LICENSE"
+      ]
+    },
+    {
+      "repo": "InternRobotics/Re3Sim",
+      "sha": "681da6f5d842f0de6c573a077926fe3722924708",
+      "commit_date": "2026-03-16T14:16:35Z",
+      "files": [
+        "README.md"
+      ]
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-756-interactive-scene-static-evidence/robosimstudio--robosimstudio--LICENSE",
+      "sha256": "243b5de614a38e490ec5de01fce7bb73d84cd0bb1f8f32b0bca12cd1b58714a1"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-756-interactive-scene-static-evidence/NVlabs--SimFoundry--LICENSE",
+      "sha256": "4f321b887d0350e672e06c8a8bc85cff17ee2d1f3c360617079041ceee324c81"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-756-interactive-scene-static-evidence/NVlabs--SimFoundry--THIRD_PARTY_LICENSES.md",
+      "sha256": "e58766c325b47f12ffbb90fbbd103ba4638462d0790612913db80d8f97cce044"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-756-interactive-scene-static-evidence/deep-results.json",
+      "sha256": "69ee66ebb67379d8ef9ebda7b3fa721d19553af99af5b3e9434bd251b9b1da06"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-756-interactive-scene-static-evidence/insait-institute--PhiRIE--LICENSE",
+      "sha256": "76b898e0f136f1e6bc968ed0b453e990a2a4526a7b23ead542c6fe79071f0ea0"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-756-interactive-scene-static-evidence/metadata.json",
+      "sha256": "2ed47bb4636db1b1594a54e148ea1a4c0373cc63ec123987d7413c540cd18bbd"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-756-interactive-scene-static-evidence/RunyiYang--PhysicalView--LICENSE",
+      "sha256": "783ccc535d890b09712e4b786bf8c8dd0644532b2f42191809a109657b9f6b55"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-756-interactive-scene-static-evidence/discoverse-dev--DISCOVERSE--LICENSE",
+      "sha256": "1ea6b7eb8deddd0e2b175d7e6b8f16a667b7065c4bce2e16d04014ac3aef0bff"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-756-interactive-scene-static-evidence/insait-institute--PhiRIE--docs--MODULES.md",
+      "sha256": "496d3f933492f0127d989e1f0895e3e95254fb8b58e79a30b9b48234a0f4c781"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-756-interactive-scene-static-evidence/RunyiYang--PhysicalView--tools--backends--sources.json",
+      "sha256": "f2b95887ff2976d56f3e9133d0514c95a5614e68092b3efde2bafd91129d1995"
+    }
+  ]
+}

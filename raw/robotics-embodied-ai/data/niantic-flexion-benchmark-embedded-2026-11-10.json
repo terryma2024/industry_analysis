@@ -1,0 +1,190 @@
+[
+  {
+    "name": "Flexion office",
+    "meta": "1024 episodes",
+    "rows": {
+      "RGB · Niantic Spatial 3DGS": {
+        "s": 0.9775,
+        "t": 0.001953,
+        "f": 0.02051,
+        "det": {
+          "success": {
+            "dist": 9.21,
+            "contacts": 0.01558,
+            "time": 20.06
+          },
+          "timeout": {
+            "dist": 15.33,
+            "contacts": 0.72125,
+            "time": 120.0
+          },
+          "fall": {
+            "dist": 9.69,
+            "contacts": 0.11263,
+            "time": 11.56
+          }
+        }
+      },
+      "Depth · generated mesh": {
+        "s": 0.9375,
+        "t": 0.008789,
+        "f": 0.05371,
+        "det": {
+          "success": {
+            "dist": 9.14,
+            "contacts": 0.01007,
+            "time": 23.09
+          },
+          "timeout": {
+            "dist": 13.1,
+            "contacts": 0.0249,
+            "time": 120.0
+          },
+          "fall": {
+            "dist": 10.55,
+            "contacts": 0.05493,
+            "time": 15.09
+          }
+        }
+      },
+      "RGB · synthetic office": {
+        "s": 0.707,
+        "t": 0.02246,
+        "f": 0.2705,
+        "det": {
+          "success": {
+            "dist": 8.38,
+            "contacts": 0.03583,
+            "time": 25.07
+          },
+          "timeout": {
+            "dist": 14.54,
+            "contacts": 0.11768,
+            "time": 120.0
+          },
+          "fall": {
+            "dist": 11.02,
+            "contacts": 0.04984,
+            "time": 39.91
+          }
+        }
+      },
+      "RGB · generated mesh": {
+        "s": 0.7168,
+        "t": 0.2217,
+        "f": 0.06152,
+        "det": {
+          "success": {
+            "dist": 8.26,
+            "contacts": 0.06978,
+            "time": 32.51
+          },
+          "timeout": {
+            "dist": 11.82,
+            "contacts": 0.17665,
+            "time": 120.0
+          },
+          "fall": {
+            "dist": 11.37,
+            "contacts": 0.17674,
+            "time": 41.63
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Niantic Spatial office",
+    "meta": "1024 episodes",
+    "rows": {
+      "RGB · Niantic Spatial 3DGS": {
+        "s": 0.75,
+        "t": 0.160156,
+        "f": 0.08984,
+        "det": {
+          "success": {
+            "dist": 6.7,
+            "contacts": 0.104,
+            "time": 27.39
+          },
+          "timeout": {
+            "dist": 7.5,
+            "contacts": 0.159,
+            "time": 120.0
+          },
+          "fall": {
+            "dist": 6.99,
+            "contacts": 0.255,
+            "time": 32.29
+          }
+        }
+      },
+      "Depth · generated mesh": {
+        "s": 0.709,
+        "t": 0.176758,
+        "f": 0.11426,
+        "det": {
+          "success": {
+            "dist": 6.61,
+            "contacts": 0.101,
+            "time": 33.38
+          },
+          "timeout": {
+            "dist": 7.44,
+            "contacts": 0.187,
+            "time": 120.0
+          },
+          "fall": {
+            "dist": 7.48,
+            "contacts": 0.259,
+            "time": 29.9
+          }
+        }
+      },
+      "RGB · synthetic office": {
+        "s": 0.5381,
+        "t": 0.352539,
+        "f": 0.10938,
+        "det": {
+          "success": {
+            "dist": 6.07,
+            "contacts": 0.196,
+            "time": 39.64
+          },
+          "timeout": {
+            "dist": 7.86,
+            "contacts": 0.355,
+            "time": 120.0
+          },
+          "fall": {
+            "dist": 7.56,
+            "contacts": 0.387,
+            "time": 41.2
+          }
+        }
+      },
+      "RGB · generated mesh": {
+        "s": 0.4053,
+        "t": 0.396484,
+        "f": 0.19824,
+        "det": {
+          "success": {
+            "dist": 6.06,
+            "contacts": 0.201,
+            "time": 34.39
+          },
+          "timeout": {
+            "dist": 7.26,
+            "contacts": 0.292,
+            "time": 120.0
+          },
+          "fall": {
+            "dist": 7.58,
+            "contacts": 0.347,
+            "time": 36.99
+          }
+        }
+      }
+    }
+  }
+]

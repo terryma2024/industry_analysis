@@ -1,0 +1,89 @@
+[
+  {
+    "repo": "5hadytru/so101_bench",
+    "tree_truncated": false,
+    "hits": [
+      "integrations/lerobot/lerobot_env_so101_bench/__init__.py",
+      "integrations/lerobot/lerobot_env_so101_bench/client.py",
+      "integrations/lerobot/lerobot_env_so101_bench/config.py",
+      "integrations/lerobot/lerobot_env_so101_bench/env.py",
+      "integrations/lerobot/lerobot_env_so101_bench/score.py",
+      "integrations/lerobot/lerobot_env_so101_bench/sim_server.py",
+      "integrations/lerobot/tests/fake_sim_server.py",
+      "scripts/FLUX3_fine_tuning/pod/bench.py",
+      "scripts/FLUX3_fine_tuning/pod/make_stats_package.py",
+      "scripts/FLUX3_fine_tuning/pod/merge_lora_package.py",
+      "scripts/G05_fine_tuning/pod/bench.py",
+      "scripts/G05_fine_tuning/pod/export_checkpoint.py",
+      "scripts/GR00T_N1.7_fine_tuning/configs/so101_config.py",
+      "scripts/GR00T_N1.7_fine_tuning/supervisor/supervise_finetune.py",
+      "scripts/GR00T_N1.7_fine_tuning/tools/bench_stats.py",
+      "scripts/GR00T_N1.7_fine_tuning/tools/benchmark_workers.py",
+      "scripts/GR00T_N1.7_fine_tuning/tools/restart_after_checkpoint.py",
+      "scripts/GR00T_N1.7_fine_tuning/tools/scan_dataset_reads.py",
+      "scripts/ImageWAM_fine_tuning/pod/bench.py",
+      "scripts/ImageWAM_fine_tuning/pod/compute_stats.py"
+    ]
+  },
+  {
+    "repo": "Luoyadan/lerobot_so101-sim2real",
+    "tree_truncated": false,
+    "hits": [
+      "ManiSkill/LICENSE",
+      "ManiSkill/mani_skill/agents/robots/so101",
+      "ManiSkill/mani_skill/agents/robots/so101/__init__.py",
+      "ManiSkill/mani_skill/agents/robots/so101/so_101.py",
+      "ManiSkill/mani_skill/agents/robots/so101/so_101_real.py",
+      "ManiSkill/mani_skill/assets/robots/allegro/LICENSE",
+      "ManiSkill/mani_skill/assets/robots/dclaw/LICENSE",
+      "ManiSkill/mani_skill/assets/robots/g1_humanoid/LICENSE.txt",
+      "ManiSkill/mani_skill/assets/robots/koch/LICENSE",
+      "ManiSkill/mani_skill/assets/robots/so100/LICENSE",
+      "ManiSkill/mani_skill/assets/robots/so101",
+      "ManiSkill/mani_skill/assets/robots/so101/meshes",
+      "ManiSkill/mani_skill/assets/robots/so101/meshes/Fixed_part_1.obj",
+      "ManiSkill/mani_skill/assets/robots/so101/meshes/Fixed_part_2.obj",
+      "ManiSkill/mani_skill/assets/robots/so101/meshes/base_motor_holder_so101_v1.stl"
+    ]
+  },
+  {
+    "repo": "google-deepmind/mujoco_playground",
+    "tree_truncated": false,
+    "hits": [
+      "mujoco_playground/tasks/manipulation/pick_cube/so101/__init__.py",
+      "mujoco_playground/tasks/manipulation/pick_cube/so101/deploy/__init__.py",
+      "mujoco_playground/tasks/manipulation/pick_cube/so101/deploy/env.py",
+      "mujoco_playground/tasks/manipulation/pick_cube/so101/deploy/env_test.py",
+      "mujoco_playground/tasks/manipulation/pick_cube/so101/deploy/run.py",
+      "mujoco_playground/tasks/manipulation/pick_cube/so101/deploy/viewer.py",
+      "mujoco_playground/tasks/manipulation/pick_cube/so101/deploy/viewer_test.py",
+      "mujoco_playground/tasks/manipulation/pick_cube/so101/task.py",
+      "mujoco_playground/tasks/sysid/so101/__init__.py",
+      "mujoco_playground/tasks/sysid/so101/data_loader.py",
+      "mujoco_playground/tasks/sysid/so101/run.py",
+      "mujoco_playground/tasks/sysid/so101/sysid.py",
+      "mujoco_playground/tasks/sysid/so101/sysid_test.py"
+    ]
+  },
+  {
+    "repo": "qureshinomaan/SplatSim",
+    "tree_truncated": false,
+    "hits": [
+      "to_delete/LICENSE",
+      "to_delete/LICENSE.md",
+      "to_delete/SIBR_viewers/LICENSE.md",
+      "to_delete/gaussian_splatting/LICENSE.md",
+      "to_delete/gaussian_splatting/SIBR_viewers/LICENSE.md",
+      "to_delete/gaussian_splatting/submodules/diff-gaussian-rasterization/LICENSE.md",
+      "to_delete/gaussian_splatting/submodules/fused-ssim/LICENSE",
+      "to_delete/gaussian_splatting/submodules/simple-knn/LICENSE.md",
+      "to_delete/gello_software/Assets/ur5e/license.txt",
+      "to_delete/gello_software/DynamixelSDK/LICENSE",
+      "to_delete/gello_software/DynamixelSDK/python/LICENSE.txt",
+      "to_delete/gello_software/LICENSE",
+      "to_delete/gello_software/pybullet_ur5_robotiq/LICENSE",
+      "to_delete/gello_software/pybullet_ur5_robotiq/urdf/LICENSE",
+      "to_delete/gello_software/spawnnet/LICENSE"
+    ]
+  }
+]

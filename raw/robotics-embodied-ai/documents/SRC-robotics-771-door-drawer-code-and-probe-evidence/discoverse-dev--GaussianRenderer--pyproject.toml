@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaussian_renderer"
+dynamic = ["version"]
+description = "A Gaussian Splatting Renderer and Tools"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "torch",
+    "scipy",
+    "plyfile",
+    "trimesh",
+    "gsplat",
+]
+
+[project.optional-dependencies]
+viewer = [
+    "glfw",
+    "PyOpenGL",
+]
+
+motrix = [
+    "motrixsim >= 0.5.0",
+]
+
+mujoco = [
+    "mujoco",
+]
+
+shs = [
+    "einops",
+    "e3nn",
+]
+
+dev = [
+    "ruff",
+    "mypy",
+    "pytest",
+    "einops",
+    "e3nn",
+]
+
+[project.scripts]
+gs-viewer = "gaussian_renderer.simple_viewer:main"
+gs-compress = "gaussian_renderer.supersplat_compress:main"
+gs-transform = "gaussian_renderer.transform_gs_model:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "gaussian_renderer.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["gaussian_renderer*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501", "F401", "E402", "F841"]
+
+[tool.mypy]
+python_version = "3.8"
+ignore_missing_imports = true
+warn_unused_ignores = false
+disable_error_code = ["assignment", "call-overload", "union-attr", "arg-type", "dict-item", "index", "return-value", "operator", "override", "type-arg", "attr-defined"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+pythonpath = ["src"]

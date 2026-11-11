@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-10",
+  "facts": {
+    "layouts_per_environment": 4,
+    "generation_modes": 12,
+    "trajectories_per_mode_per_layout": 1000,
+    "synthesis_hours_per_1000_L40S": 4,
+    "render_hours_per_1000_L40S": 8.3
+  },
+  "analyst_derived": {
+    "trajectories_per_environment": 48000,
+    "two_environments_trajectories": 96000,
+    "L40S_gpu_hours_per_environment": 590.4,
+    "L40S_gpu_hours_two_environments": 1180.8,
+    "table1_real_row_total": 240,
+    "latency_table_component_sum_ms": 64.7
+  },
+  "limitations": [
+    "600GPUhours scope ambiguous in abstract/introduction vs per-environment arithmetic",
+    "No robot policy training reconstruction annotation storage or rejected samples included",
+    "CSV confidence intervals are analyst calculations under iid Bernoulli assumption; clustered layouts may violate independence",
+    "No dollar cost or independent performance measurement"
+  ]
+}

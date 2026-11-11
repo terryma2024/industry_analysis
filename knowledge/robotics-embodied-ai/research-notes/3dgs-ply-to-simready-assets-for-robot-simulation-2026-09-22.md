@@ -2,7 +2,7 @@
 title: 3DGS PLY 到 SimReady 仿真资产：MuJoCo、Isaac Sim 与 ManiSkill 工程路线
 type: synthesis
 date_created: 2026-09-22
-last_updated: 2026-09-22
+last_updated: 2026-11-10
 sources:
   - knowledge/_sources/3dgs-ply-to-simready-source-set.md
   - raw/robotics-embodied-ai/data/3dgs-ply-to-simready-pipeline-matrix-2026-09-22.csv
@@ -554,3 +554,17 @@ obj = builder.build_dynamic(name="prop")
 - [[3d-simulation-asset-production-pipelines-comparison-2026-08-06|3D 仿真资产生产技术管线综合调研]]
 - [[isaac-sim-vs-gazebo-vs-mujoco-2026-07-14|Isaac Sim vs Gazebo vs MuJoCo 机器人仿真平台选型]]
 - [[_syntheses/bilibili-panogs-slam-panoramic-3dgs-deep-dive-2026-09-19|PanoGS-SLAM 全景 3DGS-SLAM 深研]]
+
+## 2026-11-09 增补案例
+
+- [[news/2026-11-09-3dgs-robot-simulation-data-real2sim-vlk|Niantic/Flexion 与 VLK 文章核验]]：外观和碰撞几何分层在场地导航中的应用；VLK 将合成全身轨迹与第一人称渲染配对。保留特定场景、公司/作者披露和零样本实验边界，不改变本文对物性与真机验收的要求。
+
+## 2026-11-10 VLK 案例增补
+
+- [[robotics-embodied-ai/research-notes/vlk-synthetic-data-zero-shot-project-fit-2026-11-10|VLK 合成监督流程与工程适配]]：人工场景标注、运动先验、运动学后处理与配对渲染分开审计；MuJoCo执行/Isaac渲染有论文先例，但不证明现有项目已完成对接。
+
+## 知识冲突：2026-11-10 MuJoCo OpenUSD 能力更新
+
+2026-09-22本文以当时版本提出传统mesh与MJCF路径。本轮核查的MuJoCo stable已记录实验性USD/USDZ导入，前提是构建启用USD；不能再把“MuJoCo完全不能读USDZ”作为永久结论。该更新不等于支持Niantic NuRec神经外观或证明当前固定项目构建/碰撞/性能通过，仍需验证。参见 [[robotics-embodied-ai/research-notes/niantic-flexion-real2sim-zero-shot-project-fit-2026-11-10|Niantic／Flexion适配报告]] 与 [官方导入文档](https://mujoco.readthedocs.io/en/stable/OpenUSD/importing.html)。原始日期判断保留。
+
+新增资产证据：公开Pondicherry NuRec包内确有外观/mesh分层及碰撞标记；局部mesh近50万面，转换后碰撞表示与性能仍待测，不能据文件存在声称SimReady验收完成。

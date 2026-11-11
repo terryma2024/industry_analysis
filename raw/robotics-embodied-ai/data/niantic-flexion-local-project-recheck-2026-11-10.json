@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-10",
+  "basis": "SRC-robotics-688",
+  "method": "read-only SHA256 recheck",
+  "files": [
+    {
+      "project": "/Users/matianyi/Projects/microduck/microduck_rl",
+      "path": "AGENTS.md",
+      "sha256": "f7d4ae83ee740816f30f13312cc4d646f7396bc531c7980680627108abc8de1a",
+      "matches_688": true
+    },
+    {
+      "project": "/Users/matianyi/Projects/microduck/microduck_rl",
+      "path": "pyproject.toml",
+      "sha256": "e4f73a9f9aff14826463aee558f53900307ba973a287fb3bfc27a8954a131026",
+      "matches_688": true
+    },
+    {
+      "project": "/Users/matianyi/Projects/microduck/microduck_rl",
+      "path": "src/mjlab_microduck/tasks/microduck_velocity_env_cfg.py",
+      "sha256": "75a0430b814ac7495eb237ab806fbd4dd10309b9fd3027ac3eee3c2e3c5a944a",
+      "matches_688": true
+    },
+    {
+      "project": "/Users/matianyi/Projects/robot_demo_001/moveit-demo",
+      "path": "docs/superpowers/specs/2026-09-10-so101-act-head-wrist-rgb-design.md",
+      "sha256": "f9efa395ecc88606dd674e16a8222a29b36b3555f8218fec0b3b69c186a7f660",
+      "matches_688": true
+    },
+    {
+      "project": "/Users/matianyi/Projects/robot_demo_001/moveit-demo",
+      "path": "docs/superpowers/specs/2026-10-05-so101-teacher-act-decoupling-amendment.md",
+      "sha256": "0473db52c3915cbd87775ce1836f57681b48bf3a5ad228f2a05fa971cf5ce8e4",
+      "matches_688": true
+    },
+    {
+      "project": "/Users/matianyi/Projects/robot_demo_001/moveit-demo",
+      "path": "docs/superpowers/specs/2026-10-09-so101-mujoco-domain-randomization-act-design.md",
+      "sha256": "56c0a6de77436294019fe66a1e8613fbcba969955cc9a43f5e2a6798dbb27d48",
+      "matches_688": true
+    },
+    {
+      "project": "/Users/matianyi/Projects/robot_demo_001/moveit-demo",
+      "path": "src/so101_demo_py/src/backends/mujoco/client.py",
+      "sha256": "901ac2fbedc36b45b3ef79c782fc43cb335f720e9bda2b8e54233b3462114c6c",
+      "matches_688": true
+    },
+    {
+      "project": "/Users/matianyi/Projects/robot_demo_001/moveit-demo",
+      "path": "src/so101_demo_py/src/backends/mujoco/qualified_phases/contact_hold.py",
+      "sha256": "acfbd4dee37483d5d221fce2d92b00957bcbe53f698ce6ad3d18fabd5b2b3029",
+      "matches_688": true
+    }
+  ],
+  "repo_heads": {
+    "/Users/matianyi/Projects/robot_demo_001/moveit-demo": "49119c1531c20a0928b5af0713738a729e629ae6",
+    "/Users/matianyi/Projects/microduck/microduck_rl": "29e887ecfbf5d37144759e5a9f8a176dfb83d547"
+  },
+  "remote_host_checked": false,
+  "simulator_started": false,
+  "training_run": false,
+  "microduck_uv_lock": {
+    "sha256": "1d173ff7ed8a5a36c4970842ec2645af9f7264acf5d2cc8a6339cc1639c2285b",
+    "versions": {
+      "mjlab": "1.3.0",
+      "mujoco": "3.10.0",
+      "mujoco-warp": "3.8.1",
+      "torch": "2.9.1+cu129"
+    },
+    "installed_runtime_checked": false
+  }
+}

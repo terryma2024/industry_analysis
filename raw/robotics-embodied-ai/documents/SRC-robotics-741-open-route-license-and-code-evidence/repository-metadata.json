@@ -1,0 +1,89 @@
+[
+  {
+    "repo": "5hadytru/so101_bench",
+    "sha": "470e09e2b66658049e1248378f20ce39bd134ad6",
+    "date": "2026-11-04T21:54:37Z",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  {
+    "repo": "Luoyadan/lerobot_so101-sim2real",
+    "sha": "af0abb689cf528c06a5935751571fb7a66bda03c",
+    "date": "2025-09-15T11:14:22Z",
+    "license": null,
+    "branch": "master"
+  },
+  {
+    "repo": "isaac-sim/Sim-to-Real-SO-101-Workshop",
+    "sha": "ce807d99724cb65671abec01f908a2fcb4a6eab7",
+    "date": "2026-07-20T06:58:53Z",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  {
+    "repo": "google-deepmind/mujoco_playground",
+    "sha": "66640404324ddfefd0223359a7b15974c22d6d63",
+    "date": "2026-11-09T15:36:33Z",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  {
+    "repo": "nerfstudio-project/gsplat",
+    "sha": "512d366b67073d77ca099ede742683c165dfc23b",
+    "date": "2026-09-19T07:14:27Z",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  {
+    "repo": "nerfstudio-project/nerfstudio",
+    "sha": "50e0e3c70c775e89333256213363badbf074f29d",
+    "date": "2025-07-29T02:28:48Z",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  {
+    "repo": "haosulab/ManiSkill",
+    "sha": "62ff3a5896b4d5b4cf0ac4c8d79afe600c9404a3",
+    "date": "2026-08-02T03:59:43Z",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  {
+    "repo": "colmap/colmap",
+    "sha": "3c1a1b957cc96d88849e4d30e1d0ec51c9da501b",
+    "date": "2026-11-08T22:37:18Z",
+    "license": "NOASSERTION",
+    "branch": "main"
+  },
+  {
+    "repo": "isl-org/Open3D",
+    "sha": "b6c5e196384ad71e75b6e6f9c5da22d046221f1d",
+    "date": "2026-09-16T21:36:48Z",
+    "license": "NOASSERTION",
+    "branch": "main"
+  },
+  {
+    "repo": "huggingface/lerobot",
+    "sha": "81b8c5bfdd5591ec59e512cfc7ac6db8151c70ee",
+    "date": "2026-11-09T13:23:29Z",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  {
+    "repo": "nv-tlabs/3dgrut",
+    "sha": "dfd3d54c8c612003fb7948443edf7778f2bcd5ec",
+    "date": "2026-11-06T19:31:45Z",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  {
+    "repo": "qureshinomaan/SplatSim",
+    "sha": "ea07395dc0e1dc0fcee3113694548d0dca7edafb",
+    "date": "2025-09-04T14:01:26Z"
+  },
+  {
+    "repo": "StoneT2000/lerobot-sim2real",
+    "sha": "87d6c1d969f6e0ca4dc5697940804e231118a63a",
+    "date": "2026-06-15T05:54:16Z"
+  }
+]

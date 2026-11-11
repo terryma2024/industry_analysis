@@ -1,0 +1,81 @@
+---
+source_id: "SRC-robotics-686"
+title: "VLK website README fixed commit fa01dab"
+source_type: "repository"
+publisher: "VLK authors"
+source_date: "2026-07-03"
+url: "https://raw.githubusercontent.com/vision-language-kinematics/vision-language-kinematics.github.io/fa01dab376d81f1c361c203822437b6a2d8efe42/README.md"
+evidence_grade: "S"
+capture_method: "direct-download"
+captured_at: "2026-11-10T01:34:53+00:00"
+tags:
+  - raw/source
+  - source-type/repository
+  - evidence/s
+aliases:
+  - SRC-robotics-686
+---
+# VLK website README fixed commit fa01dab
+
+# VLK — Project Page
+
+Static project page for **[VLK: Learning Humanoid Loco-Manipulation from Synthetic Interactions in Reconstructed Scenes](https://vision-language-kinematics.github.io/)**.
+
+## Layout
+
+```
+website/
+├── index.html              # single-page site
+├── css/style.css           # dark cinematic theme
+├── js/main.js              # scroll reveal, autoplay-on-visible, bibtex copy
+├── videos/                 # all teaser & demo videos (mp4)
+└── images/                 # poster jpgs + method overview pngs
+```
+
+## Run locally
+
+```bash
+cd website
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+## Page structure
+
+1. **Hero** — full-bleed looping top-down sweep behind the paper title + authors + CTA buttons.
+2. **TL;DR strip** — five headline numbers right under the hero.
+3. **Story** — three pillars (Scan → Synthesize → Deploy).
+4. **Method** — two large stages with side-by-side video + numbered steps.
+5. **Data modes** — six side-by-side mode demos (Apartment + Lab).
+6. **Sim deployment** — Lab and Apartment, 2× speed, separate cards.
+7. **Real deployment** — five tasks (Navigation, Box Lifting, Multi-Stage, Robustness, Long-Horizon).
+8. **Paper** — preprint card + copy-on-click BibTeX block.
+
+## Design
+
+- Single page, no framework. HTML + CSS + a small vanilla JS file.
+- Cinematic dark theme. Aurora removed in favour of a real hero-bg video.
+- Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (eyebrows / BibTeX).
+- All non-hero videos auto-play when scrolled in, pause when out.
+- `prefers-reduced-motion`-aware (animations disabled accordingly).
+
+## Citation
+
+```bibtex
+@misc{wang2026vlk,
+  title   = {VLK: Learning Humanoid Loco-Manipulation
+             from Synthetic Interactions in
+             Reconstructed Scenes},
+  author  = {Wang, Yen-Jen and Li, Jiaman and
+             Chen, Sirui and Truong, Takara E. and
+             Xu, Pei and Abbeel, Pieter and
+             Duan, Rocky and Sreenath, Koushil and
+             Kanazawa, Angjoo and Sferrazza, Carmelo and
+             Shi, Guanya and Liu, C. Karen},
+  year          = {2026},
+  eprint        = {2606.30645},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2606.30645},
+}
+```

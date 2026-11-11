@@ -1151,6 +1151,58 @@ tags:
 
 ## [2026-11-09]
 
+- **ingest | 仿真数据采集微信文章与一级证据核验**
+  - **变更**：新增 [[news/2026-11-09-3dgs-robot-simulation-data-real2sim-vlk|文章摘要]]、[[_sources/wechat-3dgs-robot-simulation-data-real2sim-vlk|来源卡]]，归档SRC-robotics-677–679并更新来源表、manifest、新闻/全局/机器人/来源索引和3DGS工程路线案例链接。
+  - **结论与冲突**：区分场地导航与VLK；97.8%为仿真，作者项目页VLK为零真机微调，保留原文相反表述和后续核验项。
+  - **限制**：微信发布日期未可靠提取，公式缺失/夹SVG、配图仅链接；本次三项抓取均ok，脚本退出1来自合并清单中历史failed项；未运行示例、训练或真机，商业工时/复购待验证。
+
 - **ingest | AI 文明尺度视频观点萃取**
   - **变更**：新增 [[news/2026-11-09-ai-at-the-scale-of-human-civilization|核心观点萃取]]；保存平台原始元信息、字幕失败结果、15394字ASR及36段阅读版，更新新闻与全局索引。
   - **限制**：字幕失败、volc.seedasr.auc返回资源额度错误后，备用volc.bigasr.auc成功；用户控制台仍有时长包余量，不能据该错误认定账户额度耗尽；全文归纳作者框架、例子、风险、四个方向和自述限制。补查Nature模型坍塌原论文；未听校画面/全部专名/历史与公司数字，无真实商业验证。
+
+## [2026-11-10]
+
+- **research | Niantic／Flexion 工作流与仿真项目适配深研**
+  - **变更**：新增 [[robotics-embodied-ai/research-notes/niantic-flexion-real2sim-zero-shot-project-fit-2026-11-10|R05/R04/R07报告]]、[[_sources/niantic-flexion-workflow-source-set-2026-11-10|20项来源集]]、8条件仿真基准CSV/JSON、8资产库存和局部USD检查包；更新机器人技术/数据/研究/来源及全局索引、原文章和VLK关联。
+  - **结论**：公开资产是4地点×2表示，非ACT示教；RL经验与导出数据分开。Microduck适合研究视觉速度高层，SO-101优先评估视觉资产层；97.8%属于仿真，真机缺完整分母。
+  - **证据与冲突**：固定HF/MVS版本；局部取Pondicherry三成员，CRC/hash和OpenUSD确认近50万面碰撞mesh，未下载完整sim.nurec或渲染。MVS LICENSE自动fallback已补原文；MuJoCo stable实验性USD导入更新以冲突节保留旧日期结论。
+  - **限制**：只静态核查及本地8文件哈希复核；无远程、训练、仿真物理、硬件、数据上传或采购；商业价格/真机SLA/完整导航代码和权重待验证。
+
+
+- **research | VLK 论文、合成数据与仿真项目适配深研**
+  - **变更**：新增 [[robotics-embodied-ai/research-notes/vlk-synthetic-data-zero-shot-project-fit-2026-11-10|R04/R05报告]]、[[_sources/vlk-paper-code-project-fit-source-set-2026-11-10|九项来源集]]、24行实验表、8阶段适配CSV和成本/一致性JSON；更新文章来源、机器人技术/训练数据/研究/来源索引及全局目录。
+  - **结论**：VLK采用MuJoCo动力学和Isaac渲染，零真机微调依赖真实扫描/人工标注/预训练及场地策略；适合复用方法，不直接迁移G1大箱体权重到SO-101或Microduck。SceneBot作者demo源码已公开，VLK主实现未取得。
+  - **冲突与限制**：保留120/240真机次数、10%/1000验证split和31/63ms口径问题；PDF suffixless URL被通用抽取误路由，>5MB失败及fallback保留，成功补存19页PDF与逐页抽取并视觉核对表1/3/4。仅静态源码和本机快照，未运行推理、训练、远程或机器人；PoC未执行。
+
+- **design | SO-101实验房间高保真Sim重建执行方案**
+  - **变更**：新增 [[robotics-embodied-ai/research-notes/so101-room-high-fidelity-sim-reconstruction-plan-2026-11-10|执行方案]]；登记SRC-robotics-709–714，更新全局／机器人／研究／来源索引和Niantic报告回链。
+  - **结论**：本地GS静态外观＋实测结构／碰撞＋任务区CAD与物理辨识；MuJoCo权威物理、Isaac离线回放先行，先小样再整房。
+  - **限制**：设备与房间待确认，所有精度／数量／工期为提案；无采集、安装、训练、上传或真机动作。5来源自动成功，OpenCV自动403失败保留并补网页核阅释义；不假称完整镜像。
+
+- **design-update | 确认SO-101房间采集设备选择**
+  - **变更**：更新 [[robotics-embodied-ai/research-notes/so101-room-high-fidelity-sim-reconstruction-plan-2026-11-10|重建执行方案]]，主路线设为普通手机＋D435i，补设备开工检查、共享基准配准和不可用时回退路径。
+  - **边界**：用户确认设备选择，未确认D435i当前可用；没有连接设备、采集或安装操作。
+
+- **sop | SO-101工作台手机＋D435i小样采集操作手册**
+  - **变更**：新增 [[robotics-embodied-ai/research-notes/so101-workbench-pilot-capture-sop-2026-11-10|现场SOP]]、测量与检查表CSV模板；登记并自动归档SRC-robotics-715–719，更新全局／机器人／研究／来源索引和总方案链接。
+  - **结论**：按实际Viewer版本区分bag/db3，先30秒双流录制与文件源回放，再正式扫台；采集初检与重建尺度验收分开。
+  - **限制**：没有设备连接／安装／录制／重建；数字为拟定操作预算与门槛。历史GLX记忆仅作待复核线索，不作当前主机状态。五项新来源均ok，脚本退出1来自合并清单历史失败。
+
+- **research | SO-101房间重建与仿真训练开源替代路线比较**
+  - **变更**：新增 [[robotics-embodied-ai/research-notes/so101-open-source-room-reconstruction-training-alternatives-2026-11-10|R05/R06/R04六路线报告]]、[[_sources/so101-open-source-alternatives-source-set-2026-11-10|22项来源集]]、六路线CSV与固定提交／LICENSE／目录树／局部实现证据包；更新索引、Niantic关联与原整房方案冲突修订。
+  - **结论**：未发现一体化完整开放的本房间到SO101双相机ACT系统；推荐mesh重建＋现有MuJoCo／LeRobot ACT，Playground原任务／sysid独立验证，gsplat延后；Isaac示例代码公开但运行和模型资产条款另计。
+  - **边界与限制**：Playground视觉任务增量动作和小图像与现有绝对reference合同不同；SplatSim实际固定Gaussian依赖为研究／非商业，教程根许可未清；Bench私有测试资产不复现。17项自动ok、4项纯文本fallback保留并核阅、741静态证据包；无安装、训练、远程、硬件或大资产下载。
+
+- **scope-research | 任务收敛为可交互场景Sim重建**
+  - **变更**：新增 [[robotics-embodied-ai/research-notes/interactive-room-sim-reconstruction-alternatives-2026-11-10|场景层比较与执行路线]]、[[_sources/interactive-room-reconstruction-source-set-2026-11-10|16项来源]]、7路线CSV与许可／依赖静态包；前两报告显式标训练／真机暂缓，更新全局与机器人索引。
+  - **结论**：验收改为浏览／编辑／刚体物理，关节按交互清单扩展；可控mesh＋MuJoCo主线，DISCOVERSE优先验证现有GS状态桥，PhiRIE和SimFoundry作为有依赖门槛的自动化候选。
+  - **关键缺口**：PhiView完整交互构建依赖单独访问PhiRoom兼容后台，替换成公开树未验证；SimFoundry默认Gemini及限制模型。12来源ok／3纯文本fallback保留／752固定INSTALL.md404保留；无安装、模型、场景或硬件运行。
+
+- **scope-update | 首版可交互房间必须包含门与抽屉**
+  - **变更**：更新 [[robotics-embodied-ai/research-notes/interactive-room-sim-reconstruction-alternatives-2026-11-10|场景报告]]，I3由条件扩展提升为必需，补多状态采集、门轴／滑轨／限位测量、背景分离、关节与碰撞同步和逐件验收。
+  - **边界**：具体数量与附加缓闭／锁止机构待清单；不混合不同开合状态训练静态重建，不把物性估计或关节动画当实测物理；未采集、建模或运行。
+
+- **code-research | 门／抽屉必需的DISCOVERSE、ϕ-RIE与RialTo深查**
+  - **变更**：新增 [[robotics-embodied-ai/research-notes/door-drawer-interactive-reconstruction-code-audit-2026-11-10|R05/R04/R06报告]]、[[_sources/door-drawer-interactive-code-audit-source-set-2026-11-10|15项来源]]、12能力证据矩阵及固定源码／许可／完整tree／探针包，更新主报告知识冲突与索引。
+  - **结论**：原柜子hinge／slide可编译，短施力状态变化；真实body pose进入原renderer映射方法的有限探针通过。推荐实测分件＋MJCF先mesh交互，再逐link GS；Phi导出freejoint、RialTo作者／导出明确但许可待澄清。
+  - **许可修订与限制**：GaussianRenderer0.2.0为MIT＋gsplat，不等于Real2Sim研究限定rasterizer；13纯文本fallback逐项匹配。使用隔离MuJoCo4.0.0，不更改机器人环境；无完整应用、图形、GPU、限位／物性资格测试、训练或硬件操作。

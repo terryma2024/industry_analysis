@@ -1,0 +1,13 @@
+project,capability,evidence_level,code_anchor,source_ids,limitation
+DISCOVERSE,door_hinge,source_and_isolated_probe,toy_cabinet.xml:3-13,758 770 771,not full scene or GPU
+DISCOVERSE,drawer_slide,source_and_isolated_probe,toy_cabinet.xml:15-30,758 771,not measured user drawer
+DISCOVERSE,door_GS_demo,not_qualified,cabinet_door_open.py GS false by default,759,full render untested
+DISCOVERSE,drawer_GS_flag,source_only,drawer_open.py --use_gs,760,does not establish per-link assets
+GaussianRenderer,hinge_slide_body_mapping,source_and_capture_adapter_probe,init_renderer update_gaussians xpos xquat,761 771,no GPU mutation or rasterization
+GaussianRenderer,license_backend,source_verified,MIT plus gsplat; version0.2.0,762 763 772,not complete transitive audit
+DISCOVERSE Real2Sim,rasterizer_license,source_verified,research noncommercial component,769,not applied to current renderer
+PhiRIE,object_export_articulation,not_established,export_mjcf emits freejoint per object,765,manual hinge slide work required
+PhiRIE PhiView,interactive_backend_access,documented_gate,separate pinned PhiRoom compatibility backend,750 756,public tree substitution unvalidated
+RialToGUI,joint_authoring,source_verified,postAddPrisJoint postAddRevoJoint,766,UI not run
+RialToGUI,USD_physics_joint_export,source_verified,buildJoint local frames axis limits friction,767,USD physics execution not run
+RialToGUI,code_license,unresolved,no root LICENSE nor package license in inspected tree,768 771,private flag is not license

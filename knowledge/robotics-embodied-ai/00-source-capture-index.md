@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-10-26
+last_updated: 2026-11-10
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -13,6 +13,26 @@ aliases:
 ---
 
 # 机器人（具身智能） - 来源抽取索引
+
+## 2026-11-10 门／抽屉源码与探针
+
+- [[_sources/door-drawer-interactive-code-audit-source-set-2026-11-10|15项增补来源]]：758–772；14网页源中1ok、13纯文本fallback经独立正文匹配；771为本地探针／代码包。
+
+## 2026-11-10 可交互房间场景
+
+- [[_sources/interactive-room-reconstruction-source-set-2026-11-10|固定版本与依赖证据]]：742–757；12ok／3源码纯文本fallback／1固定文档404；不据import或演示认定交互复现。
+
+## 2026-11-10 开源替代路线
+
+- [[_sources/so101-open-source-alternatives-source-set-2026-11-10|22项来源与版本包]]：SRC-robotics-720–741；17项自动ok、4项无后缀纯文本fallback_html、1项人工组织的固定代码／许可核查包；未执行。
+
+## 2026-11-10 RealSense采集SOP来源
+
+- [[research-notes/so101-workbench-pilot-capture-sop-2026-11-10|操作手册与归档]]：SRC-robotics-715–719，5项自动抽取ok；固定旧版bag、最新文档db3与实际安装版本分开。
+
+## 2026-11-10 房间重建工具链
+
+- [[research-notes/so101-room-high-fidelity-sim-reconstruction-plan-2026-11-10|SO-101方案及归档链接]]：SRC-robotics-709–714；5项自动成功，712自动403失败保留，新增web核阅释义补录；固定3DGRUT提交，区分默认归一化与真实尺度。
 
 ## 2026-10-26 物理解算与Sim2Real来源
 
@@ -488,3 +508,20 @@ aliases:
 
 - 来源集：[[_sources/jetson-thor-edge-ai-compute-platform-source-set|Jetson Thor 与边缘 AI 计算平台来源集]]
 - 数据表：[候选规格与价格 CSV](../../raw/robotics-embodied-ai/data/jetson-thor-alternatives-spec-price-2026-08-05.csv)
+
+## 2026-11-09 3DGS 场地导航与 VLK
+
+- [[_sources/wechat-3dgs-robot-simulation-data-real2sim-vlk|来源卡]]；[[news/2026-11-09-3dgs-robot-simulation-data-real2sim-vlk|核验摘要]]。
+- [SRC-robotics-677](../../raw/robotics-embodied-ai/documents/SRC-robotics-677-source.md)：Defuddle `ok`；微信部分公式抽取不全，日期待验证。
+- [SRC-robotics-678](../../raw/robotics-embodied-ai/documents/SRC-robotics-678-niantic-spatial-flexion-humanoid-real2sim-sim2real.md)：Defuddle `ok`；公司原始实验披露，未独立复现。
+- [SRC-robotics-679](../../raw/robotics-embodied-ai/documents/SRC-robotics-679-vlk-learning-humanoid-loco-manipulation-official-project.md)：Defuddle `ok`；作者项目披露，未独立复现。
+
+## 2026-11-10 VLK 论文与实现
+
+- [[_sources/vlk-paper-code-project-fit-source-set-2026-11-10|九项来源与恢复记录]]；[[robotics-embodied-ai/research-notes/vlk-synthetic-data-zero-shot-project-fit-2026-11-10|研究报告]]。
+- `SRC-robotics-680`–`688`：六项自动捕获ok、两项一级代码/本地快照ok；681通用抽取>5MB后fallback，已补存19页PDF、逐页文本/JSON。保留原失败及副本，不将历史failed项或后缀误判当成论文不可获取。
+
+## 2026-11-10 Niantic／Flexion 工作流
+
+- [[_sources/niantic-flexion-workflow-source-set-2026-11-10|20项来源与静态资产证据]]；[[robotics-embodied-ai/research-notes/niantic-flexion-real2sim-zero-shot-project-fit-2026-11-10|研究报告]]。
+- SRC-robotics-689–708：19项ok；695纯文本LICENSE通用解析fallback，已用固定提交GitHub原文补充，原记录保留；HF样例只局部成员读取，无完整包/渲染/动力学验收。

@@ -1,0 +1,18 @@
+{
+  "mujoco_version": "4.0.0",
+  "renderer_commit": "577efdb50c3891f46db3971dc0b7c4129146dd16",
+  "method_source": "Exact AST-extracted init_renderer and update_gaussians; capture adapter replaces GPU model mutation",
+  "mapped_body_names": [
+    "cabinet_door",
+    "cabinet_drawer"
+  ],
+  "drawer_translation": [
+    -0.10000000000000003,
+    0.0,
+    0.0
+  ],
+  "hinge_quaternion_changed": true,
+  "body_pose_binding_pass": true,
+  "actual_gaussian_points_mutation_tested": false,
+  "GPU_render_tested": false
+}

@@ -1,0 +1,250 @@
+{
+  "scope": "door drawer reconstruction; no training or hardware",
+  "evidence_files": [
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--DISCOVERSE--models--mjcf--object--cabinet.xml",
+      "sha256": "51729d28ffc0fb1aa6d31ffa268e1b2c68a46c5a1df4a76b55e552b8afd3c206",
+      "bytes": 3325
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--DISCOVERSE--models--mjcf--tasks_mmk2--drawer_open.xml",
+      "sha256": "ef384cdffc8e8837fb0e5b796e65e74896cd68effd8ecd9a948b665d4230c76a",
+      "bytes": 1492
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/real-to-sim-to-real--RialToGUI--src--App.js",
+      "sha256": "27fbb5ac6d89275d9cd7c5dfad8d359880a7d4b33c51b72c595a494fbfae473e",
+      "bytes": 2002
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/body-binding-probe-result.json",
+      "sha256": "83569f95e6e084312ea8e8f621cdb4e8765d9c0c71fa27242d494cc96b36fa60",
+      "bytes": 514
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/real-to-sim-to-real--RialToGUI--src--dynamicsClasses.js",
+      "sha256": "6db5b910cfa40ffadf650aa4fc7a4c38e1be556e404b4ce7a7b5d379fd3c9082",
+      "bytes": 3100
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/probe_body_binding.py",
+      "sha256": "84f72264624c9f6cfc1a0453bd4c636566c58891dbadee45949022efa2972897",
+      "bytes": 2243
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--DISCOVERSE--examples--tasks_mmk2--drawer_open.py",
+      "sha256": "827efa6348c4f7662664b03bd93803a54f4b2ec6f3f0bce621f7f1714d4c1c17",
+      "bytes": 6739
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--GaussianRenderer--LICENSE",
+      "sha256": "1ea6b7eb8deddd0e2b175d7e6b8f16a667b7065c4bce2e16d04014ac3aef0bff",
+      "bytes": 1066
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/real-to-sim-to-real--RialTo--tree.json",
+      "sha256": "545d1c5872eab961513964bf9840e4c332f8a494e349552b31e71852fa934913",
+      "bytes": 94760
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/insait-institute--PhiRIE--tree.json",
+      "sha256": "fa0ea60b2fb43065e7129f114c5cb4374f20b6e43545ca66bba20a424f1b697f",
+      "bytes": 158993
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/probe_cabinet.py",
+      "sha256": "9134b59aaaeb76cd6927fe58d61925449418c2d39b8359e00af9905c2c113577",
+      "bytes": 2096
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/real-to-sim-to-real--RialToGUI--src--Scene.js",
+      "sha256": "74e180d55288907a67a707f292cba068bd5116b13254565bf3445858da405c2d",
+      "bytes": 983
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--DISCOVERSE--pyproject.toml",
+      "sha256": "12744127b4ade8f2510795c3e99c5d6a690bf9ad2bb343c046372ba0f8ca482b",
+      "bytes": 5471
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--DISCOVERSE--examples--tasks_mmk2--cabinet_door_open.py",
+      "sha256": "599d71941f04841cb8758712e48384367b32fa60a983f150b72aeada74ad097f",
+      "bytes": 7544
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/insait-institute--PhiRIE--robo--sim--export_mjcf.py",
+      "sha256": "4d22b4c02a932b7ab1a3552224c1f1823153bc0c796a502313a10e9012882c83",
+      "bytes": 76235
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/real-to-sim-to-real--RialToGUI--src--SceneInit.js",
+      "sha256": "7940aa2738ad3abf99cf4a1f8ae6e7d19cc0c963712759676eb2dc234de578e5",
+      "bytes": 47685
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/mujoco-cabinet-probe-result.json",
+      "sha256": "84044dc94dd6bc85c00c618ca9808d01440d7359c5f46ec908e72e32cd4f7201",
+      "bytes": 1044
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/extra-repos.json",
+      "sha256": "cc2de58994e92c9b7c4ad962ddedd32900cdf33b7dfa68f80d380643b5084ee5",
+      "bytes": 1217
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--DISCOVERSE--tree.json",
+      "sha256": "a14146273fb6a6435d1c17b1b17a36ccfc091837f6a4479cb51c546f699e2e6c",
+      "bytes": 585217
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--DISCOVERSE--models--mjcf--object--toy_cabinet.xml",
+      "sha256": "aba6208f964c0ed655f3fdcbf94df3640ea4aecb45813b76a10d7d69ded3d8be",
+      "bytes": 3612
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--GaussianRenderer--tree.json",
+      "sha256": "d8c586b99f978d836e1edee421a191651f2e2117f3dfcd4ee6f8629c4478763b",
+      "bytes": 10276
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/real-to-sim-to-real--RialToGUI--package.json",
+      "sha256": "d6ab8a96efcbdde6efeeddcbd4eef399aa55b690e078bf5f215e5b74529709cb",
+      "bytes": 970
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--DISCOVERSE--models--mjcf--tasks_mmk2--cabinet_door_open.xml",
+      "sha256": "5dbf9effef99a0b1def74bf48d4ee37efc1f14e1827325cf5c9df07b7ed19da8",
+      "bytes": 1491
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--GaussianRenderer--src--gaussian_renderer--__init__.py",
+      "sha256": "d8014cfa588216bceea679090923cf2250f3cdc3c0f4b18dc616676847faee6e",
+      "bytes": 1863
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--GaussianRenderer--pyproject.toml",
+      "sha256": "e0ecd0aa529a84d565476b963a704ab04c40ed65a71ef3738ae944d566d52ee9",
+      "bytes": 1456
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/real-to-sim-to-real--RialToGUI--src--ViewGL.js",
+      "sha256": "e727491ba9298b8c1ecd1ce0a38a84c4651497ace30ca02b9e1704e82ee4be55",
+      "bytes": 447
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--GaussianRenderer--src--gaussian_renderer--core--gs_renderer.py",
+      "sha256": "11e3a88bc3b037b4b3771715259cfe9d21c9d520f2fb2d5aaf2f9af265c7f71d",
+      "bytes": 8045
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/real-to-sim-to-real--RialToGUI--src--utils.js",
+      "sha256": "9c57c891d9a420e1b39946574e48bcebc54a6878aef6d1f21144e19982788911",
+      "bytes": 5204
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/real-to-sim-to-real--RialToGUI--tree.json",
+      "sha256": "6ef05c1f72f9b069c174dc0dcdcbdb1b5fb38c48ac533fd0fd7960f764ac3d31",
+      "bytes": 10295
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/inventory.json",
+      "sha256": "5b4c9151f73b86c764875365ab3d86534476b4619c4fd2da3e81482a208d01b0",
+      "bytes": 3416
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--DISCOVERSE-Real2Sim--tree.json",
+      "sha256": "6c44ead0a5f8e0d611b3433af3aeeb83dd9219be6ece4a8dd68c5488bef49449",
+      "bytes": 568811
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--GaussianRenderer--README.md",
+      "sha256": "a61d5d02d8353b719d3aed23ea75ed435244a57ab1a4b040da01072d4de27084",
+      "bytes": 3776
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--GaussianRenderer--src--gaussian_renderer--gs_renderer_mujoco.py",
+      "sha256": "4259413cfa7c0328bc0809d9e27ab66e5d78ebe7bee1acb263b8a307263f3c26",
+      "bytes": 6202
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/real-to-sim-to-real--RialToGUI--src--USDZExporter.js",
+      "sha256": "298bbd0c8f33264485f6d24ec818fb0b28eb80a5a36d9a1c0e68b4e58eb594b9",
+      "bytes": 20882
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/insait-institute--PhiRIE--docs--PHIVIEW.md",
+      "sha256": "9f2d04a2164b88c9a88695f99bd87a16cb34580b1fc5a65c0f08d76f60fe91ec",
+      "bytes": 5441
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/RunyiYang--PhysicalView--tools--backends--sources.json",
+      "sha256": "f2b95887ff2976d56f3e9133d0514c95a5614e68092b3efde2bafd91129d1995",
+      "bytes": 746
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/insait-institute--PhiRIE--LICENSE",
+      "sha256": "76b898e0f136f1e6bc968ed0b453e990a2a4526a7b23ead542c6fe79071f0ea0",
+      "bytes": 1090
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-771-door-drawer-code-and-probe-evidence/discoverse-dev--DISCOVERSE--LICENSE",
+      "sha256": "1ea6b7eb8deddd0e2b175d7e6b8f16a667b7065c4bce2e16d04014ac3aef0bff",
+      "bytes": 1066
+    }
+  ],
+  "fallback_content_checks": [
+    {
+      "source_id": "SRC-robotics-758",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-759",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-760",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-761",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-762",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-763",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-764",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-765",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-766",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-767",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-768",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-770",
+      "fallback_body_matches_connector_copy": true
+    },
+    {
+      "source_id": "SRC-robotics-772",
+      "fallback_body_matches_connector_copy": true
+    }
+  ],
+  "probe_environment": "isolated uv --no-project --with mujoco, resolved mujoco4.0.0; not existing project env"
+}

@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-11-09
+last_updated: 2026-11-10
 tags:
   - wiki
   - index
@@ -14,6 +14,27 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[robotics-embodied-ai/research-notes/door-drawer-interactive-reconstruction-code-audit-2026-11-10|门／抽屉必需：三项目代码深查]] — 当前推荐DISCOVERSE/MJCF分件路线；原柜子两关节与body映射有限探针通过，GPU／完整场景待验。
+- [[_sources/door-drawer-interactive-code-audit-source-set-2026-11-10|门／抽屉源码、许可与探针来源]] — 15项增补；当前renderer MIT＋gsplat与受限Real2Sim工具分开。
+
+- [[robotics-embodied-ai/research-notes/interactive-room-sim-reconstruction-alternatives-2026-11-10|当前主线：可交互房间Sim重建]] — 只比较对象化、碰撞、背景去除、关节与交互；训练／真机部署暂缓，含PhiView后台依赖核查。
+- [[_sources/interactive-room-reconstruction-source-set-2026-11-10|可交互重建16项来源]] — 固定代码／许可、12项ok、3项纯文本fallback、1项404保留。
+
+- [[robotics-embodied-ai/research-notes/so101-open-source-room-reconstruction-training-alternatives-2026-11-10|SO-101开源重建与训练替代路线]] — R05/R06/R04，六路线比较；推荐保留MuJoCo/ACT、开源mesh重建及Playground独立参照。
+- [[_sources/so101-open-source-alternatives-source-set-2026-11-10|开源替代路线22项来源]] — 固定提交、许可与局部源码；含未开放测试资产和非商业子模块边界。
+
+- [[robotics-embodied-ai/research-notes/so101-workbench-pilot-capture-sop-2026-11-10|SO-101工作台小样采集操作手册]] — D435i连接／原生录制／回放、手机拍摄、尺寸清单与A/B两级验收；含空白CSV模板。
+
+- [[robotics-embodied-ai/research-notes/so101-room-high-fidelity-sim-reconstruction-plan-2026-11-10|SO-101整房高保真Sim重建执行方案]] — 分层资产、手机／可选RGB-D采集、尺度与相机标定、MuJoCo物理＋Isaac渲染、阶段验收；尚未实施。
+
+- [[_sources/niantic-flexion-workflow-source-set-2026-11-10|Niantic／Flexion工作流来源集]] — 20项资料、8条件仿真基准、公开样例局部USD解析和授权/版本边界。
+- [[robotics-embodied-ai/research-notes/niantic-flexion-real2sim-zero-shot-project-fit-2026-11-10|Niantic／Flexion工作流深研]] — R05/R04/R07；区分场景、RL经验和ACT数据，评估SO-101/Microduck接入及零样本实验范围。
+
+- [[_sources/vlk-paper-code-project-fit-source-set-2026-11-10|VLK 论文与实现来源集]] — 九项一级来源/本地快照；PDF补充恢复、固定代码提交及实验口径冲突。
+- [[robotics-embodied-ai/research-notes/vlk-synthetic-data-zero-shot-project-fit-2026-11-10|VLK 合成数据与零样本迁移深研]] — R04/R05；完整管线、逐格实验、SceneBot实现与SO-101/Microduck适配，建议迁移方法而非G1权重。
+
+- [[_sources/wechat-3dgs-robot-simulation-data-real2sim-vlk|仿真数据采集微信文章来源卡]] — 三项归档来源；保留原文与 VLK 真机微调冲突。
 
 - [[_sources/future-core-resources-valuation-source-set-2026-11-05|21家公司估值来源集]] — 41项增补来源；25证券2026-11-04收盘、ECB汇率、最新财务及抓取限制。
 
@@ -481,6 +502,8 @@ tags:
 - [[robotics-embodied-ai/00-index|机器人与具身智能]] — 机器人与具身智能行业研究入口。
 
 ## News
+
+- [[news/2026-11-09-3dgs-robot-simulation-data-real2sim-vlk|仿真数据采集：3DGS、场地导航与 VLK]] — 区分两条研究路线、仿真与真机指标；校正微调说法，保留商业与复现边界。
 
 - [[news/2026-11-09-ai-at-the-scale-of-human-civilization|AI 放在人类文明的尺度上，是什么｜核心观点萃取]] — 基于约1.54万字全片ASR，整理文明级联、AI再压缩、现实校准及论证边界。
 

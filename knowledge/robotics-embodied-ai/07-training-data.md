@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 训练数据生产与处理
 date: 2026-05-26
-last_updated: 2026-08-11
+last_updated: 2026-11-10
 tags:
   - industry/robotics-embodied-ai
   - data
@@ -123,3 +123,11 @@ flowchart LR
 - 已推进：补充 LeRobot 初学者教学，解释 LeRobotDataset、目录结构、UMI/Zarr 转换和 ToB 数据服务意义，见 [[research-notes/lerobot-beginner-guide-2026-05-28]]。
 - 已推进：从微信文章的从业者问题地图出发，补齐采集前契约、raw 保真、时间对齐、自动质量门、episode/事件切片、schema/action 编译、无泄漏切分、训练时增强、真实 holdout 与部署回流，见 [[research-notes/embodied-ai-model-data-processing-pipeline-2026-08-11]]。
 - 待继续：下载最小样例数据核验字段和 license；合并升级 `training_data_companies.csv`；补充 Robotin/FirstMove/GenRobot/灵初等工商、招聘和客户交付证据；按 [[00-source-capture-index]] SOP 抽取本轮新增来源 raw artifact。
+
+## 2026-11-10 VLK 案例增补
+
+- [[robotics-embodied-ai/research-notes/vlk-synthetic-data-zero-shot-project-fit-2026-11-10|VLK 合成监督流程与工程适配]]：人工场景标注、运动先验、运动学后处理与配对渲染分开审计；MuJoCo执行/Isaac渲染有论文先例，但不证明现有项目已完成对接。
+
+## 2026-11-10 Niantic／Flexion 深研跟进
+
+- [[robotics-embodied-ai/research-notes/niantic-flexion-real2sim-zero-shot-project-fit-2026-11-10|工作流、公开资产与迁移边界]]：已区分重建场景、RL交互经验和可导出ACT示教；补提取8个仿真条件及样例USD静态结构。未执行训练或真机；未取得合作导航完整代码/权重。

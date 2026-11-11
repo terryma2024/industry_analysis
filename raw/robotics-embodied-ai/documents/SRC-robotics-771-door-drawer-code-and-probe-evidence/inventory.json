@@ -1,0 +1,92 @@
+[
+  {
+    "repo": "discoverse-dev/DISCOVERSE",
+    "sha": "d67f47c084aba0e0cf422a8725235f8b9238655a",
+    "truncated": false,
+    "total_files": 1948,
+    "hits": [
+      "LICENSE",
+      "examples/force_control/joint_impedance_control.py",
+      "examples/grasp_gen/subscribe_joint_state.py",
+      "examples/tasks_airbot_play/open_drawer.py",
+      "examples/tasks_mmk2/cabinet_door_open.py",
+      "examples/tasks_mmk2/drawer_open.py",
+      "models/meshes/leap_hand_sensor/mcp_joint.stl",
+      "models/mjcf/manipulator/arx_l5/LICENSE",
+      "models/mjcf/manipulator/franka_emika_panda/LICENSE",
+      "models/mjcf/manipulator/kuka_iiwa_14/LICENSE",
+      "models/mjcf/manipulator/ufactory_xarm7/LICENSE",
+      "models/mjcf/manipulator/universal_robots_ur5e/LICENSE",
+      "models/mjcf/object/cabinet.xml",
+      "models/mjcf/object/toy_cabinet.xml",
+      "models/mjcf/task_environments/open_drawer.xml",
+      "models/mjcf/tasks_mmk2/cabinet_door_open.xml",
+      "models/mjcf/tasks_mmk2/drawer_open.xml",
+      "policies/Diffusion-Policy/diffusion_policy/model/bet/libraries/mingpt/LICENSE",
+      "policies/Diffusion-Policy/pyproject.toml",
+      "policies/RDT/requirements.txt",
+      "policies/RDT/task_config/drawer_open.yml",
+      "policies/dp/requirements.txt",
+      "policies/openpi/LICENSE",
+      "policies/openpi/examples/aloha_real/requirements.in",
+      "policies/openpi/examples/aloha_real/requirements.txt",
+      "policies/openpi/examples/aloha_sim/requirements.in",
+      "policies/openpi/examples/aloha_sim/requirements.txt",
+      "policies/openpi/examples/libero/requirements.in",
+      "policies/openpi/examples/libero/requirements.txt",
+      "policies/openpi/examples/simple_client/requirements.in",
+      "policies/openpi/examples/simple_client/requirements.txt",
+      "policies/openpi/packages/openpi-client/pyproject.toml",
+      "policies/openpi/pyproject.toml",
+      "policies/openpi/task_config/drawer_open.yml",
+      "pyproject.toml"
+    ]
+  },
+  {
+    "repo": "discoverse-dev/DISCOVERSE-Real2Sim",
+    "sha": "1fd9ecdbb02fe3b28bce5db28a3b968b4d3d4d57",
+    "truncated": false,
+    "total_files": 1703,
+    "hits": [
+      "DiffusionLight/LICENSE",
+      "LitMesh2GS/LICENSE.md",
+      "LitMesh2GS/submodules/diff-gaussian-rasterization/LICENSE.md",
+      "LitMesh2GS/submodules/simple-knn/LICENSE.md",
+      "requirements.txt"
+    ]
+  },
+  {
+    "repo": "insait-institute/PhiRIE",
+    "sha": "a03543f6472451ffc079502417a48d64c2a6e7f1",
+    "truncated": false,
+    "total_files": 512,
+    "hits": [
+      "LICENSE",
+      "configs/policies/pi05_droid_jointpos.yaml",
+      "configs/policies/pi05_droid_jointpos_sim.yaml",
+      "envs/control/pyproject.toml",
+      "pyproject.toml",
+      "requirements.txt",
+      "robo/sim/export_mjcf.py",
+      "tools/phiview/LICENSE",
+      "tools/phiview/envs/generation/pyproject.toml",
+      "tools/phiview/envs/inference/pyproject.toml",
+      "tools/phiview/envs/studio/pyproject.toml",
+      "tools/phiview/pyproject.toml",
+      "tools/phiview/run/requirements-phiview-inference.txt",
+      "tools/phiview/run/requirements-studio.txt"
+    ]
+  },
+  {
+    "repo": "real-to-sim-to-real/RialToGUI",
+    "sha": "9f0191453d7884d6eaf301a12e6f1cdb24a0ae28",
+    "truncated": false,
+    "total_files": 36,
+    "hits": [
+      "package.json",
+      "src/Scene.js",
+      "src/USDZExporter.js",
+      "src/dynamicsClasses.js"
+    ]
+  }
+]

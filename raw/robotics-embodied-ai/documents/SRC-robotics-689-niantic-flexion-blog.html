@@ -1,0 +1,1642 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Niantic Spatial, Flexion, and NVIDIA: Closing the Sim2Real Gap for Humanoids | Niantic Spatial, Inc.</title>
+<meta name="google-site-verification" content="AqJrr-ftVSc2eREI-8Fw1yK8Y9-xN3Q8FHUohO-i8Sw" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#ffffff" />
+<meta content="website" property="og:type" />
+<meta content="Niantic Spatial, Inc." property="og:site_name" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="Niantic Spatial, Flexion, and NVIDIA: Closing the Sim2Real Gap for Humanoids | Niantic Spatial, Inc." property="og:title" />
+<meta content="Niantic Spatial, Flexion, and NVIDIA: Closing the Sim2Real Gap for Humanoids | Niantic Spatial, Inc." name="twitter:title" />
+<meta name="description" content="How Niantic Spatial turns a single camera walkthrough into a high-fidelity, training-ready digital twin for NVIDIA Isaac Sim, enabling Flexion to train RGB navigation policies that transfer zero-shot to the real office." />
+<meta property="og:url" content="https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real" />
+<meta property="og:description" content="How Niantic Spatial turns a single camera walkthrough into a high-fidelity, training-ready digital twin for NVIDIA Isaac Sim, enabling Flexion to train RGB navigation policies that transfer zero-shot to the real office." />
+<meta name="twitter:description" content="How Niantic Spatial turns a single camera walkthrough into a high-fidelity, training-ready digital twin for NVIDIA Isaac Sim, enabling Flexion to train RGB navigation policies that transfer zero-shot to the real office." />
+<meta content="https://lh3.googleusercontent.com/p0CZVTHI5x_Lftsw9_hFUT-kkNUVgwmPwT66sSkuS37zk9KtwlgXggc-YxqOQ2YZ83VxsXTD_VTuC2tFZiLtBTqGus4lay8KRQorQskbo-YN" property="og:image" />
+<meta content="https://lh3.googleusercontent.com/p0CZVTHI5x_Lftsw9_hFUT-kkNUVgwmPwT66sSkuS37zk9KtwlgXggc-YxqOQ2YZ83VxsXTD_VTuC2tFZiLtBTqGus4lay8KRQorQskbo-YN" name="twitter:image" />
+<script type="application/ld+json" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ==">
+{
+"@context": "https://schema.org",
+"@graph": [{
+"@type": "Organization",
+"@id": "https://www.nianticspatial.com/#organization",
+"name": "Niantic Spatial, Inc.",
+"url": "https://www.nianticspatial.com",
+"description": "Niantic Spatial builds real-world foundation models for physical AI — giving robots, AI agents, and people an accurate, shared understanding of physical spaces.",
+"logo": {
+"@type": "ImageObject",
+"url": "https://www.nianticspatial.com/images/niantic-spatial-icon.png"
+},
+"sameAs": ["https://www.linkedin.com/company/nianticspatial", "https://www.instagram.com/nianticspatial/", "https://www.facebook.com/nianticspatial/", "https://x.com/NianticSpatial", "https://www.youtube.com/@NianticSpatial", "https://github.com/niantic-lightship/"]
+}, {
+"@type": "WebSite",
+"@id": "https://www.nianticspatial.com/#website",
+"url": "https://www.nianticspatial.com",
+"name": "Niantic Spatial",
+"publisher": {
+"@id": "https://www.nianticspatial.com/#organization"
+}
+}, {
+"@type": "WebPage",
+"@id": "https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real#webpage",
+"url": "https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real",
+"name": "Niantic Spatial, Flexion, and NVIDIA: Closing the Sim2Real Gap for Humanoids | Niantic Spatial, Inc.",
+"description": "How Niantic Spatial turns a single camera walkthrough into a high-fidelity, training-ready digital twin for NVIDIA Isaac Sim, enabling Flexion to train RGB navigation policies that transfer zero-shot to the real office.",
+"isPartOf": {
+"@id": "https://www.nianticspatial.com/#website"
+}
+}, {
+"@type": "BreadcrumbList",
+"@id": "https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real#breadcrumbs",
+"itemListElement": [{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://www.nianticspatial.com"
+}, {
+"@type": "ListItem",
+"position": 2,
+"name": "Blog",
+"item": "https://www.nianticspatial.com/blog"
+}, {
+"@type": "ListItem",
+"position": 3,
+"name": "Niantic Spatial, Flexion, and NVIDIA: Closing the Sim2Real Gap for Humanoids",
+"item": "https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real"
+}]
+}]
+}
+
+</script>
+<link rel="canonical" href="https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real" />
+<link rel="alternate" href="https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real" hreflang="x-default" />
+<link rel="alternate" hreflang="en" href="https://www.nianticspatial.com/en/blog/flexion-humanoid-real2sim-sim2real" />
+<link rel="alternate" hreflang="ja" href="https://www.nianticspatial.com/ja/blog/flexion-humanoid-real2sim-sim2real" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://lh3.googleusercontent.com" />
+<link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
+<link rel="preconnect" href="https://cdn.vector.co" />
+<link rel="dns-prefetch" href="https://cdn.vector.co" />
+<link rel="preload" href="/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+<link rel="preload" href="/fonts/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+<link rel="preload" href="/fonts/Figtree-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+<script nonce="s8KdKGR2CoyJ2hHb+Q7UIQ==">
+(function() {
+var h = document.documentElement;
+try {
+if (new URLSearchParams(location.search).get('preview') === 'true' || window.self !== window.top) h.setAttribute('data-no-cookiebar', '')
+} catch (e) {
+h.setAttribute('data-no-cookiebar', '')
+}
+})();
+
+</script>
+<script nonce="s8KdKGR2CoyJ2hHb+Q7UIQ==">
+(function() {
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+dataLayer.push(arguments);
+}
+var m = document.cookie.match(/(?:^|;\s*)_ncc=([01])/);
+var ncc = m && m[1];
+
+function state(v) {
+return {
+ad_storage: v,
+analytics_storage: v,
+ad_user_data: v,
+ad_personalization: v,
+personalization_storage: v,
+functionality_storage: 'granted',
+security_storage: 'granted'
+};
+}
+gtag('set', 'ads_data_redaction', true);
+if (ncc === '1') {
+gtag('consent', 'default', state('granted'));
+} else if (ncc === '0') {
+gtag('consent', 'default', state('denied'));
+} else {
+var optIn = state('denied');
+optIn.region = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH'];
+optIn.wait_for_update = 500;
+gtag('consent', 'default', optIn);
+gtag('consent', 'default', state('granted'));
+}
+})();
+
+</script>
+<script nonce="s8KdKGR2CoyJ2hHb+Q7UIQ==">
+(function(w, d, s, l, i) {
+w[l] = w[l] || [];
+w[l].push({
+'gtm.start': new Date().getTime(),
+event: 'gtm.js'
+});
+var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s),
+dl = l != 'dataLayer' ? '&l=' + l : '';
+j.async = true;
+j.src =
+'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-MMV5RVWF');
+
+</script>
+<link href="/images/favicons/favicon-black.png" rel="icon" media="(prefers-color-scheme: light)" />
+<link href="/images/favicons/favicon-white.png" rel="icon" media="(prefers-color-scheme: dark)" />
+<link rel="stylesheet" href="/assets/acY2DQFQ.css" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ==" />
+<link rel="stylesheet" href="/assets/DN5hIULh.css" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ==" />
+<link rel="stylesheet" href="/assets/C5TPY84I.css" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ==" />
+<script type="module" src="/assets/CFjX3LCR.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/D8KAU0xB.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/CHPIGRV3.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/BWRS-RSB.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/D_BPoCi2.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/DPmLQWTN.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/ChVei_-r.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/CyZjdV1Q.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/DudXv5Hs.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/BWWWwqxX.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/D2V_wU7K.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/Cq281b3E.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/C2yZOhdJ.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/BIxN3n8C.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/DkQmv-Jj.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/eHK55yh5.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/BXvoRlx1.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/Ko-8juNC.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/D1DeKWp-.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/BDd4_uDX.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/qFbjCyt-.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/DLFTjgAG.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/DzP4cnmn.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/CtFTNGtp.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/DPiYQF2U.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/CTEBRncn.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/BLBinvCZ.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/CXN03Q2O.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/lpPSpC4a.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/C5oS9Y6c.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/NGOtXnU-.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+<script type="module" src="/assets/Cnsyuoi6.min.js" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script>
+</head>
+<body><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to main content</a><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMV5RVWF" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+<div id="root" role="document">
+<div class="ns" data-theme="light" data-ns-chrome="true"><ns-nav class="ns-stick" data-scrolled="false" data-drawer="false" data-ns-module="NsNav" id="ns-nav">
+<div class="ns-nav">
+<div class="ns-navrow"><span class="ns-progress" aria-hidden="true"></span><a class="ns-nav__logo" href="/" aria-label="Niantic Spatial home" data-ns-close-menus="true"><span class="ns-logo ns-logo--img" role="img" aria-label="Niantic Spatial"></span></a>
+<nav class="ns-nav__items" aria-label="Primary"><a class="ns-nav__item" href="/blog" aria-current="true" data-ns-close-menus="true">News</a><a class="ns-nav__item" href="/research" data-ns-close-menus="true">Research</a><button type="button" class="ns-nav__item" data-ns-menu-trigger="2" aria-expanded="false" aria-controls="ns-menu-2">Models<svg class="ns-nav__caret" width="9" height="6" viewBox="0 0 9 6" fill="none" aria-hidden="true">
+<path d="M1 1l3.5 3.5L8 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button><button type="button" class="ns-nav__item" data-ns-menu-trigger="3" aria-expanded="false" aria-controls="ns-menu-3">Industries<svg class="ns-nav__caret" width="9" height="6" viewBox="0 0 9 6" fill="none" aria-hidden="true">
+<path d="M1 1l3.5 3.5L8 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button><button type="button" class="ns-nav__item" data-ns-menu-trigger="4" aria-expanded="false" aria-controls="ns-menu-4">Company<svg class="ns-nav__caret" width="9" height="6" viewBox="0 0 9 6" fill="none" aria-hidden="true">
+<path d="M1 1l3.5 3.5L8 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button></nav>
+<div class="ns-nav__actions"><ns-ask class="ns-nav__action"><button type="button" class="ns-ask ns-ask--fx-iris" data-ns-ask-toggle="true" aria-expanded="false" aria-controls="ns-ask-panel" aria-label="Ask Niantic Spatial"><span class="ns-ask__fx" aria-hidden="true"></span><span class="ns-ask__tile"><svg class="ns-ask__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+<defs>
+<linearGradient id="ns-ask-star" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#7F8FF0"></stop>
+<stop offset="0.5" stop-color="#B38FE6"></stop>
+<stop offset="1" stop-color="#EE9F86"></stop>
+</linearGradient>
+</defs>
+<path fill="url(#ns-ask-star)" d="M10 4C10.24 9.3 13.7 12.76 19 13C13.7 13.24 10.24 16.7 10 22C9.76 16.7 6.3 13.24 1 13C6.3 12.76 9.76 9.3 10 4Z"></path>
+<path class="ns-ask__twinkle" fill="url(#ns-ask-star)" d="M19.5 1C19.6 3.2 20.8 4.4 23 4.5C20.8 4.6 19.6 5.8 19.5 8C19.4 5.8 18.2 4.6 16 4.5C18.2 4.4 19.4 3.2 19.5 1Z"></path>
+</svg></span><span class="ns-ask__label">Ask AI</span></button>
+<div class="ns-ask__hint" data-ns-ask-hint="true" hidden role="status"><strong>New: ask our AI</strong>Questions about VPS, Capture, pricing or our research, answered from our site and docs.</div>
+<div class="ns-ask__panel" id="ns-ask-panel" data-ns-ask-panel="true" hidden role="dialog" aria-label="Ask"><button type="button" class="ns-ask__close" data-ns-ask-close="true" aria-label="Close"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+<path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"></path>
+</svg></button>
+<div class="ns-ask__title">What are you trying to do?</div>
+<div class="ns-ask__sub">Pick a question, or ask in your own words.</div><button type="button" class="ns-ask__resume" data-ns-ask-resume="true" hidden><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<path d="M5 3L1.5 6.5 5 10M1.5 6.5H9a3.5 3.5 0 010 7H7.5" stroke="currentColor" stroke-width="1.5"></path>
+</svg><span>Continue your last conversation</span></button>
+<div class="ns-ask__questions ns-ask__questions--page" data-ns-ask-page="true" hidden><button type="button" class="ns-ask__question" data-ns-ask-q="true" data-query="Summarize this page"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<path d="M3 1.5h5.5L11 4v8.5H3z M8.5 1.5V4H11 M5 7h4 M5 9.5h4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"></path>
+</svg><span>Summarize this page</span></button></div>
+<div class="ns-ask__questions" data-ns-ask-questions="true"><button type="button" class="ns-ask__question" data-ns-ask-q="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<circle cx="6" cy="6" r="4.4" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M9.3 9.3L13 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg><span>How do you use AI and world models to understand and interact with the real world?</span></button><button type="button" class="ns-ask__question" data-ns-ask-q="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<circle cx="6" cy="6" r="4.4" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M9.3 9.3L13 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg><span>How do you support public sector and defense missions, especially in GPS-denied environments?</span></button><button type="button" class="ns-ask__question" data-ns-ask-q="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<circle cx="6" cy="6" r="4.4" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M9.3 9.3L13 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg><span>How do you help with robotics and autonomous systems in delivery and logistics?</span></button><button type="button" class="ns-ask__question" data-ns-ask-q="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<circle cx="6" cy="6" r="4.4" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M9.3 9.3L13 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg><span>What is a Visual Positioning System, why is it important, and how is your VPS different?</span></button></div><template data-ns-ask-q-template="true"><button type="button" class="ns-ask__question" data-ns-ask-q="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<circle cx="6" cy="6" r="4.4" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M9.3 9.3L13 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg><span></span></button></template>
+<form class="ns-ask__form" data-ns-ask-form="true" action="#" method="get"><input class="ns-ask__input" type="search" name="q" autocomplete="off" placeholder="Ask a question or search for anything" aria-label="Ask a question or search for anything" /><button type="submit" class="ns-ask__submit" aria-label="Ask"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path>
+</svg></button></form>
+<div class="ns-ask__foot"><a class="ns-btn ns-btn--primary ns-btn--small" href="/contact">Talk to sales<span aria-hidden="true">→</span></a></div>
+</div>
+</ns-ask>
+<div class="ns-nav__action ns-nav__action--menu"><button type="button" class="ns-nav__item" data-ns-action-trigger="0" aria-expanded="false" aria-controls="ns-action-menu-0">Try Scaniverse<svg class="ns-nav__caret" width="9" height="6" viewBox="0 0 9 6" fill="none" aria-hidden="true">
+<path d="M1 1l3.5 3.5L8 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button>
+<div class="ns-nav__menu" id="ns-action-menu-0" data-ns-action-menu="0" data-open="false"><a class="ns-nav__menu-link" href="https://scaniverse.nianticspatial.com/signin" target="_blank" rel="noopener"><span class="ns-nav__menu-title">Scaniverse app<span aria-hidden="true">↗</span></span><span class="ns-nav__menu-desc">Capture and reconstruct real places.</span></a><a class="ns-nav__menu-link" href="/pricing"><span class="ns-nav__menu-title">Pricing<span aria-hidden="true">→</span></span><span class="ns-nav__menu-desc">Plans for teams and enterprises.</span></a></div>
+</div><a data-ns-close-menus="true" class="ns-btn ns-btn--primary ns-btn--small ns-nav__cta" href="/contact">Contact sales</a><button type="button" class="ns-nav__burger" data-ns-drawer-toggle="true" aria-expanded="false" aria-controls="ns-drawer" aria-label="Open menu"><svg class="ns-nav__burger-open" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+<path d="M0 1h18M0 6h18M0 11h18" stroke="currentColor" stroke-width="1.5"></path>
+</svg><svg class="ns-nav__burger-close" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+<path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"></path>
+</svg></button>
+</div>
+</div>
+<div class="ns-nav__panel" id="ns-menu-2" data-ns-menu-panel="2" data-open="false" aria-label="Models">
+<div class="ns-wrap">
+<div>
+<div class="ns-nav__grid--features" style="--n:3;">
+<div class="ns-nav__intro">
+<div class="ns-label">Models</div>
+<p>A family of foundation models, trained on real-world data to establish ground truth for physical AI.</p>
+</div><a class="ns-nav__feature" href="/products/reconstruct"><span class="ns-nav__feature-title">Reconstruction</span><span class="ns-nav__feature-desc">Metric-scale splats and aligned meshes of real places, from a single room to city-scale.</span><span class="ns-link">Explore reconstruction <span aria-hidden="true">→</span></span></a><a class="ns-nav__feature" href="/products/localize"><span class="ns-nav__feature-title">Localization</span><span class="ns-nav__feature-desc">Precise vision-based positioning, even where GPS doesn’t work.</span><span class="ns-link">Explore localization <span aria-hidden="true">→</span></span></a><a class="ns-nav__feature" href="/products/understand"><span class="ns-nav__feature-title">Understanding</span><span class="ns-nav__feature-desc">Objects, change over time and answers at every 3D point of a real place.</span><span class="ns-link">Explore understanding <span aria-hidden="true">→</span></span></a>
+</div><a class="ns-nav__footer-row" href="/products/capture" style="--n:3;"><span class="ns-label">Inputs</span><span class="ns-nav__footer-text"><b>Capture </b><span>from any sensor or archive: phone, 360°, LiDAR, drone, satellite and your own data.</span></span><span class="ns-link">Explore capture <span aria-hidden="true">→</span></span></a>
+</div>
+</div>
+</div>
+<div class="ns-nav__panel" id="ns-menu-3" data-ns-menu-panel="3" data-open="false" aria-label="Industries">
+<div class="ns-wrap">
+<div class="ns-nav__grid--cards" style="--n:3;">
+<div class="ns-nav__intro">
+<div class="ns-label">Industries</div>
+<p>Where people and machines work in the real world.</p>
+</div><a class="ns-nav__card" href="/oil-and-gas"><span class="ns-nav__card-media">
+
+<img class="ns-img" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/a8a9ac9692c329f7feb86ae3ba46afc5111f6675.png" width="1200" height="750" alt="Field operator at a refinery" loading="lazy" decoding="async" /></span><span class="ns-nav__card-body"><span class="ns-nav__card-title">Oil and gas<span aria-hidden="true">→</span></span><span class="ns-nav__card-desc">Intelligent field operations.</span></span></a><a class="ns-nav__card" href="/defense-and-intelligence"><span class="ns-nav__card-media">
+
+<img class="ns-img" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/f5f7b1a1caffe82eb7f8cbb855c8146d4840af52.png" width="1200" height="750" alt="Aerial view of a coastal site, measured from drone imagery" loading="lazy" decoding="async" /></span><span class="ns-nav__card-body"><span class="ns-nav__card-title">Defense and intelligence<span aria-hidden="true">→</span></span><span class="ns-nav__card-desc">Mission rehearsal and GPS-denied operations.</span></span></a><a class="ns-nav__card" href="/embodied-ai"><span class="ns-nav__card-media">
+
+<img class="ns-img" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/3bd5ef21290262e99972719580af5272d5de5c41.png" width="1200" height="750" alt="Robots in a real-to-sim workshop" loading="lazy" decoding="async" /></span><span class="ns-nav__card-body"><span class="ns-nav__card-title">Embodied AI<span aria-hidden="true">→</span></span><span class="ns-nav__card-desc">Real-to-sim training for robots.</span></span></a>
+</div>
+</div>
+</div>
+<div class="ns-nav__panel" id="ns-menu-4" data-ns-menu-panel="4" data-open="false" aria-label="Company">
+<div class="ns-wrap">
+<div class="ns-nav__grid--columns" style="--n:3;">
+<div class="ns-nav__intro">
+<div class="ns-label">Company</div>
+<p>The team, partners and resources behind Niantic Spatial.</p>
+</div>
+<div class="ns-nav__col">
+<div class="ns-label">About</div><a class="ns-nav__col-link" href="/about">About us</a><a class="ns-nav__col-link" href="/events">Events</a><a class="ns-nav__col-link" href="/careers">Careers</a>
+</div>
+<div class="ns-nav__col">
+<div class="ns-label">Partners</div><a class="ns-nav__col-link" href="/partners">Developer partner program</a><a class="ns-nav__col-link" href="/academic-community-partners">Academic and community partners</a><a class="ns-nav__col-link" href="/partner-with-us">Partner with us</a>
+</div>
+<div class="ns-nav__col">
+<div class="ns-label">Guides and support</div><a class="ns-nav__col-link" href="/faq/scaniverse">Scaniverse FAQ</a><a class="ns-nav__col-link" href="/docs/">Niantic Spatial SDK docs</a><a class="ns-nav__col-link" href="https://community.nianticspatial.com/" target="_blank" rel="noopener">Developer forums<span aria-hidden="true"> ↗</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="ns-nav__drawer" id="ns-drawer">
+<div class="ns-nav__drawer-scroll"><a class="ns-nav__drawer-link" href="/blog">News</a><a class="ns-nav__drawer-link" href="/research">Research</a>
+<div class="ns-nav__drawer-group"><button type="button" class="ns-nav__drawer-toggle" data-ns-acc="i2" aria-expanded="false" aria-controls="ns-drawer-panel-i2">Models<svg class="ns-nav__caret" width="11" height="7" viewBox="0 0 11 7" fill="none" aria-hidden="true">
+<path d="M1 1l4.5 4.5L10 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button>
+<div class="ns-nav__drawer-panel" id="ns-drawer-panel-i2">
+<div class="ns-nav__drawer-desc">A family of foundation models, trained on real-world data to establish ground truth for physical AI.</div><a class="ns-nav__drawer-sub" href="/products/reconstruct"><span class="ns-nav__drawer-sub-title">Reconstruction</span><span class="ns-nav__drawer-sub-desc">Metric-scale splats and aligned meshes of real places, from a single room to city-scale.</span></a><a class="ns-nav__drawer-sub" href="/products/localize"><span class="ns-nav__drawer-sub-title">Localization</span><span class="ns-nav__drawer-sub-desc">Precise vision-based positioning, even where GPS doesn’t work.</span></a><a class="ns-nav__drawer-sub" href="/products/understand"><span class="ns-nav__drawer-sub-title">Understanding</span><span class="ns-nav__drawer-sub-desc">Objects, change over time and answers at every 3D point of a real place.</span></a>
+<div class="ns-label ns-nav__drawer-group-label">Inputs</div><a class="ns-nav__drawer-sub" href="/products/capture"><span class="ns-nav__drawer-sub-title">Capture</span><span class="ns-nav__drawer-sub-desc">From any sensor or archive: phone, 360°, LiDAR, drone, satellite and your own data.</span></a>
+</div>
+</div>
+<div class="ns-nav__drawer-group"><button type="button" class="ns-nav__drawer-toggle" data-ns-acc="i3" aria-expanded="false" aria-controls="ns-drawer-panel-i3">Industries<svg class="ns-nav__caret" width="11" height="7" viewBox="0 0 11 7" fill="none" aria-hidden="true">
+<path d="M1 1l4.5 4.5L10 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button>
+<div class="ns-nav__drawer-panel" id="ns-drawer-panel-i3">
+<div class="ns-nav__drawer-desc">Where people and machines work in the real world.</div><a class="ns-nav__drawer-sub" href="/oil-and-gas"><span class="ns-nav__drawer-sub-title">Oil and gas</span><span class="ns-nav__drawer-sub-desc">Intelligent field operations.</span></a><a class="ns-nav__drawer-sub" href="/defense-and-intelligence"><span class="ns-nav__drawer-sub-title">Defense and intelligence</span><span class="ns-nav__drawer-sub-desc">Mission rehearsal and GPS-denied operations.</span></a><a class="ns-nav__drawer-sub" href="/embodied-ai"><span class="ns-nav__drawer-sub-title">Embodied AI</span><span class="ns-nav__drawer-sub-desc">Real-to-sim training for robots.</span></a>
+</div>
+</div>
+<div class="ns-nav__drawer-group"><button type="button" class="ns-nav__drawer-toggle" data-ns-acc="i4" aria-expanded="false" aria-controls="ns-drawer-panel-i4">Company<svg class="ns-nav__caret" width="11" height="7" viewBox="0 0 11 7" fill="none" aria-hidden="true">
+<path d="M1 1l4.5 4.5L10 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button>
+<div class="ns-nav__drawer-panel" id="ns-drawer-panel-i4">
+<div class="ns-nav__drawer-desc">The team, partners and resources behind Niantic Spatial.</div>
+<div class="ns-label ns-nav__drawer-group-label">About</div><a class="ns-nav__drawer-sub" href="/about"><span class="ns-nav__drawer-sub-title">About us</span></a><a class="ns-nav__drawer-sub" href="/events"><span class="ns-nav__drawer-sub-title">Events</span></a><a class="ns-nav__drawer-sub" href="/careers"><span class="ns-nav__drawer-sub-title">Careers</span></a>
+<div class="ns-label ns-nav__drawer-group-label">Partners</div><a class="ns-nav__drawer-sub" href="/partners"><span class="ns-nav__drawer-sub-title">Developer partner program</span></a><a class="ns-nav__drawer-sub" href="/academic-community-partners"><span class="ns-nav__drawer-sub-title">Academic and community partners</span></a><a class="ns-nav__drawer-sub" href="/partner-with-us"><span class="ns-nav__drawer-sub-title">Partner with us</span></a>
+<div class="ns-label ns-nav__drawer-group-label">Guides and support</div><a class="ns-nav__drawer-sub" href="/faq/scaniverse"><span class="ns-nav__drawer-sub-title">Scaniverse FAQ</span></a><a class="ns-nav__drawer-sub" href="/docs/"><span class="ns-nav__drawer-sub-title">Niantic Spatial SDK docs</span></a><a class="ns-nav__drawer-sub" href="https://community.nianticspatial.com/" target="_blank" rel="noopener"><span class="ns-nav__drawer-sub-title">Developer forums<span aria-hidden="true"> ↗</span></span></a>
+</div>
+</div>
+<div class="ns-nav__drawer-group"><button type="button" class="ns-nav__drawer-toggle" data-ns-acc="a0" aria-expanded="false" aria-controls="ns-drawer-panel-a0">Try Scaniverse<svg class="ns-nav__caret" width="11" height="7" viewBox="0 0 11 7" fill="none" aria-hidden="true">
+<path d="M1 1l4.5 4.5L10 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button>
+<div class="ns-nav__drawer-panel" id="ns-drawer-panel-a0"><a class="ns-nav__drawer-sub" href="https://scaniverse.nianticspatial.com/signin" target="_blank" rel="noopener"><span class="ns-nav__drawer-sub-title">Scaniverse app<span aria-hidden="true"> ↗</span></span><span class="ns-nav__drawer-sub-desc">Capture and reconstruct real places.</span></a><a class="ns-nav__drawer-sub" href="/pricing"><span class="ns-nav__drawer-sub-title">Pricing</span><span class="ns-nav__drawer-sub-desc">Plans for teams and enterprises.</span></a></div>
+</div>
+</div>
+<div class="ns-nav__drawer-actions"><a class="ns-btn ns-btn--primary" href="/contact">Contact sales</a></div>
+</div>
+</div>
+</ns-nav>
+<main id="main" class="ns-main" data-ns-collection="NsNews">
+<section data-ns-module="NsPostHeader" class="ns-module ns-pad ns-post-head">
+<div class="ns-wrap"><a class="ns-post-head__back" href="/blog"><span aria-hidden="true">← </span>News</a>
+<div class="ns-post-head__hero ns-post-head__hero--scrim">
+<div class="ns-post-head__media">
+
+<img class="ns-img ns-img--cover" src="https://lh3.googleusercontent.com/FQr1pjB8K5HKy6vkaGPKT3JDvKQ_Lk6b3AQpmrLCwHZH78jyx0xUSr5GNcgXrnYoDAnjU7c34WBav_MaGn9GlgkBa0OoGZ7Grl7YeG1MhZC5lA=e365-pa-nu-w1440-rw" srcset="https://lh3.googleusercontent.com/FQr1pjB8K5HKy6vkaGPKT3JDvKQ_Lk6b3AQpmrLCwHZH78jyx0xUSr5GNcgXrnYoDAnjU7c34WBav_MaGn9GlgkBa0OoGZ7Grl7YeG1MhZC5lA=e365-pa-nu-w480-rw 480w, https://lh3.googleusercontent.com/FQr1pjB8K5HKy6vkaGPKT3JDvKQ_Lk6b3AQpmrLCwHZH78jyx0xUSr5GNcgXrnYoDAnjU7c34WBav_MaGn9GlgkBa0OoGZ7Grl7YeG1MhZC5lA=e365-pa-nu-w768-rw 768w, https://lh3.googleusercontent.com/FQr1pjB8K5HKy6vkaGPKT3JDvKQ_Lk6b3AQpmrLCwHZH78jyx0xUSr5GNcgXrnYoDAnjU7c34WBav_MaGn9GlgkBa0OoGZ7Grl7YeG1MhZC5lA=e365-pa-nu-w1080-rw 1080w, https://lh3.googleusercontent.com/FQr1pjB8K5HKy6vkaGPKT3JDvKQ_Lk6b3AQpmrLCwHZH78jyx0xUSr5GNcgXrnYoDAnjU7c34WBav_MaGn9GlgkBa0OoGZ7Grl7YeG1MhZC5lA=e365-pa-nu-w1440-rw 1440w, https://lh3.googleusercontent.com/FQr1pjB8K5HKy6vkaGPKT3JDvKQ_Lk6b3AQpmrLCwHZH78jyx0xUSr5GNcgXrnYoDAnjU7c34WBav_MaGn9GlgkBa0OoGZ7Grl7YeG1MhZC5lA=e365-pa-nu-w1920-rw 1920w" sizes="1440px" width="1200" height="630" alt="Niantic Spatial and Flexion: Closing the Sim2Real Gap for Humanoids" loading="eager" decoding="async" fetchPriority="high" style="object-position:50% 50%;" />
+</div>
+<div class="ns-post-head__text">
+<h1 class="ns-post-head__title">Niantic Spatial, Flexion, and NVIDIA: Closing the Sim2Real Gap for Humanoids</h1>
+</div>
+</div>
+</div>
+</section>
+<section data-ns-module="NsPostBody" class="ns-module ns-pad ns-post ns-post--takeaways">
+<div class="ns-wrap">
+<script type="application/ld+json" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ==">
+{
+"@context": "https://schema.org",
+"@type": "NewsArticle",
+"@id": "https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real#article",
+"headline": "Niantic Spatial, Flexion, and NVIDIA: Closing the Sim2Real Gap for Humanoids",
+"datePublished": "2026-07-20T15:00:00.000Z",
+"dateModified": "2026-07-20T15:00:00.000Z",
+"author": {
+"@type": "Person",
+"name": "Co-authored by Niantic Spatial and Flexion"
+},
+"publisher": {
+"@id": "https://www.nianticspatial.com/#organization"
+},
+"isPartOf": {
+"@id": "https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real#webpage"
+},
+"mainEntityOfPage": "https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real#webpage",
+"image": "https://lh3.googleusercontent.com/FQr1pjB8K5HKy6vkaGPKT3JDvKQ_Lk6b3AQpmrLCwHZH78jyx0xUSr5GNcgXrnYoDAnjU7c34WBav_MaGn9GlgkBa0OoGZ7Grl7YeG1MhZC5lA"
+}
+
+</script>
+<div class="ns-post__grid">
+<aside class="ns-post__rail">
+<div class="ns-post__meta">
+<div class="ns-label">Date</div>
+<div class="ns-post__meta-v">July 20, 2026</div>
+</div>
+<div class="ns-post__meta">
+<div class="ns-label">Author</div>
+<div class="ns-post__meta-v">Co-authored by Niantic Spatial and Flexion</div>
+</div>
+<div class="ns-post__meta">
+<div class="ns-label">Categories</div>
+<div class="ns-post__cats"><span class="ns-post__meta-v">Embodied AI</span></div>
+</div>
+<div class="ns-post__meta">
+<div class="ns-label">Share</div>
+<div class="ns-post__share"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nianticspatial.com%2Fblog%2Fflexion-humanoid-real2sim-sim2real" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg width="16" height="16" viewBox="0 0 29 29" fill="currentColor" aria-hidden="true">
+<path d="M28.297 14.535C28.297 6.788 22.009.5 14.262.5 6.514.5.226 6.788.226 14.535c0 6.793 4.829 12.45 11.228 13.755v-9.544H8.647v-4.21h2.807v-3.51a4.918 4.918 0 0 1 4.913-4.912h3.508v4.21H17.07c-.772 0-1.404.632-1.404 1.404v2.807h4.21v4.21h-4.21V28.5c7.088-.702 12.632-6.68 12.632-13.965Z"></path>
+</svg></a><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.nianticspatial.com%2Fblog%2Fflexion-humanoid-real2sim-sim2real&amp;text=Niantic%20Spatial%2C%20Flexion%2C%20and%20NVIDIA%3A%20Closing%20the%20Sim2Real%20Gap%20for%20Humanoids" target="_blank" rel="noopener" aria-label="Share on X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+</svg></a><a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.nianticspatial.com%2Fblog%2Fflexion-humanoid-real2sim-sim2real&amp;title=Niantic%20Spatial%2C%20Flexion%2C%20and%20NVIDIA%3A%20Closing%20the%20Sim2Real%20Gap%20for%20Humanoids" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452z"></path>
+</svg></a></div>
+</div>
+</aside>
+<article class="ns-post__article">
+<div class="ns-rich ns-rich--article ns-article">
+<p>The most scalable way to teach a humanoid fundamental skills like locomotion and navigation is reinforcement learning (RL). Running RL in the real world is hard, because robots do not get many second chances. A misjudged gap or a collision with a glass door is expensive, slow to reset, and can damage hardware. So most learning happens in simulation instead.</p>
+<p>The question every company should ask: how do you know a policy trained in sim will hold up at a deployment site before a robot ever sets foot there? The answer is to train, test, and evaluate it in a digital twin of that exact site, which also makes it fast to adapt skills for each new location.</p>
+<p>Here is the vision. A team scans the intended deployment site with a standard RGB camera. Niantic Spatial reconstructs a high-fidelity digital twin. Developers then simulate and train their robots using NVIDIA Isaac Sim and Isaac Lab open source simulation and learning frameworks. Flexion delivers policies and deployment software tuned to the specific hardware that transfers zero-shot to the real world.</p>
+<p>Niantic Spatial and Flexion jointly present that pipeline end to end: an RGB-only local navigation policy, trained entirely in simulation using photorealistic rendering from Gaussian splatting, that transfers zero-shot to a real office. The results highlight that the speed and quality of the rendering are sufficient to train RL-based policies in hours, and hold promise for training full vertical systems, including reasoning and manipulation, in the future.</p>
+<figure class="ns-article__figure">
+<div class="ns-article__frame"><ns-video class="ns-video" data-ns-module="NsVideo"><video class="ns-video__el" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/8f336cc15c32c6a29fbf438a2a8be39f28c45acf.mp4" autoplay muted loop playsinline preload="metadata"></video>
+<div class="ns-video__hover" aria-hidden="true"><span class="ns-video__bubble"><svg class="ns-video__icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<rect x="6" y="4" width="4" height="16"></rect>
+<rect x="14" y="4" width="4" height="16"></rect>
+</svg><svg class="ns-video__icon-play" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<path d="M7 4l12 8-12 8z"></path>
+</svg></span></div><button type="button" class="ns-video__mute" data-ns-video-mute="true" aria-label="Unmute" aria-pressed="true"><svg class="ns-video__icon-muted" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<line x1="23" y1="9" x2="17" y2="15"></line>
+<line x1="17" y1="9" x2="23" y2="15"></line>
+</svg><svg class="ns-video__icon-sound" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+<path d="M19 5a9 9 0 0 1 0 14"></path>
+</svg></button>
+<div class="ns-video__bar" data-ns-video-bar="true" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+<div class="ns-video__track">
+<div class="ns-video__fill" data-ns-video-fill="true"></div>
+</div>
+</div>
+</ns-video></div>
+</figure>
+<h2 id="robots-have-to-fail-in-simulation-in-order-to-learn" class="ns-article__h2">Robots have to fail in simulation in order to learn</h2>
+<p>Simulation is where a robot can afford to fail. In reinforcement learning, a policy improves through trial and error: taking an action, observing the reward, and adjusting across millions of attempts, most of which go wrong before the behavior works reliably. While a real robot would never survive that, simulation offers a fast, safe, and massively parallel environment for robots to train, enabling thousands of virtual robots to practice at once, faster than real time, without a single scratch. But simulation training only creates real value if that behavior transfers back to the physical world – the core challenge of sim2real robotics.</p>
+<h3 class="ns-article__h3">The path to today’s simulation-first robot training</h3>
+<p>Modern reinforcement learning for robotics depends on GPU-accelerated simulation, which lets physics engines and training loops scale across thousands of parallel environments [<a href="https://proceedings.mlr.press/v164/rudin22a.html">Rudin et al., 2022</a>]. Platforms such as NVIDIA Isaac Sim and Isaac Lab provide the core infrastructure for this kind of large-scale robot training.</p>
+<p>Within these simulation environments, robot policies have advanced as sensor inputs have become richer. Early reinforcement learning systems relied mainly on proprioception, using joint feedback and contact forces to traverse terrain [<a href="https://www.science.org/doi/abs/10.1126/scirobotics.abc5986">Lee et al., 2020</a>].</p>
+<p>The next wave added exteroceptive sensing – height scans, depth maps, and LiDAR – so policies could anticipate terrain before contact. That shift enabled robust locomotion on irregular terrain [<a href="https://www.science.org/doi/abs/10.1126/scirobotics.abk2822">Miki et al., 2022</a>], high-speed agile maneuvers [<a href="https://journals.sagepub.com/doi/abs/10.1177/02783649261455067">Hoeller et al., 2024</a>], and end-to-end navigation in simulation [<a href="https://journals.sagepub.com/doi/abs/10.1177/02783649251401926">Yang et al., 2025</a>].</p>
+<figure class="ns-article__figure">
+<div class="ns-article__frame">
+
+<img class="ns-img ns-img--contain-fit" src="https://lh3.googleusercontent.com/o5lDXNBL-7qaJz5LrHqaZ8OFUHNSqb6rVKZV4qii1teWC4qxVpTIzVT33Dqbn6AWNXAXua1h1y8HXXVmRuAUEm2yKuA_BpmUqRLSepM1msYV0sg=e365-pa-nu-w1360-rw" srcset="https://lh3.googleusercontent.com/o5lDXNBL-7qaJz5LrHqaZ8OFUHNSqb6rVKZV4qii1teWC4qxVpTIzVT33Dqbn6AWNXAXua1h1y8HXXVmRuAUEm2yKuA_BpmUqRLSepM1msYV0sg=e365-pa-nu-w480-rw 480w, https://lh3.googleusercontent.com/o5lDXNBL-7qaJz5LrHqaZ8OFUHNSqb6rVKZV4qii1teWC4qxVpTIzVT33Dqbn6AWNXAXua1h1y8HXXVmRuAUEm2yKuA_BpmUqRLSepM1msYV0sg=e365-pa-nu-w768-rw 768w, https://lh3.googleusercontent.com/o5lDXNBL-7qaJz5LrHqaZ8OFUHNSqb6rVKZV4qii1teWC4qxVpTIzVT33Dqbn6AWNXAXua1h1y8HXXVmRuAUEm2yKuA_BpmUqRLSepM1msYV0sg=e365-pa-nu-w1080-rw 1080w, https://lh3.googleusercontent.com/o5lDXNBL-7qaJz5LrHqaZ8OFUHNSqb6rVKZV4qii1teWC4qxVpTIzVT33Dqbn6AWNXAXua1h1y8HXXVmRuAUEm2yKuA_BpmUqRLSepM1msYV0sg=e365-pa-nu-w1440-rw 1440w, https://lh3.googleusercontent.com/o5lDXNBL-7qaJz5LrHqaZ8OFUHNSqb6rVKZV4qii1teWC4qxVpTIzVT33Dqbn6AWNXAXua1h1y8HXXVmRuAUEm2yKuA_BpmUqRLSepM1msYV0sg=e365-pa-nu-w1920-rw 1920w" sizes="1360px" width="2908" height="1620" alt loading="lazy" decoding="async" />
+</div>
+<figcaption class="ns-article__caption">A typical massively parallel training environment for humanoid navigation from raw depth information. The navigation goal location is visualized with a red arrow. The simulation relies entirely on randomized untextured structures.</figcaption>
+</figure>
+<p>RGB is the next step, and it is what humanoids already carry. Cameras are cost-efficient, ubiquitous, have a wide field of view, and they implicitly encode both geometry and semantics with fewer hard failure cases than stereo depth. That extra information is the headroom to scale.</p>
+<p>The limitation is that these training worlds are still built from randomized, untextured geometric scenes. That remains the standard because depth is relatively straightforward to simulate accurately. But it also restricts the robot to structural contours, leaving it blind to materials, semantics, and what objects actually are. That is why RGB is the next step in perceptive robot policies: it gives humanoid navigation systems access to both geometry and scene meaning, provided the simulated imagery is realistic enough to transfer to the real world.</p>
+<h3 class="ns-article__h3">The solution in two parts</h3>
+<p><b>The first is real2sim: </b>faithfully bringing reality into the simulator, both how the world looks and how it physically behaves. Our strength is turning captures of a real place into a high-fidelity, renderable, simulatable copy.</p>
+<p><b>The second is sim2real:</b> taking a policy trained in that imperfect simulated environment and getting it to run robustly on a physical robot. Bridging that gap is Flexion&#039;s strength.</p>
+<p>Vision is the hardest part of both real2sim and sim2real. Depth has historically been easier to simulate because a depth image looks broadly similar whether it is rendered or measured, and its noise can be modeled directly. RGB is more demanding: small errors in color, lighting, or texture can make a scene look like a different place altogether, which makes both realistic simulation and robust policy transfer harder.</p>
+<p>So why train an RGB robot policy inside a reconstructed scene? First, RGB is what robots increasingly carry. Cameras are low-cost, widely available, often offer a wider field of view than stereo depth sensors, and RGB implicitly encodes both geometry and semantics. That gives RGB-based robot policies more room to scale than depth alone, especially in real-world environments where semantics matter as much as shape.</p>
+<p>Second, specialization unlocks capability. Training a policy inside a digital twin of the actual deployment site allows it to adapt to the visual structure, materials, and constraints of the environment where it will run, enabling behaviors that are difficult for a general-purpose policy to achieve.</p>
+<p>But for sim2real transfer to work, the training imagery has to look real. In practice, that means either photorealistic synthetic assets or, more directly, a faithful reconstruction of the real scene. That is what makes a reconstruction the natural home for an RGB policy. It also defines the problem in two parts: building a training world faithful enough to learn from, and training a policy robust enough to transfer out of it. The rest of this blog walks through both, using local navigation as a concrete example: starting with the world Niantic Spatial builds, then how Flexion trains and deploys an RGB navigation policy inside it.</p>
+<h2 id="part-1-niantic-spatial039s-real2sim-one-walkthrough-to-a-world-worth-training-in" class="ns-article__h2">Part 1: Niantic Spatial&#039;s real2sim – one walkthrough to a world worth training in</h2>
+<p>A policy is only as good as the observations obtained from the world in which it learns. For a sim2real transfer to work, the reconstructed scene has to be faithful on two fronts at once: it has to look like the real place (geometry, materials, lighting) and it has to behave like it under physics. Satisfying both requirements usually means a photorealistic rendering layer and a collision mesh for physics, and the quality of the reconstruction depends on how well they agree. If the rendered wall and the collision wall disagree by a few centimeters, a vision policy learns to brush through obstacles it can see, or steer around obstacles that are not there, and it carries that miscalibration onto the real robot. Niantic Spatial’s pipeline derives both layers from the same reconstruction, so they agree by construction.</p>
+<h3 class="ns-article__h3">Capture a real site with a single walkthrough</h3>
+<p>A few minutes of video from an off-the-shelf 360° camera are enough to create a training-ready digital twin of a real deployment site. The operator simply walks the space once, with no LiDAR, tripod stations, or specialized capture workflow. From that video, the pipeline reconstructs the scene at metric scale so the robot learns distances and velocities in meters, avoiding scale errors that would otherwise propagate into every action.</p>
+<p>The same capture then becomes the visual layer for simulation. Niantic Spatial estimates camera poses and trains a 3D Gaussian splat that provides photorealistic RGB views from arbitrary viewpoints, preserving the lighting, materials, and clutter of the real environment as it appeared at capture time. That matters for RGB robot training: unlike a generic synthetic asset, a faithful scene reconstruction gives the policy the visual realism it needs for sim2real transfer. It also scales operationally, because capturing a real warehouse or office is far more repeatable than hand-building a high-fidelity synthetic model for every new site.</p>
+<h3 class="ns-article__h3">Deriving geometry from the same reconstruction</h3>
+<p>From that same reconstruction, Niantic Spatial also derives the physics layer. Instead of building geometry in a separate pipeline, it uses the reconstruction itself to generate the collision mesh, including depth estimated with <a href="https://nianticlabs.github.io/mvsanywhere/">MVSAnywhere</a>, a zero-shot multi-view stereo model designed to generalize across domains and depth ranges. This produces flatter, cleaner surfaces than photometric reconstruction alone, especially on white walls and other low-texture regions where conventional multi-view methods often leave gaps, noisy geometry, or even lose camera poses entirely.</p>
+<p>Because the visual layer and collision mesh come from the same reconstruction, they stay aligned by construction. There is no separate cross-registration step between what the robot sees and what it collides with in simulation, which removes a major source of sim2real error. Even a small mismatch between a rendered wall and a collision wall can teach a humanoid to slide through obstacles it can see or avoid obstacles that are not really there. The single-reconstruction design minimizes that failure mode instead of trying to correct for it later.</p>
+<figure class="ns-article__figure">
+<div class="ns-article__frame"><ns-video class="ns-video" data-ns-module="NsVideo"><video class="ns-video__el" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/8febe22fc2b5268aa213ce96c702d1686087aedf.mp4" autoplay muted loop playsinline preload="metadata"></video>
+<div class="ns-video__hover" aria-hidden="true"><span class="ns-video__bubble"><svg class="ns-video__icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<rect x="6" y="4" width="4" height="16"></rect>
+<rect x="14" y="4" width="4" height="16"></rect>
+</svg><svg class="ns-video__icon-play" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<path d="M7 4l12 8-12 8z"></path>
+</svg></span></div><button type="button" class="ns-video__mute" data-ns-video-mute="true" aria-label="Unmute" aria-pressed="true"><svg class="ns-video__icon-muted" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<line x1="23" y1="9" x2="17" y2="15"></line>
+<line x1="17" y1="9" x2="23" y2="15"></line>
+</svg><svg class="ns-video__icon-sound" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+<path d="M19 5a9 9 0 0 1 0 14"></path>
+</svg></button>
+<div class="ns-video__bar" data-ns-video-bar="true" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+<div class="ns-video__track">
+<div class="ns-video__fill" data-ns-video-fill="true"></div>
+</div>
+</div>
+</ns-video></div>
+<figcaption class="ns-article__caption">Comparing NerfStudio splats (left) to Niantic Spatial splats (right).</figcaption>
+</figure>
+<h3 class="ns-article__h3">Exporting a USDZ ready for NVIDIA Isaac Sim</h3>
+<p>The splat and mesh are packaged into a single <a href="https://www.nianticspatial.com/blog/usdz-scaniverse">USDZ</a> that matches NVIDIA’s <a href="https://developer.nvidia.com/omniverse/nurec">NuRec</a> volume specification and loads directly into NVIDIA <a href="https://developer.nvidia.com/isaac/sim">Isaac Sim</a> and <a href="https://developer.nvidia.com/isaac/lab">Isaac Lab</a>. In that workflow, the splat renders through the RTX pipeline as the visual scene, while the mesh serves as the invisible physics proxy the robot stands on and collides with. The export arrives gravity-aligned, metric-scale, and collider-ready, so training can start without manual conversion, reorientation, or collider authoring.</p>
+<div class="ns-article__html">
+<div style="box-sizing:border-box; font-family:'Figtree',sans-serif; background:#EAE3DC; border-left:5px solid #678BC7; border-radius:8px; padding:24px 28px; margin:1.5rem 0;">
+<p style="box-sizing:border-box; margin:0 0 10px; font-size:18px; font-weight:700; color:#2D2D2D;">Get real-world USDZ sample scenes</p>
+<p style="box-sizing:border-box; margin:0 0 16px; font-size:15px; line-height:1.6; color:#2D2D2D;">High-fidelity 3D reconstructions built with our pipeline, to test in your workflow, prototype spatial experiences, or evaluate reconstruction quality.</p>
+<div style="box-sizing:border-box; display:flex; flex-wrap:wrap; gap:12px;">
+<a href="https://huggingface.co/NianticSpatial/datasets" style="box-sizing:border-box; display:inline-block; background:#678BC7; color:#ffffff; font-size:15px; font-weight:700; text-decoration:none; padding:12px 26px; border-radius:8px; border:2px solid #678BC7;">Get USDZ Samples on Hugging Face</a>
+</div>
+</div>
+</div>
+<h3 class="ns-article__h3">The end-to-end workflow: from 360° capture to a training-ready digital twin for robot simulation</h3>
+<ol>
+<li>
+<p><b>Capture: </b>Walk the real deployment site once with an off-the-shelf 360° camera to collect the visual data needed for reconstruction.</p>
+</li>
+<li>
+<p><b>Reconstruct: </b>The pipeline estimates camera poses, trains a photorealistic 3D Gaussian splat, and derives an aligned collision mesh to create a faithful digital twin of the environment.</p>
+</li>
+<li>
+<p><b>Export: </b>The visual splat and physics mesh are packaged into a single NuRec-volume USDZ that is gravity-aligned, metric-scale, and ready for simulation with collider settings applied.</p>
+</li>
+<li>
+<p><b>Train: </b>The USDZ loads directly into NVIDIA Isaac Sim and Isaac Lab, where it can be used as a stage for large-scale robot training in simulation.</p>
+</li>
+</ol>
+<h3 class="ns-article__h3">What the reconstruction captures – and what it doesn’t</h3>
+<p>Like any reconstruction, this one has limits that are important to understand before training. It captures a moment in time, so lighting, reflections, and object placement are baked in as observed during capture. It also captures a static scene: people, robots, and other dynamic agents are added later in simulation. And its fidelity depends on coverage, which means areas skipped during the walkthrough will reconstruct less reliably. In practice, though, those limits have not prevented zero-shot transfer to the real robot in the results that follow.</p>
+<div class="ns-article__html">
+<div style="box-sizing:border-box; font-family:'Figtree',sans-serif; background:#EAE3DC; border-left:5px solid #678BC7; border-radius:8px; padding:24px 28px; margin:1.5rem 0;">
+<p style="box-sizing:border-box; margin:0 0 10px; font-size:18px; font-weight:700; color:#2D2D2D;">Try it on a space you know</p>
+<p style="box-sizing:border-box; margin:0 0 16px; font-size:15px; line-height:1.6; color:#2D2D2D;">Capture a scene in Scaniverse, run the pipeline, and load the USDZ into Isaac Sim. New users redeem 105,000 top-up credits with code <span style="font-weight:700; background:#ffffff; padding:2px 8px; border-radius:4px; letter-spacing:0.5px; white-space:nowrap;">FLEXYOURSCAN</span></p>
+<div style="box-sizing:border-box; display:flex; flex-wrap:wrap; gap:12px;">
+<a href="https://scaniverse.nianticspatial.com/signup?utm_source=nianticspatial&utm_medium=blog&utm_campaign=flexion-robotics-usdz-launch" style="box-sizing:border-box; display:inline-block; background:#678BC7; color:#ffffff; font-size:15px; font-weight:700; text-decoration:none; padding:12px 26px; border-radius:8px; border:2px solid #678BC7;">Sign Up for Scaniverse</a>
+<a href="https://www.nianticspatial.com/capture/contact-sales" style="box-sizing:border-box; display:inline-block; background:#EAE3DC; color:#678BC7; font-size:15px; font-weight:700; text-decoration:none; padding:12px 26px; border-radius:8px; border:2px solid #678BC7;">Request Promo Code for Existing Users</a>
+</div>
+</div>
+</div>
+<h2 id="part-2-flexion039s-sim2real-recipe-from-pixels-in-sim-to-a-robot-that-works" class="ns-article__h2">Part 2: Flexion&#039;s sim2real recipe – from pixels in sim to a robot that works</h2>
+<p>With a world worth training in, the door opens to a wide range of robot tasks. In this blog, Flexion focuses on local robot navigation: the short-horizon skill of moving from the robot’s current pose to a nearby goal while avoiding obstacles, without relying on a prebuilt global map. The policy takes the robot’s onboard camera view, proprioceptive sensor data, and the goal expressed in its own coordinate frame, and outputs a velocity command. A separate, in-the-loop pre-trained locomotion policy then converts that command into motion. Because the policy acts directly on what the camera sees, visual realism in simulation matters. Most camera-based robot policies today still use depth as their primary input, but Flexion takes a different approach: train an RGB policy inside a reconstruction of the specific deployment site, so the policy specializes in the real environment where it will actually run.</p>
+<h3 class="ns-article__h3">Massively parallel robot training inside the digital twin</h3>
+<p>Loaded into Isaac Lab as a NuRec volume, the reconstruction renders RGB efficiently enough to support massively parallel robot training inside the same digital twin on a single GPU. Each robot begins from a sampled spawn pose and is assigned a random target pose. From there, the navigation policy learns through reinforcement learning: reaching the goal while avoiding obstacles is rewarded, while collisions and falls are penalized.</p>
+<p>To bridge the sim2real gap, Flexion combines domain randomization across simulation parameters with large-scale, offline-trained image encoders that produce robust features on real imagery. Those encoders are designed to run both across many parallel training environments and onboard the robot at deployment time. Together, this setup enables millions of rollouts inside the target site’s digital twin, giving the policy enough experience to learn deployment-specific robot navigation behavior.</p>
+<p>The following two videos show policies trained directly inside reconstructions of the Niantic Spatial office in London and the Flexion office in Zurich.</p>
+<figure class="ns-article__figure">
+<div class="ns-article__frame"><ns-video class="ns-video" data-ns-module="NsVideo"><video class="ns-video__el" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/16bd379f5a8b2fa9ce9a2c1efca8554d7aac3982.mp4" autoplay muted loop playsinline preload="metadata"></video>
+<div class="ns-video__hover" aria-hidden="true"><span class="ns-video__bubble"><svg class="ns-video__icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<rect x="6" y="4" width="4" height="16"></rect>
+<rect x="14" y="4" width="4" height="16"></rect>
+</svg><svg class="ns-video__icon-play" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<path d="M7 4l12 8-12 8z"></path>
+</svg></span></div><button type="button" class="ns-video__mute" data-ns-video-mute="true" aria-label="Unmute" aria-pressed="true"><svg class="ns-video__icon-muted" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<line x1="23" y1="9" x2="17" y2="15"></line>
+<line x1="17" y1="9" x2="23" y2="15"></line>
+</svg><svg class="ns-video__icon-sound" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+<path d="M19 5a9 9 0 0 1 0 14"></path>
+</svg></button>
+<div class="ns-video__bar" data-ns-video-bar="true" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+<div class="ns-video__track">
+<div class="ns-video__fill" data-ns-video-fill="true"></div>
+</div>
+</div>
+</ns-video></div>
+<figcaption class="ns-article__caption">Video of the training process inside a reconstruction of a Niantic Spatial office. Robots navigate towards their red goal pose markers.</figcaption>
+</figure>
+<figure class="ns-article__figure">
+<div class="ns-article__frame"><ns-video class="ns-video" data-ns-module="NsVideo"><video class="ns-video__el" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/0cd6dd32756f1aef78a63640ba8b29b76e8fc1a5.mp4" autoplay muted loop playsinline preload="metadata"></video>
+<div class="ns-video__hover" aria-hidden="true"><span class="ns-video__bubble"><svg class="ns-video__icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<rect x="6" y="4" width="4" height="16"></rect>
+<rect x="14" y="4" width="4" height="16"></rect>
+</svg><svg class="ns-video__icon-play" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<path d="M7 4l12 8-12 8z"></path>
+</svg></span></div><button type="button" class="ns-video__mute" data-ns-video-mute="true" aria-label="Unmute" aria-pressed="true"><svg class="ns-video__icon-muted" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<line x1="23" y1="9" x2="17" y2="15"></line>
+<line x1="17" y1="9" x2="23" y2="15"></line>
+</svg><svg class="ns-video__icon-sound" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+<path d="M19 5a9 9 0 0 1 0 14"></path>
+</svg></button>
+<div class="ns-video__bar" data-ns-video-bar="true" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+<div class="ns-video__track">
+<div class="ns-video__fill" data-ns-video-fill="true"></div>
+</div>
+</div>
+</ns-video></div>
+<figcaption class="ns-article__caption">Visualization of the training process inside the Flexion Office reconstruction. Robots navigate towards their red goal pose markers.</figcaption>
+</figure>
+<h3 class="ns-article__h3">On the real robot: the reconstruction-trained RGB policy transfers zero-shot</h3>
+<figure class="ns-article__figure">
+<div class="ns-article__frame"><ns-video class="ns-video" data-ns-module="NsVideo"><video class="ns-video__el" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/1611ba402ac82537cdcf97454de645ae4953c3d6.mp4" autoplay muted loop playsinline preload="metadata"></video>
+<div class="ns-video__hover" aria-hidden="true"><span class="ns-video__bubble"><svg class="ns-video__icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<rect x="6" y="4" width="4" height="16"></rect>
+<rect x="14" y="4" width="4" height="16"></rect>
+</svg><svg class="ns-video__icon-play" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<path d="M7 4l12 8-12 8z"></path>
+</svg></span></div><button type="button" class="ns-video__mute" data-ns-video-mute="true" aria-label="Unmute" aria-pressed="true"><svg class="ns-video__icon-muted" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<line x1="23" y1="9" x2="17" y2="15"></line>
+<line x1="17" y1="9" x2="23" y2="15"></line>
+</svg><svg class="ns-video__icon-sound" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+<path d="M19 5a9 9 0 0 1 0 14"></path>
+</svg></button>
+<div class="ns-video__bar" data-ns-video-bar="true" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+<div class="ns-video__track">
+<div class="ns-video__fill" data-ns-video-fill="true"></div>
+</div>
+</div>
+</ns-video></div>
+<figcaption class="ns-article__caption">RGB-only policy purely trained in simulation, navigating the real office toward three commanded target poses.</figcaption>
+</figure>
+<p>The policy does not stay in simulation. The RGB network trained entirely inside the reconstruction transfers to the physical robot and navigates the real office, holding up to scene changes such as rearranged furniture and other differences from the captured world. During nominal navigation through the test area, it performs on par with a depth-based policy, highlighting that an RGB-only policy trained solely in simulation can extract the spatial understanding required for successful navigation.</p>
+<h3 class="ns-article__h3">Comparing alternative approaches in simulation</h3>
+<p>We compare four local-navigation policies on the same task in simulation across two reconstructed scenes: areas from Flexion’s and Niantic Spatial’s offices. The setups vary by both sensor modality and training environment: a depth policy trained in a generated, untextured navigation mesh as the conventional baseline; an RGB policy trained in that same generated mesh; an RGB policy trained in a synthetic, textured office mesh; and an RGB policy trained in the 3DGS reconstruction of the actual site.</p>
+<p>The plots below report three simulation metrics across all four policies: success rate, time-out rate after 120 seconds, and fall rate. Each policy is evaluated over 1,024 rollouts, with the same spawn and target poses reused across conditions so that the comparison isolates the effect of sensor modality and training environment.</p>
+<div class="ns-article__html ns-article__embed">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navigation benchmark — scene comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<style>
+/* ===== Niantic Spatial benchmark module — fully self-contained, scoped to .nsb ===== */
+.nsb {
+--page: #f5f6f8;
+--surface: #ffffff;
+--surface-2: #f7f4ef;
+--surface-3: #EAE3DC;
+--ink: #2D2D2D;
+--secondary: #565f6a;
+--muted: #949ba3;
+--hairline: #e6e0d8;
+--accent: #678BC7;
+--accent-tint: rgba(103, 139, 199, 0.09);
+--c-success: #98AF75;
+--c-timeout: #7ABCCC;
+--c-fall: #F06C61;
+--tt-bg: #2D2D2D;
+--tt-ink: #ffffff;
+--tt-sub: #c3bdb4;
+--font-sans: 'Figtree', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+--font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+--shadow-md: 0 6px 20px rgba(45, 45, 45, .08), 0 2px 6px rgba(45, 45, 45, .06);
+box-sizing: border-box;
+font-family: var(--font-sans);
+font-size: 15px;
+line-height: 1.45;
+color: var(--ink);
+text-align: left;
+letter-spacing: normal;
+text-transform: none;
+font-style: normal;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+-webkit-text-size-adjust: 100%;
+}
+
+/* defensive reset so the host page's CSS cannot distort the module */
+.nsb *,
+.nsb *::before,
+.nsb *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+border: 0;
+font-family: inherit;
+line-height: inherit;
+letter-spacing: inherit;
+text-transform: none;
+background: none;
+text-align: left;
+}
+
+.nsb-card {
+max-width: 1080px;
+margin: 0 auto;
+background: var(--surface);
+border: 1px solid var(--hairline);
+border-radius: 14px;
+box-shadow: var(--shadow-md);
+overflow: hidden;
+}
+
+.nsb {
+--mcol: 210px;
+}
+
+.nsb-colhead {
+display: grid;
+grid-template-columns: var(--mcol) 1fr 1fr 22px;
+gap: 18px;
+align-items: end;
+padding: 18px 22px 8px;
+}
+
+.nsb-colhead .sh {
+min-width: 0;
+}
+
+.nsb-colhead .sh h3 {
+font-size: 14px;
+font-weight: 600;
+color: var(--ink);
+}
+
+.nsb-colhead .sh p {
+font-size: 10.5px;
+color: var(--muted);
+margin-top: 2px;
+font-family: var(--font-mono);
+}
+
+.nsb-colhead .lh {
+font-size: 10.5px;
+font-weight: 600;
+letter-spacing: .05em;
+text-transform: uppercase;
+color: var(--muted);
+}
+
+.nsb-rows {
+padding: 2px 12px 2px;
+}
+
+.nsb-row {
+border-radius: 10px;
+transition: background-color .18s;
+margin: 0 10px;
+}
+
+.nsb-row.is-hero {
+background: var(--accent-tint);
+}
+
+.nsb-rowhead {
+display: grid;
+grid-template-columns: var(--mcol) 1fr 1fr 22px;
+gap: 18px;
+align-items: center;
+padding: 9px 12px;
+cursor: pointer;
+border-radius: 10px;
+}
+
+.nsb-rowhead:hover {
+background: var(--surface-2);
+}
+
+.nsb-row.is-hero .nsb-rowhead:hover {
+background: rgba(103, 139, 199, 0.07);
+}
+
+.nsb-rowhead:focus-visible {
+outline: 2px solid var(--accent);
+outline-offset: -2px;
+}
+
+.nsb-method {
+min-width: 0;
+}
+
+.nsb-method .nm {
+font-size: 13px;
+font-weight: 500;
+color: var(--ink);
+line-height: 1.25;
+}
+
+.nsb-row.is-hero .nsb-method .nm {
+font-weight: 600;
+}
+
+.nsb-cell {
+min-width: 0;
+}
+
+.nsb-cell-top {
+margin-bottom: 4px;
+}
+
+.nsb-cell-top b {
+font-size: 15px;
+font-weight: 600;
+font-family: var(--font-mono);
+font-variant-numeric: tabular-nums;
+color: var(--ink);
+letter-spacing: -.01em;
+}
+
+.nsb-bar {
+position: relative;
+display: flex;
+height: 17px;
+border-radius: 999px;
+overflow: hidden;
+background: var(--surface-3);
+}
+
+.nsb-bar .sg {
+height: 100%;
+min-width: 0;
+transition: filter .12s;
+cursor: pointer;
+}
+
+.nsb-bar .sg+.sg {
+box-shadow: -1.5px 0 0 var(--surface);
+}
+
+.nsb-bar .sg:hover {
+filter: brightness(1.05) saturate(1.05);
+}
+
+.nsb-bar .sg.success {
+background: var(--c-success);
+}
+
+.nsb-bar .sg.timeout {
+background: var(--c-timeout);
+}
+
+.nsb-bar .sg.fall {
+background: var(--c-fall);
+}
+
+.nsb-chev {
+color: var(--muted);
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform .22s;
+}
+
+.nsb-chev svg {
+display: block;
+}
+
+.nsb-row.is-open .nsb-chev {
+transform: rotate(90deg);
+color: var(--accent);
+}
+
+.nsb-detail {
+overflow: hidden;
+max-height: 0;
+transition: max-height .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.nsb-detail-inner {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+padding: 2px 12px 12px;
+align-items: stretch;
+}
+
+.nsb-mini {
+background: var(--surface);
+border: 1px solid var(--hairline);
+border-radius: 9px;
+padding: 11px 13px;
+min-width: 0;
+}
+
+.nsb-mini h4 {
+font-size: 10.5px;
+font-weight: 600;
+letter-spacing: .05em;
+text-transform: uppercase;
+color: var(--secondary);
+margin-bottom: 8px;
+}
+
+.nsb-mtbl {
+display: grid;
+grid-template-columns: minmax(0, 1.2fr) repeat(4, minmax(0, 1fr));
+gap: 6px 12px;
+align-items: center;
+}
+
+.nsb-mth {
+font-size: 9.5px;
+letter-spacing: .03em;
+text-transform: uppercase;
+color: var(--muted);
+white-space: nowrap;
+}
+
+.nsb-mth.n {
+text-align: right;
+}
+
+.nsb-mdiv {
+grid-column: 1/-1;
+height: 1px;
+background: var(--hairline);
+margin: 1px 0;
+}
+
+.nsb-mtd {
+font-size: 12px;
+font-family: var(--font-mono);
+font-variant-numeric: tabular-nums;
+color: var(--secondary);
+white-space: nowrap;
+}
+
+.nsb-mtd.n {
+text-align: right;
+}
+
+.nsb-mtd.ot {
+display: flex;
+align-items: center;
+gap: 7px;
+font-family: var(--font-sans);
+font-weight: 500;
+color: var(--ink);
+}
+
+.nsb-mtd.ot i {
+width: 9px;
+height: 9px;
+border-radius: 3px;
+flex: none;
+}
+
+.nsb-foot {
+display: flex;
+flex-wrap: wrap;
+gap: 10px 20px;
+align-items: center;
+justify-content: space-between;
+padding: 11px 22px 13px;
+border-top: 1px solid var(--hairline);
+}
+
+.nsb-legend {
+display: flex;
+gap: 16px;
+flex-wrap: wrap;
+}
+
+.nsb-key {
+display: flex;
+align-items: center;
+gap: 7px;
+font-size: 12px;
+color: var(--secondary);
+}
+
+.nsb-key i {
+width: 11px;
+height: 11px;
+border-radius: 4px;
+}
+
+.nsb-tt {
+position: fixed;
+z-index: 2147483000;
+min-width: 210px;
+max-width: 280px;
+pointer-events: none;
+opacity: 0;
+transform: translateY(4px);
+transition: opacity .12s, transform .12s;
+background: var(--tt-bg);
+color: var(--tt-ink);
+border-radius: 11px;
+padding: 12px 14px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+font-size: 12.5px;
+}
+
+.nsb-tt.show {
+opacity: 1;
+transform: translateY(0);
+}
+
+.nsb-tt-t {
+display: flex;
+align-items: center;
+gap: 8px;
+font-weight: 600;
+font-size: 13.5px;
+margin-bottom: 4px;
+color: var(--tt-ink);
+}
+
+.nsb-tt-t i {
+width: 10px;
+height: 10px;
+border-radius: 3px;
+flex: none;
+}
+
+.nsb-tt-sc {
+font-size: 11px;
+color: var(--tt-sub);
+margin-bottom: 9px;
+}
+
+.nsb-tt-g {
+display: grid;
+grid-template-columns: auto auto;
+gap: 5px 16px;
+}
+
+.nsb-tt-g .k {
+color: var(--tt-sub);
+}
+
+.nsb-tt-g .v {
+text-align: right;
+font-family: var(--font-mono);
+font-variant-numeric: tabular-nums;
+white-space: nowrap;
+color: var(--tt-ink);
+}
+
+@media (max-width:720px) {
+.nsb {
+--mcol: 1fr;
+}
+
+.nsb-colhead {
+display: none;
+}
+
+.nsb-rowhead {
+grid-template-columns: 1fr 1fr;
+gap: 8px 16px;
+padding: 11px 12px;
+}
+
+.nsb-method {
+grid-column: 1/-1;
+display: flex;
+align-items: center;
+gap: 9px;
+}
+
+.nsb-chev {
+grid-column: 2;
+justify-self: end;
+grid-row: 1;
+}
+
+.nsb-cell::before {
+content: attr(data-scene);
+display: block;
+font-size: 9.5px;
+letter-spacing: .05em;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 3px;
+}
+
+.nsb-detail-inner {
+grid-template-columns: 1fr;
+gap: 10px;
+}
+}
+
+@media (max-width:460px) {
+.nsb-rowhead {
+grid-template-columns: 1fr;
+gap: 10px;
+}
+
+.nsb-mtbl {
+gap: 5px 10px;
+}
+
+.nsb-mth {
+font-size: 9px;
+}
+
+.nsb-mtd {
+font-size: 11px;
+}
+}
+
+</style>
+</head>
+<body>
+<div class="nsb">
+<div class="nsb-card">
+<div class="nsb-colhead">
+<div class="lh">Reconstruction method</div>
+<div class="sh">
+<h3>Flexion office</h3>
+<p id="nsb-m0"></p>
+</div>
+<div class="sh">
+<h3>Niantic Spatial office</h3>
+<p id="nsb-m1"></p>
+</div>
+<div></div>
+</div>
+<div class="nsb-rows" id="nsb-rows"></div>
+<div class="nsb-foot">
+<div class="nsb-legend">
+<span class="nsb-key"><i style="background:var(--c-success)"></i>Success</span>
+<span class="nsb-key"><i style="background:var(--c-timeout)"></i>Timeout</span>
+<span class="nsb-key"><i style="background:var(--c-fall)"></i>Fall</span>
+</div>
+</div>
+</div>
+<div class="nsb-tt" role="tooltip" id="nsb-tt" aria-hidden="true"></div>
+</div>
+<script>
+(function() {
+var SCENES = [{
+name: "Flexion office",
+meta: "1024 episodes",
+rows: {
+"RGB · Niantic Spatial 3DGS": {
+s: 0.9775,
+t: 0.001953,
+f: 0.02051,
+det: {
+success: {
+dist: 9.21,
+contacts: 0.01558,
+time: 20.06
+},
+timeout: {
+dist: 15.33,
+contacts: 0.72125,
+time: 120.0
+},
+fall: {
+dist: 9.69,
+contacts: 0.11263,
+time: 11.56
+}
+}
+},
+"Depth · generated mesh": {
+s: 0.9375,
+t: 0.008789,
+f: 0.05371,
+det: {
+success: {
+dist: 9.14,
+contacts: 0.01007,
+time: 23.09
+},
+timeout: {
+dist: 13.10,
+contacts: 0.02490,
+time: 120.0
+},
+fall: {
+dist: 10.55,
+contacts: 0.05493,
+time: 15.09
+}
+}
+},
+"RGB · synthetic office": {
+s: 0.707,
+t: 0.02246,
+f: 0.2705,
+det: {
+success: {
+dist: 8.38,
+contacts: 0.03583,
+time: 25.07
+},
+timeout: {
+dist: 14.54,
+contacts: 0.11768,
+time: 120.0
+},
+fall: {
+dist: 11.02,
+contacts: 0.04984,
+time: 39.91
+}
+}
+},
+"RGB · generated mesh": {
+s: 0.7168,
+t: 0.2217,
+f: 0.06152,
+det: {
+success: {
+dist: 8.26,
+contacts: 0.06978,
+time: 32.51
+},
+timeout: {
+dist: 11.82,
+contacts: 0.17665,
+time: 120.0
+},
+fall: {
+dist: 11.37,
+contacts: 0.17674,
+time: 41.63
+}
+}
+},
+}
+},
+{
+name: "Niantic Spatial office",
+meta: "1024 episodes",
+rows: {
+"RGB · Niantic Spatial 3DGS": {
+s: 0.7500,
+t: 0.160156,
+f: 0.08984,
+det: {
+success: {
+dist: 6.70,
+contacts: 0.104,
+time: 27.39
+},
+timeout: {
+dist: 7.50,
+contacts: 0.159,
+time: 120.0
+},
+fall: {
+dist: 6.99,
+contacts: 0.255,
+time: 32.29
+}
+}
+},
+"Depth · generated mesh": {
+s: 0.7090,
+t: 0.176758,
+f: 0.11426,
+det: {
+success: {
+dist: 6.61,
+contacts: 0.101,
+time: 33.38
+},
+timeout: {
+dist: 7.44,
+contacts: 0.187,
+time: 120.0
+},
+fall: {
+dist: 7.48,
+contacts: 0.259,
+time: 29.90
+}
+}
+},
+"RGB · synthetic office": {
+s: 0.5381,
+t: 0.352539,
+f: 0.10938,
+det: {
+success: {
+dist: 6.07,
+contacts: 0.196,
+time: 39.64
+},
+timeout: {
+dist: 7.86,
+contacts: 0.355,
+time: 120.0
+},
+fall: {
+dist: 7.56,
+contacts: 0.387,
+time: 41.20
+}
+}
+},
+"RGB · generated mesh": {
+s: 0.4053,
+t: 0.396484,
+f: 0.19824,
+det: {
+success: {
+dist: 6.06,
+contacts: 0.201,
+time: 34.39
+},
+timeout: {
+dist: 7.26,
+contacts: 0.292,
+time: 120.0
+},
+fall: {
+dist: 7.58,
+contacts: 0.347,
+time: 36.99
+}
+}
+},
+}
+},
+];
+var METHODS = [{
+label: "RGB · Niantic Spatial 3DGS",
+hero: true
+},
+{
+label: "Depth · generated mesh",
+hero: false
+},
+{
+label: "RGB · synthetic office",
+hero: false
+},
+{
+label: "RGB · generated mesh",
+hero: false
+},
+];
+var OUT = {
+success: {
+name: "Success",
+color: "var(--c-success)"
+},
+timeout: {
+name: "Timeout",
+color: "var(--c-timeout)"
+},
+fall: {
+name: "Fall",
+color: "var(--c-fall)"
+}
+};
+var ORDER = ["success", "timeout", "fall"],
+KEY = {
+success: "s",
+timeout: "t",
+fall: "f"
+};
+var rowsEl = document.getElementById("nsb-rows"),
+tt = document.getElementById("nsb-tt");
+document.getElementById("nsb-m0").textContent = SCENES[0].meta;
+document.getElementById("nsb-m1").textContent = SCENES[1].meta;
+
+function fmt(v, dp) {
+return v.toFixed(dp);
+}
+
+function succ(d) {
+var t = d.s + d.t + d.f;
+return d.s / t * 100;
+}
+
+function barHTML(d, sceneName, method) {
+var total = d.s + d.t + d.f;
+return '<div class="nsb-bar">' + ORDER.map(function(k) {
+var frac = d[KEY[k]];
+if (frac <= 0) return "";
+var pct = frac / total * 100,
+dt = d.det[k];
+return '<div class="sg ' + k + '" style="width:' + pct + '%" data-tip=\'' + JSON.stringify({
+name: OUT[k].name,
+color: OUT[k].color,
+pct: pct,
+scene: sceneName,
+method: method,
+dist: dt.dist,
+contacts: dt.contacts,
+time: dt.time
+}) + '\'></div>';
+}).join("") + '</div>';
+}
+
+function cellHTML(scIdx, method) {
+var d = SCENES[scIdx].rows[method.label],
+sp = succ(d);
+return '<div class="nsb-cell" data-scene="' + SCENES[scIdx].name + '"><div class="nsb-cell-top"><b>' + sp.toFixed(1) + '%</b></div>' + barHTML(d, SCENES[scIdx].name, method.label) + '</div>';
+}
+
+function miniHTML(scIdx, method) {
+var d = SCENES[scIdx].rows[method.label],
+total = d.s + d.t + d.f;
+return '<div class="nsb-mini"><h4>' + SCENES[scIdx].name + '</h4>' +
+'<div class="nsb-mtbl">' +
+'<span class="nsb-mth">Outcome</span><span class="nsb-mth n">Share</span><span class="nsb-mth n">Goal dist.</span><span class="nsb-mth n">Contacts</span><span class="nsb-mth n">Time</span>' +
+'<span class="nsb-mdiv"></span>' +
+ORDER.map(function(k) {
+var dt = d.det[k],
+pct = d[KEY[k]] / total * 100;
+return '<span class="nsb-mtd ot"><i style="background:' + OUT[k].color + '"></i>' + OUT[k].name + '</span>' +
+'<span class="nsb-mtd n">' + pct.toFixed(1) + '%</span>' +
+'<span class="nsb-mtd n">' + fmt(dt.dist, 2) + ' m</span>' +
+'<span class="nsb-mtd n">' + fmt(dt.contacts, 3) + '</span>' +
+'<span class="nsb-mtd n">' + fmt(dt.time, 1) + ' s</span>';
+}).join("") +
+'</div></div>';
+}
+METHODS.forEach(function(method) {
+var wrap = document.createElement("div");
+wrap.className = "nsb-row" + (method.hero ? " is-hero" : "");
+var head = document.createElement("div");
+head.className = "nsb-rowhead";
+head.tabIndex = 0;
+head.setAttribute("role", "button");
+head.setAttribute("aria-expanded", "false");
+head.innerHTML = '<div class="nsb-method"><span class="nm">' + method.label + '</span></div>' +
+cellHTML(0, method) + cellHTML(1, method) +
+'<div class="nsb-chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></div>';
+var det = document.createElement("div");
+det.className = "nsb-detail";
+det.innerHTML = '<div class="nsb-detail-inner">' + miniHTML(0, method) + miniHTML(1, method) + '</div>';
+
+function toggle() {
+var open = wrap.classList.toggle("is-open");
+head.setAttribute("aria-expanded", open);
+det.style.maxHeight = open ? det.scrollHeight + "px" : "0px";
+}
+head.addEventListener("click", function(e) {
+if (e.target.closest(".sg")) return;
+toggle();
+});
+head.addEventListener("keydown", function(e) {
+if (e.key === "Enter" || e.key === " ") {
+e.preventDefault();
+toggle();
+}
+});
+wrap.appendChild(head);
+wrap.appendChild(det);
+rowsEl.appendChild(wrap);
+});
+rowsEl.querySelectorAll(".sg[data-tip]").forEach(function(seg) {
+seg.addEventListener("mouseenter", showTip);
+seg.addEventListener("mousemove", moveTip);
+seg.addEventListener("mouseleave", hideTip);
+});
+
+function showTip(e) {
+var d = JSON.parse(e.currentTarget.getAttribute("data-tip"));
+tt.innerHTML = '<div class="nsb-tt-t"><i style="background:' + d.color + '"></i>' + d.name + ' · ' + d.pct.toFixed(1) + '%</div>' +
+'<p class="nsb-tt-sc">' + d.method + ' — ' + d.scene + '</p>' +
+'<div class="nsb-tt-g"><span class="k">Avg. goal distance</span><span class="v">' + fmt(d.dist, 2) + ' m</span>' +
+'<span class="k">Undesired contacts</span><span class="v">' + fmt(d.contacts, 3) + ' /step</span>' +
+'<span class="k">Avg. time to term.</span><span class="v">' + fmt(d.time, 1) + ' s</span></div>';
+tt.classList.add("show");
+tt.setAttribute("aria-hidden", "false");
+moveTip(e);
+}
+
+function moveTip(e) {
+var pad = 14,
+r = tt.getBoundingClientRect(),
+x = e.clientX + pad,
+y = e.clientY + pad;
+if (x + r.width > window.innerWidth) x = e.clientX - r.width - pad;
+if (y + r.height > window.innerHeight) y = e.clientY - r.height - pad;
+tt.style.left = Math.max(4, x) + "px";
+tt.style.top = Math.max(4, y) + "px";
+}
+
+function hideTip() {
+tt.classList.remove("show");
+tt.setAttribute("aria-hidden", "true");
+}
+})();
+
+</script>
+</body>
+</html>
+</div>
+<p>Across both simulated scenes, RGB trained in the 3DGS reconstruction is the only RGB setup that matches or exceeds the conventional depth baseline: 97.8% versus 93.8% in the easier Flexion office, and 75.0% versus 70.9% in the harder Niantic Spatial office. The other RGB training environments – the synthetic office and the generated mesh – trail depth in both scenes, with the gap widening as scene difficulty increases. In simulation, the reconstruction is what allows an RGB policy to reach depth-level reliability rather than fall well short of it.</p>
+<h3 class="ns-article__h3">RGB handles common stereo depth failure cases</h3>
+<p>In our experiments, the depth stream comes from a ZED X camera in neural mode. It is a capable sensor, but some scenarios remain difficult for stereo depth or lose important information in the depth-conversion step.</p>
+<p>Three representative hard cases are shown below:</p>
+<h4 class="ns-article__h4">Non-geometric cues</h4>
+<figure class="ns-article__figure">
+<div class="ns-article__frame"><ns-video class="ns-video" data-ns-module="NsVideo"><video class="ns-video__el" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/0eebf6ca2fd39bc9f7dab6c807aa06c90007537b.mp4" autoplay muted loop playsinline preload="metadata"></video>
+<div class="ns-video__hover" aria-hidden="true"><span class="ns-video__bubble"><svg class="ns-video__icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<rect x="6" y="4" width="4" height="16"></rect>
+<rect x="14" y="4" width="4" height="16"></rect>
+</svg><svg class="ns-video__icon-play" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<path d="M7 4l12 8-12 8z"></path>
+</svg></span></div><button type="button" class="ns-video__mute" data-ns-video-mute="true" aria-label="Unmute" aria-pressed="true"><svg class="ns-video__icon-muted" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<line x1="23" y1="9" x2="17" y2="15"></line>
+<line x1="17" y1="9" x2="23" y2="15"></line>
+</svg><svg class="ns-video__icon-sound" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+<path d="M19 5a9 9 0 0 1 0 14"></path>
+</svg></button>
+<div class="ns-video__bar" data-ns-video-bar="true" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+<div class="ns-video__track">
+<div class="ns-video__fill" data-ns-video-fill="true"></div>
+</div>
+</div>
+</ns-video></div>
+<figcaption class="ns-article__caption">Hazards defined more by semantics than geometry. In this example, a blue mat is obvious in RGB but barely registers on the depth stream, even though its raised edge is enough to trip a non-perceptive locomotion policy.</figcaption>
+</figure>
+<h4 class="ns-article__h4">Thin structures</h4>
+<figure class="ns-article__figure">
+<div class="ns-article__frame"><ns-video class="ns-video" data-ns-module="NsVideo"><video class="ns-video__el" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/2cb7425283cf6ed47ca6fc87a0a065d5fd9b53dc.mp4" autoplay muted loop playsinline preload="metadata"></video>
+<div class="ns-video__hover" aria-hidden="true"><span class="ns-video__bubble"><svg class="ns-video__icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<rect x="6" y="4" width="4" height="16"></rect>
+<rect x="14" y="4" width="4" height="16"></rect>
+</svg><svg class="ns-video__icon-play" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<path d="M7 4l12 8-12 8z"></path>
+</svg></span></div><button type="button" class="ns-video__mute" data-ns-video-mute="true" aria-label="Unmute" aria-pressed="true"><svg class="ns-video__icon-muted" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<line x1="23" y1="9" x2="17" y2="15"></line>
+<line x1="17" y1="9" x2="23" y2="15"></line>
+</svg><svg class="ns-video__icon-sound" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+<path d="M19 5a9 9 0 0 1 0 14"></path>
+</svg></button>
+<div class="ns-video__bar" data-ns-video-bar="true" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+<div class="ns-video__track">
+<div class="ns-video__fill" data-ns-video-fill="true"></div>
+</div>
+</div>
+</ns-video></div>
+<figcaption class="ns-article__caption">Tripods, railings, and cables are especially challenging for depth-based methods, which can miss them entirely or blur their edges. This issue can be mitigated, but doing so typically requires significant scene engineering and a realistic model of depth noise.</figcaption>
+</figure>
+<h4 class="ns-article__h4">Transparent surfaces</h4>
+<figure class="ns-article__figure">
+<div class="ns-article__frame"><ns-video class="ns-video" data-ns-module="NsVideo"><video class="ns-video__el" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/bfe2b36bd2ce4d5753f6f861bcdd32a68859215a.mp4" autoplay muted loop playsinline preload="metadata"></video>
+<div class="ns-video__hover" aria-hidden="true"><span class="ns-video__bubble"><svg class="ns-video__icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<rect x="6" y="4" width="4" height="16"></rect>
+<rect x="14" y="4" width="4" height="16"></rect>
+</svg><svg class="ns-video__icon-play" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+<path d="M7 4l12 8-12 8z"></path>
+</svg></span></div><button type="button" class="ns-video__mute" data-ns-video-mute="true" aria-label="Unmute" aria-pressed="true"><svg class="ns-video__icon-muted" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<line x1="23" y1="9" x2="17" y2="15"></line>
+<line x1="17" y1="9" x2="23" y2="15"></line>
+</svg><svg class="ns-video__icon-sound" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+<path d="M19 5a9 9 0 0 1 0 14"></path>
+</svg></button>
+<div class="ns-video__bar" data-ns-video-bar="true" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+<div class="ns-video__track">
+<div class="ns-video__fill" data-ns-video-fill="true"></div>
+</div>
+</div>
+</ns-video></div>
+<figcaption class="ns-article__caption">Glass doors and windows, where depth sensors routinely struggle.</figcaption>
+</figure>
+<p>None of these exact scene configurations – the blue mat, the tripod, or the sheet of glass in the locations shown here – were present during scene reconstruction, so the policy did not encounter them in that form during training.</p>
+<p>Why, then, does the reconstruction-trained RGB policy still handle them in real-world robot navigation?</p>
+<p>During simulation training, the policy repeatedly collided with semantically related objects and learned to associate those interactions with failure. It never saw this exact glass barrier, for example, but the reconstruction did contain windows. Failing against those transparent surfaces in simulation taught the policy to treat framed, glass-like surfaces as obstacles, including ones it had not encountered before.</p>
+<p>That same mechanism is also the limit of the approach. RGB is not magic: the policy generalizes well to objects that are semantically similar to what it saw during training, but less well to objects that are too far outside that experience.</p>
+<p>That is why the longer-term path for training RGB policies pairs broad, massively parallel perceptual pretraining with fine-tuning inside the reconstruction, so the policy can both generalize broadly and specialize to its deployment site for stronger sim2real transfer.</p>
+<h2 id="closing-the-loop-and-what-comes-next" class="ns-article__h2">Closing the loop – and what comes next</h2>
+<p>A perfect reconstruction with no way to ship a policy is a compelling demo. A strong sim2real recipe with no faithful world to train in has limited information to learn from. Together, real2sim and sim2real turn a real place into a training ground – and a trained policy back into a robot that works in that environment.</p>
+<p>Where this goes next:</p>
+<ul>
+<li>
+<p><b>Scaling data collection:</b> expanding capture with off-the-shelf hardware such as iPhones and fisheye cameras would make it possible to build larger datasets from real-world environments, creating broader training grounds for future robot policies.</p>
+</li>
+<li>
+<p><b>Semantic scene understanding:</b> attaching open-vocabulary labels to surfaces and objects in a reconstruction would make the digital twin queryable, not just visible.</p>
+</li>
+<li>
+<p><b>Scene transformation:</b> generating controlled variants of a captured scene – in appearance, such as lighting or time of day, and in state, such as doors open or closed or furniture moved – would let policies train against a wider range of conditions and interactions.</p>
+</li>
+<li>
+<p><b>End-to-end evaluation in simulation:</b> extending evaluation from local navigation to full-task performance inside the reconstructed world. Flexion’s <a href="https://flexion.ai/news/flexion-reflect-v1.0">Reflect v1.0</a> is a concrete example of that broader direction toward long-horizon autonomy, combining navigation, interaction, planning, and recovery in one system.</p>
+</li>
+<li>
+<p><b>VLM and agent training:</b> pushing beyond navigation toward richer, language-conditioned behavior grounded in the same reconstructed scenes.</p>
+</li>
+</ul>
+<p>The broader implication is commercial. Deploying a robot policy to a new environment has traditionally required months of on-site adaptation. Together, real2sim and sim2real compress that timeline to days, making it possible to deploy policies that are both faster to develop and more robust in practice. For operators seeking to scale autonomous robots across multiple plants or facilities, this pipeline offers a clear, repeatable path forward.</p>
+<h2 id="about-niantic-spatial" class="ns-article__h2">About Niantic Spatial</h2>
+<p>Niantic Spatial is building the real-world model for physical AI, giving robots, AI agents, and people an accurate, shared understanding of physical spaces. Its <a href="https://www.nianticspatial.com/products/reconstruct">reconstruction</a> technology captures environments with geometric accuracy and fine detail from any standard camera, and its <a href="https://www.nianticspatial.com/products/localize">Visual Positioning System</a> delivers precise positioning almost anywhere in the world. Learn more at <a href="http://nianticspatial.com">nianticspatial.com</a>.</p>
+<h2 id="about-flexion" class="ns-article__h2">About Flexion</h2>
+<p>Flexion is building the autonomy stack for humanoid robots: from command to control, from manipulation to locomotion. By leveraging simulation and reinforcement learning, the stack is designed to generalize and scale across environments and hardware platforms with minimal human involvement. Learn more at <a href="http://flexion.ai">flexion.ai</a>.</p>
+</div>
+</article>
+<aside class="ns-post__side">
+<div class="ns-label ns-post__side-title">Key takeaways</div>
+<ol class="ns-post__tk">
+<li><span class="ns-label">01</span><span><span class="ns-post__tk-b">The RGB policy transferred zero-shot to reality.</span><span class="ns-post__tk-r"> Trained entirely in simulation, Flexion's RGB navigation policy navigated the real office and performed on par with a depth-based policy.</span></span></li>
+<li><span class="ns-label">02</span><span><span class="ns-post__tk-b">One walkthrough becomes a training-ready twin.</span><span class="ns-post__tk-r"> A few minutes of 360° camera video yields a metric-scale Gaussian splat and aligned collision mesh, packaged as a USDZ for NVIDIA Isaac Sim.</span></span></li>
+<li><span class="ns-label">03</span><span><span class="ns-post__tk-b">Reconstruction lets RGB match or beat depth.</span><span class="ns-post__tk-r"> In simulation, the 3DGS-trained RGB policy succeeded 97.8% versus 93.8% for depth in Flexion's office, and 75.0% versus 70.9% in Niantic Spatial's.</span></span></li>
+</ol>
+</aside>
+</div>
+</div>
+</section>
+<section data-ns-module="NsMorePosts" class="ns-module ns-pad ns-more ns-more--list">
+<div class="ns-wrap">
+<div class="ns-more__head">
+<h2 class="ns-more__title">More from News</h2>
+</div>
+<div class="ns-more__list"><a class="ns-more__row" href="/blog/introducing-object-interaction"><span class="ns-label">Nov 10, 2026</span><span class="ns-more__row-title">Introducing Object Interaction in Real-World Environments</span><span class="ns-more__arrow" aria-hidden="true">→</span></a><a class="ns-more__row" href="/blog/state-of-the-art-geometry-for-autonomy"><span class="ns-label">Oct 15, 2026</span><span class="ns-more__row-title">State-of-the-Art Geometry Your Policy Learns From</span><span class="ns-more__arrow" aria-hidden="true">→</span></a><a class="ns-more__row" href="/blog/introducing-places-library-usdz"><span class="ns-label">Sep 25, 2026</span><span class="ns-more__row-title">Introducing the Places Library</span><span class="ns-more__arrow" aria-hidden="true">→</span></a></div><a class="ns-link ns-more__all ns-more__all--below" href="/blog">View all<span aria-hidden="true"> →</span></a>
+</div>
+</section>
+</main><ns-form-modal portal-id="7182223">
+<dialog class="ns-formmodal" aria-labelledby="ns-formmodal-title">
+<div class="ns-formmodal__head">
+<h2 class="ns-formmodal__title" id="ns-formmodal-title" data-ns-modal-title="true" hidden></h2><button type="button" class="ns-formmodal__close" data-ns-modal-close="true" aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg></button>
+</div>
+<div class="ns-formmodal__body" data-ns-modal-body="true"></div>
+</dialog>
+</ns-form-modal>
+<footer class="ns-footer" id="ns-footer" data-ns-module="NsFooter">
+<div class="ns-wrap">
+<div class="ns-footer__grid">
+<div class="ns-footer__brand"><a href="/" class="ns-footer__home" aria-label="Niantic Spatial home"><span class="ns-footer__logo" role="img" aria-label="Niantic Spatial"></span></a>
+<p class="ns-footer__tagline">Real-world foundation models for physical AI.</p>
+<p class="ns-footer__mission">We build spatial AI models and services so people and machines can reason, learn and act safely in the physical world.</p>
+</div>
+<nav class="ns-footer__col" aria-label="Industries">
+<div class="ns-footer__heading">Industries</div><a _arrayKey="KdYc6y" href="/oil-and-gas">Oil and gas</a><a _arrayKey="JOoRJU" href="/defense-and-intelligence">Defense and intelligence</a><a _arrayKey="G9W0tt" href="/embodied-ai">Embodied AI</a>
+</nav>
+<nav class="ns-footer__col" aria-label="Models">
+<div class="ns-footer__heading">Models</div><a _arrayKey="hevlGU" href="/products/reconstruct">Reconstruction</a><a _arrayKey="cn2ktT" href="/products/localize">Localization</a><a _arrayKey="iyaOEX" href="/products/understand">Understanding</a><a _arrayKey="fmQYfq" href="/products/capture">Capture</a>
+</nav>
+<nav class="ns-footer__col" aria-label="Company">
+<div class="ns-footer__heading">Company</div><a _arrayKey="fD4akj" href="/about">About</a><a _arrayKey="lUU67w" href="/careers">Careers</a><a _arrayKey="mXTmSN" href="/research">Research</a><a _arrayKey="YpRgGx" href="/blog">News</a><a _arrayKey="SxhE01" href="/responsible-innovation">Responsible innovation</a>
+</nav>
+<nav class="ns-footer__col" aria-label="Resources">
+<div class="ns-footer__heading">Resources</div><a _arrayKey="uTaMm1" href="/pricing">Pricing</a><a _arrayKey="araiYz" href="/press">Press</a><a _arrayKey="GBZlO6" href="/events">Events</a><a _arrayKey="TsX64E" href="https://community.nianticspatial.com/" target="_blank" rel="noopener">Developer forums</a><a _arrayKey="YkUFaw" href="/glossary">Glossary</a>
+</nav>
+<nav class="ns-footer__legal" aria-label="Legal"><a _arrayKey="DZv0sZ" href="/terms">Terms of service</a><a _arrayKey="3WjdE5" href="/terms-business">Business and developer terms</a><a _arrayKey="x3xnHC" href="/privacy-business">Business and developer privacy policy</a><a _arrayKey="tH289Y" href="/privacy-consumer">Consumer privacy policy</a><a _arrayKey="DxzapU" href="/privacy-consumer-games">Ingress and Peridot privacy policy</a><a _arrayKey="k8FIAo" href="/cookies">Cookies policy</a><a _arrayKey="qkTRdh" href="/legal/developer-policy/niantic-spatial-platform-sdk">Developer policy</a></nav>
+</div>
+<div class="ns-footer__bottom">
+<div class="ns-footer__meta"><span>©2026 Niantic Spatial, Inc.</span>
+<div class="ns-footer__lang">
+<div class="_langToggleWrap_z70ml_1"><root-language-selector locale="en" locales="[{&quot;locale&quot;:&quot;en&quot;,&quot;hrefLang&quot;:&quot;en&quot;,&quot;url&quot;:&quot;/en/blog/flexion-humanoid-real2sim-sim2real&quot;,&quot;languageName&quot;:&quot;English&quot;},{&quot;locale&quot;:&quot;ja&quot;,&quot;hrefLang&quot;:&quot;ja&quot;,&quot;url&quot;:&quot;/ja/blog/flexion-humanoid-real2sim-sim2real&quot;,&quot;languageName&quot;:&quot;日本語&quot;}]"></root-language-selector></div>
+</div>
+</div>
+<nav class="ns-footer__social" aria-label="Social"><a _arrayKey="Kq1csX" href="https://www.linkedin.com/company/nianticspatial" target="_blank" rel="noopener">LinkedIn</a><a _arrayKey="eP7aV8" href="https://x.com/NianticSpatial" target="_blank" rel="noopener">X</a><a _arrayKey="WThAQL" href="https://www.youtube.com/@NianticSpatial" target="_blank" rel="noopener">YouTube</a><a _arrayKey="gSBtZ4" href="https://www.instagram.com/nianticspatial/" target="_blank" rel="noopener">Instagram</a><a _arrayKey="M2I16I" href="https://www.facebook.com/nianticspatial/" target="_blank" rel="noopener">Facebook</a><a _arrayKey="KeBEU8" href="https://github.com/niantic-lightship/" target="_blank" rel="noopener">GitHub</a></nav>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script src="/ark/ark.esm.js" type="module" nonce="s8KdKGR2CoyJ2hHb+Q7UIQ=="></script><ark-cookiebar></ark-cookiebar><kino-widget config="{&quot;activeAssistant&quot;:&quot;kino&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;name&quot;:&quot;Kino&quot;,&quot;tagline&quot;:&quot;Real-world models for physical AI&quot;,&quot;greeting&quot;:&quot;Hi! I’m Kino, your guide to Niantic Spatial. Ask me how we reconstruct and localize real places, how teams in robotics, defense and energy use it, or how to get started with our SDK and Scaniverse.&quot;,&quot;placeholder&quot;:&quot;Ask anything about Niantic Spatial...&quot;,&quot;standaloneUrl&quot;:&quot;/kino&quot;,&quot;position&quot;:&quot;bottom-right&quot;,&quot;enableKeyboardShortcut&quot;:true,&quot;enabledSources&quot;:[{&quot;id&quot;:&quot;all&quot;,&quot;label&quot;:&quot;All&quot;},{&quot;id&quot;:&quot;website&quot;,&quot;label&quot;:&quot;Website&quot;},{&quot;id&quot;:&quot;docs&quot;,&quot;label&quot;:&quot;Docs&quot;}],&quot;suggestedPrompts&quot;:[{&quot;label&quot;:&quot;What are the latest product updates and releases?&quot;,&quot;query&quot;:&quot;What are the latest product updates, releases, and announcements from Niantic Spatial?&quot;},{&quot;label&quot;:&quot;Are there real-world case studies and customer stories?&quot;,&quot;query&quot;:&quot;What case studies and real-world deployment stories are featured on the Niantic Spatial blog?&quot;},{&quot;label&quot;:&quot;What technical deep-dives are available on the blog?&quot;,&quot;query&quot;:&quot;What technical deep-dives on Gaussian splatting, VPS, and physical AI are available on the blog?&quot;},{&quot;label&quot;:&quot;What does Niantic Spatial do, and who is it for?&quot;,&quot;query&quot;:&quot;What does Niantic Spatial do, and who uses it?&quot;,&quot;category&quot;:&quot;general&quot;}],&quot;siteLocale&quot;:&quot;en&quot;}" locale="en"></kino-widget>
+</body>
+</html>

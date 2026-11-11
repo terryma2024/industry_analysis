@@ -12,6 +12,14 @@ aliases:
 
 # 机器人（具身智能） - 技术与产品
 
+## Niantic／Flexion real2sim 工作流（2026-11-10）
+
+- [[robotics-embodied-ai/research-notes/niantic-flexion-real2sim-zero-shot-project-fit-2026-11-10|商业场景层与导航训练]]：场景资产不是现成ACT数据；nativeIsaac、MuJoCo转换、外部渲染三种路线及实际版本边界。
+
+## VLK 合成监督与运动学接口（2026-11-10）
+
+- [[robotics-embodied-ai/research-notes/vlk-synthetic-data-zero-shot-project-fit-2026-11-10|VLK 论文与实现]]：场景特权生成、第一人称后渲染、期望接触与物理跟踪；大箱体搬运不等于精细抓杯，零样本不等于未知建筑通用。
+
 ## 物理解算与Sim2Real（2026-10-26）
 
 - [[robotics-embodied-ai/research-notes/robot-physics-engines-sim2real-2026-10-26|物理引擎、接触求解与迁移误差]]：模型精度、数值精度、梯度与策略迁移分别验证；附开源/专有矩阵、论文与实验协议。

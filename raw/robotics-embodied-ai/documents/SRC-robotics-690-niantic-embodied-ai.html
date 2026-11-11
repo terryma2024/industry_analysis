@@ -1,0 +1,2258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Niantic Spatial for Embodied AI | Niantic Spatial, Inc.</title>
+<meta name="google-site-verification" content="AqJrr-ftVSc2eREI-8Fw1yK8Y9-xN3Q8FHUohO-i8Sw" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#ffffff" />
+<meta content="website" property="og:type" />
+<meta content="Niantic Spatial, Inc." property="og:site_name" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="Niantic Spatial for Embodied AI | Niantic Spatial, Inc." property="og:title" />
+<meta content="Niantic Spatial for Embodied AI | Niantic Spatial, Inc." name="twitter:title" />
+<meta name="description" content="Our real-to-sim stack converts places into training-ready environments where embodied AI learns visual-spatial intelligence. A few minutes of camera footage becomes a photorealistic, metric-scale, collider-ready environment for training and evaluating your policies. Train where you'll deploy and evaluate against the real site's edge cases, from one capture with a commodity camera." />
+<meta property="og:url" content="https://www.nianticspatial.com/embodied-ai" />
+<meta property="og:description" content="Our real-to-sim stack converts places into training-ready environments where embodied AI learns visual-spatial intelligence. A few minutes of camera footage becomes a photorealistic, metric-scale, collider-ready environment for training and evaluating your policies. Train where you'll deploy and evaluate against the real site's edge cases, from one capture with a commodity camera." />
+<meta name="twitter:description" content="Our real-to-sim stack converts places into training-ready environments where embodied AI learns visual-spatial intelligence. A few minutes of camera footage becomes a photorealistic, metric-scale, collider-ready environment for training and evaluating your policies. Train where you'll deploy and evaluate against the real site's edge cases, from one capture with a commodity camera." />
+<meta content="https://lh3.googleusercontent.com/UxnnJs1bfN7zUQHtpCpvZ9rt2MndANcors38DfUTm3q8asei5qX9FG293MTLB-iuAG72F47pBqROBLKpQ4pQxgLkTCBZvNdp_zilsEQyGZn6Hg" property="og:image" />
+<meta content="https://lh3.googleusercontent.com/UxnnJs1bfN7zUQHtpCpvZ9rt2MndANcors38DfUTm3q8asei5qX9FG293MTLB-iuAG72F47pBqROBLKpQ4pQxgLkTCBZvNdp_zilsEQyGZn6Hg" name="twitter:image" />
+<script type="application/ld+json" nonce="jZ22rnNgA+0hMSw15MBWMg==">
+{
+"@context": "https://schema.org",
+"@graph": [{
+"@type": "Organization",
+"@id": "https://www.nianticspatial.com/#organization",
+"name": "Niantic Spatial, Inc.",
+"url": "https://www.nianticspatial.com",
+"description": "Niantic Spatial builds real-world foundation models for physical AI — giving robots, AI agents, and people an accurate, shared understanding of physical spaces.",
+"logo": {
+"@type": "ImageObject",
+"url": "https://www.nianticspatial.com/images/niantic-spatial-icon.png"
+},
+"sameAs": ["https://www.linkedin.com/company/nianticspatial", "https://www.instagram.com/nianticspatial/", "https://www.facebook.com/nianticspatial/", "https://x.com/NianticSpatial", "https://www.youtube.com/@NianticSpatial", "https://github.com/niantic-lightship/"]
+}, {
+"@type": "WebSite",
+"@id": "https://www.nianticspatial.com/#website",
+"url": "https://www.nianticspatial.com",
+"name": "Niantic Spatial",
+"publisher": {
+"@id": "https://www.nianticspatial.com/#organization"
+}
+}, {
+"@type": "WebPage",
+"@id": "https://www.nianticspatial.com/embodied-ai#webpage",
+"url": "https://www.nianticspatial.com/embodied-ai",
+"name": "Niantic Spatial for Embodied AI | Niantic Spatial, Inc.",
+"description": "Our real-to-sim stack converts places into training-ready environments where embodied AI learns visual-spatial intelligence. A few minutes of camera footage becomes a photorealistic, metric-scale, collider-ready environment for training and evaluating your policies. Train where you'll deploy and evaluate against the real site's edge cases, from one capture with a commodity camera.",
+"isPartOf": {
+"@id": "https://www.nianticspatial.com/#website"
+}
+}, {
+"@type": "BreadcrumbList",
+"@id": "https://www.nianticspatial.com/embodied-ai#breadcrumbs",
+"itemListElement": [{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://www.nianticspatial.com"
+}, {
+"@type": "ListItem",
+"position": 2,
+"name": "Niantic Spatial for Embodied AI",
+"item": "https://www.nianticspatial.com/embodied-ai"
+}]
+}]
+}
+
+</script>
+<link rel="canonical" href="https://www.nianticspatial.com/embodied-ai" />
+<link rel="alternate" href="https://www.nianticspatial.com/embodied-ai" hreflang="x-default" />
+<link rel="alternate" hreflang="en" href="https://www.nianticspatial.com/en/embodied-ai" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://lh3.googleusercontent.com" />
+<link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
+<link rel="preconnect" href="https://cdn.vector.co" />
+<link rel="dns-prefetch" href="https://cdn.vector.co" />
+<link rel="preload" href="/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+<link rel="preload" href="/fonts/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+<link rel="preload" href="/fonts/Figtree-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+<script nonce="jZ22rnNgA+0hMSw15MBWMg==">
+(function() {
+var h = document.documentElement;
+try {
+if (new URLSearchParams(location.search).get('preview') === 'true' || window.self !== window.top) h.setAttribute('data-no-cookiebar', '')
+} catch (e) {
+h.setAttribute('data-no-cookiebar', '')
+}
+})();
+
+</script>
+<script nonce="jZ22rnNgA+0hMSw15MBWMg==">
+(function() {
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+dataLayer.push(arguments);
+}
+var m = document.cookie.match(/(?:^|;\s*)_ncc=([01])/);
+var ncc = m && m[1];
+
+function state(v) {
+return {
+ad_storage: v,
+analytics_storage: v,
+ad_user_data: v,
+ad_personalization: v,
+personalization_storage: v,
+functionality_storage: 'granted',
+security_storage: 'granted'
+};
+}
+gtag('set', 'ads_data_redaction', true);
+if (ncc === '1') {
+gtag('consent', 'default', state('granted'));
+} else if (ncc === '0') {
+gtag('consent', 'default', state('denied'));
+} else {
+var optIn = state('denied');
+optIn.region = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH'];
+optIn.wait_for_update = 500;
+gtag('consent', 'default', optIn);
+gtag('consent', 'default', state('granted'));
+}
+})();
+
+</script>
+<script nonce="jZ22rnNgA+0hMSw15MBWMg==">
+(function(w, d, s, l, i) {
+w[l] = w[l] || [];
+w[l].push({
+'gtm.start': new Date().getTime(),
+event: 'gtm.js'
+});
+var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s),
+dl = l != 'dataLayer' ? '&l=' + l : '';
+j.async = true;
+j.src =
+'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-MMV5RVWF');
+
+</script>
+<link href="/images/favicons/favicon-black.png" rel="icon" media="(prefers-color-scheme: light)" />
+<link href="/images/favicons/favicon-white.png" rel="icon" media="(prefers-color-scheme: dark)" />
+<link rel="stylesheet" href="/assets/acY2DQFQ.css" nonce="jZ22rnNgA+0hMSw15MBWMg==" />
+<link rel="stylesheet" href="/assets/DN5hIULh.css" nonce="jZ22rnNgA+0hMSw15MBWMg==" />
+<link rel="stylesheet" href="/assets/C5TPY84I.css" nonce="jZ22rnNgA+0hMSw15MBWMg==" />
+<script type="module" src="/assets/CFjX3LCR.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/BP5K98Ms.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/CHQ5oM2I.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/Be8dq86D.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/CHPIGRV3.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/DfUpomWA.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/BZA7zwq_.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/COyE6wE6.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/BWRS-RSB.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/D_BPoCi2.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/DPmLQWTN.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/ChVei_-r.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/DudXv5Hs.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/BWWWwqxX.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/D2V_wU7K.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/Cq281b3E.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/C2yZOhdJ.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/BIxN3n8C.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/DkQmv-Jj.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/eHK55yh5.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/BXvoRlx1.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/Ko-8juNC.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/D1DeKWp-.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/BDd4_uDX.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/qFbjCyt-.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/DLFTjgAG.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/DzP4cnmn.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/CtFTNGtp.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/DPiYQF2U.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/CTEBRncn.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/BLBinvCZ.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/CXN03Q2O.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/lpPSpC4a.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/C5oS9Y6c.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/NGOtXnU-.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+<script type="module" src="/assets/Cnsyuoi6.min.js" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script>
+</head>
+<body><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to main content</a><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMV5RVWF" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+<h1 class="sr-only">Niantic Spatial for Embodied AI | Niantic Spatial, Inc.</h1>
+<div id="root" role="document">
+<div class="ns ns--chrome" data-theme="light" data-ns-chrome="true"><ns-nav class="ns-stick site-header" data-scrolled="false" data-drawer="false" data-ns-module="NsNav" id="ns-nav"><ns-banner class="ns-banner" data-id="ns-banner-livestream" data-dismissible="true" data-ns-module="NsBanner"><a class="ns-banner__link" href="https://www.youtube.com/watch?v=1XtBPY4i780" target="_blank" rel="noopener"><span class="ns-banner__inner"><span class="ns-chip ns-banner__chip">Livestream</span><span class="ns-banner__text"><span>Hear more about how Niantic Spatial is working with NVIDIA and Flexion to close the Sim-to-Real gap</span><span class="ns-banner__arrow" aria-hidden="true"> ↗</span></span><span class="ns-banner__cta">Watch now<span aria-hidden="true">↗</span></span></span></a><button type="button" class="ns-banner__close" data-ns-dismiss="true" aria-label="Dismiss announcement" title="Dismiss"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+<path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
+</svg></button></ns-banner>
+<div class="ns-nav">
+<div class="ns-navrow"><span class="ns-progress" aria-hidden="true"></span><a class="ns-nav__logo" href="/" aria-label="Niantic Spatial home" data-ns-close-menus="true"><span class="ns-logo ns-logo--img" role="img" aria-label="Niantic Spatial"></span></a>
+<nav class="ns-nav__items" aria-label="Primary"><a class="ns-nav__item" href="/blog" data-ns-close-menus="true">News</a><a class="ns-nav__item" href="/research" data-ns-close-menus="true">Research</a><button type="button" class="ns-nav__item" data-ns-menu-trigger="2" aria-expanded="false" aria-controls="ns-menu-2">Models<svg class="ns-nav__caret" width="9" height="6" viewBox="0 0 9 6" fill="none" aria-hidden="true">
+<path d="M1 1l3.5 3.5L8 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button><button type="button" class="ns-nav__item" data-ns-menu-trigger="3" aria-expanded="false" aria-controls="ns-menu-3" aria-current="true">Industries<svg class="ns-nav__caret" width="9" height="6" viewBox="0 0 9 6" fill="none" aria-hidden="true">
+<path d="M1 1l3.5 3.5L8 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button><button type="button" class="ns-nav__item" data-ns-menu-trigger="4" aria-expanded="false" aria-controls="ns-menu-4">Company<svg class="ns-nav__caret" width="9" height="6" viewBox="0 0 9 6" fill="none" aria-hidden="true">
+<path d="M1 1l3.5 3.5L8 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button></nav>
+<div class="ns-nav__actions"><ns-ask class="ns-nav__action"><button type="button" class="ns-ask ns-ask--fx-iris" data-ns-ask-toggle="true" aria-expanded="false" aria-controls="ns-ask-panel" aria-label="Ask Niantic Spatial"><span class="ns-ask__fx" aria-hidden="true"></span><span class="ns-ask__tile"><svg class="ns-ask__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+<defs>
+<linearGradient id="ns-ask-star" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#7F8FF0"></stop>
+<stop offset="0.5" stop-color="#B38FE6"></stop>
+<stop offset="1" stop-color="#EE9F86"></stop>
+</linearGradient>
+</defs>
+<path fill="url(#ns-ask-star)" d="M10 4C10.24 9.3 13.7 12.76 19 13C13.7 13.24 10.24 16.7 10 22C9.76 16.7 6.3 13.24 1 13C6.3 12.76 9.76 9.3 10 4Z"></path>
+<path class="ns-ask__twinkle" fill="url(#ns-ask-star)" d="M19.5 1C19.6 3.2 20.8 4.4 23 4.5C20.8 4.6 19.6 5.8 19.5 8C19.4 5.8 18.2 4.6 16 4.5C18.2 4.4 19.4 3.2 19.5 1Z"></path>
+</svg></span><span class="ns-ask__label">Ask AI</span></button>
+<div class="ns-ask__hint" data-ns-ask-hint="true" hidden role="status"><strong>New: ask our AI</strong>Questions about VPS, Capture, pricing or our research, answered from our site and docs.</div>
+<div class="ns-ask__panel" id="ns-ask-panel" data-ns-ask-panel="true" hidden role="dialog" aria-label="Ask"><button type="button" class="ns-ask__close" data-ns-ask-close="true" aria-label="Close"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+<path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"></path>
+</svg></button>
+<div class="ns-ask__title">What are you trying to do?</div>
+<div class="ns-ask__sub">Pick a question, or ask in your own words.</div><button type="button" class="ns-ask__resume" data-ns-ask-resume="true" hidden><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<path d="M5 3L1.5 6.5 5 10M1.5 6.5H9a3.5 3.5 0 010 7H7.5" stroke="currentColor" stroke-width="1.5"></path>
+</svg><span>Continue your last conversation</span></button>
+<div class="ns-ask__questions ns-ask__questions--page" data-ns-ask-page="true" hidden><button type="button" class="ns-ask__question" data-ns-ask-q="true" data-query="Summarize this page"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<path d="M3 1.5h5.5L11 4v8.5H3z M8.5 1.5V4H11 M5 7h4 M5 9.5h4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"></path>
+</svg><span>Summarize this page</span></button></div>
+<div class="ns-ask__questions" data-ns-ask-questions="true"><button type="button" class="ns-ask__question" data-ns-ask-q="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<circle cx="6" cy="6" r="4.4" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M9.3 9.3L13 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg><span>How do you use AI and world models to understand and interact with the real world?</span></button><button type="button" class="ns-ask__question" data-ns-ask-q="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<circle cx="6" cy="6" r="4.4" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M9.3 9.3L13 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg><span>How do you support public sector and defense missions, especially in GPS-denied environments?</span></button><button type="button" class="ns-ask__question" data-ns-ask-q="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<circle cx="6" cy="6" r="4.4" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M9.3 9.3L13 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg><span>How do you help with robotics and autonomous systems in delivery and logistics?</span></button><button type="button" class="ns-ask__question" data-ns-ask-q="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<circle cx="6" cy="6" r="4.4" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M9.3 9.3L13 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg><span>What is a Visual Positioning System, why is it important, and how is your VPS different?</span></button></div><template data-ns-ask-q-template="true"><button type="button" class="ns-ask__question" data-ns-ask-q="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<circle cx="6" cy="6" r="4.4" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M9.3 9.3L13 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg><span></span></button></template>
+<form class="ns-ask__form" data-ns-ask-form="true" action="#" method="get"><input class="ns-ask__input" type="search" name="q" autocomplete="off" placeholder="Ask a question or search for anything" aria-label="Ask a question or search for anything" /><button type="submit" class="ns-ask__submit" aria-label="Ask"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path>
+</svg></button></form>
+<div class="ns-ask__foot"><a class="ns-btn ns-btn--primary ns-btn--small" href="/contact">Talk to sales<span aria-hidden="true">→</span></a></div>
+</div>
+</ns-ask>
+<div class="ns-nav__action ns-nav__action--menu"><button type="button" class="ns-nav__item" data-ns-action-trigger="0" aria-expanded="false" aria-controls="ns-action-menu-0">Try Scaniverse<svg class="ns-nav__caret" width="9" height="6" viewBox="0 0 9 6" fill="none" aria-hidden="true">
+<path d="M1 1l3.5 3.5L8 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button>
+<div class="ns-nav__menu" id="ns-action-menu-0" data-ns-action-menu="0" data-open="false"><a class="ns-nav__menu-link" href="https://scaniverse.nianticspatial.com/signin" target="_blank" rel="noopener"><span class="ns-nav__menu-title">Scaniverse app<span aria-hidden="true">↗</span></span><span class="ns-nav__menu-desc">Capture and reconstruct real places.</span></a><a class="ns-nav__menu-link" href="/pricing"><span class="ns-nav__menu-title">Pricing<span aria-hidden="true">→</span></span><span class="ns-nav__menu-desc">Plans for teams and enterprises.</span></a></div>
+</div><a data-ns-close-menus="true" class="ns-btn ns-btn--primary ns-btn--small ns-nav__cta" href="/contact">Contact sales</a><button type="button" class="ns-nav__burger" data-ns-drawer-toggle="true" aria-expanded="false" aria-controls="ns-drawer" aria-label="Open menu"><svg class="ns-nav__burger-open" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+<path d="M0 1h18M0 6h18M0 11h18" stroke="currentColor" stroke-width="1.5"></path>
+</svg><svg class="ns-nav__burger-close" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+<path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"></path>
+</svg></button>
+</div>
+</div>
+<div class="ns-nav__panel" id="ns-menu-2" data-ns-menu-panel="2" data-open="false" aria-label="Models">
+<div class="ns-wrap">
+<div>
+<div class="ns-nav__grid--features" style="--n:3;">
+<div class="ns-nav__intro">
+<div class="ns-label">Models</div>
+<p>A family of foundation models, trained on real-world data to establish ground truth for physical AI.</p>
+</div><a class="ns-nav__feature" href="/products/reconstruct"><span class="ns-nav__feature-title">Reconstruction</span><span class="ns-nav__feature-desc">Metric-scale splats and aligned meshes of real places, from a single room to city-scale.</span><span class="ns-link">Explore reconstruction <span aria-hidden="true">→</span></span></a><a class="ns-nav__feature" href="/products/localize"><span class="ns-nav__feature-title">Localization</span><span class="ns-nav__feature-desc">Precise vision-based positioning, even where GPS doesn’t work.</span><span class="ns-link">Explore localization <span aria-hidden="true">→</span></span></a><a class="ns-nav__feature" href="/products/understand"><span class="ns-nav__feature-title">Understanding</span><span class="ns-nav__feature-desc">Objects, change over time and answers at every 3D point of a real place.</span><span class="ns-link">Explore understanding <span aria-hidden="true">→</span></span></a>
+</div><a class="ns-nav__footer-row" href="/products/capture" style="--n:3;"><span class="ns-label">Inputs</span><span class="ns-nav__footer-text"><b>Capture </b><span>from any sensor or archive: phone, 360°, LiDAR, drone, satellite and your own data.</span></span><span class="ns-link">Explore capture <span aria-hidden="true">→</span></span></a>
+</div>
+</div>
+</div>
+<div class="ns-nav__panel" id="ns-menu-3" data-ns-menu-panel="3" data-open="false" aria-label="Industries">
+<div class="ns-wrap">
+<div class="ns-nav__grid--cards" style="--n:3;">
+<div class="ns-nav__intro">
+<div class="ns-label">Industries</div>
+<p>Where people and machines work in the real world.</p>
+</div><a class="ns-nav__card" href="/oil-and-gas"><span class="ns-nav__card-media">
+
+<img class="ns-img" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/a8a9ac9692c329f7feb86ae3ba46afc5111f6675.png" width="1200" height="750" alt="Field operator at a refinery" loading="lazy" decoding="async" /></span><span class="ns-nav__card-body"><span class="ns-nav__card-title">Oil and gas<span aria-hidden="true">→</span></span><span class="ns-nav__card-desc">Intelligent field operations.</span></span></a><a class="ns-nav__card" href="/defense-and-intelligence"><span class="ns-nav__card-media">
+
+<img class="ns-img" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/f5f7b1a1caffe82eb7f8cbb855c8146d4840af52.png" width="1200" height="750" alt="Aerial view of a coastal site, measured from drone imagery" loading="lazy" decoding="async" /></span><span class="ns-nav__card-body"><span class="ns-nav__card-title">Defense and intelligence<span aria-hidden="true">→</span></span><span class="ns-nav__card-desc">Mission rehearsal and GPS-denied operations.</span></span></a><a class="ns-nav__card" href="/embodied-ai"><span class="ns-nav__card-media">
+
+<img class="ns-img" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/3bd5ef21290262e99972719580af5272d5de5c41.png" width="1200" height="750" alt="Robots in a real-to-sim workshop" loading="lazy" decoding="async" /></span><span class="ns-nav__card-body"><span class="ns-nav__card-title">Embodied AI<span aria-hidden="true">→</span></span><span class="ns-nav__card-desc">Real-to-sim training for robots.</span></span></a>
+</div>
+</div>
+</div>
+<div class="ns-nav__panel" id="ns-menu-4" data-ns-menu-panel="4" data-open="false" aria-label="Company">
+<div class="ns-wrap">
+<div class="ns-nav__grid--columns" style="--n:3;">
+<div class="ns-nav__intro">
+<div class="ns-label">Company</div>
+<p>The team, partners and resources behind Niantic Spatial.</p>
+</div>
+<div class="ns-nav__col">
+<div class="ns-label">About</div><a class="ns-nav__col-link" href="/about">About us</a><a class="ns-nav__col-link" href="/events">Events</a><a class="ns-nav__col-link" href="/careers">Careers</a>
+</div>
+<div class="ns-nav__col">
+<div class="ns-label">Partners</div><a class="ns-nav__col-link" href="/partners">Developer partner program</a><a class="ns-nav__col-link" href="/academic-community-partners">Academic and community partners</a><a class="ns-nav__col-link" href="/partner-with-us">Partner with us</a>
+</div>
+<div class="ns-nav__col">
+<div class="ns-label">Guides and support</div><a class="ns-nav__col-link" href="/faq/scaniverse">Scaniverse FAQ</a><a class="ns-nav__col-link" href="/docs/">Niantic Spatial SDK docs</a><a class="ns-nav__col-link" href="https://community.nianticspatial.com/" target="_blank" rel="noopener">Developer forums<span aria-hidden="true"> ↗</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="ns-nav__drawer" id="ns-drawer">
+<div class="ns-nav__drawer-scroll"><a class="ns-nav__drawer-link" href="/blog">News</a><a class="ns-nav__drawer-link" href="/research">Research</a>
+<div class="ns-nav__drawer-group"><button type="button" class="ns-nav__drawer-toggle" data-ns-acc="i2" aria-expanded="false" aria-controls="ns-drawer-panel-i2">Models<svg class="ns-nav__caret" width="11" height="7" viewBox="0 0 11 7" fill="none" aria-hidden="true">
+<path d="M1 1l4.5 4.5L10 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button>
+<div class="ns-nav__drawer-panel" id="ns-drawer-panel-i2">
+<div class="ns-nav__drawer-desc">A family of foundation models, trained on real-world data to establish ground truth for physical AI.</div><a class="ns-nav__drawer-sub" href="/products/reconstruct"><span class="ns-nav__drawer-sub-title">Reconstruction</span><span class="ns-nav__drawer-sub-desc">Metric-scale splats and aligned meshes of real places, from a single room to city-scale.</span></a><a class="ns-nav__drawer-sub" href="/products/localize"><span class="ns-nav__drawer-sub-title">Localization</span><span class="ns-nav__drawer-sub-desc">Precise vision-based positioning, even where GPS doesn’t work.</span></a><a class="ns-nav__drawer-sub" href="/products/understand"><span class="ns-nav__drawer-sub-title">Understanding</span><span class="ns-nav__drawer-sub-desc">Objects, change over time and answers at every 3D point of a real place.</span></a>
+<div class="ns-label ns-nav__drawer-group-label">Inputs</div><a class="ns-nav__drawer-sub" href="/products/capture"><span class="ns-nav__drawer-sub-title">Capture</span><span class="ns-nav__drawer-sub-desc">From any sensor or archive: phone, 360°, LiDAR, drone, satellite and your own data.</span></a>
+</div>
+</div>
+<div class="ns-nav__drawer-group"><button type="button" class="ns-nav__drawer-toggle" data-ns-acc="i3" aria-expanded="false" aria-controls="ns-drawer-panel-i3">Industries<svg class="ns-nav__caret" width="11" height="7" viewBox="0 0 11 7" fill="none" aria-hidden="true">
+<path d="M1 1l4.5 4.5L10 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button>
+<div class="ns-nav__drawer-panel" id="ns-drawer-panel-i3">
+<div class="ns-nav__drawer-desc">Where people and machines work in the real world.</div><a class="ns-nav__drawer-sub" href="/oil-and-gas"><span class="ns-nav__drawer-sub-title">Oil and gas</span><span class="ns-nav__drawer-sub-desc">Intelligent field operations.</span></a><a class="ns-nav__drawer-sub" href="/defense-and-intelligence"><span class="ns-nav__drawer-sub-title">Defense and intelligence</span><span class="ns-nav__drawer-sub-desc">Mission rehearsal and GPS-denied operations.</span></a><a class="ns-nav__drawer-sub" href="/embodied-ai"><span class="ns-nav__drawer-sub-title">Embodied AI</span><span class="ns-nav__drawer-sub-desc">Real-to-sim training for robots.</span></a>
+</div>
+</div>
+<div class="ns-nav__drawer-group"><button type="button" class="ns-nav__drawer-toggle" data-ns-acc="i4" aria-expanded="false" aria-controls="ns-drawer-panel-i4">Company<svg class="ns-nav__caret" width="11" height="7" viewBox="0 0 11 7" fill="none" aria-hidden="true">
+<path d="M1 1l4.5 4.5L10 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button>
+<div class="ns-nav__drawer-panel" id="ns-drawer-panel-i4">
+<div class="ns-nav__drawer-desc">The team, partners and resources behind Niantic Spatial.</div>
+<div class="ns-label ns-nav__drawer-group-label">About</div><a class="ns-nav__drawer-sub" href="/about"><span class="ns-nav__drawer-sub-title">About us</span></a><a class="ns-nav__drawer-sub" href="/events"><span class="ns-nav__drawer-sub-title">Events</span></a><a class="ns-nav__drawer-sub" href="/careers"><span class="ns-nav__drawer-sub-title">Careers</span></a>
+<div class="ns-label ns-nav__drawer-group-label">Partners</div><a class="ns-nav__drawer-sub" href="/partners"><span class="ns-nav__drawer-sub-title">Developer partner program</span></a><a class="ns-nav__drawer-sub" href="/academic-community-partners"><span class="ns-nav__drawer-sub-title">Academic and community partners</span></a><a class="ns-nav__drawer-sub" href="/partner-with-us"><span class="ns-nav__drawer-sub-title">Partner with us</span></a>
+<div class="ns-label ns-nav__drawer-group-label">Guides and support</div><a class="ns-nav__drawer-sub" href="/faq/scaniverse"><span class="ns-nav__drawer-sub-title">Scaniverse FAQ</span></a><a class="ns-nav__drawer-sub" href="/docs/"><span class="ns-nav__drawer-sub-title">Niantic Spatial SDK docs</span></a><a class="ns-nav__drawer-sub" href="https://community.nianticspatial.com/" target="_blank" rel="noopener"><span class="ns-nav__drawer-sub-title">Developer forums<span aria-hidden="true"> ↗</span></span></a>
+</div>
+</div>
+<div class="ns-nav__drawer-group"><button type="button" class="ns-nav__drawer-toggle" data-ns-acc="a0" aria-expanded="false" aria-controls="ns-drawer-panel-a0">Try Scaniverse<svg class="ns-nav__caret" width="11" height="7" viewBox="0 0 11 7" fill="none" aria-hidden="true">
+<path d="M1 1l4.5 4.5L10 1" stroke="#6E7C92" stroke-width="1.4"></path>
+</svg></button>
+<div class="ns-nav__drawer-panel" id="ns-drawer-panel-a0"><a class="ns-nav__drawer-sub" href="https://scaniverse.nianticspatial.com/signin" target="_blank" rel="noopener"><span class="ns-nav__drawer-sub-title">Scaniverse app<span aria-hidden="true"> ↗</span></span><span class="ns-nav__drawer-sub-desc">Capture and reconstruct real places.</span></a><a class="ns-nav__drawer-sub" href="/pricing"><span class="ns-nav__drawer-sub-title">Pricing</span><span class="ns-nav__drawer-sub-desc">Plans for teams and enterprises.</span></a></div>
+</div>
+</div>
+<div class="ns-nav__drawer-actions"><a class="ns-btn ns-btn--primary" href="/contact">Contact sales</a></div>
+</div>
+</div>
+</ns-nav></div>
+<main id="main" class="ns-chrome-main site-content flow-root relative bg-[#1A1A1A]" style="--eai-section-bg: transparent" data-ns-subnav="true">
+<div class="pointer-events-none absolute inset-0 z-0 eai-orbs-bounce" aria-hidden="true">
+<div class="absolute inset-0 eai-bounce-x eai-bounce-x-1">
+<div class="absolute inset-0 eai-bounce-y eai-bounce-y-1">
+<div class="eai-orb eai-orb-1"></div>
+</div>
+</div>
+<div class="absolute inset-0 eai-bounce-x eai-bounce-x-2">
+<div class="absolute inset-0 eai-bounce-y eai-bounce-y-2">
+<div class="eai-orb eai-orb-2"></div>
+</div>
+</div>
+<div class="absolute inset-0 eai-bounce-x eai-bounce-x-3">
+<div class="absolute inset-0 eai-bounce-y eai-bounce-y-3">
+<div class="eai-orb eai-orb-3"></div>
+</div>
+</div>
+</div>
+<div class="relative z-[1]"><root-eai-subnav aria-label="Embodied AI navigation" class="block sticky z-[900] backdrop-blur-md border-b bg-[#1A1A1A]/90 border-white/10" style="top:var(--eai-subnav-top, 5rem);margin-top:var(--eai-subnav-margin, 5rem);">
+<div class="fire-container">
+<div class="col-[main] flex items-center gap-1 overflow-x-auto py-3 -mx-2 px-2 no-scrollbar"><span class="hidden md:inline text-xs uppercase tracking-wider mr-4 whitespace-nowrap [font-family:var(--font-mono)] text-[#EAE3DC]/50">Embodied AI</span><a href="/embodied-ai" aria-current="page" class="px-3 py-1.5 rounded-full text-sm whitespace-nowrap transition-colors bg-[#678BC7] text-white">Home</a><a href="/embodied-ai/places-library-usdz" class="px-3 py-1.5 rounded-full text-sm whitespace-nowrap transition-colors text-[#EAE3DC]/70 hover:bg-white/5 hover:text-[#EAE3DC]">Places Library</a><a href="/embodied-ai/plans" class="px-3 py-1.5 rounded-full text-sm whitespace-nowrap transition-colors text-[#EAE3DC]/70 hover:bg-white/5 hover:text-[#EAE3DC]">Plans</a></div>
+</div>
+</root-eai-subnav>
+<section id="hero" class="relative overflow-hidden border-b bg-[#1A1A1A] text-[#EAE3DC] border-[#EAE3DC]/10">
+<div class="absolute inset-0" aria-hidden="true"><video class="block w-full h-full object-cover" src="https://storage.googleapis.com/nianticspatial-web-cdn/spatialplatform/uploads/af62c12135596ff7c687cd83c13781181408b186.mov" autoplay muted loop playsinline></video>
+<div class="absolute -inset-px bg-gradient-to-b from-[#1A1A1A]/85 via-[#1A1A1A]/65 to-[#1A1A1A]"></div>
+</div>
+<div class="fire-container relative">
+<div class="col-[main] lg:col-[main/col-8] pt-24 pb-16 md:pt-36 md:pb-24">
+<h1 class="text-[2.75rem] leading-[1.05] md:text-[4.25rem] tracking-tight text-balance mb-6">Make real places simulatable.</h1>
+<p class="text-xl md:text-2xl leading-snug max-w-[620px] mb-5">Our real-to-sim stack turns inexpensive camera footage into photorealistic, metric-scale, collider-ready environments.</p>
+<div class="rich-text text-base max-w-[560px] mb-8 [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/75">
+<p>Train where you&#039;ll deploy and evaluate against the real site&#039;s edge cases, from one capture with a commodity camera.</p>
+</div>
+<div class="flex flex-wrap items-center gap-3 md:gap-4"><a href="/embodied-ai/places-library-usdz" aria-label class="inline-flex items-center gap-2.5 rounded-[4px] text-[15px] px-6 py-3.5 transition-colors bg-[#678BC7] text-white font-semibold hover:bg-[#5a7cb5]">Download a Sample Scene<span aria-hidden="true">→</span></a><a href="/embodied-ai/plans" class="inline-flex items-center gap-2.5 rounded-[4px] text-[15px] px-6 py-3.5 transition-colors bg-[#EAE3DC] text-[#1A1A1A] font-semibold hover:bg-white">Explore Plans<span aria-hidden="true">→</span></a></div>
+</div>
+</div>
+</section>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+.sp-n40-0-4 {
+height: 0px;
+margin-bottom: -40px;
+}
+
+@media(max-width:499px) {
+.sp-n40-0-4 {
+height: 4px;
+margin-bottom: 0px;
+}
+}
+
+@media(min-width:500px) and (max-width:1023px) {
+.sp-n40-0-4 {
+height: 0px;
+margin-bottom: 0px;
+}
+}
+
+@media(min-width:1024px) {
+.sp-n40-0-4 {
+height: 0px;
+margin-bottom: -40px;
+}
+}
+
+</style>
+<div class="sp-n40-0-4" role="separator" aria-hidden="true"></div>
+<section class="fire-container bg-[var(--eai-section-bg,#1A1A1A)] text-[#EAE3DC] py-14 md:py-20">
+<div class="col-[main]">
+<div class="grid grid-cols-1 gap-6 md:gap-x-10 lg:gap-x-14 md:gap-y-3 md:[grid-template-columns:var(--eai-stats-cols)]" style="--eai-stats-cols:minmax(0,0.75fr) minmax(0,0.80fr) minmax(0,1.35fr);">
+<div class="md:grid md:grid-rows-subgrid md:row-span-2">
+<p class="text-2xl md:text-[1.75rem] tracking-tight mb-2 md:mb-0">Hours, not weeks</p>
+<p class="text-sm leading-relaxed text-pretty md:mb-6 text-[#EAE3DC]/65">One walkthrough with an off-the-shelf camera takes you from capture to a simulation-ready environment your policies can train in – hours, not weeks.<br></p>
+</div>
+<div class="md:grid md:grid-rows-subgrid md:row-span-2">
+<p class="text-2xl md:text-[1.75rem] tracking-tight mb-2 md:mb-0">A few hundred dollars</p>
+<p class="text-sm leading-relaxed text-pretty md:mb-6 text-[#EAE3DC]/65">A deployment environment starts at a few hundred dollars vs. tens of thousands to professionally survey or hand-build synthetic twins of the same environment from scratch.</p>
+</div>
+<div class="md:grid md:grid-rows-subgrid md:row-span-2">
+<p class="text-2xl md:text-[1.75rem] tracking-tight mb-2 md:mb-0">Proven policy transfer improvement</p>
+<p class="text-sm leading-relaxed text-pretty md:mb-6 text-[#EAE3DC]/65">Trained on the reconstruction, ran zero-shot on the real robot. Across 1024 simulation runs, an RGB navigation policy trained only on our reconstruction fell 13 times less often than the same architecture trained on a hand-built synthetic office. On the real robot in the real site, it handled cases where a depth-input policy failed.</p>
+</div>
+</div>
+</div>
+</section>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+.sp-n80-n80-n40 {
+height: 0px;
+margin-bottom: -80px;
+}
+
+@media(max-width:499px) {
+.sp-n80-n80-n40 {
+height: 0px;
+margin-bottom: -40px;
+}
+}
+
+@media(min-width:500px) and (max-width:1023px) {
+.sp-n80-n80-n40 {
+height: 0px;
+margin-bottom: -80px;
+}
+}
+
+@media(min-width:1024px) {
+.sp-n80-n80-n40 {
+height: 0px;
+margin-bottom: -80px;
+}
+}
+
+</style>
+<div class="sp-n80-n80-n40" role="separator" aria-hidden="true"></div>
+<section class="fire-container bg-[var(--eai-section-bg,#1A1A1A)] text-[#EAE3DC] py-8">
+<div class="col-[main] border-y py-6 flex flex-wrap items-center gap-x-8 gap-y-4 border-white/10">
+<p class="[font-family:var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-[#EAE3DC]/50">RUNS IN YOUR STACK</p>
+<div class="flex flex-wrap items-center gap-x-8 gap-y-3 md:ml-auto"><span class="text-sm text-[#EAE3DC]/60">Runs in: Isaac Sim · Isaac Lab · any OpenUSD-compatible simulator</span><span class="text-sm text-[#EAE3DC]/60">Delivered as: Gaussian splat + collision mesh from the same reconstruction, in one USDZ</span></div>
+</div>
+</section>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+.sp-n60-n60-n40 {
+height: 0px;
+margin-bottom: -60px;
+}
+
+@media(max-width:499px) {
+.sp-n60-n60-n40 {
+height: 0px;
+margin-bottom: -40px;
+}
+}
+
+@media(min-width:500px) and (max-width:1023px) {
+.sp-n60-n60-n40 {
+height: 0px;
+margin-bottom: -60px;
+}
+}
+
+@media(min-width:1024px) {
+.sp-n60-n60-n40 {
+height: 0px;
+margin-bottom: -60px;
+}
+}
+
+</style>
+<div class="sp-n60-n60-n40" role="separator" aria-hidden="true"></div>
+<section class="fire-container bg-[var(--eai-section-bg,#1A1A1A)] text-[#EAE3DC] py-16 md:py-24"><root-eai-fit class="col-[main] grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16" data-fit="true">
+<div>
+<h2 data-slot="fit-title" class="text-3xl md:text-[2.5rem] leading-[1.1] tracking-tight text-balance">Hallucination is a luxury physical AI can't afford.</h2>
+</div>
+<div data-slot="fit-body">
+<div class="rich-text text-base leading-relaxed [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/75">
+<p>Embodied AI policies trained only in synthetic environments struggle when they encounter the details of a real deployment environment: uneven floors, clutter, changing layouts, and transparent surfaces. Closing that sim-to-real gap costs time, money, and customer trust, throttling deployment.</p>
+<p>The answer: combine the scale of synthetic data with the accuracy of real-world environments. Niantic Spatial’s real-to-sim pipeline turns captures of deployment environments into simulation-ready digital twins – faster and cheaper than has been possible before – to let embodied AI teams train and evaluate policies in the real places and scenarios their policies will operate in.</p>
+</div>
+</div>
+</root-eai-fit></section>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+.sp-n80-n80-n80 {
+height: 0px;
+margin-bottom: -80px;
+}
+
+@media(max-width:499px) {
+.sp-n80-n80-n80 {
+height: 0px;
+margin-bottom: -80px;
+}
+}
+
+@media(min-width:500px) and (max-width:1023px) {
+.sp-n80-n80-n80 {
+height: 0px;
+margin-bottom: -80px;
+}
+}
+
+@media(min-width:1024px) {
+.sp-n80-n80-n80 {
+height: 0px;
+margin-bottom: -80px;
+}
+}
+
+</style>
+<div class="sp-n80-n80-n80" role="separator" aria-hidden="true"></div>
+<section class="fire-container bg-[var(--eai-section-bg,#1A1A1A)] text-[#EAE3DC] py-14 md:py-20">
+<div class="col-[main]">
+<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+<div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+<p class="text-2xl md:text-[1.75rem] tracking-tight mb-2" style="color:#678BC7;">Humanoids</p>
+<p class="text-sm leading-relaxed text-pretty text-[#EAE3DC]/65">Humanoid robots need RGB-based navigation and whole-body control to handle the geometry and visual complexity of real environments. Train and evaluate humanoid policies in a digital twin of those environments.</p>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+<p class="text-2xl md:text-[1.75rem] tracking-tight mb-2" style="color:#678BC7;">Warehouse AMRs</p>
+<p class="text-sm leading-relaxed text-pretty text-[#EAE3DC]/65">Every warehouse is different – from aisles and loading areas to storage zones and changing layouts. Reconstruct the environment at true metric scale. Then, train and evaluate policies in a simulation-ready digital twin.</p>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+<p class="text-2xl md:text-[1.75rem] tracking-tight mb-2" style="color:#678BC7;">Drones</p>
+<p class="text-sm leading-relaxed text-pretty text-[#EAE3DC]/65">Use aerial imagery to build a digital twin of the environment. Then, train and evaluate autonomous flight policies against the real skyline, terrain, and surrounding structures.<br></p>
+</div>
+</div>
+</div>
+</section>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+.sp-n80-n100-n60 {
+height: 0px;
+margin-bottom: -80px;
+}
+
+@media(max-width:499px) {
+.sp-n80-n100-n60 {
+height: 0px;
+margin-bottom: -60px;
+}
+}
+
+@media(min-width:500px) and (max-width:1023px) {
+.sp-n80-n100-n60 {
+height: 0px;
+margin-bottom: -100px;
+}
+}
+
+@media(min-width:1024px) {
+.sp-n80-n100-n60 {
+height: 0px;
+margin-bottom: -80px;
+}
+}
+
+</style>
+<div class="sp-n80-n100-n60" role="separator" aria-hidden="true"></div>
+<section class="fire-container bg-[var(--eai-section-bg,#1A1A1A)] text-[#EAE3DC] py-16 md:py-24">
+<div class="col-[main] grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+<div>
+<h2 class="text-3xl md:text-[2.5rem] leading-[1.1] tracking-tight text-balance mb-5">How it works</h2>
+<div class="rich-text text-base leading-relaxed mb-8 [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/65">
+<p>Create custom scenes from your own environments, or get a head start with our <a href="https://www.nianticspatial.com/embodied-ai/places-library-usdz">Places Library</a>. Follow the steps we have outlined to build your scene.</p>
+</div>
+<dl class="border-t border-white/10">
+<div class="grid grid-cols-[minmax(120px,1fr)_2fr] gap-4 py-3 border-b text-sm border-white/10">
+<dt class="text-[#EAE3DC]/65">Delivered as:</dt>
+<dd>one USDZ per place</dd>
+</div>
+<div class="grid grid-cols-[minmax(120px,1fr)_2fr] gap-4 py-3 border-b text-sm border-white/10">
+<dt class="text-[#EAE3DC]/65">Contains:</dt>
+<dd>Gaussian splat + aligned collision mesh</dd>
+</div>
+<div class="grid grid-cols-[minmax(120px,1fr)_2fr] gap-4 py-3 border-b text-sm border-white/10">
+<dt class="text-[#EAE3DC]/65">Alignment:</dt>
+<dd>gravity-aligned, metric-scale</dd>
+</div>
+<div class="grid grid-cols-[minmax(120px,1fr)_2fr] gap-4 py-3 border-b text-sm border-white/10">
+<dt class="text-[#EAE3DC]/65">Capture input:</dt>
+<dd>360 camera, drone</dd>
+</div>
+<div class="grid grid-cols-[minmax(120px,1fr)_2fr] gap-4 py-3 border-b text-sm border-white/10">
+<dt class="text-[#EAE3DC]/65">Runs in:</dt>
+<dd>Isaac Sim, Isaac Lab, any USDZ-compatible simulator</dd>
+</div>
+<div class="grid grid-cols-[minmax(120px,1fr)_2fr] gap-4 py-3 border-b text-sm border-white/10">
+<dt class="text-[#EAE3DC]/65">Metering:</dt>
+<dd>capture minutes, rolling over</dd>
+</div>
+</dl>
+</div>
+<ol class="flex flex-col">
+<li class="flex gap-4 md:gap-5">
+<div class="flex flex-col items-center shrink-0 w-6"><span class="[font-family:var(--font-mono)] text-xs pt-1" style="color:#678BC7;">01</span><span aria-hidden="true" class="w-px flex-1 mt-2 bg-white/12"></span></div>
+<div class="pb-7">
+<h3 class="text-base tracking-tight mb-1.5">Walk or fly the site</h3>
+<p class="text-sm leading-relaxed text-[#EAE3DC]/65">Five minutes with an off-the-shelf 360 camera or a drone pass for larger outdoor environments.</p>
+</div>
+</li>
+<li class="flex gap-4 md:gap-5">
+<div class="flex flex-col items-center shrink-0 w-6"><span class="[font-family:var(--font-mono)] text-xs pt-1" style="color:#7ABCCC;">02</span><span aria-hidden="true" class="w-px flex-1 mt-2 bg-white/12"></span></div>
+<div class="pb-7">
+<h3 class="text-base tracking-tight mb-1.5">Upload</h3>
+<p class="text-sm leading-relaxed text-[#EAE3DC]/65">Drag and drop into a secure GCS bucket. Enterprise APIs coming soon.</p>
+</div>
+</li>
+<li class="flex gap-4 md:gap-5">
+<div class="flex flex-col items-center shrink-0 w-6"><span class="[font-family:var(--font-mono)] text-xs pt-1" style="color:#98AF75;">03</span><span aria-hidden="true" class="w-px flex-1 mt-2 bg-white/12"></span></div>
+<div class="pb-7">
+<h3 class="text-base tracking-tight mb-1.5">Reconstruct</h3>
+<p class="text-sm leading-relaxed text-[#EAE3DC]/65">We estimate camera poses, train the splat, and derive the aligned collision mesh from the same reconstruction.</p>
+</div>
+</li>
+<li class="flex gap-4 md:gap-5">
+<div class="flex flex-col items-center shrink-0 w-6"><span class="[font-family:var(--font-mono)] text-xs pt-1" style="color:#F06C61;">04</span></div>
+<div>
+<h3 class="text-base tracking-tight mb-1.5">Train against it</h3>
+<p class="text-sm leading-relaxed text-[#EAE3DC]/65">Lands in your bucket, collider-ready. Training rights attached. You captured it; you own it.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+
+@media(max-width:499px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -60px;
+}
+}
+
+@media(min-width:500px) and (max-width:1023px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+@media(min-width:1024px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+</style>
+<div class="sp-n120-n120-n60" role="separator" aria-hidden="true"></div>
+<section class="fire-container bg-[var(--eai-section-bg,#1A1A1A)] text-[#EAE3DC] py-16 md:py-24"><root-eai-steps class="col-[main] grid grid-cols-1 gap-10 lg:gap-12">
+<div>
+<h2 class="text-3xl md:text-[2.5rem] leading-[1.1] tracking-tight text-balance mb-5">Enabling visual-spatial intelligence.</h2>
+<p class="text-base leading-relaxed max-w-[560px] text-[#EAE3DC]/65">Teams building with us today help prioritize what we build tomorrow – join us.</p>
+</div>
+<div>
+<div data-slot="cards" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+<div data-slot="step" data-group="available" class="rounded-2xl border p-6 flex flex-col border-white/10 bg-white/[0.03]">
+<div class="flex items-center justify-between gap-3 mb-3"><span class="[font-family:var(--font-mono)] text-xs text-[#EAE3DC]/40">01</span><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] whitespace-nowrap" style="color:#98AF75;border-color:color-mix(in srgb, #98AF75 45%, transparent);background-color:color-mix(in srgb, #98AF75 12%, transparent);">Available</span></div>
+<h3 class="text-lg tracking-tight mb-2">Ground.</h3>
+<div class="rich-text [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-sm leading-relaxed text-pretty text-[#EAE3DC]/65">
+<p>Start simulation from a metric-scale 3D reconstruction of the real environment, not a synthetic approximation. Delivered as one USDZ with a Gaussian splat and aligned collision mesh.</p>
+</div>
+</div>
+<div data-slot="step" data-group="available" class="rounded-2xl border p-6 flex flex-col border-white/10 bg-white/[0.03]">
+<div class="flex items-center justify-between gap-3 mb-3"><span class="[font-family:var(--font-mono)] text-xs text-[#EAE3DC]/40">02</span><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] whitespace-nowrap" style="color:#98AF75;border-color:color-mix(in srgb, #98AF75 45%, transparent);background-color:color-mix(in srgb, #98AF75 12%, transparent);">Available</span></div>
+<h3 class="text-lg tracking-tight mb-2">Train and evaluate.</h3>
+<div class="rich-text [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-sm leading-relaxed text-pretty text-[#EAE3DC]/65">
+<p>Use the tools you already run: import a USDZ directly into NVIDIA Isaac Sim or Isaac Lab to train and evaluate policies against the real-world environments they need to perform in.</p>
+</div>
+</div>
+<div data-slot="step" data-group="custom-in-beta" class="rounded-2xl border p-6 flex flex-col border-white/10 bg-white/[0.03]">
+<div class="flex items-center justify-between gap-3 mb-3"><span class="[font-family:var(--font-mono)] text-xs text-[#EAE3DC]/40">03</span><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] whitespace-nowrap" style="color:#7ABCCC;border-color:color-mix(in srgb, #7ABCCC 45%, transparent);background-color:color-mix(in srgb, #7ABCCC 12%, transparent);">IN BETA</span></div>
+<h3 class="text-lg tracking-tight mb-2">Vary.</h3>
+<div class="rich-text [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-sm leading-relaxed text-pretty text-[#EAE3DC]/65">
+<p>Turn your sim-ready scenes into domain randomization substrates through generative variation features. Partners get first access.</p>
+</div>
+<div class="flex flex-wrap items-center gap-3 md:gap-4 pt-5 mt-auto"><root-form-lightbox class="contents" portal-id="7182223" form-id="d4ae14d9-5740-43c8-bf4d-88dcdced1c6d" prefill-fields="{&quot;which_roadmap_capability_do_you_want_to_build_with_us&quot;:&quot;vary&quot;}"><button type="button" data-slot="trigger" aria-haspopup="dialog" class="inline-flex items-center gap-2.5 rounded-[4px] text-[15px] px-6 py-3.5 transition-colors border border-[#EAE3DC]/25 text-[#EAE3DC] font-medium hover:border-[#EAE3DC]/60 hover:bg-white/5">Tell Us What You Need<span aria-hidden="true">→</span></button>
+<dialog data-slot="dialog" aria-label="Teams building with us today help prioritize what we build tomorrow." class="form-lightbox m-auto w-[calc(100vw-2rem)] max-w-[560px] md:max-w-[680px] lg:max-w-[840px] max-h-[85vh] overflow-y-auto overflow-x-hidden rounded-3xl p-0 text-left form-lightbox-dark backdrop-blur-2xl text-[#EAE3DC] border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-1px_0_rgba(0,0,0,0.5),0_32px_90px_rgba(0,0,0,0.65),0_2px_10px_rgba(0,0,0,0.45)]">
+<div class="relative p-6 md:p-10"><button type="button" data-slot="close" aria-label="Close" class="absolute top-4 right-4 flex items-center justify-center size-9 rounded-full border transition-colors bg-white/10 border-white/20 text-[#EAE3DC]/80 hover:bg-white/20 hover:text-white"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+<path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg></button>
+<h2 class="text-[24px] leading-[1.2] font-semibold pr-8">Teams building with us today help prioritize what we build tomorrow.</h2>
+<div class="mt-6">
+<div data-slot="form-target" class="min-h-[120px]"></div>
+</div>
+</div>
+</dialog>
+</root-form-lightbox></div>
+</div>
+<div data-slot="step" data-group="roadmap" class="rounded-2xl border p-6 flex flex-col border-dashed border-white/20 bg-transparent">
+<div class="flex items-center justify-between gap-3 mb-3"><span class="[font-family:var(--font-mono)] text-xs text-[#EAE3DC]/40">04</span><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] whitespace-nowrap" style="color:#F06C61;border-color:color-mix(in srgb, #F06C61 45%, transparent);background-color:color-mix(in srgb, #F06C61 12%, transparent);">Roadmap</span></div>
+<h3 class="text-lg tracking-tight mb-2">Deploy and feed the loop.</h3>
+<div class="rich-text [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-sm leading-relaxed text-pretty text-[#EAE3DC]/65">
+<p>Fleets trained in these environments go live and continuously observe, enabling rapid simulation updates as site conditions change or failure modes emerge, while keeping sensitive operational data private.</p>
+</div>
+<div class="flex flex-wrap items-center gap-3 md:gap-4 pt-5 mt-auto"><root-form-lightbox class="contents" portal-id="7182223" form-id="d4ae14d9-5740-43c8-bf4d-88dcdced1c6d" prefill-fields="{&quot;which_roadmap_capability_do_you_want_to_build_with_us&quot;:&quot;deploy&quot;}"><button type="button" data-slot="trigger" aria-haspopup="dialog" class="inline-flex items-center gap-2.5 rounded-[4px] text-[15px] px-6 py-3.5 transition-colors border border-[#EAE3DC]/25 text-[#EAE3DC] font-medium hover:border-[#EAE3DC]/60 hover:bg-white/5">Tell Us What You Need<span aria-hidden="true">→</span></button>
+<dialog data-slot="dialog" aria-label="Teams building with us today help prioritize what we build tomorrow." class="form-lightbox m-auto w-[calc(100vw-2rem)] max-w-[560px] md:max-w-[680px] lg:max-w-[840px] max-h-[85vh] overflow-y-auto overflow-x-hidden rounded-3xl p-0 text-left form-lightbox-dark backdrop-blur-2xl text-[#EAE3DC] border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-1px_0_rgba(0,0,0,0.5),0_32px_90px_rgba(0,0,0,0.65),0_2px_10px_rgba(0,0,0,0.45)]">
+<div class="relative p-6 md:p-10"><button type="button" data-slot="close" aria-label="Close" class="absolute top-4 right-4 flex items-center justify-center size-9 rounded-full border transition-colors bg-white/10 border-white/20 text-[#EAE3DC]/80 hover:bg-white/20 hover:text-white"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+<path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg></button>
+<h2 class="text-[24px] leading-[1.2] font-semibold pr-8">Teams building with us today help prioritize what we build tomorrow.</h2>
+<div class="mt-6">
+<div data-slot="form-target" class="min-h-[120px]"></div>
+</div>
+</div>
+</dialog>
+</root-form-lightbox></div>
+</div>
+</div>
+</div>
+</root-eai-steps></section>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+
+@media(max-width:499px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -60px;
+}
+}
+
+@media(min-width:500px) and (max-width:1023px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+@media(min-width:1024px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+</style>
+<div class="sp-n120-n120-n60" role="separator" aria-hidden="true"></div>
+<section class="fire-container bg-[var(--eai-section-bg,#1A1A1A)] text-[#EAE3DC] py-16 md:py-24">
+<div class="col-[main] grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+<div class="lg:order-last">
+<h2 class="text-3xl md:text-[2.5rem] leading-[1.1] tracking-tight text-balance mb-4">What the policy sees is what it collides with.</h2>
+<div class="rich-text text-base leading-relaxed [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/65">
+<p>The visual scene and the collision mesh come from the same reconstruction, so the environment looks and behaves consistently in simulation. There is no manual cross-registration and no drift between what a policy sees and the surfaces it can hit. Photometric reconstruction can struggle with white walls, glass, and other low-texture surfaces. <a href="https://nianticlabs.github.io/mvsanywhere/">MVSAnywhere</a> adds zero-shot multi-view depth to produce cleaner, more consistent geometry in those areas.</p>
+</div>
+</div>
+<div><root-image-compare class="block relative overflow-hidden select-none cursor-ew-resize relative rounded-2xl overflow-hidden border aspect-video border-white/10 bg-white/[0.03]" data-start="50" style="--img-cmp:50%">
+<div class="absolute inset-0">
+<div class="absolute inset-0 w-full h-full [&amp;_picture]:contents [&amp;_img]:!w-full [&amp;_img]:!h-full [&amp;_img]:!object-cover _image_1258s_2">
+<picture>
+<source srcset="https://lh3.googleusercontent.com/QSGfVWUQdLGULMorMakQPThf7_EvFA9DbcrJcRrVMxvaY23nnuI4Mx8brYpxWfRNLgTJuOyZJMDkUpb1mRPHo6TLwlrgCOnEDLTAzYD5ZjGvPA=e365-pa-nu-w500, https://lh3.googleusercontent.com/QSGfVWUQdLGULMorMakQPThf7_EvFA9DbcrJcRrVMxvaY23nnuI4Mx8brYpxWfRNLgTJuOyZJMDkUpb1mRPHo6TLwlrgCOnEDLTAzYD5ZjGvPA=e365-pa-nu-w1000 2x" media="(max-width: 499px)" />
+<source srcset="https://lh3.googleusercontent.com/QSGfVWUQdLGULMorMakQPThf7_EvFA9DbcrJcRrVMxvaY23nnuI4Mx8brYpxWfRNLgTJuOyZJMDkUpb1mRPHo6TLwlrgCOnEDLTAzYD5ZjGvPA=e365-pa-nu-w800, https://lh3.googleusercontent.com/QSGfVWUQdLGULMorMakQPThf7_EvFA9DbcrJcRrVMxvaY23nnuI4Mx8brYpxWfRNLgTJuOyZJMDkUpb1mRPHo6TLwlrgCOnEDLTAzYD5ZjGvPA=e365-pa-nu-w1600 2x" media="(min-width: 500px) and (max-width: 1023px)" />
+<source srcset="https://lh3.googleusercontent.com/QSGfVWUQdLGULMorMakQPThf7_EvFA9DbcrJcRrVMxvaY23nnuI4Mx8brYpxWfRNLgTJuOyZJMDkUpb1mRPHo6TLwlrgCOnEDLTAzYD5ZjGvPA=e365-pa-nu-w900, https://lh3.googleusercontent.com/QSGfVWUQdLGULMorMakQPThf7_EvFA9DbcrJcRrVMxvaY23nnuI4Mx8brYpxWfRNLgTJuOyZJMDkUpb1mRPHo6TLwlrgCOnEDLTAzYD5ZjGvPA=e365-pa-nu-w1800 2x" media="(min-width: 1024px)" />
+
+<img src="https://lh3.googleusercontent.com/QSGfVWUQdLGULMorMakQPThf7_EvFA9DbcrJcRrVMxvaY23nnuI4Mx8brYpxWfRNLgTJuOyZJMDkUpb1mRPHo6TLwlrgCOnEDLTAzYD5ZjGvPA=s0-e365" alt loading="lazy" fetchPriority="auto" />
+</picture>
+</div><span class="absolute bottom-3 [font-family:var(--font-mono)] text-[11px] leading-none uppercase tracking-[0.13em] px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-[2px] border border-white/20 text-white left-3">Gaussian Splat</span>
+</div>
+<div class="absolute inset-0" style="clip-path: inset(0 0 0 var(--img-cmp))">
+<div class="absolute inset-0 w-full h-full [&amp;_picture]:contents [&amp;_img]:!w-full [&amp;_img]:!h-full [&amp;_img]:!object-cover _image_1258s_2">
+<picture>
+<source srcset="https://lh3.googleusercontent.com/AFScHCFtHdq_azGu6AEbZEMFypbWackovPWFwmyDPd5udr7n8SlK9zG41_oLKzzVk0fNLRz_dgNaMQ6kTOyB94N-Si3e2K7hG72LHljGysXe2Q=e365-pa-nu-w500, https://lh3.googleusercontent.com/AFScHCFtHdq_azGu6AEbZEMFypbWackovPWFwmyDPd5udr7n8SlK9zG41_oLKzzVk0fNLRz_dgNaMQ6kTOyB94N-Si3e2K7hG72LHljGysXe2Q=e365-pa-nu-w1000 2x" media="(max-width: 499px)" />
+<source srcset="https://lh3.googleusercontent.com/AFScHCFtHdq_azGu6AEbZEMFypbWackovPWFwmyDPd5udr7n8SlK9zG41_oLKzzVk0fNLRz_dgNaMQ6kTOyB94N-Si3e2K7hG72LHljGysXe2Q=e365-pa-nu-w800, https://lh3.googleusercontent.com/AFScHCFtHdq_azGu6AEbZEMFypbWackovPWFwmyDPd5udr7n8SlK9zG41_oLKzzVk0fNLRz_dgNaMQ6kTOyB94N-Si3e2K7hG72LHljGysXe2Q=e365-pa-nu-w1600 2x" media="(min-width: 500px) and (max-width: 1023px)" />
+<source srcset="https://lh3.googleusercontent.com/AFScHCFtHdq_azGu6AEbZEMFypbWackovPWFwmyDPd5udr7n8SlK9zG41_oLKzzVk0fNLRz_dgNaMQ6kTOyB94N-Si3e2K7hG72LHljGysXe2Q=e365-pa-nu-w900, https://lh3.googleusercontent.com/AFScHCFtHdq_azGu6AEbZEMFypbWackovPWFwmyDPd5udr7n8SlK9zG41_oLKzzVk0fNLRz_dgNaMQ6kTOyB94N-Si3e2K7hG72LHljGysXe2Q=e365-pa-nu-w1800 2x" media="(min-width: 1024px)" />
+
+<img src="https://lh3.googleusercontent.com/AFScHCFtHdq_azGu6AEbZEMFypbWackovPWFwmyDPd5udr7n8SlK9zG41_oLKzzVk0fNLRz_dgNaMQ6kTOyB94N-Si3e2K7hG72LHljGysXe2Q=s0-e365" alt loading="lazy" fetchPriority="auto" />
+</picture>
+</div><span class="absolute bottom-3 [font-family:var(--font-mono)] text-[11px] leading-none uppercase tracking-[0.13em] px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-[2px] border border-white/20 text-white right-3">Aligned Mesh</span>
+</div>
+<div data-slot="handle" role="slider" tabindex="0" aria-label="Comparison slider" aria-orientation="horizontal" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" class="group absolute top-0 bottom-0 w-10 -translate-x-1/2 flex items-center justify-center cursor-ew-resize touch-none focus:outline-none" style="left: var(--img-cmp)">
+<div class="absolute top-0 bottom-0 w-[2px]" style="background:#EAE3DC"></div>
+<div class="relative w-9 h-9 rounded-full flex items-center justify-center shadow-[0_2px_10px_rgba(0,0,0,.35)] group-focus-visible:ring-2 group-focus-visible:ring-white" style="background:#EAE3DC"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+<path d="M7.5 4.5 3.5 9l4 4.5M10.5 4.5 14.5 9l-4 4.5" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div>
+</div>
+</root-image-compare></div>
+</div>
+</section>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+
+@media(max-width:499px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -60px;
+}
+}
+
+@media(min-width:500px) and (max-width:1023px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+@media(min-width:1024px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+</style>
+<div class="sp-n120-n120-n60" role="separator" aria-hidden="true"></div>
+<section class="fire-container bg-[var(--eai-section-bg,#1A1A1A)] text-[#EAE3DC] py-16 md:py-24">
+<div class="col-[main] grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+<div>
+<h2 class="text-3xl md:text-[2.5rem] leading-[1.1] tracking-tight text-balance mb-4">Proven in simulation: Reconstruction-trained RGB policy transfers zero-shot.</h2>
+<div class="rich-text text-base leading-relaxed [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/65">
+<p><a href="https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real">In a comparison conducted by Niantic Spatial and Flexion</a> in collaboration with NVIDIA, an RGB policy trained on a Niantic Spatial 3DGS reconstruction exceeded the conventional depth baseline across two simulated scenes.</p>
+</div>
+<div class="grid gap-4 mt-6 sm:grid-cols-2">
+<div class="rounded-xl border p-5 border-white/10 bg-white/[0.03]">
+<p class="text-3xl tracking-tight mb-2">92.3%</p>
+<p class="[font-family:var(--font-mono)] text-[11px] uppercase tracking-[0.13em]"><span class="text-[#EAE3DC]/50">Reduction vs. </span><span style="color:#7ABCCC;">synthetic office</span></p>
+<p class="text-sm mt-3 pt-3 border-t border-white/10"><span style="color:#F06C61;">27.1%</span><span aria-hidden="true" class="mx-2 text-[#EAE3DC]/65">→</span><span class="font-semibold">2.1% fall rate</span></p>
+</div>
+<div class="rounded-xl border p-5 border-white/10 bg-white/[0.03]">
+<p class="text-3xl tracking-tight mb-2">66.1%</p>
+<p class="[font-family:var(--font-mono)] text-[11px] uppercase tracking-[0.13em]"><span class="text-[#EAE3DC]/50">Reduction vs. </span><span style="color:#7ABCCC;">generated mesh</span></p>
+<p class="text-sm mt-3 pt-3 border-t border-white/10"><span style="color:#F06C61;">6.2%</span><span aria-hidden="true" class="mx-2 text-[#EAE3DC]/65">→</span><span class="font-semibold">2.1% fall rate</span></p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-3 md:gap-4 mt-8"><root-form-lightbox class="contents" portal-id="7182223" form-id="7ea5463b-7daa-4aac-a5f5-0c28433a6310"><button type="button" data-slot="trigger" aria-haspopup="dialog" class="inline-flex items-center gap-2.5 rounded-[4px] text-[15px] px-6 py-3.5 transition-colors border border-[#EAE3DC]/25 text-[#EAE3DC] font-medium hover:border-[#EAE3DC]/60 hover:bg-white/5">Watch the Livestream<span aria-hidden="true">→</span></button>
+<dialog data-slot="dialog" aria-label="Scan the real world. Train robots that transfer." class="form-lightbox m-auto w-[calc(100vw-2rem)] max-w-[560px] md:max-w-[680px] lg:max-w-[840px] max-h-[85vh] overflow-y-auto overflow-x-hidden rounded-3xl p-0 text-left form-lightbox-dark backdrop-blur-2xl text-[#EAE3DC] border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-1px_0_rgba(0,0,0,0.5),0_32px_90px_rgba(0,0,0,0.65),0_2px_10px_rgba(0,0,0,0.45)]">
+<div class="relative p-6 md:p-10"><button type="button" data-slot="close" aria-label="Close" class="absolute top-4 right-4 flex items-center justify-center size-9 rounded-full border transition-colors bg-white/10 border-white/20 text-[#EAE3DC]/80 hover:bg-white/20 hover:text-white"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+<path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg></button>
+<h2 class="text-[24px] leading-[1.2] font-semibold pr-8">Scan the real world. Train robots that transfer.</h2>
+<div class="rich-text mt-2 text-[15px] [&amp;_a]:underline text-[#EAE3DC]/70 [&amp;_a]:text-[#678BC7]">
+<p>Robots learn by failing, and failing in the real world is slow and expensive. Simulation fixes that, but only if the simulated world is a faithful stand-in for the real one. This session walks through an end-to-end real-to-sim-to-real workflow that makes it possible.</p>
+<p>Featuring Eugene Chong (Niantic Spatial), Julian Nubert (Flexion), and Gavriel State (NVIDIA).</p>
+<p><b>What you&#039;ll learn:</b></p>
+<ul>
+<li>
+<p>Create simulation-ready environments with 3D Gaussian splatting and collision meshes</p>
+</li>
+<li>
+<p>Render Gaussian splat reconstructions with NVIDIA Omniverse NuRec in Isaac Sim</p>
+</li>
+<li>
+<p>Train humanoid robot policies in NVIDIA Isaac Lab</p>
+</li>
+<li>
+<p>Test robotics software in NVIDIA Isaac Sim</p>
+</li>
+<li>
+<p>Build interoperable simulation workflows with OpenUSD</p>
+</li>
+<li>
+<p>Close the sim-to-real gap for humanoid robotics</p>
+</li>
+</ul>
+<p>Fill out the form below to watch the livestream!</p>
+</div>
+<div class="mt-6">
+<div data-slot="form-target" class="min-h-[120px]"></div>
+</div>
+</div>
+</dialog>
+</root-form-lightbox></div>
+</div>
+<div><root-eai-scale class="block relative rounded-2xl overflow-hidden border aspect-video border-white/10 bg-white/[0.03]">
+<div data-slot="canvas" class="absolute top-0 left-0 w-max origin-top-left">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navigation benchmark — scene comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<style>
+/* ===== Niantic Spatial benchmark module — Dark Mode & Fixed Aspect Ratio ===== */
+.nsb {
+--page: #151515;
+--surface: #1E1E1E;
+--surface-2: #2A2A2A;
+--surface-3: #333333;
+--ink: #E8E8E8;
+--secondary: #A0A0A0;
+--muted: #737373;
+--hairline: #333333;
+--accent: #78A0DF;
+--accent-tint: rgba(120, 160, 223, 0.12);
+--c-success: #98AF75;
+--c-timeout: #7ABCCC;
+--c-fall: #F06C61;
+--tt-bg: #E8E8E8;
+--tt-ink: #1E1E1E;
+--tt-sub: #565f6a;
+
+--font-sans: 'Figtree', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+--font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+--shadow-md: 0 6px 20px rgba(0, 0, 0, .4), 0 2px 6px rgba(0, 0, 0, .3);
+
+box-sizing: border-box;
+font-family: var(--font-sans);
+font-size: 15px;
+line-height: 1.45;
+color: var(--ink);
+text-align: left;
+letter-spacing: normal;
+text-transform: none;
+font-style: normal;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+-webkit-text-size-adjust: 100%;
+
+/* Prevent the module from overflowing its parent */
+max-width: 100%;
+}
+
+.nsb *,
+.nsb *::before,
+.nsb *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+border: 0;
+font-family: inherit;
+line-height: inherit;
+letter-spacing: inherit;
+text-transform: none;
+background: none;
+text-align: left;
+}
+
+/* Card explicitly locked to 16:9 aspect ratio */
+.nsb-card {
+width: 100%;
+max-width: 1080px;
+/* Max display size, but will shrink fluidly if container is smaller */
+margin: 0 auto;
+aspect-ratio: 16 / 9;
+background: var(--surface);
+border: 1px solid var(--hairline);
+border-radius: 14px;
+box-shadow: var(--shadow-md);
+overflow: hidden;
+display: flex;
+flex-direction: column;
+}
+
+.nsb {
+--mcol: 210px;
+}
+
+.nsb-colhead {
+display: grid;
+grid-template-columns: var(--mcol) 1fr 1fr 22px;
+gap: 18px;
+align-items: end;
+padding: 18px 22px 12px;
+flex: none;
+border-bottom: 1px solid var(--surface-2);
+}
+
+.nsb-colhead .sh {
+min-width: 0;
+}
+
+.nsb-colhead .sh h3 {
+font-size: 14px;
+font-weight: 600;
+color: var(--ink);
+}
+
+.nsb-colhead .sh p {
+font-size: 10.5px;
+color: var(--muted);
+margin-top: 2px;
+font-family: var(--font-mono);
+}
+
+.nsb-colhead .lh {
+font-size: 10.5px;
+font-weight: 600;
+letter-spacing: .05em;
+text-transform: uppercase;
+color: var(--muted);
+}
+
+/* Internal container configured to safely scroll only within itself */
+.nsb-rows {
+padding: 16px 12px;
+flex: 1;
+overflow-y: auto;
+scroll-behavior: smooth;
+display: flex;
+flex-direction: column;
+gap: 12px;
+/* Required for accurate offset calculations in JS */
+position: relative;
+}
+
+/* Custom scrollbar styling */
+.nsb-rows::-webkit-scrollbar {
+width: 8px;
+}
+
+.nsb-rows::-webkit-scrollbar-track {
+background: var(--surface);
+}
+
+.nsb-rows::-webkit-scrollbar-thumb {
+background: var(--surface-3);
+border-radius: 4px;
+}
+
+.nsb-rows::-webkit-scrollbar-thumb:hover {
+background: var(--muted);
+}
+
+.nsb-row {
+border-radius: 10px;
+transition: background-color .18s;
+margin: 0 10px;
+flex-shrink: 0;
+}
+
+.nsb-row.is-hero {
+background: var(--accent-tint);
+}
+
+.nsb-rowhead {
+display: grid;
+grid-template-columns: var(--mcol) 1fr 1fr 22px;
+gap: 18px;
+align-items: center;
+padding: 14px 12px;
+cursor: pointer;
+border-radius: 10px;
+}
+
+.nsb-rowhead:hover {
+background: var(--surface-2);
+}
+
+.nsb-row.is-hero .nsb-rowhead:hover {
+background: rgba(120, 160, 223, 0.18);
+}
+
+.nsb-rowhead:focus-visible {
+outline: 2px solid var(--accent);
+outline-offset: -2px;
+}
+
+.nsb-method {
+min-width: 0;
+}
+
+.nsb-method .nm {
+font-size: 13px;
+font-weight: 500;
+color: var(--ink);
+line-height: 1.25;
+}
+
+.nsb-row.is-hero .nsb-method .nm {
+font-weight: 600;
+}
+
+.nsb-cell {
+min-width: 0;
+}
+
+.nsb-cell-top {
+margin-bottom: 6px;
+}
+
+.nsb-cell-top b {
+font-size: 15px;
+font-weight: 600;
+font-family: var(--font-mono);
+font-variant-numeric: tabular-nums;
+color: var(--ink);
+letter-spacing: -.01em;
+}
+
+.nsb-bar {
+position: relative;
+display: flex;
+height: 17px;
+border-radius: 999px;
+overflow: hidden;
+background: var(--surface-3);
+}
+
+.nsb-bar .sg {
+height: 100%;
+min-width: 0;
+transition: filter .12s;
+cursor: pointer;
+}
+
+.nsb-bar .sg+.sg {
+box-shadow: -1.5px 0 0 var(--surface);
+}
+
+.nsb-bar .sg:hover {
+filter: brightness(1.15) saturate(1.15);
+}
+
+.nsb-bar .sg.success {
+background: var(--c-success);
+}
+
+.nsb-bar .sg.timeout {
+background: var(--c-timeout);
+}
+
+.nsb-bar .sg.fall {
+background: var(--c-fall);
+}
+
+.nsb-chev {
+color: var(--muted);
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform .22s;
+}
+
+.nsb-chev svg {
+display: block;
+}
+
+.nsb-row.is-open .nsb-chev {
+transform: rotate(90deg);
+color: var(--accent);
+}
+
+.nsb-detail {
+overflow: hidden;
+max-height: 0;
+transition: max-height .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.nsb-detail-inner {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+padding: 2px 12px 12px;
+align-items: stretch;
+}
+
+.nsb-mini {
+background: var(--surface-2);
+border: 1px solid var(--hairline);
+border-radius: 9px;
+padding: 12px 14px;
+min-width: 0;
+}
+
+.nsb-mini h4 {
+font-size: 10.5px;
+font-weight: 600;
+letter-spacing: .05em;
+text-transform: uppercase;
+color: var(--secondary);
+margin-bottom: 10px;
+}
+
+.nsb-mtbl {
+display: grid;
+grid-template-columns: minmax(0, 1.2fr) repeat(4, minmax(0, 1fr));
+gap: 8px 12px;
+align-items: center;
+}
+
+.nsb-mth {
+font-size: 9.5px;
+letter-spacing: .03em;
+text-transform: uppercase;
+color: var(--muted);
+white-space: nowrap;
+}
+
+.nsb-mth.n {
+text-align: right;
+}
+
+.nsb-mdiv {
+grid-column: 1/-1;
+height: 1px;
+background: var(--hairline);
+margin: 2px 0;
+}
+
+.nsb-mtd {
+font-size: 12px;
+font-family: var(--font-mono);
+font-variant-numeric: tabular-nums;
+color: var(--secondary);
+white-space: nowrap;
+}
+
+.nsb-mtd.n {
+text-align: right;
+}
+
+.nsb-mtd.ot {
+display: flex;
+align-items: center;
+gap: 7px;
+font-family: var(--font-sans);
+font-weight: 500;
+color: var(--ink);
+}
+
+.nsb-mtd.ot i {
+width: 9px;
+height: 9px;
+border-radius: 3px;
+flex: none;
+}
+
+.nsb-foot {
+display: flex;
+flex-wrap: wrap;
+gap: 10px 20px;
+align-items: center;
+justify-content: space-between;
+padding: 14px 22px 16px;
+border-top: 1px solid var(--hairline);
+flex: none;
+}
+
+.nsb-legend {
+display: flex;
+gap: 16px;
+flex-wrap: wrap;
+}
+
+.nsb-key {
+display: flex;
+align-items: center;
+gap: 7px;
+font-size: 12px;
+color: var(--secondary);
+}
+
+.nsb-key i {
+width: 11px;
+height: 11px;
+border-radius: 4px;
+}
+
+.nsb-tt {
+position: fixed;
+z-index: 2147483000;
+min-width: 210px;
+max-width: 280px;
+pointer-events: none;
+opacity: 0;
+transform: translateY(4px);
+transition: opacity .12s, transform .12s;
+background: var(--tt-bg);
+color: var(--tt-ink);
+border-radius: 11px;
+padding: 12px 14px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+font-size: 12.5px;
+}
+
+.nsb-tt.show {
+opacity: 1;
+transform: translateY(0);
+}
+
+.nsb-tt-t {
+display: flex;
+align-items: center;
+gap: 8px;
+font-weight: 600;
+font-size: 13.5px;
+margin-bottom: 4px;
+color: var(--tt-ink);
+}
+
+.nsb-tt-t i {
+width: 10px;
+height: 10px;
+border-radius: 3px;
+flex: none;
+}
+
+.nsb-tt-sc {
+font-size: 11px;
+color: var(--tt-sub);
+margin-bottom: 9px;
+}
+
+.nsb-tt-g {
+display: grid;
+grid-template-columns: auto auto;
+gap: 5px 16px;
+}
+
+.nsb-tt-g .k {
+color: var(--tt-sub);
+}
+
+.nsb-tt-g .v {
+text-align: right;
+font-family: var(--font-mono);
+font-variant-numeric: tabular-nums;
+white-space: nowrap;
+color: var(--tt-ink);
+}
+
+@media (max-width:720px) {
+.nsb {
+--mcol: 1fr;
+}
+
+.nsb-colhead {
+display: none;
+}
+
+.nsb-rowhead {
+grid-template-columns: 1fr 1fr;
+gap: 8px 16px;
+padding: 11px 12px;
+}
+
+.nsb-method {
+grid-column: 1/-1;
+display: flex;
+align-items: center;
+gap: 9px;
+}
+
+.nsb-chev {
+grid-column: 2;
+justify-self: end;
+grid-row: 1;
+}
+
+.nsb-cell::before {
+content: attr(data-scene);
+display: block;
+font-size: 9.5px;
+letter-spacing: .05em;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 3px;
+}
+
+.nsb-detail-inner {
+grid-template-columns: 1fr;
+gap: 10px;
+}
+}
+
+@media (max-width:460px) {
+.nsb-rowhead {
+grid-template-columns: 1fr;
+gap: 10px;
+}
+
+.nsb-mtbl {
+gap: 5px 10px;
+}
+
+.nsb-mth {
+font-size: 9px;
+}
+
+.nsb-mtd {
+font-size: 11px;
+}
+}
+
+</style>
+</head>
+<body>
+<div class="nsb">
+<div class="nsb-card">
+<div class="nsb-colhead">
+<div class="lh">Reconstruction method</div>
+<div class="sh">
+<h3>Flexion office</h3>
+<p id="nsb-m0"></p>
+</div>
+<div class="sh">
+<h3>Niantic Spatial office</h3>
+<p id="nsb-m1"></p>
+</div>
+<div></div>
+</div>
+
+<!-- Scrollable container -->
+<div class="nsb-rows" id="nsb-rows"></div>
+
+<div class="nsb-foot">
+<div class="nsb-legend">
+<span class="nsb-key"><i style="background:var(--c-success)"></i>Success</span>
+<span class="nsb-key"><i style="background:var(--c-timeout)"></i>Timeout</span>
+<span class="nsb-key"><i style="background:var(--c-fall)"></i>Fall</span>
+</div>
+</div>
+</div>
+<div class="nsb-tt" role="tooltip" id="nsb-tt" aria-hidden="true"></div>
+</div>
+
+<script>
+(function() {
+var SCENES = [{
+name: "Flexion office",
+meta: "1024 episodes",
+rows: {
+"RGB · Niantic Spatial 3DGS": {
+s: 0.9775,
+t: 0.001953,
+f: 0.02051,
+det: {
+success: {
+dist: 9.21,
+contacts: 0.01558,
+time: 20.06
+},
+timeout: {
+dist: 15.33,
+contacts: 0.72125,
+time: 120.0
+},
+fall: {
+dist: 9.69,
+contacts: 0.11263,
+time: 11.56
+}
+}
+},
+"Depth · generated mesh": {
+s: 0.9375,
+t: 0.008789,
+f: 0.05371,
+det: {
+success: {
+dist: 9.14,
+contacts: 0.01007,
+time: 23.09
+},
+timeout: {
+dist: 13.10,
+contacts: 0.02490,
+time: 120.0
+},
+fall: {
+dist: 10.55,
+contacts: 0.05493,
+time: 15.09
+}
+}
+},
+"RGB · synthetic office": {
+s: 0.707,
+t: 0.02246,
+f: 0.2705,
+det: {
+success: {
+dist: 8.38,
+contacts: 0.03583,
+time: 25.07
+},
+timeout: {
+dist: 14.54,
+contacts: 0.11768,
+time: 120.0
+},
+fall: {
+dist: 11.02,
+contacts: 0.04984,
+time: 39.91
+}
+}
+},
+"RGB · generated mesh": {
+s: 0.7168,
+t: 0.2217,
+f: 0.06152,
+det: {
+success: {
+dist: 8.26,
+contacts: 0.06978,
+time: 32.51
+},
+timeout: {
+dist: 11.82,
+contacts: 0.17665,
+time: 120.0
+},
+fall: {
+dist: 11.37,
+contacts: 0.17674,
+time: 41.63
+}
+}
+},
+}
+},
+{
+name: "Niantic Spatial office",
+meta: "1024 episodes",
+rows: {
+"RGB · Niantic Spatial 3DGS": {
+s: 0.7500,
+t: 0.160156,
+f: 0.08984,
+det: {
+success: {
+dist: 6.70,
+contacts: 0.104,
+time: 27.39
+},
+timeout: {
+dist: 7.50,
+contacts: 0.159,
+time: 120.0
+},
+fall: {
+dist: 6.99,
+contacts: 0.255,
+time: 32.29
+}
+}
+},
+"Depth · generated mesh": {
+s: 0.7090,
+t: 0.176758,
+f: 0.11426,
+det: {
+success: {
+dist: 6.61,
+contacts: 0.101,
+time: 33.38
+},
+timeout: {
+dist: 7.44,
+contacts: 0.187,
+time: 120.0
+},
+fall: {
+dist: 7.48,
+contacts: 0.259,
+time: 29.90
+}
+}
+},
+"RGB · synthetic office": {
+s: 0.5381,
+t: 0.352539,
+f: 0.10938,
+det: {
+success: {
+dist: 6.07,
+contacts: 0.196,
+time: 39.64
+},
+timeout: {
+dist: 7.86,
+contacts: 0.355,
+time: 120.0
+},
+fall: {
+dist: 7.56,
+contacts: 0.387,
+time: 41.20
+}
+}
+},
+"RGB · generated mesh": {
+s: 0.4053,
+t: 0.396484,
+f: 0.19824,
+det: {
+success: {
+dist: 6.06,
+contacts: 0.201,
+time: 34.39
+},
+timeout: {
+dist: 7.26,
+contacts: 0.292,
+time: 120.0
+},
+fall: {
+dist: 7.58,
+contacts: 0.347,
+time: 36.99
+}
+}
+},
+}
+},
+];
+var METHODS = [{
+label: "RGB · Niantic Spatial 3DGS",
+hero: true
+},
+{
+label: "Depth · generated mesh",
+hero: false
+},
+{
+label: "RGB · synthetic office",
+hero: false
+},
+{
+label: "RGB · generated mesh",
+hero: false
+},
+];
+var OUT = {
+success: {
+name: "Success",
+color: "var(--c-success)"
+},
+timeout: {
+name: "Timeout",
+color: "var(--c-timeout)"
+},
+fall: {
+name: "Fall",
+color: "var(--c-fall)"
+}
+};
+var ORDER = ["success", "timeout", "fall"],
+KEY = {
+success: "s",
+timeout: "t",
+fall: "f"
+};
+var rowsEl = document.getElementById("nsb-rows"),
+tt = document.getElementById("nsb-tt");
+document.getElementById("nsb-m0").textContent = SCENES[0].meta;
+document.getElementById("nsb-m1").textContent = SCENES[1].meta;
+
+function fmt(v, dp) {
+return v.toFixed(dp);
+}
+
+function succ(d) {
+var t = d.s + d.t + d.f;
+return d.s / t * 100;
+}
+
+function barHTML(d, sceneName, method) {
+var total = d.s + d.t + d.f;
+return '<div class="nsb-bar">' + ORDER.map(function(k) {
+var frac = d[KEY[k]];
+if (frac <= 0) return "";
+var pct = frac / total * 100,
+dt = d.det[k];
+return '<div class="sg ' + k + '" style="width:' + pct + '%" data-tip=\'' + JSON.stringify({
+name: OUT[k].name,
+color: OUT[k].color,
+pct: pct,
+scene: sceneName,
+method: method,
+dist: dt.dist,
+contacts: dt.contacts,
+time: dt.time
+}) + '\'></div>';
+}).join("") + '</div>';
+}
+
+function cellHTML(scIdx, method) {
+var d = SCENES[scIdx].rows[method.label],
+sp = succ(d);
+return '<div class="nsb-cell" data-scene="' + SCENES[scIdx].name + '"><div class="nsb-cell-top"><b>' + sp.toFixed(1) + '%</b></div>' + barHTML(d, SCENES[scIdx].name, method.label) + '</div>';
+}
+
+function miniHTML(scIdx, method) {
+var d = SCENES[scIdx].rows[method.label],
+total = d.s + d.t + d.f;
+return '<div class="nsb-mini"><h4>' + SCENES[scIdx].name + '</h4>' +
+'<div class="nsb-mtbl">' +
+'<span class="nsb-mth">Outcome</span><span class="nsb-mth n">Share</span><span class="nsb-mth n">Goal dist.</span><span class="nsb-mth n">Contacts</span><span class="nsb-mth n">Time</span>' +
+'<span class="nsb-mdiv"></span>' +
+ORDER.map(function(k) {
+var dt = d.det[k],
+pct = d[KEY[k]] / total * 100;
+return '<span class="nsb-mtd ot"><i style="background:' + OUT[k].color + '"></i>' + OUT[k].name + '</span>' +
+'<span class="nsb-mtd n">' + pct.toFixed(1) + '%</span>' +
+'<span class="nsb-mtd n">' + fmt(dt.dist, 2) + ' m</span>' +
+'<span class="nsb-mtd n">' + fmt(dt.contacts, 3) + '</span>' +
+'<span class="nsb-mtd n">' + fmt(dt.time, 1) + ' s</span>';
+}).join("") +
+'</div></div>';
+}
+METHODS.forEach(function(method) {
+var wrap = document.createElement("div");
+wrap.className = "nsb-row" + (method.hero ? " is-hero" : "");
+var head = document.createElement("div");
+head.className = "nsb-rowhead";
+head.tabIndex = 0;
+head.setAttribute("role", "button");
+head.setAttribute("aria-expanded", "false");
+head.innerHTML = '<div class="nsb-method"><span class="nm">' + method.label + '</span></div>' +
+cellHTML(0, method) + cellHTML(1, method) +
+'<div class="nsb-chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></div>';
+
+var det = document.createElement("div");
+det.className = "nsb-detail";
+det.innerHTML = '<div class="nsb-detail-inner">' + miniHTML(0, method) + miniHTML(1, method) + '</div>';
+
+function toggle() {
+var open = wrap.classList.toggle("is-open");
+head.setAttribute("aria-expanded", open);
+det.style.maxHeight = open ? det.scrollHeight + "px" : "0px";
+
+// Auto scroll strictly inside the inner scrolling container to prevent webpage shifting
+if (open) {
+setTimeout(function() {
+var rowBottom = wrap.offsetTop + wrap.offsetHeight;
+var containerBottom = rowsEl.scrollTop + rowsEl.offsetHeight;
+
+// If the bottom of the row is below the visible container area, scroll down slightly
+if (rowBottom > containerBottom) {
+rowsEl.scrollTo({
+top: rowBottom - rowsEl.offsetHeight + 16,
+behavior: "smooth"
+});
+}
+}, 310);
+}
+}
+
+head.addEventListener("click", function(e) {
+if (e.target.closest(".sg")) return;
+toggle();
+});
+head.addEventListener("keydown", function(e) {
+if (e.key === "Enter" || e.key === " ") {
+e.preventDefault();
+toggle();
+}
+});
+wrap.appendChild(head);
+wrap.appendChild(det);
+rowsEl.appendChild(wrap);
+});
+
+rowsEl.querySelectorAll(".sg[data-tip]").forEach(function(seg) {
+seg.addEventListener("mouseenter", showTip);
+seg.addEventListener("mousemove", moveTip);
+seg.addEventListener("mouseleave", hideTip);
+});
+
+function showTip(e) {
+var d = JSON.parse(e.currentTarget.getAttribute("data-tip"));
+tt.innerHTML = '<div class="nsb-tt-t"><i style="background:' + d.color + '"></i>' + d.name + ' · ' + d.pct.toFixed(1) + '%</div>' +
+'<p class="nsb-tt-sc">' + d.method + ' — ' + d.scene + '</p>' +
+'<div class="nsb-tt-g"><span class="k">Avg. goal distance</span><span class="v">' + fmt(d.dist, 2) + ' m</span>' +
+'<span class="k">Undesired contacts</span><span class="v">' + fmt(d.contacts, 3) + ' /step</span>' +
+'<span class="k">Avg. time to term.</span><span class="v">' + fmt(d.time, 1) + ' s</span></div>';
+tt.classList.add("show");
+tt.setAttribute("aria-hidden", "false");
+moveTip(e);
+}
+
+function moveTip(e) {
+var pad = 14,
+r = tt.getBoundingClientRect(),
+x = e.clientX + pad,
+y = e.clientY + pad;
+if (x + r.width > window.innerWidth) x = e.clientX - r.width - pad;
+if (y + r.height > window.innerHeight) y = e.clientY - r.height - pad;
+tt.style.left = Math.max(4, x) + "px";
+tt.style.top = Math.max(4, y) + "px";
+}
+
+function hideTip() {
+tt.classList.remove("show");
+tt.setAttribute("aria-hidden", "true");
+}
+})();
+
+</script>
+</body>
+</html>
+</div>
+</root-eai-scale>
+<div class="rich-text text-sm leading-relaxed mt-4 [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/65">
+<div><small> The reconstruction-trained RGB policy ran zero-shot on a humanoid in the Flexion office and outperformed the depth-based policy. Watch the livestream to learn more. </small></div>
+</div>
+</div>
+</div>
+</section>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+
+@media(max-width:499px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -60px;
+}
+}
+
+@media(min-width:500px) and (max-width:1023px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+@media(min-width:1024px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+</style>
+<div class="sp-n120-n120-n60" role="separator" aria-hidden="true"></div>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+[data-eai-compare] {
+interpolate-size: allow-keywords;
+}
+
+[data-eai-compare] details::details-content {
+height: 0;
+overflow: clip;
+transition: height 0.25s ease, content-visibility 0.25s allow-discrete;
+}
+
+[data-eai-compare] details[open]::details-content {
+height: auto;
+}
+
+</style>
+<section class="fire-container bg-[var(--eai-section-bg,#1A1A1A)] text-[#EAE3DC] py-16 md:py-24">
+<div class="col-[main]">
+<h2 class="text-3xl md:text-4xl tracking-tight text-balance mb-6">Policies trained against real environments are cheaper to ship and easier to trust.</h2>
+<div class="flex flex-wrap items-center gap-3 md:gap-4 mb-10"><a href="/embodied-ai/plans" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 rounded-[4px] text-[15px] px-6 py-3.5 transition-colors border border-[#EAE3DC]/25 text-[#EAE3DC] font-medium hover:border-[#EAE3DC]/60 hover:bg-white/5">Explore Plans<span aria-hidden="true">→</span></a></div>
+<div data-eai-compare="true" class="rounded-2xl border overflow-hidden border-white/10 bg-white/[0.02]">
+<div class="hidden md:grid gap-6 px-6 py-4 grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr] bg-white/[0.04]"><span class="[font-family:var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-[#EAE3DC]/45">Dimension</span><span class="[font-family:var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-[#EAE3DC]/45">Today, without us</span><span class="[font-family:var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-[#7ABCCC]">With us</span><span class="[font-family:var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-[#EAE3DC]/45">The measure</span></div>
+<details name="eai-compare-policies-trained-against-real-environments-are-cheaper-to-ship-and-easier-to-trust" open class="group">
+<summary class="flex items-center justify-between gap-6 px-6 py-4 cursor-pointer list-none [&amp;::-webkit-details-marker]:hidden transition-colors hover:bg-white/[0.03]"><span class="flex items-baseline gap-3"><span class="[font-family:var(--font-mono)] text-[11px] uppercase tracking-[0.15em]" style="color:#678BC7;">Speed</span><span class="[font-family:var(--font-mono)] text-[10px] tracking-[0.13em] text-[#EAE3DC]/40">2</span></span><span aria-hidden="true" class="text-xl leading-none transition-transform group-open:rotate-45" style="color:#678BC7;">+</span></summary>
+<div class="border-t pb-1 border-white/10">
+<div class="grid gap-2 md:gap-6 px-6 py-5 grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr]">
+<div>
+<p class="text-base tracking-tight">Engineering time</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">Today, without us</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Months hand-building synthetic twins that still transfer badly to the real environment.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Months hand-building synthetic twins that still transfer badly to the real environment.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">With us</span><span class="text-sm leading-relaxed">Fine-tune in days, on places that already match the environment.</span></p>
+<p class="hidden md:block text-sm leading-relaxed">Fine-tune in days, on places that already match the environment.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">The measure</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Engineering weeks per environment.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Engineering weeks per environment.</p>
+</div>
+</div>
+<div class="grid gap-2 md:gap-6 px-6 py-5 grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr] border-t border-white/10">
+<div>
+<p class="text-base tracking-tight">Time to deploy</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">Today, without us</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Tuning cannot start until hardware is onsite. POCs run six to twelve months.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Tuning cannot start until hardware is onsite. POCs run six to twelve months.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">With us</span><span class="text-sm leading-relaxed">The environment is simulatable before anyone travels. Robots arrive with most of their environment-specific training already complete.</span></p>
+<p class="hidden md:block text-sm leading-relaxed">The environment is simulatable before anyone travels. Robots arrive with most of their environment-specific training already complete.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">The measure</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Weeks from POC to production.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Weeks from POC to production.</p>
+</div>
+</div>
+</div>
+</details>
+<details name="eai-compare-policies-trained-against-real-environments-are-cheaper-to-ship-and-easier-to-trust" class="group border-t border-white/10">
+<summary class="flex items-center justify-between gap-6 px-6 py-4 cursor-pointer list-none [&amp;::-webkit-details-marker]:hidden transition-colors hover:bg-white/[0.03]"><span class="flex items-baseline gap-3"><span class="[font-family:var(--font-mono)] text-[11px] uppercase tracking-[0.15em]" style="color:#F06C61;">Money</span><span class="[font-family:var(--font-mono)] text-[10px] tracking-[0.13em] text-[#EAE3DC]/40">2</span></span><span aria-hidden="true" class="text-xl leading-none transition-transform group-open:rotate-45" style="color:#F06C61;">+</span></summary>
+<div class="border-t pb-1 border-white/10">
+<div class="grid gap-2 md:gap-6 px-6 py-5 grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr]">
+<div>
+<p class="text-base tracking-tight">Cost avoided</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">Today, without us</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Edge cases surface in the customer’s operation, where each one costs an incident and weeks of engineering.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Edge cases surface in the customer’s operation, where each one costs an incident and weeks of engineering.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">With us</span><span class="text-sm leading-relaxed">Rehearse the environment's failure modes before anything is live.</span></p>
+<p class="hidden md:block text-sm leading-relaxed">Rehearse the environment's failure modes before anything is live.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">The measure</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Incident and clean-up costs avoided.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Incident and clean-up costs avoided.</p>
+</div>
+</div>
+<div class="grid gap-2 md:gap-6 px-6 py-5 grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr] border-t border-white/10">
+<div>
+<p class="text-base tracking-tight">Revenue won</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">Today, without us</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Deals stall on doubt that the policy will hold in a particular environment.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Deals stall on doubt that the policy will hold in a particular environment.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">With us</span><span class="text-sm leading-relaxed">Arrive with evidence it already works in that exact environment.</span></p>
+<p class="hidden md:block text-sm leading-relaxed">Arrive with evidence it already works in that exact environment.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">The measure</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Win rate and deal cycle length.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Win rate and deal cycle length.</p>
+</div>
+</div>
+</div>
+</details>
+<details name="eai-compare-policies-trained-against-real-environments-are-cheaper-to-ship-and-easier-to-trust" class="group border-t border-white/10">
+<summary class="flex items-center justify-between gap-6 px-6 py-4 cursor-pointer list-none [&amp;::-webkit-details-marker]:hidden transition-colors hover:bg-white/[0.03]"><span class="flex items-baseline gap-3"><span class="[font-family:var(--font-mono)] text-[11px] uppercase tracking-[0.15em]" style="color:#7ABCCC;">Model quality</span><span class="[font-family:var(--font-mono)] text-[10px] tracking-[0.13em] text-[#EAE3DC]/40">1</span></span><span aria-hidden="true" class="text-xl leading-none transition-transform group-open:rotate-45" style="color:#7ABCCC;">+</span></summary>
+<div class="border-t pb-1 border-white/10">
+<div class="grid gap-2 md:gap-6 px-6 py-5 grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr]">
+<div>
+<p class="text-base tracking-tight">Policy transfer</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">Today, without us</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Policies perceive mesh artifacts as real obstacles and carry those phantom obstacles onto hardware.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Policies perceive mesh artifacts as real obstacles and carry those phantom obstacles onto hardware.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">With us</span><span class="text-sm leading-relaxed">The visual layer and the physics layer come from the same reconstruction, ensuring consistency.</span></p>
+<p class="hidden md:block text-sm leading-relaxed">The visual layer and the physics layer come from the same reconstruction, ensuring consistency.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">The measure</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Sim-to-real transfer rate.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Sim-to-real transfer rate.</p>
+</div>
+</div>
+</div>
+</details>
+<details name="eai-compare-policies-trained-against-real-environments-are-cheaper-to-ship-and-easier-to-trust" class="group border-t border-white/10">
+<summary class="flex items-center justify-between gap-6 px-6 py-4 cursor-pointer list-none [&amp;::-webkit-details-marker]:hidden transition-colors hover:bg-white/[0.03]"><span class="flex items-baseline gap-3"><span class="[font-family:var(--font-mono)] text-[11px] uppercase tracking-[0.15em]" style="color:#98AF75;">Flywheel</span><span class="[font-family:var(--font-mono)] text-[10px] tracking-[0.13em] text-[#EAE3DC]/40">2</span></span><span aria-hidden="true" class="text-xl leading-none transition-transform group-open:rotate-45" style="color:#98AF75;">+</span></summary>
+<div class="border-t pb-1 border-white/10">
+<div class="grid gap-2 md:gap-6 px-6 py-5 grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr]">
+<div>
+<p class="text-base tracking-tight">Your environment becomes an asset</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">Today, without us</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Every vendor rebuilds the same environment from scratch, each one paid for separately.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Every vendor rebuilds the same environment from scratch, each one paid for separately.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">With us</span><span class="text-sm leading-relaxed">One model of the environment that you own and hand to any vendor you choose.</span></p>
+<p class="hidden md:block text-sm leading-relaxed">One model of the environment that you own and hand to any vendor you choose.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">The measure</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Vendors served per model. Duplicate scanning cut.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Vendors served per model. Duplicate scanning cut.</p>
+</div>
+</div>
+<div class="grid gap-2 md:gap-6 px-6 py-5 grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr] border-t border-white/10">
+<div>
+<p class="text-base tracking-tight">Your fleet becomes an asset</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">Today, without us</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Nothing the fleet sees flows back into the environment it trains against.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Nothing the fleet sees flows back into the environment it trains against.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">With us</span><span class="text-sm leading-relaxed">Each deployment feeds the next, so the model sharpens on the environments your robots actually work in.</span></p>
+<p class="hidden md:block text-sm leading-relaxed">Each deployment feeds the next, so the model sharpens on the environments your robots actually work in.</p>
+</div>
+<div class="md:contents">
+<p class="md:hidden mt-2"><span class="block [font-family:var(--font-mono)] text-[10px] uppercase tracking-[0.13em] mb-0.5 text-[#EAE3DC]/40">The measure</span><span class="text-sm leading-relaxed text-[#EAE3DC]/65">Model gain per deployment cycle.</span></p>
+<p class="hidden md:block text-sm leading-relaxed text-[#EAE3DC]/65">Model gain per deployment cycle.</p>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+</section>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+
+@media(max-width:499px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -60px;
+}
+}
+
+@media(min-width:500px) and (max-width:1023px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+@media(min-width:1024px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+</style>
+<div class="sp-n120-n120-n60" role="separator" aria-hidden="true"></div>
+<section class="fire-container bg-[var(--eai-section-bg,#1A1A1A)] text-[#EAE3DC] py-16 md:py-24">
+<div class="col-[main]">
+<h2 class="text-3xl md:text-4xl tracking-tight text-balance mb-10">Build with the most advanced embodied AI teams in the world.</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="rounded-2xl border p-7 md:p-9 flex flex-col border-white/10 bg-white/[0.03]">
+<h3 class="text-xl md:text-2xl tracking-tight text-balance mb-3">Explore the Places Library</h3>
+<p class="text-sm leading-relaxed mb-6 text-[#EAE3DC]/65">Use the Places Library to build breadth across real-world scenes that reflect the messy reality of the environments you'll deploy into – helping your policy generalize before it reaches your site.</p>
+<div class="flex flex-wrap items-center gap-3 md:gap-4 mt-auto"><a href="/embodied-ai/places-library-usdz" class="inline-flex items-center gap-2.5 rounded-[4px] text-[15px] px-6 py-3.5 transition-colors bg-[#678BC7] text-white font-semibold hover:bg-[#5a7cb5]">Discover Places<span aria-hidden="true">→</span></a></div>
+</div>
+<div class="rounded-2xl border p-7 md:p-9 flex flex-col border-white/10 bg-white/[0.03]">
+<h3 class="text-xl md:text-2xl tracking-tight text-balance mb-3">Talk to us</h3>
+<p class="text-sm leading-relaxed mb-6 text-[#EAE3DC]/65">Whether you’re running POCs and need to add diversity to your dataset, or are deploying and need to fine-tune your policy for customer environments or edge-case scenarios, we’ll help define the right terms and engagement model for you.</p>
+<div class="flex flex-wrap items-center gap-3 md:gap-4 mt-auto"><root-form-lightbox class="contents" portal-id="7182223" form-id="5bc35c21-3d82-44b5-a14b-c788efeb4c0a" prefill-fields="{&quot;form__contact_us_reason___dropdown&quot;:&quot;technical&quot;}"><button type="button" data-slot="trigger" aria-haspopup="dialog" class="inline-flex items-center gap-2.5 rounded-[4px] text-[15px] px-6 py-3.5 transition-colors border border-[#EAE3DC]/25 text-[#EAE3DC] font-medium hover:border-[#EAE3DC]/60 hover:bg-white/5">Book a Technical Walkthrough<span aria-hidden="true">→</span></button>
+<dialog data-slot="dialog" aria-label="Get in touch to explore solutions built for your goals." class="form-lightbox m-auto w-[calc(100vw-2rem)] max-w-[560px] md:max-w-[680px] lg:max-w-[840px] max-h-[85vh] overflow-y-auto overflow-x-hidden rounded-3xl p-0 text-left form-lightbox-dark backdrop-blur-2xl text-[#EAE3DC] border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),inset_0_-1px_0_rgba(0,0,0,0.5),0_32px_90px_rgba(0,0,0,0.65),0_2px_10px_rgba(0,0,0,0.45)]">
+<div class="relative p-6 md:p-10"><button type="button" data-slot="close" aria-label="Close" class="absolute top-4 right-4 flex items-center justify-center size-9 rounded-full border transition-colors bg-white/10 border-white/20 text-[#EAE3DC]/80 hover:bg-white/20 hover:text-white"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+<path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+</svg></button>
+<h2 class="text-[24px] leading-[1.2] font-semibold pr-8">Get in touch to explore solutions built for your goals.</h2>
+<div class="mt-6">
+<div data-slot="form-target" class="min-h-[120px]"></div>
+</div>
+</div>
+</dialog>
+</root-form-lightbox></div>
+</div>
+</div>
+</div>
+</section>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+
+@media(max-width:499px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -60px;
+}
+}
+
+@media(min-width:500px) and (max-width:1023px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+@media(min-width:1024px) {
+.sp-n120-n120-n60 {
+height: 0px;
+margin-bottom: -120px;
+}
+}
+
+</style>
+<div class="sp-n120-n120-n60" role="separator" aria-hidden="true"></div>
+<script type="application/ld+json" nonce="jZ22rnNgA+0hMSw15MBWMg==">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [{
+"@type": "Question",
+"name": "What hardware do I need to capture a real environment?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": ""
+}
+}, {
+"@type": "Question",
+"name": "Can I import the digital twin into NVIDIA Isaac Sim or Isaac Lab?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": ""
+}
+}, {
+"@type": "Question",
+"name": "How realistic and metrically accurate is the reconstructed environment?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": ""
+}
+}, {
+"@type": "Question",
+"name": "What types of robots can use these simulation environments?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": ""
+}
+}, {
+"@type": "Question",
+"name": "What is included in the simulation-ready USDZ package?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": ""
+}
+}, {
+"@type": "Question",
+"name": "Does real-to-sim improve sim-to-real transfer?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": ""
+}
+}]
+}
+
+</script>
+<style nonce="jZ22rnNgA+0hMSw15MBWMg==">
+root-eai-faq {
+interpolate-size: allow-keywords;
+}
+
+root-eai-faq details::details-content {
+height: 0;
+overflow: clip;
+transition: height 0.25s ease, content-visibility 0.25s allow-discrete;
+}
+
+root-eai-faq details[open]::details-content {
+height: auto;
+}
+
+</style>
+<section class="fire-container bg-[var(--eai-section-bg,#1A1A1A)] text-[#EAE3DC] py-16 md:py-24"><root-eai-faq class="col-[main] block max-w-[820px] mx-auto w-full">
+<div class="text-center mb-10">
+<h2 class="text-3xl md:text-[2.5rem] leading-[1.1] tracking-tight text-balance">Frequently Asked Questions</h2>
+</div>
+<div>
+<div class="border-t border-white/15">
+<details class="group border-b border-white/15" open>
+<summary class="flex items-start justify-between gap-6 py-5 cursor-pointer list-none [&amp;::-webkit-details-marker]:hidden"><span class="text-base font-medium leading-snug">What hardware do I need to capture a real environment?</span><span aria-hidden="true" class="text-[#678BC7] text-xl leading-none mt-0.5 transition-transform group-open:rotate-45">+</span></summary>
+<div class="rich-text text-sm leading-relaxed pr-10 pb-6 [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/65">
+<p>You can capture the environment with an off-the-shelf 360 camera. Larger outdoor environments can be captured with a drone. The workflow does not require LiDAR, tripod stations, or a specialized capture crew.</p>
+</div>
+</details>
+<details class="group border-b border-white/15">
+<summary class="flex items-start justify-between gap-6 py-5 cursor-pointer list-none [&amp;::-webkit-details-marker]:hidden"><span class="text-base font-medium leading-snug">Can I import the digital twin into NVIDIA Isaac Sim or Isaac Lab?</span><span aria-hidden="true" class="text-[#678BC7] text-xl leading-none mt-0.5 transition-transform group-open:rotate-45">+</span></summary>
+<div class="rich-text text-sm leading-relaxed pr-10 pb-6 [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/65">
+<p>Yes. The environment is delivered as a USDZ package that loads directly into NVIDIA Isaac Sim and Isaac Lab (and compatible OpenUSD simulators).</p>
+</div>
+</details>
+<details class="group border-b border-white/15">
+<summary class="flex items-start justify-between gap-6 py-5 cursor-pointer list-none [&amp;::-webkit-details-marker]:hidden"><span class="text-base font-medium leading-snug">How realistic and metrically accurate is the reconstructed environment?</span><span aria-hidden="true" class="text-[#678BC7] text-xl leading-none mt-0.5 transition-transform group-open:rotate-45">+</span></summary>
+<div class="rich-text text-sm leading-relaxed pr-10 pb-6 [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/65">
+<p>Without any calibration target, a 360-camera capture reconstructs to within 1% of true scale. With a printed calibration board in the capture, scale is set from a known dimension rather than estimated from camera geometry, and the error drops well below that.</p>
+</div>
+</details>
+<details class="group border-b border-white/15">
+<summary class="flex items-start justify-between gap-6 py-5 cursor-pointer list-none [&amp;::-webkit-details-marker]:hidden"><span class="text-base font-medium leading-snug">What types of robots can use these simulation environments?</span><span aria-hidden="true" class="text-[#678BC7] text-xl leading-none mt-0.5 transition-transform group-open:rotate-45">+</span></summary>
+<div class="rich-text text-sm leading-relaxed pr-10 pb-6 [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/65">
+<p>Any. As our real-to-sim stack is optimized for reconstructing places, we find that teams training and deployed mobile embodiments benefit from it most.</p>
+</div>
+</details>
+<details class="group border-b border-white/15">
+<summary class="flex items-start justify-between gap-6 py-5 cursor-pointer list-none [&amp;::-webkit-details-marker]:hidden"><span class="text-base font-medium leading-snug">What is included in the simulation-ready USDZ package?</span><span aria-hidden="true" class="text-[#678BC7] text-xl leading-none mt-0.5 transition-transform group-open:rotate-45">+</span></summary>
+<div class="rich-text text-sm leading-relaxed pr-10 pb-6 [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/65">
+<p>Each package includes a photorealistic 3D Gaussian splat and an aligned collision mesh derived from the same reconstruction. The asset is gravity-aligned, metric-scale, and collider-ready for robot simulation and policy training.</p>
+</div>
+</details>
+<details class="group border-b border-white/15">
+<summary class="flex items-start justify-between gap-6 py-5 cursor-pointer list-none [&amp;::-webkit-details-marker]:hidden"><span class="text-base font-medium leading-snug">Does real-to-sim improve sim-to-real transfer?</span><span aria-hidden="true" class="text-[#678BC7] text-xl leading-none mt-0.5 transition-transform group-open:rotate-45">+</span></summary>
+<div class="rich-text text-sm leading-relaxed pr-10 pb-6 [&amp;_a]:text-[#678BC7] [&amp;_a]:underline [&amp;_a:hover]:text-[#8BA6D4] [&amp;_a]:transition-colors text-[#EAE3DC]/65">
+<p><a href="https://www.nianticspatial.com/blog/flexion-humanoid-real2sim-sim2real">In a comparison conducted by Niantic Spatial and Flexion</a>, an RGB navigation policy trained in a reconstructed environment transferred zero-shot to a robot. In simulation, the reconstruction-trained policy matched or exceeded the reported conventional depth baseline across the evaluated scenes.</p>
+</div>
+</details>
+</div>
+</div>
+</root-eai-faq></section>
+</div>
+</main>
+<div class="ns ns--chrome" data-theme="light"><ns-form-modal portal-id="7182223">
+<dialog class="ns-formmodal" aria-labelledby="ns-formmodal-title">
+<div class="ns-formmodal__head">
+<h2 class="ns-formmodal__title" id="ns-formmodal-title" data-ns-modal-title="true" hidden></h2><button type="button" class="ns-formmodal__close" data-ns-modal-close="true" aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+<path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.4"></path>
+</svg></button>
+</div>
+<div class="ns-formmodal__body" data-ns-modal-body="true"></div>
+</dialog>
+</ns-form-modal>
+<footer class="ns-footer" id="ns-footer" data-ns-module="NsFooter">
+<div class="ns-wrap">
+<div class="ns-footer__grid">
+<div class="ns-footer__brand"><a href="/" class="ns-footer__home" aria-label="Niantic Spatial home"><span class="ns-footer__logo" role="img" aria-label="Niantic Spatial"></span></a>
+<p class="ns-footer__tagline">Real-world foundation models for physical AI.</p>
+<p class="ns-footer__mission">We build spatial AI models and services so people and machines can reason, learn and act safely in the physical world.</p>
+</div>
+<nav class="ns-footer__col" aria-label="Industries">
+<div class="ns-footer__heading">Industries</div><a _arrayKey="KdYc6y" href="/oil-and-gas">Oil and gas</a><a _arrayKey="JOoRJU" href="/defense-and-intelligence">Defense and intelligence</a><a _arrayKey="G9W0tt" href="/embodied-ai">Embodied AI</a>
+</nav>
+<nav class="ns-footer__col" aria-label="Models">
+<div class="ns-footer__heading">Models</div><a _arrayKey="hevlGU" href="/products/reconstruct">Reconstruction</a><a _arrayKey="cn2ktT" href="/products/localize">Localization</a><a _arrayKey="iyaOEX" href="/products/understand">Understanding</a><a _arrayKey="fmQYfq" href="/products/capture">Capture</a>
+</nav>
+<nav class="ns-footer__col" aria-label="Company">
+<div class="ns-footer__heading">Company</div><a _arrayKey="fD4akj" href="/about">About</a><a _arrayKey="lUU67w" href="/careers">Careers</a><a _arrayKey="mXTmSN" href="/research">Research</a><a _arrayKey="YpRgGx" href="/blog">News</a><a _arrayKey="SxhE01" href="/responsible-innovation">Responsible innovation</a>
+</nav>
+<nav class="ns-footer__col" aria-label="Resources">
+<div class="ns-footer__heading">Resources</div><a _arrayKey="uTaMm1" href="/pricing">Pricing</a><a _arrayKey="araiYz" href="/press">Press</a><a _arrayKey="GBZlO6" href="/events">Events</a><a _arrayKey="TsX64E" href="https://community.nianticspatial.com/" target="_blank" rel="noopener">Developer forums</a><a _arrayKey="YkUFaw" href="/glossary">Glossary</a>
+</nav>
+<nav class="ns-footer__legal" aria-label="Legal"><a _arrayKey="DZv0sZ" href="/terms">Terms of service</a><a _arrayKey="3WjdE5" href="/terms-business">Business and developer terms</a><a _arrayKey="x3xnHC" href="/privacy-business">Business and developer privacy policy</a><a _arrayKey="tH289Y" href="/privacy-consumer">Consumer privacy policy</a><a _arrayKey="DxzapU" href="/privacy-consumer-games">Ingress and Peridot privacy policy</a><a _arrayKey="k8FIAo" href="/cookies">Cookies policy</a><a _arrayKey="qkTRdh" href="/legal/developer-policy/niantic-spatial-platform-sdk">Developer policy</a></nav>
+</div>
+<div class="ns-footer__bottom">
+<div class="ns-footer__meta"><span>©2026 Niantic Spatial, Inc.</span>
+<div class="ns-footer__lang">
+<div class="_langToggleWrap_z70ml_1"></div>
+</div>
+</div>
+<nav class="ns-footer__social" aria-label="Social"><a _arrayKey="Kq1csX" href="https://www.linkedin.com/company/nianticspatial" target="_blank" rel="noopener">LinkedIn</a><a _arrayKey="eP7aV8" href="https://x.com/NianticSpatial" target="_blank" rel="noopener">X</a><a _arrayKey="WThAQL" href="https://www.youtube.com/@NianticSpatial" target="_blank" rel="noopener">YouTube</a><a _arrayKey="gSBtZ4" href="https://www.instagram.com/nianticspatial/" target="_blank" rel="noopener">Instagram</a><a _arrayKey="M2I16I" href="https://www.facebook.com/nianticspatial/" target="_blank" rel="noopener">Facebook</a><a _arrayKey="KeBEU8" href="https://github.com/niantic-lightship/" target="_blank" rel="noopener">GitHub</a></nav>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script src="/ark/ark.esm.js" type="module" nonce="jZ22rnNgA+0hMSw15MBWMg=="></script><ark-cookiebar></ark-cookiebar><kino-widget config="{&quot;activeAssistant&quot;:&quot;kino&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;name&quot;:&quot;Kino&quot;,&quot;tagline&quot;:&quot;Real-world models for physical AI&quot;,&quot;greeting&quot;:&quot;Hi! I’m Kino, your guide to Niantic Spatial. Ask me how we reconstruct and localize real places, how teams in robotics, defense and energy use it, or how to get started with our SDK and Scaniverse.&quot;,&quot;placeholder&quot;:&quot;Ask anything about Niantic Spatial...&quot;,&quot;standaloneUrl&quot;:&quot;/kino&quot;,&quot;position&quot;:&quot;bottom-right&quot;,&quot;enableKeyboardShortcut&quot;:true,&quot;enabledSources&quot;:[{&quot;id&quot;:&quot;all&quot;,&quot;label&quot;:&quot;All&quot;},{&quot;id&quot;:&quot;website&quot;,&quot;label&quot;:&quot;Website&quot;},{&quot;id&quot;:&quot;docs&quot;,&quot;label&quot;:&quot;Docs&quot;}],&quot;suggestedPrompts&quot;:[{&quot;label&quot;:&quot;Do your scenes load into NVIDIA Isaac Sim?&quot;,&quot;query&quot;:&quot;Do your reconstructions load into NVIDIA Isaac Sim and Isaac Lab, and what exactly do I get?&quot;},{&quot;label&quot;:&quot;What's in the Places Library, and how do I get it?&quot;,&quot;query&quot;:&quot;What's in the Places Library, and how do I get access to it?&quot;},{&quot;label&quot;:&quot;Can you reconstruct our own deployment site?&quot;,&quot;query&quot;:&quot;Can you reconstruct our own deployment site into a simulation-ready environment?&quot;},{&quot;label&quot;:&quot;What's in the Evaluate, Train and Deploy plans?&quot;,&quot;query&quot;:&quot;What's included in the Embodied AI Evaluate, Train and Deploy plans?&quot;}],&quot;siteLocale&quot;:&quot;en&quot;}" locale="en"></kino-widget>
+</body>
+</html>

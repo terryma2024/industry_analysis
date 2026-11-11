@@ -1,0 +1,241 @@
+{
+  "date": "2026-11-10",
+  "hf_info": {
+    "id": "NianticSpatial/real2sim-sample-usdz-scenes",
+    "sha": "f7ca59406bf15cdaf28e9c95bb99a317ebd7c83c",
+    "private": false,
+    "gated": false,
+    "lastModified": "2026-08-01T02:29:39.000Z",
+    "cardData": {
+      "license": "cc-by-4.0",
+      "pretty_name": "Niantic Spatial Real2Sim Sample USDZ Scenes",
+      "tags": [
+        "robotics",
+        "physical-ai",
+        "simulation",
+        "real-to-sim",
+        "isaac-sim",
+        "isaac-lab",
+        "3d-reconstruction",
+        "usdz",
+        "usd"
+      ]
+    }
+  },
+  "hf_tree": [
+    {
+      "type": "directory",
+      "oid": "fb66dde3595e9744700cb94d22cd7dfe8e68c4a7",
+      "size": 0,
+      "path": "Nurec Volume Schema"
+    },
+    {
+      "type": "directory",
+      "oid": "fa12f661431a2b36b93442e223144d875a1ae134",
+      "size": 0,
+      "path": "Particle Field Schema"
+    },
+    {
+      "type": "file",
+      "oid": "75e5d29a75c2539644df69a81828bcc4dcf26bfb",
+      "size": 3348,
+      "path": ".gitattributes"
+    },
+    {
+      "type": "file",
+      "oid": "fd7e107b6800742868e6fce57f590036ba6f1250",
+      "size": 1479477623,
+      "lfs": {
+        "oid": "b746bf238bd6e69001c99d85eb5a37dccce9adb516eef163ade02be37f128fe5",
+        "size": 1479477623,
+        "pointerSize": 135
+      },
+      "xetHash": "8b6298770b855ceda5e69bbacb8e8a9f1375d8f926f52f4d887112830f99d966",
+      "path": "Nurec Volume Schema/bastille_place_nurec.usdz"
+    },
+    {
+      "type": "file",
+      "oid": "27f1b6fc55222883748cf49147eca033ec36f9c0",
+      "size": 1258203927,
+      "lfs": {
+        "oid": "06f09d502f766f23922842a401693c3a2cbc7209adce32a17569ff553a2d18c6",
+        "size": 1258203927,
+        "pointerSize": 135
+      },
+      "xetHash": "be3f3387baa5df92b4d1cb1a8b1bb02d9e25da52fecc2663e0798fa455f9418f",
+      "path": "Nurec Volume Schema/judah_nurec.usdz"
+    },
+    {
+      "type": "file",
+      "oid": "51a9528ac726178ee7fdf44606b54b821dc3ac8a",
+      "size": 281508778,
+      "lfs": {
+        "oid": "852d0f8f50e82e39a9c2153f111a955a48bc45390f526cbb13896a6414839cb7",
+        "size": 281508778,
+        "pointerSize": 134
+      },
+      "xetHash": "f30950b5735d3c1ac992cfc0ab0843619e2949e03f842be6dfa1b33ddef2e14a",
+      "path": "Nurec Volume Schema/pondicherry_nurec.usdz"
+    },
+    {
+      "type": "file",
+      "oid": "4ff8d1d5c0117331168271aad1ffe01acce5bfbd",
+      "size": 1204065184,
+      "lfs": {
+        "oid": "6ed5a19c03f6fa173b2c49af03790f8ca8cefb68501afa9ded5ec92756909ca7",
+        "size": 1204065184,
+        "pointerSize": 135
+      },
+      "xetHash": "a83a18b28c5cabf92e2c14f4c63ab4355a1312fe9ffc922523d01df878166579",
+      "path": "Nurec Volume Schema/tokyo_street_nurec.usdz"
+    },
+    {
+      "type": "file",
+      "oid": "ce395aedae7c1e98c4c75a3d08fecbc6e040fcd6",
+      "size": 2922655810,
+      "lfs": {
+        "oid": "c9d5a1c6142096691f530a19980ca5c30b4c9a706384810ead48457ef480621a",
+        "size": 2922655810,
+        "pointerSize": 135
+      },
+      "xetHash": "d2e9ab6d8d52740568a78c8a007c4648dad398fdb0c784aa1f74bb5314f0837b",
+      "path": "Particle Field Schema/bastille_place_particle_field-001.usdc"
+    },
+    {
+      "type": "file",
+      "oid": "ad290725042cd9de214edf5865ecbcf8932ed246",
+      "size": 2485286442,
+      "lfs": {
+        "oid": "cc6585d7df9d3eff62c615f884869dbcb7e81e8198dd7cc4f4f9e4be88a5a4fc",
+        "size": 2485286442,
+        "pointerSize": 135
+      },
+      "xetHash": "9b2f67f973a2a433fcee3bfd49e44e77b12dc14935081127dc2a561341797244",
+      "path": "Particle Field Schema/judah_particle_field-004.usdc"
+    },
+    {
+      "type": "file",
+      "oid": "a1ac1a36f6573bf58e2555c61242889714e45613",
+      "size": 553898003,
+      "lfs": {
+        "oid": "43f141fede7988f45c7c5e2631d2fdebf21286de8d8aa02b6e5abc8c96915a14",
+        "size": 553898003,
+        "pointerSize": 134
+      },
+      "xetHash": "41e655de04b8b385e8c563015cc1c121c0a1eb968e96d32c826cd2a7f88d2350",
+      "path": "Particle Field Schema/pondicherry_particle_field.usdz"
+    },
+    {
+      "type": "file",
+      "oid": "40a73ee61988f344f830ebeb239b5e81d943f88c",
+      "size": 2378356113,
+      "lfs": {
+        "oid": "f46ab4550e9e0a379381f82da267e2c4c06f07e9da2d08638b47ea9785c2e7f5",
+        "size": 2378356113,
+        "pointerSize": 135
+      },
+      "xetHash": "d1e906e5cd04fd011ed62be49042c177dd43c688f12883923ccf3a631ff1e584",
+      "path": "Particle Field Schema/tokyo_street_particle_field-002.usdc"
+    },
+    {
+      "type": "file",
+      "oid": "2cdf1df8554ad923ce0e2259ccfd990aeb48302f",
+      "size": 2411,
+      "path": "README.md"
+    },
+    {
+      "type": "file",
+      "oid": "f1895cb30232a3f119d4a2d808fcb6bf27980514",
+      "size": 1251,
+      "path": "metadata.csv"
+    }
+  ],
+  "zip_inspection": {
+    "source_url": "https://huggingface.co/datasets/NianticSpatial/real2sim-sample-usdz-scenes/resolve/f7ca59406bf15cdaf28e9c95bb99a317ebd7c83c/Nurec%20Volume%20Schema/pondicherry_nurec.usdz",
+    "hf_revision": "f7ca59406bf15cdaf28e9c95bb99a317ebd7c83c",
+    "file_size": 281508778,
+    "method": "HTTP Range central directory only",
+    "fetched_bytes": 4656457,
+    "full_archive_downloaded": false,
+    "entries": [
+      {
+        "path": "default.usda",
+        "method": 0,
+        "compressed_size": 834,
+        "size": 834,
+        "local_header_offset": 0
+      },
+      {
+        "path": "sim.nurec",
+        "method": 0,
+        "compressed_size": 276917543,
+        "size": 276917543,
+        "local_header_offset": 876
+      },
+      {
+        "path": "gauss.usda",
+        "method": 0,
+        "compressed_size": 2535,
+        "size": 2535,
+        "local_header_offset": 276918458
+      },
+      {
+        "path": "mesh.usd",
+        "method": 0,
+        "compressed_size": 4587462,
+        "size": 4587462,
+        "local_header_offset": 276921033
+      }
+    ],
+    "selected_members": [
+      {
+        "member": "default.usda",
+        "size": 834,
+        "sha256": "ca96ec40981d98d3330311d36d75380fbe88b32fa7617e01717213a2a114d3aa",
+        "crc32_verified": true
+      },
+      {
+        "member": "gauss.usda",
+        "size": 2535,
+        "sha256": "28b9576592598823827fbdc8c46661b20deebcfb231cac65c96a2cb029694520",
+        "crc32_verified": true
+      },
+      {
+        "member": "mesh.usd",
+        "size": 4587462,
+        "sha256": "f23cb59cd680ce4c708c8b703673e08ed54bbc175103730363aed4cba3aded56",
+        "crc32_verified": true
+      }
+    ],
+    "status": "selected-members-inspected-no-render"
+  },
+  "mesh_inspection": {
+    "meters_per_unit": 0.01,
+    "up_axis": "Y",
+    "default_prim": "/mesh",
+    "prims": [
+      {
+        "path": "/mesh",
+        "type": "Mesh",
+        "api_schemas": [
+          "PhysicsCollisionAPI",
+          "PhysicsMeshCollisionAPI"
+        ],
+        "physics:collisionEnabled": "True",
+        "physics:approximation": "none",
+        "visibility": "invisible",
+        "purpose": "default",
+        "points": 259296,
+        "faces": 499999
+      }
+    ],
+    "meters_per_unit_authored": false,
+    "up_axis_authored": false,
+    "usd_version": [
+      0,
+      26,
+      11
+    ]
+  },
+  "scope": "Selected archive members statically parsed; sim.nurec absent; not complete USDZ; no render physics or policy test"
+}

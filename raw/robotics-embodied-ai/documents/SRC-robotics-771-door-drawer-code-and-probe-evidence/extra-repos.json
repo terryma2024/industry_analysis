@@ -1,0 +1,37 @@
+[
+  {
+    "repo": "discoverse-dev/GaussianRenderer",
+    "sha": "577efdb50c3891f46db3971dc0b7c4129146dd16",
+    "commit_date": "2026-05-06T17:44:20Z",
+    "truncated": false,
+    "hits": [
+      "LICENSE",
+      "pyproject.toml",
+      "src/gaussian_renderer/gs_renderer_mujoco.py"
+    ]
+  },
+  {
+    "repo": "real-to-sim-to-real/RialTo",
+    "sha": "7ac884017c78b59fd4c3ec4ac1f48e5b5f9a3465",
+    "commit_date": "2024-06-27T19:01:52Z",
+    "truncated": false,
+    "hits": [
+      "materials/videos/cabinetdistractors.mp4",
+      "materials/videos/cabinetdisturbances.mp4",
+      "materials/videos/cabinetrand.mp4",
+      "materials/videos/cabinetrandil.mp4",
+      "materials/videos/cabinetrealtime.mp4",
+      "materials/videos/cabinetrealtime2.mp4",
+      "materials/videos/cabinetsim.mp4",
+      "materials/videos/drawerdistractors.mp4",
+      "materials/videos/drawerdistractorsil.mp4",
+      "materials/videos/drawerdisturbances.mp4",
+      "materials/videos/drawerdisturbancesil.mp4",
+      "materials/videos/drawerrand.mp4",
+      "materials/videos/drawerrandil.mp4",
+      "materials/videos/drawerrealtime.mp4",
+      "materials/videos/drawerrealtime2.mp4",
+      "materials/videos/drawersim.mp4"
+    ]
+  }
+]

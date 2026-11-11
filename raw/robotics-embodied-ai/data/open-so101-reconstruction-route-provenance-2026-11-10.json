@@ -1,0 +1,157 @@
+{
+  "repositories": [
+    {
+      "repo": "5hadytru/so101_bench",
+      "sha": "470e09e2b66658049e1248378f20ce39bd134ad6",
+      "date": "2026-11-04T21:54:37Z",
+      "license": "Apache-2.0",
+      "branch": "main"
+    },
+    {
+      "repo": "Luoyadan/lerobot_so101-sim2real",
+      "sha": "af0abb689cf528c06a5935751571fb7a66bda03c",
+      "date": "2025-09-15T11:14:22Z",
+      "license": null,
+      "branch": "master"
+    },
+    {
+      "repo": "isaac-sim/Sim-to-Real-SO-101-Workshop",
+      "sha": "ce807d99724cb65671abec01f908a2fcb4a6eab7",
+      "date": "2026-07-20T06:58:53Z",
+      "license": "Apache-2.0",
+      "branch": "main"
+    },
+    {
+      "repo": "google-deepmind/mujoco_playground",
+      "sha": "66640404324ddfefd0223359a7b15974c22d6d63",
+      "date": "2026-11-09T15:36:33Z",
+      "license": "Apache-2.0",
+      "branch": "main"
+    },
+    {
+      "repo": "nerfstudio-project/gsplat",
+      "sha": "512d366b67073d77ca099ede742683c165dfc23b",
+      "date": "2026-09-19T07:14:27Z",
+      "license": "Apache-2.0",
+      "branch": "main"
+    },
+    {
+      "repo": "nerfstudio-project/nerfstudio",
+      "sha": "50e0e3c70c775e89333256213363badbf074f29d",
+      "date": "2025-07-29T02:28:48Z",
+      "license": "Apache-2.0",
+      "branch": "main"
+    },
+    {
+      "repo": "haosulab/ManiSkill",
+      "sha": "62ff3a5896b4d5b4cf0ac4c8d79afe600c9404a3",
+      "date": "2026-08-02T03:59:43Z",
+      "license": "Apache-2.0",
+      "branch": "main"
+    },
+    {
+      "repo": "colmap/colmap",
+      "sha": "3c1a1b957cc96d88849e4d30e1d0ec51c9da501b",
+      "date": "2026-11-08T22:37:18Z",
+      "license": "NOASSERTION",
+      "branch": "main"
+    },
+    {
+      "repo": "isl-org/Open3D",
+      "sha": "b6c5e196384ad71e75b6e6f9c5da22d046221f1d",
+      "date": "2026-09-16T21:36:48Z",
+      "license": "NOASSERTION",
+      "branch": "main"
+    },
+    {
+      "repo": "huggingface/lerobot",
+      "sha": "81b8c5bfdd5591ec59e512cfc7ac6db8151c70ee",
+      "date": "2026-11-09T13:23:29Z",
+      "license": "Apache-2.0",
+      "branch": "main"
+    },
+    {
+      "repo": "nv-tlabs/3dgrut",
+      "sha": "dfd3d54c8c612003fb7948443edf7778f2bcd5ec",
+      "date": "2026-11-06T19:31:45Z",
+      "license": "Apache-2.0",
+      "branch": "main"
+    },
+    {
+      "repo": "qureshinomaan/SplatSim",
+      "sha": "ea07395dc0e1dc0fcee3113694548d0dca7edafb",
+      "date": "2025-09-04T14:01:26Z"
+    },
+    {
+      "repo": "StoneT2000/lerobot-sim2real",
+      "sha": "87d6c1d969f6e0ca4dc5697940804e231118a63a",
+      "date": "2026-06-15T05:54:16Z"
+    }
+  ],
+  "files": [
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/isaac-sim--Sim-to-Real-SO-101-Workshop--LICENSE",
+      "sha256": "44f34066c5f9eb67fafc559c38c885d4677ea59409f4eb69ec23c61997234345"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/google-deepmind--mujoco_playground--LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/qureshinomaan--SplatSim--tree.json",
+      "sha256": "9b692f1cabcfe4d487b8778e00227e3ea1361dd2dbb74a2f479d50bb25cddbf2"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/selected-tree-inspection.json",
+      "sha256": "d15d82c6ff21b485f33211dfe8f84545e21d1b8980755d7d7d8dc4980cf2b73d"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/haosulab--ManiSkill--LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/colmap--colmap--LICENSE",
+      "sha256": "b427b1780b9c1d5996a641597b35d6c97163316bf6b15f7f7bc27518d3dd8b36"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/nv-tlabs--3dgrut--LICENSE",
+      "sha256": "7339fa418c9ad3e8e12e74ad0fd26a9cc4be8703f9c110728a992b193be85cb2"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/isl-org--Open3D--LICENSE",
+      "sha256": "e2105d24aa1dae0fb5450f5b974dbf369b44d3c91a100d1b134922edb0647175"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/google-deepmind--mujoco_playground--tree.json",
+      "sha256": "8080b2fa9d06bca12505a5175a3ee02e9e5b5a0daa650c766423d65488738e91"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/nerfstudio-project--gsplat--LICENSE",
+      "sha256": "96a4f89293c0df19880da9b0e35f67589f5885ea61b224ef16bb2bd599a8a44d"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/nerfstudio-project--nerfstudio--LICENSE",
+      "sha256": "5798f1ffee3dbc6a673c3f78c8e4c11370fa6c0dd380664aa1160f0757efca45"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/playground-so101-task.py",
+      "sha256": "d86c1c731c2da2c368f86a84ef15998b976a3fca8c41a40db80ae51ebd29561c"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/5hadytru--so101_bench--LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/5hadytru--so101_bench--tree.json",
+      "sha256": "170fd06480e242531276c09d1f9e6f09019c44b47e7feb28caa23903455ec3a0"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/Luoyadan--lerobot_so101-sim2real--tree.json",
+      "sha256": "08ee0f1602b1d53d0af245e5e2d7a6f99bdd665f61b64eb471f8d810044ad8d1"
+    },
+    {
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-741-open-route-license-and-code-evidence/huggingface--lerobot--LICENSE",
+      "sha256": "9e108af26a7ae92a6d2cb0273856a4a0a84da8819c2cffee8b2657cc4f905718"
+    }
+  ]
+}

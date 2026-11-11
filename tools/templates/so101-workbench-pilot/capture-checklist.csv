@@ -1,0 +1,17 @@
+gate,item,status_pending_pass_fail_na,evidence_file,notes
+A现场,基准和测量表,pending,,未执行
+A现场,USB3与实际流配置,pending,,未执行
+A现场,00_smoke两路开中尾回放,pending,,未执行
+A现场,01_static两路回放,pending,,未执行
+A现场,02_sweep两路回放,pending,,未执行
+A现场,桌面深度无大片空洞,pending,,未执行
+A现场,手机训练与保留集分开,pending,,未执行
+A现场,清晰度检查,pending,,未执行
+A现场,布局一致,pending,,未执行
+A现场,二份备份,pending,,未执行
+B后处理,时间戳与丢帧统计,pending,,未执行
+B后处理,预定义ROI深度有效率,pending,,未执行
+B后处理,SfM注册与覆盖,pending,,未执行
+B后处理,独立检查距离,pending,,未执行
+B后处理,任务区精度另验,pending,,未执行
+B后处理,保留视点渲染,pending,,未执行

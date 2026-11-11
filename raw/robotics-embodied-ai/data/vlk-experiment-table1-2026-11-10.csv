@@ -1,0 +1,25 @@
+setting,scene,task,successes,trials,success_pct,wilson95_low_pct,wilson95_high_pct,source_locator,limitation
+real,lab,walk_to,20,20,100.0,83.887,100.0,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+real,lab,turn_around,20,20,100.0,83.887,100.0,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+real,lab,pick_floor,16,20,80.0,58.398,91.934,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+real,lab,put_floor,20,20,100.0,83.887,100.0,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+real,lab,pick_surface,11,20,55.0,34.209,74.18,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+real,lab,put_surface,8,20,40.0,21.881,61.342,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+real,apartment,walk_to,19,20,95.0,76.387,99.112,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+real,apartment,turn_around,18,20,90.0,69.897,97.213,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+real,apartment,pick_floor,18,20,90.0,69.897,97.213,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+real,apartment,put_floor,20,20,100.0,83.887,100.0,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+real,apartment,pick_surface,13,20,65.0,43.285,81.881,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+real,apartment,put_surface,15,20,75.0,53.13,88.814,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,lab,walk_to,994,1000,99.4,98.697,99.725,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,lab,turn_around,843,1000,84.3,81.914,86.423,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,lab,pick_floor,731,1000,73.1,70.267,75.756,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,lab,put_floor,991,1000,99.1,98.298,99.526,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,lab,pick_surface,458,1000,45.8,42.734,48.898,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,lab,put_surface,569,1000,56.9,53.81,59.937,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,apartment,walk_to,948,1000,94.8,93.244,96.013,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,apartment,turn_around,813,1000,81.3,78.765,83.595,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,apartment,pick_floor,749,1000,74.9,72.121,77.489,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,apartment,put_floor,987,1000,98.7,97.789,99.239,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,apartment,pick_surface,521,1000,52.1,49.002,55.182,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption
+simulation,apartment,put_surface,722,1000,72.2,69.342,74.888,SRC-robotics-681 PDF p7 Table1,Reported cell counts; real total conflicts with prose120; intervals analyst Wilson95 iid assumption

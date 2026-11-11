@@ -1,0 +1,65 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary renderSettings = {
+            int "rtx:directLighting:sampledLighting:samplesPerPixel" = 8
+            bool "rtx:material:enableRefraction" = 0
+            bool "rtx:matteObject:visibility:secondaryRays" = 1
+            bool "rtx:post:histogram:enabled" = 0
+            bool "rtx:post:registeredCompositing:invertColorCorrection" = 1
+            bool "rtx:post:registeredCompositing:invertToneMap" = 1
+            int "rtx:post:tonemap:op" = 2
+            bool "rtx:raytracing:fractionalCutoutOpacity" = 0
+            string "rtx:rendermode" = "RaytracedLighting"
+        }
+    }
+    defaultPrim = "World"
+    metersPerUnit = 1
+    timeCodesPerSecond = 24
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    def Volume "gauss"
+    {
+        float3[] extent = [(-1027.9858, -1027.8972, -1028.0613), (1028.0769, 1028.1047, 1028.0134)]
+        custom rel field:density = </World/gauss/density_field>
+        custom rel field:emissiveColor = </World/gauss/emissive_color_field>
+        custom float3 omni:nurec:crop:maxBounds = (1028.0769, 1028.1047, 1028.0134)
+        custom float3 omni:nurec:crop:minBounds = (-1027.9858, -1027.8972, -1028.0613)
+        custom bool omni:nurec:isNuRecVolume = 1
+        custom float3 omni:nurec:offset = (0, 0, 0)
+        custom bool omni:nurec:useProxyTransform = 0
+        custom rel proxy = </World/mesh>
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def OmniNuRecFieldAsset "density_field"
+        {
+            custom token fieldDataType = "float"
+            custom token fieldName = "density"
+            custom token fieldRole = "density"
+            custom asset filePath = @./sim.nurec@
+        }
+
+        def OmniNuRecFieldAsset "emissive_color_field"
+        {
+            custom token fieldDataType = "float3"
+            custom token fieldName = "emissiveColor"
+            custom token fieldRole = "emissiveColor"
+            custom asset filePath = @./sim.nurec@
+            custom float4 omni:nurec:ccmB = (0, 0, 1, 0)
+            custom float4 omni:nurec:ccmG = (0, 1, 0, 0)
+            custom float4 omni:nurec:ccmR = (1, 0, 0, 0)
+        }
+    }
+
+    over "mesh" (
+        prepend references = @mesh.usd@
+    )
+    {
+        matrix4d xformOp:transform = ( (1.0, 0.0, 0.0, 0.0), (0.0, 0.0, 1.0, 0.0), (0.0, -1.0, 0.0, 0.0), (0.0, 0.0, 0.0, 1.0) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
