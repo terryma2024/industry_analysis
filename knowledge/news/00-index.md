@@ -2,7 +2,7 @@
 title: 新闻速记
 type: moc
 created: 2026-05-29
-updated: 2026-11-09
+updated: 2026-11-12
 tags:
   - news
   - moc
@@ -16,6 +16,7 @@ tags:
 
 | 日期 | 标题 | 来源 | 主题 |
 | --- | --- | --- | --- |
+| 2026-11-12 | [[2026-11-12-corl-atlas-feifei-li-lisa-su\|CoRL 李飞飞 × 苏姿丰：Atlas、算力与机器人]] | 微信／具身纪元；World Labs、AMD 官方核查 | #robotics #world-model #atlas #compute |
 | 2026-11-09 | [[2026-11-09-3dgs-robot-simulation-data-real2sim-vlk\|仿真数据采集：3DGS、场地导航与 VLK]] | 微信／敢敢AUTOHUB；Niantic、VLK 一级核查 | #robotics #3dgs #sim2real |
 | 2026-11-09 | [[2026-11-09-ai-at-the-scale-of-human-civilization\|AI 放在人类文明的尺度上，是什么｜核心观点萃取]] | Bilibili／辞月赴尘 | #ai #civilization #knowledge-management |
 | 2026-07-14 | [[2026-07-14-harness-engineering-self-improvement-deep-dive\|Harness Engineering for Self-Improvement 深度研读与公式通俗解释]] | Lil’Log / MCE / STOP / Meta-Harness / Self-Harness / DGM 等论文 | #ai #agent #harness-engineering #context-engineering #rsi |

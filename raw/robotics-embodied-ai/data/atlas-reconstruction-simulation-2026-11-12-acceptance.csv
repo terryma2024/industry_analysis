@@ -1,0 +1,7 @@
+stage,status,deliverable,proposed_acceptance,failure_action,evidence_basis
+P0,planned-not-executed,account capabilities live rate card data settings,required tasks present and applicable output rights confirmed,continue local baseline if unavailable,777;786;795
+P1,planned-not-executed,workbench one door one drawer captures,8-16 inputs plus at least4 independent heldout views; at least3 dimensions,recapture static-state missing coverage,781;785;engineering proposal
+P2,planned-not-executed,registered RGBD mesh with provenance,background dimension error <=1 percent; critical contact geometry measured,split region or use measured CAD,779;782;engineering proposal
+P3,planned-not-executed,static physical scene,known clear passages remain clear and collision surfaces align,replace coarse boxes and avoid whole-room convex hull,790;800;801
+P4,planned-not-executed,hinge slide bodies and reset,proposed angle error<=2deg slide error<=3mm;20 open-close-reset cycles stable,measure axes limits and contact again,800;801;engineering proposal
+P5,planned-not-executed,appearance and cost audit,no duplicate static movable object; labels preserved; full labor and cloud bill recorded,reject altered targets or stop unhelpful branch,785;794;engineering proposal

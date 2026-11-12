@@ -12,6 +12,11 @@ aliases:
 
 # 机器人（具身智能） - 技术与产品
 
+## Atlas 资产生产与机器人仿真（2026-11-12）
+
+- [[robotics-embodied-ai/research-notes/atlas-3d-reconstruction-robot-simulation-deployment-2026-11-12|落地方案]]：公开文档已描述SPZ、GLB及碰撞盒，关节/物性仍须补建；云端生成、导出资产和专有R2S2R分别评估。
+
+
 ## Niantic／Flexion real2sim 工作流（2026-11-10）
 
 - [[robotics-embodied-ai/research-notes/niantic-flexion-real2sim-zero-shot-project-fit-2026-11-10|商业场景层与导航训练]]：场景资产不是现成ACT数据；nativeIsaac、MuJoCo转换、外部渲染三种路线及实际版本边界。

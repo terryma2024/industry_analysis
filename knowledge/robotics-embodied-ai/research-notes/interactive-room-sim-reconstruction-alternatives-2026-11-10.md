@@ -2,7 +2,7 @@
 title: 可交互房间Sim重建：目标收敛、候选比较与执行路线
 type: synthesis
 date_created: 2026-11-10
-last_updated: 2026-11-10
+last_updated: 2026-11-12
 sources:
   - SRC-robotics-742–757
   - SRC-robotics-727–728
@@ -223,3 +223,7 @@ SRC-robotics-742–757含固定README、界面／数据文档、手机入口、�
 [757]: ../../../raw/robotics-embodied-ai/documents/SRC-robotics-757-simfoundry-fixed-third-party-license-boundaries.md "SRC-robotics-757 SimFoundry fixed third party license boundaries"
 
 [交互路线对照CSV](../../../raw/robotics-embodied-ai/data/interactive-room-reconstruction-comparison-2026-11-10.csv)。
+
+## 2026-11-12 Atlas 候选补充
+
+[[atlas-3d-reconstruction-robot-simulation-deployment-2026-11-12|Atlas专项落地核查]]已发现官方v2的SPZ、GLB与可选碰撞盒输出，适合新增静态资产支路。没有取得本账号权限、真实门/抽屉对象化或物性导出证明，当前实测分件＋显式关节主线继续成立；生成外观、碰撞代理与可靠关节分别验收。原本轮候选比较保留，不把新文档当作已执行的接入。

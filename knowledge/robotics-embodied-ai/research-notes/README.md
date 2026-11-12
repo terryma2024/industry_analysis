@@ -7,10 +7,13 @@ tags:
   - obsidian/moc
 aliases:
   - 具身智能研究中间笔记
-last_updated: 2026-10-26
+last_updated: 2026-11-12
 ---
 
 # 机器人（具身智能） - 研究中间笔记
+
+- [[atlas-3d-reconstruction-robot-simulation-deployment-2026-11-12|Atlas重建与机器人仿真落地]]：R05/R04/R07；API合同、schema冲突、三路线、26来源及当前房间PoC验收，未做付费生成或仿真。
+
 
 - [[door-drawer-interactive-reconstruction-code-audit-2026-11-10|门与抽屉可开合的三项目深查]]：代码链、根／子依赖许可、有限MuJoCo与body映射探针、阶段验收。
 

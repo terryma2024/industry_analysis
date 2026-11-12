@@ -2,7 +2,7 @@
 title: 机器人（具身智能） - 研究入口
 type: industry
 date_created: 2026-05-29
-last_updated: 2026-11-10
+last_updated: 2026-11-12
 status: active
 tags:
   - industry/robotics-embodied-ai
@@ -13,6 +13,15 @@ sources:
 ---
 
 # 机器人（具身智能） - 研究入口
+
+## 2026-11-12 Atlas 重建与仿真落地
+
+- [[research-notes/atlas-3d-reconstruction-robot-simulation-deployment-2026-11-12|接口、资产、门／抽屉接入与小样验收]]：推荐实测物理主线＋Atlas静态资产支路，深度约束外观为第二阶段；附26项来源和三份CSV。
+
+
+## 2026-11-12 CoRL Atlas 与算力对谈
+
+- [[news/2026-11-12-corl-atlas-feifei-li-lisa-su|李飞飞 × 苏姿丰文章要点]]：生成与重建统一、云边协同、公共算力与研究者成长；补官方核查，不替代现有门／抽屉交互场景主线。
 
 ## 2026-11-10 门／抽屉代码深查
 

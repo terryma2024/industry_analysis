@@ -1206,3 +1206,16 @@ tags:
   - **变更**：新增 [[robotics-embodied-ai/research-notes/door-drawer-interactive-reconstruction-code-audit-2026-11-10|R05/R04/R06报告]]、[[_sources/door-drawer-interactive-code-audit-source-set-2026-11-10|15项来源]]、12能力证据矩阵及固定源码／许可／完整tree／探针包，更新主报告知识冲突与索引。
   - **结论**：原柜子hinge／slide可编译，短施力状态变化；真实body pose进入原renderer映射方法的有限探针通过。推荐实测分件＋MJCF先mesh交互，再逐link GS；Phi导出freejoint、RialTo作者／导出明确但许可待澄清。
   - **许可修订与限制**：GaussianRenderer0.2.0为MIT＋gsplat，不等于Real2Sim研究限定rasterizer；13纯文本fallback逐项匹配。使用隔离MuJoCo4.0.0，不更改机器人环境；无完整应用、图形、GPU、限位／物性资格测试、训练或硬件操作。
+
+## [2026-11-12]
+
+- **ingest | CoRL 李飞飞与苏姿丰 Atlas、算力与机器人文章要点入库**
+  - **变更**：新增 [[news/2026-11-12-corl-atlas-feifei-li-lisa-su|八个要点与关键核查]]、[[_sources/wechat-corl-atlas-feifei-li-lisa-su|来源卡]]，登记并归档 SRC-robotics-773–776、微信 Defuddle JSON；更新新闻／全局／机器人／来源索引。
+  - **结论与差异**：记录生成和重建统一、系统协同与领域直觉；15 FPS 为云端浏览器串流，收购公告不等于交割完成；保留视频时长与开放状态的版本差异。
+  - **限制**：四条新来源均 ok，脚本退出1来自历史 failed 项；微信发布日期待验证，未听校现场原视频、OCR图表、复现评测或运行模型／机器人；商业与创业机会为待验证判断。
+
+- **research | Atlas 在3D重建与机器人仿真中的落地调研**
+  - **变更**：新增 [[robotics-embodied-ai/research-notes/atlas-3d-reconstruction-robot-simulation-deployment-2026-11-12|R05/R04/R07报告]]、[[_sources/atlas-reconstruction-simulation-source-set-2026-11-12|777–802来源集]]、三份能力/路线/验收CSV及schema/health JSON；更新全局、机器人、技术、研究与来源索引，并回链原文章和当前房间方案。
+  - **结论**：官方v2文档支持RGBD→SPZ→GLB与可选竖直碰撞盒；推荐实测物理主线＋Atlas静态资产支路，深度约束外观次之；专有R2S2R与公开Atlas分开。
+  - **证据与冲突**：25项网络来源均ok；4份schema解析，guide的refine:false与拒绝extra的请求schema冲突；生产health无认证GET返回200，仅证明当前环境路由可达。800为708同URL的新日期快照，旧正文保留。
+  - **限制**：完整任务价格/账号权限/精度/分件关节/ROI待验；未安装、登录、上传、付费生成、仿真、训练或真机，验收与预算为建议。

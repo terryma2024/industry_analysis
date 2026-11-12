@@ -1,7 +1,7 @@
 ---
 title: 机器人（具身智能） - 来源抽取索引
 date: 2026-06-08
-last_updated: 2026-11-10
+last_updated: 2026-11-12
 tags:
   - industry/robotics-embodied-ai
   - sources
@@ -13,6 +13,15 @@ aliases:
 ---
 
 # 机器人（具身智能） - 来源抽取索引
+
+## 2026-11-12 Atlas v2 文档与落地核查
+
+- [[_sources/atlas-reconstruction-simulation-source-set-2026-11-12|777–802来源集]]：25项网络抽取均ok；802为4份schema静态解析＋无认证health200。没有生成、上传或仿真；guide的refine字段不在归档schema中。
+
+
+## 2026-11-12 CoRL Atlas 与机器人对谈
+
+- [[_sources/wechat-corl-atlas-feifei-li-lisa-su|微信正文与三项官方核查]]：SRC-robotics-773–776，四项 Defuddle 均 ok；补存微信 JSON 元信息，发布日期未提取、原视频和配图未逐项核验。
 
 ## 2026-11-10 门／抽屉源码与探针
 

@@ -1,0 +1,13 @@
+stage,input,output,evidence_status,simulation_gap,source_ids
+capture,video or perspective images,selected static images,documented,no continuous dynamic-time upload workflow,SRC-robotics-781
+pose,one or more unposed images,camera RGB linear EXR confidence,schema-inspected,metric scale and pixel-grid checks still needed,SRC-robotics-782;SRC-robotics-792
+calibrated_input,aligned RGB depth camera,downstream posed RGBD,documented,do not pass known camera/depth to images2PosedRGBD,SRC-robotics-779;SRC-robotics-792
+generate,posed RGBD and target cameras,new RGB and optional depth,schema-inspected,invented surfaces and multi-view inconsistency,SRC-robotics-783;SRC-robotics-793
+splat,posed RGBD,SPZ,schema-inspected,refinement can add generated evidence; not physics,SRC-robotics-784;SRC-robotics-791
+draft_mode,refine:false in guide,claimed cheaper draft,documentation-conflict,field absent and extras forbidden in inspected schema,SRC-robotics-784;SRC-robotics-791;SRC-robotics-802
+mesh,SPZ and selected views,GLB,schema-inspected,not guaranteed metric or object-segmented,SRC-robotics-790
+collision_boxes,splat mesh extraction with colliderBoxes,upright box nodes in separate GLB,schema-inspected,not precise thin door handle or drawer interior collision,SRC-robotics-790
+joint_model,segmented bodies axis limits dynamics,MJCF hinge slide or USD joints,engineering-proposal,not supplied by inspected Atlas task schemas,SRC-robotics-790;SRC-robotics-800;SRC-robotics-801
+appearance_variants,trusted physics-camera depth and prompt,generated RGB,documented,must verify labels geometry and temporal consistency,SRC-robotics-794
+robot_engine,task reconstruction calibration and policies,proprietary R2S2R results,company-claim,not same deliverable as public Atlas API,SRC-robotics-797
+availability,unauthenticated public health GET,HTTP200 status ok,limited-observation,not account access throughput SLA or regional guarantee,SRC-robotics-802

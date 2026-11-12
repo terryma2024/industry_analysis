@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: index
 date_created: 2026-05-29
-last_updated: 2026-11-10
+last_updated: 2026-11-12
 tags:
   - wiki
   - index
@@ -14,6 +14,11 @@ tags:
 本页是 LLM 维护本仓库知识库时优先读取的全局目录。`knowledge/README.md` 面向人类导航；本页面向 ingest/query/lint 工作流，所有重要页面都应在这里登记，并附一句话说明。
 
 ## Sources
+
+- [[_sources/atlas-reconstruction-simulation-source-set-2026-11-12|Atlas 重建与仿真落地来源集]] — 25项官方资料＋schema/health有限核查；保留draft字段、视频输入和积分口径冲突。
+
+
+- [[_sources/wechat-corl-atlas-feifei-li-lisa-su|CoRL Atlas 与算力文章来源卡]] — 微信演讲整理及三份官方资料；视频时长版本、云端帧率和收购交割分别记录。
 
 - [[robotics-embodied-ai/research-notes/door-drawer-interactive-reconstruction-code-audit-2026-11-10|门／抽屉必需：三项目代码深查]] — 当前推荐DISCOVERSE/MJCF分件路线；原柜子两关节与body映射有限探针通过，GPU／完整场景待验。
 - [[_sources/door-drawer-interactive-code-audit-source-set-2026-11-10|门／抽屉源码、许可与探针来源]] — 15项增补；当前renderer MIT＋gsplat与受限Real2Sim工具分开。
@@ -295,6 +300,9 @@ tags:
 
 ## Syntheses
 
+- [[robotics-embodied-ai/research-notes/atlas-3d-reconstruction-robot-simulation-deployment-2026-11-12|Atlas 3D重建与机器人仿真落地方案]] — R05/R04/R07；RGBD→SPZ→GLB/碰撞盒、三路线、门/抽屉验收与成本；未运行付费任务。
+
+
 - [[_syntheses/future-core-resources-valuation-2026-11-05|21家公司估值、安全边际与10家候选]] — R09/R08/R06；三情景、未来EPS、A/H比价、买入区间与可复算模型；仅腾讯进入本轮严格区间。
 
 - [[emotional-consumption/research-notes/china-emotional-value-physical-goods-stock-screen-2026-10-22|中国年轻人实体情绪消费股票池]] — R09/R06/R03；12家公司分层、2026H1财务、风险/证伪、估值框架及小团队机会，当前估值待统一快照。
@@ -502,6 +510,8 @@ tags:
 - [[robotics-embodied-ai/00-index|机器人与具身智能]] — 机器人与具身智能行业研究入口。
 
 ## News
+
+- [[news/2026-11-12-corl-atlas-feifei-li-lisa-su|CoRL 李飞飞 × 苏姿丰：Atlas、算力与机器人]] — 八个要点、系统协同与研究者成长；保留演示、物理仿真和商业验证边界。
 
 - [[news/2026-11-09-3dgs-robot-simulation-data-real2sim-vlk|仿真数据采集：3DGS、场地导航与 VLK]] — 区分两条研究路线、仿真与真机指标；校正微调说法，保留商业与复现边界。
 

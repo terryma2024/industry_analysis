@@ -1,0 +1,6 @@
+route,priority,role,runtime_or_access,main_advantage,main_gap,source_ids
+Measured mesh plus MuJoCo,primary,authoritative geometry collisions and joints,local engine with measured assets,controllable task geometry,manual capture modeling and validation,SRC-robotics-800;SRC-robotics-801
+Atlas asset pipeline,conditional branch,static appearance SPZ GLB candidates,cloud project-key tasks plus local authoring,documented export path,scale segmentation joint and dynamics work remain,SRC-robotics-777;SRC-robotics-784;SRC-robotics-790
+AtlasChisel depth-conditioned appearance,second priority,visual variants over trusted scene,cloud generation offline,keeps a separate authoritative geometry source,label and temporal QC required,SRC-robotics-794
+Frameboy preview,preview only,interactive visual inspection,cloud streamed frames,fast qualitative exploration,not physics loop or joint scene export evidence,SRC-robotics-775;SRC-robotics-786
+SceniX R2S2R enterprise,conditional future,task simulation training evaluation,proprietary delivery unknown,company sim-real examples,price access reproducible artifacts and customer proof unverified,SRC-robotics-797

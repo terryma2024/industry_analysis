@@ -1,0 +1,508 @@
+{
+  "source_id": "SRC-robotics-802",
+  "checked_at": "2026-11-12T01:43:37.449851+00:00",
+  "status": "static_inspection_and_public_health_only",
+  "executed": {
+    "public_health_get": {
+      "checked_at": "2026-11-12T01:38:13.144762+00:00",
+      "url": "https://api.atlas.worldlabs.ai/api/v2/health",
+      "method": "GET",
+      "authentication": "none",
+      "input_media_uploaded": false,
+      "paid_task_submitted": false,
+      "status": 200,
+      "content_type": "application/json",
+      "body": "{\"status\":\"ok\",\"service\":\"marble-api-server\",\"version\":\"1e9cfde03b0eb1cfc320e14e8e301a04d3fcc13f\"}"
+    },
+    "schema_parse_count": 4
+  },
+  "not_executed": [
+    "authentication",
+    "private_data_upload",
+    "paid_generation",
+    "sdk_installation",
+    "mesh_import",
+    "physics_simulation",
+    "robot_training",
+    "hardware_control"
+  ],
+  "schemas": [
+    {
+      "source_id": "SRC-robotics-790",
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-790-atlas-splats2mesh-openapi-schema.md",
+      "sha256": "3669e9cf740699095ec380a80e9911311abe66cddc4bcceb0e832723820af358",
+      "api_title": "Atlas Developer API",
+      "api_version": "2.0.0",
+      "paths": [
+        "/api/v2/tasks:splats2Mesh"
+      ],
+      "request_schema": "Splats2MeshRequest",
+      "required": [
+        "splatAsset"
+      ],
+      "additionalProperties": null,
+      "properties": {
+        "webhookUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 2048
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Webhookurl",
+          "description": "Where Atlas POSTs one signed task.succeeded or task.failed event when this operation finishes; retried for 24 hours. Verify the signature with the public keys at /.well-known/webhooks/jwks.json. Cannot be combined with ?wait=true. https on port 443 only, no IP literals. Developer API only."
+        },
+        "purgeContentOnOperationCompletion": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Purgecontentonoperationcompletion",
+          "description": "Purge this operation's outputs and the transient uploads it consumed one hour after it finishes. Omitted, the account's setting applies; true raises it for this operation; false is refused when the account already purges. Uploads in the library are never purged by an operation."
+        },
+        "cameras": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/components/schemas/PinholeCamera"
+              },
+              "type": "array",
+              "maxItems": 512,
+              "minItems": 1
+            },
+            {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/CamerasManualAnchors"
+                },
+                {
+                  "$ref": "#/components/schemas/CamerasAutoAnchors"
+                },
+                {
+                  "$ref": "#/components/schemas/CamerasExteriorSphere"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "strategy",
+                "mapping": {
+                  "auto_anchors": "#/components/schemas/CamerasAutoAnchors",
+                  "exterior_sphere": "#/components/schemas/CamerasExteriorSphere",
+                  "manual_anchors": "#/components/schemas/CamerasManualAnchors"
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Cameras",
+          "description": "Cameras the splats are rendered from. The surface is reconstructed from those renders, so geometry no camera sees is not meshed. Name a strategy -- `auto_anchors` (the default) finds viewpoints in the scene's free space, `manual_anchors` takes them from the request, `exterior_sphere` rings the scene from outside for an object or turntable capture -- or pass a list of cameras to render as given, at most 512, sharing one width and height between 64 and 1024 that becomes the render resolution."
+        },
+        "advancedOptions": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/Splats2MeshAdvancedOptions"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Finer control over how the splats are rendered and how the surface is extracted. Omit for the defaults."
+        },
+        "orientedBoundingBox": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/Splats2MeshOrientedBoundingBox"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Region to extract, as an oriented box in Three.js coordinates. Omit to mesh the whole scene."
+        },
+        "targetFaces": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Targetfaces",
+          "description": "Decimate the extracted mesh to at most this many faces. A target above the extracted count does nothing. Omit to keep every face."
+        },
+        "textureMode": {
+          "type": "string",
+          "enum": [
+            "image_texture",
+            "vertex_color",
+            "none"
+          ],
+          "title": "Texturemode",
+          "description": "Mesh appearance: 'image_texture' projects rendered views onto a UV atlas, 'vertex_color' bakes per-vertex colors, and 'none' leaves the mesh untextured.",
+          "default": "image_texture"
+        },
+        "textureSize": {
+          "type": "integer",
+          "maximum": 8192,
+          "minimum": 1,
+          "title": "Texturesize",
+          "description": "Height and width of the texture atlas, in pixels, for `image_texture` mode. One rendered view plus its border has to fit, so this must be at least 2% above the render size in play: the larger render bank under the anchor strategies, `renderHw` under `exterior_sphere`, or the supplied cameras' own size.",
+          "default": 4096
+        },
+        "colliderBoxes": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/Splats2MeshColliderBoxOptions"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Also fit oriented boxes that enclose the mesh, for collision. The boxes stay upright, turning only about the vertical axis, and come back as a second GLB asset with one node per box. Omit to skip them."
+        },
+        "splatAsset": {
+          "$ref": "#/components/schemas/TaskAsset",
+          "description": "The Gaussian splat scene (.spz) to mesh. Inline base64 must carry a `data:` prefix to declare its media type: asset creation otherwise infers the type from the bytes, and the sniffer knows image formats only."
+        }
+      },
+      "collision_options": {
+        "properties": {
+          "targetBoxes": {
+            "type": "integer",
+            "maximum": 100000,
+            "minimum": 10,
+            "title": "Targetboxes",
+            "description": "Maximum number of boxes. Fewer boxes enclose the mesh more loosely.",
+            "default": 1000
+          },
+          "heightAlignVoxels": {
+            "type": "number",
+            "maximum": 64,
+            "minimum": 0,
+            "title": "Heightalignvoxels",
+            "description": "Tolerance, in voxels, for aligning heights: neighbouring box tops (and bottoms) within it of each other are raised to a shared height, so floors stay flat to walk on. A voxel is the mesh's longest side divided by `advancedOptions.resolution`. 0 keeps the fitted heights.",
+            "default": 1
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Splats2MeshColliderBoxOptions",
+        "description": "Collider boxes to fit to the extracted mesh."
+      }
+    },
+    {
+      "source_id": "SRC-robotics-791",
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-791-atlas-posedimages2splats-openapi-schema.md",
+      "sha256": "c00c2bcd0f10fc7637190a7eceeefa30f4c4da57f7b1cf1ca3a5ff7d96ae66f6",
+      "api_title": "Atlas Developer API",
+      "api_version": "2.0.0",
+      "paths": [
+        "/api/v2/tasks:posedImages2Splats"
+      ],
+      "request_schema": "PosedImages2SplatsRequest",
+      "required": [
+        "posedFrames"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "webhookUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 2048
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Webhookurl",
+          "description": "Where Atlas POSTs one signed task.succeeded or task.failed event when this operation finishes; retried for 24 hours. Verify the signature with the public keys at /.well-known/webhooks/jwks.json. Cannot be combined with ?wait=true. https on port 443 only, no IP literals. Developer API only."
+        },
+        "purgeContentOnOperationCompletion": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Purgecontentonoperationcompletion",
+          "description": "Purge this operation's outputs and the transient uploads it consumed one hour after it finishes. Omitted, the account's setting applies; true raises it for this operation; false is refused when the account already purges. Uploads in the library are never purged by an operation."
+        },
+        "prompt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Prompt",
+          "description": "Optional scene description. Enhancement combines it with the input images; when omitted, enhancement captions the images."
+        },
+        "enhancePrompt": {
+          "type": "boolean",
+          "title": "Enhanceprompt",
+          "description": "Enhance the prompt using the context images before generation. Set false with a prepared prompt to skip enhancement and reduce latency.",
+          "default": true
+        },
+        "regionOfInterest": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/OrientedBoundingBox"
+            },
+            {
+              "items": {
+                "$ref": "#/components/schemas/OrientedBoundingBox"
+              },
+              "type": "array",
+              "maxItems": 16,
+              "minItems": 1
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Regionofinterest",
+          "description": "Oriented box to focus the reconstruction on, or a list of them for separate areas. Each box should enclose both the geometry of interest and the space it can be viewed from. The rest of the scene is still reconstructed from the frames. Omitted, the task covers the whole capture."
+        },
+        "posedFrames": {
+          "items": {
+            "$ref": "#/components/schemas/PosedRGBDAsset"
+          },
+          "type": "array",
+          "maxItems": 512,
+          "minItems": 2,
+          "title": "Posedframes",
+          "description": "Ordered posed RGBD frames (2 to 512 with refinement, or 2 to 32 with refine=false): each image an account asset, inline bytes, or a public URL, with its camera and its depth buffer (a linear-depth EXR under depth.depthAsset, as images2PosedRGBD returns). Every camera grid must be 1280x720, 720x1280, 960x720, or 528x704 (width x height), and all frames must use the same grid. RGB images are resampled to the camera grid."
+        }
+      },
+      "collision_options": null
+    },
+    {
+      "source_id": "SRC-robotics-792",
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-792-atlas-images2posedrgbd-openapi-schema.md",
+      "sha256": "98036430d6f294aa6ac8a6212097e39c223fbe1bfab231d6179a07314012323a",
+      "api_title": "Atlas Developer API",
+      "api_version": "2.0.0",
+      "paths": [
+        "/api/v2/tasks:images2PosedRGBD"
+      ],
+      "request_schema": "Images2PosedRGBDRequest",
+      "required": [
+        "frames"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "webhookUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 2048
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Webhookurl",
+          "description": "Where Atlas POSTs one signed task.succeeded or task.failed event when this operation finishes; retried for 24 hours. Verify the signature with the public keys at /.well-known/webhooks/jwks.json. Cannot be combined with ?wait=true. https on port 443 only, no IP literals. Developer API only."
+        },
+        "purgeContentOnOperationCompletion": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Purgecontentonoperationcompletion",
+          "description": "Purge this operation's outputs and the transient uploads it consumed one hour after it finishes. Omitted, the account's setting applies; true raises it for this operation; false is refused when the account already purges. Uploads in the library are never purged by an operation."
+        },
+        "base64Outputs": {
+          "type": "boolean",
+          "title": "Base64Outputs",
+          "description": "When a ?wait=true submission is answered inline, return each output file as base64 in that response rather than by assetId and url. This skips storing the files before the answer and the caller's download after it. Any other submission, and every later read of the operation, names the outputs by assetId and url.",
+          "default": false
+        },
+        "frames": {
+          "items": {
+            "$ref": "#/components/schemas/FrameRGBAsset"
+          },
+          "type": "array",
+          "minItems": 1,
+          "title": "Frames",
+          "description": "Ordered image inputs (min 1). A frame that carries a camera, a depth buffer or a mask is rejected rather than quietly ignored: none of them reaches the reconstruction."
+        },
+        "canonicalizeToFirstFrame": {
+          "type": "boolean",
+          "title": "Canonicalizetofirstframe",
+          "description": "Place the first camera at the origin facing forward.",
+          "default": false
+        },
+        "targetResolution": {
+          "anyOf": [
+            {
+              "prefixItems": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "type": "array",
+              "maxItems": 2,
+              "minItems": 2,
+              "items": {
+                "type": "integer"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Targetresolution",
+          "description": "Return the depth, confidence and camera intrinsics on this (width, height) pixel grid: one of 1280 by 720, 720 by 1280, 960 by 720 or 528 by 704, the grids the depth model serves. The reconstruction is scaled to cover the requested size and center-cropped to it, so the result is exactly the size asked for and never stretched, and the intrinsics are updated with it -- unprojecting the returned depth with the returned camera gives the same geometry either way. A requested aspect that differs from the frames' costs field of view, since the crop is what makes the size exact, and centroidWorld then describes the cropped view. Omit it (or pass null) and a multi-view capture with camera translation comes back on whichever of those four grids is closest in aspect to the frames: smaller frames are scaled up onto it, and other aspects (square or 3:2, for example) are center-cropped onto the closest one, with squares going to 960 by 720. A single image or a capture without camera translation comes back on the reconstruction backend's native grid. Set it when a later step needs a particular grid: atlasGenerate, for example, needs context frames with the same aspect as its target cameras."
+        },
+        "refinePoses": {
+          "type": "boolean",
+          "title": "Refineposes",
+          "description": "Bundle-adjust the estimated cameras against dense matches before answering. The backbone's poses are good to about half a degree, which is enough to reconstruct from and not enough to refine against: the residual shows up as blur wherever two views disagree. The solve anchors on the depth this task has just produced, so it costs a matcher pass and a solve rather than another reconstruction, and it needs two or more frames. A solve that moves the cameras further than the guards allow is thrown away and the unrefined reconstruction is returned, which is a success rather than an error.",
+          "default": false
+        }
+      },
+      "collision_options": null
+    },
+    {
+      "source_id": "SRC-robotics-793",
+      "path": "raw/robotics-embodied-ai/documents/SRC-robotics-793-atlas-atlasgenerate-openapi-schema.md",
+      "sha256": "5904b8ab9b80c857553c5d2e6676f4aaf195dc2262954f2ced77cb0d590b8b01",
+      "api_title": "Atlas Developer API",
+      "api_version": "2.0.0",
+      "paths": [
+        "/api/v2/tasks:atlasGenerate"
+      ],
+      "request_schema": "AtlasGenerateRequest",
+      "required": [
+        "contextFrames",
+        "targetCameras"
+      ],
+      "additionalProperties": null,
+      "properties": {
+        "webhookUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 2048
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Webhookurl",
+          "description": "Where Atlas POSTs one signed task.succeeded or task.failed event when this operation finishes; retried for 24 hours. Verify the signature with the public keys at /.well-known/webhooks/jwks.json. Cannot be combined with ?wait=true. https on port 443 only, no IP literals. Developer API only."
+        },
+        "purgeContentOnOperationCompletion": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Purgecontentonoperationcompletion",
+          "description": "Purge this operation's outputs and the transient uploads it consumed one hour after it finishes. Omitted, the account's setting applies; true raises it for this operation; false is refused when the account already purges. Uploads in the library are never purged by an operation."
+        },
+        "base64Outputs": {
+          "type": "boolean",
+          "title": "Base64Outputs",
+          "description": "When a ?wait=true submission is answered inline, return each output file as base64 in that response rather than by assetId and url. This skips storing the files before the answer and the caller's download after it. Any other submission, and every later read of the operation, names the outputs by assetId and url.",
+          "default": false
+        },
+        "contextFrames": {
+          "items": {
+            "$ref": "#/components/schemas/PosedRGBDAsset"
+          },
+          "type": "array",
+          "minItems": 1,
+          "title": "Contextframes",
+          "description": "Posed RGBD context views: each an image, its depth buffer, and its camera, all required. All context cameras must declare the same width and height. Context depth is required and provides geometry references for generation. Undistort fisheye or lens-distorted images before upload, and align depth and camera intrinsics to the resulting pinhole image grid."
+        },
+        "targetCameras": {
+          "items": {
+            "$ref": "#/components/schemas/PinholeCamera"
+          },
+          "type": "array",
+          "minItems": 1,
+          "title": "Targetcameras",
+          "description": "Pinhole cameras for the views to generate, in output order. Generated frames are returned in `frames`, one per camera. All cameras share one size (width x height): 1280x720, 960x720, 528x704, or 720x1280. Camera intrinsics use a pinhole model; lens-distortion coefficients are not accepted."
+        },
+        "prompt": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Prompt",
+          "description": "Optional description of the scene's content and appearance, for example \"A quiet stone courtyard at blue hour\". Do not use editing instructions such as \"add a car to the scene\" or camera-trajectory descriptions such as \"rotate around the person\"."
+        },
+        "enhancePrompt": {
+          "type": "boolean",
+          "title": "Enhanceprompt",
+          "description": "Expand the prompt into a scene description before generation. With no prompt, describe the context images. Set false to use your wording unchanged.",
+          "default": true
+        },
+        "returnDepth": {
+          "type": "boolean",
+          "title": "Returndepth",
+          "description": "Return the generated frames as posed RGBD in the request's camera frame and scale; every entry in `frames` then carries a `depth` buffer. A request whose cameras all share one center (a pure-rotation rig) is rejected because depth scale requires a camera baseline. For 720x1280 targets, more than 11 context frames, or more than 32 target cameras, depth is reconstructed after generation: context and target cameras must share an aspect ratio, and every target principal point must be within 5% of the image center along each axis, or the request is rejected. A context image anchors that reconstruction only when its principal point is centered. Other requests do not require these additional aspect-ratio and principal-point checks.",
+          "default": false
+        },
+        "modelParameters": {
+          "$ref": "#/components/schemas/AtlasGenerateModelParameters",
+          "description": "Model-specific parameters for atlasGenerate."
+        }
+      },
+      "collision_options": null
+    }
+  ],
+  "conflicts": [
+    {
+      "guide": "SRC-robotics-784",
+      "schema": "SRC-robotics-791",
+      "field": "refine",
+      "guide_claim": "refine:false draft",
+      "schema_allows_field": false,
+      "runtime_rejection_tested": false
+    }
+  ],
+  "illustrative_calculations": {
+    "source": "SRC-robotics-790",
+    "assumption_region_longest_side_m": 5,
+    "default_extraction_resolution": 512,
+    "grid_cell_mm": 9.765625,
+    "not_a_precision_claim": true,
+    "refined_splat_only_usd_per_run": 5,
+    "two_runs_usd": 10,
+    "six_runs_usd": 30,
+    "excludes_other_tasks_and_labor": true
+  }
+}
